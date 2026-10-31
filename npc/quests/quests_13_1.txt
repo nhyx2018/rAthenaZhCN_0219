@@ -1419,7 +1419,7 @@ lhz_in01,32,22,3	script	警官A	109,{
 		changequest 10075,10076;
 		set ep13_ryu,20;
 		mes "[军官A]";
-		mes "回那里去吧。干得好。";
+		mes "回那里去吧。干得好。<NAVI>[次元裂缝守卫]<INFO>moc_fild20,349,179,0,101,0</INFO></NAVI>";
 		close;
 	}
 	if (ep13_ryu == 18) {
@@ -1528,7 +1528,7 @@ lhz_in01,30,24,5	script	警官B	109,{
 		changequest 10075,10076;
 		set ep13_ryu,20;
 		mes "[军官A]";
-		mes "回那边去吧。干得好。";
+		mes "回那边去吧。干得好。<NAVI>[次元裂缝守卫]<INFO>moc_fild20,349,179,0,101,0</INFO></NAVI>";
 		close;
 	}
 	if (ep13_ryu == 18) {
