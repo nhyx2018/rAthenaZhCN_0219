@@ -36371,7 +36371,7 @@ Body:
     Weight: 100
   - Id: 25448
     AegisName: RuneknightStone_Robe
-    Name: Rune Knight Stone (Garment)
+    Name: 符文骑士石(披肩)
     Type: Etc
     Buy: 20
     Weight: 100
@@ -36577,7 +36577,7 @@ Body:
     Weight: 100
   - Id: 25493
     AegisName: ShadowchaserStone_Robe
-    Name: Shadow Chaser Stone (Garment)
+    Name: 逐影石(披肩)
     Type: Etc
     Buy: 20
     Weight: 100
@@ -36601,7 +36601,7 @@ Body:
     Weight: 100
   - Id: 25497
     AegisName: MechanicStone_Robe
-    Name: Mechanic Stone (Garment)
+    Name: 机匠石(披肩)
     Type: Etc
     Buy: 20
     Weight: 100
@@ -36625,7 +36625,7 @@ Body:
     Weight: 100
   - Id: 25501
     AegisName: WanderMinstreStone_Robe
-    Name: Wanderer Minstrel Stone (Garment)
+    Name: 漫游舞者/宫廷乐师石(披肩)
     Type: Etc
     Buy: 20
     Weight: 100
@@ -37162,7 +37162,7 @@ Body:
     Weight: 100
   - Id: 25713
     AegisName: RoyalguardStone_Robe
-    Name: Royal Guard Stone (Garment)
+    Name: 皇家卫士石(披肩)
     Type: Etc
     Weight: 100
   - Id: 25714
@@ -37701,7 +37701,7 @@ Body:
     Weight: 100
   - Id: 25849
     AegisName: StaremperorStone_Robe
-    Name: Star Emperor Stone (Garment)
+    Name: 星帝石(披肩)
     Type: Etc
     Weight: 100
   - Id: 25850
@@ -37721,7 +37721,7 @@ Body:
     Weight: 100
   - Id: 25853
     AegisName: KagerouStone_Robe
-    Name: Kagerou Stone (Garment)
+    Name: 影狼石(披肩)
     Type: Etc
     Weight: 100
   - Id: 25854
@@ -91918,7 +91918,7 @@ Body:
     Weight: 100
   - Id: 1000304
     AegisName: WanderMinsStone_Robe2
-    Name: Wanderer Minstrel Stone II (Garment)
+    Name: 浪姬舞者/宫廷乐师石II(披肩)
     Type: Etc
     Weight: 100
   - Id: 1000305

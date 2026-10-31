@@ -1280,9 +1280,10 @@ mal_in01,22,113,3	script	艾佛·德·多修#cos_ect	4_WHITETIGER,{
 	mes "^FF0000   ！！！注意！！！^000000";
 	mes "^ff0000本次升级可能会失败。^000000";
 	mes "^ff0000如果物品已有附魔，附魔将被重置，且只返还时装。^000000";
+	mes "附魔石：<ITEM>" + getitemname(.@id) + "<INFO>" + .@id + "</INFO></ITEM>";
 	mes "^FF0000您确定要升级这件物品吗？^000000";
 	next;
-	if (select( "Yes.", "No." ) == 2) {
+	if (select( "是。", "否。" ) == 2) {
 		mes "[艾佛·德·多修]";
 		mes "也请看看我们的其他升级服务~";
 		close;
@@ -1360,44 +1361,44 @@ mal_in01,20,107,3	script	蕾丝·拉·扎德#cos_ect	4_FROG,{
 	mes "太好了！！我已经为这次升级做好万全准备！！";
 	next;
 	setarray .@data$[0],
-		6908, 4807, "ASPD +1",	// ASPDStone_Robe	Atk_Speed1
-		6963, 4992, "1% chance to absorb 1% physical damage into HP.",	// HPdrainStone_Robe	HPdrain1
-		6964, 4993, "1% chance to absorb 1% physical damage into SP.",	// SPdrainStone_Robe	SPdrain1
-		25067, 29056, "Decreases Fixed Casting Time of all skills by 0.5 seconds.",	// CastingStone_Robe	FixedCasting05
-		25170, 29154, "Decreases Fixed Casting Time of all skills by 0.3 seconds.",	// MinorCastingStone_Robe	FixedCasting03
-		25302, 29362, "Enables the use of Level 3 Double Attack.",	// DoubleAttack_Stone	DoubleAttack
-		25303, 29361, "Increases Critical Damage by 20%.",	// Critical_Stone_Robe	Fatal_Robe
-		25306, 29358, "Decreases Variable Casting Time by 10%.",	// CastStone_Robe	Casting_Robe
-		25412, 29426, "Increases damage of Rampage Blaster by 15%.",	// SuraStone_Robe	SuraStone_Robe_
-		25416, 29431, "Increases damage of Arrow Storm by 10%.",	// RangerStone_Robe	RangerStone_Robe_
-		25420, 29435, "Increases damage of Psychic Wave by 10%.",	// SorcererStone_Robe	SorcererStone_Robe_
-		25448, 29463, "Increases damage of Dragon Breath - Water by 10%.",	// RuneknightStone_Robe	RuneknightStone_Robe_
-		25449, 29467, "Increases damage of Cart Cannon by 10%.",	// GeneticStone_Robe	GeneticStone_Robe_
-		25456, 29471, "Increases damage of Crimson Rock by 10%.",	// WarlockStone_Robe	WarlockStone_Robe_
-		25493, 29480, "Increases damage of Triangle Shot by 15%.",	// ShadowchaserStone_Robe	ShadowchaserStone_Robe_
-		25497, 29484, "Increases damage of Axe Tornado by 15%.",	// MechanicStone_Robe	MechanicStone_Robe_
-		25501, 29488, "Increases damage of Severe Rainstorm by 15%.",	// WanderMinstrelStone_Robe	WanderMinstrelStone_Robe_
-		25709, 29516, "Increases damage of Adoramus by 15%.",	// ArchbishopStone_Robe	ArchbishopStone_Robe_
-		25713, 29520, "Increases damage of Banishing Point by 15%.",	// RoyalguardStone_Robe	RoyalguardStone_Robe_
-		25717, 29524, "Increases damage of Rolling Cutter by 15%.",	// GuillcrossStone_Robe	GuillcrossStone_Robe_
-		25797, 29427, "Increases damage of Knuckle Arrow by 15%.",	// SuraStone_Robe2	SuraStone_Robe2_
-		25801, 29614, "Increases damage of Diamond Dust by 15%.",	// SorcererStone_Robe2	SorcererStone_Robe2_
-		25805, 29618, "Increases damage of Fatal Menace by 15%.",	// ShadowchaserStone_Robe2	ShadowchaserStone_Robe2_
-		25842, 29654, "Increases damage of Eswhoo by 20%.",	// SoulReaperStone_Robe	Soulreaper_Robe
-		25849, 29658, "Increases damage of Falling Star, Solar Burst and Full Moon Kick by 20%.",	// StarEmperorStone_Garment	Staremperor_Robe
-		25853, 29662, "Increases damage of Swirling Petal by 25%.",	// KagerouStone_Robe	KagerouStone_Robe_
-		25854, 29663, "Increases damage of Flaming Petals by 20%.",	// OboroStone_Robe	OboroStone_Robe_
-		25858, 29667, "Increases damage of Hammer of God and Round Trip by 20%.",	// GunslingerStone_Robe	Rebellion_Robe
-		25862, 29671, "Increases damage of Picky Peck and Catnip Meteor by 20%.",	// DoramStone_Robe	DoramStone_Robe_
-		1000011, 310003, "Increases damage of Aimed Bolt by 15%.",	// RangerStone_II_Garment	Ranger_Robe2
-		1000015, 310007, "Increases damage of Arms Cannon by 15%.",	// MechanicStone_II_Garment	Mechanic_Robe2
-		1000019, 310011, "Increases damage of Judex by 15%.",	// ArchbishopStone_II_Garment	Archbishop_Robe2
-		1000213, 310180, "Increases damage of Comet by 15%.",	// WarlockStone_Robe2	Warlock_Robe2
-		1000217, 310184, "Increases damage of Ray of Genesis by 15%.",	// RoyalGuardStone_Robe2	RoyalGuard_Robe2
-		1000221, 310188, "Increases Critical Damage by 15%. Enables Double Attack Level 3 if you have learned Katar Mastery Level 10",	// GuillotineCrossStone_Robe2	GuillotineCross_Robe2
-		1000296, 310257, "Increases damage of Ignition Break by 15%.",	// RuneknightStone_Robe2	Runeknight_Robe2
-		1000300, 310261, "Increases damage of Crazy Weed by 20%.",	// GeneticStone_Robe2	Genetic_Robe2
-		1000304, 310265, "Increases damage of Reverberation by 15%.";	// WanderMinsStone_Robe2	WandMinst_Robe2
+		6908, 4807, "攻击速度 +1",	// ASPDStone_Robe	Atk_Speed1
+		6963, 4992, "攻击时，有1%几率将1%物理伤害吸收为HP。",	// HPdrainStone_Robe	HPdrain1
+		6964, 4993, "攻击时，有1%几率将1%物理伤害吸收为SP。",	// SPdrainStone_Robe	SPdrain1
+		25067, 29056, "所有技能固定咏唱时间减少0.5秒。",	// CastingStone_Robe	FixedCasting05
+		25170, 29154, "所有技能固定咏唱时间减少0.3秒。",	// MinorCastingStone_Robe	FixedCasting03
+		25302, 29362, "可使用3级二刀连击。",	// DoubleAttack_Stone	DoubleAttack
+		25303, 29361, "暴击伤害 +20%。",	// Critical_Stone_Robe	Fatal_Robe
+		25306, 29358, "所有技能变动咏唱时间减少10%。",	// CastStone_Robe	Casting_Robe
+		25412, 29426, "罗刹破凰拳伤害 +15%。",	// SuraStone_Robe	SuraStone_Robe_
+		25416, 29431, "箭矢风暴伤害 +10%。",	// RangerStone_Robe	RangerStone_Robe_
+		25420, 29435, "心灵震波伤害 +10%。",	// SorcererStone_Robe	SorcererStone_Robe_
+		25448, 29463, "龙之吐息(水)伤害 +10%。",	// RuneknightStone_Robe	RuneknightStone_Robe_
+		25449, 29467, "加农炮伤害 +10%。",	// GeneticStone_Robe	GeneticStone_Robe_
+		25456, 29471, "地狱火焰伤害 +10%。",	// WarlockStone_Robe	WarlockStone_Robe_
+		25493, 29480, "三角射击伤害 +15%。",	// ShadowchaserStone_Robe	ShadowchaserStone_Robe_
+		25497, 29484, "旋风斧伤害 +15%。",	// MechanicStone_Robe	MechanicStone_Robe_
+		25501, 29488, "大暴雨伤害 +15%。",	// WanderMinstrelStone_Robe	WanderMinstrelStone_Robe_
+		25709, 29516, "讴歌伤害 +15%。",	// ArchbishopStone_Robe	ArchbishopStone_Robe_
+		25713, 29520, "放逐攻击伤害 +15%。",	// RoyalguardStone_Robe	RoyalguardStone_Robe_
+		25717, 29524, "回旋十字斩伤害 +15%。",	// GuillcrossStone_Robe	GuillcrossStone_Robe_
+		25797, 29427, "虎炮伤害 +15%。",	// SuraStone_Robe2	SuraStone_Robe2_
+		25801, 29614, "钻石星辰伤害 +15%。",	// SorcererStone_Robe2	SorcererStone_Robe2_
+		25805, 29618, "致命威胁伤害 +15%。",	// ShadowchaserStone_Robe2	ShadowchaserStone_Robe2_
+		25842, 29654, "艾斯霍伤害 +20%。",	// SoulReaperStone_Robe	Soulreaper_Robe
+		25849, 29658, "陨星、太阳爆发、满月踢伤害 +20%。",	// StarEmperorStone_Garment	Staremperor_Robe
+		25853, 29662, "旋风花瓣伤害 +25%。",	// KagerouStone_Robe	KagerouStone_Robe_
+		25854, 29663, "火焰花瓣伤害 +20%。",	// OboroStone_Robe	OboroStone_Robe_
+		25858, 29667, "神之锤与回旋射击伤害 +20%。",	// GunslingerStone_Robe	Rebellion_Robe
+		25862, 29671, "小鸡啄击、猫薄荷陨石伤害 +20%。",	// DoramStone_Robe	DoramStone_Robe_
+		1000011, 310003, "瞄准射击伤害 +15%。",	// RangerStone_II_Garment	Ranger_Robe2
+		1000015, 310007, "手臂加农炮伤害 +15%。",	// MechanicStone_II_Garment	Mechanic_Robe2
+		1000019, 310011, "审判伤害 +15%。",	// ArchbishopStone_II_Garment	Archbishop_Robe2
+		1000213, 310180, "彗星伤害 +15%。",	// WarlockStone_Robe2	Warlock_Robe2
+		1000217, 310184, "创世之光伤害 +15%。",	// RoyalGuardStone_Robe2	RoyalGuard_Robe2
+		1000221, 310188, "暴击伤害 +15%；学会拳刃修炼10级时，可使用3级二刀连击。",	// GuillotineCrossStone_Robe2	GuillotineCross_Robe2
+		1000296, 310257, "点燃破坏伤害 +15%。",	// RuneknightStone_Robe2	Runeknight_Robe2
+		1000300, 310261, "疯狂野草伤害 +20%。",	// GeneticStone_Robe2	Genetic_Robe2
+		1000304, 310265, "回响伤害 +15%。";	// WanderMinsStone_Robe2	WandMinst_Robe2
 	.@size = getarraysize(.@data$);
 	for ( .@i = 0; .@i < .@size; .@i += 3 ) {
 		.@id = atoi(.@data$[.@i]);
@@ -1421,9 +1422,10 @@ mal_in01,20,107,3	script	蕾丝·拉·扎德#cos_ect	4_FROG,{
 	mes "^FF0000   ！！！注意！！！^000000";
 	mes "^ff0000本次升级可能会失败。^000000";
 	mes "^ff0000如果物品已有附魔，附魔将被重置，且只返还" + .@data$[.@s+2] + "。^000000";
+	mes "附魔石：<ITEM>" + getitemname(.@id) + "<INFO>" + .@id + "</INFO></ITEM>";
 	mes "^ff0000您确定要升级这件物品吗？^000000";
 	next;
-	if (select( "Yes.", "No." ) == 2) {
+	if (select( "是。", "否。" ) == 2) {
 		mes "[蕾丝·拉·扎德]";
 		mes "嗯？您还想继续看看吗？";
 		close;
