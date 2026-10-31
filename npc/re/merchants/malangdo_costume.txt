@@ -1279,8 +1279,8 @@ mal_in01,22,113,3	script	艾佛·德·多修#cos_ect	4_WHITETIGER,{
 	}
 	mes "^FF0000   ！！！注意！！！^000000";
 	mes "^ff0000本次升级可能会失败。^000000";
-	mes "^ff0000如果物品已有附魔，附魔将被重置，且只返还时装。^000000";
-	mes "附魔石：<ITEM>" + getitemname(.@id) + "<INFO>" + .@id + "</INFO></ITEM>";
+	mes "^ff0000如果物品已有附魔，附魔将被重置，且只保留本次选择的附魔效果。^000000";
+	mes "附魔石：<ITEM>" + getitemname(.@stone) + "<INFO>" + .@stone + "</INFO></ITEM>";
 	mes "^FF0000您确定要升级这件物品吗？^000000";
 	next;
 	if (select( "是。", "否。" ) == 2) {
@@ -1421,7 +1421,7 @@ mal_in01,20,107,3	script	蕾丝·拉·扎德#cos_ect	4_FROG,{
 	}
 	mes "^FF0000   ！！！注意！！！^000000";
 	mes "^ff0000本次升级可能会失败。^000000";
-	mes "^ff0000如果物品已有附魔，附魔将被重置，且只返还" + .@data$[.@s+2] + "。^000000";
+	mes "^ff0000如果物品已有附魔，附魔将被重置，只剩下“" + replacestr(.@data$[.@s+2], "。", "") + "”这个效果。^000000";
 	mes "附魔石：<ITEM>" + getitemname(.@id) + "<INFO>" + .@id + "</INFO></ITEM>";
 	mes "^ff0000您确定要升级这件物品吗？^000000";
 	next;
