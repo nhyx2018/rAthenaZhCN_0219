@@ -47,7 +47,7 @@
 
 \*------------------------------------------------------------*/
 
-prt_in,55,54,3	script	精炼专家	4_ep18_mark,{
+prontera,184,177,3	script	精炼专家	4_ep18_mark,{
     .@acclid = getequipid(EQI_ACC_L);
 	.@acclrefine = getequiprefinerycnt(EQI_ACC_L);
     .@accrid = getequipid(EQI_ACC_R);
