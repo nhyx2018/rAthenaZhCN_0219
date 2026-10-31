@@ -943,7 +943,7 @@ moc_fild20,354,183,3	script	大陆守卫#01::MocConGuard	707,3,3,{
 		mes "前方区域禁止平民进入。";
 		mes "这里极其危险，禁止进入。";
 		next;
-		switch(select("取消对话:进入野外调查:前往梦罗克事故现场")) {
+		switch(select("取消对话:进入野外调查:前往梦罗克事故现场:我坚持一个人前往")) {
 		case 1:
 			close;
 		case 2:
@@ -975,7 +975,7 @@ moc_fild20,354,183,3	script	大陆守卫#01::MocConGuard	707,3,3,{
 					mes "“鉴于该地区的危险，本人特此禁止大陆守卫成员单独调查该区域。今后执行任务必须组建至少两人的队伍。”";
 					next;
 					mes "[大陆守卫]";
-					mes "...You understand that, right? Please go back to the site, and come back in a party of at least 2 members. Thank you.";
+					mes "……你明白了吗？请先回去，至少带两名队员组成队伍后再来。谢谢。";
 					close;
 				}
 				else if (countitem(7826) < 1) {
@@ -1001,6 +1001,26 @@ moc_fild20,354,183,3	script	大陆守卫#01::MocConGuard	707,3,3,{
 			close2;
 			warp "morocc",160,61;
 			end;
+		case 4:
+			mes "[大陆守卫]";
+			mes "……你真的要坚持一个人前往吗？";
+			next;
+			mes "[大陆守卫]";
+			mes "既然你坚持，我也无法阻止你。请务必小心。";
+			next;
+			if (countitem(7826) < 1) {
+				mes "[大陆守卫]";
+				mes "仅持有大陆守卫证书的大陆守卫成员方可通行。";
+				close;
+			}
+			if ($@re_moc < 3) {
+				close2;
+				warp "moc_fild21",38,193;
+				end;
+			}
+			mes "[大陆守卫]";
+			mes "现在该区域因梦罗克事件被封锁，请等事件结束后再来。";
+			close;
 		}
 	}
 	else if (rebirth_moc_edq == 8) {
@@ -1036,7 +1056,7 @@ moc_fild20,354,183,3	script	大陆守卫#01::MocConGuard	707,3,3,{
 				mes "“鉴于该地区的危险，本人特此禁止大陆守卫成员单独调查该区域。今后执行任务必须组建至少两人的队伍。”";
 				next;
 				mes "[大陆守卫]";
-				mes "...You understand that, right? Please go back to the site, and come back in a party of at least 2 members. Thank you.";
+				mes "……你明白了吗？请先回去，至少带两名队员组成队伍后再来。谢谢。";
 				close;
 			}
 			else if (countitem(7826) < 1) {
