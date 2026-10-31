@@ -195,7 +195,7 @@ L_DONE:
 	mes "据我所知，他们各自在不同的城镇闯荡，想做出点名堂。";
 	if(umb_marie==0 && umb_mason==0 && umb_mojo==0) goto L_NOT_MET;
 	if(umb_marie==1) mes "哦……你在天津町找到玛丽了。";
-	if(umb_mojo==1) mes "你在阿尔德巴兰见到莫乔了？";
+	if(umb_mojo==1) mes "你在艾尔帕兰见到莫乔了？";
 	if(umb_mason==1) mes "那么……梅森现在在普隆德拉……好吧……";
 	if(umb_marie==0) mes "不知道我们那位海边姑娘玛丽在哪儿？";
 	if(umb_mojo==0) mes "莫乔应该在水边某处……";
