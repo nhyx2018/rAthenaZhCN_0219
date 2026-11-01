@@ -7646,7 +7646,7 @@ rebel_in,162,87,5	script	近卫队长拉西斯#2	4_M_REBELLION,{
 					break;
 				case 0:
 				case 1:
-					.@menu$[.@i] = "^8C8C8C" + .@menu$[.@i] + " (standing by)^000000";
+					.@menu$[.@i] = "^8C8C8C" + .@menu$[.@i] + "（待机）^000000";
 					.@quest_status[.@i] = 2;
 					break;
 				case 2:
@@ -7656,23 +7656,23 @@ rebel_in,162,87,5	script	近卫队长拉西斯#2	4_M_REBELLION,{
 				break;
 			case 0:
 			case 1:
-				.@menu$[.@i] = "^8C8C8C" + .@menu$[.@i] + " (doing now)^000000";
+				.@menu$[.@i] = "^8C8C8C" + .@menu$[.@i] + "（进行中）^000000";
 				.@quest_status[.@i] = 1;
 				break;
 			case 2:
 				if (countitem(.@item_id[.@i]) >= .@amount[.@i])
 					.@quest_status[.@i] = 3;
 				else {
-					.@menu$[.@i] = "^8C8C8C" + .@menu$[.@i] + " (doing now)^000000";
+					.@menu$[.@i] = "^8C8C8C" + .@menu$[.@i] + "（进行中）^000000";
 					.@quest_status[.@i] = 1;
 				}
 				break;
 			}
 		}
-		.@s = select( .@menu$[0], .@menu$[1], .@menu$[2], "Don't do it." ) - 1;
+		.@s = select( .@menu$[0], .@menu$[1], .@menu$[2], "不做。" ) - 1;
 		if (.@s == 3) {
 			mes "[近卫队长拉西斯]";
-			mes "Well.. I do not force you.";
+			mes "好吧……我不强迫你。";
 			close;
 		}
 		switch( .@quest_status[.@s] ) {
@@ -7681,20 +7681,20 @@ rebel_in,162,87,5	script	近卫队长拉西斯#2	4_M_REBELLION,{
 				erasequest (.@quest_id[.@s]+1);
 
 			if (.@s == 0)
-				setarray .@string$[0], "Dien", "the item", "a Heart Hunter Ebel and get one High Class Tea";
+				setarray .@string$[0], "狄恩", "上等茗茶", "心脏猎人艾贝尔并取得1个上等茗茶";
 			else if (.@s == 1)
-				setarray .@string$[0], "里德什", "Old Letter", "Heart Hunter and get the Old Letter";
+				setarray .@string$[0], "里德什", "老旧信纸", "心脏猎人并取得老旧信纸";
 			else
-				setarray .@string$[0], "科特尼斯", "Very Shining Ring", "five Heart Hunter Guards and bring four Very Shining Rings";
+				setarray .@string$[0], "科特尼斯", "光芒戒指", "5名心脏猎人护卫并带回4个光芒戒指";
 			mes "[近卫队长拉西斯]";
-			mes "This is "+ .@string$[1] + " "+ .@string$[0] + " asked you for.";
-			mes "If you meet 朱利安 in the northeastern corner of the northern field in 艾因布罗克, he will let you in.";
+			mes "这是" + .@string$[0] + "要的" + .@string$[1] + "。";
+			mes "去艾因布罗克北部野外的东北角找朱利安，他会让你进去。";
 			next;
 			mes "[近卫队长拉西斯]";
-			mes "Right there, defeat " + .@string$[2] + ".";
-			mes "I don't know what's going on. But since it's order of "+ .@string$[0] + ", we have to do it.";
+			mes "就在那里击败" + .@string$[2] + "。";
+			mes "我不知道怎么回事，但既然是" + .@string$[0] + "的命令，只能照办。";
 			next;
-			if (select( "Accept.", "Look at other requests." ) == 1) {
+			if (select( "接受。", "看看其他委托。" ) == 1) {
 				mes "[近卫队长拉西斯]";
 				mes "保重！";
 				setquest .@quest_id[.@s];
@@ -7702,22 +7702,22 @@ rebel_in,162,87,5	script	近卫队长拉西斯#2	4_M_REBELLION,{
 			}
 			continue;
 		case 1:
-			mes "A request you are currently doing.";
+			mes "这是你正在进行的委托。";
 			next;
 			continue;
 		case 2:
-			mes "A request you have already completed.";
+			mes "这是你已经完成的委托。";
 			next;
 			continue;
 		case 3:
 			switch( .@s ) {
 			case 0:
 				mes "[近卫队长拉西斯]";
-				mes "This is the High Class Tea Dien told me about... But why was it located in such a place?";
-				mes "... Anyway, you did a great job.";
+				mes "这就是狄恩说的上等茗茶……但为什么会放在那种地方？";
+				mes "……总之，干得不错。";
 				next;
 				mes "[近卫队长拉西斯]";
-				mes "If you bring this token to 斯特拉塞 at the stairs at 10 o'clock in the corridor of the 2nd floor, you will receive something useful in return.";
+				mes "把徽章拿到二楼走廊十点钟方向楼梯旁的斯特拉塞那里，可以换到有用的东西。";
 				delitem 25165,1;// High_Class_Tea
 				erasequest 11465;// Dien's High Class Tea
 				setquest 11466;// Dien's High Class Tea
@@ -7726,12 +7726,12 @@ rebel_in,162,87,5	script	近卫队长拉西斯#2	4_M_REBELLION,{
 				break;
 			case 1:
 				mes "[近卫队长拉西斯]";
-				mes "Well done.";
-				mes "This is the Old Letter 里德什 talked about... By the way, why does she need this letter...?";
-				mes "There must be a reason, as 里德什 told us to bring it...";
+				mes "干得好。";
+				mes "这就是里德什说的老旧信纸……不过她要这封信做什么……？";
+				mes "里德什让我们带来，一定有原因……";
 				next;
 				mes "[近卫队长拉西斯]";
-				mes "If you bring this token to 斯特拉塞 at the stairs at 10 o'clock in the corridor of the 2nd floor, you will receive something useful in return.";
+				mes "把徽章拿到二楼走廊十点钟方向楼梯旁的斯特拉塞那里，可以换到有用的东西。";
 				delitem 25167,1;// Old_Letter
 				erasequest 11467;// 里德什's Old Letter
 				setquest 11468;// 里德什's Old Letter
@@ -7740,12 +7740,12 @@ rebel_in,162,87,5	script	近卫队长拉西斯#2	4_M_REBELLION,{
 				break;
 			case 2:
 				mes "[近卫队长拉西斯]";
-				mes "Well done.";
-				mes "This is the Very Shining Ring 科特尼斯 talked about... As an accessory, it looks tremendous, doesn't it?";
-				mes "科特尼斯 said it's a ring. Then it's a ring...";
+				mes "干得好。";
+				mes "这就是科特尼斯说的光芒戒指……作为饰品看起来真不错，对吧？";
+				mes "科特尼斯说是戒指，那就是戒指吧……";
 				next;
 				mes "[近卫队长拉西斯]";
-				mes "If you bring this token to 斯特拉塞 at the stairs at 10 o'clock in the corridor of the 2nd floor, you will receive something useful in return.";
+				mes "把徽章拿到二楼走廊十点钟方向楼梯旁的斯特拉塞那里，可以换到有用的东西。";
 				delitem 25166,4;	// Very_Shining_Ring
 				getitem 25155,3;	// Swz_Honor_Token
 				erasequest 11469;// 科特尼斯s's Shiny Ring
