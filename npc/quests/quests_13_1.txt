@@ -353,7 +353,6 @@ prontera,163,53,3	script	宣传人员#prt	100,{
 		close;
 	}
 OnInit:
-	questinfo(QTYPE_QUEST, QMARK_YELLOW, "!isbegin_quest(10069) || !isbegin_quest(10065) || !isbegin_quest(10057)");
 	end;
 }
 
@@ -456,6 +455,7 @@ aldebaran,127,138,3	script	宣传人员#alde	100,{
 	callfunc "Promotional_Staff";
 	end;
 OnInit:
+	questinfo(QTYPE_QUEST2, QMARK_YELLOW, "isbegin_quest(10058) == 1 || isbegin_quest(10057) == 1");
 	questinfo(QTYPE_QUEST, QMARK_YELLOW, "!isbegin_quest(10059) || !isbegin_quest(10058)");
 	end;
 }
@@ -573,6 +573,10 @@ geffen,90,67,3	script	宣传人员#gef	100,{
 		close;
 	}
 	callfunc "Promotional_Staff";
+	end;
+OnInit:
+	questinfo(QTYPE_QUEST2, QMARK_YELLOW, "isbegin_quest(10061) == 1 || isbegin_quest(10060) == 1 || isbegin_quest(10059) == 1");
+	questinfo(QTYPE_QUEST, QMARK_YELLOW, "!isbegin_quest(10062) || !isbegin_quest(10061) || !isbegin_quest(10060)");
 	end;
 }
 
@@ -708,7 +712,6 @@ geffen,90,67,3	script	宣传人员#gef	100,{
 	callfunc "Promotional_Staff";
 	end;
 OnInit:
-	questinfo(QTYPE_QUEST, QMARK_YELLOW, "!isbegin_quest(10062) || !isbegin_quest(10061) || !isbegin_quest(10060) || !isbegin_quest(10064) || !isbegin_quest(10063)");
 	end;
 }
 
@@ -1107,6 +1110,10 @@ lhz_in01,132,259,5	script	希凯兹#1	868,{
 	mes "[希凯兹]";
 	mes "......";
 	close;
+OnInit:
+	questinfo(QTYPE_QUEST2, QMARK_YELLOW, "isbegin_quest(10073) == 1 || isbegin_quest(10072) == 1 || isbegin_quest(10070) == 1 || isbegin_quest(10069) == 1 || isbegin_quest(10067) == 1 || isbegin_quest(10066) == 1 || isbegin_quest(10065) == 1");
+	questinfo(QTYPE_QUEST, QMARK_YELLOW, "!isbegin_quest(10074) || !isbegin_quest(10073) || !isbegin_quest(10071) || !isbegin_quest(10070) || !isbegin_quest(10068) || !isbegin_quest(10067) || !isbegin_quest(10066)");
+	end;
 }
 
 function	script	Guard_13_1	{
@@ -1140,7 +1147,6 @@ function	script	Guard_13_1	{
 	}
 	end;
 OnInit:
-	questinfo(QTYPE_QUEST, QMARK_YELLOW, "!isbegin_quest(10074) || !isbegin_quest(10073) || !isbegin_quest(10071) || !isbegin_quest(10070) || !isbegin_quest(10068) || !isbegin_quest(10067) || !isbegin_quest(10066)");
 	end;
 }
 
@@ -1386,6 +1392,7 @@ ra_temple,119,113,3	script	同盟管理人#ra	935,{
 	mes "呵呵呵！";
 	close;
 OnInit:
+	questinfo(QTYPE_QUEST2, QMARK_YELLOW, "isbegin_quest(10071) == 1");
 	questinfo(QTYPE_QUEST, QMARK_YELLOW, "!isbegin_quest(10072)");
 	end;
 }
@@ -1498,6 +1505,7 @@ lhz_in01,32,22,3	script	警官A	109,{
 	mes "我们必须舍弃其他王国。";
 	close;
 OnInit:
+	questinfo(QTYPE_QUEST2, QMARK_YELLOW, "isbegin_quest(10075) == 1 || isbegin_quest(10074) == 1");
 	questinfo(QTYPE_QUEST, QMARK_YELLOW, "!isbegin_quest(10076) || !isbegin_quest(10075)");
 	end;
 }
@@ -1609,6 +1617,7 @@ lhz_in01,30,24,5	script	警官B	109,{
 	mes "最重要的就是金钱和权力。要是连一样都得不到，我们和贫民窟的穷鬼没什么两样。";
 	close;
 OnInit:
+	questinfo(QTYPE_QUEST2, QMARK_YELLOW, "isbegin_quest(10075) == 1 || isbegin_quest(10074) == 1");
 	questinfo(QTYPE_QUEST, QMARK_YELLOW, "!isbegin_quest(10076) || !isbegin_quest(10075)");
 	end;
 }
@@ -1819,6 +1828,7 @@ moc_fild22b,230,197,5	script	蒙肯罗#2	967,{
 		close;
 	}
 OnInit:
+	questinfo(QTYPE_QUEST2, QMARK_YELLOW, "isbegin_quest(10076) == 1 || isbegin_quest(10077) == 1 || isbegin_quest(10078) == 1");
 	questinfo(QTYPE_QUEST, QMARK_YELLOW, "!isbegin_quest(10077) || !isbegin_quest(10078)");
 	end;
 }
@@ -2138,6 +2148,7 @@ mid_camp,222,283,4	script	玛丽安#ep13bs	727,{
 		close;
 	}
 OnInit:
+	questinfo(QTYPE_QUEST2, QMARK_YELLOW, "isbegin_quest(11091) == 1");
 	questinfo(QTYPE_QUEST, QMARK_YELLOW, "!isbegin_quest(11084) || !isbegin_quest(11092)");
 	end;
 }
@@ -2743,7 +2754,8 @@ mid_camp,261,284,4	script	教官#ep13bs	405,{
 		close;
 	}
 OnInit:
-	questinfo(QTYPE_QUEST, QMARK_YELLOW, "!isbegin_quest(11085) || !isbegin_quest(11087) || !isbegin_quest(11091) || !isbegin_quest(11093) || !isbegin_quest(11095) || !isbegin_quest(11097) || !isbegin_quest(11099)");
+	questinfo(QTYPE_QUEST2, QMARK_YELLOW, "isbegin_quest(11084) == 1 || isbegin_quest(11092) == 1 || isbegin_quest(11094) == 1 || isbegin_quest(11096) == 1 || isbegin_quest(11086) == 1 || isbegin_quest(11098) == 1 || isbegin_quest(11100) == 1");
+	questinfo(QTYPE_QUEST, QMARK_YELLOW, "!isbegin_quest(11087) || !isbegin_quest(11091) || !isbegin_quest(11099) || !isbegin_quest(11085) || !isbegin_quest(11093) || !isbegin_quest(11095) || !isbegin_quest(11097)");
 	end;
 }
 
@@ -2858,6 +2870,7 @@ mid_camp,123,290,4	script	奥托#ep13bs	967,{
 		close;
 	}
 OnInit:
+	questinfo(QTYPE_QUEST2, QMARK_YELLOW, "isbegin_quest(11099) == 1");
 	questinfo(QTYPE_QUEST, QMARK_YELLOW, "!isbegin_quest(11100)");
 	end;
 }
@@ -2957,7 +2970,8 @@ mid_campin,106,122,4	script	接待员布林克#ep13b	89,{
 		close;
 	}
 OnInit:
-	questinfo(QTYPE_QUEST, QMARK_YELLOW, "!isbegin_quest(11086) || !isbegin_quest(11087) || !isbegin_quest(11088)");
+	questinfo(QTYPE_QUEST2, QMARK_YELLOW, "isbegin_quest(11085) == 1");
+	questinfo(QTYPE_QUEST, QMARK_YELLOW, "!isbegin_quest(11086)");
 	end;
 }
 
@@ -3297,6 +3311,7 @@ mid_camp,160,298,4	script	扎安#ep13bs	865,{
 		close;
 	}
 OnInit:
+	questinfo(QTYPE_QUEST2, QMARK_YELLOW, "isbegin_quest(11093) == 1");
 	questinfo(QTYPE_QUEST, QMARK_YELLOW, "!isbegin_quest(11094)");
 	end;
 }
@@ -3376,6 +3391,7 @@ mid_camp,30,168,4	script	杰拉德#ep13bs	939,{
 		close;
 	}
 OnInit:
+	questinfo(QTYPE_QUEST2, QMARK_YELLOW, "isbegin_quest(11095) == 1");
 	questinfo(QTYPE_QUEST, QMARK_YELLOW, "!isbegin_quest(11096)");
 	end;
 }
@@ -3454,6 +3470,7 @@ man_fild01,80,248,4	script	阿尔贝托#ep13bs	934,{
 		close;
 	}
 OnInit:
+	questinfo(QTYPE_QUEST2, QMARK_YELLOW, "isbegin_quest(11097) == 1");
 	questinfo(QTYPE_QUEST, QMARK_YELLOW, "!isbegin_quest(11098)");
 	end;
 }
@@ -3625,6 +3642,7 @@ mid_camp,267,263,0	script	木桩#ep13bs1	111,{
 		close;
 	}
 OnInit:
+	questinfo(QTYPE_QUEST2, QMARK_YELLOW, "isbegin_quest(11088) == 1");
 	questinfo(QTYPE_QUEST, QMARK_YELLOW, "!isbegin_quest(11089)");
 	end;
 }
@@ -3710,6 +3728,7 @@ mid_camp,267,258,0	script	木桩#ep13bs2	111,{
 		close;
 	}
 OnInit:
+	questinfo(QTYPE_QUEST2, QMARK_YELLOW, "isbegin_quest(11089) == 1");
 	questinfo(QTYPE_QUEST, QMARK_YELLOW, "!isbegin_quest(11090)");
 	end;
 }
@@ -4396,6 +4415,7 @@ mid_camp,188,254,3	script	怪物学者#ep13	883,{
 		}
 	}
 OnInit:
+	questinfo(QTYPE_QUEST2, QMARK_YELLOW, "isbegin_quest(2147) == 1 || isbegin_quest(2148) == 1 || isbegin_quest(2153) == 1 || isbegin_quest(2156) == 1 || isbegin_quest(2157) == 1");
 	questinfo(QTYPE_QUEST, QMARK_YELLOW, "!isbegin_quest(2147) || !isbegin_quest(2148) || !isbegin_quest(2149) || !isbegin_quest(2154) || !isbegin_quest(2157)");
 	end;
 }
@@ -4680,6 +4700,7 @@ mid_camp,240,270,3	script	植物学者#ep13	750,{
 		}
 	}
 OnInit:
+	questinfo(QTYPE_QUEST2, QMARK_YELLOW, "isbegin_quest(2149) == 1 || isbegin_quest(2150) == 1 || isbegin_quest(2151) == 1");
 	questinfo(QTYPE_QUEST, QMARK_YELLOW, "!isbegin_quest(2150) || !isbegin_quest(2151) || !isbegin_quest(2152)");
 	end;
 }
@@ -4785,6 +4806,7 @@ mid_camp,45,148,7	script	植物学者#ep13_1	750,{
 	end;
 
 OnInit:
+	questinfo(QTYPE_QUEST2, QMARK_YELLOW, "isbegin_quest(2152) == 1");
 	questinfo(QTYPE_QUEST, QMARK_YELLOW, "!isbegin_quest(2153)");
 	disablenpc "植物学者#ep13_1";
 	end;
@@ -4915,6 +4937,7 @@ man_fild01,92,230,3	script	冰封之树#evt_lumis	111,1,1,{
 	}
 	end;
 OnInit:
+	questinfo(QTYPE_QUEST2, QMARK_YELLOW, "isbegin_quest(2154) == 1 || isbegin_quest(2155) == 1");
 	questinfo(QTYPE_QUEST, QMARK_YELLOW, "!isbegin_quest(2155) || !isbegin_quest(2156)");
 	end;
 }
@@ -5059,6 +5082,9 @@ mid_camp,212,237,5	script	营地守卫队长#man1	852,{
 			}
 		}
 	}
+OnInit:
+	questinfo(QTYPE_QUEST2, QMARK_YELLOW, "isbegin_quest(2158) == 1 || isbegin_quest(2159) == 1");
+	end;
 }
 
 // The Tripartite Union's Feud :: ep13_1_rhea
@@ -5518,6 +5544,7 @@ OnTouch_:
 	close;
 
 OnInit:
+	questinfo(QTYPE_QUEST2, QMARK_YELLOW, "isbegin_quest(8198) == 1 || isbegin_quest(8205) == 1 || isbegin_quest(8206) == 1 || isbegin_quest(8210) == 1");
 	questinfo(QTYPE_QUEST, QMARK_YELLOW, "!isbegin_quest(8196) || !isbegin_quest(8199) || !isbegin_quest(8206) || !isbegin_quest(8207)");
 	enablenpc "研究官#ep131";
 	end;
@@ -6113,6 +6140,7 @@ mid_camp,165,245,0	script	廖森#ep131_rhea01	748,{
 		close;
 	}
 OnInit:
+	questinfo(QTYPE_QUEST2, QMARK_YELLOW, "isbegin_quest(8196) == 1 || isbegin_quest(8197) == 1 || isbegin_quest(8199) == 1 || isbegin_quest(8204) == 1 || isbegin_quest(8209) == 1");
 	questinfo(QTYPE_QUEST, QMARK_YELLOW, "!isbegin_quest(8197) || !isbegin_quest(8198) || !isbegin_quest(8200) || !isbegin_quest(8205) || !isbegin_quest(8210)");
 	end;
 }
@@ -6509,6 +6537,7 @@ mid_camp,247,255,1	script	休#ep131_rhea02	868,{
 		close;
 	}
 OnInit:
+	questinfo(QTYPE_QUEST2, QMARK_YELLOW, "isbegin_quest(8202) == 1 || isbegin_quest(8203) == 1 || isbegin_quest(8208) == 1");
 	questinfo(QTYPE_QUEST, QMARK_YELLOW, "!isbegin_quest(8203) || !isbegin_quest(8204) || !isbegin_quest(8209)");
 	end;
 }
@@ -6982,6 +7011,7 @@ mid_camp,222,218,3	script	汉森#ep131_rhea03	931,{
 		close;
 	}
 OnInit:
+	questinfo(QTYPE_QUEST2, QMARK_YELLOW, "isbegin_quest(8200) == 1 || isbegin_quest(8201) == 1 || isbegin_quest(8207) == 1");
 	questinfo(QTYPE_QUEST, QMARK_YELLOW, "!isbegin_quest(8201) || !isbegin_quest(8202) || !isbegin_quest(8208)");
 	end;
 }
@@ -8516,6 +8546,9 @@ mid_camp,88,100,55	script	猫爪采矿代理人	876,{
 		mes "你愿意帮我去采集矿物吗？";
 		close;
 	}
+OnInit:
+	questinfo(QTYPE_QUEST, QMARK_YELLOW, "!isbegin_quest(12062)");
+	end;
 }
 
 -	script	神秘岩石#0::manukrock	-1,{
@@ -8545,7 +8578,6 @@ OnTimer120000:
 	stopnpctimer;
 	end;
 OnInit:
-	questinfo(QTYPE_QUEST, QMARK_YELLOW, "!isbegin_quest(12062)");
 	end;
 }
 man_fild01,180,170,0	duplicate(manukrock)	神秘岩石#1	844
@@ -9329,6 +9361,7 @@ mid_campin,90,121,5	script	希巴·阿吉普	459,{
 		close;
 	}
 OnInit:
+	questinfo(QTYPE_QUEST2, QMARK_YELLOW, "isbegin_quest(3086) == 1 || isbegin_quest(3088) == 1 || isbegin_quest(3092) == 1 || isbegin_quest(3094) == 1");
 	questinfo(QTYPE_QUEST, QMARK_YELLOW, "!isbegin_quest(3085) || !isbegin_quest(3087) || !isbegin_quest(3089) || !isbegin_quest(3093)");
 	end;
 }
@@ -9855,7 +9888,8 @@ mid_campin,94,118,3	script	参谋阿比达尔	755,{
 		close;
 	}
 OnInit:
-	questinfo(QTYPE_QUEST, QMARK_YELLOW, "!isbegin_quest(3086) || !isbegin_quest(3090) || !isbegin_quest(3092)");
+	questinfo(QTYPE_QUEST2, QMARK_YELLOW, "isbegin_quest(3085) == 1 || isbegin_quest(3089) == 1");
+	questinfo(QTYPE_QUEST, QMARK_YELLOW, "!isbegin_quest(3092) || !isbegin_quest(3086) || !isbegin_quest(3090)");
 	end;
 }
 
@@ -10088,6 +10122,7 @@ mid_camp,206,286,3	script	远征队信使	997,{
 	}
 
 OnInit:
+	questinfo(QTYPE_QUEST2, QMARK_YELLOW, "isbegin_quest(3087) == 1");
 	questinfo(QTYPE_QUEST, QMARK_YELLOW, "!isbegin_quest(3088)");
 	donpcevent "远征队信使#2::OnDisable";
 	donpcevent "远征队信使#3::OnDisable";
@@ -10237,6 +10272,7 @@ man_fild01,315,95,3	script	远征队侦察兵#1	707,{
 		close;
 	}
 OnInit:
+	questinfo(QTYPE_QUEST2, QMARK_YELLOW, "isbegin_quest(3090) == 1");
 	questinfo(QTYPE_QUEST, QMARK_YELLOW, "!isbegin_quest(3091)");
 	end;
 }
@@ -10300,7 +10336,6 @@ spl_fild03,172,71,3	duplicate(远征队侦察兵#1)	远征队侦察兵#4	707
 		close;
 	}
 OnInit:
-	questinfo(QTYPE_QUEST, QMARK_YELLOW, "!isbegin_quest(3094)");
 	end;
 }
 
@@ -10348,6 +10383,7 @@ ra_temple,122,174,3	script	努莉亚	918,{
 		close;
 	}
 OnInit:
+	questinfo(QTYPE_QUEST2, QMARK_YELLOW, "isbegin_quest(3093) == 1");
 	questinfo(QTYPE_QUEST, QMARK_YELLOW, "!isbegin_quest(3094)");
 	end;
 }
@@ -10405,6 +10441,7 @@ lhz_in01,110,174,5	script	格哈特	903,{
 		close;
 	}
 OnInit:
+	questinfo(QTYPE_QUEST2, QMARK_YELLOW, "isbegin_quest(3093) == 1");
 	questinfo(QTYPE_QUEST, QMARK_YELLOW, "!isbegin_quest(3094)");
 	end;
 }
@@ -10928,7 +10965,8 @@ mid_campin,68,185,3	script	追击队队长#1	803,{
 		close;
 	}
 OnInit:
-	questinfo(QTYPE_QUEST, QMARK_YELLOW, "!isbegin_quest(7012) || !isbegin_quest(7014) || !isbegin_quest(7023) || !isbegin_quest(7034) || !isbegin_quest(7035) || !isbegin_quest(7037) || !isbegin_quest(7041)");
+	questinfo(QTYPE_QUEST2, QMARK_YELLOW, "isbegin_quest(7013) == 1 || isbegin_quest(7022) == 1 || isbegin_quest(7034) == 1 || isbegin_quest(7040) == 1 || isbegin_quest(7036) == 1");
+	questinfo(QTYPE_QUEST, QMARK_YELLOW, "!isbegin_quest(7012) || !isbegin_quest(7037) || !isbegin_quest(7014) || !isbegin_quest(7023) || !isbegin_quest(7035) || !isbegin_quest(7041)");
 	end;
 }
 
@@ -10997,6 +11035,7 @@ mid_camp,191,206,3	script	管理员#moc2_finder	852,{
 		close;
 	}
 OnInit:
+	questinfo(QTYPE_QUEST2, QMARK_YELLOW, "isbegin_quest(7035) == 1");
 	questinfo(QTYPE_QUEST, QMARK_YELLOW, "!isbegin_quest(7036)");
 	end;
 }
@@ -11637,6 +11676,7 @@ mid_camp,199,311,7	script	基德先生#ep13_dan01	884,{
 	end;
 
 OnInit:
+	questinfo(QTYPE_QUEST2, QMARK_YELLOW, "isbegin_quest(7012) == 1 || isbegin_quest(7014) == 1 || isbegin_quest(7018) == 1 || isbegin_quest(7021) == 1 || isbegin_quest(7027) == 1 || isbegin_quest(7029) == 1");
 	questinfo(QTYPE_QUEST, QMARK_YELLOW, "!isbegin_quest(7013) || !isbegin_quest(7015) || !isbegin_quest(7019) || !isbegin_quest(7022) || !isbegin_quest(7028) || !isbegin_quest(7030)");
 	set $@moc_mao_gate1,0; //Global Variable
 	end;
@@ -12067,6 +12107,7 @@ mid_camp,256,272,3	script	德法利亚#moc2	897,{
 		close;
 	}
 OnInit:
+	questinfo(QTYPE_QUEST2, QMARK_YELLOW, "isbegin_quest(7023) == 1 || isbegin_quest(7024) == 1 || isbegin_quest(7025) == 1 || isbegin_quest(7037) == 1 || isbegin_quest(7038) == 1 || isbegin_quest(7039) == 1 || isbegin_quest(7041) == 1");
 	questinfo(QTYPE_QUEST, QMARK_YELLOW, "!isbegin_quest(7024) || !isbegin_quest(7025) || !isbegin_quest(7026) || !isbegin_quest(7038) || !isbegin_quest(7039) || !isbegin_quest(7040)");
 	end;
 }
@@ -13125,6 +13166,7 @@ que_job01,84,17,3	script	凛#moc_room2_1	885,{
 	cutin "moc2_rin03",255;
 	end;
 OnInit:
+	questinfo(QTYPE_QUEST2, QMARK_YELLOW, "isbegin_quest(7015) == 1 || isbegin_quest(7017) == 1");
 	questinfo(QTYPE_QUEST, QMARK_YELLOW, "!isbegin_quest(7016) || !isbegin_quest(7018)");
 	end;
 }
@@ -13432,6 +13474,7 @@ que_job01,144,54,3	script	凛#moc_room2_2	885,{
 	end;
 
 OnInit:
+	questinfo(QTYPE_QUEST2, QMARK_YELLOW, "isbegin_quest(7030) == 1");
 	questinfo(QTYPE_QUEST, QMARK_YELLOW, "!isbegin_quest(7030)");
 OnDisable:
 	disablenpc "凛#moc_room2_2";
@@ -13521,6 +13564,7 @@ OnTouch:
 	}
 	end;
 OnInit:
+	questinfo(QTYPE_QUEST2, QMARK_YELLOW, "isbegin_quest(7016) == 1");
 	questinfo(QTYPE_QUEST, QMARK_YELLOW, "!isbegin_quest(7017)");
 	end;
 }
@@ -13778,6 +13822,7 @@ que_dan01,49,36,5	script	尸体#moc2_dead01	457,{
 	end;
 
 OnInit:
+	questinfo(QTYPE_QUEST2, QMARK_YELLOW, "isbegin_quest(7020) == 1");
 	questinfo(QTYPE_QUEST, QMARK_YELLOW, "!isbegin_quest(7021)");
 OnDisable:
 	disablenpc "尸体#moc2_dead01";
@@ -14043,6 +14088,7 @@ que_dan02,115,53,3	script	男子#moc2_crazyR01	456,{
 	cutin "mocseal_kid01",255;
 	end;
 OnInit:
+	questinfo(QTYPE_QUEST2, QMARK_YELLOW, "isbegin_quest(7028) == 1");
 	questinfo(QTYPE_QUEST, QMARK_YELLOW, "!isbegin_quest(7029)");
 	end;
 }
