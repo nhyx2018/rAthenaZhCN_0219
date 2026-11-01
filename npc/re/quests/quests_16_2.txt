@@ -8118,28 +8118,28 @@ rebel_in,78,66,6	script	阿里韦罗·尤希克#TFQ02	4_M_GUNSLINGER,{
 			next;
 			mes "[阿里韦罗]";
 			mes "不难，只要去大约四个地方，毁掉几样东西。";
-			mes "You'll do it. Right?";
+			mes "你会做的，对吧？";
 			next;
-			select( "Do it.", "Do it without hesitation.", "Do it at all events.", "Since you are being forced, do it." );
+			select( "做。", "毫不犹豫地做。", "无论如何都做。", "既然被逼，那就做。" );
 			emotion ET_OHNO, playerattached();
 			mes "[阿里韦罗]";
-			mes "When I saw you for the first time, I knew you were faithful. Oh! Right.";
-			mes "What is your name?";
+			mes "第一次见你就知道你很可靠。哦，对了。";
+			mes "你叫什么名字？";
 			next;
 			mes "[" + strcharinfo(0) + "]";
-			mes "" + strcharinfo(0) + " is my name.";
+			mes "我叫" + strcharinfo(0) + "。";
 			next;
 			emotion ET_SCRATCH;
 			mes "[阿里韦罗]";
-			mes "" + strcharinfo(0) + "?";
-			mes "Hmm, what an arrogant name. But it's the name that deserves to be hot. Now I have to acknowledge you..";
+			mes "" + strcharinfo(0) + "？";
+			mes "嗯，真是个傲慢的名字。不过配得上红。现在我不得不认可你了……";
 			next;
 			mes "[阿里韦罗]";
-			mes "I have several things to prepare. I believe you also need some time to get ready before departing, don't you?";
+			mes "我有几样东西要准备。你出发前也需要时间吧？";
 			next;
 			setquest 5727;	// Suddenly in charge
 			mes "[阿里韦罗]";
-			mes "I will be fully ready after 4:00 am tomorrow. Once you are ready after that time, tell my elder sister. Then I will get here quickly.";
+			mes "我明天凌晨4点后准备完毕。之后你准备好了就告诉我姐姐，我会很快过来。";
 			close2;
 			cloakonnpcself( "阿里韦罗·尤希克#TFQ02" );
 			end;
@@ -8149,143 +8149,143 @@ rebel_in,78,66,6	script	阿里韦罗·尤希克#TFQ02	4_M_GUNSLINGER,{
 		case 2:
 			emotion ET_COOL;
 			mes "[阿里韦罗]";
-			mes "You are not only faithful, but diligent as well!";
+			mes "你不仅可靠，还很勤快！";
 			next;
 			mes "[阿里韦罗]";
-			mes "Great! The preparation is finished and you have arrived here. So let me give you a briefing on what we are going to do.";
+			mes "很好！准备完成，你也到了。那我来简报一下接下来的行动。";
 			next;
 			mes "[阿里韦罗]";
-			mes "Teleporting is not available in the Schwaltzvalt area. I'm sure you know that.";
+			mes "秀发兹地区无法使用传送，你应该知道。";
 			next;
-			if (select( "I know.", "I didn't know." ) == 1) {
+			if (select( "我知道。", "我不知道。" ) == 1) {
 				mes "[阿里韦罗]";
-				mes "Good. Actually, you don't need to know that.";
+				mes "很好。其实不知道也无所谓。";
 			}
 			else {
 				mes "[阿里韦罗]";
-				mes "I like your honesty. You don't actually need to know that.";
+				mes "我喜欢你的诚实。其实不知道也无所谓。";
 			}
-			mes "It's not that important.";
+			mes "没那么重要。";
 			next;
 			mes "[阿里韦罗]";
-			mes "According to the government of Schwaltzvalt, the use of teleport in the village is prohibited to prevent the overuse of magic. But it's just nonsense.";
+			mes "秀发兹政府说，禁止在村庄使用传送是为了防止魔力滥用。但都是胡说。";
 			next;
 			mes "[阿里韦罗]";
-			mes "There was an incident called 'Magic overuse'. Due to this incident, they passed the law to prohibit teleporting. In my opinion, 'Magic overuse' was manipulated by the government of Schwaltzvalt.";
+			mes "曾发生过‘魔力滥用’事件，他们借此立法禁止传送。我认为那是秀发兹政府操纵的。";
 			next;
 			mes "[阿里韦罗]";
-			mes "We think the Schwaltzvalt government installed the equipment to limit teleporting to protect the secret research of the Rekenber enterprise.";
+			mes "我们认为秀发兹政府安装限制传送的设备，是为了保护雷根贝格企业的秘密研究。";
 			next;
 			mes "[阿里韦罗]";
-			mes "Looking at the series of incidents that happened after the equipment was installed, our conviction has become stronger.";
+			mes "看到设备安装后发生的一连串事件，我们更确信了。";
 			next;
 			emotion ET_QUESTION, playerattached();
 			mes "[" + strcharinfo(0) + "]";
-			mes "Series of incidents?";
+			mes "一连串事件？";
 			next;
 			emotion ET_QUESTION;
 			mes "[阿里韦罗]";
-			mes "Haven't you heard of the mysterious disappearance in the slum?";
+			mes "你没听说过贫民窟的神秘失踪事件吗？";
 			next;
 			mes "[阿里韦罗]";
-			mes "Since it's an incident that has already happened and it is not important now, I will skip the explanation. If you are curious about it, you can search it later on.";
+			mes "事情已经发生，现在也不重要，我就不解释了。好奇的话以后自己查。";
 			next;
 			mes "[阿里韦罗]";
-			mes "In any case, we will destroy all the 'Teleport prohibition equipment' installed in Schwaltzvalt.";
+			mes "总之，我们要破坏秀发兹境内所有‘传送禁止设备’。";
 			next;
 			emotion ET_HUM, playerattached();
 			mes "[" + strcharinfo(0) + "]";
-			mes "Do you know its location?";
+			mes "你知道位置吗？";
 			next;
 			emotion ET_HUK;
 			mes "[阿里韦罗]";
-			mes "Wow~ That's so sharp..";
-			mes "What a sharp question.";
-			mes "You deserve to be a hot person.";
+			mes "哇~问得真犀利……";
+			mes "真是犀利的问题。";
+			mes "难怪你这么红。";
 			next;
 			mes "[阿里韦罗]";
-			mes "That's the problem we face now. This equipment is being hidden and protected by various technologies, including magic.";
+			mes "这正是问题所在。设备被各种技术隐藏保护，包括魔法。";
 			next;
 			mes "[阿里韦罗]";
-			mes "Hahahaha. But you don't have to worry.";
-			mes "At least, I know the location of one part of the equipment.";
-			mes "Do you know '艾因贝克, the mining village'?";
+			mes "哈哈哈，但不用担心。";
+			mes "至少我知道其中一部分设备的位置。";
+			mes "你知道矿山村艾因贝克吗？";
 			next;
 			emotion ET_SMILE;
 			mes "[阿里韦罗]";
-			mes "Hahaha. Of course you do, this area, 克拉纳·内米耶里, is also in 艾因贝克.";
+			mes "哈哈哈，当然知道，克拉纳·内米耶里就在艾因贝克。";
 			next;
 			emotion ET_SURPRISE;
 			mes "[阿里韦罗]";
-			mes "Anyway, our agent in 艾因贝克 reported that a suspicious device showed up at the end of a freight train and disappeared quickly. The problem is..";
+			mes "总之，艾因贝克的探员报告，可疑设备在货运列车尾部出现一下就消失了。问题是……";
 			next;
 			mes "[阿里韦罗]";
-			mes "There is no way to reveal the hidden and protected device for us to destroy..";
+			mes "我们无法让隐藏保护的设备现形并破坏……";
 			next;
 			mes "[阿里韦罗]";
-			mes "In this case, we can revise the incident step by step from the beginning, right?";
-			mes "Maybe we can find something we missed.";
+			mes "这样的话，可以从头一步步推演事件，对吧？";
+			mes "也许能找到遗漏的线索。";
 			next;
 			emotion ET_OK, playerattached();
 			mes "[" + strcharinfo(0) + "]";
-			mes "Do you agree?";
+			mes "你同意吗？";
 			next;
 			erasequest 5727;	// Suddenly in charge
 			setquest 5728;	// Headache
 			yurhik_quest = 1;
 			emotion ET_CONFUSE;
 			mes "[阿里韦罗]";
-			mes "It's been a long time since I used my head for the last time. Let's take a break to clear our minds.";
+			mes "好久没动脑了。先休息一下，清清脑子。";
 			close;
 		}
 	}
 	if (yurhik_quest == 1) {
 		mes "[阿里韦罗]";
-		mes "Great! It's high time to use my head, after a long while.";
-		mes "I will tell you the situation step by step from the moment when the agent found an unusual device. Once you find anything abnormal, tell me.";
+		mes "很好！好久没动脑，正该用一用。";
+		mes "我从探员发现异常设备的那一刻开始，一步步讲。发现任何不对劲就告诉我。";
 		next;
 		mes "[阿里韦罗]";
-		mes "One day, our agent H in 艾因贝克 came out of the guardroom for the usual night patrol with a torch and club in each hand. H was wearing guard clothes.";
+		mes "某天，艾因贝克的探员H像往常一样从警卫室出来夜巡，一手火把一手棍棒，穿着警卫服。";
 		next;
 		mes "[阿里韦罗]";
-		mes "H finished the patrol following the usual order. Finally, H went to the end of the freight train where he found an abnormal device.";
+		mes "H按惯例完成巡逻，最后走到货运列车尾部，发现了异常设备。";
 		next;
 		mes "[阿里韦罗]";
-		mes "Normally, there is a strong wind every now and then. But, on that day, the wind was strong enough to turn off the light. Then..";
-		mes "H said that a suspicious device appeared for a moment and disappeared quickly.";
+		mes "平时偶尔会刮大风，但那天风大到把火把吹灭。然后……";
+		mes "H说可疑设备出现了一瞬，又很快消失。";
 		next;
 		mes "[阿里韦罗]";
-		mes "That's it..";
+		mes "就这些……";
 		next;
 		mes "[阿里韦罗]";
-		mes "The only information we have is the statement by the agent.. After listening to this story, did you find anything unusual?";
+		mes "我们只有探员的证词……听完后，你发现什么异常了吗？";
 		while( true ) {
 			next;
-			switch( select( "Guard clothes", "Club", "The way H patrolled", "Freight train", "A strong wind", "The turned-off torch" ) ) {
+			switch( select( "警卫服", "棍棒", "H的巡逻路线", "货运列车", "强风", "被吹灭的火把" ) ) {
 			case 1:
 				mes "[阿里韦罗]";
-				mes "He was wearing neat guard clothes cleaned and ironed by his daughter. But it's not unusual to wear neat guard clothes";
+				mes "他穿着女儿洗净熨平的整洁警卫服。但穿整洁制服并不奇怪。";
 				continue;
 			case 2:
 				mes "[阿里韦罗]";
-				mes "H says he carries a club every time he patrols, to prepare for some unexpected situations. This is not unusual either.";
+				mes "H说每次巡逻都带棍棒，以防万一。这也不奇怪。";
 				continue;
 			case 3:
 				mes "[阿里韦罗]";
-				mes "H patrols through the same course every day. He says it's written in the guard manual. I find nothing strange about it. Do you?";
+				mes "H每天走同一条路线，他说警卫手册上写着。我不觉得奇怪，你呢？";
 				continue;
 			case 4:
 				mes "[阿里韦罗]";
-				mes "It was a train that carried coal from the mine. Since it was night, the train stopped. Well, they say the train is not operated a lot these days due to a great deal of monsters in the mine.";
+				mes "那是运矿山煤的列车。因为夜里停运。听说最近矿山怪物多，列车班次很少。";
 				continue;
 			case 5:
 				mes "[阿里韦罗]";
-				mes "Since it is a mountainous area, there is occasionally a strong wind, even in normal times.. It happens every day, so I don't find it strange.";
+				mes "山区平时就偶尔刮大风，每天都这样，我不觉得奇怪。";
 				continue;
 			case 6:
 				mes "[阿里韦罗]";
-				mes "A strong wind.. The turned-off torch..";
-				mes "Oh?! I think I have found it.";
+				mes "强风……被吹灭的火把……";
+				mes "哦？！我好像找到了。";
 				break;
 			}
 			break;
@@ -8293,15 +8293,15 @@ rebel_in,78,66,6	script	阿里韦罗·尤希克#TFQ02	4_M_GUNSLINGER,{
 		next;
 		emotion ET_SMILE;
 		mes "[阿里韦罗]";
-		mes "Hahahahaha. You are a genius. Thanks to your support, the puzzle is solved. Now we have a reliable theory and let's test it.";
+		mes "哈哈哈哈，你是天才。多亏你，谜题解开了。现在有可靠推论，去验证吧。";
 		next;
 		emotion ET_QUESTION, playerattached();
 		mes "[" + strcharinfo(0) + "]";
-		mes "What kind of theory is it?";
+		mes "是什么推论？";
 		next;
 		mes "[阿里韦罗]";
 		mes "Hmm? You haven't noticed yet? I thought you noticed it already and then gave me a hint.";
-		mes "It's not that important.";
+		mes "没那么重要。";
 		next;
 		emotion ET_BLABLA;
 		mes "[阿里韦罗]";
