@@ -16918,34 +16918,34 @@ OnTouch:
 	end;
 }
 
-prt_pri00,58,128,4	script	Overwatcher Terketh#ep16	4_M_JOB_HUNTER,{
+prt_pri00,58,128,4	script	守望者特凯斯#ep16	4_M_JOB_HUNTER,{
 	if (ep16_royal < 13) {
-		npctalk "...Such a disturbance to my training.", "", bc_self;
+		npctalk "……真打扰我训练。", "", bc_self;
 		end;
 	}
 	if (ep16_royal == 13) {
-		npctalk "Oh, my! What the...", "", bc_self;
-		mes "[Terketh]";
-		mes "You are out from the Past Memories of the Royal Family?";
-		mes "Since you know the way here, you must have got the permission to move.";
+		npctalk "天啊！什么……", "", bc_self;
+		mes "[特凯斯]";
+		mes "你从王家过去的记忆出来了？";
+		mes "既然知道路，应该有通行许可。";
 		next;
-		mes "[Terketh]";
-		mes "Let me send you out.";
-		mes "If you move straight up the stairs, you'll find the Crusader's Office.";
-		mes "You must to where to go after that, right?";
+		mes "[特凯斯]";
+		mes "我送你出去。";
+		mes "沿楼梯直上就是十字军办公室。";
+		mes "之后该去哪你知道吧？";
 		erasequest 7695;// Escape from the Past Memories of the Royal Family
 		setquest 7696;// What's Next?
 		ep16_royal = 14;
 		warp "prt_pri00",53,128;
 		end;
 	}
-	mes "[Terketh]";
-	mes "What do you want?";
+	mes "[特凯斯]";
+	mes "有什么事？";
 	next;
-	if (select( "To the Past Memories of the Royal Family", "To the outside" ) == 2) {
+	if (select( "去王家过去的记忆", "去外面" ) == 2) {
 		setpcblock PCBLOCK_NPC, true;
 		sleep2 2000;
-		npctalk "Well, sure.", "", bc_self;
+		npctalk "嗯，好。", "", bc_self;
 		sleep2 2000;
 		setpcblock PCBLOCK_NPC, false;
 		warp "prt_pri00",53,128;
@@ -16953,7 +16953,7 @@ prt_pri00,58,128,4	script	Overwatcher Terketh#ep16	4_M_JOB_HUNTER,{
 	}
 	setpcblock PCBLOCK_NPC, true;
 	sleep2 2000;
-	npctalk "Take care. Do not snoop around too much!", "", bc_self;
+	npctalk "小心点，别到处乱探！", "", bc_self;
 	sleep2 2000;
 	setpcblock PCBLOCK_NPC, false;
 	warp "prt_lib",9,28;
