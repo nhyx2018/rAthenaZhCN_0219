@@ -2745,105 +2745,105 @@ rebel_in,21,45,5	script	雷兹#16nego04	4_M_LAZY,{
 rebel_in,42,43,0	script	#16negobok01	HIDDEN_WARP_NPC,5,1,{
 	end;
 OnTouch:
-	npctalk "Thanks again!", "", bc_self;
+	npctalk "再次感谢！", "", bc_self;
 	end;
 }
 
 rebel_in,48,43,0	script	#16negobok02	HIDDEN_WARP_NPC,5,1,{
 	end;
 OnTouch:
-	npctalk "Whenever you come in, be aware of a tail!", "", bc_self;
+	npctalk "每次进来都要小心尾巴！", "", bc_self;
 	end;
 }
 
 rebel_in,54,43,0	script	#16negobok03	HIDDEN_WARP_NPC,5,1,{
 	end;
 OnTouch:
-	npctalk "Brush the dirt out of your shoes before coming in.", "", bc_self;
+	npctalk "进来前把鞋上的泥刷掉。", "", bc_self;
 	end;
 }
 
 rebel_in,60,43,0	script	#16negobok04	HIDDEN_WARP_NPC,5,1,{
 	end;
 OnTouch:
-	npctalk "Since the sound echoes here, walk silently. Don't run.", "", bc_self;
+	npctalk "这里回声很大，走路轻点，别跑。", "", bc_self;
 	end;
 }
 
 rebel_in,62,44,5	duplicate(dummy_cloaked_npc)	菲洛彭特斯#ep162_02	4_M_PHILOFONTES
 
-rebel_in,65,46,5	script	反叛者 Squadder#ep16	4_M_GUNSLINGER2,3,3,{
+rebel_in,65,46,5	script	反叛者队员#ep16	4_M_GUNSLINGER2,3,3,{
 	if (terra_gloria_main < 17) {
-		mes "[Squadder]";
-		mes "These guys are quite loud.";
-		mes "I would never be bored.";
+		mes "[反叛者队员]";
+		mes "这些家伙真吵。";
+		mes "我永远不会无聊。";
 		close;
 	}
 	if (terra_gloria_main == 17) {
-		mes "[Squadder]";
-		mes "Someone has come, and I think he is looking for you.";
-		mes "I let him come in, even though I had a bad feeling about it.";
+		mes "[反叛者队员]";
+		mes "有人来了，我想他在找你。";
+		mes "虽然感觉不妙，我还是让他进来了。";
 		next;
 		cloakoffnpcself( "菲洛彭特斯#ep162_02" );
-		npctalk "Hoo ...", "菲洛彭特斯#ep162_02", bc_self;
+		npctalk "呼……", "菲洛彭特斯#ep162_02", bc_self;
 		mes "[泰丝]";
-		mes "These people are really rude.";
-		mes "... How can they ever put a visitor outside like this?";
+		mes "这些人真没礼貌。";
+		mes "……怎么能把客人晾在外面？";
 		cutin "ep16_tes03.bmp",0;
 		next;
 		cutin "",255;
-		mes "[Squadder]";
-		mes "Hey, dude. You talk very politely, don't you?";
-		mes "Without this case, we would never cooperate with the government guys!";
+		mes "[反叛者队员]";
+		mes "喂，老兄，你说话倒是很客气啊？";
+		mes "要不是这案子，我们才不会和政府的人合作！";
 		next;
 		cutin "ep16_tes01.bmp",0;
 		mes "[泰丝]";
-		mes "There is a visitor from Rune Midgarts. I escorted the visitor to ^4d4dffthe 艾因布罗克 hotel^000000.";
-		mes "I don't know how things are going on here.";
-		npctalk "Hey, dude! Are you ignoring me?", "", bc_self;
+		mes "有来自卢恩-米德加尔特的客人。我把客人护送到了^4d4dff艾因布罗克旅馆^000000。";
+		mes "我不知道这边进展如何。";
+		npctalk "喂，老兄！你无视我？", "", bc_self;
 		next;
 		cutin "ep16_tes01.bmp",0;
 		mes "[泰丝]";
-		mes "Since I was able to come in here, I guess the negotiation was successful.";
-		mes "... Where is the field of operations?";
-		npctalk "Oh~~ Man!!", "", bc_self;
+		mes "既然我能进来，谈判应该成功了吧。";
+		mes "……行动地点在哪里？";
+		npctalk "哦~~老兄！！", "", bc_self;
 		next;
 		cutin "",255;
-		mes "[Squadder]";
-		mes "That's what I was about to tell you!";
-		mes "Without you, I've already told him all about it!";
+		mes "[反叛者队员]";
+		mes "我正要说呢！";
+		mes "不用你，我早就全告诉他了！";
 		next;
-		mes "[Squadder]";
-		mes "Well, I don't know if you are a visitor or not. But you're going to 艾因布罗克? It's good.";
-		mes "We are going to 艾因布罗克, too.";
+		mes "[反叛者队员]";
+		mes "我不知道你是不是客人。但你要去艾因布罗克？很好。";
+		mes "我们也要去艾因布罗克。";
 		next;
-		mes "[Squadder]";
-		mes "艾因布罗克 hotel? Nice.";
-		mes "If you take a train here, you will arrive at 艾因布罗克 in a moment.";
+		mes "[反叛者队员]";
+		mes "艾因布罗克旅馆？不错。";
+		mes "在这里坐火车，一会儿就到艾因布罗克。";
 		next;
-		select("The heron ...");
+		select("苍鹭……");
 		cutin "ep16_tes01.bmp",0;
 		mes "[泰丝]";
-		mes "The heron? Oh, 雷兹?";
-		mes "I'm sure he will take care of getting himself there.";
+		mes "苍鹭？哦，雷兹？";
+		mes "他肯定有办法自己过去。";
 		next;
 		mes "[泰丝]";
-		mes "See you at ^4d4dff艾因布罗克 hotel^000000.";
+		mes "在^4d4dff艾因布罗克旅馆^000000见。";
 		next;
 		cutin "",255;
-		mes "[Squadder]";
-		mes "Well, let me escort you to the train station.";
-		mes "Shall we depart now?";
+		mes "[反叛者队员]";
+		mes "那我送你们去火车站吧。";
+		mes "现在出发吗？";
 		erasequest 7737;// Together with Rebel
 		setquest 7738;// Next operation plan
 		completequest 14615;// Between negotiation and deception
 		terra_gloria_main = 18;
 		next;
-		.@s = select( "Yes!", "We will go on our own." );
-		mes "[Squadder]";
-		mes "From 艾因贝克 station to 艾因布罗克, you go on your own.";
-		mes "Now you know the direction.";
-		npctalk "I will be waiting in the hotel.", "菲洛彭特斯#ep162_02", bc_self;
+		.@s = select( "好！", "我们自己过去。" );
+		mes "[反叛者队员]";
+		mes "从艾因贝克站到艾因布罗克，你们自己过去。";
+		mes "现在知道方向了吧。";
+		npctalk "我会在旅馆等你们。", "菲洛彭特斯#ep162_02", bc_self;
 		close2;
 		cloakonnpcself( "菲洛彭特斯#ep162_02" );
 		if (.@s == 1)
@@ -2851,18 +2851,18 @@ rebel_in,65,46,5	script	反叛者 Squadder#ep16	4_M_GUNSLINGER2,3,3,{
 		end;
 	}
 	if (terra_gloria_main == 18) {
-		mes "[Squadder]";
-		mes "You said it is ^4d4dff艾因布罗克 hotel^000000.";
-		mes "We will send someone you might know well.";
+		mes "[反叛者队员]";
+		mes "你说的是^4d4dff艾因布罗克旅馆^000000。";
+		mes "我们会派个你可能很熟的人过去。";
 		close;
 	}
-	mes "[Squadder]";
-	mes "Maybe it's our chance to give a huge gift to the enterprise~";
+	mes "[反叛者队员]";
+	mes "也许这是我们给企业送大礼的机会~";
 	close;
 
 OnTouch:
 	if (terra_gloria_main == 17)
-		npctalk "Hey, man, this way.", "", bc_self;
+		npctalk "喂，老兄，这边。", "", bc_self;
 	end;
 
 OnInit:
