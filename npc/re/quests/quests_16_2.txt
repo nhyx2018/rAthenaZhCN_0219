@@ -938,41 +938,41 @@ OnInit:
 
 lighthalzen,309,263,3	script	男子#ep162_02	1_M_01,{
 	if (terra_gloria_main != 5)
-		npctalk "Hey, what are you looking at? Go away!", "", bc_self;
+		npctalk "喂，你看什么看？滚开！", "", bc_self;
 	else {
 		setpcblock PCBLOCK_NPC, true;
-		unittalk getcharid(3), "" + strcharinfo(0) + " : Bruno?", bc_self;
+		unittalk getcharid(3), "" + strcharinfo(0) + "：布鲁诺？", bc_self;
 		sleep2 1000;
-		npctalk "Who are you? Why do you call me?", "", bc_self;
+		npctalk "你是谁？为什么叫我？", "", bc_self;
 		sleep2 1000;
 		cloakoffnpcself( "可疑佣兵#ep" );
-		npctalk "We are in trouble.", "可疑佣兵#ep", bc_self;
+		npctalk "麻烦了。", "可疑佣兵#ep", bc_self;
 		sleep2 2000;
-		npctalk ".... Heart ... Heart Hunter! What is a Heart Hunter doing here?!", "", bc_self;
+		npctalk "……心脏……心脏猎人！心脏猎人怎么会在这里？！", "", bc_self;
 		sleep2 2000;
 		npctalk ".....", "可疑佣兵#ep", bc_self;
 		sleep2 2000;
-		npctalk "Damn! He swindled me! Hey you, save me! I will give you all the money you want.", "", bc_self;
+		npctalk "可恶！他骗了我！喂，救我！你要多少钱我都给。", "", bc_self;
 		sleep2 2000;
 		npctalk "......", "可疑佣兵#ep", bc_self;
 		sleep2 2000;
-		npctalk "Now, die.", "可疑佣兵#ep", bc_self;
+		npctalk "去死吧。", "可疑佣兵#ep", bc_self;
 		sleep2 500;
 		cloakoffnpcself( "斯琪亚#ep162_04" );
 		cloakoffnpcself( "克鲁斯#ep162_02" );
 		specialeffect EF_NPC_STOP, AREA, "可疑佣兵#ep";
 		specialeffect EF_HIT3, AREA, "可疑佣兵#ep";
 		sleep2 300;
-		npctalk "No ... What a shame ...", "可疑佣兵#ep", bc_self;
-		npctalk "No!!", "", bc_self;
+		npctalk "不……真可惜……", "可疑佣兵#ep", bc_self;
+		npctalk "不！！", "", bc_self;
 		sleep2 300;
-		npctalk "Are you all right?", "斯琪亚#ep162_04", bc_self;
-		npctalk "Who is this guy? I overpowered him.", "克鲁斯#ep162_02", bc_self;
+		npctalk "你没事吧？", "斯琪亚#ep162_04", bc_self;
+		npctalk "这家伙是谁？我已经制住他了。", "克鲁斯#ep162_02", bc_self;
 		sleep2 2000;
-		unittalk getcharid(3), "" + strcharinfo(0) + " : I am all right.", bc_self;
+		unittalk getcharid(3), "" + strcharinfo(0) + "：我没事。", bc_self;
 		sleep2 4000;
-		npctalk "This mercenary is same as the last time! If we capture this guy and investigate ...", "斯琪亚#ep162_04", bc_self;
-		npctalk "... Damn, not much I can do.", "可疑佣兵#ep", bc_self;
+		npctalk "这个佣兵和上次一样！抓住他调查的话……", "斯琪亚#ep162_04", bc_self;
+		npctalk "……可恶，我也无能为力了。", "可疑佣兵#ep", bc_self;
 		sleep2 2000;
 		specialeffect EF_BEGINSPELL, AREA, "可疑佣兵#ep";
 		sleep2 500;
@@ -985,31 +985,31 @@ lighthalzen,309,263,3	script	男子#ep162_02	1_M_01,{
 		specialeffect EF_GUARD;
 		sleep2 1000;
 		cloakonnpcself( "可疑佣兵#ep" );
-		monster "lighthalzen",307,265, "Suspicious mercenary", 3454,1, "男子#ep162_02::OnMobDead";
+		monster "lighthalzen",307,265, "可疑佣兵", 3454,1, "男子#ep162_02::OnMobDead";
 		killmonster "lighthalzen", "男子#ep162_02::OnMobDead";
 		sleep2 2000;
-		npctalk "What!", "克鲁斯#ep162_02", bc_self;
-		npctalk "What is it? He killed himself?", "斯琪亚#ep162_04", bc_self;
+		npctalk "什么！", "克鲁斯#ep162_02", bc_self;
+		npctalk "怎么回事？他自杀了？", "斯琪亚#ep162_04", bc_self;
 		sleep2 2000;
-		npctalk "It was a suicide bombing, but he failed. He gave up his life too easily.", "克鲁斯#ep162_02", bc_self;
+		npctalk "是自杀式爆炸，但失败了。他也太轻易送命了。", "克鲁斯#ep162_02", bc_self;
 		sleep2 3000;
-		npctalk "And ... You must be Bruno?", "克鲁斯#ep162_02", bc_self;
+		npctalk "还有……你一定是布鲁诺？", "克鲁斯#ep162_02", bc_self;
 		sleep2 3000;
-		npctalk "You'd never imagine how long it took for us to get here ...", "克鲁斯#ep162_02", bc_self;
+		npctalk "你根本想不到我们花了多久才到这里……", "克鲁斯#ep162_02", bc_self;
 		sleep2 3000;
-		npctalk "Hmm ... Crux, you take Bruno.", "斯琪亚#ep162_04", bc_self;
+		npctalk "嗯……克鲁斯，你带走布鲁诺。", "斯琪亚#ep162_04", bc_self;
 		sleep2 3000;
-		npctalk "Bruno, you'd better cooperate with us.", "斯琪亚#ep162_04", bc_self;
+		npctalk "布鲁诺，你最好配合我们。", "斯琪亚#ep162_04", bc_self;
 		sleep2 2500;
-		npctalk "Otherwise you will be chased by those guys for the rest of your life, right? If you help us, we won't kill you.", "斯琪亚#ep162_04", bc_self;
+		npctalk "否则你下半辈子都会被那些人追杀，对吧？帮我们，我们就不杀你。", "斯琪亚#ep162_04", bc_self;
 		sleep2 1000;
 		npctalk "....", "", bc_self;
 		sleep2 3000;
-		npctalk "What? You're not answering?", "斯琪亚#ep162_04", bc_self;
+		npctalk "什么？你不回答？", "斯琪亚#ep162_04", bc_self;
 		sleep2 3000;
-		npctalk "Well. Then I'll count on you, Crux.", "斯琪亚#ep162_04", bc_self;
+		npctalk "好吧。那就拜托你了，克鲁斯。", "斯琪亚#ep162_04", bc_self;
 		sleep2 2000;
-		npctalk "Yes, lady. See you in the palace.", "克鲁斯#ep162_02", bc_self;
+		npctalk "是，小姐。王宫见。", "克鲁斯#ep162_02", bc_self;
 		sleep2 2000;
 		setpcblock PCBLOCK_NPC, false;
 		cloakonnpcself( "克鲁斯#ep162_02" );
@@ -1017,7 +1017,7 @@ lighthalzen,309,263,3	script	男子#ep162_02	1_M_01,{
 		erasequest 7733;// Pursuit!
 		setquest 7734;// Arrest
 		terra_gloria_main = 6;
-		npctalk "Hero, shall we go back to the palace too?", "斯琪亚#ep162_04", bc_self;
+		npctalk "英雄，我们也回王宫吧？", "斯琪亚#ep162_04", bc_self;
 	}
 	end;
 
