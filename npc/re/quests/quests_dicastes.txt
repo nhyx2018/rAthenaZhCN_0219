@@ -30,7 +30,7 @@
 //= 1.9 Updated "Fish Tails" with RE coordinates.
 //= 1.9a Minor fix. [Joseph]
 //= 2.0 Fixed variables. [Joseph]
-//= 2.1 Added reset option to "Kareka". [Euphy]
+//= 2.1 Added reset option to "卡雷卡". [Euphy]
 //= 2.2 Added Izlude duplicates. [Euphy]
 //= 2.3 Added GM management NPCs. [Euphy]
 //============================================================
@@ -61,7 +61,7 @@ manuk,321,182,5	script	入口管理员#ep133	450,{
 		end; 
 	}
 	mes "[入口管理员]";
-	mes "Sorry.";
+	mes "抱歉。";
 	mes "你不是沙帕族，我不能让你通过。";
 	close;
 }
@@ -312,7 +312,7 @@ OnTouch_:
 		donpcevent "可疑男子#ep133_::OnEnable";
 		cutin "ep13_loki01",2;
 		mes "[低沉的声音]";
-		mes "Hey.";
+		mes "喂。";
 		mes "你就是见过迪卡斯特新任大臣的那个人类吗？";
 		mes "他长什么样？";
 		next;
@@ -321,7 +321,7 @@ OnTouch_:
 		next;
 		cutin "ep13_loki02",2;
 		mes "[黑衣男子]";
-		mes "...Really?";
+		mes "……真的吗？";
 		mes "你终于找到了。";
 		set ep13_3_secret, 24;
 		next;
@@ -371,10 +371,10 @@ OnEnable:
 		mes "嗯？你是人类。";
 		mes "如果你是从那条隧道过来的，那就是受拉维尔之邀前来的？";
 		next;
-		select("Yes.");
+		select("是。");
 		mes "[首都守卫]";
 		mes "难怪维汉纳斯会认可你。";
-		mes "Understood.";
+		mes "明白了。";
 		mes "我准许你入城，并会指引你初到埃迪斯特斯该做的事。";
 		next;
 		mes "[首都守卫]";
@@ -406,8 +406,8 @@ OnEnable:
 	mes "请向GM咨询。";
 	close;
 }
-dic_fild01,146,281,5	duplicate(Guard#ep133_11)	Capital City Guard#1	492
-dic_fild01,153,281,3	duplicate(Guard#ep133_11)	Capital City Guard#2	450
+dic_fild01,146,281,5	duplicate(Guard#ep133_11)	首都守卫#1	492
+dic_fild01,153,281,3	duplicate(Guard#ep133_11)	首都守卫#2	450
 
 dic_in01,254,119,0	script	物品保管处#01	844,{
 	mes "这里是物品保管处。";
@@ -530,12 +530,12 @@ dic_in01,48,263,5	script	狩猎部1主管	449,{
 		close;
 	}
 	mes "[狩猎部1号主管]";
-	mes "Welcome.";
+	mes "欢迎。";
 	mes "有什么可以帮你的？";
 	next;
 	select("我完成了委托。");
 	mes "[狩猎部1号主管]";
-	mes "Ah...";
+	mes "啊……";
 	mes "你的委托完成了吗？";
 	mes "我先查一下你的记录。";
 	next;
@@ -548,7 +548,7 @@ dic_in01,48,263,5	script	狩猎部1主管	449,{
 	que_dic(0,12103,4000,.@s$);
 	que_dic(0,12104,73000,.@s$);
 	que_dic(0,12105,59000,.@s$);
-	mes "Um....." + strcharinfo(0) + "";
+	mes "嗯……" + strcharinfo(0) + "";
 	mes "如果在委托上撒谎，你会有麻烦的……";
 	close;
 }
@@ -600,12 +600,12 @@ dic_in01,51,266,6	script	狩猎部2主管	449,{
 		close;
 	}
 	mes "[狩猎部2号主管]";
-	mes "Welcome.";
+	mes "欢迎。";
 	mes "有什么可以帮你的？";
 	next;
 	select("我完成了委托。");
 	mes "[狩猎部2号主管]";
-	mes "Ah...";
+	mes "啊……";
 	mes "你的委托完成了吗？";
 	mes "我先查一下你的记录。";
 	next;
@@ -617,7 +617,7 @@ dic_in01,51,266,6	script	狩猎部2主管	449,{
 	que_dic(0,12109,53000,.@s$);
 	que_dic(0,12110,30000,.@s$);
 	que_dic(0,12111,42000,.@s$);
-	mes "Umm.." + strcharinfo(0) + "";
+	mes "嗯……" + strcharinfo(0) + "";
 	mes "请再确认一下你的委托记录。这和我们的文件有出入。";
 	close;
 }
@@ -667,12 +667,12 @@ dic_in01,51,270,7	script	补给部1主管	449,{
 		close;
 	}
 	mes "[补给部1号主管]";
-	mes "Welcome.";
+	mes "欢迎。";
 	mes "有什么可以帮你的？";
 	next;
 	select("我完成了委托。");
 	mes "[补给部1号主管]";
-	mes "Ah...";
+	mes "啊……";
 	mes "你的委托完成了吗？";
 	mes "我先查一下你的记录。";
 	next;
@@ -735,12 +735,12 @@ dic_in01,48,273,8	script	补给部2主管	449,{
 		close;
 	}
 	mes "[补给部2号主管]";
-	mes "Welcome.";
+	mes "欢迎。";
 	mes "有什么可以帮你的？";
 	next;
 	select("我完成了委托。");
 	mes "[补给部2号主管]";
-	mes "Ah...";
+	mes "啊……";
 	mes "你的委托完成了吗？";
 	mes "我先查一下你的记录。";
 	next;
@@ -802,12 +802,12 @@ dic_in01,43,273,1	script	运输部1主管	449,{
 		close;
 	}
 	mes "[运输部1号主管]";
-	mes "Welcome.";
+	mes "欢迎。";
 	mes "有什么可以帮你的？";
 	next;
 	select("我完成了委托。");
 	mes "[运输部1号主管]";
-	mes "Ah...";
+	mes "啊……";
 	mes "你的委托完成了吗？";
 	mes "我先查一下你的记录。";
 	next;
@@ -876,12 +876,12 @@ dic_in01,40,270,2	script	运输部2主管	449,{
 		close;
 	}
 	mes "[运输部2号主管]";
-	mes "Welcome.";
+	mes "欢迎。";
 	mes "有什么可以帮你的？";
 	next;
 	select("我完成了委托。");
 	mes "[运输部2号主管]";
-	mes "Ah...";
+	mes "啊……";
 	mes "你的委托完成了吗？";
 	mes "我先查一下你的记录。";
 	next;
@@ -1011,9 +1011,9 @@ dic_in01,40,193,1	script	帕皮鲁斯#0001	453,{
 	close;
 }
 
-// Document Packages
+// 文件包裹s
 //============================================================
--	script	Document Package#main	-1,{
+-	script	文件包裹#main	-1,{
 	function	eldicastes_dp;
 	if (isequipped(2782) < 1) {
 		mes "你无法理解上面的文字。";
@@ -1113,10 +1113,10 @@ dic_in01,40,193,1	script	帕皮鲁斯#0001	453,{
 		close; 
 	}
 }
-dic_in01,31,192,0	duplicate(Document Package#main)	Document Package#0001	844
-dic_in01,31,187,0	duplicate(Document Package#main)	Document Package#0002	844
-dic_in01,25,192,0	duplicate(Document Package#main)	Document Package#0003	844
-dic_in01,25,187,0	duplicate(Document Package#main)	Document Package#0004	844
+dic_in01,31,192,0	duplicate(文件包裹#main)	文件包裹#0001	844
+dic_in01,31,187,0	duplicate(文件包裹#main)	文件包裹#0002	844
+dic_in01,25,192,0	duplicate(文件包裹#main)	文件包裹#0003	844
+dic_in01,25,187,0	duplicate(文件包裹#main)	文件包裹#0004	844
 
 // Unknown Relics
 //============================================================
@@ -1220,8 +1220,8 @@ dic_in01,138,225,3	script	迪尔守卫#ep133_19	492,{
 		next;
 		if (select("我有许可。:返回。") == 1) {
 			mes "[迪尔守卫]";
-			mes "Wait...";
-			mes strcharinfo(0) + "......ah... I see your name on the list.";
+			mes "等等……";
+			mes strcharinfo(0) + "……啊……我看到名单上有你的名字。";
 			mes "抱歉。";
 			mes "请通过。";
 			close2;
@@ -1229,7 +1229,7 @@ dic_in01,138,225,3	script	迪尔守卫#ep133_19	492,{
 			end;
 		}
 		mes "[迪尔守卫]";
-		mes "Sigh...";
+		mes "唉……";
 		mes "请见谅。";
 		mes "想见大臣的人很多。";
 		mes "所以戒备才如此森严。";
@@ -1298,7 +1298,7 @@ dic_in01,263,193,3	script	迪尔守卫#ep133_20	450,{
 		}
 		else {
 			mes "[迪尔守卫]";
-			mes "要见阿哈特，你需要 1 张功绩认证。";
+			mes "要见阿哈特，你需要 1 张<ITEM>沙帕功勋证<INFO>6304</INFO></ITEM>。";
 			mes "至少这对你算是特殊待遇了。";
 			close;
 		}
@@ -1322,7 +1322,7 @@ OnTouch:
 		sc_start SC_Blind,60000,0;
 		next;
 		mes "[清亮之声]";
-		mes "没关系，奇西尔。";
+		mes "没关系，契休。";
 		mes "你是来见我的吗？";
 		next;
 		mes "[清亮之声]";
@@ -1350,51 +1350,51 @@ dic_in01,294,276,5	script	秘密副官#ep133_2	498,{
 	}
 	cutin "ep13_cheshire_h",0;
 	if (ep13_3_secret < 16) {
-		mes "[奇西尔]";
+		mes "[契休]";
 		mes "........";
-		mes "........Humph.";
+		mes "……哼。";
 		close2;
 	}
 	else if (ep13_3_secret == 16) {
-		mes "- 奇西尔安静地站在阿哈特身旁，头和脸都用头巾裹着。";
-		mes "你瞥见奇西尔臀后闪过一条尾巴。 -";
+		mes "- 契休安静地站在阿哈特身旁，头和脸都用头巾裹着。";
+		mes "你瞥见契休臀后闪过一条尾巴。 -";
 		next;
 		select("尾巴？");
-		mes "[奇西尔]";
+		mes "[契休]";
 		mes "你看什么看？！";
 		mes "你在说什么尾巴。";
 		next;
 		select("你靠近过那个三角区域吗？");
-		mes "[奇西尔]";
-		mes ".. Hey, what are you talking about?";
+		mes "[契休]";
+		mes "……喂，你在说什么？";
 		mes "你想说什么？";
 		next;
 		cutin (Sex == SEX_MALE?"ep13_ahat_f":"ep13_ahat_m"),2;
 		mes "[阿哈特]";
 		mes "" + strcharinfo(0) + "....";
-		mes "你只需听从奇西尔的命令。";
+		mes "你只需听从契休的命令。";
 		mes "别问愚蠢的问题。这是命令。";
-		mes "奇西尔，继续。";
+		mes "契休，继续。";
 		next;
 		cutin "ep13_cheshire_h",0;
-		mes "[奇西尔]";
+		mes "[契休]";
 		mes "嗯……你要做的事是这样的。";
 		mes "城市南边有一道巨大的裂缝。";
 		mes "那里有许多……";
 		mes "裂缝附近发生的意外。";
 		next;
-		mes "[奇西尔]";
+		mes "[契休]";
 		mes "我需要你去清理掉所有痕迹。";
-		mes "你会找到 ^4d4dff凝结的血迹、法术残留和皮肤碎片^000000。";
+		mes "你会找到 ^4d4dff<ITEM>凝固的血痕<INFO>6306</INFO></ITEM>、法术残留和<ITEM>冻住的皮肤碎片<INFO>6305</INFO></ITEM>^000000。";
 		next;
-		mes "[奇西尔]";
+		mes "[契休]";
 		mes "不要让任何人察觉地清理干净。";
 		mes "然后带到这里来，不要随便扔掉。";
 		mes "每种至少带回 10 个。";
 		set ep13_3_secret, 17;
 		setquest 7199;
 		next;
-		mes "[奇西尔]";
+		mes "[契休]";
 		mes "绝不能被任何人看到。";
 		mes "绝不能告诉沙帕们。";
 		mes "要绝对保密！";
@@ -1402,8 +1402,8 @@ dic_in01,294,276,5	script	秘密副官#ep133_2	498,{
 	}
 	else if (ep13_3_secret == 17) {
 		if (countitem(6306) > 9 && countitem(6305) > 9 && countitem(6307) > 9) {
-			mes "[奇西尔]";
-			mes "..... ..you";
+			mes "[契休]";
+			mes "……你……";
 			mes "你还挺有用的，不是吗？";
 			mes "今天就到这里。";
 			mes "我们得一点一点地做，以免引起注意。";
@@ -1417,18 +1417,18 @@ dic_in01,294,276,5	script	秘密副官#ep133_2	498,{
 			close2;
 		}
 		else {
-			mes "[奇西尔]";
+			mes "[契休]";
 			mes "抹去裂缝附近的各种痕迹。";
 			mes "你的任务是收集并带回凝结的血迹、魔法残留和皮肤碎片。";
 			next;
-			mes "[奇西尔]";
+			mes "[契休]";
 			mes "这不是一天能完成的，所以每种至少带回 10 个。";
 			mes "明白了吗？";
 			close2;
 		}
 	}
 	else if (ep13_3_secret == 18) {
-		mes "[奇西尔]";
+		mes "[契休]";
 		mes "你和我这边的工作结束了。";
 		mes "你有东西要交给阿哈特吗？";
 		close2;
@@ -1436,13 +1436,13 @@ dic_in01,294,276,5	script	秘密副官#ep133_2	498,{
 	else {
 		if (ep13_3_ahtdayq == 1) {
 			if ((countitem(6306) > 9) && (countitem(6305) > 9) && (countitem(6307) > 9)) {
-				mes "[奇西尔]";
+				mes "[契休]";
 				mes "好，确认完毕。";
-				mes "Good.";
-				mes "你是用功绩认证来到这里的吧？";
+				mes "很好。";
+				mes "你是用沙帕功勋证来到这里的吧？";
 				mes "我会还给你。";
 				next;
-				mes "[奇西尔]";
+				mes "[契休]";
 				mes "明天我们还要再来一次。";
 				mes "阿哈特似乎很信任你。";
 				mes "我们尽力而为吧。";
@@ -1458,36 +1458,36 @@ dic_in01,294,276,5	script	秘密副官#ep133_2	498,{
 				close2;
 			}
 			else {
-				mes "[奇西尔]";
+				mes "[契休]";
 				mes "和往常一样，去收集这里北边裂缝附近的痕迹。";
-				mes "凝结的血迹、冻结的皮肤碎片、奇怪的魔力之石……";
+				mes "<ITEM>凝固的血痕<INFO>6306</INFO></ITEM>、<ITEM>冻住的皮肤碎片<INFO>6305</INFO></ITEM>、<ITEM>奇怪的魔力之石<INFO>6307</INFO></ITEM>……";
 				mes "每种 10 个。";
 				close2;
 			}
 		}
 		else if (ep13_3_ahtdayq == 2) {
 			if (checkquest(7200,PLAYTIME) == 0 || checkquest(7200,PLAYTIME) == 1) {
-				mes "[奇西尔]";
+				mes "[契休]";
 				mes "还不行。";
 				mes "我们必须仔细计划裂缝附近的清理工作。";
 				mes "晚点再来。";
 				close2;
 			}
 			else if (checkquest(7200,PLAYTIME) == 2) {
-				mes "[奇西尔]";
+				mes "[契休]";
 				mes "今天继续干活。";
-				mes "凝结的血迹、冻结的皮肤碎片、奇怪的魔力之石……";
+				mes "<ITEM>凝固的血痕<INFO>6306</INFO></ITEM>、<ITEM>冻住的皮肤碎片<INFO>6305</INFO></ITEM>、<ITEM>奇怪的魔力之石<INFO>6307</INFO></ITEM>……";
 				mes "悄悄地带来。";
 				next;
-				mes "[奇西尔]";
+				mes "[契休]";
 				mes "和往常一样，每种收集 10 个。";
 				mes "明白了吗？";
 				set ep13_3_ahtdayq, 1;
 				if (checkquest(7200,PLAYTIME) >= 0) erasequest 7200;
 				setquest 7201;
 				next;
-				mes "你收到了奇西尔清理裂缝区域的委托。";
-				mes "阿哈特和奇西尔仍然毫无察觉。";
+				mes "你收到了契休清理裂缝区域的委托。";
+				mes "阿哈特和契休仍然毫无察觉。";
 				close2;
 			}
 			else {
@@ -1527,7 +1527,7 @@ dic_in01,300,280,5	script	阿哈特大臣#ep133_21	493,{
 		SC_Start SC_Blind,60000,0;
 		next;
 		mes "[清亮之声]";
-		mes "没关系，奇西尔。";
+		mes "没关系，契休。";
 		mes "你是来见我的吗？";
 		next;
 		mes "[清亮之声]";
@@ -1582,7 +1582,7 @@ dic_in01,300,280,5	script	阿哈特大臣#ep133_21	493,{
 		next;
 		select("住手！:恶魔走开！");
 		mes "[阿哈特]";
-		mes ".. useless resistance...";
+		mes "……无用的抵抗……";
 		mes "不过偶尔这样也挺有趣。";
 		mes "我随时都能对你施法。";
 		next;
@@ -1598,8 +1598,8 @@ dic_in01,300,280,5	script	阿哈特大臣#ep133_21	493,{
 			if (.@ahtlove == 1) {
 				select("以意志力抵抗。");
 				mes "[阿哈特]";
-				mes "Amusing.";
-				mes "你不这么认为吗，奇西尔？";
+				mes "真有趣。";
+				mes "你不这么认为吗，契休？";
 				mes "哈哈哈，欲擒故纵……这会很有趣……";
 				next;
 			}
@@ -1607,7 +1607,7 @@ dic_in01,300,280,5	script	阿哈特大臣#ep133_21	493,{
 				select("你闭上了眼睛……");
 				mes "[阿哈特]";
 				mes "不，不……不能闭上。";
-				mes "Cheshire.";
+				mes "契休。";
 				next;
 				mes "- 命令一下达";
 				mes "阿哈特的侍从便过来让你直视阿哈特。-";
@@ -1627,8 +1627,8 @@ dic_in01,300,280,5	script	阿哈特大臣#ep133_21	493,{
 			else {
 				select("试着扭动身体。");
 				mes "[阿哈特]";
-				mes "Amusing.";
-				mes "你不这么认为吗，奇西尔？";
+				mes "真有趣。";
+				mes "你不这么认为吗，契休？";
 				mes "哈哈哈，欲擒故纵……这会很有趣……";
 				next;
 				mes "[阿哈特]";
@@ -1659,7 +1659,7 @@ dic_in01,300,280,5	script	阿哈特大臣#ep133_21	493,{
 			mes "- 你开始装出被催眠的样子。-";
 			next;
 			mes "[阿哈特]";
-			mes "........ ah, no.";
+			mes "……啊，不。";
 			mes "不必寻死";
 			mes "现在你已在我的法术之下。";
 			mes "....";
@@ -1715,7 +1715,7 @@ dic_in01,300,280,5	script	阿哈特大臣#ep133_21	493,{
 		mes "你的任务是找到这些痕迹并将它们抹去。";
 		next;
 		mes "[阿哈特]";
-		mes "奇西尔，把这次任务的细节告诉他。";
+		mes "契休，把这次任务的细节告诉他。";
 		mes "^4d4dff因为尚未完全觉醒，施法让我非常疲惫。^000000";
 		next;
 		mes "[阿哈特]";
@@ -1723,9 +1723,9 @@ dic_in01,300,280,5	script	阿哈特大臣#ep133_21	493,{
 		mes "告诉他们我外表像沙帕，而且总独自在办公室工作。";
 		next;
 		mes "[阿哈特]";
-		mes "绝不要提起奇西尔。";
-		mes "奇西尔从不在这里。";
-		mes "从现在起你必须听从奇西尔的命令。";
+		mes "绝不要提起契休。";
+		mes "契休从不在这里。";
+		mes "从现在起你必须听从契休的命令。";
 		mes "去吧。";
 		next;
 		mes "- 阿哈特仍未起疑。";
@@ -1736,7 +1736,7 @@ dic_in01,300,280,5	script	阿哈特大臣#ep133_21	493,{
 	else if (ep13_3_secret == 16) {
 		cutin (Sex == SEX_MALE?"ep13_ahat_f":"ep13_ahat_m"),2;
 		mes "[阿哈特]";
-		mes "从现在起你必须听从奇西尔的命令。";
+		mes "从现在起你必须听从契休的命令。";
 		mes "去吧。";
 		next;
 		mes "- 阿哈特仍未起疑。";
@@ -1746,7 +1746,7 @@ dic_in01,300,280,5	script	阿哈特大臣#ep133_21	493,{
 	else if (ep13_3_secret == 17) {
 		cutin (Sex == SEX_MALE?"ep13_ahat_f":"ep13_ahat_m"),2;
 		mes "[阿哈特]";
-		mes "奇西尔的命令对今后的计划很重要。";
+		mes "契休的命令对今后的计划很重要。";
 		mes "不要出错，也绝不要留下可能追查到我的痕迹。";
 		mes "这是你主人的命令。";
 		close2;
@@ -1759,7 +1759,7 @@ dic_in01,300,280,5	script	阿哈特大臣#ep133_21	493,{
 		next;
 		select("那些是什么？");
 		mes "[阿哈特]";
-		mes "Well...";
+		mes "嗯……";
 		mes "你现在不需要知道。";
 		mes "或许永远都不需要知道。";
 		mes "呵呵。";
@@ -1783,10 +1783,10 @@ dic_in01,300,280,5	script	阿哈特大臣#ep133_21	493,{
 	else {
 		cutin (Sex == SEX_MALE?"ep13_ahat_f":"ep13_ahat_m"),2;
 		mes "[阿哈特]";
-		mes "暂时听从奇西尔的命令，清理裂缝附近区域。";
+		mes "暂时听从契休的命令，清理裂缝附近区域。";
 		next;
 		mes "- 阿哈特仍以为你受她法术控制。";
-		mes "我们照奇西尔的命令行事，表现得自然些。 -";
+		mes "我们照契休的命令行事，表现得自然些。 -";
 		close2;
 	}
 	cutin "",255;
@@ -1803,7 +1803,7 @@ OnTouch_:
 		}
 		else {
 			mes "[低语之声]";
-			mes "Sorry.";
+			mes "抱歉。";
 			mes "片刻。";
 		}
 		close2;
@@ -1864,9 +1864,9 @@ dic_in01,158,188,3	script	贾鲁特·赫斯兰塔#ep133_2	451,{
 			set .@m, select("我不明白你的问题。:我的主人。") - 1;
 			if (.@m) {
 				mes "[赫斯兰塔]";
-				mes "....huh....?";
+				mes "……咦……？";
 				mes "是吗？看来是我弄错了。";
-				mes "Sorry.";
+				mes "抱歉。";
 				next;
 				mes "赫斯兰塔对我的回答感到不悦。";
 				mes "他的表情复杂而阴沉。";
@@ -1956,7 +1956,7 @@ dic_in01,158,188,3	script	贾鲁特·赫斯兰塔#ep133_2	451,{
 		mes "并开始说明阿哈特命令你做的事。";
 		next;
 		mes "[赫斯兰塔]";
-		mes "... you went through that..";
+		mes "……你竟然经历了那种事……";
 		mes "他很奇怪。";
 		mes "我只当他是躲过诅咒的沙帕同胞。";
 		mes "所以一切都始于那道裂缝。";
@@ -2020,7 +2020,7 @@ dic_in01,158,188,3	script	贾鲁特·赫斯兰塔#ep133_2	451,{
 		next;
 		select("在抹去自己留在裂缝的痕迹！！");
 		mes "[赫斯兰塔]";
-		mes "Yes.";
+		mes "是的。";
 		mes "他想掩盖与裂缝有关的某些事。";
 		mes "但究竟是什么？";
 		next;
@@ -2068,18 +2068,18 @@ dic_in01,158,188,3	script	贾鲁特·赫斯兰塔#ep133_2	451,{
 		next;
 		mes "[赫斯兰塔]";
 		mes "我太多愁善感了。";
-		mes "Sorry.";
+		mes "抱歉。";
 		mes "听了你的话，我现在心绪很乱。";
 		next;
-		select("你知道奇西尔吗？");
+		select("你知道契休吗？");
 		mes "[赫斯兰塔]";
 		mes "你说的是那个助手？";
 		mes "是的，我知道，但大多数沙帕不知道。";
-		mes "阿哈特身边的人都知道奇西尔。";
+		mes "阿哈特身边的人都知道契休。";
 		next;
 		mes "[赫斯兰塔]";
-		mes "^4d4dff奇西尔是阿哈特带来的猫族^000000。";
-		mes "阿哈特照顾了受伤的奇西尔，并把他带在身边。";
+		mes "^4d4dff契休是阿哈特带来的猫族^000000。";
+		mes "阿哈特照顾了受伤的契休，并把他带在身边。";
 		mes "我们这里本来就有猫，所以没太在意他。";
 		next;
 		mes "[赫斯兰塔]";
@@ -2091,7 +2091,7 @@ dic_in01,158,188,3	script	贾鲁特·赫斯兰塔#ep133_2	451,{
 		mes "但你为什么要问？";
 		next;
 		mes "[" + strcharinfo(0) + "]";
-		mes "Nothing.";
+		mes "没什么。";
 		mes "我只是个人有点好奇。";
 		mes "你现在打算怎么做？";
 		next;
@@ -2105,14 +2105,14 @@ dic_in01,158,188,3	script	贾鲁特·赫斯兰塔#ep133_2	451,{
 			if (.@yes == 5) {
 				mes "[" + strcharinfo(0) + "]";
 				mes "总结一下。";
-				mes "偷走报告的是奇西尔。";
-				mes "奇西尔是阿哈特的侍从，他们与裂缝有关。";
+				mes "偷走报告的是契休。";
+				mes "契休是阿哈特的侍从，他们与裂缝有关。";
 				mes "他们想藏起裂缝处的某样东西，或某个人";
 				mes "而裂缝是邪恶领主梦罗克造成的！";
 				next;
 				mes "[" + strcharinfo(0) + "]";
 				mes "阿哈特是邪恶领主？";
-				mes "No...";
+				mes "不……";
 				mes "难以置信。";
 				next;
 				mes "[" + strcharinfo(0) + "]";
@@ -2125,11 +2125,11 @@ dic_in01,158,188,3	script	贾鲁特·赫斯兰塔#ep133_2	451,{
 				mes "[" + strcharinfo(0) + "]";
 				mes "首先，偷报告的犯人是……";
 				next;
-				switch (select("奇西尔:阿哈特:BK")) {
+				switch (select("契休:阿哈特:皮凯伊")) {
 					case 1:
 						mes "[" + strcharinfo(0) + "]";
-						mes "是奇西尔";
-						mes "奇西尔是猫族。";
+						mes "是契休";
+						mes "契休是猫族。";
 						mes "头巾是为了遮住他的耳朵。";
 						set .@yes, .@yes + 1;
 						break;
@@ -2141,7 +2141,7 @@ dic_in01,158,188,3	script	贾鲁特·赫斯兰塔#ep133_2	451,{
 						break;
 					case 3:
 						mes "[" + strcharinfo(0) + "]";
-						mes "BK？";
+						mes "皮凯伊？";
 						mes "胡说";
 						mes "重新想想吧。";
 						break;
@@ -2150,29 +2150,29 @@ dic_in01,158,188,3	script	贾鲁特·赫斯兰塔#ep133_2	451,{
 			}
 			else if (.@yes == 1) {
 				mes "[" + strcharinfo(0) + "]";
-				mes "奇西尔为什么要偷报告？";
+				mes "契休为什么要偷报告？";
 				next;
 				if (select("不知道。:让三国间的冲突恶化") == 1) {
 					mes "[" + strcharinfo(0) + "]";
 					mes "目前我们不知道真正的原因。";
-					mes "但奇西尔能从中得到什么？";
+					mes "但契休能从中得到什么？";
 				}
 				else {
 					mes "[" + strcharinfo(0) + "]";
 					mes "为了让三国之间起冲突？";
-					mes "奇西尔能从中得到什么？";
+					mes "契休能从中得到什么？";
 				}
 				set .@yes, .@yes + 1;
 				next;
 			}
 			else if (.@yes == 2) {
 				mes "[" + strcharinfo(0) + "]";
-				mes "奇西尔的主人是阿哈特。";
+				mes "契休的主人是阿哈特。";
 				mes "所以他的一切行动都是为了……";
 				next;
-				if (select("奇西尔自己在图谋。:一定是阿哈特命令他的。") == 1) {
+				if (select("契休自己在图谋。:一定是阿哈特命令他的。") == 1) {
 					mes "[" + strcharinfo(0) + "]";
-					mes "奇西尔擅自行动？";
+					mes "契休擅自行动？";
 					mes "你确定吗？";
 				}
 				else {
@@ -2260,7 +2260,7 @@ dic_in01,158,188,3	script	贾鲁特·赫斯兰塔#ep133_2	451,{
 		}
 		mes "[赫斯兰塔]";
 		mes "我们见面的事要保密，好吗？";
-		mes "Hahaha.";
+		mes "哈哈哈。";
 		close2;
 		warp "dic_in01",144,188;
 		cutin "",255;
@@ -2280,12 +2280,12 @@ dic_in01,158,188,3	script	贾鲁特·赫斯兰塔#ep133_2	451,{
 	}
 	else if (.@yessay == 2) {
 		mes "[赫斯兰塔]";
-		mes "阿哈特有时会和奇西尔散步。";
+		mes "阿哈特有时会和契休散步。";
 		mes "他们走得不远，常在黎明时分去约尔希森林。";
 		next;
 		mes "[赫斯兰塔]";
 		mes "运气好的话，你能看到他散步。";
-		mes "如果这能满足你的好奇心，奇西尔散步时穿的是方便活动的衣服。";
+		mes "如果这能满足你的好奇心，契休散步时穿的是方便活动的衣服。";
 		close;
 	}
 	mes "[赫斯兰塔]";
@@ -2309,7 +2309,7 @@ dic_in01,158,188,3	script	贾鲁特·赫斯兰塔#ep133_2	451,{
 		close;
 	}
 	mes "[赫斯兰塔]";
-	mes "Sorry.";
+	mes "抱歉。";
 	mes "我一定是占用了你很多时间。";
 	mes "我必须变得更强。";
 	close;
@@ -2347,7 +2347,7 @@ dicastes01,223,190,1	script	卡里温#pa8029	453,{
 		mes "今天就到这里。你可以回作战部向^800080运输1部经理^000000报告。祝你好运。";
 		close;
 	}
-	mes "Welcome.";
+	mes "欢迎。";
 	mes "你来有什么事？";
 	next;
 	if(select("请向我说明委托内容。", "请给我一份委托。") == 1) {
@@ -2355,7 +2355,7 @@ dicastes01,223,190,1	script	卡里温#pa8029	453,{
 		mes "运输1部和2部";
 		mes "会运来稀有的物品";
 		mes "这些在别处买不到";
-		mes "here.";
+		mes "这里。";
 		next;
 		mes "[卡里温]";
 		mes "它是";
@@ -2524,7 +2524,7 @@ dicastes01,211,178,2	script	摩特卡#pa0829	453,{
 		close;
 	}
 	mes "[摩特卡]";
-	mes "Welcome.";
+	mes "欢迎。";
 	mes "你来有什么事？";
 	next;
 	if (select("请向我说明委托内容。:请给我一份委托。") == 1) {
@@ -2539,10 +2539,10 @@ dicastes01,211,178,2	script	摩特卡#pa0829	453,{
 	mes "委托……嗯，是有一些。等一下。";
 	next;
 	mes "[摩特卡]";
-	mes "........ (rummaging)";
+	mes "……（翻找东西）";
 	next;
 	mes "[摩特卡]";
-	mes "..............(rustling sound)";
+	mes "……（窸窸窣窣的声音）";
 	next;
 	set .@tut_13, rand(1,11);
 	if (.@tut_13 == 1) {
@@ -2749,7 +2749,7 @@ dicastes01,175,217,5	script	卡利佛#pa0829	453,{
 		close;
 	}
 	mes "[卡利佛]";
-	mes "Welcome.";
+	mes "欢迎。";
 	mes "你是来领委托的吗？";
 	next;
 	if (select("请为我说明委托内容。:请给我一个委托。") == 1) {
@@ -2774,7 +2774,7 @@ dicastes01,175,217,5	script	卡利佛#pa0829	453,{
 	mes "今天送来的委托清单。";
 	next;
 	mes "[卡利佛]";
-	mes "Hmm..";
+	mes "嗯……";
 	mes "其实我这里有一件";
 	mes "正适合你的工作。";
 	next;
@@ -2891,7 +2891,7 @@ dicastes01,187,230,5	script	拉冯泰#pa0829	453,{
 		close;
 	}
 	mes "[拉冯泰]";
-	mes "Welcome.";
+	mes "欢迎。";
 	mes "你是来领委托的吗？";
 	next;
 	if (select("请为我说明委托内容。:请给我一个委托。") == 1) {
@@ -2900,7 +2900,7 @@ dicastes01,187,230,5	script	拉冯泰#pa0829	453,{
 		mes "来自其他部门的委托";
 		mes "与狩猎相关的";
 		mes "魔物，交给";
-		mes "adventurers.";
+		mes "冒险者。";
 		next;
 		mes "[拉冯泰]";
 		mes "每位冒险者每天会被随机分配";
@@ -2922,7 +2922,7 @@ dicastes01,187,230,5	script	拉冯泰#pa0829	453,{
 	mes "今天送来的委托清单。";
 	next;
 	mes "[拉冯泰]";
-	mes "Hmm..";
+	mes "嗯……";
 	mes "其实我这里有一件";
 	mes "正适合你的工作。";
 	next;
@@ -3062,7 +3062,7 @@ dicastes01,208,230,3	script	弗拉#pa0829	453,{
 		close;
 	}
 	mes "[弗拉]";
-	mes "Welcome.";
+	mes "欢迎。";
 	mes "你来有什么事？";
 	next;
 	if (select("请为我说明委托内容。:请给我一个委托。") == 1) {
@@ -3071,7 +3071,7 @@ dicastes01,208,230,3	script	弗拉#pa0829	453,{
 		mes "运送各种物品";
 		mes "这里生产的物品到";
 		mes "其他";
-		mes "area.";
+		mes "地区。";
 		next;
 		mes "[弗拉]";
 		mes "对职业没有限制";
@@ -3088,7 +3088,7 @@ dicastes01,208,230,3	script	弗拉#pa0829	453,{
 	mes "今天送来的委托清单。";
 	next;
 	mes "[弗拉]";
-	mes "Hmm..";
+	mes "嗯……";
 	mes "其实我这里有一件";
 	mes "正适合你的工作。";
 	next;
@@ -3252,7 +3252,7 @@ dicastes01,225,211,3	script	德拉契斯#pa0829	453,{
 		close;
 	}
 	mes "[德拉契斯]";
-	mes "Welcome.";
+	mes "欢迎。";
 	mes "你来有什么事？";
 	next;
 	if (select("请为我说明委托内容。:请给我一个委托。") == 1) {
@@ -3469,7 +3469,7 @@ mid_campin,168,170,3	script	督察都夏#ep133	59,{
 			next;
 			select("目击者！:是谁干的？");
 			mes "[都夏]";
-			mes "Sigh...";
+			mes "唉……";
 			mes "他确实目击了事件，但我得到的描述……";
 			mes "起初很可疑。";
 			next;
@@ -3479,7 +3479,7 @@ mid_campin,168,170,3	script	督察都夏#ep133	59,{
 			next;
 			select("同族？猫？");
 			mes "[都夏]";
-			mes "Yes.";
+			mes "是的。";
 			mes "我亲耳听到那只猫这么说。";
 			mes "他说他回到那个地方，是想看看那是不是他失散的朋友。";
 			next;
@@ -3539,11 +3539,11 @@ mid_campin,168,170,3	script	督察都夏#ep133	59,{
 		else {
 			mes "[都夏]";
 			mes "....................";
-			mes "............Of course";
+			mes "……当然。";
 			mes "不同的品味应该受到尊重。";
 			next;
 			mes "[都夏]";
-			mes "....Ahem.";
+			mes "……咳。";
 			mes "我的结论是";
 			mes "有人为了隐藏自己的来处，做了荒唐的伪装！";
 			next;
@@ -3608,11 +3608,11 @@ mid_campin,168,170,3	script	督察都夏#ep133	59,{
 			mes "调查进展如何？";
 			mes "有什么重要情况吗？";
 			next;
-			mes "你详细讲述了迪耶尔、奇西尔、阿哈特以及次元裂缝的情况。";
+			mes "你详细讲述了迪耶尔、契休、阿哈特以及次元裂缝的情况。";
 			mes "你把凝固的血块、贝壳和一块魔法石作为证据交给了他。";
 			next;
 			mes "[都夏]";
-			mes "Hmm..";
+			mes "嗯……";
 			mes "其实我把同样的任务交给了所有前往埃·迪斯特斯的人。";
 			next;
 			mes "[都夏]";
@@ -3698,8 +3698,8 @@ dic_in01,245,119,4	script	夏伊#ep133_13	884,{
 			if (select("热带苏格拉特饮料 - 2000z:赤色海滩 - 2000z:还要别的吗？") == 3) {
 				mes "[夏伊]";
 				mes "给……";
-				mes "......Hmmm...";
-				mes "Nah.";
+				mes "……嗯……";
+				mes "算了。";
 				break;
 			}
 			setarray .@str$[1], "Tropical Sorgrat","Vermillion on the Beach.";
@@ -3743,7 +3743,7 @@ dic_in01,245,119,4	script	夏伊#ep133_13	884,{
 					case 1:
 						mes "[夏伊]";
 						mes "我？";
-						mes ".If you are asking about my name, it is written on my badge here.";
+						mes "如果你是在问我的名字，就写在我这里的徽章上。";
 						mes "我叫夏伊。";
 						next;
 						select("不是那个");
@@ -3772,7 +3772,7 @@ dic_in01,245,119,4	script	夏伊#ep133_13	884,{
 						mes "结果不知不觉就变成我在管理整个工程了？";
 						next;
 						mes "[夏伊]";
-						mes "And...";
+						mes "然后……";
 						mes "我就这样来到了这里。";
 						mes "从那以后我就一直待在这里！";
 						next;
@@ -3829,7 +3829,7 @@ dic_in01,245,119,4	script	夏伊#ep133_13	884,{
 						break;
 					case 4:
 						mes "[夏伊]";
-						mes "What...";
+						mes "什么……";
 						mes "我不算太忙，但也别太烦我。";
 						break;
 				}
@@ -3855,7 +3855,7 @@ dic_in01,245,119,4	script	夏伊#ep133_13	884,{
 				next;
 				if (.@sealall < 3) {
 					mes "[" + strcharinfo(0) + "]";
-					mes "Moan...";
+					mes "呻吟……";
 					mes "[夏伊]";
 					mes "你看起来很迷茫，好像什么都不对劲了。";
 					mes "解决办法很简单，就是四处打听。";
@@ -3875,7 +3875,7 @@ dic_in01,245,119,4	script	夏伊#ep133_13	884,{
 				mes "我听很多人说他很美丽。";
 				next;
 				mes "[夏伊]";
-				mes "Anyway........";
+				mes "总之……";
 				mes "尝尝这个。";
 				mes "这东西我研究了一段时间，希望能加到菜单上。";
 				next;
@@ -3913,9 +3913,9 @@ dic_in01,245,119,4	script	夏伊#ep133_13	884,{
 				mes "我忍不住。";
 				next;
 				mes "[夏伊]";
-				mes "哈……猫咪商人里有一只叫皮凯伊的猫。";
+				mes "哈……猫咪商人里有一只叫<NAVI>[皮凯伊]<INFO>dic_fild01,231,174,0,101,0</INFO></NAVI>的猫。";
 				mes "他也许有你想要的情报。";
-				mes "... Go.. meet BK.";
+				mes "……去……见皮凯伊吧。";
 				next;
 				mes "[夏伊]";
 				mes "如果他无视你，就告诉他^4d4dff夏伊的特制饮品会送过去^000000。";
@@ -3957,7 +3957,7 @@ dic_in01,245,119,4	script	夏伊#ep133_13	884,{
 				next;
 				mes "[夏伊]";
 				mes "可是这里也有裂缝？";
-				mes "..Too many ill-fates.";
+				mes "……太多不幸了。";
 				mes "有点伤感。";
 				set ep13_3_secret, 10;
 				changequest 7192,7193;
@@ -3999,9 +3999,9 @@ dic_in01,245,119,4	script	夏伊#ep133_13	884,{
 					break;
 				}
 				mes "[夏伊]";
-				mes ".. I didn't expect this.";
+				mes "……我没想到会这样。";
 				mes "那么阿哈特是谁……？";
-				mes "...I smell something fishy.";
+				mes "……我觉得有些可疑。";
 				next;
 				mes "[夏伊]";
 				mes "我没亲眼见过阿哈特，所以不知道，不过";
@@ -4018,37 +4018,37 @@ dic_in01,245,119,4	script	夏伊#ep133_13	884,{
 				mes "[夏伊]";
 				mes "你不可能就那么随随便便进去见他。";
 				mes "对我们这样的外来者来说，见他更难。";
-				mes "Hm...";
+				mes "嗯……";
 				next;
 				mes "[夏伊]";
-				mes "我们可以试着收集功勋证明。";
+				mes "我们可以试着收集沙帕功勋证。";
 				mes "立下大功的人有机会见到大臣。";
 				next;
 				mes "[夏伊]";
-				mes "猫咪商人也在收集功勋证明。他们想亲自见到大臣，好谈生意。";
+				mes "猫咪商人也在收集沙帕功勋证。他们想亲自见到大臣，好谈生意。";
 				next;
 				mes "[夏伊]";
-				mes "在城里各处处理委托就能获得功勋证明。";
+				mes "在城里各处处理委托就能获得沙帕功勋证。";
 				mes "如果你想见大臣阿哈特……";
 				next;
 				mes "[夏伊]";
-				mes "你至少需要^4d4dff3张功勋证明^000000。";
+				mes "你至少需要^4d4dff3张<ITEM>沙帕功勋证<INFO>6304</INFO></ITEM>^000000。";
 				mes "请去^4d4dff迪耶尔四处打听^000000，以获取更多情报。";
 				next;
 				mes "[夏伊]";
 				mes "就是在迪耶尔登记冒险者的那位沙帕。";
 				mes "他的名字是^4d4dff拉怀恩^000000。去问他吧。";
 				next;
-				select("你没有沙帕的功勋证明吗？");
+				select("你没有<ITEM>沙帕功勋证<INFO>6304</INFO></ITEM>吗？");
 				mes "[夏伊]";
 				mes "................";
 				mes "你觉得我那么闲吗？";
 				mes "我不是接委托的人，我是发委托的人！！";
 				next;
 				mes "[夏伊]";
-				mes "Tsk.";
+				mes "啧。";
 				mes "首先，想想你必须做什么。";
-				mes "收集功勋证明，去见阿哈特。";
+				mes "收集沙帕功勋证，去见阿哈特。";
 				mes "然后查明他与裂缝之间是什么关系。";
 				set ep13_3_secret, 12;
 				for (set .@i, 0; .@i < getarraysize(.@quest); set .@i, .@i + 1)
@@ -4058,7 +4058,7 @@ dic_in01,245,119,4	script	夏伊#ep133_13	884,{
 			}
 			else if (ep13_3_secret == 12) {
 				mes "[夏伊]";
-				mes "先从收集功勋证明开始。";
+				mes "先从收集沙帕功勋证开始。";
 				mes "要见到大臣，你至少需要3张证明。";
 				next;
 				mes "[夏伊]";
@@ -4075,13 +4075,13 @@ dic_in01,245,119,4	script	夏伊#ep133_13	884,{
 				mes "很好。你回来之前，我会准备些吃的。";
 				mes "我前几天刚找到一份很棒的巧克力配方。";
 				next;
-				select("Oh..no..");
+				select("哦……不……");
 				mes "[夏伊]";
 				mes "我在梦罗克的时候。";
 				mes "公会里有个同事以前常做巧克力之类的东西，你知道吗？";
 				mes "我看他做，还以为很简单。";
 				next;
-				select("So.....");
+				select("那么……");
 				mes "[夏伊]";
 				mes "等你尝到就知道了。";
 				mes "好了，快去吧。";
@@ -4094,7 +4094,7 @@ dic_in01,245,119,4	script	夏伊#ep133_13	884,{
 				if (select("奇怪。:……很美……") == 1) {
 					mes "[夏伊]";
 					mes "那么……到底哪里奇怪。";
-					mes "..was it bad or good?";
+					mes "……那是好还是坏？";
 					mes "不，那不重要。好好想想你去那里是为了什么。";
 					break;
 				}
@@ -4106,7 +4106,7 @@ dic_in01,245,119,4	script	夏伊#ep133_13	884,{
 			}
 			else if ((ep13_3_secret > 16) && (ep13_3_secret < 19)) {
 				mes "[夏伊]";
-				mes "Hmm...";
+				mes "嗯……";
 				mes "清理裂缝一带？";
 				mes "听起来很奇怪。";
 				mes "总觉得有蹊跷。";
@@ -4166,7 +4166,7 @@ dic_in01,245,119,4	script	夏伊#ep133_13	884,{
 				select("啊，那个……");
 				mes "[夏伊]";
 				mes "嗯？滚开。";
-				mes "Ungrateful....";
+				mes "忘恩负义……";
 				break;
 			}
 			set .@shysay, rand(1,3);
@@ -4180,7 +4180,7 @@ dic_in01,245,119,4	script	夏伊#ep133_13	884,{
 						mes "我？";
 						mes "我之前没跟你说过吗？";
 						next;
-						select("Nope..");
+						select("不……");
 						mes "[夏伊]";
 						mes "不，我以前跟你说过我的故事。";
 						mes "不过既然你记性差，我就再说一遍。";
@@ -4210,7 +4210,7 @@ dic_in01,245,119,4	script	夏伊#ep133_13	884,{
 						mes "然后我就稀里糊涂地管理起整个工程了？";
 						next;
 						mes "[夏伊]";
-						mes "And...";
+						mes "然后……";
 						mes "我就这样来到了这里。";
 						mes "从那以后我就一直待在这里！";
 						next;
@@ -4234,7 +4234,7 @@ dic_in01,245,119,4	script	夏伊#ep133_13	884,{
 						break;
 					case 3:
 						mes "[夏伊]";
-						mes "What...";
+						mes "什么……";
 						mes "我虽然不忙，但也别太烦我。";
 						break;
 				}
@@ -4264,19 +4264,19 @@ dic_in01,245,119,4	script	夏伊#ep133_13	884,{
 				mes "[夏伊]";
 				mes "我同事到底是怎么做出来的？！";
 				mes "............";
-				mes "...Do girls like this?";
+				mes "……女孩子会喜欢这个吗？";
 				next;
 				if (select("他们一般喜欢手工巧克力。:不，只有外星人才喜欢。") == 1) {
 					mes "[夏伊]";
 					mes "我明白了。";
-					mes "So...";
+					mes "那么……";
 					mes "你结婚了吗？";
 					break;
 				}
 				mes "[夏伊]";
 				mes "你一个人，对吧？";
 				mes "....";
-				mes "Sorry.";
+				mes "抱歉。";
 				mes "我们同病相怜。";
 				break;
 			}
@@ -4338,7 +4338,7 @@ dicastes01,207,210,5	script	会走路的编织物#ep133_15	449,{
 				next;
 				mes "[尼特]";
 				mes "但阿哈特就算身为沙帕也很讨人喜欢。";
-				mes "....if my hair is like a dry winter tree..";
+				mes "……如果我的头发像冬天干枯的树……";
 				mes "阿哈特的头发就像初春的新芽……";
 				next;
 				mes "[尼特]";
@@ -4365,7 +4365,7 @@ dicastes01,207,210,5	script	会走路的编织物#ep133_15	449,{
 			next;
 			mes "[尼特]";
 			mes "但阿哈特就算身为沙帕也很讨人喜欢。";
-			mes "....if my hair is like a dry winter tree..";
+			mes "……如果我的头发像冬天干枯的树……";
 			mes "阿哈特的头发就像初春的新芽……";
 			next;
 			mes "[尼特]";
@@ -4510,7 +4510,7 @@ dicastes01,249,140,3	script	训练中的高尔顿#ep133_17	450,{
 			close;
 		}
 		mes "[高尔顿]";
-		mes "Ahat...";
+		mes "阿哈特……";
 		mes "他是个强大的沙帕。";
 		mes "他或许是个埋首于成堆文件的大臣，";
 		mes "但他一定隐藏着自己的力量！";
@@ -4529,12 +4529,12 @@ dicastes01,249,140,3	script	训练中的高尔顿#ep133_17	450,{
 	mes "[高尔顿]";
 	mes "你看起来是个老练的冒险者。";
 	mes "我想试试你的身手，";
-	mes ".. Hahahah";
+	mes "……哈哈哈";
 	mes "开个玩笑。我不能和来到我们土地的客人动手。";
 	close;
 }
 
-dic_fild01,231,174,5	script	BK#ep133_18	496,{
+dic_fild01,231,174,5	script	皮凯伊#ep133_18	496,{
 	if (ep13_3_secret < 3) {
 		mes "[皮凯伊]";
 		mes "哈。我是猫商人的情报收集者。";
@@ -4547,10 +4547,10 @@ dic_fild01,231,174,5	script	BK#ep133_18	496,{
 	}
 	else if ((ep13_3_secret == 3) || (ep13_3_secret == 4)) {
 		mes "[皮凯伊]";
-		mes "Hmph...";
+		mes "哼……";
 		mes "什么事？";
-		mes "... Oh, a human in the capital city of Sapha.";
-		mes "Meow...";
+		mes "……哦，沙帕首都里的人类。";
+		mes "喵……";
 		next;
 		if (select("关于一个长猫耳的男人:你是什么？") == 1) {
 			mes "[皮凯伊]";
@@ -4577,7 +4577,7 @@ dic_fild01,231,174,5	script	BK#ep133_18	496,{
 		mes "哈。我是猫商人的情报收集者。";
 		mes "..............";
 		mes "我可不是随便什么人都给情报的。";
-		mes "Meow...";
+		mes "喵……";
 		next;
 		mes "- 猫商人一伙的皮凯伊不肯配合。";
 		mes "夏伊让你来做什么？-";
@@ -4623,7 +4623,7 @@ dic_fild01,231,174,5	script	BK#ep133_18	496,{
 	}
 	else if (ep13_3_secret == 6) {
 		mes "[皮凯伊]";
-		mes "... So what do you want to know?";
+		mes "……所以你想知道什么？";
 		next;
 		switch (select("关于其他猫科种族")) {
 		}
@@ -4670,7 +4670,7 @@ dic_fild01,231,174,5	script	BK#ep133_18	496,{
 	else if (ep13_3_secret == 7 || ep13_3_secret == 8) {
 		if (ep13_3_secret == 7) {
 			mes "[皮凯伊]";
-			mes "...Didn't I just tell you about the man with cat ears?";
+			mes "……我不是刚告诉过你那个猫耳男人的事吗？";
 			mes "我在迪尔见过他和大臣在一起。";
 			next;
 			if (select("关于拉维尔？:大臣是谁？") == 1) {
@@ -4681,7 +4681,7 @@ dic_fild01,231,174,5	script	BK#ep133_18	496,{
 				mes "我们大概会称他为领袖？";
 				next;
 				mes "[皮凯伊]";
-				mes ".......ah.........";
+				mes "……啊……";
 				mes "我该先拿到开拓资格证再回答的。";
 				close;
 			}
@@ -4726,9 +4726,9 @@ dic_fild01,231,174,5	script	BK#ep133_18	496,{
 				mes "（皮凯伊想到这儿打了个哆嗦）";
 				next;
 				mes "[皮凯伊]";
-				mes "Eeeew...";
+				mes "呃……";
 				mes "我连想都不敢想。";
-				mes "...........Ha! Don't tell Shay this!";
+				mes "……哈！别告诉夏伊！";
 				close;
 			}
 		}
@@ -4738,7 +4738,7 @@ dic_fild01,231,174,5	script	BK#ep133_18	496,{
 			next;
 			select("他不是沙帕？");
 			mes "[皮凯伊]";
-			mes "Yes.";
+			mes "是的。";
 			mes "但这不奇怪吗。";
 			mes "这里所有的沙帕都觉得他是个美丽的沙帕……";
 			mes "但我远远见过他，他根本不是。";
@@ -4758,8 +4758,8 @@ dic_fild01,231,174,5	script	BK#ep133_18	496,{
 			mes "令人震惊的消息：沙帕的大臣阿哈特竟然不是沙帕族！——";
 			next;
 			mes "[" + strcharinfo(0) + "]";
-			mes "...I must find out.";
-			mes ".. Near the crack he said...";
+			mes "……我必须查清楚。";
+			mes "……他说在裂缝附近……";
 			mes "该去和夏伊谈谈吗？";
 			close;
 		}
@@ -4768,21 +4768,21 @@ dic_fild01,231,174,5	script	BK#ep133_18	496,{
 		close;
 	}
 	else if (ep13_3_secret == 9) {
-		mes "[BK]";
+		mes "[皮凯伊]";
 		mes "你为什么总是回来？";
 		mes "既然你对新大臣好奇，为什么不自己去裂缝看看？";
 		mes "既然他是从那里来的，你在那儿会找到些线索的。喵";
 		close;
 	}
-	mes "[BK]";
+	mes "[皮凯伊]";
 	mes "喵~";
 	mes "我还以为你带夏伊的食物来是当作奖赏呢。";
-	mes "（BK 想到这儿打了个寒颤）";
+	mes "（皮凯伊 想到这儿打了个寒颤）";
 	next;
-	mes "[BK]";
-	mes "Eeeew...";
+	mes "[皮凯伊]";
+	mes "呃……";
 	mes "我连想都不敢想。";
-	mes "...........Ha! Don't tell Shay this!";
+	mes "……哈！别告诉夏伊！";
 	close;
 }
 
@@ -4793,22 +4793,22 @@ dic_fild01,231,174,5	script	BK#ep133_18	496,{
 		close;
 	}
 	set .@n$, strnpcinfo(1);
-	setarray .@npc$, 	"Rock Pile",	"Dirt Pile",	"Split Earth";
+	setarray .@npc$, 	"岩石堆",	"土堆",	"裂开的地面";
 	setarray .@item, 	6307,			6306,			6305;
 	for (set .@size, getarraysize(.@npc$); .@i < .@size; set .@i, .@i + 1)
 		if (.@n$ == .@npc$[.@i]) set .@type, .@i;
 	
 	if (ep13_3_secret == 10) {
-		if (.@npc$[.@type] == "Rock Pile") {
+		if (.@npc$[.@type] == "岩石堆") {
 			mes "由于地壳运动不稳定，周围有许多石堆。";
 			mes "这处石堆也是其中之一。";
 
 		}
-		else if (.@npc$[.@type] == "Dirt Pile") {
+		else if (.@npc$[.@type] == "土堆") {
 			mes "裂缝附近有几处土堆。";
 			mes "这是其中之一。";
 		}
-		else if (.@npc$[.@type] == "Split Earth") {
+		else if (.@npc$[.@type] == "裂开的地面") {
 			mes "地面被次元裂缝的冲击撕裂开来。";
 			mes "裂开的地面坚硬冰冷，看起来就像锋利的刀刃。";
 		}
@@ -4816,24 +4816,24 @@ dic_fild01,231,174,5	script	BK#ep133_18	496,{
 		next;
 		set .@menu$, (.@npc$[.@type] == "石堆")? "试着推倒石堆。:Study the pile closely." : "用脚踩平它。:Poke around in the dirt pile.";
 		if (select(.@menu$) == 1) {
-			if (.@npc$[.@type] == "Rock Pile") mes "推倒堆成石堆的碎石，再把它们摊开。";
-			else if (.@npc$[.@type] == "Dirt Pile") mes "你踩在被挖开的土堆上，把地面踩平。";
-			else if (.@npc$[.@type] == "Split Earth") mes "你踩在干燥开裂的地面上，把地面踩平。";
+			if (.@npc$[.@type] == "岩石堆") mes "推倒堆成石堆的碎石，再把它们摊开。";
+			else if (.@npc$[.@type] == "土堆") mes "你踩在被挖开的土堆上，把地面踩平。";
+			else if (.@npc$[.@type] == "裂开的地面") mes "你踩在干燥开裂的地面上，把地面踩平。";
 			donpcevent strnpcinfo(0)+"::OnDisable";
 			close;
 		}
-		if (.@npc$[.@type] == "Rock Pile") {
+		if (.@npc$[.@type] == "岩石堆") {
 			mes "你从细小的碎石中感受到一股邪恶的气息。";
 			mes "看起来并不自然，更像是附近强大魔法留下的痕迹。";
 			mes "你感受到邪恶的气息。这和阿哈特有关吗？";
 			mes "你收集了一块散发奇异能量的石头。";
 		}
-		else if (.@npc$[.@type] == "Dirt Pile") {
+		else if (.@npc$[.@type] == "土堆") {
 			mes "你在土堆里翻找，发现了凝结在泥土中的血块。";
 			mes "你感受到邪恶的气息。这和阿哈特有关吗？";
 			mes "你收集了凝结的血迹。";
 		}
-		else if (.@npc$[.@type] == "Split Earth") {
+		else if (.@npc$[.@type] == "裂开的地面") {
 			mes "在尖锐的裂面上，有什么东西被霜冻住了。";
 			mes "你凑近一看，那东西像是某种在地面爬行的生物的皮肤。";
 			mes "你感受到邪恶的气息。这和阿哈特有关吗？";
@@ -4851,26 +4851,26 @@ dic_fild01,231,174,5	script	BK#ep133_18	496,{
 	}
 	else if (ep13_3_secret == 11) {
 		mes "[" + strcharinfo(0) + "]";
-		if (.@npc$[.@type] == "Rock Pile") mes "这里就是你捡到那块奇异魔法石的地方。";
-		else if (.@npc$[.@type] == "Dirt Pile") mes "在这里的土堆中收集到了凝结的血迹。";
-		else if (.@npc$[.@type] == "Split Earth") mes "这里就是发现冻结皮肤的地方。";
+		if (.@npc$[.@type] == "岩石堆") mes "这里就是你捡到那块奇异魔法石的地方。";
+		else if (.@npc$[.@type] == "土堆") mes "在这里的土堆中收集到了凝结的血迹。";
+		else if (.@npc$[.@type] == "裂开的地面") mes "这里就是发现冻结皮肤的地方。";
 		mes "周围也能感受到一股奇异的能量。";
 		mes "回酒馆和夏伊谈谈吧。";
 		close;
 	}
 	else if (ep13_3_secret == 17) {
 		if (countitem(.@item[.@type]) < 10) {
-			if (.@npc$[.@type] == "Rock Pile") {
+			if (.@npc$[.@type] == "岩石堆") {
 				mes "由于地壳运动不稳定，周围有许多石堆。";
 				mes "这是其中之一。";
 				mes "你从细小的碎石中感受到一股邪恶的气息。";
 			}
-			else if (.@npc$[.@type] == "Dirt Pile") {
+			else if (.@npc$[.@type] == "土堆") {
 				mes "裂缝附近有几处土堆。";
 				mes "这是其中之一。";
 				mes "你在土堆下发现了一块凝结的血迹。";
 			}
-			else if (.@npc$[.@type] == "Split Earth") {
+			else if (.@npc$[.@type] == "裂开的地面") {
 				mes "次元裂缝附近的地面因某种冲击而裂开。";
 				mes "这是其中之一。";
 				mes "在尖锐的裂面上，有什么东西被霜冻住了。";
@@ -4878,16 +4878,16 @@ dic_fild01,231,174,5	script	BK#ep133_18	496,{
 			getitem .@item[.@type], 1;
 			donpcevent strnpcinfo(0)+"::OnDisable";
 			next;
-			if (.@npc$[.@type] == "Rock Pile") mes "你收集了碎石。";
-			else if (.@npc$[.@type] == "Dirt Pile") mes "收集血迹。";
-			else if (.@npc$[.@type] == "Split Earth") mes "收集一块皮肤。";
+			if (.@npc$[.@type] == "岩石堆") mes "你收集了碎石。";
+			else if (.@npc$[.@type] == "土堆") mes "收集血迹。";
+			else if (.@npc$[.@type] == "裂开的地面") mes "收集一块皮肤。";
 			if (countitem(.@item[.@type]) == 10) {
-				mes "给奇西尔的量已经够了，但";
+				mes "给契休的量已经够了，但";
 				mes "要另外汇报的话，你可能还需要一些。";
 				if (checkquest(7202) == -1) setquest 7202;
 				close;
 			}
-			mes "收集的量还不足以满足奇西尔的请求。";
+			mes "收集的量还不足以满足契休的请求。";
 			close;
 		}
 		else if (countitem(.@item[.@type]) == 10) {
@@ -4896,14 +4896,14 @@ dic_fild01,231,174,5	script	BK#ep133_18	496,{
 				mes "还需要更多" + .@str$[.@type] + "，才能回远征营地向都夏复命。";
 			}
 			else {
-				if (.@npc$[.@type] == "Rock Pile") mes "还需要更多碎石，才能回远征营地向都夏复命。";
-				else if (.@npc$[.@type] == "Dirt Pile") mes "给奇西尔的量已经够了，但还需要更多才能向都夏复命。";
-				else if (.@npc$[.@type] == "Split Earth") mes "给奇西尔的皮肤已经够了，但还需要更多才能向都夏复命。";
+				if (.@npc$[.@type] == "岩石堆") mes "还需要更多碎石，才能回远征营地向都夏复命。";
+				else if (.@npc$[.@type] == "土堆") mes "给契休的量已经够了，但还需要更多才能向都夏复命。";
+				else if (.@npc$[.@type] == "裂开的地面") mes "给契休的皮肤已经够了，但还需要更多才能向都夏复命。";
 				setquest 7202;
 			}
-			if (.@npc$[.@type] == "Rock Pile") mes "你又收集了一块散发奇异魔法力量的碎石。";
-			else if (.@npc$[.@type] == "Dirt Pile") mes "你从土堆中又收集了一块凝结的血迹。";
-			else if (.@npc$[.@type] == "Split Earth") mes "你收集了另一块冻结在裂地缝隙霜冻中的皮肤。";	
+			if (.@npc$[.@type] == "岩石堆") mes "你又收集了一块散发奇异魔法力量的碎石。";
+			else if (.@npc$[.@type] == "土堆") mes "你从土堆中又收集了一块凝结的血迹。";
+			else if (.@npc$[.@type] == "裂开的地面") mes "你收集了另一块冻结在裂地缝隙霜冻中的皮肤。";	
 			getitem .@item[.@type], 1;
 			donpcevent strnpcinfo(0)+"::OnDisable";
 			close;
@@ -4912,15 +4912,15 @@ dic_fild01,231,174,5	script	BK#ep133_18	496,{
 	}
 	if (ep13_3_ahtdayq == 1) {
 		if (countitem(.@item[.@type]) < 10) {
-			if (.@npc$[.@type] == "Rock Pile") {
+			if (.@npc$[.@type] == "岩石堆") {
 				mes "你从细小的碎石中感受到一股邪恶的气息。";
 				mes "收集碎石，然后推倒并摊开石堆，让它看起来自然些。";
 			}
-			else if (.@npc$[.@type] == "Dirt Pile") {
+			else if (.@npc$[.@type] == "土堆") {
 				mes "你在土堆下发现了一块凝结的血迹。";
 				mes "你收集了凝结的血迹，然后踩平土堆，不留下痕迹。";
 			}
-			else if (.@npc$[.@type] == "Split Earth") {
+			else if (.@npc$[.@type] == "裂开的地面") {
 				mes "在尖锐的裂面上，有某种皮肤被霜冻住了。";
 				mes "你收集了冻结的皮肤，然后踩平地面，不留下痕迹。";
 			}
@@ -4961,36 +4961,36 @@ OnTimer300000:
 	stopnpctimer;
 	end;
 }
-dic_fild02,269,55,0	duplicate(ep133_crack#main)	Rock Pile#ep133_ef1	844
-dic_fild02,236,29,0	duplicate(ep133_crack#main)	Rock Pile#ep133_ef2	844
-dic_fild02,220,34,0	duplicate(ep133_crack#main)	Rock Pile#ep133_ef3	844
-dic_fild02,228,55,0	duplicate(ep133_crack#main)	Rock Pile#ep133_ef4	844
-dic_fild02,228,63,0	duplicate(ep133_crack#main)	Rock Pile#ep133_ef5	844
-dic_fild02,210,75,0	duplicate(ep133_crack#main)	Rock Pile#ep133_ef6	844
-dic_fild02,213,35,0	duplicate(ep133_crack#main)	Rock Pile#ep133_ef7	844
-dic_fild02,171,49,0	duplicate(ep133_crack#main)	Rock Pile#ep133_ef8	844
-dic_fild02,266,44,0	duplicate(ep133_crack#main)	Rock Pile#ep133_ef9	844
-dic_fild02,174,79,0	duplicate(ep133_crack#main)	Rock Pile#ep133_ef10	844
-dic_fild02,215,85,0	duplicate(ep133_crack#main)	Dirt Pile#ep133_ef1	844
-dic_fild02,207,41,0	duplicate(ep133_crack#main)	Dirt Pile#ep133_ef2	844
-dic_fild02,232,41,0	duplicate(ep133_crack#main)	Dirt Pile#ep133_ef3	844
-dic_fild02,245,68,0	duplicate(ep133_crack#main)	Dirt Pile#ep133_ef4	844
-dic_fild02,184,63,0	duplicate(ep133_crack#main)	Dirt Pile#ep133_ef5	844
-dic_fild02,207,94,0	duplicate(ep133_crack#main)	Dirt Pile#ep133_ef6	844
-dic_fild02,230,71,0	duplicate(ep133_crack#main)	Dirt Pile#ep133_ef7	844
-dic_fild02,188,50,0	duplicate(ep133_crack#main)	Dirt Pile#ep133_ef8	844
-dic_fild02,248,36,0	duplicate(ep133_crack#main)	Dirt Pile#ep133_ef9	844
-dic_fild02,206,115,0	duplicate(ep133_crack#main)	Dirt Pile#ep133_ef10	844	
-dic_fild02,194,86,0	duplicate(ep133_crack#main)	Split Earth#ep133_ef1	844
-dic_fild02,240,51,0	duplicate(ep133_crack#main)	Split Earth#ep133_ef2	844
-dic_fild02,176,65,0	duplicate(ep133_crack#main)	Split Earth#ep133_ef3	844
-dic_fild02,254,45,0	duplicate(ep133_crack#main)	Split Earth#ep133_ef4	844
-dic_fild02,178,119,0	duplicate(ep133_crack#main)	Split Earth#ep133_ef5	844
-dic_fild02,200,81,0	duplicate(ep133_crack#main)	Split Earth#ep133_ef6	844
-dic_fild02,205,54,0	duplicate(ep133_crack#main)	Split Earth#ep133_ef7	844
-dic_fild02,224,74,0	duplicate(ep133_crack#main)	Split Earth#ep133_ef8	844
-dic_fild02,244,59,0	duplicate(ep133_crack#main)	Split Earth#ep133_ef9	844
-dic_fild02,249,43,0	duplicate(ep133_crack#main)	Split Earth#ep133_ef10	844
+dic_fild02,269,55,0	duplicate(ep133_crack#main)	岩石堆#ep133_ef1	844
+dic_fild02,236,29,0	duplicate(ep133_crack#main)	岩石堆#ep133_ef2	844
+dic_fild02,220,34,0	duplicate(ep133_crack#main)	岩石堆#ep133_ef3	844
+dic_fild02,228,55,0	duplicate(ep133_crack#main)	岩石堆#ep133_ef4	844
+dic_fild02,228,63,0	duplicate(ep133_crack#main)	岩石堆#ep133_ef5	844
+dic_fild02,210,75,0	duplicate(ep133_crack#main)	岩石堆#ep133_ef6	844
+dic_fild02,213,35,0	duplicate(ep133_crack#main)	岩石堆#ep133_ef7	844
+dic_fild02,171,49,0	duplicate(ep133_crack#main)	岩石堆#ep133_ef8	844
+dic_fild02,266,44,0	duplicate(ep133_crack#main)	岩石堆#ep133_ef9	844
+dic_fild02,174,79,0	duplicate(ep133_crack#main)	岩石堆#ep133_ef10	844
+dic_fild02,215,85,0	duplicate(ep133_crack#main)	土堆#ep133_ef1	844
+dic_fild02,207,41,0	duplicate(ep133_crack#main)	土堆#ep133_ef2	844
+dic_fild02,232,41,0	duplicate(ep133_crack#main)	土堆#ep133_ef3	844
+dic_fild02,245,68,0	duplicate(ep133_crack#main)	土堆#ep133_ef4	844
+dic_fild02,184,63,0	duplicate(ep133_crack#main)	土堆#ep133_ef5	844
+dic_fild02,207,94,0	duplicate(ep133_crack#main)	土堆#ep133_ef6	844
+dic_fild02,230,71,0	duplicate(ep133_crack#main)	土堆#ep133_ef7	844
+dic_fild02,188,50,0	duplicate(ep133_crack#main)	土堆#ep133_ef8	844
+dic_fild02,248,36,0	duplicate(ep133_crack#main)	土堆#ep133_ef9	844
+dic_fild02,206,115,0	duplicate(ep133_crack#main)	土堆#ep133_ef10	844	
+dic_fild02,194,86,0	duplicate(ep133_crack#main)	裂开的地面#ep133_ef1	844
+dic_fild02,240,51,0	duplicate(ep133_crack#main)	裂开的地面#ep133_ef2	844
+dic_fild02,176,65,0	duplicate(ep133_crack#main)	裂开的地面#ep133_ef3	844
+dic_fild02,254,45,0	duplicate(ep133_crack#main)	裂开的地面#ep133_ef4	844
+dic_fild02,178,119,0	duplicate(ep133_crack#main)	裂开的地面#ep133_ef5	844
+dic_fild02,200,81,0	duplicate(ep133_crack#main)	裂开的地面#ep133_ef6	844
+dic_fild02,205,54,0	duplicate(ep133_crack#main)	裂开的地面#ep133_ef7	844
+dic_fild02,224,74,0	duplicate(ep133_crack#main)	裂开的地面#ep133_ef8	844
+dic_fild02,244,59,0	duplicate(ep133_crack#main)	裂开的地面#ep133_ef9	844
+dic_fild02,249,43,0	duplicate(ep133_crack#main)	裂开的地面#ep133_ef10	844
 
 // Frede's Request
 //============================================================
@@ -5056,18 +5056,18 @@ dic_in01,165,104,0	script	弗雷德#13_3_in	454,{
 	if (isequipped(2782)) {
 		if (ep13_3_bra < 1) {
 			mes "[弗雷德]";
-			mes "Zzz...Zzz...";
+			mes "呼……呼……";
 			close;
 		}
 		else if (ep13_3_bra == 1) {
 			mes "[弗雷德]";
-			mes "Phew...";
+			mes "呼……";
 			mes "太感谢你了。";
 			mes "幸好还来得及，我打了一针^f57d7d魔力之石^000000。";
 			percentheal -90,0;
 			next;
 			mes "[" + strcharinfo(0) + "]";
-			mes "Huff...Huff...";
+			mes "哈……哈……";
 			mes "你感觉好些了，我很高兴。";
 			next;
 			mes "[弗雷德]";
@@ -5103,7 +5103,7 @@ dic_in01,165,104,0	script	弗雷德#13_3_in	454,{
 			next;
 			mes "[弗雷德]";
 			mes "但我很感激自己还能走动。";
-			mes "Ha......";
+			mes "哈……";
 			mes "我们是从什么时候开始害怕‘死亡’的。";
 			next;
 			mes "[弗雷德]";
@@ -5143,7 +5143,7 @@ dic_in01,165,104,0	script	弗雷德#13_3_in	454,{
 			mes "我出城工作时通常会把多余的魔力之石带在身上，但在洞窟里很容易忘记时间。";
 			next;
 			mes "[弗雷德]";
-			mes "......umm......";
+			mes "……嗯……";
 			mes "..............";
 			next;
 			mes "[弗雷德]";
@@ -5231,7 +5231,7 @@ dic_in01,165,104,0	script	弗雷德#13_3_in	454,{
 				mes "他们一定是魔力之石不够了。";
 				next;
 				mes "[弗雷德]";
-				mes "Hmmm..";
+				mes "嗯……";
 				next;
 				mes "[弗雷德]";
 				mes "很抱歉又要麻烦你，能把这些魔力之石带给我的朋友们吗？";
@@ -5269,7 +5269,7 @@ dic_in01,165,104,0	script	弗雷德#13_3_in	454,{
 			mes "他们一定是魔力之石不够了。";
 			next;
 			mes "[弗雷德]";
-			mes "Hmmm..";
+			mes "嗯……";
 			next;
 			mes "[弗雷德]";
 			mes "很抱歉又要麻烦你，能把这些魔力之石带给我的朋友们吗？";
@@ -5404,7 +5404,7 @@ dic_dun01,205,43,5	script	布莱恩#ep13_3_	490,{
 				mes "[布莱恩]";
 				mes "我的魔力之石已经用完了。";
 				mes "弗雷德一直念叨这件事，现在我明白为什么了。";
-				mes "haha.";
+				mes "哈哈。";
 				next;
 				mes "[布莱恩]";
 				mes "请告诉弗雷德，我康复后就回村里。";
@@ -5649,7 +5649,7 @@ dic_dun01,235,243,0	script	约翰#13_3	454,{
 			if (checkquest(11166) >= 0) {
 				mes "[约翰]";
 				mes "......";
-				mes "Thanks....";
+				mes "谢谢……";
 				close;
 			}
 			mes "[约翰]";
@@ -5661,14 +5661,14 @@ dic_dun01,235,243,0	script	约翰#13_3	454,{
 			next;
 			mes "[约翰]";
 			mes "......";
-			mes "Thanks....";
+			mes "谢谢……";
 			setquest 11166;
 			close;
 		}
 		mes "[约翰]";
 		mes "...";
 		mes "我现在……没事了……";
-		mes "Thanks...";
+		mes "谢谢……";
 		close;
 	}
 	mes "[约翰]";
@@ -5715,7 +5715,7 @@ dic_dun02,110,127,5	script	萝丝#13_3	489,{
 			mes "[萝丝]";
 			mes "什么？你是代表弗雷德来的？";
 			mes "你是说你不是我的仰慕者？";
-			mes "Tsk....";
+			mes "啧……";
 			next;
 			mes "[萝丝]";
 			mes "告诉他一切都没问题，唯一的麻烦就是我太擅长我的工作了。";
@@ -5874,7 +5874,7 @@ dic_dun01,58,225,4	script	拉什#13_3	491,{
 	if (isequipped(2782)) {
 		if (ep13_3_bra < 4) {
 			mes "[拉什]";
-			mes "Sigh......";
+			mes "唉……";
 			mes "我好累……";
 			mes "但疲惫能推动我前进。";
 			next;
@@ -5894,7 +5894,7 @@ dic_dun01,58,225,4	script	拉什#13_3	491,{
 				close;
 			}
 			mes "[拉什]";
-			mes "Sigh......";
+			mes "唉……";
 			mes "我好累……";
 			mes "但疲惫能推动我前进。";
 			next;
@@ -5939,7 +5939,7 @@ dic_dun01,58,225,4	script	拉什#13_3	491,{
 				close;
 			}
 			mes "[拉什]";
-			mes "Moan...";
+			mes "呻吟……";
 			mes "这……这就是所谓的疲惫吗！";
 			mes "从没想过我会有这种感觉。呜。";
 			next;
@@ -6140,7 +6140,7 @@ dic_in01,349,129,5	script	博伊#13_3	449,{
 	next;
 	if(select("什么事？:保持沉默，继续听。") == 2) {
 		mes "[本]";
-		mes "Hmm...";
+		mes "嗯……";
 		mes "那倒也有可能，但你是不是想太多了？";
 		next;
 		mes "[玛哈]";
@@ -6157,16 +6157,16 @@ dic_in01,349,129,5	script	博伊#13_3	449,{
 	mes "[本]";
 	mes "咦？你听到我们说话了？";
 	mes "没什么，或者也算有点什么……";
-	mes "So...";
+	mes "那么……";
 	next;
 	mes "[本]";
 	mes "派往马努克的研究人员刚刚回来了。";
-	mes "But...";
+	mes "但是……";
 	next;
 	select("可是？");
 	mes "[本]";
 	mes "嗯……他们带回来一名马努克的信使！";
-	mes "...Sapha of Manuk.";
+	mes "……马努克的沙帕。";
 	next;
 	if (select("他在哪里？！:这是最高机密吗？！") == 1) {
 		mes "[本]";
@@ -6184,8 +6184,8 @@ dic_in01,349,129,5	script	博伊#13_3	449,{
 	mes "去问问^4d4dff艾洛^000000吧。";
 	close;
 }
-mid_camp,220,246,5	duplicate(Expedition#ep133_is)	Expedition Guard Ben	930
-mid_camp,223,246,4	duplicate(Expedition#ep133_is)	Expedition Guard Maha	868
+mid_camp,220,246,5	duplicate(Expedition#ep133_is)	远征队守卫本	930
+mid_camp,223,246,4	duplicate(Expedition#ep133_is)	远征队守卫玛哈	868
 
 mid_campin,93,114,3	script	守卫艾洛#ep133_is03	967,{
 	if (ep13_ryu > 99 || ep13_start > 99) {
@@ -6206,7 +6206,7 @@ mid_campin,93,114,3	script	守卫艾洛#ep133_is03	967,{
 			mes "[艾洛]";
 			mes "我了解你的能力";
 			mes "也信任你。";
-			mes "代表团在二楼右边的房间。";
+			mes "代表团在二楼右边的<NAVI>[房间]<INFO>mid_campin,168,128,0,101,0</INFO></NAVI>里。";
 			next;
 			mes "[艾洛]";
 			mes "前面会有一名守卫站岗";
@@ -6276,7 +6276,7 @@ mid_campin,111,120,3	script	士兵#ep133_is04	852,{
 		end;
 	}
 	mes "[士兵]";
-	mes "Sorry.";
+	mes "抱歉。";
 	mes "这个房间禁止访客进入。";
 	close;
 }
@@ -6328,9 +6328,9 @@ function	script	eldicastes_c	{
 			mes "作为回报，他们正式邀请我们访问他们的首都。";
 			mes "所以我一直在挑选远征队成员，派往沙帕首都埃·迪斯特斯。";
 			next;
-			select("..You mean..");
+			select("……你是说……");
 			mes "维汉努斯";
-			mes "Yes.";
+			mes "是的。";
 			mes "他就是这个意思。";
 			mes "阿吉夫离开前也同意了。";
 			mes "" + strcharinfo(0) + "，你也在受邀之列。";
@@ -6360,7 +6360,7 @@ function	script	eldicastes_c	{
 			close;
 		case 2:
 			mes "维汉努斯";
-			mes "首先去马努克，见守卫将军阿巴蓝齐。";
+			mes "首先去马努克，见<NAVI>[守卫将军阿巴蓝齐]<INFO>man_in01,315,52,0,101,0</INFO></NAVI>。";
 			mes "阿巴蓝齐是加尔滕人，所以会全副武装。";
 			mes "你一眼就能认出他。";
 			next;
@@ -6397,7 +6397,7 @@ function	script	eldicastes_c	{
 			next;
 			if(select("我也一样。:树怪！")==1) {
 				mes "维汉努斯";
-				mes "Amazing.";
+				mes "真厉害。";
 				mes "就像和霍恩德那样，你们人类制作的那枚戒指……";
 				mes "就像一枚智慧之戒。"; 
 			}
@@ -6458,7 +6458,7 @@ function	script	eldicastes_c	{
 			mes "因为作为第三方增进友好，总比在冲突中选边站要好。";
 			next;
 			mes "霍恩德";
-			mes "Well..";
+			mes "嗯……";
 			mes "我想，也不算完全说错……";
 			next;
 			mes "维汉努斯";
@@ -6476,13 +6476,13 @@ function	script	eldicastes_c	{
 			mes "希巴·阿吉普";
 			mes "那就这么定下他了。";
 			mes "还有……啊，对了，你。";
-			mes "之后请去隔壁房间见检查官。";
+			mes "之后请去隔壁房间见<NAVI>[检查官都夏]<INFO>mid_campin,168,170,0,101,0</INFO></NAVI>。";
 			mes "明白了吗？";
 			next;
 			mes "希巴·阿吉普";
 			mes "我走了。";
 			mes "维汉努斯？我会再来看你的。";
-			mes "还有，你^4d4dff和维汉努斯谈完后去见都夏检查官^000000。";
+			mes "还有，你^4d4dff和维汉努斯谈完后去见<NAVI>[都夏检查官]<INFO>mid_campin,168,170,0,101,0</INFO></NAVI>^000000。";
 			mes "那么，大家再见。";
 			set ep13_3_invite, 2;
 			set ep13_3_secret, 1;
@@ -6490,14 +6490,14 @@ function	script	eldicastes_c	{
 			next;
 			disablenpc "希巴·阿吉普#ep133_is07";
 			emotion ET_PROFUSELY_SWEAT, getnpcid(0, "猎犬#ep133_is06");
-			emotion ET_PROFUSELY_SWEAT, getnpcid(0, "马努克的萨法");
+			emotion ET_PROFUSELY_SWEAT, getnpcid(0, "维汉努斯");
 			mes "希巴·阿吉普指挥官说完想说的话后，迅速离开了房间。";
 			mes "首先，我们听听维汉努斯的故事吧。";
 			close;
 		}
 }
 
-mid_campin,168,128,3	script	马努克的萨法	451,{
+mid_campin,168,128,3	script	维汉努斯	451,{
 	if (isequipped(2782)) {
 		if (!ep13_3_invite) {
 			mes "-看起来像是马努克来的沙帕族信使。-";
@@ -6664,7 +6664,7 @@ OnInit:
 	end;	
 }
 
-man_in01,315,52,3	script	守卫队长阿瓦兰切	450,{
+man_in01,315,52,3	script	守卫队长阿巴蓝齐	450,{
 	mes "[守卫队长阿巴蓝齐]";
 	if (!isequipped(2782)) {
 		mes "ⅳ○→? ⅲ ※○...";
@@ -6704,7 +6704,7 @@ man_in01,315,52,3	script	守卫队长阿瓦兰切	450,{
 		next;
 		mes "[阿巴蓝齐]";
 		mes "你回来时，请告诉我任何关于首都的消息。";
-		mes "Hahaha..";
+		mes "哈哈哈……";
 		set ep13_3_invite, 5;
 		changequest 7183,7184;
 		close2;
@@ -6759,7 +6759,7 @@ dic_in01,42,264,3	script	冒险者事务员#ep133	453,{
 			if (ep13_3_invite < 5) {
 				mes "[职员拉怀恩]";
 				mes "你想注册为冒险者吗？";
-				mes "Strange.";
+				mes "奇怪。";
 				mes "你不在我们的访客名单上。";
 				mes "你是未经许可进入的吗？";
 				next;
@@ -6804,7 +6804,7 @@ dic_in01,42,264,3	script	冒险者事务员#ep133	453,{
 				close;
 			}
 			mes "[职员拉怀恩]";
-			mes "Strange.";
+			mes "奇怪。";
 			mes "你不是已经注册了吗？";
 			mes "我在记录中看到了你的名字。";
 			close;
@@ -6818,12 +6818,12 @@ dic_in01,42,264,3	script	冒险者事务员#ep133	453,{
 					mes "[职员拉怀恩]";
 					mes "你想见大臣？";
 					mes "哪位大臣？";
-					mes "即使有功绩认证，也不能亲自面见拉维尔。";
+					mes "即使有沙帕功勋证，也不能亲自面见拉维尔。";
 					next;
 					if (select("阿哈特:另一位大臣") == 1) {
 						if (countitem(6304) > 2) {
 							mes "[职员拉怀恩]";
-							mes "你居然已经收集了3份沙帕功绩认证。";
+							mes "你居然已经收集了3份<ITEM>沙帕功勋证<INFO>6304</INFO></ITEM>。";
 							mes "好。我会发送请求。";
 							next;
 							mes "[职员拉怀恩]";
@@ -6839,8 +6839,8 @@ dic_in01,42,264,3	script	冒险者事务员#ep133	453,{
 							close;
 						}
 						mes "[职员拉怀恩]";
-						mes "要见阿哈特，你需要3份沙帕功绩认证。";
-						mes "你知道沙帕功绩认证是什么吧？";
+						mes "要见阿哈特，你需要3份<ITEM>沙帕功勋证<INFO>6304</INFO></ITEM>。";
+						mes "你知道沙帕功勋证是什么吧？";
 						mes "那么，请在埃·迪斯特斯四处帮忙，收集这些认证吧。";
 						close;
 					}
@@ -6866,7 +6866,7 @@ dic_in01,42,264,3	script	冒险者事务员#ep133	453,{
 			mes "[职员拉怀恩]";
 			mes "你今天想了解什么？";
 			next;
-			switch (select("关于官方委托:关于冒险者酒馆:阿哈特？:沙帕功绩认证？:结束对话。")) {
+			switch (select("关于官方委托:关于冒险者酒馆:阿哈特？:沙帕功勋证？:结束对话。")) {
 				case 1:
 					mes "[职员拉怀恩]";
 					mes "如果迪尔或大臣们在首都的行动中需要帮助，";
@@ -6878,7 +6878,7 @@ dic_in01,42,264,3	script	冒险者事务员#ep133	453,{
 					next;
 					mes "[职员拉怀恩]";
 					mes "处理完委托后，";
-					mes "你会因帮助埃·迪斯特斯而获得一份功绩认证。";
+					mes "你会因帮助埃·迪斯特斯而获得一份沙帕功勋证。";
 					next;
 					mes "[职员拉怀恩]";
 					mes "把空闲时间花在这些官方委托上更好。";
@@ -6923,12 +6923,12 @@ dic_in01,42,264,3	script	冒险者事务员#ep133	453,{
 					close;
 				case 4:
 					mes "[职员拉怀恩]";
-					mes "功绩认证？";
-					mes "功绩认证是为像你这样的外来者设立的。";
+					mes "沙帕功勋证？";
+					mes "沙帕功勋证是为像你这样的外来者设立的。";
 					mes "当冒险者帮助城中各地的沙帕族完成委托时，会作为奖励发放。";
 					next;
 					mes "[职员拉怀恩]";
-					mes "功绩认证用于面见大臣。";
+					mes "沙帕功勋证用于面见大臣。";
 					mes "我想，要见忙碌的大臣，至少得为我们社会做出贡献。";
 					close;
 				case 5:
@@ -6955,14 +6955,14 @@ dic_in01,42,264,3	script	冒险者事务员#ep133	453,{
 		mes "无法继续，因为你的物品太重了。请减轻负重后再试。";
 		close;
 	}
-	if (.@re$ == "Kareka") {
+	if (.@re$ == "卡雷卡") {
 		if (ep13_3_ring2 > 99) {
 			mes "[卡雷卡]";
 			mes "你想再次强化^990099埃·迪斯特斯之光^000000吗？";
 			next;
 
 			// The reset feature was disabled in previous versions.
-			//mes "[Kareka]";
+			//mes "[卡雷卡]";
 			//mes "Ha ha ha, that is out of the question. This item is very rare and valuable so I cannot give you a new one.";
 			//close;
 
@@ -7052,7 +7052,7 @@ dic_in01,42,264,3	script	冒险者事务员#ep133	453,{
 		next;
 		mes .@n$;
 		if (countitem(6304) < 1) {
-			if (.@re$ == "Brare") {
+			if (.@re$ == "布莱尔") {
 				mes "哦……没找到沙帕认证书吗？";
 				next;
 				mes .@n$;
@@ -7061,7 +7061,7 @@ dic_in01,42,264,3	script	冒险者事务员#ep133	453,{
 				mes .@n$;
 				mes "真可惜。它们很有用的，你知道吗……";
 				close;
-			} else if (.@re$ == "Mancho") {
+			} else if (.@re$ == "曼乔") {
 				mes "如果你在这座城里努力工作，就能得到沙帕功勋认证书。";
 				next;
 				mes .@n$;
@@ -7070,7 +7070,7 @@ dic_in01,42,264,3	script	冒险者事务员#ep133	453,{
 				mes .@n$;
 				mes "我们可以交换，你不会后悔的。";
 				close;
-			} else if (.@re$ == "Jalapeno") {
+			} else if (.@re$ == "哈拉佩尼奥") {
 				mes "为了见到阿哈特，我已经收集沙帕功勋认证书一年了。";
 				next;
 				mes .@n$;
@@ -7081,17 +7081,17 @@ dic_in01,42,264,3	script	冒险者事务员#ep133	453,{
 				close;
 			}
 		}
-		if (.@re$ == "Brare") {
+		if (.@re$ == "布莱尔") {
 			mes "你想用金铃让自己显得华贵吗？";
 			set .@Items_,2843;
 			set .@v$, "ring1";
 		}
-		else if (.@re$ == "Mancho") {
+		else if (.@re$ == "曼乔") {
 			mes "你一定对^800080野性之尾^000000感兴趣吧？";
 			set .@Items_,2564;
 			set .@v$, "robe";
 		}
-		else if (.@re$ == "Jalapeno") {
+		else if (.@re$ == "哈拉佩尼奥") {
 			mes "你是为野性之靴而来的。我正好有你需要的东西。";
 			set .@Items_,2463;
 			set .@v$, "shoe";
@@ -7099,7 +7099,7 @@ dic_in01,42,264,3	script	冒险者事务员#ep133	453,{
 		next;
 		switch(select("请说明一下。:我想重置。:我想升级。")) {
 			case 1:
-				if (.@re$ == "Brare") {
+				if (.@re$ == "布莱尔") {
 					mes .@n$;
 					mes "嗯。^990099金铃^000000是只授予我们族中最优秀、最勇敢战士的饰品。";
 					next;
@@ -7108,7 +7108,7 @@ dic_in01,42,264,3	script	冒险者事务员#ep133	453,{
 					next;
 					mes .@n$;
 					mes "第三次升级时会有装备损坏的风险。";
-				} else if (.@re$ == "Mancho") {
+				} else if (.@re$ == "曼乔") {
 					mes .@n$;
 					mes "你说想让我说明升级的事？";
 					next;
@@ -7120,7 +7120,7 @@ dic_in01,42,264,3	script	冒险者事务员#ep133	453,{
 					next;
 					mes "[曼丘]";
 					mes "嗯……它和^990099野性之靴^000000一样，有在第三阶段升级时损坏的风险。";
-				} else if (.@re$ == "Jalapeno") {
+				} else if (.@re$ == "哈拉佩尼奥") {
 					mes .@n$;
 					mes "你说想让我说明升级的事？";
 					next;
@@ -7134,12 +7134,12 @@ dic_in01,42,264,3	script	冒险者事务员#ep133	453,{
 					mes "嗯……有些确实会在第三次升级时损坏，出了这种事也确实会有客人来抱怨……喵。";
 					next;
 					mes .@n$;
-					mes "... I almost died in one occasion. (murmuring)";
+					mes "……有一次我差点死了。（低声）";
 				}
 				close;
 			case 2:
 				mes .@n$;
-				if (.@re$ == "Mancho") {
+				if (.@re$ == "曼乔") {
 					mes "你想重置吗？";
 					mes "这将会^990000摧毁你正在升级的野性之尾^000000，并清除它的所有记录。你确定吗？";
 				}
@@ -7147,7 +7147,7 @@ dic_in01,42,264,3	script	冒险者事务员#ep133	453,{
 					mes "重置？你确定吗？";
 					mes "这将会^990000摧毁你正在升级的野性之靴^000000，并清除它的所有记录。你确定吗？";
 				}
-				else if (.@re$ == "Brare") {
+				else if (.@re$ == "布莱尔") {
 					mes "重置！！";
 					mes "这将会^990000摧毁你正在升级的金铃^000000，并清除它的所有记录。你确定吗？";
 				}
@@ -7165,7 +7165,7 @@ dic_in01,42,264,3	script	冒险者事务员#ep133	453,{
 				}
 				specialeffect2 EF_OVERTHRUST;
 				mes .@n$;
-				if (.@re$ == "Brare") mes "我已按你的要求收回所有装备并清除所有记录。现在你的装备和记录都已干净了。";
+				if (.@re$ == "布莱尔") mes "我已按你的要求收回所有装备并清除所有记录。现在你的装备和记录都已干净了。";
 				else mes "我只做被要求做的事。我已收回所有装备并取消所有记录。";
 				delitem .@Items_,1;
 				setd "ep13_3_"+.@v$, 0;
@@ -7174,7 +7174,7 @@ dic_in01,42,264,3	script	冒险者事务员#ep133	453,{
 		}
 		if (countitem(.@Items_) < 1) {
 			mes .@n$;
-			mes "But...";
+			mes "但是……";
 			mes "你似乎没有穿戴，甚至没有携带可以升级的装备。";
 			close; 
 		}
@@ -7278,7 +7278,7 @@ dic_in01,42,264,3	script	冒险者事务员#ep133	453,{
 	progressbar "ffff00",3;
 	delitem 6304,.@req;
 	if (getd("ep13_3_"+.@v$) == 0) {
-		if (.@re$ == "Kareka") {
+		if (.@re$ == "卡雷卡") {
 			set .@enc_en, rand(1,45);
 			setarray .@rates, 45,32,30,22,20,12,10,2;
 		}
@@ -7289,7 +7289,7 @@ dic_in01,42,264,3	script	冒险者事务员#ep133	453,{
 		setarray .@var, 1,2,3,4,5,6,7,8;
 	}
 	else if (getd("ep13_3_"+.@v$) <= 8) {
-		if (.@re$ == "Kareka") {
+		if (.@re$ == "卡雷卡") {
 			set .@enc_en, rand(1,45);
 			setarray .@rates, 45,32,30,17,15,2;
 		}
@@ -7314,8 +7314,8 @@ dic_in01,42,264,3	script	冒险者事务员#ep133	453,{
 				setd "ep13_3_"+.@v$, 0;
 				mes .@n$;
 				if (.@re$ == "Jalepano") mes "哈哈哈。看吧，我早就说过。啊，抱歉。忘了我刚才说的话吧！！";
-				else if (.@re$ == "Mancho") mes "贪婪是投资失败的原因。啧啧。";
-				else if (.@re$ == "Brare") mes "不会吧……！！！！金铃怎么了！";
+				else if (.@re$ == "曼乔") mes "贪婪是投资失败的原因。啧啧。";
+				else if (.@re$ == "布莱尔") mes "不会吧……！！！！金铃怎么了！";
 				close;
 			}
 			setarray .@rates, 90,75,65,60,45,35,30,15,5;
@@ -7369,10 +7369,10 @@ dic_in01,42,264,3	script	冒险者事务员#ep133	453,{
 	setd "ep13_3_"+.@v$, .@var[.@r-1] + getd("ep13_3_"+.@v$);
 	close;
 }
-dic_fild01,240,198,2	duplicate(dic_enc#main)	Jalapeno#pa0829	495
-dic_fild01,251,183,3	duplicate(dic_enc#main)	Brare#pa0829	495
-dic_fild01,259,172,3	duplicate(dic_enc#main)	Mancho#pa0829	495
-dic_in01,353,37,5	duplicate(dic_enc#main)	Kareka#pa0829	454
+dic_fild01,240,198,2	duplicate(dic_enc#main)	哈拉佩尼奥#pa0829	495
+dic_fild01,251,183,3	duplicate(dic_enc#main)	布莱尔#pa0829	495
+dic_fild01,259,172,3	duplicate(dic_enc#main)	曼乔#pa0829	495
+dic_in01,353,37,5	duplicate(dic_enc#main)	卡雷卡#pa0829	454
 
 dic_fild01,228,159,4	script	贾邦#pa0829	496,{
 	mes "[贾彭]";
