@@ -3463,13 +3463,13 @@ spl_fild02,348,76,0	script	树#ep13bs1::ep13tree	111,{
 	if (ep13_newbs == 6) {
 		if (rand(1,3) == 3) {
 			mes "——窸窣声——";
-			mes "——你找到一根树枝——";
+			mes "——你找到了五根树枝——";
 			next;
 			if (rand(1,3) == 2) {
 				mes "——折断！——";
 				mes "——砰，砰~~——";
-				mes "——你拿到了树枝。——";
-				getitem 6042,1; //Ordinary_Branch
+				mes "——你拿到了五根树枝。——";
+				getitem 6042,5; //Ordinary_Branch
 				close;
 			}
 			else {
