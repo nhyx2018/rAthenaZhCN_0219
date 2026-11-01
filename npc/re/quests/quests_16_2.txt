@@ -1359,7 +1359,7 @@ lhz_in02,239,148,4	script	菲洛彭特斯#ep162_01	4_M_PHILOFONTES,{
 		next;
 		mes "[泰丝]";
 		mes "From now on, this is a race against time.";
-		mes "Thank you for your support in advance.";
+		mes "提前感谢你的支持。";
 		mes "I will go to the president for a report.";
 		next;
 		cloakonnpcself( "菲洛彭特斯#ep162_01" );
@@ -3588,13 +3588,13 @@ OnInit:
 	end;
 }
 
-que_swat,141,57,5	script	反叛者 squadder#ep16	4_M_GUNSLINGER2,{
-	mes "[反叛者 squadder]";
-	mes "Do you want me to send you out of the operation zone?";
+que_swat,141,57,5	script	反叛者队员#ep16	4_M_GUNSLINGER2,{
+	mes "[反叛者队员]";
+	mes "要我把你送出作战区域吗？";
 	next;
-	if (select( "Leave.", "No." ) == 2) {
-		mes "[反叛者 squadder]";
-		mes "Well, good luck.";
+	if (select( "离开。", "不。" ) == 2) {
+		mes "[反叛者队员]";
+		mes "那么，祝你好运。";
 		close;
 	}
 	warp "ein_fild04",279,339;
@@ -3609,49 +3609,49 @@ que_swat,145,57,3	script	菲洛彭特斯#ep162_04	4_M_PHILOFONTES,{
 	if (terra_gloria_main < 24) {
 		cutin "ep16_tes01.bmp",2;
 		mes "[泰丝]";
-		mes "... How many more facilities like this are there in Schwaltzvalt?";
-		mes "Haa ...";
+		mes "……秀发兹到底还有多少这种设施？";
+		mes "唉……";
 		close3;
 	}
 	if (terra_gloria_main == 24) {
 		cutin "ep16_tes01.bmp",2;
 		mes "[泰丝]";
-		mes "Fortunately, the letter seems to have arrived.";
-		mes "There is a reward that we prepared for you but we have not given it to you yet. So I sent this letter to invite you.";
+		mes "幸好信好像送到了。";
+		mes "我们准备了给你的报酬，但还没交给你，所以寄了这封信邀请你。";
 		next;
 		mes "[泰丝]";
-		mes "And our president said that his excellency would grant you enough compensation if you continue to help us get rid of the unwanted experimental subjects.";
+		mes "总统说，如果你继续帮我们清除那些不需要的实验体，会给你足够的补偿。";
 		next;
 		mes "[泰丝]";
-		mes "As you helped our republic, his excellency is trying to get you some useful stuff for adventurers.";
+		mes "既然你帮助了共和国，总统正设法为你弄些对冒险者有用的东西。";
 		next;
 		mes "[泰丝]";
-		mes "The ^4d4dffSchwartz Honor Token^000000 that I am about to give you is a sort of reward currency used in the 反叛者 as well.";
+		mes "我要给你的^4d4dff秀发兹荣耀徽章^000000，也是反叛者中使用的报酬货币。";
 		next;
 		mes "[泰丝]";
-		mes "Since you are an adventurer, we thought it would be helpful for you.";
-		mes "You can exchange it for an item you need.";
+		mes "你是冒险者，我们觉得这对你会很有用。";
+		mes "可以用它兑换需要的物品。";
 		next;
 		mes "[泰丝]";
-		mes "You may have received it already through the 反叛者.";
-		mes "Since this token is a prize for someone who did a job for Schwaltzvalt ...";
+		mes "你可能已经从反叛者那里拿到过。";
+		mes "这徽章是给为秀发兹工作之人的奖励……";
 		next;
 		mes "[泰丝]";
-		mes "If you want, you can receive them by continuing to help us.";
+		mes "如果你愿意，可以继续帮助我们获得更多。";
 		next;
 		mes "[泰丝]";
-		mes "So, we would like to give you simple requests or missions.";
-		mes "This kind of association is likely to continue for a while.";
+		mes "所以我们会给你一些简单的委托或任务。";
+		mes "这种合作大概还会持续一段时间。";
 		next;
 		mes "[泰丝]";
-		mes "Thank you for your support in advance.";
+		mes "提前感谢你的支持。";
 		getitem 25155,10;	// Swz_Honor_Token
 		getexp 500000,500000;
 		terra_gloria_main = 25;
 		questinfo_refresh();
 		close2;
 		cutin "",255;
-		npctalk "Oh, please come here for a moment.", "新人#ep162_03", bc_self;
+		npctalk "哦，请过来一下。", "新人#ep162_03", bc_self;
 		end;
 	}
 	switch( checkquest(7745,PLAYTIME) ) {
@@ -3660,24 +3660,24 @@ que_swat,145,57,3	script	菲洛彭特斯#ep162_04	4_M_PHILOFONTES,{
 		case 0:
 			cutin "ep16_tes01.bmp",2;
 			mes "[泰丝]";
-			mes "Since there are still some researchers hiding inside the laboratory, we plan to investigate it.";
+			mes "实验室里还藏着一些研究员，我们计划调查。";
 			next;
 			mes "[泰丝]";
-			mes "Please take charge of the investigation.";
-			mes "If you do this for us, we will give you the Schwartz Honor Token.";
+			mes "请负责这次调查。";
+			mes "如果帮我们完成，会给你秀发兹荣耀徽章。";
 			next;
-			if (select( "Accept.", "Reject." ) == 2) {
+			if (select( "接受。", "拒绝。" ) == 2) {
 				mes "[泰丝]";
-				mes "Not now?";
-				mes "Then get some rest and come back please.";
+				mes "现在不行？";
+				mes "那先休息，之后再回来吧。";
 				close3;
 			}
 			mes "[泰丝]";
-			mes "Since we don't know where they are hiding, start looking in corners such as cabinets and boxes.";
+			mes "不知道他们藏在哪里，先从柜子、箱子等角落找起。";
 			next;
 			mes "[泰丝]";
-			mes "After finding researchers, please hand them over to a 反叛者 squad member near you.";
-			mes "Thank you for your support in advance.";
+			mes "找到研究员后，把他们交给附近的反叛者队员。";
+			mes "提前感谢你的支持。";
 			setquest 7744;// Hiding Researcher
 			close3;
 		case 1:
@@ -3688,17 +3688,17 @@ que_swat,145,57,3	script	菲洛彭特斯#ep162_04	4_M_PHILOFONTES,{
 		case 0:
 			cutin "ep16_tes01.bmp",2;
 			mes "[泰丝]";
-			mes "Inside the laboratory, there are still some researchers hiding somewhere.";
-			mes "Please find them and hand them over to a 反叛者 squad member.";
+			mes "实验室里还有研究员藏在某处。";
+			mes "找到他们并交给反叛者队员。";
 			next;
 			mes "[泰丝]";
-			mes "Thank you for your support in advance.";
+			mes "提前感谢你的支持。";
 			close3;
 		case 1:
 		case 2:
 			mes "[泰丝]";
-			mes "We already heard of your performance from the 反叛者.";
-			mes "Thank you for cooperating with the republic.";
+			mes "我们已从反叛者那里听说了你的表现。";
+			mes "感谢你与共和国合作。";
 			setquest 7745;		// Hiding Researcher (Standby)
 			erasequest 7760;	// Well hidden
 			erasequest 7744;	// Hiding Researcher
@@ -3706,39 +3706,39 @@ que_swat,145,57,3	script	菲洛彭特斯#ep162_04	4_M_PHILOFONTES,{
 			getexp 200000,200000;
 			next;
 			mes "[泰丝]";
-			mes "We attacked them all of a sudden, and we expect more of them are still hiding. But we will find them sooner or later.";
+			mes "我们突袭了他们，应该还有更多人藏着。但迟早会找到。";
 			close;
 		}
 	case 0:
 	case 1:
 		cutin "ep16_tes01.bmp",2;
 		mes "[泰丝]";
-		mes "We attacked them all of a sudden, and we expect more of them are still hiding.";
-		mes "We will try to find those guys for now.";
+		mes "我们突袭了他们，应该还有更多人藏着。";
+		mes "我们先试着找那些人。";
 		close2;
-		npctalk "This is really tough.", "", bc_self;
+		npctalk "真是难办。", "", bc_self;
 		cutin "",255;
 		end;
 	case 2:
 		erasequest 7745;// Hiding Researcher (Standby)
 		cutin "ep16_tes01.bmp",2;
 		mes "[泰丝]";
-		mes "If possible, I would ask you to investigate again.";
+		mes "如果可以，我想再请你调查一次。";
 		next;
-		if (select( "Leave it to me.", "No thank you." ) == 2) {
+		if (select( "交给我。", "不用了。" ) == 2) {
 			mes "[泰丝]";
 			mes ".......";
-			mes "Then we cannot afford it.";
-			mes "... No, no.";
+			mes "那我们负担不起。";
+			mes "……不，不。";
 			close3;
 		}
 		mes "[泰丝]";
-		mes "You're so cool, as usual.";
-		mes "Then could you please find the dregs hiding deep inside the laboratory and shaking like leaves?";
-		mes "I mean, the researchers.";
+		mes "你还是一样可靠。";
+		mes "那能请你去找那些躲在实验室深处、吓得发抖的渣滓吗？";
+		mes "我是说研究员。";
 		next;
 		mes "[泰丝]";
-		mes "As usual, please find the researchers who are hiding and hand them over to a 反叛者 squad member.";
+		mes "和之前一样，找到躲藏的研究员并交给反叛者队员。";
 		setquest 7744;// Hiding Researcher
 		close3;
 	}
@@ -12314,7 +12314,7 @@ rebel_in,88,61,5	script	Rookie#16nego02	4_M_ROOKIE,{
 			mes "[Denny]";
 			mes "And please ^0000cddefeat Scrap Heaters^000000. About 10 of them! This is my personal request!";
 			next;
-			if (select( "Accept.", "Reject." ) == 1) {
+			if (select( "接受。", "拒绝。" ) == 1) {
 				mes "[" + strcharinfo(0) + "]";
 				mes "It will be difficult for me. I'm sorry that you have to find someone else.";
 				next;
