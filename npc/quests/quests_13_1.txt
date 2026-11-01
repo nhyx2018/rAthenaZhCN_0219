@@ -6590,7 +6590,8 @@ mid_camp,222,218,3	script	汉森#ep131_rhea03	931,{
 			}
 		}
 		else if (ep13_1_rhea == 7) {
-			set .@shu_agree00,rand(1,5);
+			// 固定进入正式签字分支，避免随机的无关台词分支让玩家误以为卡住
+			set .@shu_agree00,3;
 			if (.@shu_agree00 == 1) {
 				mes "[汉吉纳]";
 				mes "嗯嗯嗯~";
