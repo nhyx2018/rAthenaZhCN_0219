@@ -5600,7 +5600,7 @@ rebel_in,121,69,8	script	狄恩#162gmbs2	4_F_DIENE,{
 		mes "看在你是长辈的份上，我一直容忍你的行为。但这次你越线了。";
 		next;
 		mes "[鲁柏]";
-		mes "Now! Please go back to your room and enjoy your tea party.";
+		mes "好了！请回房间享受你的茶会吧。";
 		next;
 		mes "[元老狄恩]";
 		mes "等等！";
