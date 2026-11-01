@@ -1032,55 +1032,55 @@ OnInit:
 // Yuno Airport
 y_airport,168,41,3	script	克鲁斯#ep162_04	4_EP16_CRUX,{
 	if (terra_gloria_main < 7) {
-		npctalk "... Ah ... I miss him.", "", bc_self;
+		npctalk "……啊……我想他了。", "", bc_self;
 		end;
 	}
 	if (terra_gloria_main == 7) {
 		cutin "ep16_crux_findel01.bmp",2;
 		mes "[克鲁斯]";
-		mes "I have been waiting.";
-		mes "Since there has been a change in the schedule, we might miss each other.";
+		mes "我一直在等。";
+		mes "因为行程有变，我们可能会错过。";
 		next;
-		select("You are escorting Spica, right?");
+		select("你是在护送斯皮卡吧？");
 		mes "[克鲁斯]";
-		mes "That's what I would like to talk about.";
-		mes "Do you know Lady Skia and I requested a meeting in Yuno earlier?";
-		next;
-		mes "[克鲁斯]";
-		mes "Since there are too many eyes in Yuno as well as the presidential residence, they wanted to meet us in a different location.";
+		mes "我正想说这件事。";
+		mes "你知道我和斯琪亚小姐之前请求在朱诺会面吗？";
 		next;
 		mes "[克鲁斯]";
-		mes "I thought Lady Spica would draw their attention if she stayed too long in Yuno. So she moved to the appointed place immediately.";
+		mes "朱诺和总统官邸眼线太多，他们希望换个地方见我们。";
 		next;
 		mes "[克鲁斯]";
-		mes "She disguised herself as a tourist ... and is now in ^4d4dffthe hotel in Lighthalzen^000000.";
+		mes "如果斯皮卡小姐在朱诺待太久会引来注意，所以她立刻去了约定地点。";
 		next;
 		mes "[克鲁斯]";
-		mes "I wanted to send her a note to update the changed schedule. But I thought I would meet her here ... So I've been waiting.";
+		mes "她伪装成游客……现在在^4d4dff里希塔乐镇的旅馆^000000。";
+		next;
+		mes "[克鲁斯]";
+		mes "我本想送信通知她行程变更，但以为会在这里见到她……所以一直等着。";
 		next;
 		cutin "ep16_crux_findel02.bmp",2;
 		mes "[克鲁斯]";
-		mes "... ...";
-		mes "Since we do these things secretly, this happens quite often.";
-		mes "I know it's funny, but I am sorry that your trip was in vain.";
+		mes "……";
+		mes "我们做事隐秘，这种事经常发生。";
+		mes "我知道这很可笑，抱歉让你白跑一趟。";
 		next;
 		cutin "ep16_crux_findel01.bmp",2;
 		mes "[克鲁斯]";
-		mes "But the Schwartz government is positive about it.";
-		mes "However, I don't know what kind of card the ladies showed them ...";
+		mes "不过施瓦茨政府对此持积极态度。";
+		mes "但我不知道小姐们给他们看了什么底牌……";
 		next;
 		mes "[克鲁斯]";
-		mes "Well, I have to take care of my task.";
-		mes "Then let us go to ^4d4dffLighthalzen^000000.";
+		mes "好了，我得去执行任务。";
+		mes "那么我们去^4d4dff里希塔乐镇^000000吧。";
 		next;
-		if (select( "I will count on you.", "Wait a minute." ) == 2) {
+		if (select( "那就拜托你了。", "等一下。" ) == 2) {
 			mes "[克鲁斯]";
-			mes "Please tell me when you are ready.";
-			mes "Then we will get going.";
+			mes "准备好了就告诉我。";
+			mes "然后我们就出发。";
 			close3;
 		}
 		mes "[克鲁斯]";
-		mes "This way ...";
+		mes "这边走……";
 		erasequest 7735;// Secret Action 2
 		setquest 7736;// Small differences between sightseeing and secret bussiness
 		terra_gloria_main = 8;
@@ -1091,16 +1091,16 @@ y_airport,168,41,3	script	克鲁斯#ep162_04	4_EP16_CRUX,{
 	if (terra_gloria_main == 8) {
 		cutin "ep16_crux_findel01.bmp",2;
 		mes "[克鲁斯]";
-		mes "Let's go to Lighthalzen.";
+		mes "我们去里希塔乐镇吧。";
 		next;
-		if (select( "I will count on you.", "Wait a minute." ) == 2) {
+		if (select( "那就拜托你了。", "等一下。" ) == 2) {
 			mes "[克鲁斯]";
-			mes "Please tell me when you are ready.";
-			mes "Then we will get going.";
+			mes "准备好了就告诉我。";
+			mes "然后我们就出发。";
 			close3;
 		}
 		mes "[克鲁斯]";
-		mes "This way ...";
+		mes "这边走……";
 		close2;
 		warp "lhz_airport",185,37;
 		end;
@@ -1108,14 +1108,14 @@ y_airport,168,41,3	script	克鲁斯#ep162_04	4_EP16_CRUX,{
 	if (terra_gloria_main < 18) {
 		cutin "ep16_crux_findel01.bmp",2;
 		mes "[克鲁斯]";
-		mes "The appointed place is ^4d4dffEinbroch train station^000000.";
-		mes "An agent named ^4d4dffLazy^000000 is waiting for us.";
-		mes "We have to hurry.";
+		mes "约定地点是^4d4dff艾因布罗克火车站^000000。";
+		mes "一个叫^4d4dff雷兹^000000的代理人正在等我们。";
+		mes "我们得快点。";
 		close3;
 	}
 	cutin "ep16_crux_findel01.bmp",2;
 	mes "[克鲁斯]";
-	mes "I never imagined that I would be traveling overseas ... I hope everything goes well.";
+	mes "没想到我会出国……希望一切顺利。";
 	close3;
 
 OnInit:
@@ -1139,19 +1139,19 @@ lhz_in02,239,145,3	script	斯皮卡·内里乌斯#ep162_02	4_EP16_SPICA,{
 	if (terra_gloria_main == 8) {
 		cutin "ep16_spica_nerius01.bmp",1;
 		mes "[斯皮卡]";
-		mes "You've arrived on time!";
-		mes "Sorry for what happened in Yuno.";
-		mes "They say we'd better move to another place.";
+		mes "你准时到了！";
+		mes "朱诺发生的事很抱歉。";
+		mes "他们说我们最好换个地方。";
 		next;
-		select("Who said that?");
+		select("谁说的？");
 		mes "[斯皮卡]";
-		mes "Let me introduce you this person.";
-		mes "He has been sent by the president of Schwaltzvalt.";
-		mes "From now on, you will talk with him before deciding what to do.";
+		mes "我来给你介绍这个人。";
+		mes "他是施瓦茨瓦尔德总统派来的。";
+		mes "从现在起，行动前先和他商量。";
 		next;
 		mes "[斯皮卡]";
-		mes "Tess will explain.";
-		mes "Let's listen to him.";
+		mes "泰丝会说明。";
+		mes "我们听他说。";
 		close3;
 	}
 }
@@ -1160,15 +1160,15 @@ lhz_in02,237,146,6	script	克鲁斯#ep162_05	4_EP16_CRUX,{
 	if (terra_gloria_main == 8) {
 		cutin "ep16_crux_findel01.bmp",2;
 		mes "[克鲁斯]";
-		mes "Please talk to the representative of the Schwaltzvalt government along with the lady.";
+		mes "请和小姐一起去找施瓦茨瓦尔德政府的代表谈谈。";
 		close3;
 	}
 	if (terra_gloria_main == 9) {
 		cutin "ep16_crux_findel01.bmp",2;
 		mes "[克鲁斯]";
-		mes "The appointed place is ^4d4dffEinbroch train station^000000.";
-		mes "An agent named Lazy is waiting for you.";
-		mes "We have to hurry.";
+		mes "约定地点是^4d4dff艾因布罗克火车站^000000。";
+		mes "一个叫雷兹的代理人正在等你。";
+		mes "我们得快点。";
 		close3;
 	}
 }
