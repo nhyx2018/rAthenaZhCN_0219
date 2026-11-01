@@ -2965,7 +2965,7 @@ prt_cas,309,200,5	script	Royal Head Chef#ep16_1	4_EP16_COOK,{
 	}
 	if (ep16_cookbs < 22) {
 		mes "[Head Chef]";
-		mes "Arghhhh!";
+		mes "啊啊啊！";
 		mes "The mind for cooking!";
 		mes "The mind of the queen!";
 		cutin "ep16cook_king_1",2;
@@ -3132,7 +3132,7 @@ prt_cas,319,211,3	script	Royal Sauce Master#ep16	4_M_ALCHE_B,{
 	}
 	if (ep16_cookbs == 2) {
 		mes "[Oriental Oyster]";
-		mes "What?";
+		mes "什么？";
 		mes "The sauce ran out?";
 		emotion ET_SURPRISE;
 		next;
@@ -3514,7 +3514,7 @@ prt_cas,82,268,5	script	Mark Ishar#ep16_1	4_EP16_MARK,{
 	if (ep16_cookbs == 18) {
 		mes "[Mark]";
 		mes "Hello." + strcharinfo(0) + ".";
-		mes "Are you having a good time?";
+		mes "玩得开心吗？";
 		mes "May I help you?";
 		npctalk "Hello.", "Mark Ishar#ep16_1", bc_self;
 		emotion ET_DELIGHT;
@@ -3567,7 +3567,7 @@ prt_cas,82,268,5	script	Mark Ishar#ep16_1	4_EP16_MARK,{
 	}
 	mes "[Mark]";
 	mes "Hello. " + strcharinfo(0) + ".";
-	mes "Are you having a good time?";
+	mes "玩得开心吗？";
 	mes "May I help you?";
 	npctalk "Hello.", "Mark Ishar#ep16_1", bc_self;
 	emotion ET_DELIGHT;
@@ -3607,7 +3607,7 @@ prt_cas,83,270,3	script	Alice Ishar#ep16_1	4_F_ACOLYTE,{
 	mes "[Alice]";
 	mes "Oh! How did it go?";
 	mes "Well, anything can happen when everyone is so busy.";
-	mes "Hahaha.";
+	mes "哈哈哈。";
 	cutin "acact_02",2;
 	close3;
 }
@@ -9458,26 +9458,26 @@ prt_cas,73,244,5	script	斯凯林·萨哈#ep16_1	1_F_LIBRARYGIRL,{
 		mes "哦！";
 		mes "别吓到。";
 		mes "开玩笑的。";
-		mes "Hahaha.";
+		mes "哈哈哈。";
 		emotion ET_SMILE;
 		next;
 		mes "[斯凯林]";
-		mes "As you know, the Geoborg family is the descendant of...";
+		mes "如你所知，格奥伯格家族是……的后裔。";
 		next;
-		mes "[利迪翁 Geoborg]";
-		mes "Tristan I who have founded the kingdom!";
-		mes "Is there anyone who doesn't know the story in this kingdom?";
-		mes "Dear Lady Jaha.";
+		mes "[利迪翁]";
+		mes "建国者特里斯坦一世！";
+		mes "这个王国里谁不知道这段历史？";
+		mes "亲爱的贾哈小姐。";
 		next;
 		mes "[斯凯林]";
-		mes "Oh, my!";
-		mes "利迪翁 Geoborg!";
-		mes "Why are you out here in the Banquet Hall? You must not be feeling so well.";
-		mes "You should have been taking a rest in your manor!";
+		mes "天啊！";
+		mes "利迪翁·格奥伯格！";
+		mes "你怎么来宴会厅了？身体应该还不舒服吧。";
+		mes "你应该在宅邸休息！";
 		emotion ET_FRET;
 		next;
-		mes "[利迪翁 Geoborg]";
-		mes "I couldn't risk letting a lady of the Jaha family pretend to know about the Geoborg family. I couldn't just take a rest.";
+		mes "[利迪翁]";
+		mes "我怎能任由贾哈家的小姐假装了解格奥伯格家族，哪能安心休息。";
 		erasequest 11402;// The Geoborgs
 		setquest 11403;// The Geoborgs
 		ep16_gaobs = 4;
@@ -9485,41 +9485,41 @@ prt_cas,73,244,5	script	斯凯林·萨哈#ep16_1	1_F_LIBRARYGIRL,{
 	}
 	if (ep16_gaobs == 4) {
 		mes "[斯凯林]";
-		mes "Oh, my!";
-		mes "利迪翁 Geoborg!";
-		mes "Why are you out here in the Banquet Hall? You must not be feeling so well.";
-		mes "You should have been taking a rest in your manor!";
+		mes "天啊！";
+		mes "利迪翁·格奥伯格！";
+		mes "你怎么来宴会厅了？身体应该还不舒服吧。";
+		mes "你应该在宅邸休息！";
 		emotion ET_FRET;
 		next;
-		mes "[利迪翁 Geoborg]";
-		mes "I couldn't risk letting a lady of the Jaha family pretend to know about the Geoborg family. I couldn't just take a rest.";
+		mes "[利迪翁]";
+		mes "我怎能任由贾哈家的小姐假装了解格奥伯格家族，哪能安心休息。";
 		close;
 	}
 	if (ep16_gaobs == 5) {
 		mes "[斯凯林]";
-		mes "Phew, that old jerk!";
-		mes "He is younger than me and always tries to preach!";
+		mes "唉，那个老家伙！";
+		mes "他比我小，还总爱说教！";
 		emotion ET_FRET;
 		next;
 		mes "[斯凯林]";
 		mes "哦！";
-		mes "Well... For that reason, the Geoborg family will retire to a quiet life for a while as soon as the Royal Assembly is over.";
+		mes "嗯……因此，王室会议一结束，格奥伯格家族就会暂时退隐过安静日子。";
 		next;
 		mes "[斯凯林]";
-		mes "I really hope that Catherine doesn't suffer from sorrow anymore.";
-		mes "That's why I fully support such decision!";
+		mes "真希望凯瑟琳别再承受悲伤。";
+		mes "所以我完全支持这个决定！";
 		next;
 		mes "[斯凯林]";
-		mes "However, Prince Ernst is nowhere to be found.";
-		mes "His aunt has come a long way to comfort her poor nephew, you know!";
+		mes "可是到处找不到恩斯特王子。";
+		mes "他姑妈大老远来安慰可怜的侄子呢！";
 		next;
 		mes "[斯凯林]";
-		mes "My sister chased me away to the Banquet Hall, saying she was busy. And I cannot find my nephew either.";
-		mes "Eww...";
+		mes "姐姐说忙把我赶到宴会厅，侄子也找不到。";
+		mes "呃……";
 		emotion ET_CRY;
 		next;
 		mes "[斯凯林]";
-		mes "If you run into Ernst in the Banquet Hall, please tell him to come this way.";
+		mes "如果在宴会厅遇到恩斯特，请让他过来。";
 		erasequest 11404;// The Geoborgs
 		setquest 11405;// The Geoborgs
 		ep16_gaobs = 6;
@@ -9527,15 +9527,15 @@ prt_cas,73,244,5	script	斯凯林·萨哈#ep16_1	1_F_LIBRARYGIRL,{
 	}
 	if (ep16_gaobs >= 6 && ep16_gaobs < 13) {
 		mes "[斯凯林]";
-		mes "However, Prince Ernst is nowhere to be found.";
-		mes "His aunt has come a long way to comfort her poor nephew, you know!";
+		mes "可是到处找不到恩斯特王子。";
+		mes "他姑妈大老远来安慰可怜的侄子呢！";
 		next;
 		mes "[斯凯林]";
-		mes "My sister chased me away to the Banquet Hall, saying she was busy. And I cannot find my nephew either.";
-		mes "Eww...";
+		mes "姐姐说忙把我赶到宴会厅，侄子也找不到。";
+		mes "呃……";
 		next;
 		mes "[斯凯林]";
-		mes "If you run into Ernst in the Banquet Hall, please tell him to come this way.";
+		mes "如果在宴会厅遇到恩斯特，请让他过来。";
 		close;
 	}
 	if (ep16_gaobs == 13) {
@@ -9546,23 +9546,23 @@ prt_cas,73,244,5	script	斯凯林·萨哈#ep16_1	1_F_LIBRARYGIRL,{
 		}
 		mes "[斯凯林]";
 		mes "哦！";
-		mes "Haven't you found him yet?";
-		mes "Should I ask Catherine?";
+		mes "还没找到他？";
+		mes "要我问凯瑟琳吗？";
 		next;
 		mes "[斯凯林]";
-		mes "That expression on your face... You must have heard what people say.";
-		mes "There must have been no good stories in particular...";
-		mes "Please don't mind such stories much.";
+		mes "你这表情……一定听到别人说什么了。";
+		mes "肯定没什么好话……";
+		mes "请别太在意。";
 		next;
 		mes "[斯凯林]";
-		mes "Ernst must have been hiding from such whispers as well.";
+		mes "恩斯特一定也在躲这些闲话。";
 		next;
 		mes "[斯凯林]";
-		mes "Well, I guess he needs some rest.";
-		mes "You hero, cheer up and enjoy the banquet!";
+		mes "嗯，他大概需要休息。";
+		mes "英雄，振作起来享受宴会！";
 		next;
 		mes "[斯凯林]";
-		mes "What a waste to let the banquet end like this!";
+		mes "让宴会这样结束太可惜了！";
 		getexp 700000,700000;
 		getitem 6919,10;// TokenOfHonor
 		completequest 11412;// The Geoborgs
@@ -9571,60 +9571,60 @@ prt_cas,73,244,5	script	斯凯林·萨哈#ep16_1	1_F_LIBRARYGIRL,{
 	}
 	if (ep16_gaobs > 13) {
 		mes "[斯凯林]";
-		mes "Oh, hero!";
-		mes "Are you having a good time?";
+		mes "哦，英雄！";
+		mes "玩得开心吗？";
 		next;
 		mes "[斯凯林]";
-		mes "If you have some time to spare, please tell me some fun stories from your adventure.";
-		mes "I am sick of listening to 利迪翁's nitpicking.";
+		mes "有空的话，给我讲讲冒险中的趣事。";
+		mes "我听腻利迪翁挑刺了。";
 		close;
 	}
 }
 
-prt_cas,82,240,3	script	利迪翁 Geoborg#ep16_1	4_M_DOCTOR,{
+prt_cas,82,240,3	script	利迪翁·格奥伯格#ep16_1	4_M_DOCTOR,{
 	if (ep16_gaobs == 4) {
-		mes "[利迪翁 Geoborg]";
-		mes "We, the Geoborg family, is one of the seven royal families, but we are the creme de la creme for producing the highest number of kings in the history.";
+		mes "[利迪翁]";
+		mes "我们格奥伯格是七大王室之一，历史上出过的国王最多，是精英中的精英。";
 		next;
-		mes "[利迪翁 Geoborg]";
-		mes "In fact, we are settled in Prontera, the center of the Rune-Midgarts.";
+		mes "[利迪翁]";
+		mes "事实上我们定居在卢恩-米德加尔特中心普隆德拉。";
 		next;
-		mes "[利迪翁 Geoborg]";
-		mes "Despite the series of unfortunate events regarding the princes after the death of King Tristan III,";
+		mes "[利迪翁]";
+		mes "尽管特里斯坦三世死后王子们接连遭遇不幸，";
 		next;
-		mes "[利迪翁 Geoborg]";
-		mes "Prince 恩斯特·格奥伯格 was elected as the most regnant candidate in the last Royal Assembly. It shows just influential the Geoborg family is.";
+		mes "[利迪翁]";
+		mes "恩斯特·格奥伯格王子在上次王室会议上被选为最有资格的候选人。足见格奥伯格家族的影响力。";
 		next;
 		mes "[斯凯林]";
-		mes "He has given up from the position.";
+		mes "他放弃那个位置了。";
 		next;
-		mes "[利迪翁 Geoborg]";
-		mes "What?";
+		mes "[利迪翁]";
+		mes "什么？";
 		npctalk "What?";
 		next;
 		mes "[斯凯林]";
-		mes "I said!";
-		mes "Prince Ernst gave up his position as the candidate to the throne.";
+		mes "我说！";
+		mes "恩斯特王子放弃了王位候选人资格。";
 		next;
-		mes "[利迪翁 Geoborg]";
-		mes "What a nonsense!";
+		mes "[利迪翁]";
+		mes "胡说八道！";
 		next;
 		mes "[斯凯林]";
 		mes "哦！";
-		mes "You didn't know!";
-		mes "You must have been separated from the outside world for too long!";
+		mes "你不知道！";
+		mes "你一定和外界脱节太久了！";
 		next;
-		mes "[利迪翁 Geoborg]";
-		mes "Arghhhh!";
-		mes "I won't let this punk... Ernst....!";
+		mes "[利迪翁]";
+		mes "啊啊啊！";
+		mes "我绝不让那小子……恩斯特……！";
 		npctalk "Arghhhh!";
 		next;
 		mes "[斯凯林]";
-		mes "Punk?";
-		mes "Even if you are an elder of the family, he is still a prince. You should extend him every courtesy.";
+		mes "小子？";
+		mes "就算你是家族长辈，他也是王子，该有的礼数不能少。";
 		next;
-		mes "[利迪翁 Geoborg]";
-		mes "Arghhhh!";
+		mes "[利迪翁]";
+		mes "啊啊啊！";
 		npctalk "Arghhhh!";
 		erasequest 11403;// The Geoborgs
 		setquest 11404;// The Geoborgs
@@ -9632,21 +9632,21 @@ prt_cas,82,240,3	script	利迪翁 Geoborg#ep16_1	4_M_DOCTOR,{
 		close;
 	}
 	if (ep16_gaobs >= 5 && ep16_gaobs <= 13) {
-		mes "[利迪翁 Geoborg]";
-		mes "Arghhhh!";
-		mes "I won't let this punk... Ernst....!";
+		mes "[利迪翁]";
+		mes "啊啊啊！";
+		mes "我绝不让那小子……恩斯特……！";
 		npctalk "Arghhhh!";
 		next;
 		mes "[斯凯林]";
-		mes "Punk?";
-		mes "Even if you are an elder of the family, he is still a prince. You should extend him every courtesy.";
+		mes "小子？";
+		mes "就算你是家族长辈，他也是王子，该有的礼数不能少。";
 		next;
-		mes "[利迪翁 Geoborg]";
-		mes "Arghhhh!";
+		mes "[利迪翁]";
+		mes "啊啊啊！";
 		npctalk "Arghhhh!";
 		close;
 	}
-	mes "[利迪翁 Geoborg]";
+	mes "[利迪翁]";
 	mes "Tut...";
 	mes "Letting anybody in like this... The dignity of the palace has fallen down to the ground.";
 	close;
@@ -10928,7 +10928,7 @@ prt_cas_q,95,9,5	script	尤尔根·维格纳#ep16wig	4_M_4THPRIN1,{
 		mes "So, when are you going to get them for us?";
 		next;
 		mes "[" + strcharinfo(0) + "]";
-		mes "What?";
+		mes "什么？";
 		next;
 		mes "[艾萨克]";
 		mes "You didn't think that we would go there to get them ourselves, did you?";
@@ -11157,7 +11157,7 @@ prt_cas_q,95,9,5	script	尤尔根·维格纳#ep16wig	4_M_4THPRIN1,{
 			mes "Well, dear adventurer?";
 			next;
 			mes "[" + strcharinfo(0) + "]";
-			mes "What?";
+			mes "什么？";
 			next;
 			cutin "16jur_sim",0;
 			emotion ET_THROB;
@@ -11170,7 +11170,7 @@ prt_cas_q,95,9,5	script	尤尔根·维格纳#ep16wig	4_M_4THPRIN1,{
 			next;
 			emotion ET_HUK, playerattached();
 			mes "[" + strcharinfo(0) + "]";
-			mes "What?";
+			mes "什么？";
 			next;
 			cutin "16jur_nor",0;
 			emotion ET_THROB;
@@ -11308,7 +11308,7 @@ prt_cas_q,95,9,5	script	尤尔根·维格纳#ep16wig	4_M_4THPRIN1,{
 			mes "The Sea Stone! And flower!";
 			next;
 			mes "[" + strcharinfo(0) + "]";
-			mes "What?";
+			mes "什么？";
 			next;
 			mes "[尤尔根]";
 			mes "I want to send her ^0000cdthe heart that is as wide and beautiful as the sea^000000 and ^0000cdthe amaranthine heart for her^000000.";
@@ -11413,7 +11413,7 @@ prt_cas_q,95,9,5	script	尤尔根·维格纳#ep16wig	4_M_4THPRIN1,{
 			mes "Dear adventurer, thank you again. Would you come by again tomorrow?";
 			next;
 			mes "[" + strcharinfo(0) + "]";
-			mes "What?";
+			mes "什么？";
 			next;
 			mes "[尤尔根]";
 			mes "It seems like a good sign. Paddle as the wave approaches. That's one of the many mottos of our family.";
@@ -13141,7 +13141,7 @@ OnTouch:
 
 prt_cas,97,216,2	script	Chamberlain#vip_alimi	4_M_RUSMAN2,{
 	mes "[贝尔]";
-	mes "Are you having a good time?";
+	mes "玩得开心吗？";
 	mes "We have put a lot of efforts since it's a big event in the palace in a long while.";
 	mes "I hope you like it.";
 	close;
@@ -14086,7 +14086,7 @@ prt_cas,379,124,3	script	Glamorous Girl#pop	4_F_ARUNA_POP,{
 	mes "<Miss Lang>";
 	next;
 	mes "[" + strcharinfo(0) + "]";
-	mes "What?";
+	mes "什么？";
 	next;
 	cutin "ra_gwoman",2;
 	mes "[Woman with Glasses]";
