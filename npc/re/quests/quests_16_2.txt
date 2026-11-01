@@ -3996,110 +3996,110 @@ rebel_in,70,78,3	script	埃琳娜·沃尔科娃#16.2rm	4_F_ELENA,{
 					if (BaseJob != Job_Priest) {
 						mes "[USU指挥官埃琳娜]";
 						mes "In the waiting room, there is ^0000CDIvan, the person in charge of entrance in arena^000000.";
-						mes "Enter the arena according to the order in reference to Ivan's guide.";
+						mes "按照伊万的指引，依次进入竞技场。";
 						next;
 						mes "[USU指挥官埃琳娜]";
-						mes "You have two minutes. If you defeat me during two minutes, you win.";
+						mes "你有两分钟。两分钟内击败我就算赢。";
 						next;
 						mes "[USU指挥官埃琳娜]";
-						mes "If you want to surrender during the fight, tell ^0000CDSorita^000000 beside Ivan.";
-						mes "Then you're going to be told off.";
+						mes "战斗中想投降，就告诉伊万旁边的^0000CD索丽塔^000000。";
+						mes "然后你就会被骂一顿。";
 						setquest 16011;// Arena entrance
 						close2;
 						warp "rebel_in",184,28;
 						end;
 					}
 					mes "[USU指挥官埃琳娜]";
-					mes "Hmm... By the way, are you really going to fight me?";
-					mes "I am an expert in killing people. And fighting is not your main occupation. You cannot beat me.";
+					mes "嗯……话说，你真要和我打？";
+					mes "我是杀人专家，战斗不是你的本职。你赢不了我。";
 					next;
-					if (select( "But I will fight.", "I agree with you. I give up." ) == 2) {
+					if (select( "但我还是要打。", "你说得对，我放弃。" ) == 2) {
 						cutin "162elena_02.bmp",2;
 						mes "[USU指挥官埃琳娜]";
-						mes "Good. Knowing one's limit is wise.";
+						mes "很好。知道自己的极限是明智的。";
 						close3;
 					}
 					mes "[USU指挥官埃琳娜]";
-					mes "You're a cleric. Fighting is not your duty. I'm sure your companion also knows that.";
+					mes "你是服事，战斗不是你的职责。你的同伴肯定也知道。";
 					next;
 					mes "[USU指挥官埃琳娜]";
-					mes "Besides, you're just an adventurer. You have no business with us and those guys either. I'm afraid you might get hurt.";
+					mes "而且你只是冒险者，和我们、和那些家伙都没关系。我怕你会受伤。";
 					next;
-					if (select( "No, I will fight.", "...I think you're right. I give up." ) == 2) {
+					if (select( "不，我要打。", "……你说得对，我放弃。" ) == 2) {
 						cutin "162elena_02.bmp",2;
 						mes "[USU指挥官埃琳娜]";
-						mes "You're wise. You don't have to get hurt yourself being nosy.";
+						mes "你很明智。没必要多管闲事让自己受伤。";
 						close3;
 					}
 					mes "[USU指挥官埃琳娜]";
-					mes "You must a fool who doesn't know what's going on.";
-					mes "Do you think I'm kidding? Or your life is too heavy and you'd like to put everything down?";
+					mes "你真是个搞不清状况的傻瓜。";
+					mes "你觉得我在开玩笑？还是你的命太重，想把一切都放下？";
 					next;
 					mes "[USU指挥官埃琳娜]";
-					mes "This is the final warning. You stay out of this.";
-					mes "Tell the guy downstairs that you had no choice because I intimidated you.";
+					mes "最后警告，别插手。";
+					mes "告诉楼下那家伙，你是被我威胁才没办法。";
 					next;
-					if (select( "This is my problem too.", "Since I don't want to die, I give up." ) == 2) {
+					if (select( "这也是我的问题。", "我不想死，我放弃。" ) == 2) {
 						cutin "162elena_02.bmp",2;
 						mes "[USU指挥官埃琳娜]";
-						mes "You're wise. Life is important, especially when it's mine.";
+						mes "你很明智。命很重要，尤其是我的命。";
 						close3;
 					}
 					mes "[USU指挥官埃琳娜]";
-					mes "...Why is this your problem?";
-					mes "That talkative guy is a stooge of the President. But you're an adventurer who can just leave.";
+					mes "……为什么也是你的问题？";
+					mes "那个话多的家伙是总统的走狗，但你只是个随时能走的冒险者。";
 					next;
-					if (select( "This is the problem of those who trust me.", "I guess I'd better go." ) == 2) {
+					if (select( "这是信任我的人的问题。", "我还是走吧。" ) == 2) {
 						cutin "162elena_02.bmp",2;
 						mes "[USU指挥官埃琳娜]";
-						mes "You're wise. Enjoy your adventure in a safer place.";
+						mes "你很明智。去更安全的地方享受冒险吧。";
 						close3;
 					}
 					cutin "162elena_02.bmp",2;
 					mes "[USU指挥官埃琳娜]";
-					mes "Well, well, well.";
-					mes "Haha, you are so obstinate.";
-					mes "I like your spirit. You said you need a cooperation? Why not? I agree.";
+					mes "好啊，好啊，好啊。";
+					mes "哈哈，你真固执。";
+					mes "我喜欢你的气魄。你说要合作？为什么不？我同意。";
 					next;
 					cutin "",255;
 					mes "[" + strcharinfo(0) + "]";
-					mes "Oh... Pardon?!";
+					mes "哦……什么？！";
 					next;
 					cutin "162elena_01.bmp",2;
 					mes "[USU指挥官埃琳娜]";
-					mes "You said you needed my approval to persuade us. So I approve it.";
-					mes "I like spunky fellows. It's fun to fight with them.";
+					mes "你说需要我的同意才能说服我们，那我同意。";
+					mes "我喜欢有胆量的人，和他们打架很有趣。";
 					next;
 					mes "[USU指挥官埃琳娜]";
-					mes "Ah, don't misunderstand it. I'm not saying I will fight you. I'm saying that I will be on your side.";
-					mes "I didn't mean to fight you anyway.";
+					mes "啊，别误会。我不是说要和你打，是说我会站在你这边。";
+					mes "我本来也没打算和你打。";
 					next;
 					mes "[USU指挥官埃琳娜]";
-					mes "I don't mess with clerics. I don't feel good after fighting them.";
-					npctalk "埃琳娜·沃尔科娃： My mom told me I shouldn't beat a cleric.", "埃琳娜·沃尔科娃#16.2rm"; // 116
+					mes "我不招惹服事。和他们打完心里不舒服。";
+					npctalk "埃琳娜·沃尔科娃：我妈说不能打服事。", "埃琳娜·沃尔科娃#16.2rm"; // 116
 					next;
 					mes "[USU指挥官埃琳娜]";
-					mes "So I'll support the cooperation with the 秘密之翼. Do you need my signature?";
+					mes "所以我支持与秘密之翼合作。需要我签名吗？";
 					next;
 					cutin "",255;
 					mes "[" + strcharinfo(0) + "]";
-					mes "No, you don't have to. Please show your opinion in front of others next time.";
+					mes "不用。下次请在大家面前表明你的意见。";
 					next;
 					cutin "162elena_01.bmp",2;
 					mes "[USU指挥官埃琳娜]";
-					mes "No problem.";
-					mes "Since you are our cooperator now, go around and see if there is anyone who has any problem.";
+					mes "没问题。";
+					mes "既然你现在是我们的合作者，去转转看还有谁有意见。";
 					next;
 					mes "[USU指挥官埃琳娜]";
-					mes "Who knows? If you keep helping them, they might have good feeling about you.";
+					mes "谁知道呢？继续帮他们的话，他们也许会对你改观。";
 					next;
 					mes "[USU指挥官埃琳娜]";
-					mes "While we never forget the blood that we must take a revenge for, we do not forget the gratitude either.";
-					mes "If you help them, they will give you a token proving your honor.";
+					mes "我们不会忘记必须复仇的血债，但也不会忘记恩情。";
+					mes "如果你帮他们，他们会给你证明荣誉的徽章。";
 					next;
 					mes "[USU指挥官埃琳娜]";
-					mes "Just like the one I'm giving you now.";
-					mes "If you want to know what this is for, ask the stubborn guy named '斯特拉塞' below the stairs.";
+					mes "就像我现在给你的这个。";
+					mes "想知道它有什么用，就去问楼下那个叫斯特拉塞的固执家伙。";
 					erasequest 16060;	// Fighting is the language of warmonger
 					erasequest 16061;	// Fair and equitable result
 					setquest 16010;// Battle in great condition
@@ -4108,24 +4108,24 @@ rebel_in,70,78,3	script	埃琳娜·沃尔科娃#16.2rm	4_F_ELENA,{
 					close3;
 				case 2:
 					mes "[USU指挥官埃琳娜]";
-					mes "Aren't you going to fight me?";
-					mes "Haven't you come here to ask for the cooperation between the 秘密之翼 and 反叛者?";
+					mes "不和我打了吗？";
+					mes "你来这里不就是为了请求秘密之翼和反叛者合作吗？";
 					next;
 					mes "[USU指挥官埃琳娜]";
-					mes "Will you give up the fight?";
+					mes "你要放弃战斗？";
 					next;
-					if (select( "Give up the fight.", "Do not give up the fight." ) == 2) {
+					if (select( "放弃战斗。", "不放弃战斗。" ) == 2) {
 						mes "[USU指挥官埃琳娜]";
-						mes "Good. I will wait for you.";
-						mes "Tell me when you feel like fighting.";
+						mes "好，我等你。";
+						mes "想打的时候告诉我。";
 						close3;
 					}
 					emotion ET_THINK;
 					mes "[USU指挥官埃琳娜]";
-					mes "...... Hmm.";
+					mes "……嗯。";
 					next;
 					mes "[USU指挥官埃琳娜]";
-					mes "A coward who's scared at me won't be helpful for the 反叛者 at all.";
+					mes "害怕我的胆小鬼对反叛者毫无帮助。";
 					mes "滚开。";
 					erasequest 16060;	// Fighting is the language of warmonger
 					erasequest 16061;	// Fair and equitable result
@@ -4137,38 +4137,38 @@ rebel_in,70,78,3	script	埃琳娜·沃尔科娃#16.2rm	4_F_ELENA,{
 				if (isbegin_quest(16061) != 2) {
 					cutin "162elena_01.bmp",2;
 					mes "[USU指挥官埃琳娜]";
-					mes "... Hmm. So this is it.";
-					mes "If you want to fight me again, I will give you another chance.";
+					mes "……嗯，就这样吧。";
+					mes "还想和我打的话，我再给你一次机会。";
 					next;
-					if (select( "Enter the waiting room.", "Do not enter the waiting room." ) == 1) {
+					if (select( "进入等候室。", "不进入等候室。" ) == 1) {
 						mes "[USU指挥官埃琳娜]";
-						mes "Great. You have guts.";
-						mes "Ivan will guide you inside.";
-						mes "If you want to surrender during a fight, tell Sorita.";
-						mes "Let's do it!";
+						mes "很好，有胆量。";
+						mes "伊万会带你进去。";
+						mes "战斗中想投降就告诉索丽塔。";
+						mes "开始吧！";
 						close2;
 						warp "rebel_in",184,28;
 						end;
 					}
 					mes "[USU指挥官埃琳娜]";
-					mes "Aren't you going to fight me?";
+					mes "不和我打了吗？";
 					mes "Haven't you come here to ask for the cooperation with the 反叛者?";
 					next;
 					mes "[USU指挥官埃琳娜]";
-					mes "Will you give up the fight?";
+					mes "你要放弃战斗？";
 					next;
-					if (select( "Give up the fight.", "Do not give up the fight." ) == 2) {
+					if (select( "放弃战斗。", "不放弃战斗。" ) == 2) {
 						mes "[USU指挥官埃琳娜]";
-						mes "Good. I will wait for you.";
-						mes "Tell me when you feel like fighting.";
+						mes "好，我等你。";
+						mes "想打的时候告诉我。";
 						close3;
 					}
 					emotion ET_THINK;
 					mes "[USU指挥官埃琳娜]";
-					mes "...... Hmm.";
+					mes "……嗯。";
 					next;
 					mes "[USU指挥官埃琳娜]";
-					mes "A coward who's scared at me won't be helpful for the 反叛者 at all.";
+					mes "害怕我的胆小鬼对反叛者毫无帮助。";
 					mes "滚开。";
 					erasequest 16011;// Arena entrance
 					erasequest 16061;	// Fair and equitable result
@@ -4177,60 +4177,60 @@ rebel_in,70,78,3	script	埃琳娜·沃尔科娃#16.2rm	4_F_ELENA,{
 				cutin "162elena_02.bmp",2;
 				emotion ET_DELIGHT;
 				mes "[USU指挥官埃琳娜]";
-				mes "Haha! I lost.";
-				mes "My feeling was right. It was such a thrilling fight after a long time!";
+				mes "哈哈！我输了。";
+				mes "我的感觉没错。好久没打得这么痛快了！";
 				next;
 				cutin "162elena_01.bmp",2;
 				mes "[USU指挥官埃琳娜]";
-				mes "As I promised, I will listen to you. Go ahead.";
+				mes "按照约定，我听你说。说吧。";
 				next;
 				cutin "",255;
 				mes "[" + strcharinfo(0) + "]";
-				mes "(So she's listening to me now. Persuading her will be much more difficult.)";
+				mes "（她现在愿意听了。要说服她恐怕更难。）";
 				next;
 				mes "[" + strcharinfo(0) + "]";
-				mes "Yes. I have come to request a cooperation between the 秘密之翼 and the 反叛者.";
-				mes "In order to persuade the people of 反叛者s, I would like to ask you for help...";
+				mes "是的。我来请求秘密之翼与反叛者合作。";
+				mes "为了说服反叛者的人，我想请你帮忙……";
 				next;
 				cutin "162elena_01.bmp",2;
 				mes "[USU指挥官埃琳娜]";
-				mes "Okay. I will help you.";
-				mes "What should I do?";
+				mes "好，我帮你。";
+				mes "我该做什么？";
 				next;
 				cutin "",255;
 				mes "[" + strcharinfo(0) + "]";
-				mes "Pardon? You haven't heard my story yet...";
+				mes "什么？你还没听我说完……";
 				next;
 				cutin "162elena_02.bmp",2;
 				emotion ET_SMILE;
 				mes "[USU指挥官埃琳娜]";
-				mes "You don't have to tell me the story. You've already told me the story physically. If I can fight on the same side with you, I will welcome whatever it is.";
+				mes "不用说了。你已经用战斗告诉我了。能和你并肩作战，我什么都欢迎。";
 				mes "So I support the cooperation with the 秘密之翼. Do you need my signature?";
 				next;
 				cutin "",255;
 				mes "[" + strcharinfo(0) + "]";
-				mes "No, you don't have to. Please show your opinion in front of others next time.";
+				mes "不用。下次请在大家面前表明你的意见。";
 				next;
 				cutin "162elena_01.bmp",2;
 				mes "[USU指挥官埃琳娜]";
-				mes "Good. ...... By the way,";
-				mes "If you have time, visit the arena any time.";
-				mes "I will fight you even if you come every day.";
-				npctalk "埃琳娜·沃尔科娃： Make sure you come back here.", "", bc_self;
+				mes "好。……对了，";
+				mes "有空随时来竞技场。";
+				mes "就算你天天来，我也奉陪。";
+				npctalk "埃琳娜·沃尔科娃：一定要再来。", "", bc_self;
 				next;
 				mes "[USU指挥官埃琳娜]";
-				mes "Since you are our cooperator now, go around and see if there is anyone who has any problem.";
+				mes "既然你现在是我们的合作者，去转转看还有谁有意见。";
 				next;
 				mes "[USU指挥官埃琳娜]";
-				mes "Who knows? If you keep helping them, they might have good feeling about you.";
+				mes "谁知道呢？继续帮他们的话，他们也许会对你改观。";
 				next;
 				mes "[USU指挥官埃琳娜]";
-				mes "While we never forget the blood that we must take a revenge for, we do not forget the gratitude either.";
-				mes "If you help them, they will give you a token proving your honor.";
+				mes "我们不会忘记必须复仇的血债，但也不会忘记恩情。";
+				mes "如果你帮他们，他们会给你证明荣誉的徽章。";
 				next;
 				mes "[USU指挥官埃琳娜]";
-				mes "Just like the one I'm giving you now.";
-				mes "If you want to know what this is for, ask the stubborn guy named '斯特拉塞' below the stairs.";
+				mes "就像我现在给你的这个。";
+				mes "想知道它有什么用，就去问楼下那个叫斯特拉塞的固执家伙。";
 				erasequest 16011;// Arena entrance
 				erasequest 16060;	// Fighting is the language of warmonger
 				erasequest 16061;	// Fair and equitable result
@@ -4245,11 +4245,11 @@ rebel_in,70,78,3	script	埃琳娜·沃尔科娃#16.2rm	4_F_ELENA,{
 	cutin "162elena_01.bmp",2;
 	mes "[USU指挥官埃琳娜]";
 	if (BaseJob == Job_Priest) {
-		mes "Hi. What is it now?";
-		mes "Have you met our members?";
+		mes "嗨，又怎么了？";
+		mes "见过我们的成员了吗？";
 	}
 	else {
-		mes "Hi. What is it now?";
+		mes "嗨，又怎么了？";
 		mes "A fight? Welcome!";
 	}
 	next;
@@ -4289,7 +4289,7 @@ rebel_in,70,78,3	script	埃琳娜·沃尔科娃#16.2rm	4_F_ELENA,{
 		case 0:
 		case 1:
 			mes "[USU指挥官埃琳娜]";
-			mes "...... Hmm.";
+			mes "……嗯。";
 			if (BaseJob == Job_Priest) {
 				mes "Are you sure you have to fight me now?";
 				mes "If you really think so, come back tomorrow. I called it a day now.";
@@ -4350,27 +4350,27 @@ rebel_in,70,78,3	script	埃琳娜·沃尔科娃#16.2rm	4_F_ELENA,{
 			if (select( "Go to the waiting room", "Don't go to the waiting room." ) == 1) {
 				mes "[USU指挥官埃琳娜]";
 				mes "In the waiting room, there is ^0000CDIvan, the person in charge of entrance in arena^000000.";
-				mes "Enter the arena according to the order in reference to Ivan's guide.";
+				mes "按照伊万的指引，依次进入竞技场。";
 				next;
 				mes "[USU指挥官埃琳娜]";
-				mes "You have two minutes. If you defeat me during two minutes, you win.";
+				mes "你有两分钟。两分钟内击败我就算赢。";
 				next;
 				mes "[USU指挥官埃琳娜]";
-				mes "If you want to surrender during the fight, tell ^0000CDSorita^000000 beside Ivan.";
-				mes "Then you're going to be told off.";
+				mes "战斗中想投降，就告诉伊万旁边的^0000CD索丽塔^000000。";
+				mes "然后你就会被骂一顿。";
 				setquest 16011;// Arena entrance
 				close2;
 				warp "rebel_in",184,28;
 				end;
 			}
 			mes "[USU指挥官埃琳娜]";
-			mes "Aren't you going to fight me?";
+			mes "不和我打了吗？";
 			mes "Hm...";
 			next;
 			mes "[USU指挥官埃琳娜]";
-			mes "Will you give up the fight?";
+			mes "你要放弃战斗？";
 			next;
-			if (select( "Give up the fight.", "Do not give up the fight." ) == 2) {
+			if (select( "放弃战斗。", "不放弃战斗。" ) == 2) {
 				if (BaseJob != Job_Priest) {
 					mes "[USU指挥官埃琳娜]";
 					mes "Great, I will be waiting.";
@@ -4401,15 +4401,15 @@ rebel_in,70,78,3	script	埃琳娜·沃尔科娃#16.2rm	4_F_ELENA,{
 					mes "If you want to do this again, welcome.";
 				}
 				next;
-				if (select( "Enter the waiting room.", "Do not enter the waiting room." ) == 1) {
+				if (select( "进入等候室。", "不进入等候室。" ) == 1) {
 					mes "[USU指挥官埃琳娜]";
 					if (BaseJob == Job_Priest)
 						mes "Ho, you have the guts.";
 					else
 						mes "I like it.";
-					mes "Ivan will guide you inside.";
+					mes "伊万会带你进去。";
 					mes "If you want to surrender, tell Sorita.";
-					mes "Let's do it!";
+					mes "开始吧！";
 					close2;
 					warp "rebel_in",184,28;
 					end;
@@ -4427,7 +4427,7 @@ rebel_in,70,78,3	script	埃琳娜·沃尔科娃#16.2rm	4_F_ELENA,{
 				mes "[USU指挥官埃琳娜]";
 				mes "Don't make me feel sorry for you.";
 				next;
-				if (select( "Give up the fight.", "Do not give up the fight." ) == 2) {
+				if (select( "放弃战斗。", "不放弃战斗。" ) == 2) {
 					mes "[USU指挥官埃琳娜]";
 					if (BaseJob == Job_Priest)
 						mes "Hey, you don't have to do this...";
