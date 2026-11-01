@@ -5047,7 +5047,7 @@ rebel_in,122,71,3	script	反叛者首领鲁柏#162gmb	4_M_RUPERT,{
 		next;
 		select("告诉首领自己救了戈尼。");
 		mes "[鲁柏]";
-		mes "Oh!";
+		mes "哦！";
 		mes "原来如此！";
 		mes "非常感谢你帮助我们的小伙子。";
 		emotion ET_BEST;
@@ -7044,7 +7044,7 @@ OnTouch:
 		cutin "ep162_rds01.bmp",0;
 		next;
 		mes "[元老狄恩]";
-		mes "Oh!";
+		mes "哦！";
 		mes "I remember I asked him for an errand. Will he be back here?";
 		cutin "ep162_dn01.bmp",2;
 		next;
@@ -7375,7 +7375,7 @@ OnTouch:
 		cutin "ep162_rds03.bmp",0;
 		next;
 		mes "[狄恩]";
-		mes "Oh!";
+		mes "哦！";
 		emotion ET_THROB;
 		cutin "ep162_dn01.bmp",2;
 		next;
@@ -7426,7 +7426,7 @@ OnTouch:
 		emotion ET_HUK, getnpcid(0, "科特尼斯#162gmbs");
 		next;
 		mes "[狄恩]";
-		mes "Oh!";
+		mes "哦！";
 		mes "I was lucky to find him early.";
 		npctalk "狄恩： Lying down somewhere like that can be really dangerous.", "", bc_self;
 		next;
@@ -8300,41 +8300,41 @@ rebel_in,78,66,6	script	阿里韦罗·尤希克#TFQ02	4_M_GUNSLINGER,{
 		mes "是什么推论？";
 		next;
 		mes "[阿里韦罗]";
-		mes "Hmm? You haven't noticed yet? I thought you noticed it already and then gave me a hint.";
+		mes "嗯？你还没发现？我以为你早发现了，还给我提示。";
 		mes "没那么重要。";
 		next;
 		emotion ET_BLABLA;
 		mes "[阿里韦罗]";
-		mes "The Turned-off torch.. Fire!! Yes, it's the fire. Since 艾因贝克 is a mountainous area, there is occasionally a strong wind there, even in normal times. What was different from usual was that the torch was turned off.";
+		mes "被吹灭的火把……火焰！！对，就是火。艾因贝克是山区，平时也偶尔刮大风。和平时不同的是火把被吹灭了。";
 		next;
 		emotion ET_BLABLA;
 		mes "[阿里韦罗]";
-		mes "Normally they say the fire is the strongest right before being turned off. So my theory focused on the fact that the device appeared for a while and disappeared quickly right before the torch was gone.";
+		mes "据说火焰在熄灭前最强。所以我的推论集中在设备在火把熄灭前出现又迅速消失这一点。";
 		next;
 		emotion ET_BLABLA;
 		mes "[阿里韦罗]";
-		mes "The very moment when the fire is strong and disappears!! That is the condition for the device to appear.";
+		mes "火焰最强又即将消失的瞬间！！这就是设备出现的条件。";
 		next;
 		emotion ET_BLABLA;
 		mes "[阿里韦罗]";
-		mes "What do you think about my theory? Isn't it worth trying?";
+		mes "你觉得我的推论怎么样？值得一试吧？";
 		next;
 		emotion ET_SCRATCH, playerattached();
 		mes "[" + strcharinfo(0) + "]";
-		mes "You seem so excited and I really don't get what you are saying. But if you are so positive about it, let's try. Trying won't hurt. Would it?";
+		mes "你看起来很兴奋，我实在没听懂。但既然你这么有把握，就试试吧。试试又不会怎样，对吧？";
 		next;
 		emotion ET_SMILE;
 		mes "[阿里韦罗]";
-		mes "Since you are a hot person, your answer is also hot. Great! Let's go and try it. It's in this village anyway.";
+		mes "不愧是当红的人，回答也这么热。很好！去试试，反正就在这个村子。";
 		next;
 		mes "[阿里韦罗]";
-		mes "You come to the very end of the freight train with the items with full of fire attributes.";
+		mes "带上充满火属性的物品，到货运列车最尾端来。";
 		next;
 		erasequest 5728;	// Headache
 		setquest 5729;	// To 艾因贝克
 		yurhik_quest = 2;
 		mes "[阿里韦罗]";
-		mes "See you at the end of the freight train.";
+		mes "货运列车尾部见。";
 		close2;
 		cloakonnpcself( "阿里韦罗·尤希克#TFQ02" );
 		end;
@@ -8342,83 +8342,83 @@ rebel_in,78,66,6	script	阿里韦罗·尤希克#TFQ02	4_M_GUNSLINGER,{
 	if (yurhik_quest == 4) {
 		emotion ET_BLABLA;
 		mes "[阿里韦罗]";
-		mes "You were awesome. You deserve to be the hottest fellow in 克拉纳·内米耶里 these days.";
+		mes "你太厉害了，难怪是最近克拉纳·内米耶里最红的人。";
 		next;
 		emotion ET_BLABLA;
 		mes "[阿里韦罗]";
-		mes "Hey look! My elder sister is so glad to hear that the equipment was destroyed.";
+		mes "嘿，看！我姐姐听说设备被破坏可高兴了。";
 		next;
-		mes "His elder sister was just fishing around books and documents that she was looking at. But Arivero didn't seem to care about it and continued to speak in excitement.";
+		mes "他姐姐只是继续翻着书本文档，但阿里韦罗毫不在意，继续兴奋地说着。";
 		next;
 		emotion ET_SURPRISE;
 		mes "[阿里韦罗]";
-		mes "Oh! I almost forgot.";
-		mes "Since we revealed the secret of teleport prohibition equipment, our agent in Lighthalzen was able to spot the location and attributes of the equipment.";
+		mes "哦！差点忘了。";
+		mes "既然解开了传送禁止设备的秘密，里希塔乐镇的探员就能定位设备的位置和属性。";
 		next;
 		emotion ET_SCRATCH;
 		mes "[阿里韦罗]";
-		mes "Hmm..";
-		mes "The location is inside the mansion. The attribute is water. This information is too simple. Can we find it with this?";
+		mes "嗯……";
+		mes "位置在宅邸内，属性是水。信息太简单了，这能找得到吗？";
 		next;
 		mes "[阿里韦罗]";
-		mes "Water on four sides.. Water attribute..";
-		mes "What kind of relationship is there between its installed location and the attribute of teleport prohibition device?";
+		mes "四面环水……水属性……";
+		mes "安装位置和传送禁止设备的属性之间有什么关系？";
 		next;
 		mes "[阿里韦罗]";
-		mes "It gives me a headache. Let me think about it later.";
-		mes "What do we need here? We need one Mystic Frozen to reveal the device.";
+		mes "头疼。以后再想。";
+		mes "这里需要什么？需要1个水灵矿石让设备现形。";
 		next;
 		emotion ET_QUESTION;
 		mes "[阿里韦罗]";
-		mes "Is Wind strong against Water? Hey pal. What is the attribute stone for wind attribute? Do you know?";
+		mes "风克水吗？嘿，朋友，风属性用什么属性石？知道吗？";
 		while(true) {
 			next;
-			switch( select( "Flame Heart", "Mystic Frozen", "Rough Wind", "Great Nature" ) ) {
+			switch( select( "火灵矿石", "水灵矿石", "风灵矿石", "地灵矿石" ) ) {
 			case 1:
 				mes "[阿里韦罗]";
-				mes "Not Flame Heart. It's a fire attribute stone that revealed the device in 艾因贝克.";
+				mes "不是火灵矿石。那是艾因贝克让设备现形的火属性石。";
 				continue;
 			case 2:
 				mes "[阿里韦罗]";
-				mes "And Mystic Frozen is a water attribute stone required to reveal the device in Lighthalzen.";
+				mes "水灵矿石是里希塔乐镇让设备现形所需的水属性石。";
 				continue;
 			case 3:
 				mes "[阿里韦罗]";
-				mes "Yes, it is! Rough Wind! This is the attribute stone of Wind attribute.";
+				mes "对！风灵矿石！这就是风属性石。";
 				break;
 			case 4:
 				mes "[阿里韦罗]";
-				mes "Great Nature? Isn't it for the Ground attribute? I don't think we need it right now.";
+				mes "地灵矿石？那是地属性吧？现在应该不需要。";
 				continue;
 			}
 			break;
 		}
 		next;
 		mes "[阿里韦罗]";
-		mes "Great! Bring me one Mystic Frozen and three Rough Winds.";
-		mes "See you in Lighthalzen.";
+		mes "很好！带1个水灵矿石和3个风灵矿石来。";
+		mes "里希塔乐镇见。";
 		next;
 		emotion ET_QUESTION, playerattached();
 		mes "[" + strcharinfo(0) + "]";
-		mes "It's strange. Why are you in such a hurry?";
-		mes "Is there anything urgent?";
+		mes "奇怪，你为什么这么急？";
+		mes "有什么急事吗？";
 		next;
 		mes "[阿里韦罗]";
-		mes "Oh, did I look like that? We already have the information and I was trying to destroy the equipment quickly before they become aware of it.";
+		mes "哦，我看起来像吗？情报已经到手，我想趁他们发现前快点破坏设备。";
 		next;
 		mes "[" + strcharinfo(0) + "]";
-		mes "Ah! I see.";
-		mes "It is a great idea.";
+		mes "啊！原来如此。";
+		mes "好主意。";
 		next;
 		erasequest 5731;	// Clana Namieri
 		setquest 5732;	// To Lighthalzen
 		yurhik_quest = 5;
 		mes "[阿里韦罗]";
-		mes "As I told you, I used to be the hottest person in 克拉纳·内米耶里 before you showed up!";
+		mes "我说过，在你出现前，我才是克拉纳·内米耶里最红的人！";
 		next;
 		mes "[阿里韦罗]";
-		mes "Oh!";
-		mes "Hey, let's get down to the business. Bring the materials and see you in Lighthalzen.";
+		mes "哦！";
+		mes "嘿，说正事。带材料来，里希塔乐镇见。";
 		close2;
 		cloakonnpcself( "阿里韦罗·尤希克#TFQ02" );
 		end;
@@ -8426,106 +8426,106 @@ rebel_in,78,66,6	script	阿里韦罗·尤希克#TFQ02	4_M_GUNSLINGER,{
 	if (yurhik_quest == 6) {
 		emotion ET_BLABLA;
 		mes "[阿里韦罗]";
-		mes "You were marvelous in Lighthalzen. No wonder you're such a hot person.";
-		mes "Look at her! My elder sister is even more pleased than before.";
+		mes "你在里希塔乐镇太出色了，难怪这么红。";
+		mes "看她！我姐姐比之前更高兴了。";
 		next;
-		mes "Upon any consideration, I think Vero is misunderstanding something. The poker-faced lady he calls his sister is still fishing around books and documents. And why is he saying that she is pleased? Why does he say that?";
+		mes "不管怎么看，韦罗都误会了什么。他那位面无表情的姐姐还在翻书本文档，他为什么说她高兴？";
 		next;
 		emotion ET_QUESTION, playerattached();
 		mes "[" + strcharinfo(0) + "]";
-		mes "I wanted to ask you about this. Is she really pleased?";
-		mes "Look at her. She's not even looking here.";
+		mes "我正想问你。她真的高兴吗？";
+		mes "看看她，连看都不看这边。";
 		next;
 		emotion ET_QUESTION;
 		mes "[阿里韦罗]";
-		mes "What?! Can't you see her being pleased? Look at her now. She is pretending to ignore us, because she is shy. But the glow around her cheeks shows that she is pleased. Got it?";
+		mes "什么？！你看不出她高兴？看看她，她害羞才装作不理我们。脸颊的光泽说明她很高兴。懂了吗？";
 		next;
-		mes "Well, I don't get it. But I will just accept it, as her younger brother says so.";
+		mes "好吧，我不懂。但既然她弟弟这么说，我就信了。";
 		next;
 		emotion ET_OTL;
 		mes "[阿里韦罗]";
-		mes "Hey! Friend!! There's something more important than it.";
-		mes "We have a problem. According to our schedule, we were planning to destroy the equipment in Yuno right after destroying the equipment in Lighthalzen..";
+		mes "嘿！朋友！！有比这更重要的事。";
+		mes "有问题了。按计划，我们本该破坏完里希塔乐镇的设备就马上去朱诺。";
 		next;
 		emotion ET_QUESTION;
 		mes "[阿里韦罗]";
-		mes "Remember the device that prevented the prohibition equipment from disappearance?";
-		mes "You know that stuff? That is out of order now.";
-		mes "So we have to fix it before leaving.";
+		mes "还记得那个防止禁止设备消失的装置吗？";
+		mes "你知道那东西吧？现在坏了。";
+		mes "所以出发前得修好。";
 		next;
 		mes "[" + strcharinfo(0) + "]";
-		mes "You are dragging on.. You have something to ask me for, don't you?";
+		mes "你在拖时间……是有事求我吧？";
 		next;
 		emotion ET_SMILE;
 		mes "[阿里韦罗]";
-		mes "Hahaha. You figured it out? We are lucky to have all the materials to repair it, except for one core material. As usual, core materials are always a problem.";
+		mes "哈哈哈，被你看出来了？修它的材料都齐了，只差一种核心材料。核心材料总是麻烦。";
 		next;
 		mes "[阿里韦罗]";
-		mes "So please bring one Star Crumb, the core material. Once you bring it to me, we can repair it and leave right away. I will be ready for it.";
+		mes "所以请带1个核心材料星星的角来。带来就能修好立刻出发，我会准备好。";
 		next;
 		erasequest 5733;	// Clana Namieri
 		setquest 5734;	// Core materials are always a problem
 		yurhik_quest = 7;
 		mes "[阿里韦罗]";
-		mes "All we have to do is to insert the Star Crumb. So once you bring it, we can leave right away.";
-		mes "Regarding the location and required attribute stone, I will inform you then. I haven't finished collecting the information yet. I will count on you.";
+		mes "只要插入星星的角。你带来就能马上走。";
+		mes "地点和所需属性石到时再告诉你。情报还没收集完，拜托了。";
 		close2;
 		cloakonnpcself( "阿里韦罗·尤希克#TFQ02" );
 		end;
 	}
 	if (yurhik_quest == 7) {
 		mes "[阿里韦罗]";
-		mes "The basic repair is all over.";
-		mes "Now let me insert a Star Crumb, the core material..";
+		mes "基础修理完成了。";
+		mes "现在插入核心材料星星的角……";
 		next;
 		if (countitem(1000) < 1) {
 			emotion ET_HUM;
 			mes "[阿里韦罗]";
-			mes "The basic repairing is all over. But you haven't brought the Star Crumb yet. Please bring it soon.";
-			mes "Let's complete this operation quickly.";
+			mes "基础修理完成了，但你还没带星星的角来。快点带来吧。";
+			mes "快点完成这次行动。";
 			mes "就拜托你了。";
 			close;
 		}
 		emotion ET_CONGRATULATION;
 		mes "[阿里韦罗]";
-		mes "The repairing is nearly over. Oh! You've brought it.";
-		mes "Now let me insert a Star Crumb on the device. It's the end of repairing!!";
+		mes "快修好了。哦！你带来了。";
+		mes "现在把星星的角插进装置。修理完成！！";
 		next;
-		mes "It's quite suspicious that Vero is not looking straight into my eyes. Maybe all he needed was the Star Crumb from the beginning. Shall I ask him about this?";
+		mes "韦罗不敢直视我，很可疑。也许他从一开始就只需要星星的角。要问问他吗？";
 		next;
-		if (select( "Just laugh it off.", "Ask him." ) == 1)
-			mes "Phew.. Let's just laugh it off. Fair is fair after all.";
+		if (select( "一笑而过。", "问他。" ) == 1)
+			mes "唉……一笑而过吧，反正也公平。";
 		else {
 			emotion ET_STARE, playerattached();
 			mes "[" + strcharinfo(0) + "]";
-			mes "This is suspicious. Tell me honestly.";
-			mes "I won't be mad. All you needed was the Star Crumb from the beginning, right?";
+			mes "这很可疑。老实告诉我。";
+			mes "我不生气。你从一开始就只需要星星的角，对吧？";
 			next;
 			emotion ET_PROFUSELY_SWEAT;
 			mes "[阿里韦罗]";
-			mes "No! What kind of jerk do you take me for? Just look into my eyes!";
+			mes "不！你把我当什么混蛋了？看着我的眼睛！";
 			next;
-			mes "It's very suspicious of him to be mad like it. But I decided to laugh it off.";
+			mes "他这样生气反而更可疑。但我决定一笑而过。";
 		}
 		next;
 		emotion ET_KIK;
 		mes "[阿里韦罗]";
-		mes "Although there has been a minor incident, now we have two more prohibition equipment devices to destroy.";
-		mes "But since we found the location and attribute of the prohibition equipment installed in Yuno, we can leave right now.";
+		mes "虽然有点小插曲，但还有两台传送禁止设备要破坏。";
+		mes "既然找到朱诺设备的位置和属性，现在就能出发。";
 		next;
 		mes "[阿里韦罗]";
-		mes "The coordinates of Yuno's prohibition equipments are 206 224";
-		mes "It has a Wind attribute. Our agent will give us a Rough Wind, so we will be able to destroy it once we get there.";
+		mes "朱诺传送禁止设备坐标是206,224。";
+		mes "它是风属性。探员会给我们风灵矿石，到了就能破坏。";
 		next;
 		mes "[阿里韦罗]";
-		mes "Please get four Great Natures and come to Yuno. They have opposite attributes to the Wind attribute.";
+		mes "请带4个地灵矿石来朱诺，地属性克风。";
 		next;
 		delitem 1000,1;// Star Crumb
 		erasequest 5734;	// Core materials are always a problem
 		setquest 5735;	// To Yuno
 		yurhik_quest = 8;
 		mes "[阿里韦罗]";
-		mes "See you in Yuno.";
+		mes "朱诺见。";
 		close2;
 		cloakonnpcself( "阿里韦罗·尤希克#TFQ02" );
 		end;
