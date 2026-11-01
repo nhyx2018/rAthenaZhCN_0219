@@ -22,31 +22,24 @@
 // Teleport Cats (14.2 Cat Paw Addition)
 //============================================================
 -	script	Teleport Cat#ep14_2	-1,{
-	switch(strcharinfo(3)) {
-	case "ecl_fild01":
+	if (strcharinfo(3) == "ecl_fild01") {
 		setarray .@map$[0],"穆拉入口";
 		setarray .@cost[0],15;// Amount Canned Food
-		break;
-	case "bif_fild02":
+	} else if (strcharinfo(3) == "bif_fild02") {
 		setarray .@map$[0],"埃克拉珠附近","斯普伦迪德附近";
 		setarray .@cost[0],15,55;
-		break;
-	case "spl_fild02":
+	} else if (strcharinfo(3) == "spl_fild02") {
 		setarray .@map$[0],"穆拉入口","米德加尔特远征营地";
 		setarray .@cost[0],55,10;
-		break;
-	case "mid_camp":
+	} else if (strcharinfo(3) == "mid_camp") {
 		setarray .@map$[0],"斯普伦迪德附近","马努克原野";
 		setarray .@cost[0],10,10;
-		break;
-	case "man_fild02":
+	} else if (strcharinfo(3) == "man_fild02") {
 		setarray .@map$[0],"米德加尔特远征营地","埃迪斯特斯附近";
 		setarray .@cost[0],10,20;
-		break;
-	case "dic_fild01":
+	} else if (strcharinfo(3) == "dic_fild01") {
 		setarray .@map$[0],"马努克原野";
 		setarray .@cost[0],20;
-		break;
 	}
 	mes "[传送猫]";
 	mes "今天天气真好啊！";
