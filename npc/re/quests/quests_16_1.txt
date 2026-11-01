@@ -9190,7 +9190,7 @@ prt_cas_q,87,132,6	script	保镖#ep16_1_m	4_M_JOB_KNIGHT1,{
 	}
 	if (ep16_gaobs == 4 || ep16_gaobs == 5) {
 		mes "[保镖马丁]";
-		mes "I don't know why but Scarlet and 利迪翁 have been on bad terms for a long time.";
+		mes "不知为何，斯卡蕾特和利迪翁长期不和。";
 		next;
 		mes "[保镖马丁]";
 		mes "她们年纪相仿，本来能成为朋友就好了……";
