@@ -3751,24 +3751,24 @@ OnInit:
 	end;
 }
 
-que_swat,159,53,5	script	Yudmil#ep162_2	4_M_GUNSLINGER2,{
-	mes "[Yudmil]";
-	mes "No ... why did I volunteer for this?";
+que_swat,159,53,5	script	尤德米尔#ep162_2	4_M_GUNSLINGER2,{
+	mes "[尤德米尔]";
+	mes "不……我为什么要自愿来这种地方？";
 	next;
-	select("What's wrong with the Gunslinger?");
-	mes "[Yudmil]";
-	mes "Gunslinger is a place made by the 反叛者 to train the upcoming generation, so they have a close relationship.";
+	select("枪手这边怎么了？");
+	mes "[尤德米尔]";
+	mes "枪手是反叛者为了培养下一代而建立的地方，所以关系很密切。";
 	next;
-	mes "[Yudmil]";
-	mes "I heard that there was special training with the 反叛者 so I volunteered. And what am I doing now?";
-	mes "I never imagined that I would be sent to this laboratory full of monsters!";
+	mes "[尤德米尔]";
+	mes "听说能和反叛者一起特别训练，我才自愿来的。结果现在在做什么？";
+	mes "没想到会被派到这种满是怪物的实验室！";
 	next;
-	mes "[Yudmil]";
-	mes "Arrrgh, especially Ms. Elena ... She makes us suffer ...";
+	mes "[尤德米尔]";
+	mes "啊啊，尤其是埃琳娜小姐……她把我们折腾惨了……";
 	close;
 }
 
-que_swat,161,53,3	script	Yuslan#ep162_1	4_M_GUNSLINGER3,{
+que_swat,161,53,3	script	尤斯兰#ep162_1	4_M_GUNSLINGER3,{
 	if (checkweight(501,1) == 0) {
 		mes "- 携带道具过多，无法继续任务。 -";
 		close;
@@ -3779,43 +3779,43 @@ que_swat,161,53,3	script	Yuslan#ep162_1	4_M_GUNSLINGER3,{
 	case -1:
 		switch( checkquest(7761,HUNTING) ) {
 		case -1:
-			mes "[Yuslan]";
-			mes "Inside the laboratory, there is pandemonium due to the experimental subjects that broke out.";
-			mes "Although we kill them, more of them come out from somewhere. I came out rest for a while.";
+			mes "[尤斯兰]";
+			mes "实验体暴走后，实验室里一片混乱。";
+			mes "怎么杀都会从别处冒出更多。我出来休息一下。";
 			next;
-			if (select( "Help him defeat Chimeras.", "Wish him good luck." ) == 2) {
-				mes "[Yuslan]";
-				mes "Well ... Yeah. This is a part of training, too. Phew.";
+			if (select( "帮他击败凯美拉。", "祝他好运。" ) == 2) {
+				mes "[尤斯兰]";
+				mes "嗯……是啊，这也是训练的一部分。唉。";
 				close;
 			}
-			mes "[Yuslan]";
-			mes "Then, please kill 10 of each";
-			mes "^4d4dffMaterial type Chimeras^000000 and";
-			mes "^4d4dffHuman type Chimeras^000000";
-			mes "wandering around in the laboratory!";
+			mes "[尤斯兰]";
+			mes "那请各杀10只";
+			mes "^4d4dff物质型凯美拉^000000和";
+			mes "^4d4dff人型凯美拉^000000";
+			mes "在实验室里游荡的那些！";
 			next;
-			mes "[Yuslan]";
-			mes "Thanks to your support, we can pause for breath!";
-			mes "Cheer up, Adventurer!";
+			mes "[尤斯兰]";
+			mes "多亏你支援，我们终于能喘口气！";
+			mes "加油，冒险者！";
 			setquest 7761;// Make Chimeras rest in peace
 			close;
 		case 0:
 		case 1:
-			mes "[Yuslan]";
-			mes "Just defeat 10 of each type. That's all I ask.";
-			mes "They are ^4d4dffMaterial type Chimeras and Human type Chimeras.^000000";
+			mes "[尤斯兰]";
+			mes "各杀10只就行，拜托了。";
+			mes "就是^4d4dff物质型凯美拉和人型凯美拉^000000。";
 			next;
-			mes "[Yuslan]";
-			mes "... The In Vivo Experiment is really horrible.";
+			mes "[尤斯兰]";
+			mes "……活体实验真是太可怕了。";
 			close;
 		case 2:
-			mes "[Yuslan]";
-			mes "Wow, you did a great job for us!";
-			mes "Thank you.";
-			mes "Thanks to your support, we managed to get a good rest.";
+			mes "[尤斯兰]";
+			mes "哇，你帮了大忙！";
+			mes "谢谢。";
+			mes "多亏你，我们好好休息了一下。";
 			next;
-			mes "[Yuslan]";
-			mes "Please be with us next time!";
+			mes "[尤斯兰]";
+			mes "下次也请来帮我们！";
 			erasequest 7761;// Make Chimeras rest in peace
 			setquest 7762;// Make Chimeras rest in peace (Standby)
 			getitem 25155,3;	// Swz_Honor_Token
@@ -3824,22 +3824,22 @@ que_swat,161,53,3	script	Yuslan#ep162_1	4_M_GUNSLINGER3,{
 		}
 	case 0:
 	case 1:
-		mes "[Yuslan]";
-		mes "Hey, thank you for your great job.";
-		mes "But there are still more monsters inside.";
-		mes "We are trying our best to get rid of them. But honestly, it's tough.";
+		mes "[尤斯兰]";
+		mes "嘿，谢谢你的出色表现。";
+		mes "但里面还有更多怪物。";
+		mes "我们尽力清剿，但说实话很难。";
 		next;
-		mes "[Yuslan]";
-		mes "Where do all of these experimental subjects come from?";
+		mes "[尤斯兰]";
+		mes "这些实验体到底从哪来的？";
 		close;
 	case 2:
 		erasequest 7762;// Make Chimeras rest in peace (Standby)
-		mes "[Yuslan]";
-		mes "They come out continuously. I can't imagine how many experiments they conducted.";
-		mes "I mean, Chimeras.";
+		mes "[尤斯兰]";
+		mes "它们不断冒出来。无法想象他们做了多少实验。";
+		mes "我是说凯美拉。";
 		next;
-		mes "[Yuslan]";
-		mes "I never imagined that Chimeras would be tougher than Heart Hunters ...";
+		mes "[尤斯兰]";
+		mes "没想到凯美拉比心脏猎人还难缠……";
 		close;
 	}
 	end;
@@ -3850,15 +3850,15 @@ OnInit:
 }
 
 // Part Elena - Fight
-rebel_in,70,78,3	script	Elena Volkova#16.2rm	4_F_ELENA,{
+rebel_in,70,78,3	script	埃琳娜·沃尔科娃#16.2rm	4_F_ELENA,{
 	if (terra_gloria_main < 16) {
 		cutin "162elena_01.bmp",2;
-		mes "[USU commander Elena]";
+		mes "[USU指挥官埃琳娜]";
 		mes "Don't pick a fight with USU recklessly.";
 		mes "When people start fighting, I'll be the only one who feels annoyed.";
 		next;
 		emotion ET_FRET;
-		mes "[USU commander Elena]";
+		mes "[USU指挥官埃琳娜]";
 		mes "Although I leashed them, they keep thinking about running out ...";
 		mes "Maybe their brains are filled with gunpowder. Silly weirdos.";
 		close3;
@@ -3867,20 +3867,20 @@ rebel_in,70,78,3	script	Elena Volkova#16.2rm	4_F_ELENA,{
 	// twins daily quest
 	if (isbegin_quest(16031) == 1) {
 		cutin "162elena_01.bmp",2;
-		mes "[USU commander Elena]";
+		mes "[USU指挥官埃琳娜]";
 		mes "Cookie? I don't like sweets.";
 		next;
-		mes "[USU commander Elena]";
+		mes "[USU指挥官埃琳娜]";
 		mes "Lebedev guys baked it...";
 		mes "Then, I have no choice but to taste it. Give it to me.";
 		next;
 		if (countitem(25161) < 1) {
-			mes "[USU commander Elena]";
+			mes "[USU指挥官埃琳娜]";
 			mes "...Why are you empty-handed? Where is the cookie?";
 			close3;
 		}
 		emotion ET_DELIGHT;
-		mes "[USU commander Elena]";
+		mes "[USU指挥官埃琳娜]";
 		mes "It smells good.";
 		mes "Seems like they gave a great effort. Tell them thanks.";
 		completequest 16031;// Service: Cookies delivery
@@ -3892,25 +3892,25 @@ rebel_in,70,78,3	script	Elena Volkova#16.2rm	4_F_ELENA,{
 		switch( isbegin_quest(16060) ) {
 		case 0:
 			cutin "162elena_01.bmp",2;
-			mes "[USU commander Elena]";
+			mes "[USU指挥官埃琳娜]";
 			mes "Wait, who are you?";
 			next;
-			mes "[USU commander Elena]";
+			mes "[USU指挥官埃琳娜]";
 			mes "I haven't seen you before.";
 			mes "You can't be in this place. Strangers like you are not supposed to be here.";
 			mes "^FF0000>>>Snap<<<^000000";
 			next;
-			mes "[USU commander Elena]";
+			mes "[USU指挥官埃琳娜]";
 			mes "Tell me exactly how you got here and where you came from unless you want to die. ";
 			sleep2 300;
-			npctalk "Elena Volkova: Otherwise I will have some fun and you won't.", "", bc_self;
+			npctalk "埃琳娜·沃尔科娃： Otherwise I will have some fun and you won't.", "", bc_self;
 			next;
 			cutin "",255;
 			mes "[" + strcharinfo(0) + "]";
 			mes "I am... You revealed you're an adventurer who came to help 秘密之翼 and requested cooperation to the 反叛者.";
 			next;
 			cutin "162elena_01.bmp",2;
-			mes "[USU commander Elena]";
+			mes "[USU指挥官埃琳娜]";
 			mes "秘密之翼? They are just rookies. All they do is suck up to the president.";
 			mes "You're so brave. Who told you to visit me?";
 			mes "I don't want to dance to chicks flapping their wings. Just go away.";
@@ -3920,17 +3920,17 @@ rebel_in,70,78,3	script	Elena Volkova#16.2rm	4_F_ELENA,{
 			mes "No, wait please. In fact, I... no, my companion...";
 			next;
 			cutin "162elena_01.bmp",2;
-			mes "[USU commander Elena]";
+			mes "[USU指挥官埃琳娜]";
 			mes "Your companion saved 戈尼?";
 			mes "...... So? You want a reward?";
 			mes "I really hate those who try to use other's lives as they please.";
 			next;
-			mes "[USU commander Elena]";
+			mes "[USU指挥官埃琳娜]";
 			mes "Well... I have a better idea.";
 			mes "Unlike the wimp chatting downstairs, you look quite interesting.";
 			next;
 			cutin "162elena_02.bmp",2;
-			mes "[USU commander Elena]";
+			mes "[USU指挥官埃琳娜]";
 			mes "You said you were just an adventurer, didn't you?";
 			mes "Great. If you defeat me in a fight, I will listen to your story.";
 			next;
@@ -3939,7 +3939,7 @@ rebel_in,70,78,3	script	Elena Volkova#16.2rm	4_F_ELENA,{
 			mes "Pardon?";
 			next;
 			cutin "162elena_01.bmp",2;
-			mes "[USU commander Elena]";
+			mes "[USU指挥官埃琳娜]";
 			mes "Let's fight! I will listen to someone who fights me.";
 			mes "Talk to me when you are ready. Then I will let you enter the waiting room of the arena.";
 			next;
@@ -3949,7 +3949,7 @@ rebel_in,70,78,3	script	Elena Volkova#16.2rm	4_F_ELENA,{
 			next;
 			cutin "162elena_01.bmp",2;
 			emotion ET_HNG;
-			mes "[USU commander Elena]";
+			mes "[USU指挥官埃琳娜]";
 			mes "If you don't want to fight, I guess you don't need any cooperation. Go back.";
 			next;
 			cutin "",255;
@@ -3968,16 +3968,16 @@ rebel_in,70,78,3	script	Elena Volkova#16.2rm	4_F_ELENA,{
 			next;
 			cutin "162elena_01.bmp",2;
 			emotion ET_SMILE;
-			mes "[USU commander Elena]";
+			mes "[USU指挥官埃琳娜]";
 			mes "Hmm? I misheard something. Haha, could you repeat it?";
-			npctalk "Elena Volkova: Well, it should have been some dogs barking.", "", bc_self;
+			npctalk "埃琳娜·沃尔科娃： Well, it should have been some dogs barking.", "", bc_self;
 			next;
 			cutin "",255;
 			mes "[" + strcharinfo(0) + "]";
 			mes "Yes... I'll do it.";
 			next;
 			cutin "162elena_02.bmp",2;
-			mes "[USU commander Elena]";
+			mes "[USU指挥官埃琳娜]";
 			mes "Great. Tell me when you are ready.";
 			setquest 16060;	// Fighting is the language of warmonger
 			setquest 16061;	// Fair and equitable result
@@ -3987,21 +3987,21 @@ rebel_in,70,78,3	script	Elena Volkova#16.2rm	4_F_ELENA,{
 			switch( isbegin_quest(16011) ) {
 			case 0:
 				cutin "162elena_01.bmp",2;
-				mes "[USU commander Elena]";
+				mes "[USU指挥官埃琳娜]";
 				mes "Are you ready?";
 				mes "Shall we go to the waiting room now?";
 				next;
 				switch( select( "Go to the waiting room", "Don't go to the waiting room." ) ) {
 				case 1:
 					if (BaseJob != Job_Priest) {
-						mes "[USU commander Elena]";
+						mes "[USU指挥官埃琳娜]";
 						mes "In the waiting room, there is ^0000CDIvan, the person in charge of entrance in arena^000000.";
 						mes "Enter the arena according to the order in reference to Ivan's guide.";
 						next;
-						mes "[USU commander Elena]";
+						mes "[USU指挥官埃琳娜]";
 						mes "You have two minutes. If you defeat me during two minutes, you win.";
 						next;
-						mes "[USU commander Elena]";
+						mes "[USU指挥官埃琳娜]";
 						mes "If you want to surrender during the fight, tell ^0000CDSorita^000000 beside Ivan.";
 						mes "Then you're going to be told off.";
 						setquest 16011;// Arena entrance
@@ -4009,54 +4009,54 @@ rebel_in,70,78,3	script	Elena Volkova#16.2rm	4_F_ELENA,{
 						warp "rebel_in",184,28;
 						end;
 					}
-					mes "[USU commander Elena]";
+					mes "[USU指挥官埃琳娜]";
 					mes "Hmm... By the way, are you really going to fight me?";
 					mes "I am an expert in killing people. And fighting is not your main occupation. You cannot beat me.";
 					next;
 					if (select( "But I will fight.", "I agree with you. I give up." ) == 2) {
 						cutin "162elena_02.bmp",2;
-						mes "[USU commander Elena]";
+						mes "[USU指挥官埃琳娜]";
 						mes "Good. Knowing one's limit is wise.";
 						close3;
 					}
-					mes "[USU commander Elena]";
+					mes "[USU指挥官埃琳娜]";
 					mes "You're a cleric. Fighting is not your duty. I'm sure your companion also knows that.";
 					next;
-					mes "[USU commander Elena]";
+					mes "[USU指挥官埃琳娜]";
 					mes "Besides, you're just an adventurer. You have no business with us and those guys either. I'm afraid you might get hurt.";
 					next;
 					if (select( "No, I will fight.", "...I think you're right. I give up." ) == 2) {
 						cutin "162elena_02.bmp",2;
-						mes "[USU commander Elena]";
+						mes "[USU指挥官埃琳娜]";
 						mes "You're wise. You don't have to get hurt yourself being nosy.";
 						close3;
 					}
-					mes "[USU commander Elena]";
+					mes "[USU指挥官埃琳娜]";
 					mes "You must a fool who doesn't know what's going on.";
 					mes "Do you think I'm kidding? Or your life is too heavy and you'd like to put everything down?";
 					next;
-					mes "[USU commander Elena]";
+					mes "[USU指挥官埃琳娜]";
 					mes "This is the final warning. You stay out of this.";
 					mes "Tell the guy downstairs that you had no choice because I intimidated you.";
 					next;
 					if (select( "This is my problem too.", "Since I don't want to die, I give up." ) == 2) {
 						cutin "162elena_02.bmp",2;
-						mes "[USU commander Elena]";
+						mes "[USU指挥官埃琳娜]";
 						mes "You're wise. Life is important, especially when it's mine.";
 						close3;
 					}
-					mes "[USU commander Elena]";
+					mes "[USU指挥官埃琳娜]";
 					mes "...Why is this your problem?";
 					mes "That talkative guy is a stooge of the President. But you're an adventurer who can just leave.";
 					next;
 					if (select( "This is the problem of those who trust me.", "I guess I'd better go." ) == 2) {
 						cutin "162elena_02.bmp",2;
-						mes "[USU commander Elena]";
+						mes "[USU指挥官埃琳娜]";
 						mes "You're wise. Enjoy your adventure in a safer place.";
 						close3;
 					}
 					cutin "162elena_02.bmp",2;
-					mes "[USU commander Elena]";
+					mes "[USU指挥官埃琳娜]";
 					mes "Well, well, well.";
 					mes "Haha, you are so obstinate.";
 					mes "I like your spirit. You said you need a cooperation? Why not? I agree.";
@@ -4066,19 +4066,19 @@ rebel_in,70,78,3	script	Elena Volkova#16.2rm	4_F_ELENA,{
 					mes "Oh... Pardon?!";
 					next;
 					cutin "162elena_01.bmp",2;
-					mes "[USU commander Elena]";
+					mes "[USU指挥官埃琳娜]";
 					mes "You said you needed my approval to persuade us. So I approve it.";
 					mes "I like spunky fellows. It's fun to fight with them.";
 					next;
-					mes "[USU commander Elena]";
+					mes "[USU指挥官埃琳娜]";
 					mes "Ah, don't misunderstand it. I'm not saying I will fight you. I'm saying that I will be on your side.";
 					mes "I didn't mean to fight you anyway.";
 					next;
-					mes "[USU commander Elena]";
+					mes "[USU指挥官埃琳娜]";
 					mes "I don't mess with clerics. I don't feel good after fighting them.";
-					npctalk "Elena Volkova: My mom told me I shouldn't beat a cleric.", "Elena Volkova#16.2rm"; // 116
+					npctalk "埃琳娜·沃尔科娃： My mom told me I shouldn't beat a cleric.", "埃琳娜·沃尔科娃#16.2rm"; // 116
 					next;
-					mes "[USU commander Elena]";
+					mes "[USU指挥官埃琳娜]";
 					mes "So I'll support the cooperation with the 秘密之翼. Do you need my signature?";
 					next;
 					cutin "",255;
@@ -4086,18 +4086,18 @@ rebel_in,70,78,3	script	Elena Volkova#16.2rm	4_F_ELENA,{
 					mes "No, you don't have to. Please show your opinion in front of others next time.";
 					next;
 					cutin "162elena_01.bmp",2;
-					mes "[USU commander Elena]";
+					mes "[USU指挥官埃琳娜]";
 					mes "No problem.";
 					mes "Since you are our cooperator now, go around and see if there is anyone who has any problem.";
 					next;
-					mes "[USU commander Elena]";
+					mes "[USU指挥官埃琳娜]";
 					mes "Who knows? If you keep helping them, they might have good feeling about you.";
 					next;
-					mes "[USU commander Elena]";
+					mes "[USU指挥官埃琳娜]";
 					mes "While we never forget the blood that we must take a revenge for, we do not forget the gratitude either.";
 					mes "If you help them, they will give you a token proving your honor.";
 					next;
-					mes "[USU commander Elena]";
+					mes "[USU指挥官埃琳娜]";
 					mes "Just like the one I'm giving you now.";
 					mes "If you want to know what this is for, ask the stubborn guy named 'Strasse' below the stairs.";
 					erasequest 16060;	// Fighting is the language of warmonger
@@ -4107,24 +4107,24 @@ rebel_in,70,78,3	script	Elena Volkova#16.2rm	4_F_ELENA,{
 					getitem 25155,10;	// Swz_Honor_Token
 					close3;
 				case 2:
-					mes "[USU commander Elena]";
+					mes "[USU指挥官埃琳娜]";
 					mes "Aren't you going to fight me?";
 					mes "Haven't you come here to ask for the cooperation between the 秘密之翼 and 反叛者?";
 					next;
-					mes "[USU commander Elena]";
+					mes "[USU指挥官埃琳娜]";
 					mes "Will you give up the fight?";
 					next;
 					if (select( "Give up the fight.", "Do not give up the fight." ) == 2) {
-						mes "[USU commander Elena]";
+						mes "[USU指挥官埃琳娜]";
 						mes "Good. I will wait for you.";
 						mes "Tell me when you feel like fighting.";
 						close3;
 					}
 					emotion ET_THINK;
-					mes "[USU commander Elena]";
+					mes "[USU指挥官埃琳娜]";
 					mes "...... Hmm.";
 					next;
-					mes "[USU commander Elena]";
+					mes "[USU指挥官埃琳娜]";
 					mes "A coward who's scared at me won't be helpful for the 反叛者 at all.";
 					mes "Get lost.";
 					erasequest 16060;	// Fighting is the language of warmonger
@@ -4136,12 +4136,12 @@ rebel_in,70,78,3	script	Elena Volkova#16.2rm	4_F_ELENA,{
 			case 2:
 				if (isbegin_quest(16061) != 2) {
 					cutin "162elena_01.bmp",2;
-					mes "[USU commander Elena]";
+					mes "[USU指挥官埃琳娜]";
 					mes "... Hmm. So this is it.";
 					mes "If you want to fight me again, I will give you another chance.";
 					next;
 					if (select( "Enter the waiting room.", "Do not enter the waiting room." ) == 1) {
-						mes "[USU commander Elena]";
+						mes "[USU指挥官埃琳娜]";
 						mes "Great. You have guts.";
 						mes "Ivan will guide you inside.";
 						mes "If you want to surrender during a fight, tell Sorita.";
@@ -4150,24 +4150,24 @@ rebel_in,70,78,3	script	Elena Volkova#16.2rm	4_F_ELENA,{
 						warp "rebel_in",184,28;
 						end;
 					}
-					mes "[USU commander Elena]";
+					mes "[USU指挥官埃琳娜]";
 					mes "Aren't you going to fight me?";
 					mes "Haven't you come here to ask for the cooperation with the 反叛者?";
 					next;
-					mes "[USU commander Elena]";
+					mes "[USU指挥官埃琳娜]";
 					mes "Will you give up the fight?";
 					next;
 					if (select( "Give up the fight.", "Do not give up the fight." ) == 2) {
-						mes "[USU commander Elena]";
+						mes "[USU指挥官埃琳娜]";
 						mes "Good. I will wait for you.";
 						mes "Tell me when you feel like fighting.";
 						close3;
 					}
 					emotion ET_THINK;
-					mes "[USU commander Elena]";
+					mes "[USU指挥官埃琳娜]";
 					mes "...... Hmm.";
 					next;
-					mes "[USU commander Elena]";
+					mes "[USU指挥官埃琳娜]";
 					mes "A coward who's scared at me won't be helpful for the 反叛者 at all.";
 					mes "Get lost.";
 					erasequest 16011;// Arena entrance
@@ -4176,12 +4176,12 @@ rebel_in,70,78,3	script	Elena Volkova#16.2rm	4_F_ELENA,{
 				}
 				cutin "162elena_02.bmp",2;
 				emotion ET_DELIGHT;
-				mes "[USU commander Elena]";
+				mes "[USU指挥官埃琳娜]";
 				mes "Haha! I lost.";
 				mes "My feeling was right. It was such a thrilling fight after a long time!";
 				next;
 				cutin "162elena_01.bmp",2;
-				mes "[USU commander Elena]";
+				mes "[USU指挥官埃琳娜]";
 				mes "As I promised, I will listen to you. Go ahead.";
 				next;
 				cutin "",255;
@@ -4193,7 +4193,7 @@ rebel_in,70,78,3	script	Elena Volkova#16.2rm	4_F_ELENA,{
 				mes "In order to persuade the people of 反叛者s, I would like to ask you for help...";
 				next;
 				cutin "162elena_01.bmp",2;
-				mes "[USU commander Elena]";
+				mes "[USU指挥官埃琳娜]";
 				mes "Okay. I will help you.";
 				mes "What should I do?";
 				next;
@@ -4203,7 +4203,7 @@ rebel_in,70,78,3	script	Elena Volkova#16.2rm	4_F_ELENA,{
 				next;
 				cutin "162elena_02.bmp",2;
 				emotion ET_SMILE;
-				mes "[USU commander Elena]";
+				mes "[USU指挥官埃琳娜]";
 				mes "You don't have to tell me the story. You've already told me the story physically. If I can fight on the same side with you, I will welcome whatever it is.";
 				mes "So I support the cooperation with the 秘密之翼. Do you need my signature?";
 				next;
@@ -4212,23 +4212,23 @@ rebel_in,70,78,3	script	Elena Volkova#16.2rm	4_F_ELENA,{
 				mes "No, you don't have to. Please show your opinion in front of others next time.";
 				next;
 				cutin "162elena_01.bmp",2;
-				mes "[USU commander Elena]";
+				mes "[USU指挥官埃琳娜]";
 				mes "Good. ...... By the way,";
 				mes "If you have time, visit the arena any time.";
 				mes "I will fight you even if you come every day.";
-				npctalk "Elena Volkova: Make sure you come back here.", "", bc_self;
+				npctalk "埃琳娜·沃尔科娃： Make sure you come back here.", "", bc_self;
 				next;
-				mes "[USU commander Elena]";
+				mes "[USU指挥官埃琳娜]";
 				mes "Since you are our cooperator now, go around and see if there is anyone who has any problem.";
 				next;
-				mes "[USU commander Elena]";
+				mes "[USU指挥官埃琳娜]";
 				mes "Who knows? If you keep helping them, they might have good feeling about you.";
 				next;
-				mes "[USU commander Elena]";
+				mes "[USU指挥官埃琳娜]";
 				mes "While we never forget the blood that we must take a revenge for, we do not forget the gratitude either.";
 				mes "If you help them, they will give you a token proving your honor.";
 				next;
-				mes "[USU commander Elena]";
+				mes "[USU指挥官埃琳娜]";
 				mes "Just like the one I'm giving you now.";
 				mes "If you want to know what this is for, ask the stubborn guy named 'Strasse' below the stairs.";
 				erasequest 16011;// Arena entrance
@@ -4243,7 +4243,7 @@ rebel_in,70,78,3	script	Elena Volkova#16.2rm	4_F_ELENA,{
 		}
 	}
 	cutin "162elena_01.bmp",2;
-	mes "[USU commander Elena]";
+	mes "[USU指挥官埃琳娜]";
 	if (BaseJob == Job_Priest) {
 		mes "Hi. What is it now?";
 		mes "Have you met our members?";
@@ -4288,7 +4288,7 @@ rebel_in,70,78,3	script	Elena Volkova#16.2rm	4_F_ELENA,{
 			break;
 		case 0:
 		case 1:
-			mes "[USU commander Elena]";
+			mes "[USU指挥官埃琳娜]";
 			mes "...... Hmm.";
 			if (BaseJob == Job_Priest) {
 				mes "Are you sure you have to fight me now?";
@@ -4307,7 +4307,7 @@ rebel_in,70,78,3	script	Elena Volkova#16.2rm	4_F_ELENA,{
 		case 0:
 			if (BaseJob != Job_Priest) {
 				cutin "162elena_02.bmp",2;
-				mes "[USU commander Elena]";
+				mes "[USU指挥官埃琳娜]";
 				mes "Oh, great!";
 				mes "Tell me when you are fully ready. I will go to the waiting room.";
 				setquest 16009;// Fighting is the language of warmonger
@@ -4315,7 +4315,7 @@ rebel_in,70,78,3	script	Elena Volkova#16.2rm	4_F_ELENA,{
 				close3;
 			}
 			cutin "162elena_01.bmp",2;
-			mes "[USU commander Elena]";
+			mes "[USU指挥官埃琳娜]";
 			mes "Hmm...?";
 			mes "I told you. I don't fight clerics.";
 			next;
@@ -4324,14 +4324,14 @@ rebel_in,70,78,3	script	Elena Volkova#16.2rm	4_F_ELENA,{
 			mes "I would like to fight you! Please allow me!";
 			next;
 			cutin "162elena_01.bmp",2;
-			mes "[USU commander Elena]";
+			mes "[USU指挥官埃琳娜]";
 			mes "Oh, every time I beat the hell out of a cleric, I become quite unlucky on that day. It's true.";
 			mes "So I'd rather not fight a cleric...";
 			next;
-			mes "[USU commander Elena]";
+			mes "[USU指挥官埃琳娜]";
 			mes "............";
 			next;
-			mes "[USU commander Elena]";
+			mes "[USU指挥官埃琳娜]";
 			mes "...Huh, look at your eyes. I have no choice but to fight you.";
 			mes "But I will ^0000CDgo very easy on^000000 you. Don't make drama after you defeat me.";
 			setquest 16009;// Fighting is the language of warmonger
@@ -4343,19 +4343,19 @@ rebel_in,70,78,3	script	Elena Volkova#16.2rm	4_F_ELENA,{
 		}
 		switch( isbegin_quest(16011) ) {
 		case 0:
-			mes "[USU commander Elena]";
+			mes "[USU指挥官埃琳娜]";
 			mes "Are you ready?";
 			mes "Shall we go to the waiting room now?";
 			next;
 			if (select( "Go to the waiting room", "Don't go to the waiting room." ) == 1) {
-				mes "[USU commander Elena]";
+				mes "[USU指挥官埃琳娜]";
 				mes "In the waiting room, there is ^0000CDIvan, the person in charge of entrance in arena^000000.";
 				mes "Enter the arena according to the order in reference to Ivan's guide.";
 				next;
-				mes "[USU commander Elena]";
+				mes "[USU指挥官埃琳娜]";
 				mes "You have two minutes. If you defeat me during two minutes, you win.";
 				next;
-				mes "[USU commander Elena]";
+				mes "[USU指挥官埃琳娜]";
 				mes "If you want to surrender during the fight, tell ^0000CDSorita^000000 beside Ivan.";
 				mes "Then you're going to be told off.";
 				setquest 16011;// Arena entrance
@@ -4363,26 +4363,26 @@ rebel_in,70,78,3	script	Elena Volkova#16.2rm	4_F_ELENA,{
 				warp "rebel_in",184,28;
 				end;
 			}
-			mes "[USU commander Elena]";
+			mes "[USU指挥官埃琳娜]";
 			mes "Aren't you going to fight me?";
 			mes "Hm...";
 			next;
-			mes "[USU commander Elena]";
+			mes "[USU指挥官埃琳娜]";
 			mes "Will you give up the fight?";
 			next;
 			if (select( "Give up the fight.", "Do not give up the fight." ) == 2) {
 				if (BaseJob != Job_Priest) {
-					mes "[USU commander Elena]";
+					mes "[USU指挥官埃琳娜]";
 					mes "Great, I will be waiting.";
 					mes "I enjoy fighting you.";
 					close3;
 				}
-				mes "[USU commander Elena]";
+				mes "[USU指挥官埃琳娜]";
 				mes "As I told you, you don't have to do this... You're so persistent.";
 				mes "Well, I remember I told you that I like it.";
 				close3;
 			}
-			mes "[USU commander Elena]";
+			mes "[USU指挥官埃琳娜]";
 			if (BaseJob != Job_Priest)
 				mes "...You made me expect it. And what are you doing now?";
 			else
@@ -4393,7 +4393,7 @@ rebel_in,70,78,3	script	Elena Volkova#16.2rm	4_F_ELENA,{
 		case 1:
 		case 2:
 			if (isbegin_quest(16061) != 2) {
-				mes "[USU commander Elena]";
+				mes "[USU指挥官埃琳娜]";
 				if (BaseJob == Job_Priest)
 					mes "Don't you think you've had enough of it by now? If you want to quit, tell me any time.";
 				else {
@@ -4402,7 +4402,7 @@ rebel_in,70,78,3	script	Elena Volkova#16.2rm	4_F_ELENA,{
 				}
 				next;
 				if (select( "Enter the waiting room.", "Do not enter the waiting room." ) == 1) {
-					mes "[USU commander Elena]";
+					mes "[USU指挥官埃琳娜]";
 					if (BaseJob == Job_Priest)
 						mes "Ho, you have the guts.";
 					else
@@ -4414,7 +4414,7 @@ rebel_in,70,78,3	script	Elena Volkova#16.2rm	4_F_ELENA,{
 					warp "rebel_in",184,28;
 					end;
 				}
-				mes "[USU commander Elena]";
+				mes "[USU指挥官埃琳娜]";
 				if (BaseJob == Job_Priest) {
 					mes "You're not in a top condition? Go inside and take some rest.";
 					mes "Shall we stop?";
@@ -4424,11 +4424,11 @@ rebel_in,70,78,3	script	Elena Volkova#16.2rm	4_F_ELENA,{
 					mes "Take care of yourself.";
 				}
 				next;
-				mes "[USU commander Elena]";
+				mes "[USU指挥官埃琳娜]";
 				mes "Don't make me feel sorry for you.";
 				next;
 				if (select( "Give up the fight.", "Do not give up the fight." ) == 2) {
-					mes "[USU commander Elena]";
+					mes "[USU指挥官埃琳娜]";
 					if (BaseJob == Job_Priest)
 						mes "Hey, you don't have to do this...";
 					else {
@@ -4437,7 +4437,7 @@ rebel_in,70,78,3	script	Elena Volkova#16.2rm	4_F_ELENA,{
 					}
 					close3;
 				}
-				mes "[USU commander Elena]";
+				mes "[USU指挥官埃琳娜]";
 				if (BaseJob == Job_Priest)
 					mes "Right. Let's stop the fight.";
 				else
@@ -4449,26 +4449,26 @@ rebel_in,70,78,3	script	Elena Volkova#16.2rm	4_F_ELENA,{
 			}
 			if (BaseJob == Job_Priest) {
 				cutin "162elena_01.bmp",2;
-				mes "[USU commander Elena]";
+				mes "[USU指挥官埃琳娜]";
 				mes "I told you that I'd ^0000CDgo easy on you^000000. Although won the fight, you didn't actually win it. Got it?";
 				next;
 				emotion ET_DELIGHT;
-				mes "[USU commander Elena]";
+				mes "[USU指挥官埃琳娜]";
 				mes "...Being mean is not my character. This is why I don't want to be entangled with clerics...";
 				mes "Hey, pronounce the benediction for me before leaving.";
 			}
 			else {
 				cutin "162elena_02.bmp",2;
 				emotion ET_DELIGHT;
-				mes "[USU commander Elena]";
+				mes "[USU指挥官埃琳娜]";
 				mes "Hahaha, great fight!";
 				mes "What a pity. I wanted to win today...";
 				next;
-				mes "[USU commander Elena]";
+				mes "[USU指挥官埃琳娜]";
 				mes "I'm glad that you are becoming stronger.";
 				mes "I can see the result of steady training.";
 				next;
-				mes "[USU commander Elena]";
+				mes "[USU指挥官埃琳娜]";
 				mes "Come back. I can fight you everyday.";
 			}
 			erasequest 16009;// Fighting is the language of warmonger// Fighting is the language of warmonger
@@ -4483,152 +4483,152 @@ rebel_in,70,78,3	script	Elena Volkova#16.2rm	4_F_ELENA,{
 	case 2:
 		if (terra_gloria_main < 17) {
 			cutin "162elena_02.bmp",2;
-			mes "[USU commander Elena]";
+			mes "[USU指挥官埃琳娜]";
 			mes "Not busy? That's good.";
 			mes "Enjoy it while you can.";
 			close3;
 		}
 		if (lebedev_quest_16_2 == 0) {
-			mes "[USU commander Elena]";
+			mes "[USU指挥官埃琳娜]";
 			mes "Not busy? That's good news.";
 			mes "Apart from fighting... I would like to ask you for a favor.";
 			next;
-			mes "[USU commander Elena]";
+			mes "[USU指挥官埃琳娜]";
 			mes "I'm not sure if I can say this to an outsider... But you are close to the 反叛者 now.";
 			mes "Will you keep the secret?";
 			next;
 			if (select( "Yes, I will.", "It will be difficult." ) == 2) {
-				mes "[USU commander Elena]";
+				mes "[USU指挥官埃琳娜]";
 				mes "... Then I can't tell you.";
 				mes "Forget what I've said.";
 				close3;
 			}
-			mes "[USU commander Elena]";
+			mes "[USU指挥官埃琳娜]";
 			mes "Yes. Make sure you keep the secret.";
 			next;
-			mes "[USU commander Elena]";
+			mes "[USU指挥官埃琳娜]";
 			mes "Good. First of all... do you know about USU that I am commanding?";
 			next;
 			if (select( "Superior... unit?", "Isn't it where you isolated problem children?" ) == 1) {
-				mes "[USU commander Elena]";
+				mes "[USU指挥官埃琳娜]";
 				mes "... No. It's not true.";
 				mes "It's actually the opposite.";
 			}
 			else {
-				mes "[USU commander Elena]";
+				mes "[USU指挥官埃琳娜]";
 				mes "... What?";
 				next;
 				cutin "162elena_02.bmp",2;
-				mes "[USU commander Elena]";
+				mes "[USU指挥官埃琳娜]";
 				mes "Haha... Kaka. Right. You know very well about it.";
 				mes "But don't say that in front of the troops. They might shoot you.";
 			}
 			next;
 			cutin "162elena_01.bmp",2;
-			mes "[USU commander Elena]";
+			mes "[USU指挥官埃琳娜]";
 			mes "USU stands for ^0000CDUnder Seal Unit^000000. It's a group of weirdos who did some crazy things.";
 			mes "Since they had done great job for the 反叛者, we isolate them with lead on their neck rather than death penalty or discharging.";
 			next;
-			mes "[USU commander Elena]";
+			mes "[USU指挥官埃琳娜]";
 			mes "As I told you, it's a unit outside our regulation. So I can't tell you about it in detail. But we do several things that 反叛者s don't do.";
 			mes "You can imagine all you want, including murder or violence. It will be worse than that.";
 			next;
-			mes "[USU commander Elena]";
+			mes "[USU指挥官埃琳娜]";
 			mes "But we still have a absolute rule. We don't mess up with other 反叛者s.";
 			mes "Although we let them do whatever they want outside, we teach them who's holding their lead.";
 			next;
-			mes "[USU commander Elena]";
+			mes "[USU指挥官埃琳娜]";
 			mes "And there are new members... ^0000CDJana Levedeva^000000 and ^0000CDIlya Lebedev^000000. They are twins and still young.";
 			mes "Although they are young, their ability is outstanding. The problem is that they are out of control.";
 			next;
-			mes "[USU commander Elena]";
+			mes "[USU指挥官埃琳娜]";
 			mes "They skip the training and hurt a squadder by causing an accident during training... Recently, they tried to run away from the unit and got caught. So the duty manager and I had a hard time.";
 			next;
-			mes "[USU commander Elena]";
+			mes "[USU指挥官埃琳娜]";
 			mes "According to the regulation, we have to discharge them.";
 			mes "... But they are still under age. According to the commander of their former unit, they don't have parents.";
 			next;
-			mes "[USU commander Elena]";
+			mes "[USU指挥官埃琳娜]";
 			mes "If we kick out these guys, they might become hooligans. At the worst, they will be involved in crime.";
 			mes "It sounds funny that I'm saying this as a commander of USU...";
 			next;
 			emotion ET_THINK;
-			mes "[USU commander Elena]";
+			mes "[USU指挥官埃琳娜]";
 			mes "At least I don't want to see kids disgracing themselves.";
 			mes "But by looking at what they are doing, they will live as animals with lead in USU at best.";
 			next;
-			mes "[USU commander Elena]";
+			mes "[USU指挥官埃琳娜]";
 			mes "... Maybe they are already regarding me as an enemy. So they won't listen to me.";
 			mes "I know how to make them listen to me. But it will only make the situation worse.";
 			next;
-			mes "[USU commander Elena]";
+			mes "[USU指挥官埃琳娜]";
 			mes "So I request you to check their problem and solve it, adventurer.";
 			mes "If they don't say anything, ask other fellows around them.";
 			next;
-			mes "[USU commander Elena]";
+			mes "[USU指挥官埃琳娜]";
 			mes "Would you help me?";
 			next;
 			if (select( "I will help.", "No." ) == 2) {
-				mes "[USU commander Elena]";
+				mes "[USU指挥官埃琳娜]";
 				mes "I don't want to demand you to do this.";
 				mes "It's a problem inside our unit. So we'd better handle ourselves.";
 				next;
-				mes "[USU commander Elena]";
+				mes "[USU指挥官埃琳娜]";
 				mes "Forget what I told you.";
 				close3;
 			}
-			mes "[USU commander Elena]";
+			mes "[USU指挥官埃琳娜]";
 			mes "Thanks.";
 			mes "^0000CDYana and Ilya twins^000000 are in the lobby.";
 			mes "They have bright silver hairs and they're always together. You'll find them easily.";
 			next;
-			mes "[USU commander Elena]";
+			mes "[USU指挥官埃琳娜]";
 			mes "In case you don't get any outcome after talking to them, talk to other fellows.";
 			mes "The mess personnel... and another fellow in the outside store seems to want to say something.";
-			npctalk "Elena Volkova: Are they it Mason and Milo in 克拉纳·内米耶里..?", "", bc_self;
+			npctalk "埃琳娜·沃尔科娃： Are they it Mason and Milo in 克拉纳·内米耶里..?", "", bc_self;
 			setquest 16012;// Troublesome twin
 			lebedev_quest_16_2 = 1;
 			questinfo_refresh();
 			close3;
 		}
 		if (lebedev_quest_16_2 == 1) {
-			mes "[USU commander Elena]";
+			mes "[USU指挥官埃琳娜]";
 			mes "So, you talked to them?";
 			mes "Hmm, not yet...";
 			next;
-			mes "[USU commander Elena]";
+			mes "[USU指挥官埃琳娜]";
 			mes "You are the only one I can trust now.";
 			mes "I'll count on you, adventurer.";
 			close3;
 		}
 		if (lebedev_quest_16_2 < 5) {
-			mes "[USU commander Elena]";
+			mes "[USU指挥官埃琳娜]";
 			mes "Did you talk to them?";
 			next;
-			mes "[USU commander Elena]";
+			mes "[USU指挥官埃琳娜]";
 			mes "If you cannot judge it easily, you can talk to ^0000CDother fellows around them^000000.";
-			npctalk "Elena Volkova: Seems like Milo and Mason have many things to say.", "", bc_self;
+			npctalk "埃琳娜·沃尔科娃： Seems like Milo and Mason have many things to say.", "", bc_self;
 			close3;
 		}
 		if (lebedev_quest_16_2 == 5) {
-			mes "[USU commander Elena]";
+			mes "[USU指挥官埃琳娜]";
 			mes "So, how is it going?";
 			next;
 			emotion ET_THINK;
-			mes "[USU commander Elena]";
+			mes "[USU指挥官埃琳娜]";
 			mes "Hmm... Not at all?";
 			mes "I though they might open their mind to a stranger. But I was wrong.";
 			next;
-			mes "[USU commander Elena]";
+			mes "[USU指挥官埃琳娜]";
 			mes "...There's someone you should talk to lastly.";
 			mes "I didn't want to do this.";
-			npctalk "Elena Volkova: I wanted to solve this problem myself if possible.", "", bc_self;
+			npctalk "埃琳娜·沃尔科娃： I wanted to solve this problem myself if possible.", "", bc_self;
 			next;
-			mes "[USU commander Elena]";
+			mes "[USU指挥官埃琳娜]";
 			mes "Go downstairs and find ^0000CDEricsson Adler, commander of a detached force^000000. He must be nearby the fireplace.";
 			mes "He's middle-aged man... and a former boss of the twins.";
 			next;
-			mes "[USU commander Elena]";
+			mes "[USU指挥官埃琳娜]";
 			mes "Since the guys have been assigned to my unit, I wanted to take care of them here. But they're not helping us.";
 			mes "If I ask Adler about the guys, it won't look so good. That's why I am requesting you. Please.";
 			erasequest 16015;// The cause of failure is a careless attempt
@@ -4638,16 +4638,16 @@ rebel_in,70,78,3	script	Elena Volkova#16.2rm	4_F_ELENA,{
 			close3;
 		}
 		if (lebedev_quest_16_2 == 6) {
-			mes "[USU commander Elena]";
+			mes "[USU指挥官埃琳娜]";
 			mes "^0000CDEricsson Adler, commander of a detached force^000000 must be nearby the fireplace.";
 			next;
-			mes "[USU commander Elena]";
+			mes "[USU指挥官埃琳娜]";
 			mes "He's a former boss of the twins.";
-			npctalk "Elena Volkova: I didn't want to do this.", "", bc_self;
+			npctalk "埃琳娜·沃尔科娃： I didn't want to do this.", "", bc_self;
 			close3;
 		}
 		if (lebedev_quest_16_2 == 7) {
-			mes "[USU commander Elena]";
+			mes "[USU指挥官埃琳娜]";
 			mes "How's it going on now?";
 			close3;
 		}
@@ -4656,24 +4656,24 @@ rebel_in,70,78,3	script	Elena Volkova#16.2rm	4_F_ELENA,{
 			mes "You told Elena Volkova what Lebedev twins told you.";
 			next;
 			cutin "162elena_01.bmp",2;
-			mes "[USU commander Elena]";
+			mes "[USU指挥官埃琳娜]";
 			mes "So... That was the reason.";
 			mes "I had already heard about that accident.";
 			next;
-			mes "[USU commander Elena]";
+			mes "[USU指挥官埃琳娜]";
 			mes "But I had no idea they were feeling such a burden.";
 			mes "Since they were out of control... there was no way for me to recognize it.";
 			next;
 			emotion ET_THINK;
-			mes "[USU commander Elena]";
+			mes "[USU指挥官埃琳娜]";
 			mes "Well, they're still kids after all. Since they have great ability, Me and other squadders treated them as adults.";
 			mes "We should not have done it...";
 			next;
-			mes "[USU commander Elena]";
+			mes "[USU指挥官埃琳娜]";
 			mes "And I should have talked to Adler beforehand.";
 			mes "Thanks, " + strcharinfo(0) + ". You helped me so much.";
 			next;
-			mes "[USU commander Elena]";
+			mes "[USU指挥官埃琳娜]";
 			mes "I guess I have to tell them something anyway.";
 			mes "Will you help me once again? Tell them that I'm looking for them. And you come with them please.";
 			erasequest 16017;// Twin's sincere confession
@@ -4683,13 +4683,13 @@ rebel_in,70,78,3	script	Elena Volkova#16.2rm	4_F_ELENA,{
 			close3;
 		}
 		if (lebedev_quest_16_2 == 9) {
-			mes "[USU commander Elena]";
+			mes "[USU指挥官埃琳娜]";
 			mes "The twins will be nearby the place where they've always been.";
 			mes "Tell them about me and come back with them.";
 			close3;
 		}
 		if (lebedev_quest_16_2 == 10) {
-			mes "[USU commander Elena]";
+			mes "[USU指挥官埃琳娜]";
 			mes "So you're all here? I've heard the whole story.";
 			next;
 			cloakoffnpcself( "Ilya Lebedev#16.2rms" );
@@ -4702,16 +4702,16 @@ rebel_in,70,78,3	script	Elena Volkova#16.2rm	4_F_ELENA,{
 			mes "......Yes...";
 			next;
 			cutin "162elena_01.bmp",2;
-			mes "[USU commander Elena]";
+			mes "[USU指挥官埃琳娜]";
 			mes "Jana Levedeva and Ilya Lebedev! Attention!";
 			npctalk "Jana Levedeva: Yes!", "Jana Levedeva#16.2rms", bc_self;
 			npctalk "Ilya Lebedev: Yes! Yep!", "Ilya Lebedev#16.2rms", bc_self;
 			next;
-			emotion ET_ANGER, getnpcid(0, "Elena Volkova#16.2rm");
-			mes "[USU commander Elena]";
+			emotion ET_ANGER, getnpcid(0, "埃琳娜·沃尔科娃#16.2rm");
+			mes "[USU指挥官埃琳娜]";
 			mes "Are you insane? You ran away from the unit for a private reason. And you hurt your companion!";
 			next;
-			mes "[USU commander Elena]";
+			mes "[USU指挥官埃琳娜]";
 			mes "This may look like a mercenary group like a piece of garbage. But we deal with people's life. We have disciplines that you must abide by.";
 			next;
 			cutin "",255;
@@ -4722,26 +4722,26 @@ rebel_in,70,78,3	script	Elena Volkova#16.2rm	4_F_ELENA,{
 			mes "......We're sorry...";
 			next;
 			cutin "162elena_01.bmp",2;
-			mes "[USU commander Elena]";
+			mes "[USU指挥官埃琳娜]";
 			mes "But before I scold you about it...";
 			mes "抱歉。";
 			npctalk "Jana Levedeva: Pardon...?", "Jana Levedeva#16.2rms", bc_self;
 			npctalk "Ilya Lebedev: Sorry...?", "Ilya Lebedev#16.2rms", bc_self;
 			next;
-			mes "[USU commander Elena]";
+			mes "[USU指挥官埃琳娜]";
 			mes "I didn't know that you had been forced so much and could not consider it. And I wasn't there for counseling even though I was your boss.";
 			next;
-			mes "[USU commander Elena]";
+			mes "[USU指挥官埃琳娜]";
 			mes "This is totally my fault and my mistake.";
 			mes "I apologize. You had a rough time of it.";
-			npctalk "Elena Volkova: I sincerely apologize.", "", bc_self;
+			npctalk "埃琳娜·沃尔科娃： I sincerely apologize.", "", bc_self;
 			next;
 			cutin "",255;
 			mes "[Lebedev twins]";
 			mes "......No, no... We have to apologize.";
 			next;
 			cutin "162elena_01.bmp",2;
-			mes "[USU commander Elena]";
+			mes "[USU指挥官埃琳娜]";
 			mes "From now on, I will pay more attention to you.";
 			mes "Would you please try to make sure this never happens again?";
 			next;
@@ -4753,15 +4753,15 @@ rebel_in,70,78,3	script	Elena Volkova#16.2rm	4_F_ELENA,{
 			mes "It will never happen again...";
 			next;
 			cutin "162elena_01.bmp",2;
-			mes "[USU commander Elena]";
+			mes "[USU指挥官埃琳娜]";
 			mes "Since this is a military group, you have regulations to abide by.";
 			mes "But since you are minors, I would like to give you an opportunity to grow as much as possible.";
 			next;
-			mes "[USU commander Elena]";
+			mes "[USU指挥官埃琳娜]";
 			mes "Jana Levedeva and Ilya Lebedev. I will exclude you from the real fight for some time.";
 			mes "Instead, feel free to do the works that you can do inside the unit.";
 			next;
-			mes "[USU commander Elena]";
+			mes "[USU指挥官埃琳娜]";
 			mes "You can make new friends, start a hobby or enhance your shooting ability. You can even do things that I cannot expect.";
 			mes "Do what you want to do. Make sure you abide by the regulations.";
 			next;
@@ -4770,7 +4770,7 @@ rebel_in,70,78,3	script	Elena Volkova#16.2rm	4_F_ELENA,{
 			mes "So we're... not being kicked out?";
 			next;
 			cutin "162elena_01.bmp",2;
-			mes "[USU commander Elena]";
+			mes "[USU指挥官埃琳娜]";
 			mes "Don't make me say it twice. I told you I was responsible for what happened.";
 			next;
 			cutin "",255;
@@ -4784,7 +4784,7 @@ rebel_in,70,78,3	script	Elena Volkova#16.2rm	4_F_ELENA,{
 			npctalk "Jana Levedeva: I am sorry...", "Jana Levedeva#16.2rms", bc_self;
 			next;
 			cutin "162elena_02.bmp",2;
-			mes "[USU commander Elena]";
+			mes "[USU指挥官埃琳娜]";
 			mes "That's all about it. You can go back now. There's something I'd like to discuss with the adventurer.";
 			mes "And if you need anything, talk to me any time.";
 			next;
@@ -4795,18 +4795,18 @@ rebel_in,70,78,3	script	Elena Volkova#16.2rm	4_F_ELENA,{
 			cloakonnpcself( "Ilya Lebedev#16.2rms" );
 			cloakonnpcself( "Jana Levedeva#16.2rms" );
 			cutin "162elena_01.bmp",2;
-			mes "[USU commander Elena]";
+			mes "[USU指挥官埃琳娜]";
 			mes "呼……";
 			mes "Great job, " + strcharinfo(0) + ".";
 			mes "Thanks to your support and concern, we managed to do this.";
 			next;
-			mes "[USU commander Elena]";
+			mes "[USU指挥官埃琳娜]";
 			mes "Ha... I told them to do what they want. And they will wonder what to do for a while.";
 			mes "For those guys to do what they want, they'll need your help again.";
 			mes "Please help them at that time.";
 			next;
 			cutin "162elena_02.bmp",2;
-			mes "[USU commander Elena]";
+			mes "[USU指挥官埃琳娜]";
 			mes "......Thanks.";
 			mes "I will count on you in the future.";
 			completequest 16019;// Elena Volkova's Solution
@@ -4816,12 +4816,12 @@ rebel_in,70,78,3	script	Elena Volkova#16.2rm	4_F_ELENA,{
 			questinfo_refresh();
 			close3;
 		}
-		mes "[USU commander Elena]";
+		mes "[USU指挥官埃琳娜]";
 		mes "Are you taking care of them well?";
 		mes "Wow, I am relieved that they have a babysitter now.";
 		next;
 		cutin "162elena_02.bmp",2;
-		mes "[USU commander Elena]";
+		mes "[USU指挥官埃琳娜]";
 		mes "Haha! Just kidding. Thank you for your support. You're so reliable.";
 		mes "Take care of the guys please.";
 		close3;
@@ -14637,7 +14637,7 @@ que_job01,89,91,1	script	Guile Marovitz#ep162	1_M_JOBTESTER,{
 		next;
 		mes "[Guile Marovitz]";
 		mes "I will take him ... well.";
-		mes "Thank you.";
+		mes "谢谢。";
 		delitem 25182,1;// Assassin_PT_Dagger
 		setquest 7750;// Assassin Dagger with Glyph
 		erasequest 7750;// Assassin Dagger with Glyph
