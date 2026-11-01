@@ -1945,59 +1945,59 @@ einbech,76,131,3	script	雷兹#16nego02	4_M_LAZY,{
 	if (terra_gloria_main == 12) {
 		cutin "16lei_03.bmp",2;
 		mes "[雷兹]";
-		mes "Wait. Stop right there. Somebody is lying down here. Don't step on it. Hey, watch out!";
+		mes "等等，站住。这里躺着个人，别踩到。喂，小心！";
 		next;
 		emotion ET_HUK, playerattached();
 		mes "[" + strcharinfo(0) + "]";
-		mes "Is this a human?";
-		unittalk getcharid(3), "" + strcharinfo(0) + " : How come?", bc_self;
+		mes "这是人吗？";
+		unittalk getcharid(3), "" + strcharinfo(0) + "：怎么会这样？", bc_self;
 		next;
 		cutin "",255;
 		mes "[雷兹]";
-		mes "If I get rid of this and that...!";
-		npctalk "Come and help me!", "", bc_self;
+		mes "把这里和那里清掉……！";
+		npctalk "过来帮我！", "", bc_self;
 		next;
 		cloakonnpcself( "巨大的土堆#16nego01" );
 		cloakoffnpcself( "倒下的人#16nego" );
 		cutin "16lei_01.bmp",2;
 		mes "[雷兹]";
-		mes "Wow... I think today is a lucky day. This mission is going to be easier than we thought.";
+		mes "哇……今天真是幸运日。任务会比想象中容易。";
 		next;
 		emotion ET_QUESTION, playerattached();
 		mes "[" + strcharinfo(0) + "]";
-		mes "What are you talking about?";
+		mes "你在说什么？";
 		next;
 		cutin "16lei_02.bmp",2;
 		mes "[雷兹]";
-		mes "What's written on the bottom? Dying message? Are they words? How come he never practiced writing even if he was a Gunslinger?";
-		unittalk getcharid(3), "" + strcharinfo(0) + " : Hello? Would you please listen to me?", bc_self;
+		mes "底下写了什么？遗言吗？那是字吗？一个枪手怎么连字都没练好？";
+		unittalk getcharid(3), "" + strcharinfo(0) + "：喂？能听我说吗？", bc_self;
 		next;
 		cutin "16lei_01.bmp",2;
 		mes "[雷兹]";
-		mes "Adventurer, try to heal this man. Although he has an injury, it's not so serious. Since he's collapsed due to an exhaustion, he'll probably recover himself by a simple treatment. Once he wakes up, I will take all the information from him.";
-		unittalk getcharid(3), "" + strcharinfo(0) + " : All of a sudden?", bc_self;
+		mes "冒险者，试着救这个人。他虽然有伤，但不严重。因为疲劳过度昏倒，简单处理一下应该能恢复。等他醒来，我要从他嘴里问出所有情报。";
+		unittalk getcharid(3), "" + strcharinfo(0) + "：突然就？", bc_self;
 		sleep2 800;
-		npctalk "Every single moment is unexpected. Do it now.", "", bc_self;
+		npctalk "每一刻都充满意外。现在动手。", "", bc_self;
 		next;
 		mes "[" + strcharinfo(0) + "]";
-		mes "I don't know how to heal.";
+		mes "我不会治疗。";
 		next;
 		cutin "16lei_03.bmp",2;
 		mes "[雷兹]";
-		mes "Aren't you an adventurer?";
+		mes "你不是冒险者吗？";
 		next;
 		mes "[" + strcharinfo(0) + "]";
-		mes "Adventurer is not almighty.";
-		npctalk "My god. You're the least powerful adventurer I've ever met.", "", bc_self;
-		unittalk getcharid(3), "" + strcharinfo(0) + " : Would you think about it only inside out?", bc_self;
+		mes "冒险者不是万能的。";
+		npctalk "天啊，你是我见过最弱的冒险者。", "", bc_self;
+		unittalk getcharid(3), "" + strcharinfo(0) + "：你就不能正着想想吗？", bc_self;
 		next;
 		cutin "16lei_01.bmp",2;
 		mes "[雷兹]";
-		mes "Well, I have no other choice.";
+		mes "好吧，没办法了。";
 		next;
 		cutin "16lei_03.bmp",2;
 		mes "[雷兹]";
-		mes "Odin, Freyja, Thor and a god of exhausted traveler. Please show us a mercy!";
+		mes "奥丁、芙蕾雅、托尔，还有疲惫旅人的神明，请发发慈悲！";
 		next;
 		emotion ET_CRY;
 		specialeffect EF_DEVOTION, AREA, "雷兹#16nego02";
@@ -2008,48 +2008,48 @@ einbech,76,131,3	script	雷兹#16nego02	4_M_LAZY,{
 		sleep2 1000;
 		specialeffect EF_HO_UP, AREA, "倒下的人#16nego";
 		mes "[" + strcharinfo(0) + "]";
-		mes "Wow... You're a secret agent and you also know how to heal?";
-		unittalk getcharid(3), "" + strcharinfo(0) + " : Now you look different.", bc_self;
+		mes "哇……你是特工，还会治疗？";
+		unittalk getcharid(3), "" + strcharinfo(0) + "：现在你看起来不一样了。", bc_self;
 		next;
 		cutin "16lei_01.bmp",2;
 		mes "[雷兹]";
-		mes "Oh, after experiencing so many things, you should do it all.";
+		mes "哦，经历这么多事，什么都得会一点。";
 		next;
 		cutin "16lei_02.bmp",2;
 		mes "[雷兹]";
-		mes "I'am so good at various arts and craft. I am such a great person.";
-		npctalk "I'm so lovely~", "", bc_self;
+		mes "我擅长各种技艺，真是个了不起的人。";
+		npctalk "我真可爱~", "", bc_self;
 		emotion ET_CHUP;
 		specialeffect EF_HEARTCASTING, AREA, "雷兹#16nego02";
 		next;
 		cutin "16lei_01.bmp",2;
 		mes "[雷兹]";
-		mes "He won't wake up immediately, but he'll save his life anyway. If we were too late, he would have died.";
+		mes "他不会马上醒，但命保住了。我们再晚一点，他就死了。";
 		next;
 		cutin "16lei_03.bmp",2;
 		mes "[雷兹]";
-		mes "What are you doing? Carry him.";
-		unittalk getcharid(3), "" + strcharinfo(0) + " : Should I do that?", bc_self;
+		mes "你还在做什么？背他起来。";
+		unittalk getcharid(3), "" + strcharinfo(0) + "：我来背？", bc_self;
 		sleep2 500;
-		npctalk "Then should I? Since you're an adventurer who carries 30,000 various items in your bag, you should carry him.", "", bc_self;
+		npctalk "难道我来？你是背包里装着三万种道具的冒险者，当然你背。", "", bc_self;
 		sleep2 500;
-		unittalk getcharid(3), "" + strcharinfo(0) + " : Where did you hear that false rumor...", bc_self;
+		unittalk getcharid(3), "" + strcharinfo(0) + "：你从哪听来的假消息……", bc_self;
 		next;
 		mes "[" + strcharinfo(0) + "]";
-		mes "Are we carrying him? I thought we were on a secret mission.";
+		mes "要背着他？我们不是在执行秘密任务吗？";
 		next;
 		cutin "16lei_01.bmp",2;
 		mes "[雷兹]";
-		mes "We ^0000cdmust bring^000000 him. No matter what happens, we must bring this man. He will be our ticket to the base.";
-		unittalk getcharid(3), "" + strcharinfo(0) + " : Ticket?", bc_self;
+		mes "我们^0000cd必须带走^000000他。不管发生什么，都要带上这个人。他是我们进入基地的门票。";
+		unittalk getcharid(3), "" + strcharinfo(0) + "：门票？", bc_self;
 		next;
 		mes "[" + strcharinfo(0) + "]";
-		mes "Who's this man?";
+		mes "这个人是谁？";
 		next;
 		cutin "16lei_03.bmp",2;
 		mes "[雷兹]";
-		mes "Good question. But since we don't have enough time, let me explain later. We must deliver him before he dies.";
-		unittalk getcharid(3), "" + strcharinfo(0) + " : So you just kept him barely alive?", bc_self;
+		mes "问得好。但时间不够，以后再解释。必须在他死前送过去。";
+		unittalk getcharid(3), "" + strcharinfo(0) + "：所以你就让他勉强活着？", bc_self;
 		erasequest 14596;// Follow the trails
 		setquest 14597;// Corner of 艾因贝克
 		terra_gloria_main = 13;
@@ -2088,7 +2088,7 @@ OnTouch:
 	end;
 }
 
-einbech,218,82,5	script	Gonie#16nego02	4_M_FALLENGONY,{
+einbech,218,82,5	script	戈尼#16nego02	4_M_FALLENGONY,{
 	cutin "16go_01.bmp",2;
 	mes "[??]";
 	mes "......";
@@ -2102,16 +2102,16 @@ einbech,217,82,3	script	雷兹#16nego03	4_M_LAZY,{
 	if (terra_gloria_main == 13) {
 		cutin "16lei_01.bmp",2;
 		mes "[雷兹]";
-		mes "Are you here now?";
-		npctalk "You are slower than I expected.", "", bc_self;
-		unittalk getcharid(3), "" + strcharinfo(0) + " : Hey! I have been carrying an unconscious person!", bc_self;
+		mes "你到了？";
+		npctalk "比我预想的慢。", "", bc_self;
+		unittalk getcharid(3), "" + strcharinfo(0) + "：喂！我一直背着个昏迷的人！", bc_self;
 		next;
 		mes "[雷兹]";
-		mes "Put down what you have carried.";
+		mes "把背的东西放下。";
 		next;
 		mes "[" + strcharinfo(0) + "]";
 		mes "Arrgh...";
-		cloakoffnpcself( "Gonie#16nego02" );
+		cloakoffnpcself( "戈尼#16nego02" );
 		unittalk getcharid(3), "" + strcharinfo(0) + " : Oh, I feel alive now.", bc_self;
 		npctalk "You are exaggerating your pain.", "", bc_self;
 		next;
@@ -2227,13 +2227,13 @@ OnTouch:
 	end;
 }
 
-rebel_in,23,43,5	script	Gonie#16nego03	4_M_FALLENGONY,{
+rebel_in,23,43,5	script	戈尼#16nego03	4_M_FALLENGONY,{
 	cutin "16go_01.bmp",2;
 	mes "[??]";
 	mes "......";
 	close2;
 	cutin "",255;
-	cloakonnpcself( "Gonie#16nego03" );
+	cloakonnpcself( "戈尼#16nego03" );
 	end;
 OnInit:
 	cloakonnpc();
@@ -2409,7 +2409,7 @@ rebel_in,21,45,5	script	雷兹#16nego04	4_M_LAZY,{
 		unittalk getcharid(3), "" + strcharinfo(0) + " : Who?", bc_self;
 		next;
 		mes "[Shopkeeper]";
-		mes "What are you talking about?";
+		mes "你在说什么？";
 		emotion ET_QUESTION, getnpcid(0, "Nemi#16nego01");
 		next;
 		mes "[雷兹]";
@@ -2437,7 +2437,7 @@ rebel_in,21,45,5	script	雷兹#16nego04	4_M_LAZY,{
 		unittalk getcharid(3), "" + strcharinfo(0) + " : What! What is it? Why did you stop talking?", bc_self;
 		next;
 		cloakoffnpcself( "Nemi#16nego01" );
-		cloakoffnpcself( "Gonie#16nego03" );
+		cloakoffnpcself( "戈尼#16nego03" );
 		mes "[Shopkeeper]";
 		mes "Arrgh...";
 		next;
@@ -2517,8 +2517,8 @@ rebel_in,21,45,5	script	雷兹#16nego04	4_M_LAZY,{
 		next;
 		cutin "",255;
 		mes "Bump!";
-		specialeffect EF_QUAKEBODY2, AREA, "Gonie#16nego03";
-		specialeffect EF_GRAVITATION, AREA, "Gonie#16nego03";
+		specialeffect EF_QUAKEBODY2, AREA, "戈尼#16nego03";
+		specialeffect EF_GRAVITATION, AREA, "戈尼#16nego03";
 		next;
 		emotion ET_PROFUSELY_SWAT;
 		emotion ET_PROFUSELY_SWAT, playerattached();
@@ -2546,8 +2546,8 @@ rebel_in,21,45,5	script	雷兹#16nego04	4_M_LAZY,{
 		next;
 		cutin "",255;
 		mes "Bump!";
-		specialeffect EF_QUAKEBODY2, AREA, "Gonie#16nego03";
-		specialeffect EF_GRAVITATION, AREA, "Gonie#16nego03";
+		specialeffect EF_QUAKEBODY2, AREA, "戈尼#16nego03";
+		specialeffect EF_GRAVITATION, AREA, "戈尼#16nego03";
 		next;
 		emotion ET_PROFUSELY_SWAT;
 		emotion ET_PROFUSELY_SWAT, playerattached();
@@ -2570,8 +2570,8 @@ rebel_in,21,45,5	script	雷兹#16nego04	4_M_LAZY,{
 		next;
 		cutin "",255;
 		mes "Bump!";
-		specialeffect EF_QUAKEBODY2, AREA, "Gonie#16nego03";
-		specialeffect EF_GRAVITATION, AREA, "Gonie#16nego03";
+		specialeffect EF_QUAKEBODY2, AREA, "戈尼#16nego03";
+		specialeffect EF_GRAVITATION, AREA, "戈尼#16nego03";
 		next;
 		emotion ET_PROFUSELY_SWAT;
 		emotion ET_PROFUSELY_SWAT, playerattached();
@@ -2599,10 +2599,10 @@ rebel_in,21,45,5	script	雷兹#16nego04	4_M_LAZY,{
 		next;
 		cutin "",255;
 		mes "Bump!";
-		specialeffect EF_QUAKEBODY2, AREA, "Gonie#16nego03";
-		specialeffect EF_GRAVITATION, AREA, "Gonie#16nego03";
+		specialeffect EF_QUAKEBODY2, AREA, "戈尼#16nego03";
+		specialeffect EF_GRAVITATION, AREA, "戈尼#16nego03";
 		next;
-		specialeffect EF_DEATHSUMMON, AREA, "Gonie#16nego03";
+		specialeffect EF_DEATHSUMMON, AREA, "戈尼#16nego03";
 		emotion ET_PROFUSELY_SWAT;
 		emotion ET_PROFUSELY_SWAT, playerattached();
 		emotion ET_HUK, getnpcid(0, "Nemi#16nego01");
@@ -2653,7 +2653,7 @@ rebel_in,21,45,5	script	雷兹#16nego04	4_M_LAZY,{
 		mes "Wait! They're sending us away like this? Seems like they are. Did I get it wrong?";
 		cloakonnpcself( "Nemi#16nego01" );
 		cloakonnpcself( "Lucky#16nego01" );
-		cloakonnpcself( "Gonie#16nego03" );
+		cloakonnpcself( "戈尼#16nego03" );
 		next;
 		mes "[雷兹]";
 		mes "Oops? They went inside! Come on!";
@@ -6539,7 +6539,7 @@ rebel_in,86,61,5	script	雷兹#16nego05	4_M_LAZY,{
 		sleep2 500;
 		npctalk "Get them out.", "Senior#16nego03", bc_self;
 		next;
-		cloakoffnpcself( "Gonie#16nego04" );
+		cloakoffnpcself( "戈尼#16nego04" );
 		cutin "16go_03.bmp",2;
 		mes "[Gonie]";
 		mes "......";
@@ -6668,7 +6668,7 @@ rebel_in,86,61,5	script	雷兹#16nego05	4_M_LAZY,{
 		mes "Yes. Let me handle this place. You go inside and get ready.";
 		next;
 		cutin "16lei_01.bmp",0;
-		cloakonnpcself( "Gonie#16nego04" );
+		cloakonnpcself( "戈尼#16nego04" );
 		mes "[雷兹]";
 		mes "I've never imagined that this would be done so perfectly. I owe you for this. Thanks.";
 		npctalk "The happiness is always with me.", "", bc_self;
@@ -6762,7 +6762,7 @@ rebel_in,86,61,5	script	雷兹#16nego05	4_M_LAZY,{
 		unittalk getcharid(3), "" + strcharinfo(0) + " : I think you are regarding him as an item.", bc_self;
 		next;
 		cutin "16go_03.bmp",2;
-		cloakoffnpcself( "Gonie#16nego04" );
+		cloakoffnpcself( "戈尼#16nego04" );
 		mes "[Gonie]";
 		mes "......";
 		next;
@@ -6782,7 +6782,7 @@ rebel_in,86,61,5	script	雷兹#16nego05	4_M_LAZY,{
 		mes "[Rookie]";
 		mes "He says we have prepared someone to proceed the cooperation. If you go to the passage to the store, you can meet that person.";
 		npctalk "Thanks.", "Rookie#16nego02", bc_self;
-		cloakonnpcself( "Gonie#16nego04" );
+		cloakonnpcself( "戈尼#16nego04" );
 		next;
 		mes "[" + strcharinfo(0) + "]";
 		mes "Yes. I will meet that person and listen.";
@@ -11977,7 +11977,7 @@ ein_fild09,332,216,5	duplicate(Suspicious Heap of Earth#1)	Suspicious Heap of Ea
 ein_fild09,135,305,5	duplicate(Suspicious Heap of Earth#1)	Suspicious Heap of Earth#14	4_SOIL
 
 rebel_in,90,60,3	duplicate(dummy_cloaked_npc)	Magenta#16nego01	4_M_GUNSLINGER2
-rebel_in,90,62,3	duplicate(dummy_cloaked_npc)	Gonie#16nego04	4_M_GONY
+rebel_in,90,62,3	duplicate(dummy_cloaked_npc)	戈尼#16nego04	4_M_GONY
 rebel_in,94,71,5	duplicate(dummy_cloaked_npc)	Denny#16nego01	4_M_REBELLION3
 rebel_in,95,65,3	duplicate(dummy_cloaked_npc)	Denny#16nego02	4_M_REBELLION3
 rebel_in,90,62,3	duplicate(dummy_cloaked_npc)	Denny#16nego03	4_M_REBELLION3
