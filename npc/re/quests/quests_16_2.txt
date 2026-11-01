@@ -14,16 +14,16 @@ OnTouch:
 	if (ep16_royal < 17)	// pre-req : access to room of consciousness (first time)
 		end;
 	if (terra_gloria_main == 0) {
-		cloakoffnpcself( "尼希尔·M·海涅#ep162_01" );
+		cloakoffnpcself( "尼希尔·M·海尔内#ep162_01" );
 		cloakoffnpcself( "斯琪亚·内里乌斯#ep162_02" );
 	}
 	else if (terra_gloria_main == 1 || terra_gloria_main == 2) {
-		cloakoffnpcself( "尼希尔·M·海涅#ep162_01" );
+		cloakoffnpcself( "尼希尔·M·海尔内#ep162_01" );
 		cloakoffnpcself( "斯琪亚·内里乌斯#ep162_02" );
 		cloakoffnpcself( "斯皮卡·内里乌斯#ep162_01" );
 	}
 	else if (terra_gloria_main == 6) {	// first back from Lighthalzen
-		cloakoffnpcself( "尼希尔·M·海涅#ep162_01" );
+		cloakoffnpcself( "尼希尔·M·海尔内#ep162_01" );
 		cloakoffnpcself( "斯皮卡·内里乌斯#ep162_01" );
 	}
 	else if (terra_gloria_main == 23)
@@ -33,9 +33,9 @@ OnTouch:
 
 prt_cas_q,18,37,5	duplicate(dummy_cloaked_npc)	斯琪亚·内里乌斯#ep162_02	4_EP16_SPICA
 prt_cas_q,23,33,2	duplicate(dummy_cloaked_npc)	克鲁斯#ep162_03	4_EP16_CRUX
-prt_cas_q,23,32,3	duplicate(dummy_cloaked_npc)	克罗内克·G·海涅#ep162	4_EP16_GRANZ
+prt_cas_q,23,32,3	duplicate(dummy_cloaked_npc)	克罗内克·G·海尔内#ep162	4_EP16_GRANZ
 
-prt_cas_q,21,39,3	script	尼希尔·M·海涅#ep162_01	4_EP16_NIHIL,{
+prt_cas_q,21,39,3	script	尼希尔·M·海尔内#ep162_01	4_EP16_NIHIL,{
 	if (ep16_royal < 17)	// pre-req : access to room of consciousness (first time)
 		end;
 	if (terra_gloria_main == 0) {
@@ -87,7 +87,7 @@ prt_cas_q,21,39,3	script	尼希尔·M·海涅#ep162_01	4_EP16_NIHIL,{
 		sleep2 1000;
 		unittalk getcharid(3), "" + strcharinfo(0) + "：……要等到什么时候？", bc_self;
 		sleep2 2000;
-		npctalk "她来了。", "尼希尔·M·海涅#ep162_01", bc_self;
+		npctalk "她来了。", "尼希尔·M·海尔内#ep162_01", bc_self;
 		npctalk "谢谢你能来。", "斯皮卡·内里乌斯#ep162_01", bc_self;
 		cloakoffnpcself( "斯皮卡·内里乌斯#ep162_01" );
 		terra_gloria_main = 1;
@@ -113,7 +113,7 @@ prt_cas_q,21,39,3	script	尼希尔·M·海涅#ep162_01	4_EP16_NIHIL,{
 		mes "虽然只是猜测，但我很确定。";
 		next;
 		mes "[尼希尔]";
-		mes "他明明有飞空艇，却不去施瓦茨瓦尔德地区。";
+		mes "他明明有飞空艇，却不去秀发兹地区。";
 		mes "……他知道自己会被追踪。";
 		cutin "ep16_nihi_miseria_heine04.bmp",2;
 		next;
@@ -150,7 +150,7 @@ prt_cas_q,21,39,3	script	尼希尔·M·海涅#ep162_01	4_EP16_NIHIL,{
 		mes "那么，我先失陪了。";
 		close2;
 		cutin "",255;
-		cloakonnpcself( "尼希尔·M·海涅#ep162_01" );
+		cloakonnpcself( "尼希尔·M·海尔内#ep162_01" );
 		cloakonnpcself( "斯皮卡·内里乌斯#ep162_01" );
 		cloakonnpcself( "斯琪亚·内里乌斯#ep162_02" );
 		end;
@@ -212,7 +212,7 @@ prt_cas_q,21,39,3	script	尼希尔·M·海涅#ep162_01	4_EP16_NIHIL,{
 		npctalk "这是报告。", "克鲁斯#ep162_03", bc_self;
 		next;
 		mes "[克鲁斯]";
-		mes "在引渡过程中，我不得不借助施瓦茨瓦尔德政府的一点帮助。";
+		mes "在引渡过程中，我不得不借助秀发兹政府的一点帮助。";
 		next;
 		mes "[克鲁斯]";
 		mes "因为我的身份，我不是自由的冒险者……斯琪亚小姐替我处理得很好……";
@@ -239,7 +239,7 @@ prt_cas_q,21,39,3	script	尼希尔·M·海涅#ep162_01	4_EP16_NIHIL,{
 		mes "我是说，从你报告里的细节来看。";
 		next;
 		mes "[尼希尔]";
-		mes "……考虑到施瓦茨瓦尔德的政治局势……";
+		mes "……考虑到秀发兹的政治局势……";
 		next;
 		select( "总统？", "我们能躲过企业的耳目吗？" );
 		mes "[尼希尔]";
@@ -333,7 +333,7 @@ prt_cas_q,21,39,3	script	尼希尔·M·海涅#ep162_01	4_EP16_NIHIL,{
 		npctalk "我也走了。", "", bc_self;
 		sleep2 2000;
 		setpcblock PCBLOCK_NPC, false;
-		cloakonnpcself( "尼希尔·M·海涅#ep162_01" );
+		cloakonnpcself( "尼希尔·M·海尔内#ep162_01" );
 		cloakonnpcself( "斯皮卡·内里乌斯#ep162_01" );
 		cutin "",255;
 		end;
@@ -361,7 +361,7 @@ prt_cas_q,23,36,3	script	斯皮卡·内里乌斯#ep162_01	4_EP16_SPICA,{
 		cutin "ep16_spica_nerius01.bmp",1;
 		mes "[斯皮卡]";
 		mes "她受人指使，向海尔内家的公子推荐一种酒。有人告诉她那是他最喜欢的酒。";
-		npctalk "……唉……", "尼希尔·M·海涅#ep162_01", bc_self;
+		npctalk "……唉……", "尼希尔·M·海尔内#ep162_01", bc_self;
 		next;
 		cutin "ep16_skia_shadow04.bmp",0;
 		mes "[斯琪亚]";
@@ -371,16 +371,16 @@ prt_cas_q,23,36,3	script	斯皮卡·内里乌斯#ep162_01	4_EP16_SPICA,{
 		cutin "ep16_spica_nerius06.bmp",1;
 		mes "[斯皮卡]";
 		mes "嗯，也不完全是。";
-		mes "我查到了给女仆递酒的那个侍从长的线索。他的故乡是施瓦茨瓦尔德。";
+		mes "我查到了给女仆递酒的那个侍从长的线索。他的故乡是秀发兹。";
 		next;
 		cutin "ep16_spica_nerius01.bmp",1;
 		mes "[斯皮卡]";
 		mes "克鲁斯已经出发去找那个人了。";
 		mes "他会随时把当前的位置告诉我。他现在已经过了朱诺。";
-		npctalk "离这里相当远。", "尼希尔·M·海涅#ep162_01", bc_self;
+		npctalk "离这里相当远。", "尼希尔·M·海尔内#ep162_01", bc_self;
 		next;
 		mes "[尼希尔]";
-		mes "如果那个人是施瓦茨瓦尔德人，这事就不容易了。";
+		mes "如果那个人是秀发兹人，这事就不容易了。";
 		mes "尤其是王室不能采取官方行动。";
 		mes "我们也不能正式公布这件事。";
 		cutin "ep16_nihi_miseria_heine01.bmp",2;
@@ -426,7 +426,7 @@ prt_cas_q,23,36,3	script	斯皮卡·内里乌斯#ep162_01	4_EP16_SPICA,{
 		mes "而且我觉得憋闷。";
 		mes "海尔内家那异常的执念……";
 		next;
-		npctalk "......", "尼希尔·M·海涅#ep162_01", bc_self;
+		npctalk "......", "尼希尔·M·海尔内#ep162_01", bc_self;
 		cutin "ep16_spica_nerius06.bmp",1;
 		mes "[斯皮卡]";
 		mes "好了，我就说到这里。";
@@ -460,7 +460,7 @@ prt_cas_q,23,36,3	script	斯皮卡·内里乌斯#ep162_01	4_EP16_SPICA,{
 		mes "那么，我先失陪了。";
 		close2;
 		cutin "",255;
-		cloakonnpcself( "尼希尔·M·海涅#ep162_01" );
+		cloakonnpcself( "尼希尔·M·海尔内#ep162_01" );
 		cloakonnpcself( "斯皮卡·内里乌斯#ep162_01" );
 		cloakonnpcself( "斯琪亚·内里乌斯#ep162_02" );
 		end;
@@ -567,7 +567,7 @@ prt_cas_q,18,37,5	script	斯琪亚·内里乌斯#ep162_01	4_EP16_SKIA,{
 		mes "[贝尔]";
 		mes "格兰茨殿下到了。";
 		next;
-		cloakoffnpcself( "克罗内克·G·海涅#ep162" );
+		cloakoffnpcself( "克罗内克·G·海尔内#ep162" );
 		mes "[克罗内克]";
 		mes "嗯，内里乌斯家尊贵的小姐们也在这里。";
 		mes "首先，" + strcharinfo(0) + "，我是来向你表示感谢的。";
@@ -630,9 +630,9 @@ prt_cas_q,18,37,5	script	斯琪亚·内里乌斯#ep162_01	4_EP16_SKIA,{
 		cutin "ep16_spica_nerius01.bmp",1;
 		mes "[斯皮卡]";
 		mes "回头见，我会联系你。";
-		npctalk "我会等着。", "克罗内克·G·海涅#ep162", bc_self;
+		npctalk "我会等着。", "克罗内克·G·海尔内#ep162", bc_self;
 		next;
-		cloakonnpcself( "克罗内克·G·海涅#ep162" );
+		cloakonnpcself( "克罗内克·G·海尔内#ep162" );
 		mes "[斯皮卡]";
 		mes "斯琪亚？";
 		mes "不如和我安静聊聊？";
@@ -670,7 +670,7 @@ prt_cas_q,18,37,5	script	斯琪亚·内里乌斯#ep162_01	4_EP16_SKIA,{
 	end;
 
 OnInit:
-	cloakonnpc "尼希尔·M·海涅#ep162_01";
+	cloakonnpc "尼希尔·M·海尔内#ep162_01";
 	cloakonnpc "斯皮卡·内里乌斯#ep162_01";
 	cloakonnpc "斯琪亚·内里乌斯#ep162_01";
 	end;
@@ -880,7 +880,7 @@ OnTouch:
 		sleep2 3000;
 		npctalk "……我再给你更多钱。如果你要的是钱的话。", "研究员#ep162_01", bc_self;
 		sleep2 3000;
-		npctalk "就是这样。从现在起，我无法在施瓦茨瓦尔德或卢恩-米德加尔特生活了。", "男子#ep162_01", bc_self;
+		npctalk "就是这样。从现在起，我无法在秀发兹或卢恩-米德加尔特生活了。", "男子#ep162_01", bc_self;
 		sleep2 3000;
 		npctalk "……所以我需要再拿一些钱。谢谢理解。", "男子#ep162_01", bc_self;
 		sleep2 3000;
@@ -1146,7 +1146,7 @@ lhz_in02,239,145,3	script	斯皮卡·内里乌斯#ep162_02	4_EP16_SPICA,{
 		select("谁说的？");
 		mes "[斯皮卡]";
 		mes "我来给你介绍这个人。";
-		mes "他是施瓦茨瓦尔德总统派来的。";
+		mes "他是秀发兹总统派来的。";
 		mes "从现在起，行动前先和他商量。";
 		next;
 		mes "[斯皮卡]";
@@ -1160,7 +1160,7 @@ lhz_in02,237,146,6	script	克鲁斯#ep162_05	4_EP16_CRUX,{
 	if (terra_gloria_main == 8) {
 		cutin "ep16_crux_findel01.bmp",2;
 		mes "[克鲁斯]";
-		mes "请和小姐一起去找施瓦茨瓦尔德政府的代表谈谈。";
+		mes "请和小姐一起去找秀发兹政府的代表谈谈。";
 		close3;
 	}
 	if (terra_gloria_main == 9) {
@@ -1199,7 +1199,7 @@ lhz_in02,239,148,4	script	菲洛彭特斯#ep162_01	4_M_PHILOFONTES,{
 			next;
 			cutin "ep16_tes01.bmp",2;
 			mes "[泰丝]";
-			mes "" + strcharinfo(0) + "，我不知道你对这件事了解多少。施瓦茨瓦尔德的政局并不好。";
+			mes "" + strcharinfo(0) + "，我不知道你对这件事了解多少。秀发兹的政局并不好。";
 			next;
 			mes "[泰丝]";
 			mes "如果你还记得秘密之翼的崩溃，或许会了解不少。";
@@ -1414,13 +1414,13 @@ einbroch,239,269,3	script	可疑人物#16nego01	4_M_LAZY,{
 	if (terra_gloria_main < 9) {
 		cutin "16lei_01.bmp",2;
 		mes "[尤诺狂热者]";
-		mes "尤诺~来尤诺吧~生而为人就来尤诺~来到施瓦茨瓦尔德就来尤诺~还在呼吸就来尤诺~";
+		mes "尤诺~来尤诺吧~生而为人就来尤诺~来到秀发兹就来尤诺~还在呼吸就来尤诺~";
 		close3;
 	}
 	if (terra_gloria_main == 9) {
 		cutin "16lei_01.bmp",2;
 		mes "[???]";
-		mes "尤诺~来尤诺吧~生而为人就来尤诺~来到施瓦茨瓦尔德就来尤诺~还在呼吸就来尤诺~";
+		mes "尤诺~来尤诺吧~生而为人就来尤诺~来到秀发兹就来尤诺~还在呼吸就来尤诺~";
 		emotion ET_BLABLA;
 		next;
 		mes "[" + strcharinfo(0) + "]";
@@ -1552,7 +1552,7 @@ einbroch,239,269,3	script	可疑人物#16nego01	4_M_LAZY,{
 		mes "既然要和反叛者谈判，为什么去艾因贝克而不是艾因布罗克？";
 		next;
 		mes "[雷兹]";
-		mes "你听说过施瓦茨瓦尔德的佣兵叛乱吗？";
+		mes "你听说过秀发兹的佣兵叛乱吗？";
 		next;
 		cutin "16lei_03.bmp",2;
 		mes "[雷兹]";
@@ -1792,7 +1792,7 @@ einbech,46,208,3	script	雷兹#16nego01	4_M_LAZY,{
 	if (terra_gloria_main < 9) {
 		cutin "16lei_01.bmp",2;
 		mes "[尤诺狂热者]";
-		mes "尤诺~来尤诺吧~生而为人就来尤诺~来到施瓦茨瓦尔德就来尤诺~还在呼吸就来尤诺~";
+		mes "尤诺~来尤诺吧~生而为人就来尤诺~来到秀发兹就来尤诺~还在呼吸就来尤诺~";
 		close3;
 	}
 	if (terra_gloria_main == 9) {

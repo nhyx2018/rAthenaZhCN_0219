@@ -339,7 +339,7 @@ prt_cas_q,26,30,3	script	贝尔侍从长#ep16_main	4_M_RUSMAN1,{
 		mes "有海尔内、内里乌斯和博尔特家族的住处。";
 		next;
 		mes "[贝尔]";
-		mes "穿过走廊到东侧，是维格纳、理查德、吉尔伯格和雷根布尔格家族的住处。";
+		mes "穿过走廊到东侧，是维格纳、理查德、吉尔伯格和雷根贝格家族的住处。";
 		next;
 		mes "[贝尔]";
 		mes "你需要和各家族成员问候，所以请务必都去拜访。";
@@ -354,7 +354,7 @@ prt_cas_q,26,30,3	script	贝尔侍从长#ep16_main	4_M_RUSMAN1,{
 			if (isbegin_quest(5402) < 2) .@string$ += ( .@string$ != "理查德" ? ", " : "" ) + "Richard";
 			if (ep16_wal < 2) .@string$ += ( .@string$ != "沃尔特" ? ", " : "" ) + "Walther";
 			if (ep16_wig < 2) .@string$ += ( .@string$ != "维格纳" ? ", " : "" ) + "Wigner";
-			if (ep16_lug < 2) .@string$ += ( .@string$ != "雷根布尔格" ? ", " : "" ) + "Roegenburg";
+			if (ep16_lug < 2) .@string$ += ( .@string$ != "雷根贝格" ? ", " : "" ) + "Roegenburg";
 			if (ep16_gaobs < 2) .@string$ += ( .@string$ != "格奥伯格" ? ", " : "" ) + "Geoborg";
 
 			if (.@string$ == "") {	// it shouldn't happen
@@ -1025,7 +1025,7 @@ function	script	F_banquet_main_4_spica	{
 	mes "哦，真的？尼希尔！这边！";
 	npctalk "尼希尔？", "斯皮卡·内里乌斯#ep16_02", bc_self;
 	next;
-	cloakoffnpcself( "尼希尔·M·海涅#ep16_02" );
+	cloakoffnpcself( "尼希尔·M·海尔内#ep16_02" );
 	cutin "ep16_nihi_miseria_heine01",2;
 	mes "[尼希尔]";
 	mes "斯琪亚，不用那么大声。";
@@ -1076,14 +1076,14 @@ function	script	F_banquet_main_4_spica	{
 	mes "哦，对了！这些是谁？";
 	mes "她们不就是那个由女人领导的名门内里乌斯家的姐妹吗？";
 	mes "少主，你难道要为了内里乌斯家族抛弃自己家？";
-	npctalk "维奥莱塔，注意礼数！", "尼希尔·M·海涅#ep16_02", bc_self;
+	npctalk "维奥莱塔，注意礼数！", "尼希尔·M·海尔内#ep16_02", bc_self;
 	next;
 	mes "[维奥莱塔]";
 	mes "我没说谎吧？";
 	mes "反正你在自己家也不受待见。不如在这里勾搭个小姐改变人生？";
 	mes "哈哈哈哈哈！";
 	npctalk "说得太过分了。", "斯皮卡·内里乌斯#ep16_02", bc_self;
-	npctalk "维奥莱塔！我叫你停下。", "尼希尔·M·海涅#ep16_02", bc_self;
+	npctalk "维奥莱塔！我叫你停下。", "尼希尔·M·海尔内#ep16_02", bc_self;
 	next;
 	mes "[维奥莱塔]";
 	mes "天啊！少主，我不知道你也会生气。";
@@ -1106,7 +1106,7 @@ function	script	F_banquet_main_4_spica	{
 	mes "我理解你对少主的心意，但你的行为只会给家族丢脸。";
 	unittalk getcharid(3), "" + .@char_name$ + "：海尔内……？", bc_self;
 	next;
-	npctalk "……唉……她是我家的旁支亲戚……", "尼希尔·M·海涅#ep16_02", bc_self;
+	npctalk "……唉……她是我家的旁支亲戚……", "尼希尔·M·海尔内#ep16_02", bc_self;
 	mes "[斯皮卡]";
 	mes "你想毁他名声就随你。";
 	mes "但别把我们内里乌斯家族卷进去。";
@@ -1154,14 +1154,14 @@ function	script	F_banquet_main_4_spica	{
 	cloakoffnpcself( "王室侍从#ep16_02" );
 	npctalk "淡香槟，要来一点吗？", "王室侍从#ep16_02", bc_self;
 	next;
-	npctalk "谢谢。", "尼希尔·M·海涅#ep16_02", bc_self;
+	npctalk "谢谢。", "尼希尔·M·海尔内#ep16_02", bc_self;
 	npctalk "我也能来一杯吗？", "斯琪亚·内里乌斯#ep16_02", bc_self;
 	sleep2 1000;
 	mes "[斯皮卡]";
 	mes "不过，我不知道你被自己家族的人这样对待。";
 	next;
 	cloakonnpcself( "王室侍从#ep16_02" );
-	npctalk "……", "尼希尔·M·海涅#ep16_02", bc_self;
+	npctalk "……", "尼希尔·M·海尔内#ep16_02", bc_self;
 	cutin "ep16_nihi_miseria_heine04",2;
 	mes "[尼希尔]";
 	mes "我大概打扰了宴会的兴致，该走了。";
@@ -1179,7 +1179,7 @@ function	script	F_banquet_main_4_spica	{
 	npctalk "真有趣！", "斯琪亚·内里乌斯#ep16_02", bc_self;
 	npctalk "……哪里有趣了……？", "克鲁斯·芬德尔#ep16_02", bc_self;
 	next;
-	cloakonnpcself( "尼希尔·M·海涅#ep16_02" );
+	cloakonnpcself( "尼希尔·M·海尔内#ep16_02" );
 	cutin "ep16_spica_nerius01",2;
 	mes "[斯皮卡]";
 	mes "……嗯……";
@@ -1262,7 +1262,7 @@ function	script	F_banquet_main_4_spica	{
 	close3;
 }
 
-prt_cas,107,237,2	script	尼希尔·M·海涅#ep16_02	4_EP16_NIHIL,{ end; }
+prt_cas,107,237,2	script	尼希尔·M·海尔内#ep16_02	4_EP16_NIHIL,{ end; }
 prt_cas,103,235,7	script	维奥莱塔#ep16_02	4_F_RUSWOMAN1,{ end; }
 prt_cas,108,235,2	script	王室侍从#ep16_02	1_F_PUBGIRL,{ end; }
 
@@ -1421,7 +1421,7 @@ prt_cas,108,240,3	script	克鲁斯·芬德尔#ep16_02	4_EP16_CRUX,{
 	}
 	end;
 OnInit:
-	cloakonnpc "尼希尔·M·海涅#ep16_02";
+	cloakonnpc "尼希尔·M·海尔内#ep16_02";
 	cloakonnpc "维奥莱塔#ep16_02";
 	cloakonnpc "王室侍从#ep16_02";
 	end;
@@ -1798,7 +1798,7 @@ prt_lib,91,85,3	script	魔法师尼勒姆#ep16_warp	4_M_JOB_WIZARD,{
 		mes "你在做什么？";
 		mes "去逼问图书管理员，把真相挖出来！";
 		next;
-		cloakoffnpcself( "克罗内克·G·海涅#ep16_01_lib01" );
+		cloakoffnpcself( "克罗内克·G·海尔内#ep16_01_lib01" );
 		mes "[尼勒姆]";
 		mes "我们费这么大劲是为了什么？";
 		mes "看，格兰茨大公在那里。";
@@ -1906,9 +1906,9 @@ OnTouch:
 	if (ep16_royal == 9) {
 		cloakoffnpcself( "伊恩·沃尔特#ep16_lib01" );
 		cloakoffnpcself( "勒维耶·维格纳#ep16_lib01" );
-		cloakoffnpcself( "马克西米利安·雷根布尔格#ep16_lib01" );
-		cloakoffnpcself( "克罗内克·G·海涅#ep16_01_lib01" );
-		cloakoffnpcself( "尼希尔·M·海涅#ep16_lib01" );
+		cloakoffnpcself( "马克西米利安·雷根贝格#ep16_lib01" );
+		cloakoffnpcself( "克罗内克·G·海尔内#ep16_01_lib01" );
+		cloakoffnpcself( "尼希尔·M·海尔内#ep16_lib01" );
 		setpcblock PCBLOCK_NPC, true;
 		sleep2 2000;
 		npctalk "您终于来了。", "伊恩·沃尔特#ep16_lib01", bc_self;
@@ -1917,18 +1917,18 @@ OnTouch:
 		npctalk "我有话要对您说，特别嘉宾。", "伊恩·沃尔特#ep16_lib01", bc_self;
 	}
 	if (ep16_royal == 22)
-		cloakoffnpcself( "克罗内克·G·海涅#ep16_01_lib01" );
+		cloakoffnpcself( "克罗内克·G·海尔内#ep16_01_lib01" );
 	end;
 OnInit:
 	cloakonnpc "伊恩·沃尔特#ep16_lib01";
 	cloakonnpc "勒维耶·维格纳#ep16_lib01";
-	cloakonnpc "马克西米利安·雷根布尔格#ep16_lib01";
-	cloakonnpc "克罗内克·G·海涅#ep16_01_lib01";
-	cloakonnpc "尼希尔·M·海涅#ep16_lib01";
+	cloakonnpc "马克西米利安·雷根贝格#ep16_lib01";
+	cloakonnpc "克罗内克·G·海尔内#ep16_01_lib01";
+	cloakonnpc "尼希尔·M·海尔内#ep16_lib01";
 	end;
 }
 
-prt_lib,80,79,3	script	克罗内克·G·海涅#ep16_01_lib01	4_EP16_GRANZ,{
+prt_lib,80,79,3	script	克罗内克·G·海尔内#ep16_01_lib01	4_EP16_GRANZ,{
 	if (ep16_royal == 22) {
 		cutin "ep16_kronecker_granz_heine",2;
 		mes "[克罗内克]";
@@ -2016,7 +2016,7 @@ prt_lib,80,79,3	script	克罗内克·G·海涅#ep16_01_lib01	4_EP16_GRANZ,{
 		mes "它是用从心脏上掉落的一小块加工而成……";
 		next;
 		mes "[克罗内克]";
-		mes "要和施瓦茨瓦尔德的企业谈判吗？";
+		mes "要和秀发兹的企业谈判吗？";
 		mes "等等。";
 		mes "……";
 		next;
@@ -2056,24 +2056,24 @@ prt_lib,80,79,3	script	克罗内克·G·海涅#ep16_01_lib01	4_EP16_GRANZ,{
 	}
 	if (ep16_royal > 22) {
 		cutin "ep16_kronecker_granz_heine",2;
-		mes "[克罗内克·G·海涅]";
+		mes "[克罗内克·G·海尔内]";
 		mes "那么，这里的事就交给你和尼勒姆。";
 		mes "为了王室的正统性……";
 		next;
-		mes "[克罗内克·G·海涅]";
+		mes "[克罗内克·G·海尔内]";
 		mes "请秘密执行这项任务。";
 		close3;
 	}
 	end;
 OnInit:
 	cloakonnpc();
-	cloakonnpc "克罗内克·G·海涅#ep16_01_lib02";
-	cloakonnpc "尼希尔·M·海涅#ep16_lib01";
+	cloakonnpc "克罗内克·G·海尔内#ep16_01_lib02";
+	cloakonnpc "尼希尔·M·海尔内#ep16_lib01";
 	end;
 }
 
-prt_lib,81,79,5	script	克罗内克·G·海涅#ep16_01_lib02	4_EP16_GRANZ,{ end; }
-prt_lib,83,80,5	script	尼希尔·M·海涅#ep16_lib01	4_EP16_NIHIL,{ end; }
+prt_lib,81,79,5	script	克罗内克·G·海尔内#ep16_01_lib02	4_EP16_GRANZ,{ end; }
+prt_lib,83,80,5	script	尼希尔·M·海尔内#ep16_lib01	4_EP16_NIHIL,{ end; }
 
 prt_lib,85,82,5	script	伊恩·沃尔特#ep16_lib01	1_M_JOBTESTER,{
 	if (ep16_royal < 9) {
@@ -2087,7 +2087,7 @@ prt_lib,85,82,5	script	伊恩·沃尔特#ep16_lib01	1_M_JOBTESTER,{
 		else if (strnpcinfo(1) == "勒维耶·维格纳")
 			npctalk "……事情接下来会变成什么样呢……", "勒维耶·维格纳#ep16_lib01", bc_self;
 		else
-			npctalk "难以置信。", "马克西米利安·雷根布尔格#ep16_lib01", bc_self;
+			npctalk "难以置信。", "马克西米利安·雷根贝格#ep16_lib01", bc_self;
 		end;
 	}
 	.@char_id = getcharid(0);
@@ -2098,7 +2098,7 @@ prt_lib,85,82,5	script	伊恩·沃尔特#ep16_lib01	1_M_JOBTESTER,{
 		mes "我们等你来，是因为……";
 		mes "我们想知道^4d4dff你是否向任何人透露过仪式^000000。";
 		next;
-		npctalk "……奇怪，是空白的。", "克罗内克·G·海涅#ep16_01_lib01", bc_self;
+		npctalk "……奇怪，是空白的。", "克罗内克·G·海尔内#ep16_01_lib01", bc_self;
 		mes "[伊恩·沃尔特]";
 		mes "知道王家过去的记忆和祝福仪式的人很少……";
 		next;
@@ -2110,8 +2110,8 @@ prt_lib,85,82,5	script	伊恩·沃尔特#ep16_lib01	1_M_JOBTESTER,{
 		mes "[伊恩·沃尔特]";
 		mes "啊，那个……";
 		mes "你是唯一知道此事的外人，而且没有先例……";
-		npctalk "只是情况如此……嗯……", "马克西米利安·雷根布尔格#ep16_lib01", bc_self;
-		npctalk "……", "尼希尔·M·海涅#ep16_lib01", bc_self;
+		npctalk "只是情况如此……嗯……", "马克西米利安·雷根贝格#ep16_lib01", bc_self;
+		npctalk "……", "尼希尔·M·海尔内#ep16_lib01", bc_self;
 		next;
 		mes "[尼希尔]";
 		mes "我不这么认为。";
@@ -2125,12 +2125,12 @@ prt_lib,85,82,5	script	伊恩·沃尔特#ep16_lib01	1_M_JOBTESTER,{
 		mes "我理解你们因突发事件而心烦。";
 		mes "但请不要怀疑无辜的人。";
 		next;
-		npctalk "哈……搞什么！", "克罗内克·G·海涅#ep16_01_lib01", bc_self;
+		npctalk "哈……搞什么！", "克罗内克·G·海尔内#ep16_01_lib01", bc_self;
 		mes "[尼希尔]";
 		mes "那一定是……";
 		next;
-		cloakonnpcself( "克罗内克·G·海涅#ep16_01_lib01" );
-		cloakoffnpcself( "克罗内克·G·海涅#ep16_01_lib02" );
+		cloakonnpcself( "克罗内克·G·海尔内#ep16_01_lib01" );
+		cloakoffnpcself( "克罗内克·G·海尔内#ep16_01_lib02" );
 		mes "[克罗内克]";
 		mes "真麻烦。";
 		mes "你以前见过这份文件吗？";
@@ -2147,7 +2147,7 @@ prt_lib,85,82,5	script	伊恩·沃尔特#ep16_lib01	1_M_JOBTESTER,{
 		mes "可是，^4d4dff大地荣耀^000000不见了……";
 		npctalk "大地荣耀……？", "伊恩·沃尔特#ep16_lib01", bc_self;
 		npctalk "不见了？发生什么了……？", "勒维耶·维格纳#ep16_lib01", bc_self;
-		npctalk "！！！！！", "马克西米利安·雷根布尔格#ep16_lib01", bc_self;
+		npctalk "！！！！！", "马克西米利安·雷根贝格#ep16_lib01", bc_self;
 		next;
 		mes "[克罗内克]";
 		mes "我们照顾倒下的彼得时它消失了。";
@@ -2163,7 +2163,7 @@ prt_lib,85,82,5	script	伊恩·沃尔特#ep16_lib01	1_M_JOBTESTER,{
 		mes "[尼希尔]";
 		mes "抱歉打断，但我有事要说。";
 		next;
-		npctalk "你在做什么？注意礼数。", "克罗内克·G·海涅#ep16_01_lib02", bc_self;
+		npctalk "你在做什么？注意礼数。", "克罗内克·G·海尔内#ep16_01_lib02", bc_self;
 		mes "[尼希尔]";
 		mes "……很重要。我正要告诉你们这一切的原因。";
 		next;
@@ -2171,7 +2171,7 @@ prt_lib,85,82,5	script	伊恩·沃尔特#ep16_lib01	1_M_JOBTESTER,{
 		mes "事件的原因？";
 		mes "你是说你知道谁泄露了秘密？";
 		next;
-		npctalk "……", "尼希尔·M·海涅#ep16_lib01", bc_self;
+		npctalk "……", "尼希尔·M·海尔内#ep16_lib01", bc_self;
 		mes "[尼希尔]";
 		mes "泄露仪式的人……";
 		sleep2 1000;
@@ -2179,7 +2179,7 @@ prt_lib,85,82,5	script	伊恩·沃尔特#ep16_lib01	1_M_JOBTESTER,{
 		sleep2 500;
 		npctalk "什么？", "伊恩·沃尔特#ep16_lib01", bc_self;
 		npctalk "！！！", "勒维耶·维格纳#ep16_lib01", bc_self;
-		npctalk "哈！", "马克西米利安·雷根布尔格#ep16_lib01", bc_self;
+		npctalk "哈！", "马克西米利安·雷根贝格#ep16_lib01", bc_self;
 		mes "……所以……";
 		next;
 		mes "[尼希尔]";
@@ -2302,13 +2302,13 @@ prt_lib,85,82,5	script	伊恩·沃尔特#ep16_lib01	1_M_JOBTESTER,{
 		cloakonnpcself( "伊恩·沃尔特#ep16_lib01" );
 		sleep2 500;
 		cloakonnpcself( "勒维耶·维格纳#ep16_lib01" );
-		cloakonnpcself( "马克西米利安·雷根布尔格#ep16_lib01" );
+		cloakonnpcself( "马克西米利安·雷根贝格#ep16_lib01" );
 		sleep2 500;
-		npctalk "尼希尔，跟我来。", "克罗内克·G·海涅#ep16_01_lib02", bc_self;
+		npctalk "尼希尔，跟我来。", "克罗内克·G·海尔内#ep16_01_lib02", bc_self;
 		sleep2 3000;
 		setpcblock PCBLOCK_NPC, false;
-		cloakonnpcself( "克罗内克·G·海涅#ep16_01_lib02" );
-		cloakonnpcself( "尼希尔·M·海涅#ep16_lib01" );
+		cloakonnpcself( "克罗内克·G·海尔内#ep16_01_lib02" );
+		cloakonnpcself( "尼希尔·M·海尔内#ep16_lib01" );
 		end;
 	}
 	mes "[伊恩·沃尔特]";
@@ -2324,17 +2324,17 @@ prt_lib,85,82,5	script	伊恩·沃尔特#ep16_lib01	1_M_JOBTESTER,{
 	cloakonnpcself( "伊恩·沃尔特#ep16_lib01" );
 	sleep2 500;
 	cloakonnpcself( "勒维耶·维格纳#ep16_lib01" );
-	cloakonnpcself( "马克西米利安·雷根布尔格#ep16_lib01" );
+	cloakonnpcself( "马克西米利安·雷根贝格#ep16_lib01" );
 	sleep2 500;
-	npctalk "尼希尔，跟我来。", "克罗内克·G·海涅#ep16_01_lib02", bc_self;
+	npctalk "尼希尔，跟我来。", "克罗内克·G·海尔内#ep16_01_lib02", bc_self;
 	sleep2 3000;
 	setpcblock PCBLOCK_NPC, false;
-	cloakonnpcself( "克罗内克·G·海涅#ep16_01_lib02" );
-	cloakonnpcself( "尼希尔·M·海涅#ep16_lib01" );
+	cloakonnpcself( "克罗内克·G·海尔内#ep16_01_lib02" );
+	cloakonnpcself( "尼希尔·M·海尔内#ep16_lib01" );
 	end;
 }
 prt_lib,88,83,4	duplicate(伊恩·沃尔特#ep16_lib01)	勒维耶·维格纳#ep16_lib01	4_EP16_LOUVIERE
-prt_lib,91,78,2	duplicate(伊恩·沃尔特#ep16_lib01)	马克西米利安·雷根布尔格#ep16_lib01	4_EP16_MAX
+prt_lib,91,78,2	duplicate(伊恩·沃尔特#ep16_lib01)	马克西米利安·雷根贝格#ep16_lib01	4_EP16_MAX
 
 
 prt_lib,94,82,3	script	次元传送器MkII#ep16_lib	PORTAL,{
@@ -4196,7 +4196,7 @@ prt_cas_q,21,140,3	script	保镖克鲁斯#ep16_room01	4_EP16_CRUX,{
 	close3;
 }
 
-prt_cas_q,23,133,2	script	尼希尔·M·海涅#ep16_nroom01	4_EP16_NIHIL,{
+prt_cas_q,23,133,2	script	尼希尔·M·海尔内#ep16_nroom01	4_EP16_NIHIL,{
 	if (ep16_royal == 16) {
 		cutin "ep16_nihi_miseria_heine01",2;
 		mes "[尼希尔]";
@@ -4216,7 +4216,7 @@ prt_cas_q,18,136,3	script	斯皮卡·内里乌斯#ep16_room02	4_EP16_SPICA,{
 		mes "我请您来，并没有什么特别的原因。";
 		mes "只是他们一直召开会议，讨论仪式上发生的事。";
 		next;
-		cloakoffnpcself( "尼希尔·M·海涅#ep16_nroom01" );
+		cloakoffnpcself( "尼希尔·M·海尔内#ep16_nroom01" );
 		mes "[斯皮卡]";
 		mes "海尔内家族的领主来了。";
 		mes "您明明在禁足中，行动倒是挺自由的。";
@@ -4293,7 +4293,7 @@ prt_cas_q,18,136,3	script	斯皮卡·内里乌斯#ep16_room02	4_EP16_SPICA,{
 		cutin "ep16_nihi_miseria_heine04",2;
 		mes "[尼希尔]";
 		mes "准确说，听说你要来内里乌斯家族，我自愿来的。";
-		npctalk "……房间太闷了。", "尼希尔·M·海涅#ep16_nroom01";
+		npctalk "……房间太闷了。", "尼希尔·M·海尔内#ep16_nroom01";
 		next;
 		cutin "ep16_skia_shadow03",0;
 		mes "[斯琪亚]";
@@ -4342,7 +4342,7 @@ prt_cas_q,18,136,3	script	斯皮卡·内里乌斯#ep16_room02	4_EP16_SPICA,{
 	end;
 OnInit:
 	cloakonnpc();
-	cloakonnpc "尼希尔·M·海涅#ep16_nroom01";
+	cloakonnpc "尼希尔·M·海尔内#ep16_nroom01";
 	end;
 }
 
@@ -5251,22 +5251,22 @@ prt_cas_q,30,78,0	script	#ep16_heine_evt01	HIDDEN_WARP_NPC,1,1,{
 	end;
 OnTouch:
 	if (ep16_royal == 2 && isbegin_quest(7683) == 0) {
-		cloakoffnpcself( "尼希尔·M·海涅#ep16_01" );
-		cloakoffnpcself( "彼得·海涅#ep16_01" );
-		cloakonnpcself( "彼得·海涅#ep16_02" );
+		cloakoffnpcself( "尼希尔·M·海尔内#ep16_01" );
+		cloakoffnpcself( "彼得·海尔内#ep16_01" );
+		cloakonnpcself( "彼得·海尔内#ep16_02" );
 	}
 	else if (ep16_royal < 10) {
-		cloakoffnpcself( "彼得·海涅#ep16_01" );
-		cloakonnpcself( "彼得·海涅#ep16_02" );
+		cloakoffnpcself( "彼得·海尔内#ep16_01" );
+		cloakonnpcself( "彼得·海尔内#ep16_02" );
 	}
 	else if (ep16_royal > 9) {
-		cloakonnpcself( "彼得·海涅#ep16_01" );
-		cloakoffnpcself( "彼得·海涅#ep16_02" );
+		cloakonnpcself( "彼得·海尔内#ep16_01" );
+		cloakoffnpcself( "彼得·海尔内#ep16_02" );
 	}
 	end;
 }
 
-prt_cas_q,9,90,3	script	彼得·海涅#ep16_02	4_EP16_PETER,{
+prt_cas_q,9,90,3	script	彼得·海尔内#ep16_02	4_EP16_PETER,{
 	if (ep16_royal > 8) {
 		mes "他躺在床上，伤得很重。";
 		mes "看来他现在的状态没法说话。";
@@ -5275,7 +5275,7 @@ prt_cas_q,9,90,3	script	彼得·海涅#ep16_02	4_EP16_PETER,{
 }
 
 // 海尔内
-prt_cas_q,21,83,3	script	弗里德里希·S·海涅#ep16_01	4_EP16_STOLZ,{
+prt_cas_q,21,83,3	script	弗里德里希·S·海尔内#ep16_01	4_EP16_STOLZ,{
 	if (ep16_royal < 2) {
 		cutin "ep16_friedrich_stolz_heine",1;
 		mes "[弗里德里希]";
@@ -5430,7 +5430,7 @@ prt_cas_q,21,83,3	script	弗里德里希·S·海涅#ep16_01	4_EP16_STOLZ,{
 	}
 }
 
-prt_cas_q,18,83,5	script	彼得·海涅#ep16_01	4_M_3RDPRIN1,{
+prt_cas_q,18,83,5	script	彼得·海尔内#ep16_01	4_M_3RDPRIN1,{
 	if (ep16_royal < 2) {
 		mes "[彼得]";
 		mes "你就是受邀参加宴会的归来的英雄吧。";
@@ -5462,7 +5462,7 @@ prt_cas_q,18,83,5	script	彼得·海涅#ep16_01	4_M_3RDPRIN1,{
 	}
 }
 
-prt_cas_q,19,85,4	script	克罗内克·G·海涅#ep16_01	4_EP16_GRANZ,{
+prt_cas_q,19,85,4	script	克罗内克·G·海尔内#ep16_01	4_EP16_GRANZ,{
 	if (ep16_royal < 2) {
 		mes "[克罗内克]";
 		mes "我从未允许你来访。";
@@ -5490,18 +5490,18 @@ prt_cas_q,19,85,4	script	克罗内克·G·海涅#ep16_01	4_EP16_GRANZ,{
 				cutin "ep16_friedrich_stolz_heine",1;
 				mes "[弗里德里希]";
 				mes "让我自我介绍。";
-				mes "我是海尔内家族现任家主，弗里德里希·施托尔策·海涅。";
+				mes "我是海尔内家族现任家主，弗里德里希·施托尔策·海尔内。";
 				next;
 				mes "[弗里德里希]";
 				mes "这位是前代家主、我的父亲格兰茨大公。";
 				next;
 				cutin "ep16_kronecker_granz_heine",2;
 				mes "[克罗内克]";
-				mes "我叫克罗内克·格兰茨·海涅。";
+				mes "我叫克罗内克·格兰茨·海尔内。";
 				next;
 				cutin "ep16_friedrich_stolz_heine",1;
 				mes "[弗里德里希]";
-				mes "这位是王位候选人彼得·海涅。";
+				mes "这位是王位候选人彼得·海尔内。";
 				next;
 				cutin "ep16_petter_heine01",0;
 				mes "[彼得]";
@@ -5578,7 +5578,7 @@ prt_cas_q,19,85,4	script	克罗内克·G·海涅#ep16_01	4_EP16_GRANZ,{
 				mes "因为这一连串事件，王室会议将再次召开。";
 				mes "这次由彼得作为海尔内家族的代表参加。";
 				next;
-				npctalk "我本没这个打算，但我会尽力。", "彼得·海涅#ep16_01", bc_self;
+				npctalk "我本没这个打算，但我会尽力。", "彼得·海尔内#ep16_01", bc_self;
 				cutin "ep16_kronecker_granz_heine",2;
 				mes "[克罗内克]";
 				mes "而那个尼希尔现在非常嫉妒他。";
@@ -5633,7 +5633,7 @@ prt_cas_q,19,85,4	script	克罗内克·G·海涅#ep16_01	4_EP16_GRANZ,{
 			}
 			end;
 		case 1:
-			npctalk "一切很快就会有结果。在那之前待在房间里。", "克罗内克·G·海涅#ep16_01", bc_self;
+			npctalk "一切很快就会有结果。在那之前待在房间里。", "克罗内克·G·海尔内#ep16_01", bc_self;
 			end;
 		default:
 			end;
@@ -5763,47 +5763,47 @@ prt_cas_q,19,85,4	script	克罗内克·G·海涅#ep16_01	4_EP16_GRANZ,{
 	close3;
 }
 
-prt_cas_q,22,80,3	script	尼希尔·M·海涅#ep16_01	4_EP16_NIHIL,{ end; }
+prt_cas_q,22,80,3	script	尼希尔·M·海尔内#ep16_01	4_EP16_NIHIL,{ end; }
 
 prt_cas_q,22,77,0	script	#ep16_heine_evt02	HIDDEN_WARP_NPC,2,2,{
 	end;
 OnTouch:
 	if (ep16_royal == 2 && isbegin_quest(7683) == 0) {
-		npctalk "你没有资格说这种话！", "克罗内克·G·海涅#ep16_01", bc_self;
+		npctalk "你没有资格说这种话！", "克罗内克·G·海尔内#ep16_01", bc_self;
 		setpcblock PCBLOCK_NPC, true;
 		sleep2 3000;
-		npctalk "我要回本家去。请您允许。", "尼希尔·M·海涅#ep16_01", bc_self;
+		npctalk "我要回本家去。请您允许。", "尼希尔·M·海尔内#ep16_01", bc_self;
 		sleep2 3000;
-		npctalk "注意你的举止。你不再是孩子了。", "弗里德里希·S·海涅#ep16_01", bc_self;
+		npctalk "注意你的举止。你不再是孩子了。", "弗里德里希·S·海尔内#ep16_01", bc_self;
 		sleep2 3000;
-		npctalk "你知道，我没有理由待在这里。", "尼希尔·M·海涅#ep16_01", bc_self;
+		npctalk "你知道，我没有理由待在这里。", "尼希尔·M·海尔内#ep16_01", bc_self;
 		sleep2 3000;
-		npctalk "作为家族的一员，留在这里是你的义务！", "克罗内克·G·海涅#ep16_01", bc_self;
+		npctalk "作为家族的一员，留在这里是你的义务！", "克罗内克·G·海尔内#ep16_01", bc_self;
 		sleep2 3000;
-		npctalk "家族的一员？我什么时候被当成家族的一员了？", "尼希尔·M·海涅#ep16_01", bc_self;
+		npctalk "家族的一员？我什么时候被当成家族的一员了？", "尼希尔·M·海尔内#ep16_01", bc_self;
 		sleep2 3000;
-		npctalk "你忘了我从家族得到的名字吗？", "尼希尔·M·海涅#ep16_01", bc_self;
+		npctalk "你忘了我从家族得到的名字吗？", "尼希尔·M·海尔内#ep16_01", bc_self;
 		sleep2 3000;
-		npctalk "尼希尔·米杰利亚，我这个一无所有的海尔内！正因为我没用，你们才给我起了这样的名字！", "尼希尔·M·海涅#ep16_01", bc_self;
+		npctalk "尼希尔·米杰利亚，我这个一无所有的海尔内！正因为我没用，你们才给我起了这样的名字！", "尼希尔·M·海尔内#ep16_01", bc_self;
 		sleep2 3000;
-		npctalk "注意你的言辞，尼希尔。", "弗里德里希·S·海涅#ep16_01", bc_self;
+		npctalk "注意你的言辞，尼希尔。", "弗里德里希·S·海尔内#ep16_01", bc_self;
 		sleep2 3000;
-		npctalk "你从来没把我当成家族的一员。", "尼希尔·M·海涅#ep16_0", bc_self;
+		npctalk "你从来没把我当成家族的一员。", "尼希尔·M·海尔内#ep16_0", bc_self;
 		sleep2 3000;
-		npctalk "可是，所有责任都得我来承担。我再也受不了了。", "尼希尔·M·海涅#ep16_0", bc_self;
+		npctalk "可是，所有责任都得我来承担。我再也受不了了。", "尼希尔·M·海尔内#ep16_0", bc_self;
 		sleep2 1000;
-		cloakonnpcself( "尼希尔·M·海涅#ep16_01" );
+		cloakonnpcself( "尼希尔·M·海尔内#ep16_01" );
 		sleep2 500;
 		unittalk getcharid(3), "" + strcharinfo(0) + "：哦，他走了。", bc_self;
 		sleep2 1000;
 		setpcblock PCBLOCK_NPC, false;
-		npctalk "……那个没用的家伙。他什么也做不好！", "克罗内克·G·海涅#ep16_01", bc_self;
+		npctalk "……那个没用的家伙。他什么也做不好！", "克罗内克·G·海尔内#ep16_01", bc_self;
 		setquest 7683;
 	}
 	end;
 OnInit:
-	cloakonnpc "尼希尔·M·海涅#ep16_01";
-	cloakonnpc "彼得·海涅#ep16_01";
+	cloakonnpc "尼希尔·M·海尔内#ep16_01";
+	cloakonnpc "彼得·海尔内#ep16_01";
 	end;
 }
 
@@ -5884,7 +5884,7 @@ OnInit:
 
 // Right Side
 // Roegenburg
-prt_cas_q,90,186,5	script	马克西米利安·雷根布尔格#ep16lug	4_EP16_MAX,{
+prt_cas_q,90,186,5	script	马克西米利安·雷根贝格#ep16lug	4_EP16_MAX,{
 	if (checkweight(1301,1) == 0) {
 		mes "[马克西米利安]";
 		mes "你行李好像很多，没事吗？";
@@ -5896,7 +5896,7 @@ prt_cas_q,90,186,5	script	马克西米利安·雷根布尔格#ep16lug	4_EP16_MAX,{
 	}
 	if (BaseLevel < 100) {
 		mes "[马克西米利安]";
-		mes "雷根布尔格欢迎有各种经历的冒险者，但现在与你合作还稍早了些。";
+		mes "雷根贝格欢迎有各种经历的冒险者，但现在与你合作还稍早了些。";
 		mes "希望以后还能见到你。";
 		close;
 	}
@@ -5908,29 +5908,29 @@ prt_cas_q,90,186,5	script	马克西米利安·雷根布尔格#ep16lug	4_EP16_MAX,{
 			close;
 		}
 		mes "[马克西米利安]";
-		mes "你好，冒险者。很高兴你拜访^0000cd雷根布尔格家族^000000。我是^0000cd马克西米利安·雷根布尔格^000000。";
+		mes "你好，冒险者。很高兴你拜访^0000cd雷根贝格家族^000000。我是^0000cd马克西米利安·雷根贝格^000000。";
 		next;
 		mes "[马克西米利安]";
 		mes "我们是建立王国的七大王室之一，一直为卢恩-米德加尔特尽心尽力。";
 		next;
 		mes "[马克西米利安]";
-		mes "我们家族的继承人^0000cd赫尔穆特·雷根布尔格^000000将参加王室会议。要不要见见他？";
+		mes "我们家族的继承人^0000cd赫尔穆特·雷根贝格^000000将参加王室会议。要不要见见他？";
 		next;
 		cutin "16hel",0;
 		mes "[赫尔穆特]";
-		mes "你好，我是^0000cd赫尔穆特·雷根布尔格^000000。";
+		mes "你好，我是^0000cd赫尔穆特·雷根贝格^000000。";
 		next;
 		mes "[" + strcharinfo(0) + "]";
 		mes "你好，我是受邀参加宴会的" + strcharinfo(0) + "，很高兴见到你。";
 		next;
 		mes "[赫尔穆特]";
-		mes "很荣幸见到击败梦罗克的英雄。在雷根布尔格家族期间请尽情享受。";
+		mes "很荣幸见到击败梦罗克的英雄。在雷根贝格家族期间请尽情享受。";
 		next;
 		mes "[赫尔穆特]";
-		mes "如果有时间，要不要见见雷根布尔格家的其他人？";
+		mes "如果有时间，要不要见见雷根贝格家的其他人？";
 		next;
 		mes "[赫尔穆特]";
-		mes "哥哥，去听听^0000cd沃尔夫·雷根布尔格^000000讲讲家族的事会很有帮助。";
+		mes "哥哥，去听听^0000cd沃尔夫·雷根贝格^000000讲讲家族的事会很有帮助。";
 		next;
 		mes "[" + strcharinfo(0) + "]";
 		mes "当然，这是个好机会。";
@@ -5940,18 +5940,18 @@ prt_cas_q,90,186,5	script	马克西米利安·雷根布尔格#ep16lug	4_EP16_MAX,{
 	}
 	if (ep16_lug == 1) {
 		mes "[马克西米利安]";
-		mes "你见过雷根布尔格的孩子们吗？他们看起来还像婴儿，可如今在宫里见到他们，我很欣慰他们快长大了。";
+		mes "你见过雷根贝格的孩子们吗？他们看起来还像婴儿，可如今在宫里见到他们，我很欣慰他们快长大了。";
 		next;
 		mes "[马克西米利安]";
 		mes "你已经见过赫尔穆特了。再去见见次子沃尔夫，会对你有帮助。";
 		next;
 		mes "[马克西米利安]";
-		mes "他代替忙于参加王室会议和守卫边境的长子，负责雷根布尔格的一切事务。你会听到许多有趣的故事。";
+		mes "他代替忙于参加王室会议和守卫边境的长子，负责雷根贝格的一切事务。你会听到许多有趣的故事。";
 		close;
 	}
 	if (ep16_lug > 1 && ep16_lug < 7) {
 		mes "[马克西米利安]";
-		mes "雷根布尔格以身为民族英雄威廉的后裔而自豪，并为卢恩-米德加尔特王国的建立与发展作出了贡献。";
+		mes "雷根贝格以身为民族英雄威廉的后裔而自豪，并为卢恩-米德加尔特王国的建立与发展作出了贡献。";
 		next;
 		mes "[马克西米利安]";
 		mes "因此，我们希望孩子们能成长为体面的大人，可他们是在父母缺席的情况下长大的，如今往往举止粗鲁、为所欲为。";
@@ -5960,7 +5960,7 @@ prt_cas_q,90,186,5	script	马克西米利安·雷根布尔格#ep16lug	4_EP16_MAX,{
 		mes "如果你和他们交谈时感到不适，请宽厚地理解。";
 		next;
 		mes "[马克西米利安]";
-		mes "他们是将要带领家族的孩子们，可他们的走向却与雷根布尔格的期望不同。";
+		mes "他们是将要带领家族的孩子们，可他们的走向却与雷根贝格的期望不同。";
 		next;
 		mes "[马克西米利安]";
 		mes "长子留在前线，每天冒着生命危险；次子却经商，这违背了家族传统。";
@@ -5999,7 +5999,7 @@ prt_cas_q,90,186,5	script	马克西米利安·雷根布尔格#ep16lug	4_EP16_MAX,{
 	}
 	if (ep16_lug == 9) {
 		mes "[马克西米利安]";
-		mes "请把赫尔穆特带回来。他一定在^0000cd与施瓦茨瓦尔德交界的哨所^000000。他负责巡逻队。";
+		mes "请把赫尔穆特带回来。他一定在^0000cd与秀发兹交界的哨所^000000。他负责巡逻队。";
 		mes "拜托了。";
 		close;
 	}
@@ -6107,7 +6107,7 @@ prt_cas_q,90,186,5	script	马克西米利安·雷根布尔格#ep16lug	4_EP16_MAX,{
 		next;
 		cutin "",255;
 		mes "[马克西米利安]";
-		mes "如果你需要雷根布尔格的帮助，随时来。雷根布尔格的大门永远为你敞开。";
+		mes "如果你需要雷根贝格的帮助，随时来。雷根贝格的大门永远为你敞开。";
 		completequest 14507;// To Maximilian
 		getitem 6919,10;// TokenOfHonor
 		getexp 1000000,500000;
@@ -6128,9 +6128,9 @@ prt_cas_q,90,186,5	script	马克西米利安·雷根布尔格#ep16lug	4_EP16_MAX,{
 	}
 }
 
-prt_cas_q,96,184,1	script	阿格妮丝·雷根布尔格#ep16lu	4_EP16_AGNES,{
+prt_cas_q,96,184,1	script	阿格妮丝·雷根贝格#ep16lu	4_EP16_AGNES,{
 	if (checkweight(1301,1) == 0) {
-		mes "[阿格妮丝·雷根布尔格]";
+		mes "[阿格妮丝·雷根贝格]";
 		mes "嗯，你的行李好像很多。要不要卸下一些？";
 		close;
 	}
@@ -6968,12 +6968,12 @@ prt_cas_q,96,184,1	script	阿格妮丝·雷根布尔格#ep16lu	4_EP16_AGNES,{
 	}
 }
 
-prt_cas_q,90,184,7	script	赫尔穆特·雷根布尔格#ep16lug	4_EP16_HELMUT,{
+prt_cas_q,90,184,7	script	赫尔穆特·雷根贝格#ep16lug	4_EP16_HELMUT,{
 	if (ep16_lug == 0) {
 		cutin "16hel",0;
 		mes "[赫尔穆特]";
 		mes "你好。";
-		mes "我是赫尔穆特·雷根布尔格。";
+		mes "我是赫尔穆特·雷根贝格。";
 		next;
 		mes "[赫尔穆特]";
 		mes "如果你想听我家族的故事，去见那边的^0000cd祖父^000000吧。";
@@ -6983,11 +6983,11 @@ prt_cas_q,90,184,7	script	赫尔穆特·雷根布尔格#ep16lug	4_EP16_HELMUT,{
 	if (ep16_lug < 3) {
 		cutin "16hel",0;
 		mes "[赫尔穆特]";
-		mes "你见过我哥哥^0000cd沃尔夫·雷根布尔格^000000了吗？";
+		mes "你见过我哥哥^0000cd沃尔夫·雷根贝格^000000了吗？";
 		mes "我在这前线时，他帮祖父处理所有家务。";
 		next;
 		mes "[赫尔穆特]";
-		mes "如果你想了解雷根布尔格，那会是段有意义的时光。";
+		mes "如果你想了解雷根贝格，那会是段有意义的时光。";
 		close3;
 	}
 	if (ep16_lug > 2 && ep16_lug < 7) {
@@ -7042,17 +7042,17 @@ prt_cas_q,86,180,7	script	卡尔伯恩#ep16lug	4_M_RUSCHILD,{
 	}
 }
 
-prt_cas_q,96,186,3	script	沃尔夫·雷根布尔格#ep16lug	4_EP16_WOLF,{
+prt_cas_q,96,186,3	script	沃尔夫·雷根贝格#ep16lug	4_EP16_WOLF,{
 	if (checkweight(1301,1) == 0) {
-		mes "[沃尔夫·雷根布尔格]";
+		mes "[沃尔夫·雷根贝格]";
 		mes "嗯，你的行李好像很多。要不要卸下一些？";
 		close;
 	}
 	if (ep16_lug == 0) {
 		cutin "16wol_nor",2;
 		mes "[沃尔夫]";
-		mes "感谢你拜访雷根布尔格。";
-		mes "何不去见见我的祖父、雷根布尔格的家主^0000cd马克西米利安·雷根布尔格^000000？";
+		mes "感谢你拜访雷根贝格。";
+		mes "何不去见见我的祖父、雷根贝格的家主^0000cd马克西米利安·雷根贝格^000000？";
 		next;
 		mes "[沃尔夫]";
 		mes "他喜欢和冒险者聊天。";
@@ -7061,33 +7061,33 @@ prt_cas_q,96,186,3	script	沃尔夫·雷根布尔格#ep16lug	4_EP16_WOLF,{
 	if (ep16_lug == 1) {
 		cutin "16wol_nor",2;
 		mes "[沃尔夫]";
-		mes "亲爱的冒险者，你能来雷根布尔格是我的荣幸。";
-		mes "我是雷根布尔格的次子^0000cd沃尔夫·雷根布尔格^000000。";
+		mes "亲爱的冒险者，你能来雷根贝格是我的荣幸。";
+		mes "我是雷根贝格的次子^0000cd沃尔夫·雷根贝格^000000。";
 		next;
 		mes "[沃尔夫]";
-		mes "为继承民族英雄威廉·雷根布尔格的意志，我们雷根布尔格为守护荣誉、正义和传统付出了许多努力。";
+		mes "为继承民族英雄威廉·雷根贝格的意志，我们雷根贝格为守护荣誉、正义和传统付出了许多努力。";
 		next;
 		mes "[沃尔夫]";
-		mes "自卢恩-米德加尔特建国以来，雷根布尔格有许多人为国家作出了贡献，这是我们的骄傲。";
+		mes "自卢恩-米德加尔特建国以来，雷根贝格有许多人为国家作出了贡献，这是我们的骄傲。";
 		next;
 		mes "[沃尔夫]";
-		mes "目前，王位的优秀候选人^0000cd赫尔穆特·雷根布尔格^000000正在参加王室会议。你见过他了吗？";
+		mes "目前，王位的优秀候选人^0000cd赫尔穆特·雷根贝格^000000正在参加王室会议。你见过他了吗？";
 		next;
 		mes "[" + strcharinfo(0) + "]";
 		mes "是的。我刚才见过他。这位是？";
 		next;
 		cutin "16agn_nor",2;
 		mes "[阿格妮丝]";
-		mes "亲爱的冒险者，很高兴见到你。我是^0000cd阿格妮丝·雷根布尔格^000000，雷根布尔格四兄妹中最小的。";
+		mes "亲爱的冒险者，很高兴见到你。我是^0000cd阿格妮丝·雷根贝格^000000，雷根贝格四兄妹中最小的。";
 		next;
 		mes "[阿格妮丝]";
 		mes "你有一起参加宴会的舞伴吗？我没有伴。没有一个人让我心动。";
 		next;
 		cutin "16wol_ang",2;
 		mes "[沃尔夫]";
-		mes "阿格妮丝，别这么说。这样不合适。我们正在给冒险者讲雷根布尔格的故事……";
+		mes "阿格妮丝，别这么说。这样不合适。我们正在给冒险者讲雷根贝格的故事……";
 		next;
-		cloakoffnpcself( "迈耶·雷根布尔格#ep16lug" );
+		cloakoffnpcself( "迈耶·雷根贝格#ep16lug" );
 		cutin "16mye_nor",1;
 		mes "[迈耶]";
 		mes "那么，我的王子会陪我吗？";
@@ -7099,7 +7099,7 @@ prt_cas_q,96,186,3	script	沃尔夫·雷根布尔格#ep16lug	4_EP16_WOLF,{
 		cutin "16wol_nor",2;
 		mes "[沃尔夫]";
 		mes "谢谢你来得正好。亲爱的冒险者，";
-		mes "这位是^0000cd迈耶·雷根布尔格^000000，是雷根布尔格的三子。";
+		mes "这位是^0000cd迈耶·雷根贝格^000000，是雷根贝格的三子。";
 		next;
 		mes "[沃尔夫]";
 		mes "我离开很久，刚回来。是这样吧？";
@@ -7144,7 +7144,7 @@ prt_cas_q,96,186,3	script	沃尔夫·雷根布尔格#ep16lug	4_EP16_WOLF,{
 		mes "[迈耶]";
 		mes "是，你说得对。我想我是个不受欢迎的客人。我还是走吧。阿格妮丝，我晚点再来。";
 		next;
-		cloakonnpcself( "迈耶·雷根布尔格#ep16lug" );
+		cloakonnpcself( "迈耶·雷根贝格#ep16lug" );
 		cutin "16agn_nor",2;
 		mes "[阿格妮丝]";
 		mes "天啊，我忘了。我得去准备了！";
@@ -7214,7 +7214,7 @@ prt_cas_q,96,186,3	script	沃尔夫·雷根布尔格#ep16lug	4_EP16_WOLF,{
 			mes "你只要去^0000cd维格纳家，从艾萨克那里取一样东西^000000。";
 			close3;
 		}
-		cloakoffnpcself( "迈耶·雷根布尔格#ep16lug" );
+		cloakoffnpcself( "迈耶·雷根贝格#ep16lug" );
 		cutin "16wol_nor",2;
 		mes "[沃尔夫]";
 		mes "亲爱的冒险者，你带来了吗？哦，你带来了。非常感谢。";
@@ -7267,7 +7267,7 @@ prt_cas_q,96,186,3	script	沃尔夫·雷根布尔格#ep16lug	4_EP16_WOLF,{
 		mes "是什么？";
 		next;
 		mes "[" + strcharinfo(0) + "]";
-		mes "最近普隆德拉流传着关于雷根布尔格和赫尔穆特·雷根布尔格的^0000cd谣言^000000。";
+		mes "最近普隆德拉流传着关于雷根贝格和赫尔穆特·雷根贝格的^0000cd谣言^000000。";
 		next;
 		mes "[" + strcharinfo(0) + "]";
 		mes "那不是好谣言。他让我去调查，看看是不是真的。";
@@ -7314,7 +7314,7 @@ prt_cas_q,96,186,3	script	沃尔夫·雷根布尔格#ep16lug	4_EP16_WOLF,{
 	if (ep16_lug == 4 || ep16_lug == 5) {
 		cutin "16wol_nor",2;
 		mes "[沃尔夫]";
-		mes "普隆德拉流传的关于雷根布尔格的谣言是什么？";
+		mes "普隆德拉流传的关于雷根贝格的谣言是什么？";
 		mes "我不知道有关于我们家族的谣言在流传";
 		next;
 		mes "[沃尔夫]";
@@ -7375,9 +7375,9 @@ prt_cas_q,96,186,3	script	沃尔夫·雷根布尔格#ep16lug	4_EP16_WOLF,{
 		mes "[迈耶]";
 		mes "嗯，需要多少就多少？";
 		next;
-		emotion ET_HUK, getnpcid(0, "马克西米利安·雷根布尔格#ep16lug");
+		emotion ET_HUK, getnpcid(0, "马克西米利安·雷根贝格#ep16lug");
 		emotion ET_HUK;
-		emotion ET_HUK, getnpcid(0, "阿格妮丝·雷根布尔格#ep16lu");
+		emotion ET_HUK, getnpcid(0, "阿格妮丝·雷根贝格#ep16lu");
 		cutin "16hel",0;
 		mes "[赫尔穆特]";
 		mes "迈耶，真的是你做的吗？";
@@ -7482,7 +7482,7 @@ prt_cas_q,96,186,3	script	沃尔夫·雷根布尔格#ep16lug	4_EP16_WOLF,{
 		mes "你想建立一个可以随心统治的王国。如果赫尔穆特当不上国王呢？你打算怎么办？";
 		next;
 		mes "[迈耶]";
-		mes "作为雷根布尔格的次子，你终会碰壁，你能放弃野心吗？";
+		mes "作为雷根贝格的次子，你终会碰壁，你能放弃野心吗？";
 		next;
 		mes "[迈耶]";
 		mes "总之人生短暂。打动人心的是心，不是金钱或权力。";
@@ -7545,7 +7545,7 @@ prt_cas_q,96,186,3	script	沃尔夫·雷根布尔格#ep16lug	4_EP16_WOLF,{
 		mes "[迈耶]";
 		mes "……失陪了。";
 		next;
-		cloakonnpcself( "迈耶·雷根布尔格#ep16lug" );
+		cloakonnpcself( "迈耶·雷根贝格#ep16lug" );
 		cutin "16agn_ang",2;
 		mes "[阿格妮丝]";
 		mes "迈耶！你去哪？又要离开家吗？";
@@ -7574,7 +7574,7 @@ prt_cas_q,96,186,3	script	沃尔夫·雷根布尔格#ep16lug	4_EP16_WOLF,{
 		mes "......";
 		mes "我也失陪了。";
 		next;
-		cloakonnpcself( "赫尔穆特·雷根布尔格#ep16lug" );
+		cloakonnpcself( "赫尔穆特·雷根贝格#ep16lug" );
 		cutin "",255;
 		mes "[卡尔伯恩]";
 		mes "赫尔穆特大人！您要去哪？";
@@ -7641,7 +7641,7 @@ prt_cas_q,96,186,3	script	沃尔夫·雷根布尔格#ep16lug	4_EP16_WOLF,{
 		mes "你还是不肯放弃做生意的念头啊。";
 		next;
 		mes "[沃尔夫]";
-		mes "意外地适合我。工作有回报，也很有趣。而且我能展示的只是我自己的能力，不是雷根布尔格的能力。";
+		mes "意外地适合我。工作有回报，也很有趣。而且我能展示的只是我自己的能力，不是雷根贝格的能力。";
 		next;
 		mes "[" + strcharinfo(0) + "]";
 		mes "对了，你的哥哥们一定很忙。迈耶，甚至赫尔穆特……";
@@ -7705,7 +7705,7 @@ prt_cas_q,96,186,3	script	沃尔夫·雷根布尔格#ep16lug	4_EP16_WOLF,{
 		mes "于是失去了所爱之人，我和孩子们一起生活。";
 		next;
 		mes "[马克西米利安]";
-		mes "我把孩子们养大，要他们不愧于雷根布尔格之名。";
+		mes "我把孩子们养大，要他们不愧于雷根贝格之名。";
 		mes "可他们真正需要的不是教育，而是温暖的心。";
 		next;
 		mes "[马克西米利安]";
@@ -7748,7 +7748,7 @@ prt_cas_q,96,186,3	script	沃尔夫·雷根布尔格#ep16lug	4_EP16_WOLF,{
 		mes "那么，我的工作就是把他带回来。";
 		next;
 		mes "[马克西米利安]";
-		mes "是的。他一定在^0000cd与施瓦茨瓦尔德交界的哨所^000000。他负责巡逻队。";
+		mes "是的。他一定在^0000cd与秀发兹交界的哨所^000000。他负责巡逻队。";
 		next;
 		mes "[马克西米利安]";
 		mes "回来时用这个。你可以立刻回到普隆德拉。";
@@ -7812,18 +7812,18 @@ prt_cas_q,90,184,7	script	#ep16lug004	HIDDEN_NPC,5,5,{
 	end;
 OnTouch:
 	if (ep16_lug < 3)
-		cloakonnpcself( "迈耶·雷根布尔格#ep16lug" );
+		cloakonnpcself( "迈耶·雷根贝格#ep16lug" );
 	else if (ep16_lug > 2 && ep16_lug < 7)
-		cloakoffnpcself( "迈耶·雷根布尔格#ep16lug" );
+		cloakoffnpcself( "迈耶·雷根贝格#ep16lug" );
 	else if (ep16_lug > 6) {
-		cloakonnpcself( "赫尔穆特·雷根布尔格#ep16lug" );
-		cloakonnpcself( "迈耶·雷根布尔格#ep16lug" );
+		cloakonnpcself( "赫尔穆特·雷根贝格#ep16lug" );
+		cloakonnpcself( "迈耶·雷根贝格#ep16lug" );
 		cloakonnpcself( "卡尔伯恩#ep16lug" );
 	}
 	end;
 }
 
-prt_cas_q,92,182,7	script	迈耶·雷根布尔格#ep16lug	4_EP16_MEYER,{
+prt_cas_q,92,182,7	script	迈耶·雷根贝格#ep16lug	4_EP16_MEYER,{
 	if (ep16_lug > 2 && ep16_lug < 7) {
 		cutin "16mye_nor",1;
 		mes "[迈耶]";
@@ -7852,12 +7852,12 @@ prt_cas_q,74,189,5	script	#ep16lug000	HIDDEN_NPC,5,5,{
 	end;
 OnTouch:
 	if (ep16_lug < 3)
-		cloakonnpcself( "迈耶·雷根布尔格#ep16lug" );
+		cloakonnpcself( "迈耶·雷根贝格#ep16lug" );
 	else if (ep16_lug > 2 && ep16_lug < 7)
-		cloakoffnpcself( "迈耶·雷根布尔格#ep16lug" );
+		cloakoffnpcself( "迈耶·雷根贝格#ep16lug" );
 	else if (ep16_lug > 6) {
-		cloakonnpcself( "赫尔穆特·雷根布尔格#ep16lug" );
-		cloakonnpcself( "迈耶·雷根布尔格#ep16lug" );
+		cloakonnpcself( "赫尔穆特·雷根贝格#ep16lug" );
+		cloakonnpcself( "迈耶·雷根贝格#ep16lug" );
 		cloakonnpcself( "卡尔伯恩#ep16lug" );
 	}
 	end;
@@ -8041,7 +8041,7 @@ function	script	F_kids_roegenburg_quest	{
 		mes "是的。我把它们全打倒了。现在让我听听那个故事，那个昂贵的故事。";
 		next;
 		mes "[艾伦]";
-		mes "战争、王室。赫尔穆特·雷根布尔格。如果他当上国王，大陆将被卷入战争的漩涡。";
+		mes "战争、王室。赫尔穆特·雷根贝格。如果他当上国王，大陆将被卷入战争的漩涡。";
 		next;
 		mes "[艾伦]";
 		mes "黑暗将席卷大陆，痛苦的呻吟将覆盖整个大陆！！！";
@@ -8050,7 +8050,7 @@ function	script	F_kids_roegenburg_quest	{
 		mes "这谣言在流传吗？可我不明白是什么意思。有谁能替我解释吗？";
 		next;
 		mes "[金]";
-		mes "简单。如果赫尔穆特·雷根布尔格当上国王，就会爆发战争。";
+		mes "简单。如果赫尔穆特·雷根贝格当上国王，就会爆发战争。";
 		next;
 		mes "[" + strcharinfo(0) + "]";
 		mes "嗯……太简单了。请再解释一下。";
@@ -8059,7 +8059,7 @@ function	script	F_kids_roegenburg_quest	{
 		mes "呃呃呃！你们在说什么？你们两个。让我来解释。谣言是这样的：";
 		next;
 		mes "[哈丽特]";
-		mes "如果赫尔穆特·雷根布尔格当上国王……啊，对了，你知道关于雷根布尔格的谣言吗，尤其是关于^0000cd四个孩子之死^000000的谣言。";
+		mes "如果赫尔穆特·雷根贝格当上国王……啊，对了，你知道关于雷根贝格的谣言吗，尤其是关于^0000cd四个孩子之死^000000的谣言。";
 		next;
 		mes "[" + strcharinfo(0) + "]";
 		mes "不，我不知道。从没听过。";
@@ -8068,7 +8068,7 @@ function	script	F_kids_roegenburg_quest	{
 		mes "这也只是谣言。我确信是真的。总之我听说他们是被谋杀的，";
 		next;
 		mes "[哈丽特]";
-		mes "在他们访问外国时。赫尔穆特·雷根布尔格受到打击，从那以后就在战场上徘徊。";
+		mes "在他们访问外国时。赫尔穆特·雷根贝格受到打击，从那以后就在战场上徘徊。";
 		next;
 		mes "[" + strcharinfo(0) + "]";
 		mes "是的，他确实一直在战场上游荡。";
@@ -8080,7 +8080,7 @@ function	script	F_kids_roegenburg_quest	{
 		mes "^0000cd他们说，^000000如果赫尔穆特当上国王，他就会入侵杀害他父母的国家，发动统一大陆的战争。";
 		next;
 		mes "[哈丽特]";
-		mes "而雷根布尔格的次子正做生意，为战争筹措资金。";
+		mes "而雷根贝格的次子正做生意，为战争筹措资金。";
 		next;
 		mes "[" + strcharinfo(0) + "]";
 		mes "你知道得相当详细？";
@@ -8129,7 +8129,7 @@ function	script	F_kids_roegenburg_quest	{
 		mes "嗯？你又来了。还需要什么吗？总之你来了真好。我得把书还回去。";
 		next;
 		mes "[" + strcharinfo(0) + "]";
-		mes "我有个关于雷根布尔格谣言的问题。";
+		mes "我有个关于雷根贝格谣言的问题。";
 		next;
 		mes "[艾伦]";
 		mes "关于那个家族没有新故事。没有故事就意味着死亡。";
@@ -8499,7 +8499,7 @@ yuno_fild01,241,171,7	duplicate(边境守卫#ep16lug01)	边境守卫#ep16lug06	4_M_JOB_W
 yuno_fild01,243,171,1	duplicate(边境守卫#ep16lug01)	边境守卫#ep16lug07	4_M_JOB_WIZARD
 yuno_fild01,245,171,1	duplicate(边境守卫#ep16lug01)	边境守卫#ep16lug08	4_M_PECOKNIGHT
 
-yuno_fild01,242,175,5	script	赫尔穆特·雷根布尔格#ep16lug02	4_EP16_HELMUT,5,5,{
+yuno_fild01,242,175,5	script	赫尔穆特·雷根贝格#ep16lug02	4_EP16_HELMUT,5,5,{
 	if (ep16_lug == 9) {
 		mes "[赫尔穆特]";
 		mes "亲爱的冒险者？你在这里做什么？很危险。怪物刚才下山到这里。请快离开。";
@@ -11754,7 +11754,7 @@ prt_cas_q,94,7,7	script	艾萨克·维格纳#ep16wig	4_EP16_ISAAC,{
 		mes "能再拜托你一件事吗？我听说普隆德拉流传着^0000cd一个奇怪的传闻^000000。";
 		next;
 		mes "[艾萨克]";
-		mes "据说是关于^0000cd赫尔穆特·雷根布尔格^000000的。你能去调查这个传闻，把真相告诉我吗？";
+		mes "据说是关于^0000cd赫尔穆特·雷根贝格^000000的。你能去调查这个传闻，把真相告诉我吗？";
 		next;
 		mes "[艾萨克]";
 		mes "我还要维持名声，不能沾上丑闻。请帮帮我。";
@@ -11803,7 +11803,7 @@ prt_cas_q,94,7,7	script	艾萨克·维格纳#ep16wig	4_EP16_ISAAC,{
 		mes "亲爱的冒险者，你回来了。东西安全送到了吗？他怎么说那个传闻？";
 		next;
 		mes "[" + .@name$ + "]";
-		mes "这是关于那件事的^0000cd文件^000000。是沃尔夫·雷根布尔格亲笔写的。";
+		mes "这是关于那件事的^0000cd文件^000000。是沃尔夫·雷根贝格亲笔写的。";
 		next;
 		mes "[艾萨克]";
 		mes "我看看……嗯……所以新生意将无限期推迟。生意方向也会改变。";
@@ -13508,7 +13508,7 @@ prt_cas,89,257,3	script	卡里安#ep16_1	4_M_MINSTREL1,{
 	close3;
 }
 
-prt_cas,85,223,1	script	马克西米利安·雷根布尔格#ep16wig01	4_EP16_MAX,{
+prt_cas,85,223,1	script	马克西米利安·雷根贝格#ep16wig01	4_EP16_MAX,{
 	mes "[马克西米利安]";
 	mes "我听说我孙子最近受了您儿子的照顾。";
 	next;
