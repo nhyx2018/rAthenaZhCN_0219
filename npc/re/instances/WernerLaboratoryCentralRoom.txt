@@ -2,7 +2,7 @@
 //= Instances Werner Laboratory central room.
 //===== Description: =========================================
 //- [Walkthrough conversion]
-//- Require Terra Gloria main quest.
+//- Require 大地荣耀 main quest.
 //- Note: For now there are 2 instances (officially one) to
 //  avoid exploit, the warp entry being the same. The first
 //  (main quest) is a solo instance and the 2nd (daily) a
@@ -241,7 +241,7 @@ OnInstanceInit:
 	disablenpc instance_npcname("Guard#gard07");
 
 	disablenpc instance_npcname("Seyren Windsor#seiren");
-	disablenpc instance_npcname("Pet child#boss_master");
+	disablenpc instance_npcname("小可爱#boss_master");
 	disablenpc instance_npcname("#boss_master_dummy");
 	end;
 }
@@ -699,7 +699,7 @@ OnTouch:
 	close2;
 	if ('event_final == 0) {
 		'event_final = 2;
-		enablenpc instance_npcname("Pet child#boss_master");
+		enablenpc instance_npcname("小可爱#boss_master");
 		enablenpc instance_npcname("#boss_master_dummy");
 	}
 	warp 'map_slw$,55,153;
@@ -946,7 +946,7 @@ OnTouch:
 	mes "我想一定有其原因。";
 	next;
 	mes "[赛依连]";
-	mes "而我在看到^4d4dffTerra Gloria^000000之后明白了。";
+	mes "而我在看到^4d4dff大地荣耀^000000之后明白了。";
 	mes "神明给我这个机会的原因。";
 	next;
 	specialeffect2 EF_DEVIL6;
@@ -1044,7 +1044,7 @@ OnTouch:
 }
 
 // * Battle
-1@slw,55,170,3	duplicate(dummy_npc)	Pet child#boss_master	3621
+1@slw,55,170,3	duplicate(dummy_npc)	小可爱#boss_master	3621
 
 1@slw,55,170,3	script	#boss_master_dummy	HIDDEN_WARP_NPC,5,5,{
 	end;
@@ -1052,7 +1052,7 @@ OnTouch:
 	if (is_party_leader() == false)	// officially player can spawn multiple boss changing party leader
 		end;
 	setpcblock PCBLOCK_NPC, true;
-	.@npc_name$ = instance_npcname("Pet child#boss_master");
+	.@npc_name$ = instance_npcname("小可爱#boss_master");
 	npctalk "你竟敢进来！真够勇敢的！", .@npc_name$;
 	sleep2 3000;
 	npctalk "能与我战斗，你该感到荣幸！", .@npc_name$;
@@ -1066,11 +1066,11 @@ OnTouch:
 	setpcblock PCBLOCK_NPC, false;
 	disablenpc instance_npcname("#boss_master_dummy");
 	npctalk "准——备——好——了——吗！！！", .@npc_name$;
-	specialeffect EF_DANCE_BLADE_ATK, AREA, instance_npcname("Pet child#boss_master");
-	specialeffect EF_ALL_FULL_THROTTLE, AREA, instance_npcname("Pet child#boss_master");
+	specialeffect EF_DANCE_BLADE_ATK, AREA, instance_npcname("小可爱#boss_master");
+	specialeffect EF_ALL_FULL_THROTTLE, AREA, instance_npcname("小可爱#boss_master");
 	donpcevent instance_npcname("#boss_master_lab") + "::OnStart";
 	mapannounce 'map_slw$, "魔法领域已启动。", bc_map,0xFF99;
-	cloakonnpc instance_npcname("Pet child#boss_master");
+	cloakonnpc instance_npcname("小可爱#boss_master");
 	end;
 }
 
@@ -1079,7 +1079,7 @@ OnTouch:
 OnStart:
 	enablenpc instance_npcname("#boss_master_lab");
 	if (mobcount( 'map_slw$, instance_npcname("#boss_master_lab") + "::OnMobDead" ) < 1)
-		monster 'map_slw$,55,170, "Pet child", 3621, 1, instance_npcname("#boss_master_lab") + "::OnMobDead";	// EP16_2_MM_CUTIE
+		monster 'map_slw$,55,170, "小可爱", 3621, 1, instance_npcname("#boss_master_lab") + "::OnMobDead";	// EP16_2_MM_CUTIE
 	end;
 OnMobDead:
 	if (mobcount( 'map_slw$, instance_npcname("#boss_master_lab") + "::OnMobDead" ) < 1) {
