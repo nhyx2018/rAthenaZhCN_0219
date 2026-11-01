@@ -6932,7 +6932,7 @@ function	script	F_TerraGloria_Lady	{
 		npctalk "近卫队长拉西斯： Hey!! Pipe down!!!!!", "近卫队长拉西斯#1", bc_self;
 		next;
 		mes "[???]";
-		mes "Oops!";
+		mes "哎呀！";
 		mes "This is the voice I've never heard before. Is it the adventurer who helped that kid?";
 		next;
 		select("Say yes.");
@@ -7320,29 +7320,29 @@ rebel_in,164,88,5	script	狄恩#162gmbs	4_F_DIENE,4,4,{
 	// if (terra_gloria_lady_part == 11) {// 12 - 13
 	mes "[元老狄恩]";
 	mes "欢迎。";
-	mes "Since most of the kids are busy these days, I feel somewhat bored.";
-	npctalk "狄恩： I have many things to prepare.", "狄恩#162gmbs", bc_self;
+	mes "最近孩子们都很忙，我有点无聊。";
+	npctalk "狄恩：我有很多东西要准备。", "狄恩#162gmbs", bc_self;
 	cutin "ep162_dn01.bmp",2;
 	next;
 	mes "[元老狄恩]";
-	mes "By the way, what brought you here? I thought you finished your business.";
-	mes "I guess I answered your question...";
+	mes "话说，你怎么来了？我以为你事情办完了。";
+	mes "我想我已经回答过你的问题了……";
 	next;
 	mes "[元老狄恩]";
-	mes "Oops!";
-	mes "You haven't forgotten about the errand?";
+	mes "哎呀！";
+	mes "你没忘记跑腿的事吧？";
 	next;
 	mes "[元老狄恩]";
-	mes "I didn't really mean to ask you for a favor. It's so kind of you to remember it!";
-	npctalk "狄恩： What a sensation!", "狄恩#162gmbs", bc_self;
+	mes "我其实没真想麻烦你。你还记得，真是太好了！";
+	npctalk "狄恩：真让人感动！", "狄恩#162gmbs", bc_self;
 	next;
 	mes "[元老狄恩]";
-	mes "We were talking about the party we are planning soon.";
-	mes "It was nearly over. But several ingredients are missing.";
-	npctalk "狄恩： It's such an important party.", "狄恩#162gmbs", bc_self;
+	mes "我们正在聊即将举办的派对。";
+	mes "准备得差不多了，但还缺几种材料。";
+	npctalk "狄恩：这可是很重要的派对。", "狄恩#162gmbs", bc_self;
 	next;
 	mes "[元老狄恩]";
-	mes "Since Larcis is in charge of our business, please ask him. He will tell you what we need.";
+	mes "拉西斯负责这些事，去问他吧。他会告诉你缺什么。";
 	if (terra_gloria_lady_part == 11) {
 		erasequest 11463;// You said the party is ready?
 		setquest 11464;// You said the party is ready?
