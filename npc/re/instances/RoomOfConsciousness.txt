@@ -46,7 +46,7 @@ OnInstanceInit:
 	disablenpc instance_npcname("Fenrir#3mir");
 	disablenpc instance_npcname("Iris#3mir");
 	disablenpc instance_npcname("Bijou#3mir");
-	disablenpc instance_npcname("Renovated Amdarais#3mir");
+	disablenpc instance_npcname("改造阿姆达莱斯#3mir");
 
 	disablenpc instance_npcname("Fenrir#4mir");
 	disablenpc instance_npcname("Iris#4mir");
@@ -99,7 +99,7 @@ OnInstanceInit:
 	next;
 	cutin "fenrir_a",2;
 	mes "[芬里尔]";
-	mes "This...";
+	mes "这是……";
 	mes "这就是依美乐心脏……";
 	next;
 	cutin "hero_iris_01",255;
@@ -226,10 +226,10 @@ OnMobDead2:
 	cutin "bijou_02",2;
 	mes "[毕尤]";
 	mes "但你觉得这次还能逃得掉吗？起来吧，我的部下们！";
-	specialeffect EF_WARP,AREA, instance_npcname("Renovated Amdarais#3mir");
+	specialeffect EF_WARP,AREA, instance_npcname("改造阿姆达莱斯#3mir");
 	sleep2 3000;
-	specialeffect EF_ENTRY,AREA, instance_npcname("Renovated Amdarais#3mir");
-	enablenpc instance_npcname("Renovated Amdarais#3mir");
+	specialeffect EF_ENTRY,AREA, instance_npcname("改造阿姆达莱斯#3mir");
+	enablenpc instance_npcname("改造阿姆达莱斯#3mir");
 	next;
 	cutin "hero_iris_01",2;
 	mes "[艾丽斯]";
@@ -274,7 +274,7 @@ OnEvent:
 	disablenpc instance_npcname("Bijou#2mir");
 	disablenpc instance_npcname("Fenrir#3mir");
 	disablenpc instance_npcname("Iris#3mir");
-	disablenpc instance_npcname("Renovated Amdarais#3mir");
+	disablenpc instance_npcname("改造阿姆达莱斯#3mir");
 
 	monster 'map_name$,101,95,"Renovated Amdarais",3448,1, instance_npcname("eq#mir2") + "::OnMobDead";// P_AMDARAIS
 	'boss_id = $@mobid[0];
@@ -449,7 +449,7 @@ OnStop:
 	mes "[毕尤]";
 	mes "你们要付出代价";
 	mes "为毁掉我三年的心血！！";
-	mes "Slowly...";
+	mes "慢慢地……";
 	mes "而且要痛苦无比……！！";
 	close2;
 	cutin "",255;
@@ -520,7 +520,7 @@ OnMobDead:
 	mes "[毕尤]";
 	mes "感觉如何？很痛吧？";
 	mes "你现在应该已经麻痹了吧。";
-	mes "...But don't expect me to kill you that easily...";
+	mes "……但别以为我会那么容易杀了你……";
 	next;
 	mes "[毕尤]";
 	mes "我应该先解决这个烦人的女牧师。";
@@ -587,7 +587,7 @@ OnMobDead:
 	next;
 	cutin "bijou_03",2;
 	mes "[毕尤]";
-	mes "....~Gasps~";
+	mes "……呼……呼……";
 	mes "我快喘不过气了！";
 	next;
 	cutin "sarah_hero3_2",2;
@@ -651,7 +651,7 @@ OnMobDead:
 	next;
 	cutin "hero_iris_01",2;
 	mes "[艾丽斯]";
-	mes "Umm....";
+	mes "嗯……";
 	mes "～呕吐声～";
 	mes "呕！好苦！";
 	mes "这到底是什么东西？！";
@@ -686,7 +686,7 @@ OnMobDead:
 	next;
 	cutin "fenrir_b",2;
 	mes "[芬里尔]";
-	mes "...Be careful. She's about to attack!";
+	mes "……小心，她要攻击了！";
 	close2;
 	cutin "",255;
 	if ('step == 6) {
@@ -801,7 +801,7 @@ OnStop:
 	specialeffect EF_TETRACASTING,AREA, instance_npcname("Iris#6mir");
 	next;
 	mes "[毕尤]";
-	mes "Because...";
+	mes "因为……";
 	mes "这将是给你们的最后一击，致命的一击。哇哈哈哈！";
 	specialeffect EF_TETRACASTING,AREA, instance_npcname("Iris#6mir");
 	next;
@@ -809,7 +809,7 @@ OnStop:
 	enablenpc instance_npcname("Sarah#6mir");
 	cutin "bijou_03",2;
 	mes "[毕尤]";
-	mes "....~Sighs~";
+	mes "……唉……";
 	mes "咦……？在我的肚子里……";
 	mes "这把刀……";
 	mes "莎……莎拉……？怎么会？";
@@ -822,7 +822,7 @@ OnStop:
 	next;
 	mes "[毕尤]";
 	mes "为什么……？告诉我为什么！";
-	mes "...That...that little chick...Was that it? Because she's your sister? Was that it? Tell me, Sarah!";
+	mes "……那……那个小丫头……就因为这个？因为她是你妹妹？是这样吗？告诉我，莎拉！";
 	next;
 	mes "[毕尤]";
 	mes "～呻吟～";
@@ -838,12 +838,12 @@ OnStop:
 	mes "（是她救了我吗……？）";
 	next;
 	mes "[艾丽斯]";
-	mes "Sarah...";
+	mes "莎拉……";
 	mes "你是莎拉，对吧？";
 	mes "听说我们小时候就分开了……";
 	next;
 	mes "[艾丽斯]";
-	mes "...So what's your plan, huh? Why...why did you save me?!";
+	mes "……那你打算怎么办？为什么……为什么要救我？！";
 	mes "别以为这能改变我的信念！我永远、永远不会原谅你！";
 	next;
 	mes "[艾丽斯]";
@@ -897,7 +897,7 @@ OnStop:
 
 1@mir,100,85,7	duplicate(dummy_npc)	潘利尔#3mir	4_F_FENRIR
 1@mir,102,88,3	duplicate(dummy_npc)	毕尤#3mir	4_F_BIJOU
-1@mir,101,95,1	duplicate(dummy_npc)	Renovated Amdarais#3mir	3448
+1@mir,101,95,1	duplicate(dummy_npc)	改造阿姆达莱斯#3mir	3448
 
 1@mir,94,73,3	duplicate(芬里尔#boss1a)	潘利尔#boss1b	4_F_FENRIR,2,2
 1@mir,112,73,3	duplicate(芬里尔#boss1a)	潘利尔#boss1c	4_F_FENRIR,2,2
