@@ -1906,7 +1906,7 @@ OnTouch:
 	if (ep16_royal == 9) {
 		cloakoffnpcself( "Ian Walther#ep16_lib01" );
 		cloakoffnpcself( "勒维耶·维格纳#ep16_lib01" );
-		cloakoffnpcself( "Maximilian Roegenburg#ep16_lib01" );
+		cloakoffnpcself( "马克西米利安·雷根布尔格#ep16_lib01" );
 		cloakoffnpcself( "克罗内克·G·海涅#ep16_01_lib01" );
 		cloakoffnpcself( "尼希尔·M·海涅#ep16_lib01" );
 		setpcblock PCBLOCK_NPC, true;
@@ -1922,7 +1922,7 @@ OnTouch:
 OnInit:
 	cloakonnpc "Ian Walther#ep16_lib01";
 	cloakonnpc "勒维耶·维格纳#ep16_lib01";
-	cloakonnpc "Maximilian Roegenburg#ep16_lib01";
+	cloakonnpc "马克西米利安·雷根布尔格#ep16_lib01";
 	cloakonnpc "克罗内克·G·海涅#ep16_01_lib01";
 	cloakonnpc "尼希尔·M·海涅#ep16_lib01";
 	end;
@@ -2087,7 +2087,7 @@ prt_lib,85,82,5	script	Ian Walther#ep16_lib01	1_M_JOBTESTER,{
 		else if (strnpcinfo(1) == "勒维耶·维格纳")
 			npctalk "...How will the things turn out from here...", "勒维耶·维格纳#ep16_lib01", bc_self;
 		else
-			npctalk "Incredible.", "Maximilian Roegenburg#ep16_lib01", bc_self;
+			npctalk "Incredible.", "马克西米利安·雷根布尔格#ep16_lib01", bc_self;
 		end;
 	}
 	.@char_id = getcharid(0);
@@ -2102,7 +2102,7 @@ prt_lib,85,82,5	script	Ian Walther#ep16_lib01	1_M_JOBTESTER,{
 		mes "[Ian Walther]";
 		mes "Only few people know about the Past Memories of the Royal Family and the Ritual of Blessing...";
 		next;
-		mes "[Maximilian]";
+		mes "[马克西米利安]";
 		mes "You need to make it more clear.";
 		mes "Just say it.";
 		next;
@@ -2110,7 +2110,7 @@ prt_lib,85,82,5	script	Ian Walther#ep16_lib01	1_M_JOBTESTER,{
 		mes "[Ian Walther]";
 		mes "Ah, it is....";
 		mes "That you are the only outsider who know about it, and there has been no precedent...";
-		npctalk "It is just circumstantial... Hum...", "Maximilian Roegenburg#ep16_lib01", bc_self;
+		npctalk "It is just circumstantial... Hum...", "马克西米利安·雷根布尔格#ep16_lib01", bc_self;
 		npctalk ".....", "尼希尔·M·海涅#ep16_lib01", bc_self;
 		next;
 		mes "[尼希尔]";
@@ -2147,7 +2147,7 @@ prt_lib,85,82,5	script	Ian Walther#ep16_lib01	1_M_JOBTESTER,{
 		mes "However, ^4d4dffTerra Gloria^000000 is gone...";
 		npctalk "Is Terra Gloria...?", "Ian Walther#ep16_lib01", bc_self;
 		npctalk "Is it gone? What happened...?", "勒维耶·维格纳#ep16_lib01", bc_self;
-		npctalk "!!!!!", "Maximilian Roegenburg#ep16_lib01", bc_self;
+		npctalk "!!!!!", "马克西米利安·雷根布尔格#ep16_lib01", bc_self;
 		next;
 		mes "[克罗内克]";
 		mes "It disappeared when we were taking care of fallen Peter.";
@@ -2179,7 +2179,7 @@ prt_lib,85,82,5	script	Ian Walther#ep16_lib01	1_M_JOBTESTER,{
 		sleep2 500;
 		npctalk "What?", "Ian Walther#ep16_lib01", bc_self;
 		npctalk "!!!", "勒维耶·维格纳#ep16_lib01", bc_self;
-		npctalk "Ha!", "Maximilian Roegenburg#ep16_lib01", bc_self;
+		npctalk "Ha!", "马克西米利安·雷根布尔格#ep16_lib01", bc_self;
 		mes "...So...";
 		next;
 		mes "[尼希尔]";
@@ -2203,11 +2203,11 @@ prt_lib,85,82,5	script	Ian Walther#ep16_lib01	1_M_JOBTESTER,{
 		mes "Although us, the Walther family did not attend the Royal Assembly, we won't sit back and watch this matter!";
 		next;
 		unittalk .@account_id, "" + .@name$ + " : (He must have been drugged then.)", bc_self;
-		mes "[Maximilian]";
+		mes "[马克西米利安]";
 		mes "Ha, I have heard what people say about you. You really don't seem to be able to do anything right.";
 		mes "Why did you do such a thing?";
 		next;
-		mes "[Maximilian]";
+		mes "[马克西米利安]";
 		mes "Did you want to be a king so badly?";
 		mes "Peter is a member of your own family!";
 		next;
@@ -2229,7 +2229,7 @@ prt_lib,85,82,5	script	Ian Walther#ep16_lib01	1_M_JOBTESTER,{
 		mes "I am a Heine, one of the seven royal families of Rune-Midgarts.";
 		mes "I didn't do such a thing on purpose.";
 		next;
-		mes "[Maximilian]";
+		mes "[马克西米利安]";
 		mes "Are you sure that you didn't do it to avenge for losing your position as a candidate for the throne?";
 		next;
 		mes "[尼希尔]";
@@ -2251,7 +2251,7 @@ prt_lib,85,82,5	script	Ian Walther#ep16_lib01	1_M_JOBTESTER,{
 		mes "If it is true, Lord Heine must have not done such a thing on purpose.";
 		mes "Someone must have taken advantage on him according to a plot...";
 		next;
-		mes "[Maximilian]";
+		mes "[马克西米利安]";
 		mes "Do you have a proof?";
 		mes "You didn't just come up with the story to help him out, right?";
 		unittalk .@account_id, "" + .@name$ + " : (Skia will testify for him since we found him together.)", bc_self;
@@ -2302,7 +2302,7 @@ prt_lib,85,82,5	script	Ian Walther#ep16_lib01	1_M_JOBTESTER,{
 		cloakonnpcself( "Ian Walther#ep16_lib01" );
 		sleep2 500;
 		cloakonnpcself( "勒维耶·维格纳#ep16_lib01" );
-		cloakonnpcself( "Maximilian Roegenburg#ep16_lib01" );
+		cloakonnpcself( "马克西米利安·雷根布尔格#ep16_lib01" );
 		sleep2 500;
 		npctalk "Nyhill, come with me.", "克罗内克·G·海涅#ep16_01_lib02", bc_self;
 		sleep2 3000;
@@ -2324,7 +2324,7 @@ prt_lib,85,82,5	script	Ian Walther#ep16_lib01	1_M_JOBTESTER,{
 	cloakonnpcself( "Ian Walther#ep16_lib01" );
 	sleep2 500;
 	cloakonnpcself( "勒维耶·维格纳#ep16_lib01" );
-	cloakonnpcself( "Maximilian Roegenburg#ep16_lib01" );
+	cloakonnpcself( "马克西米利安·雷根布尔格#ep16_lib01" );
 	sleep2 500;
 	npctalk "Nyhill, come with me.", "克罗内克·G·海涅#ep16_01_lib02", bc_self;
 	sleep2 3000;
@@ -2334,7 +2334,7 @@ prt_lib,85,82,5	script	Ian Walther#ep16_lib01	1_M_JOBTESTER,{
 	end;
 }
 prt_lib,88,83,4	duplicate(Ian Walther#ep16_lib01)	勒维耶·维格纳#ep16_lib01	4_EP16_LOUVIERE
-prt_lib,91,78,2	duplicate(Ian Walther#ep16_lib01)	Maximilian Roegenburg#ep16_lib01	4_EP16_MAX
+prt_lib,91,78,2	duplicate(Ian Walther#ep16_lib01)	马克西米利安·雷根布尔格#ep16_lib01	4_EP16_MAX
 
 
 prt_lib,94,82,3	script	Dimension Warper MkII#ep16_lib	PORTAL,{
@@ -5884,130 +5884,130 @@ OnInit:
 
 // Right Side
 // Roegenburg
-prt_cas_q,90,186,5	script	Maximilian Roegenburg#ep16lug	4_EP16_MAX,{
+prt_cas_q,90,186,5	script	马克西米利安·雷根布尔格#ep16lug	4_EP16_MAX,{
 	if (checkweight(1301,1) == 0) {
-		mes "[Maximilian]";
+		mes "[马克西米利安]";
 		mes "You seem to have a lot of luggage. Are you OK?";
 		mes "It looks a lot and large.";
 		next;
-		mes "[Maximilian]";
+		mes "[马克西米利安]";
 		mes "How about cutting down some?";
 		close;
 	}
 	if (BaseLevel < 100) {
-		mes "[Maximilian]";
+		mes "[马克西米利安]";
 		mes "The Roegenburg welcomes adventurers with various experiences, but it is somewhat early for us to work with you.";
 		mes "希望以后还能见到你。";
 		close;
 	}
 	if (ep16_lug == 0) {
 		if (isbegin_quest(7682) != 1) {
-			mes "[Maximilian]";
-			mes "How could you come in here?";
-			mes "Nobody can come into this place if you are not a staff. Please go outside.";
+			mes "[马克西米利安]";
+			mes "你怎么进来的？";
+			mes "不是工作人员不能进入这里，请出去。";
 			close;
 		}
-		mes "[Maximilian]";
-		mes "Hello, adventurers. I am honored you have visited the ^0000cdRoegenburg^000000. I am ^0000cdMaximilian Roegenburg^000000.";
+		mes "[马克西米利安]";
+		mes "你好，冒险者。很高兴你拜访^0000cd雷根布尔格家族^000000。我是^0000cd马克西米利安·雷根布尔格^000000。";
 		next;
-		mes "[Maximilian]";
-		mes "We are one of seven royal families that found the kingdom and have work hard for Rune-Midgarts.";
+		mes "[马克西米利安]";
+		mes "我们是建立王国的七大王室之一，一直为卢恩-米德加尔特尽心尽力。";
 		next;
-		mes "[Maximilian]";
-		mes "^0000cdHelmut Roegenburg^000000, the heir of our family, is supposed to participate in the royal assembly. How about seeing him?";
+		mes "[马克西米利安]";
+		mes "我们家族的继承人^0000cd赫尔穆特·雷根布尔格^000000将参加王室会议。要不要见见他？";
 		next;
 		cutin "16hel",0;
-		mes "[Helmut]";
-		mes "Hello, I am ^0000cdHelmut Roegenburg^000000.";
+		mes "[赫尔穆特]";
+		mes "你好，我是^0000cd赫尔穆特·雷根布尔格^000000。";
 		next;
 		mes "[" + strcharinfo(0) + "]";
-		mes "Hello, I'm invited to this banquet. " + strcharinfo(0) + " It is nice to see you.";
+		mes "你好，我是受邀参加宴会的" + strcharinfo(0) + "，很高兴见到你。";
 		next;
-		mes "[Helmut]";
-		mes "I am honored to see the hero who defeated Morocc. Please enjoy your time while you are in the Roegenburg.";
+		mes "[赫尔穆特]";
+		mes "很荣幸见到击败梦罗克的英雄。在雷根布尔格家族期间请尽情享受。";
 		next;
-		mes "[Helmut]";
-		mes "If you have time, how about seeing the rest people of the Roegenburg?";
+		mes "[赫尔穆特]";
+		mes "如果有时间，要不要见见雷根布尔格家的其他人？";
 		next;
-		mes "[Helmut]";
-		mes "Brother, it will be helpful to listen to the story of the family from ^0000cdWolf Roegenburg^000000.";
+		mes "[赫尔穆特]";
+		mes "哥哥，去听听^0000cd沃尔夫·雷根布尔格^000000讲讲家族的事会很有帮助。";
 		next;
 		mes "[" + strcharinfo(0) + "]";
-		mes "Yes, it is a good opportunity, of course.";
+		mes "当然，这是个好机会。";
 		setquest 14495;// To Wolf
 		ep16_lug = 1;
 		close3;
 	}
 	if (ep16_lug == 1) {
-		mes "[Maximilian]";
+		mes "[马克西米利安]";
 		mes "Did you see the children of the Roegenburg? They look like babies, but now when I see them in the palace, I am pleased that they are almost grown up.";
 		next;
-		mes "[Maximilian]";
+		mes "[马克西米利安]";
 		mes "You met Helmut already. It will be helpful to you if you meet the second son, Wolf.";
 		next;
-		mes "[Maximilian]";
+		mes "[马克西米利安]";
 		mes "He is in charge of all matters of the Roegenburg instead of the first son who is busy for participation in the royal assembly and protection of the border. You will hear lots of interesting stories.";
 		close;
 	}
 	if (ep16_lug > 1 && ep16_lug < 7) {
-		mes "[Maximilian]";
+		mes "[马克西米利安]";
 		mes "The Roegenburg is proud that we are descents of Wilhelm, the national hero, and contributed to the foundation and development of Rune-Midgarts Kingdom.";
 		next;
-		mes "[Maximilian]";
+		mes "[马克西米利安]";
 		mes "Therefore, we hoped that the children could grow into decent adults, but they were raised without their parents' care and now they tend to behave rudely and act as they want.";
 		next;
-		mes "[Maximilian]";
+		mes "[马克西米利安]";
 		mes "If you feel uncomfortable when you talk with them, please understand kindly.";
 		next;
-		mes "[Maximilian]";
+		mes "[马克西米利安]";
 		mes "They are the children who will lead the family, but they are going different from what the Roegenburg aims for.";
 		next;
-		mes "[Maximilian]";
+		mes "[马克西米利安]";
 		mes "The first son stays on the front, risking his life everyday and the second is doing business, which is against the family tradition.";
 		next;
-		mes "[Maximilian]";
+		mes "[马克西米利安]";
 		mes "The third son would leave the house and hang out on the back street, but we cannot continue to employ some to monitor him all the times.";
 		next;
-		mes "[Maximilian]";
+		mes "[马克西米利安]";
 		mes "But the youngest, Agnes, has grown as good girl and I am happy when I think of her.";
 		next;
-		mes "[Maximilian]";
+		mes "[马克西米利安]";
 		mes "Ah, I am sorry to talk too much on our family. I have become talkative as I get old.";
 		next;
-		mes "[Maximilian]";
+		mes "[马克西米利安]";
 		mes "Please forgive me grumbling and forget this old man's complaints.";
 		close;
 	}
 	if (ep16_lug == 7 || ep16_lug == 8) {
-		mes "[Maximilian]";
+		mes "[马克西米利安]";
 		mes "Myer, Myer...";
 		mes "I cannot believe that Myer did that.";
 		next;
-		mes "[Maximilian]";
+		mes "[马克西米利安]";
 		mes "He spread the bad rumor about the family but I think he did it because he is desperate.";
 		next;
-		mes "[Maximilian]";
+		mes "[马克西米利安]";
 		mes "I have let the children do as they want but I wanted to avoid a war.";
 		next;
-		mes "[Maximilian]";
+		mes "[马克西米利安]";
 		mes "But I know it is unlikely that Helmut becomes a king and so leave them to do as they like.";
 		next;
-		mes "[Maximilian]";
+		mes "[马克西米利安]";
 		mes "However, I would like to leverage this opportunity to collect the capabilities of the family members to protect the family.";
 		mes "Opportunities are found in times of crisis.";
 		close;
 	}
 	if (ep16_lug == 9) {
-		mes "[Maximilian]";
+		mes "[马克西米利安]";
 		mes "Please bring Helmut. He must be in the ^0000cdcheckpoint near the border with Schwarzwald^000000. He is responsible for the patrol party.";
 		mes "Please.";
 		close;
 	}
 	if (ep16_lug == 10) {
-		mes "[Maximilian]";
+		mes "[马克西米利安]";
 		mes "Welcome adventurer. Did you have a safe travel?";
 		next;
-		mes "[Maximilian]";
+		mes "[马克西米利安]";
 		mes "I cannot see Helmut. Did he refuse to come?";
 		next;
 		mes "[" + strcharinfo(0) + "]";
@@ -6015,41 +6015,41 @@ prt_cas_q,90,186,5	script	Maximilian Roegenburg#ep16lug	4_EP16_MAX,{
 		next;
 		mes "[Told Maximilian and Wolf about Helmut's will and the successorship]";
 		next;
-		mes "[Maximilian]";
+		mes "[马克西米利安]";
 		mes "I knew something when Helmut left, but I didn't expect that he would give up the successorship.";
 		mes "But if that is what Helmut wants, I don't object to it.";
 		next;
-		mes "[Maximilian]";
+		mes "[马克西米利安]";
 		mes "This fact will be announced as soon as the royal assembly and banquet are finished. Wolf, now you should lead our family. I hope this will not be a burden to you.";
 		next;
 		cutin "16wol_nor",2;
-		mes "[Wolf]";
+		mes "[沃尔夫]";
 		mes ".......";
 		next;
 		cutin "",255;
 		mes "[" + strcharinfo(0) + "]";
 		mes "You have taken a firm attitude that you never showed before.";
 		next;
-		mes "[Maximilian]";
+		mes "[马克西米利安]";
 		mes "Once I tried to move the children as I want and failed. Since then I left them to do as they like. But now I know.";
 		next;
-		mes "[Maximilian]";
+		mes "[马克西米利安]";
 		mes "I realized that a new age needs children. I will work for the family and country in the way the children wants to do.";
 		next;
 		cutin "16wol_nor",2;
-		mes "[Wolf]";
+		mes "[沃尔夫]";
 		mes "I seem to have forced my way to Helmut and people in the family.";
 		next;
-		mes "[Wolf]";
+		mes "[沃尔夫]";
 		mes "There is something rather than a war to have influence up to every corner in the continent.";
 		next;
-		mes "[Wolf]";
+		mes "[沃尔夫]";
 		mes "As Myer said, I am looking for other approaches and I will.";
 		next;
-		mes "[Wolf]";
+		mes "[沃尔夫]";
 		mes "Dear adventurer, if you don't mind, won't you deliver my will to ^0000cdMyer^000000?";
 		next;
-		mes "[Wolf]";
+		mes "[沃尔夫]";
 		mes "That I have given up wars and am looking for better solution and that if he can, visit the family and see the people.";
 		next;
 		mes "[" + strcharinfo(0) + "]";
@@ -6060,53 +6060,53 @@ prt_cas_q,90,186,5	script	Maximilian Roegenburg#ep16lug	4_EP16_MAX,{
 		close3;
 	}
 	if (ep16_lug == 11) {
-		mes "[Maximilian]";
+		mes "[马克西米利安]";
 		mes "Please deliver the story of Helmut to Myer.";
 		mes "He must be somewhere in Prontera.";
 		close;
 	}
 	if (ep16_lug == 12) {
-		mes "[Maximilian]";
+		mes "[马克西米利安]";
 		mes "Dear adventurer, welcome.";
 		next;
 		cutin "16wol_nor",2;
-		mes "[Wolf]";
+		mes "[沃尔夫]";
 		mes "Dear adventurer, did you deliver the message to Myer? what did he say?";
 		next;
 		mes "[" + strcharinfo(0) + "]";
 		mes "He said it is good to give up wars. Myer has a lot of trust in you. He said he would help you as much as he can, if you need his help.";
 		next;
-		mes "[Wolf]";
+		mes "[沃尔夫]";
 		mes "I want him to visit us more than to help me.";
 		next;
 		mes "[" + strcharinfo(0) + "]";
 		mes "Ah, he also said he would come after the banquet is finished.";
 		next;
-		mes "[Wolf]";
+		mes "[沃尔夫]";
 		mes "Well I am happy that our relationship will improve.";
 		next;
-		mes "[Wolf]";
+		mes "[沃尔夫]";
 		mes "Once, we were the closest friends, but the relationship became awkward after he left the family.";
 		next;
-		mes "[Wolf]";
+		mes "[沃尔夫]";
 		mes "Anyway, I think we have to make preparation to welcome him seriously.";
 		next;
 		cutin "",255;
-		mes "[Maximilian]";
+		mes "[马克西米利安]";
 		mes "I am glad that now everything has found its place. I have been worried a lot.";
 		next;
-		mes "[Maximilian]";
+		mes "[马克西米利安]";
 		mes "All theses things are thanks to you. I feel safe now that everyone has their right places and will work hard for the family and country.";
 		next;
 		cutin "16wol_nor",2;
-		mes "[Wolf]";
+		mes "[沃尔夫]";
 		mes "Dear adventurer. Thank you very much for helping my family. I have been thinking how I can reward you for your contribution, but cannot find anything that is comparable to the magnitude of thank.";
 		next;
-		mes "[Wolf]";
+		mes "[沃尔夫]";
 		mes "However at least to express my mind, I have prepare a small present. Please take it.";
 		next;
 		cutin "",255;
-		mes "[Maximilian]";
+		mes "[马克西米利安]";
 		mes "If you need a help from the Roegenburg, come to use anytime. The gate of the Roegenburg is always opened to you.";
 		completequest 14507;// To Maximilian
 		getitem 6919,10;// TokenOfHonor
@@ -6115,126 +6115,126 @@ prt_cas_q,90,186,5	script	Maximilian Roegenburg#ep16lug	4_EP16_MAX,{
 		close;
 	}
 	if (ep16_lug > 12) {
-		mes "[Maximilian]";
+		mes "[马克西米利安]";
 		mes "Dear adventurer, welcome.";
 		mes "I wanted to thank you always. Thanks to your contribution, my family is returning to safety.";
 		next;
-		mes "[Maximilian]";
+		mes "[马克西米利安]";
 		mes "It seems that my family had no problem, but inside the wall, we didn't have trust in one another and were not mixed.";
 		next;
-		mes "[Maximilian]";
+		mes "[马克西米利安]";
 		mes "But now we are getting along. Thank you very much again.";
 		close;
 	}
 }
 
-prt_cas_q,96,184,1	script	Agnes Roegenburg#ep16lu	4_EP16_AGNES,{
+prt_cas_q,96,184,1	script	阿格妮丝·雷根布尔格#ep16lu	4_EP16_AGNES,{
 	if (checkweight(1301,1) == 0) {
-		mes "[Agnes Roegenburg]";
+		mes "[阿格妮丝·雷根布尔格]";
 		mes "Well, you seem to have lots of luggage. How about removing some?";
 		close;
 	}
 	if (ep16_lug == 0) {
 		cutin "16agn_nor",2;
-		mes "[Agnes]";
+		mes "[阿格妮丝]";
 		mes "Hello, nice to meet you.";
 		mes "Did you visit to see my grandfather?";
 		next;
-		mes "[Agnes]";
+		mes "[阿格妮丝]";
 		mes "If so, he is over there. You can find him there.";
 		mes "Then, have a good time.";
 		close3;
 	}
 	if (ep16_lug == 1) {
 		cutin "16agn_nor",2;
-		mes "[Agnes]";
+		mes "[阿格妮丝]";
 		mes "Did you see my brothers?";
 		mes "If you don't, make sure to see Wolf and have talk with him.";
 		next;
-		mes "[Agnes]";
+		mes "[阿格妮丝]";
 		mes "Nowadays, he shares many works with my grandfather and he has a lot to talk with you.";
 		mes "So the time for me to talk with him is quite reduced though.";
 		close3;
 	}
 	if (ep16_lug == 2 || ep16_lug == 3) {
 		cutin "16agn_nor",2;
-		mes "[Agnes]";
+		mes "[阿格妮丝]";
 		mes "The banquet has started but I haven't yet found any body who I go with.";
 		mes "Originally Wolf is supposed to go with me, but it is canceled as he became busy.";
 		next;
-		mes "[Agnes]";
+		mes "[阿格妮丝]";
 		mes "If he had told me earlier he cannot go, I wouldn't have refused all those proposals.";
 		mes "Myer said he would go with me, but I am afraid he may leave as wind anytime.";
 		next;
-		mes "[Agnes]";
+		mes "[阿格妮丝]";
 		mes "I don't want anything big...";
 		mes "When we were young, we played together. They read me books.";
 		next;
-		mes "[Agnes]";
+		mes "[阿格妮丝]";
 		mes "I still like the best the books that my brothers read me.";
 		mes "Those princes and princesses in those books were all my friend.";
 		next;
-		mes "[Agnes]";
+		mes "[阿格妮丝]";
 		mes "Recently I read a story on a knight who sacrifices himself for a lady.";
 		mes "In the story, the lady handed a pretty handkerchief to the knight.";
 		next;
-		mes "[Agnes]";
+		mes "[阿格妮丝]";
 		mes "Then, I realized that what I had lacked.";
 		mes "It was a pretty handkerchief.";
 		next;
-		mes "[Agnes]";
+		mes "[阿格妮丝]";
 		mes "So I carry lots of pretty handkerchiefs so that I can hand them to my knight anytime.";
 		mes "But there is no one for me to hand my handkerchiefs to...";
 		close3;
 	}
 	if (ep16_lug == 4 || ep16_lug == 5) {
 		cutin "16agn_nor",2;
-		mes "[Agnes]";
+		mes "[阿格妮丝]";
 		mes "Did you see him too?";
 		mes "He came with Myer.";
 		next;
-		mes "[Agnes]";
+		mes "[阿格妮丝]";
 		mes "He is so handsome. I wonder what family he is from.";
 		mes "I am sorry that I left so early that I couldn't talk with him at all. I asked Myer who he is, but he didn't tell me.";
 		close3;
 	}
 	if (ep16_lug == 6) {
 		cutin "16agn_nor",2;
-		mes "[Agnes]";
+		mes "[阿格妮丝]";
 		mes "Dear adventurer?";
 		mes "Wolf is looking for you. Do you have an appointment with him?";
 		next;
-		mes "[Agnes]";
+		mes "[阿格妮丝]";
 		mes "Why don't you visit Wolf?";
 		close3;
 	}
 	if (ep16_lug == 7) {
 		cutin "16agn_nor",2;
-		mes "[Agnes]";
+		mes "[阿格妮丝]";
 		mes "He is my brother, but he and other brothers are so childish.";
 		next;
-		mes "[Agnes]";
+		mes "[阿格妮丝]";
 		mes "Go out to the street in Prontera and ask 5-year old children, even they know the answer.";
 		next;
-		mes "[Agnes]";
+		mes "[阿格妮丝]";
 		mes "They are overlooking something bigger due to their personal desires. Of course, I also hate them and want to take revenge, but it does not solve the problem.";
 		next;
-		mes "[Agnes]";
+		mes "[阿格妮丝]";
 		mes "If they had thought about how the citizens of the kingdom can live more happily, they would not have acted like that.";
 		next;
-		mes "[Agnes]";
+		mes "[阿格妮丝]";
 		mes "Anyway, let's wait and see, as they are trying to think like adults.";
 		next;
-		mes "[Agnes]";
+		mes "[阿格妮丝]";
 		mes "But I feel safe that my grandfather stays with me.";
 		close3;
 	}
 	if (ep16_lug >= 8 && ep16_lug <= 12) {
 		cutin "16agn_nor",2;
-		mes "[Agnes]";
+		mes "[阿格妮丝]";
 		mes "You seem to have come to see my brothers? but there is no one in the house.";
 		next;
-		mes "[Agnes]";
+		mes "[阿格妮丝]";
 		mes "In a long time, we were together, but they left and I am lonely again. It is nice that they don't fight one another any more.";
 		close3;
 	}
@@ -6246,7 +6246,7 @@ prt_cas_q,96,184,1	script	Agnes Roegenburg#ep16lu	4_EP16_AGNES,{
 		switch( .@quest_id ) {
 		case 14508:
 			cutin "16agn_nor",2;
-			mes "[Agnes]";
+			mes "[阿格妮丝]";
 			mes "Dear adventurer, welcome back.";
 			mes "Pearls? soft hairs? Have you brought them?";
 			next;
@@ -6254,52 +6254,52 @@ prt_cas_q,96,184,1	script	Agnes Roegenburg#ep16lu	4_EP16_AGNES,{
 			if (countitem(722) < 3 || countitem(949) < 50) {
 				mes "Ah, it is....";
 				next;
-				mes "[Agnes]";
+				mes "[阿格妮丝]";
 				mes "Not yet? OK. We have still time.";
 				next;
-				mes "[Agnes]";
+				mes "[阿格妮丝]";
 				mes "You forget what I asked didn't you? ^0000cdThey are three " + getitemname(722) + " and 50 strands of " + getitemname(949) + "^000000.";
 				next;
-				mes "[Agnes]";
+				mes "[阿格妮丝]";
 				mes "Please don't be late!";
 				close3;
 			}
 			mes "Here you are.";
 			mes "Am I too late?";
 			next;
-			mes "[Agnes]";
+			mes "[阿格妮丝]";
 			mes "No! you have brought all of them. I'm so happy!";
 			next;
-			mes "[Agnes]";
+			mes "[阿格妮丝]";
 			mes "I'll take pearls to the jeweler, the best jeweler. They are so pretty!";
 			next;
-			mes "[Agnes]";
+			mes "[阿格妮丝]";
 			mes "I'll send soft hairs too. I wonder what they will turn into.";
 			next;
-			mes "[Agnes]";
+			mes "[阿格妮丝]";
 			mes "Ah, I need a handkerchief. There are so many things to do and I'm so busy.";
 			next;
-			mes "[Agnes]";
+			mes "[阿格妮丝]";
 			mes "Oh, I would like to thank you for working hard for me. Here you are.";
 			next;
-			mes "[Agnes]";
+			mes "[阿格妮丝]";
 			mes "And Can I ask you to get more? I am afraid that cloth is not sufficient.";
 			next;
 			mes "[" + strcharinfo(0) + "]";
 			if( Sex == SEX_FEMALE) {
 				mes "I guess so. I will help you to the best of my ability.";
 				next;
-				mes "[Agnes]";
+				mes "[阿格妮丝]";
 				mes "You really understand me. I'm so happy.";
 			}
 			else {
 				mes "Yes, I will.";
 				next;
-				mes "[Agnes]";
+				mes "[阿格妮丝]";
 				mes "Thank you very much";
 			}
 			next;
-			mes "[Agnes]";
+			mes "[阿格妮丝]";
 			mes "See you tomorrow. Have a nice day.";
 			delitem 722,3;// Pearl
 			delitem 949,50;// Feather
@@ -6312,53 +6312,53 @@ prt_cas_q,96,184,1	script	Agnes Roegenburg#ep16lu	4_EP16_AGNES,{
 		case 14510:
 			if (countitem(7166) < 15 || countitem(507) < 30 || countitem(509) < 10) {
 				cutin "16agn_nor",2;
-				mes "[Agnes]";
+				mes "[阿格妮丝]";
 				mes "Dear adventurer, welcome back. You are a great person. I think you have obtained all, I guess.";
 				next;
-				mes "[Agnes]";
+				mes "[阿格妮丝]";
 				mes "If not, I will be really sad. I'm skipping meals to wear the pretty dress. So I'm so sensitive now.";
 				next;
 				mes "[" + strcharinfo(0) + "]";
 				mes "I am sorry but I forgot what I should get.";
 				next;
 				cutin "16agn_ang",2;
-				mes "[Agnes]";
+				mes "[阿格妮丝]";
 				mes "Oh, it's disappointing! I thought you would have a good memory as an adventurer.";
 				next;
 				cutin "16agn_nor",2;
-				mes "[Agnes]";
+				mes "[阿格妮丝]";
 				mes "Ah, I'm sorry. I got angry suddenly.";
 				next;
-				mes "[Agnes]";
+				mes "[阿格妮丝]";
 				mes "As I told you before. I didn't eat meals these days. Please forgive my misbehavior. Did yo get what I asked?";
 				next;
-				mes "[Agnes]";
+				mes "[阿格妮丝]";
 				mes "^0000cd15 pieces of " + getitemname(7166) + ", 30 " + getitemname(507) + ", and 10 " + getitemname(509) + "^000000. I'll make a pink dress that is softer than flower petal.";
 				next;
-				mes "[Agnes]";
+				mes "[阿格妮丝]";
 				mes "Then, please get them for me.";
 				close3;
 			}
 			cutin "16agn_nor",2;
-			mes "[Agnes]";
+			mes "[阿格妮丝]";
 			mes "Dear adventurer, welcome back. You are a great person. I think you have obtained all, I guess.";
 			next;
-			mes "[Agnes]";
+			mes "[阿格妮丝]";
 			mes "If not, I will be really sad. I'm skipping meals to wear the pretty dress. So I'm so sensitive now.";
 			next;
 			mes "[" + strcharinfo(0) + "]";
 			mes "Are these what you want?";
 			next;
-			mes "[Agnes]";
+			mes "[阿格妮丝]";
 			mes "Let me see.... Yes! they are what I wanted. You are the best.";
 			next;
-			mes "[Agnes]";
+			mes "[阿格妮丝]";
 			mes "It is very soft. Softer than the pink flower petals. If I make a flower with theses, the dress will feel like a flower.";
 			next;
-			mes "[Agnes]";
+			mes "[阿格妮丝]";
 			mes "Dear adventurer, Thank you very much. This is a small token of my sincerity.";
 			next;
-			mes "[Agnes]";
+			mes "[阿格妮丝]";
 			mes "Can I ask you to bring more? I need lots of dresses.";
 			delitem 7166,15;// Soft Silk
 			delitem 507,30;// Red Herb
@@ -6371,53 +6371,53 @@ prt_cas_q,96,184,1	script	Agnes Roegenburg#ep16lu	4_EP16_AGNES,{
 		case 14511:
 			if (countitem(6511) < 5 || countitem(6509) < 5 || countitem(6510) < 5) {
 				cutin "16agn_nor",2;
-				mes "[Agnes]";
+				mes "[阿格妮丝]";
 				mes "Dear adventurer, welcome back. You are a great person. I think you have obtained all, I guess.";
 				next;
-				mes "[Agnes]";
+				mes "[阿格妮丝]";
 				mes "If not, I will be really sad. I'm skipping meals to wear the pretty dress. So I'm so sensitive now.";
 				next;
 				mes "[" + strcharinfo(0) + "]";
 				mes "I am sorry but I forgot what I should get.";
 				next;
 				cutin "16agn_ang",2;
-				mes "[Agnes]";
+				mes "[阿格妮丝]";
 				mes "Oh, it's disappointing! I thought you would have a good memory as an adventurer.";
 				next;
 				cutin "16agn_nor",2;
-				mes "[Agnes]";
+				mes "[阿格妮丝]";
 				mes "Ah, I'm sorry. I got angry suddenly.";
 				next;
-				mes "[Agnes]";
+				mes "[阿格妮丝]";
 				mes "As I told you before. I didn't eat meals these days. Please forgive my misbehavior. Did yo get what I asked?";
 				next;
-				mes "[Agnes]";
+				mes "[阿格妮丝]";
 				mes "^0000cd5 " + getitemname(6511) + ", 5 " + getitemname(6510) + " and 5 " + getitemname(6509) + "^000000. I will use them to make a plain but beautiful decoration.";
 				next;
-				mes "[Agnes]";
+				mes "[阿格妮丝]";
 				mes "Then, please get them for me.";
 				close3;
 			}
 			cutin "16agn_nor",2;
-			mes "[Agnes]";
+			mes "[阿格妮丝]";
 			mes "Dear adventurer, welcome back. You are a great person. I think you have obtained all, I guess.";
 			next;
-			mes "[Agnes]";
+			mes "[阿格妮丝]";
 			mes "If not, I will be really sad. I'm skipping meals to wear the pretty dress. So I'm so sensitive now.";
 			next;
 			mes "[" + strcharinfo(0) + "]";
 			mes "Are these what you want?";
 			next;
-			mes "[Agnes]";
+			mes "[阿格妮丝]";
 			mes "Let me see.... Yes! they are what I wanted. You are the best.";
 			next;
-			mes "[Agnes]";
+			mes "[阿格妮丝]";
 			mes "I think I can use these to make a beautiful corsage. It will be fresh and beautiful.";
 			next;
-			mes "[Agnes]";
+			mes "[阿格妮丝]";
 			mes "Dear adventurer, Thank you very much. This is a small token of my sincerity.";
 			next;
-			mes "[Agnes]";
+			mes "[阿格妮丝]";
 			mes "Can I ask you to bring more? I need lots of dresses.";
 			delitem 6511,5;// Beautiful Flower
 			delitem 6509,5;// Mysterious Flower
@@ -6429,10 +6429,10 @@ prt_cas_q,96,184,1	script	Agnes Roegenburg#ep16lu	4_EP16_AGNES,{
 			close3;
 		case 14512:
 			cutin "16agn_nor",2;
-			mes "[Agnes]";
+			mes "[阿格妮丝]";
 			mes "Dear adventurer, welcome back. You are a great person. I think you have obtained all, I guess.";
 			next;
-			mes "[Agnes]";
+			mes "[阿格妮丝]";
 			mes "If not, I will be really sad. I'm skipping meals to wear the pretty dress. So I'm so sensitive now.";
 			next;
 			mes "[" + strcharinfo(0) + "]";
@@ -6440,35 +6440,35 @@ prt_cas_q,96,184,1	script	Agnes Roegenburg#ep16lu	4_EP16_AGNES,{
 				mes "I am sorry but I forgot what I should get.";
 				next;
 				cutin "16agn_ang",2;
-				mes "[Agnes]";
+				mes "[阿格妮丝]";
 				mes "Oh, it's disappointing! I thought you would have a good memory as an adventurer.";
 				next;
 				cutin "16agn_nor",2;
-				mes "[Agnes]";
+				mes "[阿格妮丝]";
 				mes "Ah, I'm sorry. I got angry suddenly.";
 				next;
-				mes "[Agnes]";
+				mes "[阿格妮丝]";
 				mes "As I told you before. I didn't eat meals these days. Please forgive my misbehavior. Did yo get what I asked?";
 				next;
-				mes "[Agnes]";
+				mes "[阿格妮丝]";
 				mes "^0000cd20 " + getitemname(7205) + "^000000. I want to make a dress that is deeper and darker than the nigh sky.";
 				next;
-				mes "[Agnes]";
+				mes "[阿格妮丝]";
 				mes "Then, please get them for me.";
 				close3;
 			}
 			mes "Are these what you want?";
 			next;
-			mes "[Agnes]";
+			mes "[阿格妮丝]";
 			mes "Let me see.... Yes! they are what I wanted. You are the best.";
 			next;
-			mes "[Agnes]";
+			mes "[阿格妮丝]";
 			mes "I will use these materials to make an elegant dress as dark as nigh sky. Wearing this, I will give an image of a sleek cat.";
 			next;
-			mes "[Agnes]";
+			mes "[阿格妮丝]";
 			mes "Dear adventurer, Thank you very much. This is a small token of my sincerity.";
 			next;
-			mes "[Agnes]";
+			mes "[阿格妮丝]";
 			mes "Can I ask you to bring more? I need lots of dresses.";
 			delitem 7205,20;// Piece of Black Cloth
 			erasequest 14512;// Dress of the Night Sky
@@ -6478,10 +6478,10 @@ prt_cas_q,96,184,1	script	Agnes Roegenburg#ep16lu	4_EP16_AGNES,{
 			close3;
 		case 14513:
 			cutin "16agn_nor",2;
-			mes "[Agnes]";
+			mes "[阿格妮丝]";
 			mes "Dear adventurer, welcome back. You are a great person. I think you have obtained all, I guess.";
 			next;
-			mes "[Agnes]";
+			mes "[阿格妮丝]";
 			mes "If not, I will be really sad. I'm skipping meals to wear the pretty dress. So I'm so sensitive now.";
 			next;
 			mes "[" + strcharinfo(0) + "]";
@@ -6489,35 +6489,35 @@ prt_cas_q,96,184,1	script	Agnes Roegenburg#ep16lu	4_EP16_AGNES,{
 				mes "I am sorry but I forgot what I should get.";
 				next;
 				cutin "16agn_ang",2;
-				mes "[Agnes]";
+				mes "[阿格妮丝]";
 				mes "Oh, it's disappointing! I thought you would have a good memory as an adventurer.";
 				next;
 				cutin "16agn_nor",2;
-				mes "[Agnes]";
+				mes "[阿格妮丝]";
 				mes "Ah, I'm sorry. I got angry suddenly.";
 				next;
-				mes "[Agnes]";
+				mes "[阿格妮丝]";
 				mes "As I told you before. I didn't eat meals these days. Please forgive my misbehavior. Did yo get what I asked?";
 				next;
-				mes "[Agnes]";
+				mes "[阿格妮丝]";
 				mes "^0000cd20 strands of " + getitemname(7122) + "^000000. I want to make a shawl of fire that is flaming more fiercely than the sun.";
 				next;
-				mes "[Agnes]";
+				mes "[阿格妮丝]";
 				mes "Then, please get them for me.";
 				close3;
 			}
 			mes "Are these what you want?";
 			next;
-			mes "[Agnes]";
+			mes "[阿格妮丝]";
 			mes "Let me see.... Yes! they are what I wanted. You are the best.";
 			next;
-			mes "[Agnes]";
+			mes "[阿格妮丝]";
 			mes "In the banquet, people will not be able to take their eyes from my flaming shawl, which is very nice.";
 			next;
-			mes "[Agnes]";
+			mes "[阿格妮丝]";
 			mes "Dear adventurer, Thank you very much. This is a small token of my sincerity.";
 			next;
-			mes "[Agnes]";
+			mes "[阿格妮丝]";
 			mes "Can I ask you to bring more? I need lots of dresses.";
 			delitem 7122,20;// Burning Hair
 			erasequest 14513;// Shawl of the Blazing Sun
@@ -6527,10 +6527,10 @@ prt_cas_q,96,184,1	script	Agnes Roegenburg#ep16lu	4_EP16_AGNES,{
 			close3;
 		case 14514:
 			cutin "16agn_nor",2;
-			mes "[Agnes]";
+			mes "[阿格妮丝]";
 			mes "Dear adventurer, welcome back. You are a great person. I think you have obtained all, I guess.";
 			next;
-			mes "[Agnes]";
+			mes "[阿格妮丝]";
 			mes "If not, I will be really sad. I'm skipping meals to wear the pretty dress. So I'm so sensitive now.";
 			next;
 			mes "[" + strcharinfo(0) + "]";
@@ -6538,35 +6538,35 @@ prt_cas_q,96,184,1	script	Agnes Roegenburg#ep16lu	4_EP16_AGNES,{
 				mes "I am sorry but I forgot what I should get.";
 				next;
 				cutin "16agn_ang",2;
-				mes "[Agnes]";
+				mes "[阿格妮丝]";
 				mes "Oh, it's disappointing! I thought you would have a good memory as an adventurer.";
 				next;
 				cutin "16agn_nor",2;
-				mes "[Agnes]";
+				mes "[阿格妮丝]";
 				mes "Ah, I'm sorry. I got angry suddenly.";
 				next;
-				mes "[Agnes]";
+				mes "[阿格妮丝]";
 				mes "As I told you before. I didn't eat meals these days. Please forgive my misbehavior. Did yo get what I asked?";
 				next;
-				mes "[Agnes]";
+				mes "[阿格妮丝]";
 				mes "^0000cdFive " + getitemname(6557) + "^000000. I can use them to make the dress elegant and beautiful and I will look like a fairy.";
 				next;
-				mes "[Agnes]";
+				mes "[阿格妮丝]";
 				mes "Then, please get them for me.";
 				close3;
 			}
 			mes "Are these what you want?";
 			next;
-			mes "[Agnes]";
+			mes "[阿格妮丝]";
 			mes "Let me see.... Yes! they are what I wanted. You are the best.";
 			next;
-			mes "[Agnes]";
+			mes "[阿格妮丝]";
 			mes "Now I think I can use these things to make a beautiful and elegant dress. It will be fantastic.";
 			next;
-			mes "[Agnes]";
+			mes "[阿格妮丝]";
 			mes "Dear adventurer, Thank you very much. This is a small token of my sincerity.";
 			next;
-			mes "[Agnes]";
+			mes "[阿格妮丝]";
 			mes "Can I ask you to bring more? I need lots of dresses.";
 			delitem 6557,5;// Fancy Fairy Wing
 			erasequest 14514;// Step of the Fairy
@@ -6576,10 +6576,10 @@ prt_cas_q,96,184,1	script	Agnes Roegenburg#ep16lu	4_EP16_AGNES,{
 			close3;
 		case 14515:
 			cutin "16agn_nor",2;
-			mes "[Agnes]";
+			mes "[阿格妮丝]";
 			mes "Dear adventurer, welcome back. You are a great person. I think you have obtained all, I guess.";
 			next;
-			mes "[Agnes]";
+			mes "[阿格妮丝]";
 			mes "If not, I will be really sad. I'm skipping meals to wear the pretty dress. So I'm so sensitive now.";
 			next;
 			mes "[" + strcharinfo(0) + "]";
@@ -6587,35 +6587,35 @@ prt_cas_q,96,184,1	script	Agnes Roegenburg#ep16lu	4_EP16_AGNES,{
 				mes "I am sorry but I forgot what I should get.";
 				next;
 				cutin "16agn_ang",2;
-				mes "[Agnes]";
+				mes "[阿格妮丝]";
 				mes "Oh, it's disappointing! I thought you would have a good memory as an adventurer.";
 				next;
 				cutin "16agn_nor",2;
-				mes "[Agnes]";
+				mes "[阿格妮丝]";
 				mes "Ah, I'm sorry. I got angry suddenly.";
 				next;
-				mes "[Agnes]";
+				mes "[阿格妮丝]";
 				mes "As I told you before. I didn't eat meals these days. Please forgive my misbehavior. Did yo get what I asked?";
 				next;
-				mes "[Agnes]";
+				mes "[阿格妮丝]";
 				mes "^0000cdFive " + getitemname(1001) + "^000000. I going to use the start dust to embroider the dress like starts in the night sky. It will be very pretty.";
 				next;
-				mes "[Agnes]";
+				mes "[阿格妮丝]";
 				mes "Then, please get them for me.";
 				close3;
 			}
 			mes "Are these what you want?";
 			next;
-			mes "[Agnes]";
+			mes "[阿格妮丝]";
 			mes "Let me see.... Yes! they are what I wanted. You are the best.";
 			next;
-			mes "[Agnes]";
+			mes "[阿格妮丝]";
 			mes "Now I can embroider my dress like stars shining in the night sky. It will be very pretty.";
 			next;
-			mes "[Agnes]";
+			mes "[阿格妮丝]";
 			mes "Dear adventurer, Thank you very much. This is a small token of my sincerity.";
 			next;
-			mes "[Agnes]";
+			mes "[阿格妮丝]";
 			mes "Can I ask you to bring more? I need lots of dresses.";
 			delitem 1001,5;// Star Dust
 			erasequest 14515;// Sparkling Star
@@ -6626,7 +6626,7 @@ prt_cas_q,96,184,1	script	Agnes Roegenburg#ep16lu	4_EP16_AGNES,{
 		default:	// none quest
 		}
 		cutin "16agn_nor",2;
-		mes "[Agnes]";
+		mes "[阿格妮丝]";
 		mes "Dear adventurer. You came at the perfect time";
 		mes "A serious thing happened!!!";
 		next;
@@ -6634,7 +6634,7 @@ prt_cas_q,96,184,1	script	Agnes Roegenburg#ep16lu	4_EP16_AGNES,{
 		mes "What is it? Any threat to your safety?";
 		mes "Or your brother started fight again?";
 		next;
-		mes "[Agnes]";
+		mes "[阿格妮丝]";
 		mes "No, it's more serious.";
 		mes "I need your help desperately!";
 		next;
@@ -6642,89 +6642,89 @@ prt_cas_q,96,184,1	script	Agnes Roegenburg#ep16lu	4_EP16_AGNES,{
 		mes "OK, then I will prepare for fight.";
 		mes "Wait a second.";
 		next;
-		mes "[Agnes]";
+		mes "[阿格妮丝]";
 		mes "What ?";
 		next;
 		mes "[" + strcharinfo(0) + "]";
 		mes "What..?";
 		next;
-		mes "[Agnes]";
+		mes "[阿格妮丝]";
 		mes "Why do you prepare to fight?";
 		next;
 		mes "[" + strcharinfo(0) + "]";
 		mes "You said a serious thing happened. Then, is there anything serious other than a large war?";
 		next;
-		mes "[Agnes]";
+		mes "[阿格妮丝]";
 		mes "It is not light that.";
 		mes "Fighting is not all about living.";
 		next;
 		mes "[" + strcharinfo(0) + "]";
 		mes "Then what is it?";
 		next;
-		mes "[Agnes]";
+		mes "[阿格妮丝]";
 		mes "I heard from Myer that he is sorry that he cannot come with me to the banquet. He said that he would send a handsome guy as my partner instead him.";
 		mes "and that I should prepare to go with him.";
 		next;
-		mes "[Agnes]";
+		mes "[阿格妮丝]";
 		mes "He said that the substitute is so good-looking that I would like him when I see him. I am sure that a very handsome, as Myer is choosy.";
 		next;
 		mes "[" + strcharinfo(0) + "]";
 		mes "That sounds nice.";
 		mes "By the way, I don't understand the 'serious thing' you said.";
 		next;
-		mes "[Agnes]";
+		mes "[阿格妮丝]";
 		mes "I mean I prepared a dress that I choose thinking that I would go with Myer. And now the partner has changed and I have to prepare considering him.";
 		next;
 		mes "[" + strcharinfo(0) + "]";
 		if (Sex == SEX_FEMALE) {
 			mes "Yes, you should!!!";
 			next;
-			mes "[Agnes]";
+			mes "[阿格妮丝]";
 			mes "I expected you would agree as a woman like me.";
 		}
 		else {
 			mes "Ah....!";
 			next;
-			mes "[Agnes]";
+			mes "[阿格妮丝]";
 			mes "Do you understand?";
 		}
 		next;
-		mes "[Agnes]";
+		mes "[阿格妮丝]";
 		mes "There are so many things I have to consider, such as his hair color, eye color, clothes color and shape. I asked Myer about him, but he didn't tell me.";
 		next;
-		mes "[Agnes]";
+		mes "[阿格妮丝]";
 		mes "Once he visits, it will be late. So I have to finish preparation in advance, regardless of how he wears.";
 		next;
-		mes "[Agnes]";
+		mes "[阿格妮丝]";
 		mes "To prepare for different situations, such as hair colors and clothes color, I need ^0000cdlots of dresses^000000. Do you understand what I mean?";
 		next;
-		mes "[Agnes]";
+		mes "[阿格妮丝]";
 		mes "Therefore, I told my grandfather that I want to have some more dresses to prepare for all situations, but he said that what I have now is enough. Does it make sense?";
 		next;
 		mes "[" + strcharinfo(0) + "]";
 		if (Sex == SEX_FEMALE) {
 			mes "That is nonsense!";
 			next;
-			mes "[Agnes]";
+			mes "[阿格妮丝]";
 			mes "Yes!!!";
 		}
 		else {
 			mes "You are beautiful enough with the clothes you are wearing now.";
 			next;
-			mes "[Agnes]";
+			mes "[阿格妮丝]";
 			mes "Oh, no. I am not.";
 		}
 		next;
-		mes "[Agnes]";
+		mes "[阿格妮丝]";
 		mes "I talked with Wolf too but He said the same thing as grandfather. I should ask somebody to do me a favor unless he doesn't listen to me.";
 		next;
-		mes "[Agnes]";
+		mes "[阿格妮丝]";
 		mes "So I talked with Myer. He told me to talk with you. He also said that if you cannot get a dress, buy the materials and make one. He said that is how they on the street.";
 		next;
-		mes "[Agnes]";
+		mes "[阿格妮丝]";
 		mes "So I hired very skillful person who can make a dress and accessories, but the key is materials. I guess that you are very experienced and can get what I need.";
 		next;
-		mes "[Agnes]";
+		mes "[阿格妮丝]";
 		mes "If I go out to get a dress, I may be the first princess in Rune-Midgarts who dies for a dress. So would you please save me from this situation?";
 		next;
 		mes "[" + strcharinfo(0) + "]";
@@ -6732,11 +6732,11 @@ prt_cas_q,96,184,1	script	Agnes Roegenburg#ep16lu	4_EP16_AGNES,{
 			mes "Of course, I'll do my best to help you.";
 			mes "You need cloth, accessories and dyes don't you?";
 			next;
-			mes "[Agnes]";
+			mes "[阿格妮丝]";
 			mes "Yes, you are right!";
 			mes "You understand me very well! I like you very much.";
 			next;
-			mes "[Agnes]";
+			mes "[阿格妮丝]";
 			mes "Can you be my friend. I have wanted a woman who understands me very much.";
 			next;
 			mes "[" + strcharinfo(0) + "]";
@@ -6745,52 +6745,52 @@ prt_cas_q,96,184,1	script	Agnes Roegenburg#ep16lu	4_EP16_AGNES,{
 		else {
 			mes "Hmm.. how can I help you?";
 			next;
-			mes "[Agnes]";
+			mes "[阿格妮丝]";
 			mes "Of course, you will get cloth, accessories and dyes!";
 			next;
 			mes "[" + strcharinfo(0) + "]";
 			mes "Then which kind do you want?";
 		}
 		next;
-		mes "[Agnes]";
+		mes "[阿格妮丝]";
 		mes "There is an accessory I really want to have, but it is so rare that I couldn't get it.";
 		next;
-		mes "[Agnes]";
+		mes "[阿格妮丝]";
 		mes "Can you get it for me?...";
 		next;
 		mes "[" + strcharinfo(0) + "]";
 		mes "Why is it so rare?";
 		next;
-		mes "[Agnes]";
+		mes "[阿格妮丝]";
 		mes "it is a ^0000cdpearl^000000! elegant and gentle gloss! Valuable jewel coming from pains!";
 		next;
-		mes "[Agnes]";
+		mes "[阿格妮丝]";
 		mes "I would like to use pearls to make a necklace and bracelet. You can get pearls from monsters. Can you get them for me?";
 		next;
 		if (select( "Of course.", "It will be difficult." ) == 2) {
 			mes "[" + strcharinfo(0) + "]";
 			mes "I think it will be difficult to get pearls. It is really difficult. It is beyond my ability. I'm sorry.";
 			next;
-			mes "[Agnes]";
+			mes "[阿格妮丝]";
 			mes "Yes... I know it will be very difficult. If you change your mind, please come back.";
 			close3;
 		}
-		mes "[Agnes]";
+		mes "[阿格妮丝]";
 		mes "Thank god. I was afraid that you would refuse it.";
 		next;
-		mes "[Agnes]";
+		mes "[阿格妮丝]";
 		mes "I carry this to the banquet whatever I wear. And can ask you do me a favor one more?";
 		next;
-		mes "[Agnes]";
+		mes "[阿格妮丝]";
 		mes "To produce good cloth, good threads are necessary. To extract good threads, ^0000cdsoft hair^000000 is the best. Would you get soft fur for me too?";
 		next;
 		mes "[" + strcharinfo(0) + "]";
 		mes "It is not difficult.";
 		next;
-		mes "[Agnes]";
+		mes "[阿格妮丝]";
 		mes "I think ^0000cd3 " + getitemname(722) + " ^000000are enough and 50 strands of " + getitemname(949) + "^0000cdare required^000000.";
 		next;
-		mes "[Agnes]";
+		mes "[阿格妮丝]";
 		mes "The success of my banquet is in your hands. I will do my best to make it one of the best ever.";
 		setquest 14508;// Jewel and Cloth
 		ep16_lug = 14;
@@ -6798,51 +6798,51 @@ prt_cas_q,96,184,1	script	Agnes Roegenburg#ep16lu	4_EP16_AGNES,{
 	case 0:
 	case 1:
 		cutin "16agn_nor",2;
-		mes "[Agnes]";
+		mes "[阿格妮丝]";
 		mes "Dear adventurer, what are you doing here?";
 		mes "Did you come for my dress?";
 		next;
-		mes "[Agnes]";
+		mes "[阿格妮丝]";
 		mes "But I'm still making the dress using what you got for me.";
 		mes "I'll decide what to make next after completing this.";
 		next;
-		mes "[Agnes]";
+		mes "[阿格妮丝]";
 		mes "Thank you for visiting but I am sorry that I cannot help you.";
 		mes "Would you come back later in the afternoon?";
 		close3;
 	case 2:
 		cutin "16agn_nor",2;
-		mes "[Agnes]";
+		mes "[阿格妮丝]";
 		mes "Dear adventurer. Thanks for coming. I thought all day of what dress to make. I cannot decide still.";
 		next;
-		mes "[Agnes]";
+		mes "[阿格妮丝]";
 		mes "A golden dress shining brighter than the sun? Or a sliver dress shining more gentile than the moon? Or a dress greener than tree leaves?";
 		next;
-		mes "[Agnes]";
+		mes "[阿格妮丝]";
 		mes "Ah, how can I fit the pearl necklace and look nice with my partner?";
 		next;
-		mes "[Agnes]";
+		mes "[阿格妮丝]";
 		mes "I have made a decision!!";
 		next;
-		mes "[Agnes]";
+		mes "[阿格妮丝]";
 		switch( rand(1,10) ) {
 		case 1:
 		case 2:
 			mes "I prefer the soft pink dress other than young flower petal blooming on a large field. To be like that, I think I need a very soft silk cloth.";
 			next;
-			mes "[Agnes]";
+			mes "[阿格妮丝]";
 			mes "In the banquet, if my soft dress widens like young flower petal, the place will be full with fragrance.";
 			next;
-			mes "[Agnes]";
+			mes "[阿格妮丝]";
 			mes "The width of the skirt should be as wider as possible. The dress will look like a flower petal shaking every time I move.";
 			next;
-			mes "[Agnes]";
+			mes "[阿格妮丝]";
 			mes "Dear adventurer, Would get me ^0000cd" + getitemname(7166) + "^000000? ^0000cd15 pieces^000000 will do.";
 			next;
-			mes "[Agnes]";
+			mes "[阿格妮丝]";
 			mes "I also need herbs used to dye the cloth. ^0000cd30 " + getitemname(507) + " and 10 " + getitemname(509) + "^000000.";
 			next;
-			mes "[Agnes]";
+			mes "[阿格妮丝]";
 			mes "I see a dress in you hands that look like a flower petal.";
 			erasequest 14509;// Still Making It
 			setquest 14510;// Pink Petal-like Dress
@@ -6851,19 +6851,19 @@ prt_cas_q,96,184,1	script	Agnes Roegenburg#ep16lu	4_EP16_AGNES,{
 		case 4:
 			mes "Flower! It a flower! Large and shining jewels are too common here in the palace.";
 			next;
-			mes "[Agnes]";
+			mes "[阿格妮丝]";
 			mes "I want to be a flower in the banquet hall. I want to make people to admire me like a flower that fascinates with delicate fragrance.";
 			next;
-			mes "[Agnes]";
+			mes "[阿格妮丝]";
 			mes "I'm going to use flowers to make a corsage. Please get me some flowers. No common flowers. I heard that rare flowers can be obtained in a far foreign country.";
 			next;
-			mes "[Agnes]";
+			mes "[阿格妮丝]";
 			mes "I saw those flowers once. They were so beautiful.";
 			next;
-			mes "[Agnes]";
+			mes "[阿格妮丝]";
 			mes "Dear adventurer, please get me ^0000cd5 " + getitemname(6511) + ", 5 " + getitemname(6510) + " and 5 " + getitemname(6509) + "^000000.";
 			next;
-			mes "[Agnes]";
+			mes "[阿格妮丝]";
 			mes "My beautiful corsage is up to you!";
 			erasequest 14509;// Still Making It
 			setquest 14511;// Beautiful Flower Decoration
@@ -6871,28 +6871,28 @@ prt_cas_q,96,184,1	script	Agnes Roegenburg#ep16lu	4_EP16_AGNES,{
 		case 5:
 			mes "I was thinking of how I can emphasize my pearl necklace.";
 			next;
-			mes "[Agnes]";
+			mes "[阿格妮丝]";
 			mes "Yesterday, when I was thinking watching the night sky, I found that stars were twinkling.";
 			next;
-			mes "[Agnes]";
+			mes "[阿格妮丝]";
 			mes "It was so beautiful that I couldn't take my eyes off them.";
 			next;
-			mes "[Agnes]";
+			mes "[阿格妮丝]";
 			mes "What I ask you today is....";
 			next;
-			mes "[Agnes]";
+			mes "[阿格妮丝]";
 			mes "Start dust.";
 			next;
-			mes "[Agnes]";
+			mes "[阿格妮丝]";
 			mes "Imagine that star dusts are gently scattered on a beautiful dress. You won't be able to take your eyes from them.";
 			next;
-			mes "[Agnes]";
+			mes "[阿格妮丝]";
 			mes "I will be the brightest star in the banquet.";
 			next;
-			mes "[Agnes]";
+			mes "[阿格妮丝]";
 			mes "So please get me ^0000cd5 " + getitemname(1001) + "^000000. I think that amount of star dusts can decorate the entire dress.";
 			next;
-			mes "[Agnes]";
+			mes "[阿格妮丝]";
 			mes "Don't forget. My shining dress is up to your hands.";
 			erasequest 14509;// Still Making It
 			setquest 14515;// Sparkling Star
@@ -6900,22 +6900,22 @@ prt_cas_q,96,184,1	script	Agnes Roegenburg#ep16lu	4_EP16_AGNES,{
 		case 6:
 			mes "I would like to make a fairy dress! A dress so shining in golden light that anyone should admire it.";
 			next;
-			mes "[Agnes]";
+			mes "[阿格妮丝]";
 			mes "Cloth is sufficient, but the problem is decoration. I heard that there is something called fairy's wing.";
 			next;
-			mes "[Agnes]";
+			mes "[阿格妮丝]";
 			mes "It will make a dress as elegant as fairy and on which I can work lightly. The thought alone makes you fascinated?";
 			next;
-			mes "[Agnes]";
+			mes "[阿格妮丝]";
 			mes "Every time I step, the luxury lace will flutter, making people to imagine a fairy waling in the wood. The dress will make me better.";
 			next;
-			mes "[Agnes]";
+			mes "[阿格妮丝]";
 			mes "Of course, I will not attach them as they are. I know a person who will modify them properly.";
 			next;
-			mes "[Agnes]";
+			mes "[阿格妮丝]";
 			mes "Dear adventurer, Please get me ^0000cd5 " + getitemname(6557) + "^000000.";
 			next;
-			mes "[Agnes]";
+			mes "[阿格妮丝]";
 			mes "My fairly-like dress is up to you hands.";
 			erasequest 14509;// Still Making It
 			setquest 14514;// Step of the Fairy
@@ -6924,22 +6924,22 @@ prt_cas_q,96,184,1	script	Agnes Roegenburg#ep16lu	4_EP16_AGNES,{
 		case 8:
 			mes "Have you ever watch the burning sun directly. I am sure you haven't. The sun stabs the eyes of the people who watch it so that they cannot watch it.";
 			next;
-			mes "[Agnes]";
+			mes "[阿格妮丝]";
 			mes "But I wonder how many people lost their eyes after watching the sun directly. Why do people watch that burning fire? What is it?";
 			next;
-			mes "[Agnes]";
+			mes "[阿格妮丝]";
 			mes "Dear adventurer. I want to have that burning fire.";
 			next;
-			mes "[Agnes]";
+			mes "[阿格妮丝]";
 			mes "I heard that there is the ^0000cdhot hair^000000 that looks burning but not hot at all, though the name sounds contradictory.";
 			next;
-			mes "[Agnes]";
+			mes "[阿格妮丝]";
 			mes "I will use it to make a beautiful shawl. As soon as I enter the banquet hall, I will be able to give a strong impression.";
 			next;
-			mes "[Agnes]";
+			mes "[阿格妮丝]";
 			mes "Please get me ^0000cd20 strands of " + getitemname(7122) + "^000000.";
 			next;
-			mes "[Agnes]";
+			mes "[阿格妮丝]";
 			mes "My beautiful shawl burning like the sun is up to your hands.";
 			erasequest 14509;// Still Making It
 			setquest 14513;// Shawl of the Blazing Sun
@@ -6947,19 +6947,19 @@ prt_cas_q,96,184,1	script	Agnes Roegenburg#ep16lu	4_EP16_AGNES,{
 		default:
 			mes "I like a black dress that reminds of dark night. A dress so elegant and beautiful that makes people to admire in silence.";
 			next;
-			mes "[Agnes]";
+			mes "[阿格妮丝]";
 			mes "I should make a dress that is as far and mysterious as a dark night.";
 			next;
-			mes "[Agnes]";
+			mes "[阿格妮丝]";
 			mes "I will go around the banquet hall like a sleek cat, concealing everything underneath the black dress.";
 			next;
-			mes "[Agnes]";
+			mes "[阿格妮丝]";
 			mes "To do so, I think I need ^0000cd20 " + getitemname(7205) + "^000000.";
 			next;
-			mes "[Agnes]";
+			mes "[阿格妮丝]";
 			mes "This will be beautiful dress without a decoration.";
 			next;
-			mes "[Agnes]";
+			mes "[阿格妮丝]";
 			mes "Dear adventurer, my black night-like dress is up to your hands.";
 			erasequest 14509;// Still Making It
 			setquest 14512;// Dress of the Night Sky
@@ -6968,37 +6968,37 @@ prt_cas_q,96,184,1	script	Agnes Roegenburg#ep16lu	4_EP16_AGNES,{
 	}
 }
 
-prt_cas_q,90,184,7	script	Helmut Roegenburg#ep16lug	4_EP16_HELMUT,{
+prt_cas_q,90,184,7	script	赫尔穆特·雷根布尔格#ep16lug	4_EP16_HELMUT,{
 	if (ep16_lug == 0) {
 		cutin "16hel",0;
-		mes "[Helmut]";
+		mes "[赫尔穆特]";
 		mes "你好。";
-		mes "I am Helmut Roegenburg.";
+		mes "I am 赫尔穆特·雷根布尔格.";
 		next;
-		mes "[Helmut]";
+		mes "[赫尔穆特]";
 		mes "If you want to listen to the story of my family, see my ^0000cdgrandfather^000000 who is over there.";
 		mes "He will explain better than me.";
 		close3;
 	}
 	if (ep16_lug < 3) {
 		cutin "16hel",0;
-		mes "[Helmut]";
-		mes "Did you see my brother, ^0000cdWolf Roegenburg^000000?";
+		mes "[赫尔穆特]";
+		mes "Did you see my brother, ^0000cd沃尔夫·雷根布尔格^000000?";
 		mes "He is in charge of all household matters helping our grandfather while I am away here on the front.";
 		next;
-		mes "[Helmut]";
+		mes "[赫尔穆特]";
 		mes "If you want to know about the Roegenburg, it will be a quality time.";
 		close3;
 	}
 	if (ep16_lug > 2 && ep16_lug < 7) {
 		cutin "16hel",0;
-		mes "[Helmut]";
+		mes "[赫尔穆特]";
 		mes "I am glad that I come back home and can see the family members.";
 		next;
-		mes "[Helmut]";
+		mes "[赫尔穆特]";
 		mes "But when I think of the front threatened by the monster, I feel heavy-hearted. Of course, I believe that my men are doing well to protect the territory.";
 		next;
-		mes "[Helmut]";
+		mes "[赫尔穆特]";
 		mes "I want to run back to them as soon as the banquet is finished.";
 		mes "This place is somewhat stuffy to me.";
 		close3;
@@ -7042,148 +7042,148 @@ prt_cas_q,86,180,7	script	Kalbern#ep16lug	4_M_RUSCHILD,{
 	}
 }
 
-prt_cas_q,96,186,3	script	Wolf Roegenburg#ep16lug	4_EP16_WOLF,{
+prt_cas_q,96,186,3	script	沃尔夫·雷根布尔格#ep16lug	4_EP16_WOLF,{
 	if (checkweight(1301,1) == 0) {
-		mes "[Wolf Roegenburg]";
+		mes "[沃尔夫·雷根布尔格]";
 		mes "Well, you seem to have lots of luggage. How about removing some?";
 		close;
 	}
 	if (ep16_lug == 0) {
 		cutin "16wol_nor",2;
-		mes "[Wolf]";
+		mes "[沃尔夫]";
 		mes "Thank you for visiting the Roegenburg.";
-		mes "Won't you see my grandfather and patriarch of the Roegenburg, ^0000cdMaximilian Roegenburg^000000?";
+		mes "Won't you see my grandfather and patriarch of the Roegenburg, ^0000cd马克西米利安·雷根布尔格^000000?";
 		next;
-		mes "[Wolf]";
+		mes "[沃尔夫]";
 		mes "He enjoys talking with adventurers.";
 		close3;
 	}
 	if (ep16_lug == 1) {
 		cutin "16wol_nor",2;
-		mes "[Wolf]";
+		mes "[沃尔夫]";
 		mes "Dear adventurer, it is a honor to have you in the Roegenburg.";
-		mes "I am the second son of the Roegenburg, ^0000cdWolf Roegenburg^000000.";
+		mes "I am the second son of the Roegenburg, ^0000cd沃尔夫·雷根布尔格^000000.";
 		next;
-		mes "[Wolf]";
+		mes "[沃尔夫]";
 		mes "To carry on the will of Wilhelm Roegenburg, a national hero, we, at the Roegenburg, are making lots of efforts to protect honor, justice and traditions.";
 		next;
-		mes "[Wolf]";
+		mes "[沃尔夫]";
 		mes "Since the foundation of Rune-Midgarts, lots of people from the Roegenburg have made contribution to the country and this is our pride.";
 		next;
-		mes "[Wolf]";
-		mes "Currently ^0000cdHelmut Roegenburg^000000, who is an excellent candidate for the throne, is participating in the royal assembly. Did you see him?";
+		mes "[沃尔夫]";
+		mes "Currently ^0000cd赫尔穆特·雷根布尔格^000000, who is an excellent candidate for the throne, is participating in the royal assembly. Did you see him?";
 		next;
 		mes "[" + strcharinfo(0) + "]";
 		mes "Yes. I saw him just before. Who is this?";
 		next;
 		cutin "16agn_nor",2;
-		mes "[Agnes]";
-		mes "Dear adventurer, it is nice to see you. I am ^0000cdAgnes Roegenburg^000000 and the youngest of the four of the Roegenburg.";
+		mes "[阿格妮丝]";
+		mes "Dear adventurer, it is nice to see you. I am ^0000cd阿格妮丝·雷根布尔格^000000 and the youngest of the four of the Roegenburg.";
 		next;
-		mes "[Agnes]";
+		mes "[阿格妮丝]";
 		mes "Do you have a partner to go with to the banquet? I have no one to go with. No one takes my fancy.";
 		next;
 		cutin "16wol_ang",2;
-		mes "[Wolf]";
+		mes "[沃尔夫]";
 		mes "Agnes, don't say that. it is not appropriate. We are telling the adventurer of the story of the Roegenburg...";
 		next;
-		cloakoffnpcself( "Myer Roegenburg#ep16lug" );
+		cloakoffnpcself( "迈耶·雷根布尔格#ep16lug" );
 		cutin "16mye_nor",1;
-		mes "[Myer]";
+		mes "[迈耶]";
 		mes "Now, will my prince come with me?";
 		next;
 		cutin "16agn_nor",2;
-		mes "[Agnes]";
+		mes "[阿格妮丝]";
 		mes "Ah, Myer, brother! brother!";
 		next;
 		cutin "16wol_nor",2;
-		mes "[Wolf]";
+		mes "[沃尔夫]";
 		mes "Thanks for coming at the right time. Dear adventurer,";
-		mes "This is ^0000cdMyer Roegenburg^000000 and he is the third son of the Roegenburg.";
+		mes "This is ^0000cd迈耶·雷根布尔格^000000 and he is the third son of the Roegenburg.";
 		next;
-		mes "[Wolf]";
+		mes "[沃尔夫]";
 		mes "I was away for a long time and have just came back. It is right, isn't?";
 		next;
 		cutin "16mye_nor",1;
-		mes "[Myer]";
+		mes "[迈耶]";
 		mes "Well, about half. I heard that ^0000cda war manic and a peddler would join hands and participate in the royal assembly^000000.";
 		next;
-		mes "[Myer]";
+		mes "[迈耶]";
 		mes "So I came back for a short stay. I heard that the relationship between brothers was not close but has suddenly deeper. I cannot be out.";
 		next;
 		cutin "16wol_ang",2;
-		mes "[Wolf]";
+		mes "[沃尔夫]";
 		mes "What your language. ^0000cdEven though you go outside and hang out with low fellows,^000000 you don't have make the place where you live a dirty back street.";
 		mes "You didn't think that I am ignorant of the fellows that you hang out with, did you?";
 		next;
-		mes "[Myer]";
+		mes "[迈耶]";
 		mes "Of course I know that grandfather and you sent people to monitor me. They were so awkward and all other fellow knew it.";
 		next;
 		cutin "16mye_ang",1;
-		mes "[Myer]";
+		mes "[迈耶]";
 		mes "My noble brother doesn't like my way of speaking?";
 		mes "If we join hands and ^0000cdHelmut becomes a king^000000,^0000cdthe whole country will ^000000turn into a back street except the palace. Isn't it better to hear it now to reduce the shock you will have later?";
 		next;
 		cutin "16mye_nor",1;
-		mes "[Myer]";
+		mes "[迈耶]";
 		mes "Well, you may not hear as you will stay at home and calculate the money you will make from wars.";
 		next;
 		cutin "16wol_ang",2;
-		mes "[Wolf]";
+		mes "[沃尔夫]";
 		mes "You are unbelievably rude. I told you should call me politely.";
 		mes "Until when are you going to act like that?";
 		next;
 		cutin "16agn_ang",2;
-		mes "[Agnes]";
+		mes "[阿格妮丝]";
 		mes "Stop all of you! We have gathered here for fight. This is a banquet for the adventurer. We shouldn't do this in front of the adventurer.";
 		next;
-		mes "[Agnes]";
+		mes "[阿格妮丝]";
 		mes "Especially you lack dignity. What would the adventurer think of us?";
 		next;
 		cutin "16mye_nor",1;
-		mes "[Myer]";
+		mes "[迈耶]";
 		mes "Yes, you are right. I think I am the unwelcome guest. I'd better leave. Agnes, I'll come back later.";
 		next;
-		cloakonnpcself( "Myer Roegenburg#ep16lug" );
+		cloakonnpcself( "迈耶·雷根布尔格#ep16lug" );
 		cutin "16agn_nor",2;
-		mes "[Agnes]";
+		mes "[阿格妮丝]";
 		mes "Oh my god, I forgot. I have to make preparations!";
 		next;
 		cutin "16wol_nor",2;
-		mes "[Wolf]";
+		mes "[沃尔夫]";
 		mes "Sorry for this unpleasant situation. I never meant to do so. Apologies if you feel uncomfortable. Myer made rude remarks as he came back in a long time.";
 		next;
-		mes "[Wolf]";
+		mes "[沃尔夫]";
 		mes "I will tell him to make a polite apology to you later. Actually he is different from what you saw. Please understand kindly.";
 		next;
 		mes "[" + strcharinfo(0) + "]";
 		mes "No, it is ok with me.";
 		next;
-		mes "[Wolf]";
+		mes "[沃尔夫]";
 		mes "By the way, dear adventurer, can you do me a favor if you have time?";
 		next;
 		mes "[" + strcharinfo(0) + "]";
 		mes "Yes, pleas go ahead.";
 		next;
-		mes "[Wolf]";
+		mes "[沃尔夫]";
 		mes "I hope you will visit the Wigner and bring a thing from ^0000cd艾萨克·维格纳^000000.";
 		next;
-		mes "[Wolf]";
+		mes "[沃尔夫]";
 		mes "Originally, I should do that, but I think I need to talk with Myer seriously. So I would like to do that for me...";
 		next;
-		mes "[Wolf]";
+		mes "[沃尔夫]";
 		mes "So, please do it for me. Of course, you may refuse it. But I wonder I can find a reliable person like you.";
 		next;
 		mes "[" + strcharinfo(0) + "]";
 		mes "It is a test to find that I am reliable.";
 		next;
-		mes "[Wolf]";
+		mes "[沃尔夫]";
 		mes "Ah, no it is not. If you feel unpleasant, I am sorry. I just don't have reliable person.";
 		next;
 		mes "[" + strcharinfo(0) + "]";
 		mes "Ok. Go to the Wigner and ask 艾萨克·维格纳 for the thing that you requested. Is that right?";
 		next;
-		mes "[Wolf]";
+		mes "[沃尔夫]";
 		mes "Yes. right.";
 		completequest 14495;// To Wolf
 		setquest 14496;// To Isaac
@@ -7198,43 +7198,43 @@ prt_cas_q,96,186,3	script	Wolf Roegenburg#ep16lug	4_EP16_WOLF,{
 	}
 	if (ep16_lug == 2) {
 		cutin "16wol_nor",2;
-		mes "[Wolf]";
+		mes "[沃尔夫]";
 		mes "Walk along the ^0000cdcorridor. The Wigner is in the last room^000000.";
 		mes "Find Isaac and bring the thing I requested.";
 		next;
-		mes "[Wolf]";
+		mes "[沃尔夫]";
 		mes "I am very sorry to cause inconvenience to you.";
 		close3;
 	}
 	if (ep16_lug == 3) {
 		if (countitem(6930) < 1) {
 			cutin "16wol_nor",2;
-			mes "[Wolf]";
+			mes "[沃尔夫]";
 			mes "Dear adventurer, how is it going? I see you have nothing. It seem that you haven't brought it yet.";
 			mes "You just go to the ^0000cdWigner and bring a thing from Isaac^000000.";
 			close3;
 		}
-		cloakoffnpcself( "Myer Roegenburg#ep16lug" );
+		cloakoffnpcself( "迈耶·雷根布尔格#ep16lug" );
 		cutin "16wol_nor",2;
-		mes "[Wolf]";
+		mes "[沃尔夫]";
 		mes "Dear adventurer, did you bring the thing? Oh, you have brought it. Thank you very much.";
 		next;
-		mes "[Wolf]";
+		mes "[沃尔夫]";
 		mes "Oh, the box's lock is protected by ^0000cdpassword^000000.";
 		next;
-		mes "[Wolf]";
+		mes "[沃尔夫]";
 		mes "The first cell has a number ^0000cd1^000000 and the next four cells are empty and you should enter numbers into them.";
 		next;
-		mes "[Wolf]";
+		mes "[沃尔夫]";
 		mes "Hmm.. This is simple. This perfectly ^0000cdbeautiful box is a hint^000000... The answer is always included in the question.";
 		next;
-		mes "[Wolf]";
+		mes "[沃尔夫]";
 		mes "Looking at the answer, it really seems that the Wigner people love ^0000cdnumers and gold^000000. Will you try to solve it too?";
 		next;
 		mes "[" + strcharinfo(0) + "]";
 		mes "How come you ask me to decipher the password. And isn't it a secret thing?";
 		next;
-		mes "[Wolf]";
+		mes "[沃尔夫]";
 		mes "Because you are reliable person. Just do it for fun.";
 		next;
 		mes "[" + strcharinfo(0) + "]";
@@ -7250,60 +7250,60 @@ prt_cas_q,96,186,3	script	Wolf Roegenburg#ep16lug	4_EP16_WOLF,{
 		mes "1618. It stands for 1.618 which is the golden ratio.";
 		mes "Well it sounds too easy.";
 		next;
-		mes "[Wolf]";
+		mes "[沃尔夫]";
 		mes "But what is inside is not easy.";
 		next;
-		mes "[Wolf]";
+		mes "[沃尔夫]";
 		mes "The thing put in the small bottle in the box will change the dynamics of combats and wars, though it is in a testing stage.";
 		next;
-		mes "[Wolf]";
+		mes "[沃尔夫]";
 		mes "You are a reliable person as I expected.";
 		mes "I was sorry when I asked you to do me a favor. We will reward you generously.";
 		next;
 		mes "[" + strcharinfo(0) + "]";
 		mes "It is OK. there is message from Isaac.";
 		next;
-		mes "[Wolf]";
+		mes "[沃尔夫]";
 		mes "What is that?";
 		next;
 		mes "[" + strcharinfo(0) + "]";
-		mes "Recently, there is a ^0000cdrumor^000000 circulating in Prontera about the Roegenburg and Helmut Roegenburg.";
+		mes "Recently, there is a ^0000cdrumor^000000 circulating in Prontera about the Roegenburg and 赫尔穆特·雷根布尔格.";
 		next;
 		mes "[" + strcharinfo(0) + "]";
 		mes "It was not a good rumor. He asked me to inspect it and check if it is true.";
 		next;
-		mes "[Wolf]";
+		mes "[沃尔夫]";
 		mes "A rumor about you? I didn't know about it... Rumor.....";
 		mes "I need to check it, but there is no person we count on...";
 		next;
-		mes "[Wolf]";
+		mes "[沃尔夫]";
 		mes "Excuse me, dear adventurer?";
 		next;
 		mes "[" + strcharinfo(0) + "]";
 		mes "Yes?";
 		next;
-		mes "[Wolf]";
+		mes "[沃尔夫]";
 		mes "Can you do me a favor again? I cannot do it myself, as there could be a problem when I do it myself.";
 		next;
-		mes "[Wolf]";
+		mes "[沃尔夫]";
 		mes "All staff I can have trust in are doing other jobs and I have no person except you.";
 		next;
-		mes "[Wolf]";
+		mes "[沃尔夫]";
 		mes "You can get information easily traveling around and what is more important is that I can trust you.";
 		next;
 		mes "[" + strcharinfo(0) + "]";
 		mes "Well, it is not easy but....";
 		next;
-		mes "[Wolf]";
+		mes "[沃尔夫]";
 		mes "If you are busy, you may refuse it. I am sorry that I ask you to do me a favor. My brother came back suddenly and it drives me out of my mind and busy.";
 		next;
 		mes "[" + strcharinfo(0) + "]";
 		mes "No, that is a thing I can do. Then see you soon.";
 		next;
-		mes "[Wolf]";
+		mes "[沃尔夫]";
 		mes "I don't know how to thank you. It is the most accurate to hear the rumor from children. I heard that children gather in a ^0000cdlarge open space^000000 in Prontera..";
 		next;
-		mes "[Wolf]";
+		mes "[沃尔夫]";
 		mes "Then, see you soon.";
 		delitem 6930,1;// Biz_Items_Sample
 		erasequest 14497;// Delivery for Wolf
@@ -7313,46 +7313,46 @@ prt_cas_q,96,186,3	script	Wolf Roegenburg#ep16lug	4_EP16_WOLF,{
 	}
 	if (ep16_lug == 4 || ep16_lug == 5) {
 		cutin "16wol_nor",2;
-		mes "[Wolf]";
+		mes "[沃尔夫]";
 		mes "What is the rumor about Roegenburg that is circulating in Prontera.";
 		mes "I didn't know there is a rumor about our family circulating";
 		next;
-		mes "[Wolf]";
+		mes "[沃尔夫]";
 		mes "I had to start gather information earlier. I couldn't because I was busy due to others.";
 		mes "I didn't expect at all that a rumor will be circulating.";
 		next;
-		mes "[Wolf]";
+		mes "[沃尔夫]";
 		mes "I cannot wait to know what rumor is circulating about our family.";
 		mes "Then see you soon.";
 		close3;
 	}
 	if (ep16_lug == 6) {
 		cutin "16wol_nor",2;
-		mes "[Wolf]";
+		mes "[沃尔夫]";
 		mes "Hi, you look a little tired.";
 		next;
 		mes "[" + strcharinfo(0) + "]";
 		mes "Ah, do I? I had to do some errands to find the rumor.";
 		next;
-		mes "[Wolf]";
+		mes "[沃尔夫]";
 		mes "Oh, I am sorry about that. I should have done that.";
 		next;
 		cutin "16agn_nor",2;
-		mes "[Agnes]";
+		mes "[阿格妮丝]";
 		mes "Rumor? what rumor? I like such thing very much.";
 		next;
 		cutin "16mye_nor",1;
-		mes "[Myer]";
+		mes "[迈耶]";
 		mes "I really want know about it too.";
 		next;
 		cutin "16wol_nor",2;
-		mes "[Wolf]";
+		mes "[沃尔夫]";
 		mes "I am sorry to make you tired. Did you find anything?";
 		next;
 		mes "[" + strcharinfo(0) + "]";
 		mes "Yes, I found the rumor and it was pretty specific. Can I tell about it here?";
 		next;
-		mes "[Wolf]";
+		mes "[沃尔夫]";
 		mes "Yes, it is ok. If the rumor is about our family, everyone has to listen, so that we can gather and develop a solution.";
 		next;
 		mes "[I changed the rumor I got from children to a relatively softer version and told them.]";
@@ -7360,228 +7360,228 @@ prt_cas_q,96,186,3	script	Wolf Roegenburg#ep16lug	4_EP16_WOLF,{
 		mes "[" + strcharinfo(0) + "]";
 		mes "These days everybody talks about the rumor. I think it will spread throughout Rune-Midgarts as well as Prontera.";
 		next;
-		mes "[Wolf]";
+		mes "[沃尔夫]";
 		mes "The rumor is....very.... specific and malicious. It must be circulated on purpose by someone who knows the circumstances of my family.";
 		next;
 		cutin "16agn_nor",2;
-		mes "[Agnes]";
+		mes "[阿格妮丝]";
 		mes "Do yo mean the bad guy is one of us? OMG! this is very serious!";
 		next;
 		cutin "16wol_ang",2;
-		mes "[Wolf]";
+		mes "[沃尔夫]";
 		mes "Yes. ^0000cdMyer^000000? How much are you going to disgrace our family?";
 		next;
 		cutin "16mye_nor",1;
-		mes "[Myer]";
+		mes "[迈耶]";
 		mes "Well, as much as needed?";
 		next;
-		emotion ET_HUK, getnpcid(0, "Maximilian Roegenburg#ep16lug");
+		emotion ET_HUK, getnpcid(0, "马克西米利安·雷根布尔格#ep16lug");
 		emotion ET_HUK;
-		emotion ET_HUK, getnpcid(0, "Agnes Roegenburg#ep16lu");
+		emotion ET_HUK, getnpcid(0, "阿格妮丝·雷根布尔格#ep16lu");
 		cutin "16hel",0;
-		mes "[Helmut]";
+		mes "[赫尔穆特]";
 		mes "Myer, did you really do that?";
 		next;
 		cutin "16agn_ang",2;
-		mes "[Agnes]";
+		mes "[阿格妮丝]";
 		mes "Myer did that?";
 		next;
 		cutin "",255;
-		mes "[Maximilian]";
+		mes "[马克西米利安]";
 		mes "Myer, is this true? Did you spread the rumor?";
 		next;
 		cutin "16wol_ang",2;
-		mes "[Wolf]";
+		mes "[沃尔夫]";
 		mes "You collected small kids and played a leader. Did you have lots of fun?";
 		next;
 		cutin "16mye_nor",1;
-		mes "[Myer]";
+		mes "[迈耶]";
 		mes "Did you see what those little kids did for this time? You believe that only the upper class can exert influence on the common people, don't you? You must be so stupid.";
 		next;
 		cutin "16wol_ang",2;
-		mes "[Wolf]";
+		mes "[沃尔夫]";
 		mes "How far are you going to go?";
 		next;
 		cutin "16mye_nor",1;
-		mes "[Myer]";
+		mes "[迈耶]";
 		mes "Well, I asked for help church friends, merchant friends and back street friends. Everyone said they would be willing to help me, when I told them I need help.";
 		next;
-		mes "[Myer]";
+		mes "[迈耶]";
 		mes "I wonder how you can deal with invisible enemy.";
 		next;
 		cutin "16wol_ang",2;
-		mes "[Wolf]";
+		mes "[沃尔夫]";
 		mes "I don't understand why you spread such a rumor and do all these things.";
 		next;
-		mes "[Wolf]";
+		mes "[沃尔夫]";
 		mes "No, in fact, I think I know very well. It is because of your immature sympathy and you want to spoil my plan!";
 		next;
 		cutin "16mye_ang",1;
-		mes "[Myer]";
+		mes "[迈耶]";
 		mes "Plan? what plan? war plan? the plan to drive innocent people to the battle field? A means that will realize your ambicous plan?";
 		next;
 		cutin "16wol_ang",2;
-		mes "[Wolf]";
+		mes "[沃尔夫]";
 		mes "You are too young to understand why your brothers want to realize our plans.";
 		next;
-		mes "[Wolf]";
+		mes "[沃尔夫]";
 		mes "^0000cd14 years ago^000000, we could do nothing though we were the top family. We felt a feeling of helplessness. Have you ever felt that?";
 		next;
-		mes "[Wolf]";
+		mes "[沃尔夫]";
 		mes "^0000cdA noble family is not so good as it looks^000000. You are just playing a leader on the back street and spoiling our plan entirely!";
 		next;
 		cutin "16mye_ang",1;
-		mes "[Myer]";
+		mes "[迈耶]";
 		mes "Your plan is to develop the power of the family and unify the continent. Then what? what will you have. Achievement? Revenge?";
 		next;
-		mes "[Myer]";
+		mes "[迈耶]";
 		mes "As you know, such as thing causes another pain. We were raised without a parent. But we didn't fall because we had a family and we were rich.";
 		next;
-		mes "[Myer]";
+		mes "[迈耶]";
 		mes "And we had brothers ^0000cdto depend on^000000. Think how we did to comfort one another? There are not many people that are so lucky as we were.";
 		next;
-		mes "[Myer]";
+		mes "[迈耶]";
 		mes "There are so many people who has no one to depend on, no place to lie their bodies, or no money to buy a piece of bread. People are dying everywhere.";
 		next;
-		mes "[Myer]";
+		mes "[迈耶]";
 		mes "The world you and Helmut are dreaming is only for ^0000cdthe satisfaction of a few persons^000000.";
 		next;
 		cutin "16wol_ang",2;
-		mes "[Wolf]";
+		mes "[沃尔夫]";
 		mes "Yo are too ideal. Small sacrifice is a must to achieve a bing goal.";
 		next;
 		cutin "16mye_ang",1;
-		mes "[Myer]";
+		mes "[迈耶]";
 		mes "Sacrifice for the goal? Do you think I don't know the reason you are helping Helmut.";
 		next;
-		mes "[Myer]";
+		mes "[迈耶]";
 		mes "When Helmut participated in the Royal Assembly, I didn't care about it. Anyway he is naive and doesn't know how to acquire likeability and credibility from others.";
 		next;
-		mes "[Myer]";
+		mes "[迈耶]";
 		mes "The wish that Helmut could end up as just a wish, but since you started to support Helmut ambiguously, everything has changed.";
 		next;
-		mes "[Myer]";
+		mes "[迈耶]";
 		mes "Helmut and you look like a good brothers, but Wolf, I know that you want to make money from wars and";
 		next;
 		cutin "16mye_ang",1;
-		mes "[Myer]";
+		mes "[迈耶]";
 		mes "even though Helmut becomes a king, he is just a figurehead and you will exert power ^0000cdover our family and kingdom^000000. won't you?";
 		next;
 		cutin "16wol_ang",2;
-		mes "[Wolf]";
+		mes "[沃尔夫]";
 		mes "What is our family proud of? Name? Fame? they are useless outside the country. And now they are not so high as before.";
 		next;
-		mes "[Wolf]";
+		mes "[沃尔夫]";
 		mes "But look at the Wigner. Wherever they go whatever they do, people bow their heads in front of their gold.";
 		next;
-		mes "[Wolf]";
+		mes "[沃尔夫]";
 		mes "To whoever has gold. I want that power. I want ^0000cdreal power^000000 rather powerless fame.";
 		next;
 		cutin "16mye_ang",1;
-		mes "[Myer]";
+		mes "[迈耶]";
 		mes "You want to build a kingdom that you want rule as you want. What if Helmut fails to be a king? What would you do then?";
 		next;
-		mes "[Myer]";
+		mes "[迈耶]";
 		mes "You will run into a limit as the second son of the Roegenburg, can you give up your ambition?";
 		next;
-		mes "[Myer]";
+		mes "[迈耶]";
 		mes "Anyway life is short. What moves people is heart, not money or power.";
 		next;
 		cutin "16wol_ang",2;
-		mes "[Wolf]";
+		mes "[沃尔夫]";
 		mes "Heart? Does it work on ^0000cdthose guys^000000?";
 		next;
 		cutin "16mye_ang",1;
-		mes "[Myer]";
+		mes "[迈耶]";
 		mes "You didn't know you can approach them in a different way";
 		next;
 		cutin "16wol_ang",2;
-		mes "[Wolf]";
+		mes "[沃尔夫]";
 		mes "You are better than I expected. You are grown up and I know you will not cry any more in front of me. So stop talking nonsense and play outside.";
 		next;
-		mes "[Wolf]";
+		mes "[沃尔夫]";
 		mes "Watch your mouth. I cannot be nice to you forever.";
 		next;
 		cutin "16mye_ang",1;
-		mes "[Myer]";
+		mes "[迈耶]";
 		mes "If you do nothing, I do nothing. I hope I will live on the back street as happy ^0000cdJonathan^000000.";
 		next;
-		mes "[Myer]";
+		mes "[迈耶]";
 		mes "But you are developing a murder weapon as new business item with the Wigner.";
 		next;
-		mes "[Myer]";
+		mes "[迈耶]";
 		mes "How can people trust you when your family does not trust you? I cannot trust you! And I told you to stop treating me as a child!";
 		next;
 		cutin "",255;
-		mes "[Maximilian]";
+		mes "[马克西米利安]";
 		mes "Both of you,";
 		next;
 		cutin "16agn_ang",2;
-		mes "[Agnes]";
+		mes "[阿格妮丝]";
 		mes "Stop! What the hell are you fighting? Didn't all of us want to live happier than anybody?";
 		next;
-		mes "[Agnes]";
+		mes "[阿格妮丝]";
 		mes "So, everybody pursues happiness in their own ways. Helmut had found it on the front. Wolf on the money. And Myer on the street.";
 		next;
-		mes "[Agnes]";
+		mes "[阿格妮丝]";
 		mes "Isn't it enough? Do you need something bigger? Cause? Revenge? War?";
 		mes "Everyone is fighting in this family and losing important thins. Still you want a war?";
 		next;
-		mes "[Agnes]";
+		mes "[阿格妮丝]";
 		mes "What do we really want? Well, if we can be happy by fighting, it is good!. But it is not. We have fought too long.";
 		next;
-		mes "[Agnes]";
+		mes "[阿格妮丝]";
 		mes "All of you, Helmut, Wolf and Myer.";
 		next;
 		cutin "",255;
-		mes "[Maximilian]";
+		mes "[马克西米利安]";
 		mes "Everybody calm down. It is not nice to raise our voices.";
 		next;
 		cutin "16hel",0;
-		mes "[Helmut]";
+		mes "[赫尔穆特]";
 		mes "Agnes is right. Both of you, please stop fighting.";
 		next;
 		cutin "16mye_nor",1;
-		mes "[Myer]";
+		mes "[迈耶]";
 		mes "...Excuse me.";
 		next;
-		cloakonnpcself( "Myer Roegenburg#ep16lug" );
+		cloakonnpcself( "迈耶·雷根布尔格#ep16lug" );
 		cutin "16agn_ang",2;
-		mes "[Agnes]";
+		mes "[阿格妮丝]";
 		mes "Myer! where are you going? Are going to leave the family again?";
 		next;
 		cutin "",255;
-		mes "[Maximilian]";
+		mes "[马克西米利安]";
 		mes "What do you think. I totally agree with Agnes. I think we have fought one another too long.";
 		next;
-		mes "[Maximilian]";
+		mes "[马克西米利安]";
 		mes "But we have to keep in mind that revenge brings revenge in return and violence brings violence in return.";
 		next;
-		mes "[Maximilian]";
+		mes "[马克西米利安]";
 		mes "Do you know why I have been quiet though I lost my son and daughter-in-law.";
 		next;
-		mes "[Maximilian]";
+		mes "[马克西米利安]";
 		mes "Because revenges does not make a difference. Revenge is another type of violence that only gives a temporary satisfaction.";
 		next;
-		mes "[Maximilian]";
+		mes "[马克西米利安]";
 		mes "The dead never comes back. Your parents would not want you to take revenge.";
 		next;
-		mes "[Maximilian]";
+		mes "[马克西米利安]";
 		mes "I have let you do as you want to do, but this time I hope that you will follow what Agnes said. I want to avoid wars if possible.";
 		next;
 		cutin "16hel",0;
-		mes "[Helmut]";
+		mes "[赫尔穆特]";
 		mes "......";
 		mes "Excuse me too.";
 		next;
-		cloakonnpcself( "Helmut Roegenburg#ep16lug" );
+		cloakonnpcself( "赫尔穆特·雷根布尔格#ep16lug" );
 		cutin "",255;
 		mes "[Kalbern]";
 		mes "Lord Helmut! where are you going?";
 		next;
 		cloakonnpcself( "Kalbern#ep16lug" );
 		cutin "16wol_nor",2;
-		mes "[Wolf]";
+		mes "[沃尔夫]";
 		mes "......";
 		next;
 		mes "[" + strcharinfo(0) + "]";
@@ -7590,20 +7590,20 @@ prt_cas_q,96,186,3	script	Wolf Roegenburg#ep16lug	4_EP16_WOLF,{
 		mes "[" + strcharinfo(0) + "]";
 		mes "including children. It would be better if a war didn't break out, but nothing is good if unrest and feat last long.";
 		next;
-		mes "[Maximilian]";
+		mes "[马克西米利安]";
 		mes "Ah, I am sorry that you saw";
 		next;
-		mes "[Wolf]";
+		mes "[沃尔夫]";
 		mes "Apologies for making you uncomfortable. I am sorry again but can you do me a favor?";
 		next;
-		mes "[Wolf]";
+		mes "[沃尔夫]";
 		mes "I think we need to inform ^0000cdWigner^000000 of the rumor. Please wait a while.";
 		next;
 		cutin "",255;
 		mes "[Wolf prepares documents for a while and seal it in an envelope.]";
 		next;
 		cutin "16wol_nor",2;
-		mes "[Wolf]";
+		mes "[沃尔夫]";
 		mes "Please deliver this document. Sorry again. I cannot find time as I have much to do suddenly.";
 		next;
 		mes "[" + strcharinfo(0) + "]";
@@ -7616,141 +7616,141 @@ prt_cas_q,96,186,3	script	Wolf Roegenburg#ep16lug	4_EP16_WOLF,{
 	}
 	if (ep16_lug == 7) {
 		cutin "16wol_nor",2;
-		mes "[Wolf]";
+		mes "[沃尔夫]";
 		mes "Did you deliver the document to Isaac? I should have done it myself, but I got busy suddenly.";
 		next;
-		mes "[Wolf]";
+		mes "[沃尔夫]";
 		mes "I thought about many thins after I heard from Agnes. To do those things, I cannot waste a minute.";
 		next;
-		mes "[Wolf]";
+		mes "[沃尔夫]";
 		mes "Then see you soon.";
 		close3;
 	}
 	if (ep16_lug == 8) {
 		cutin "16wol_nor",2;
-		mes "[Wolf]";
+		mes "[沃尔夫]";
 		mes "Dear adventurer, thank you very much. Was Wigner offended?";
 		next;
 		mes "[" + strcharinfo(0) + "]";
 		mes "He understood everything. He believes that Wigner will find a new item as soon as possible.";
 		next;
-		mes "[Wolf]";
+		mes "[沃尔夫]";
 		mes "It is very good that he understands what I want. I think I have to start a new business at least not to disappoint Wigner.";
 		next;
 		mes "[" + strcharinfo(0) + "]";
 		mes "You will not give up the desire to do business huh?";
 		next;
-		mes "[Wolf]";
+		mes "[沃尔夫]";
 		mes "It fits me surprisingly. Working is rewarding and enjoyable. Besides, I can show my only ability, not as Roegenburg's ability.";
 		next;
 		mes "[" + strcharinfo(0) + "]";
 		mes "By the way, your brothers must be busy. Myer and even Helmut....";
 		next;
 		cutin "",255;
-		mes "[Maximilian]";
+		mes "[马克西米利安]";
 		mes "Helmut has left for the front without saying anything. Myer also has left home. I think they felt something from what Agnes said.";
 		next;
-		mes "[Maximilian]";
+		mes "[马克西米利安]";
 		mes "If you allow, I would like ^0000cdclear up misunderstanding of my family^000000 in the rumor. Do you have time?";
 		next;
 		mes "[" + strcharinfo(0) + "]";
 		mes "Yes, I do.";
 		next;
-		mes "[Maximilian]";
+		mes "[马克西米利安]";
 		mes "The rumor is true, except the part that a war will break out.";
 		next;
-		mes "[Maximilian]";
+		mes "[马克西米利安]";
 		mes "Let me tell you an old story. The parents of the four children gave a birth to Agnes and left for a neighboring country for resting.";
 		next;
-		mes "[Maximilian]";
+		mes "[马克西米利安]";
 		mes "They were attacked by the monster there.";
 		next;
 		mes "[" + strcharinfo(0) + "]";
 		mes "In the holiday resort? Now the monster appears even in the holiday resort?";
 		next;
-		mes "[Maximilian]";
+		mes "[马克西米利安]";
 		mes "It was a remote but safe place. But for an unknown reason, the monsters attacked in group.";
 		next;
-		mes "[Maximilian]";
+		mes "[马克西米利安]";
 		mes "The reason remains unknown, but they guess that the monsters came down to the town, chased by subjugation.";
 		next;
 		mes "[" + strcharinfo(0) + "]";
 		mes "原来如此。";
 		next;
-		mes "[Maximilian]";
+		mes "[马克西米利安]";
 		mes "When we arrived at the site, the area was closed and no access was allowed, though my son and daughter-in-law was inside.";
 		next;
-		mes "[Maximilian]";
+		mes "[马克西米利安]";
 		mes "We met with managers, but they blocked completely heavily armed foreigners like us.";
 		next;
-		mes "[Maximilian]";
+		mes "[马克西米利安]";
 		mes "I understand that. An armed force of a foreign country was crossing the border and I was not sure what the armed force would do. They have no choice but stop them.";
 		next;
-		mes "[Maximilian]";
+		mes "[马克西米利安]";
 		mes "So, we tried to get into the closed zone and contact many people while time passed.";
 		next;
-		mes "[Maximilian]";
+		mes "[马克西米利安]";
 		mes "At the end, we had to provide lots of money as bribe before we can dispatch mercenaries into the resort, but my son and daughter-in-law had been already killed.";
 		next;
-		mes "[Maximilian]";
+		mes "[马克西米利安]";
 		mes "Actually, they were alive just before they were found. But, the access was delayed and they had to die in pains.";
 		next;
 		mes "[" + strcharinfo(0) + "]";
 		mes "I am sorry to hear that.";
 		next;
-		mes "[Maximilian]";
+		mes "[马克西米利安]";
 		mes "I didn't tell the children about the attack, but I had to confess the death of their parents.";
 		next;
-		mes "[Maximilian]";
+		mes "[马克西米利安]";
 		mes "So losing beloved ones, my children and I came to live together.";
 		next;
-		mes "[Maximilian]";
+		mes "[马克西米利安]";
 		mes "I grew the children to live up to the name of Roegenburg.";
 		mes "But actually what they need was education, but warm heart.";
 		next;
-		mes "[Maximilian]";
+		mes "[马克西米利安]";
 		mes "I didn't know that and I was only strict on them.";
 		next;
-		mes "[Maximilian]";
+		mes "[马克西米利安]";
 		mes "The children couldn't stand any more and one day they left as a token of resistance.";
 		next;
-		mes "[Maximilian]";
+		mes "[马克西米利安]";
 		mes "The children are unwilling to talk about those days. But I am sure that what they heard and saw in those days affected them.";
 		next;
 		mes "[" + strcharinfo(0) + "]";
 		mes "How?";
 		next;
-		mes "[Maximilian]";
+		mes "[马克西米利安]";
 		mes "Helmut trained himself. When he was grown up, he left to the border. Wolf suddenly declared that he would make money.";
 		next;
-		mes "[Maximilian]";
+		mes "[马克西米利安]";
 		mes "I tried to stop him saying that there should no merchant in my family, but he was so stubborn.";
 		next;
-		mes "[Maximilian]";
+		mes "[马克西米利安]";
 		mes "After coming home, Myer was doing well for a while. But he left us with a note. Only Agnes has been growing well without a problem.";
 		next;
 		mes "[" + strcharinfo(0) + "]";
 		mes "Well. I see each of them has their own stories! The rumor is spread with something concealed.";
 		next;
-		mes "[Maximilian]";
+		mes "[马克西米利安]";
 		mes "Yes, Myer said he would handle the rumor and so the rumor will disappear. Can I ask you to do me a favor?";
 		next;
 		mes "[" + strcharinfo(0) + "]";
 		mes "Please go ahead.";
 		next;
-		mes "[Maximilian]";
+		mes "[马克西米利安]";
 		mes "I am worried that ^0000cdHelmut left without a word^000000, as there are many eyes watching him. He is the heir of our family.";
 		next;
-		mes "[Maximilian]";
+		mes "[马克西米利安]";
 		mes "I hoped that he would stay for the time being, but I am sad that he left all of sudden.";
 		next;
 		mes "[" + strcharinfo(0) + "]";
 		mes "Then, my job is to bring him.";
 		next;
-		mes "[Maximilian]";
+		mes "[马克西米利安]";
 		mes "Yes. He must be in the ^0000cdcheckpoint near the border with Schwarzwald^000000. He is responsible for the patrol party.";
 		next;
-		mes "[Maximilian]";
+		mes "[马克西米利安]";
 		mes "And when you come back, use this. You can return to Prontera instantly.";
 		next;
 		mes "[" + strcharinfo(0) + "]";
@@ -7763,46 +7763,46 @@ prt_cas_q,96,186,3	script	Wolf Roegenburg#ep16lug	4_EP16_WOLF,{
 	}
 	if (ep16_lug > 8 && ep16_lug < 13) {
 		cutin "16wol_nor",2;
-		mes "[Wolf]";
+		mes "[沃尔夫]";
 		mes "I think I was closer to brothers than now, to Helmut and Myer.";
 		next;
-		mes "[Wolf]";
+		mes "[沃尔夫]";
 		mes "Agnes was our favored child in the family. She was the only little sister.";
 		next;
-		mes "[Wolf]";
+		mes "[沃尔夫]";
 		mes "But sometimes I wonder why we have become this estranged.";
 		next;
-		mes "[Wolf]";
+		mes "[沃尔夫]";
 		mes "Well, I think it is because we have came to become different and we also have different ideas on what is right. I understand to some extent.";
 		next;
-		mes "[Wolf]";
+		mes "[沃尔夫]";
 		mes "It was quite a shock when Myer left home. He just left without a word, though he was very close to me.";
 		next;
-		mes "[Wolf]";
+		mes "[沃尔夫]";
 		mes "Since then, I think, I started to find what I can. I cannot stand the thought that I am the only one who are not developing.";
 		next;
-		mes "[Wolf]";
+		mes "[沃尔夫]";
 		mes "When a human feels an empty space, he/she tends to fill it.";
 		next;
-		mes "[Wolf]";
+		mes "[沃尔夫]";
 		mes "I think I am going to continue to go around to find it.";
 		close3;
 	}
 	if (ep16_lug > 12) {
 		cutin "16wol_nor",2;
-		mes "[Wolf]";
+		mes "[沃尔夫]";
 		mes "Dear adventurer, thanks to you, I feel that my brothers and I have become closer.";
 		mes "My brothers and I didn't know how to be bent and were about to be broken.";
 		next;
-		mes "[Wolf]";
+		mes "[沃尔夫]";
 		mes "I think these experiences make us more friendly and developing.";
 		mes "We were apart a long time and all have forgotten it.";
 		next;
-		mes "[Wolf]";
+		mes "[沃尔夫]";
 		mes "From now, I am going to lead my family, helping my grandfather.";
 		mes "If you visit us from time to time, I will be happy.";
 		next;
-		mes "[Wolf]";
+		mes "[沃尔夫]";
 		mes "Please come back to us, if you need a help.";
 		close3;
 	}
@@ -7812,31 +7812,31 @@ prt_cas_q,90,184,7	script	#ep16lug004	HIDDEN_NPC,5,5,{
 	end;
 OnTouch:
 	if (ep16_lug < 3)
-		cloakonnpcself( "Myer Roegenburg#ep16lug" );
+		cloakonnpcself( "迈耶·雷根布尔格#ep16lug" );
 	else if (ep16_lug > 2 && ep16_lug < 7)
-		cloakoffnpcself( "Myer Roegenburg#ep16lug" );
+		cloakoffnpcself( "迈耶·雷根布尔格#ep16lug" );
 	else if (ep16_lug > 6) {
-		cloakonnpcself( "Helmut Roegenburg#ep16lug" );
-		cloakonnpcself( "Myer Roegenburg#ep16lug" );
+		cloakonnpcself( "赫尔穆特·雷根布尔格#ep16lug" );
+		cloakonnpcself( "迈耶·雷根布尔格#ep16lug" );
 		cloakonnpcself( "Kalbern#ep16lug" );
 	}
 	end;
 }
 
-prt_cas_q,92,182,7	script	Myer Roegenburg#ep16lug	4_EP16_MEYER,{
+prt_cas_q,92,182,7	script	迈耶·雷根布尔格#ep16lug	4_EP16_MEYER,{
 	if (ep16_lug > 2 && ep16_lug < 7) {
 		cutin "16mye_nor",1;
-		mes "[Myer]";
+		mes "[迈耶]";
 		mes "It feels good that I come home for a long time.";
 		mes "It is a little suffocating though.";
 		next;
-		mes "[Myer]";
+		mes "[迈耶]";
 		mes "Anyway, this house goes well without me. I don't worry about the family, but I am only worried about my grandfather, as he is quite old.";
 		next;
-		mes "[Myer]";
+		mes "[迈耶]";
 		mes "Now I am home and it seems that Helmut, Wolf, and Agnes have been all good.";
 		next;
-		mes "[Myer]";
+		mes "[迈耶]";
 		mes "I think it is great, though a little disappointing.";
 		mes "It is stupid to think like this, as I left home.";
 		close3;
@@ -7852,12 +7852,12 @@ prt_cas_q,74,189,5	script	#ep16lug000	HIDDEN_NPC,5,5,{
 	end;
 OnTouch:
 	if (ep16_lug < 3)
-		cloakonnpcself( "Myer Roegenburg#ep16lug" );
+		cloakonnpcself( "迈耶·雷根布尔格#ep16lug" );
 	else if (ep16_lug > 2 && ep16_lug < 7)
-		cloakoffnpcself( "Myer Roegenburg#ep16lug" );
+		cloakoffnpcself( "迈耶·雷根布尔格#ep16lug" );
 	else if (ep16_lug > 6) {
-		cloakonnpcself( "Helmut Roegenburg#ep16lug" );
-		cloakonnpcself( "Myer Roegenburg#ep16lug" );
+		cloakonnpcself( "赫尔穆特·雷根布尔格#ep16lug" );
+		cloakonnpcself( "迈耶·雷根布尔格#ep16lug" );
 		cloakonnpcself( "Kalbern#ep16lug" );
 	}
 	end;
@@ -8041,7 +8041,7 @@ function	script	F_kids_roegenburg_quest	{
 		mes "Yes. I fell all of them. Now let me listen to the story, that expensive story.";
 		next;
 		mes "[Allen]";
-		mes "War, Royal family. Helmut Roegenburg. If he becomes a king, the continent will be drawn into a vortex of war.";
+		mes "War, Royal family. 赫尔穆特·雷根布尔格. If he becomes a king, the continent will be drawn into a vortex of war.";
 		next;
 		mes "[Allen]";
 		mes "Darkness will sweep the continent and painful groans will cover all the continent!!!";
@@ -8050,7 +8050,7 @@ function	script	F_kids_roegenburg_quest	{
 		mes "Is that rumor circulating? But I don't understand what it means. Anybody who can interpret for me?";
 		next;
 		mes "[Jin]";
-		mes "Simple. If Helmut Roegenburg becomes a king, a war will break out.";
+		mes "Simple. If 赫尔穆特·雷根布尔格 becomes a king, a war will break out.";
 		next;
 		mes "[" + strcharinfo(0) + "]";
 		mes "Hmm.. It's too simple. Please explain more.";
@@ -8059,7 +8059,7 @@ function	script	F_kids_roegenburg_quest	{
 		mes "Errrrrr! What are you talking about? both of you. Let me explain. The rumor is as follows:";
 		next;
 		mes "[Harriet]";
-		mes "if Helmut Roegenburg becomes a king...., Ah by the way, do you know a rumor about the Roegenburg, especially the rumor on the ^0000cddeath of the four children^000000.";
+		mes "if 赫尔穆特·雷根布尔格 becomes a king...., Ah by the way, do you know a rumor about the Roegenburg, especially the rumor on the ^0000cddeath of the four children^000000.";
 		next;
 		mes "[" + strcharinfo(0) + "]";
 		mes "No, I don't know. Never heard before.";
@@ -8068,7 +8068,7 @@ function	script	F_kids_roegenburg_quest	{
 		mes "This is also only a rumor. I am sure it is true. Anyway I heard that they were murdered,";
 		next;
 		mes "[Harriet]";
-		mes "when they visit a foreign country. Helmut Roegenburg was shocked and since then he has been wandering around battle fields.";
+		mes "when they visit a foreign country. 赫尔穆特·雷根布尔格 was shocked and since then he has been wandering around battle fields.";
 		next;
 		mes "[" + strcharinfo(0) + "]";
 		mes "Yes, it is true he has been wandering around battle field.";
@@ -8168,13 +8168,13 @@ function	script	F_kids_roegenburg_quest	{
 		mes "Ah, there he comes!, Jonathan! We have a guest.";
 		next;
 		cloakoffnpcself( "Ordinary Man#ep16lug02" );
-		mes "[Myer]";
+		mes "[迈耶]";
 		mes "Dear adventurer. What has brought you here?";
 		next;
 		mes "[" + strcharinfo(0) + "]";
 		mes "A way to find the first person who spreads a rumor is to find the source of rumor. but I didn't expect you are here.";
 		next;
-		mes "[Myer]";
+		mes "[迈耶]";
 		mes "Did you come here to see me?";
 		next;
 		mes "[" + strcharinfo(0) + "]";
@@ -8192,7 +8192,7 @@ function	script	F_kids_roegenburg_quest	{
 		mes "[Harriet]";
 		mes "Who is Myer? ^0000cdIs you name Myer^000000? Jonathan Myer? Myer Jonathan? You told me to call you just Jonathan.";
 		next;
-		mes "[Myer]";
+		mes "[迈耶]";
 		mes "You saw these kids before, didn't you?";
 		next;
 		mes "[" + strcharinfo(0) + "]";
@@ -8201,7 +8201,7 @@ function	script	F_kids_roegenburg_quest	{
 		mes "[Harriet]";
 		mes "Are you Jonathan Myer? or Myer Jonathan? Let me know!";
 		next;
-		mes "[Myer]";
+		mes "[迈耶]";
 		mes "Kids. I am going to have a very important talk with him. Will you close your ears or leave us alone?";
 		next;
 		mes "[Allen]";
@@ -8213,7 +8213,7 @@ function	script	F_kids_roegenburg_quest	{
 		mes "[Harriet]";
 		mes "Come on! They are going to have an important talk. Everybody, close your ears.";
 		next;
-		mes "[Myer]";
+		mes "[迈耶]";
 		mes "Good boys. After the talk I will give you liquorice.";
 		next;
 		mes "[Allen]";
@@ -8228,45 +8228,45 @@ function	script	F_kids_roegenburg_quest	{
 		mes "[" + strcharinfo(0) + "]";
 		mes "They are cute and smart. I am curious how they will grow up.";
 		next;
-		mes "[Myer]";
+		mes "[迈耶]";
 		mes "Yes. That's why I am here to check, teach and lead them.";
 		next;
 		mes "[" + strcharinfo(0) + "]";
 		mes "You are doing a great job.";
 		next;
-		mes "[Myer]";
+		mes "[迈耶]";
 		mes "Well. it's just what I can do. By the way, what is the message?";
 		next;
 		mes "[He told Myer that Helmut had transferred heir-ship and his two brothers had gave up wars.]";
 		next;
-		mes "[Myer]";
+		mes "[迈耶]";
 		mes "That is great. They are my brothers I am proud of. What is the most important and fortunate is that ^0000cdWolf has changed his mind^000000. It is very annoying to argue with him.";
 		next;
-		mes "[Myer]";
+		mes "[迈耶]";
 		mes "Wolf has to see everything to finish. It is a good in a way, though.";
 		next;
-		mes "[Myer]";
+		mes "[迈耶]";
 		mes "You may not believe, he is the one I like the most in the family.";
 		next;
-		mes "[Myer]";
+		mes "[迈耶]";
 		mes "Ah, anyway, I am sorry that we showed you an unpleasant family affairs.";
 		next;
 		mes "[" + strcharinfo(0) + "]";
 		mes "It is common for brothers to fight one another. I also....";
 		next;
-		mes "[Myer]";
+		mes "[迈耶]";
 		mes "Anyway, I think I have to visit the house. The house has been annoying, but I think that it will be interesting. Please tell my family that I will help them here while I am doing my job.";
 		next;
-		mes "[Myer]";
+		mes "[迈耶]";
 		mes "And tell them I will visit them after the banquet.";
 		next;
-		mes "[Myer]";
+		mes "[迈耶]";
 		mes "And please tell Agnes that I am sorry that cannot go with her to the banquet.";
 		next;
 		mes "[" + strcharinfo(0) + "]";
 		mes "Yes, I will.";
 		next;
-		mes "[Myer]";
+		mes "[迈耶]";
 		mes "If you need my help, just find me. I will help you with all my efforts. Take care!";
 		erasequest 14506;// Things Turned out This Way
 		setquest 14507;// To Maximilian
@@ -8499,61 +8499,61 @@ yuno_fild01,241,171,7	duplicate(Border Guards#ep16lug01)	Border Guards#ep16lug06
 yuno_fild01,243,171,1	duplicate(Border Guards#ep16lug01)	Border Guards#ep16lug07	4_M_JOB_WIZARD
 yuno_fild01,245,171,1	duplicate(Border Guards#ep16lug01)	Border Guards#ep16lug08	4_M_PECOKNIGHT
 
-yuno_fild01,242,175,5	script	Helmut Roegenburg#ep16lug02	4_EP16_HELMUT,5,5,{
+yuno_fild01,242,175,5	script	赫尔穆特·雷根布尔格#ep16lug02	4_EP16_HELMUT,5,5,{
 	if (ep16_lug == 9) {
-		mes "[Helmut]";
+		mes "[赫尔穆特]";
 		mes "Dear adventurer? What are you doing here? It is dangerous. The monster came down here just before. Please leave now.";
 		next;
 		mes "[" + strcharinfo(0) + "]";
 		mes "I'm OK. I'm accustomed to everyday life of being attacked by monsters.";
 		next;
-		mes "[Helmut]";
+		mes "[赫尔穆特]";
 		mes "I forgot you are a great warrior. Please forgive my rudeness.";
 		mes "By the way what has brought you here?";
 		next;
 		mes "[" + strcharinfo(0) + "]";
 		mes "I came here to bring Lord Helmut. Your grandfather is very worried about you. He said you are away from home in an important time.";
 		next;
-		mes "[Helmut]";
+		mes "[赫尔穆特]";
 		mes "I don't go back. ^0000cdI belong here, the front^000000. Please tell my grandfather so.";
 		next;
 		mes "[" + strcharinfo(0) + "]";
 		mes "But everybody is worried about you.";
 		next;
-		mes "[Helmut]";
+		mes "[赫尔穆特]";
 		mes "I cannot go back. As a matter of fact, I resent the people who left my parents die since I became mature.";
 		next;
-		mes "[Helmut]";
+		mes "[赫尔穆特]";
 		mes "And I thought that it is the right way to develop the power that makes people to have no choice but to follow.";
 		next;
-		mes "[Helmut]";
+		mes "[赫尔穆特]";
 		mes "So, my goal was to unify the continent and make my power reached at every corner of the continent. So I trained and trained myself.";
 		next;
-		mes "[Helmut]";
+		mes "[赫尔穆特]";
 		mes "However, when I listened to Myer and Agnes, I realized that the way I pursue could cause sadness and misfortune to someone.";
 		next;
-		mes "[Helmut]";
+		mes "[赫尔穆特]";
 		mes "So I decided to ^0000cdgive up the unification war ^000000that pushes people into a vortex of war.";
 		next;
-		mes "[Helmut]";
+		mes "[赫尔穆特]";
 		mes "This is where I should stay. Here I can ^0000cdprotect more people safely^000000.";
 		next;
-		mes "[Helmut]";
+		mes "[赫尔穆特]";
 		mes "Considering the position of our family, I will cooperate in what is needed for the Royal Assembly.";
 		next;
-		mes "[Helmut]";
+		mes "[赫尔穆特]";
 		mes "But I hope that Wolf will lead everything. When the Royal Assembly is closed, please tell Wolf that I will ^0000cdtransfer the position of heir to him^000000.";
 		next;
-		mes "[Helmut]";
+		mes "[赫尔穆特]";
 		mes "Wolf will need lots of power. I will stay here to protect our people.";
 		next;
-		mes "[Helmut]";
+		mes "[赫尔穆特]";
 		mes "If you do so, Wolf will not insist on wars and Myer will not sacrifice himself like that anymore.";
 		next;
 		mes "[" + strcharinfo(0) + "]";
 		mes "...I see. I will tell you message to your grandfather.";
 		next;
-		mes "[Helmut]";
+		mes "[赫尔穆特]";
 		mes "Yes. thank you. Please take care.";
 		erasequest 14504;// In Search of Helmut
 		setquest 14505;// I Won't go Back
@@ -8561,35 +8561,35 @@ yuno_fild01,242,175,5	script	Helmut Roegenburg#ep16lug02	4_EP16_HELMUT,5,5,{
 		close;
 	}
 	if (ep16_lug == 10) {
-		mes "[Helmut]";
+		mes "[赫尔穆特]";
 		mes "This is where I should stay.";
 		mes "Please tell him '^0000cdI give up wars and transfer my position of heir to Wolf^000000'.";
 		next;
-		mes "[Helmut]";
+		mes "[赫尔穆特]";
 		mes "If you do so, Wolf will not insist on wars and Myer will not sacrifice himself like that anymore.";
 		next;
-		mes "[Helmut]";
+		mes "[赫尔穆特]";
 		mes "Then, good bye.";
 		close;
 	}
-	mes "[Helmut]";
+	mes "[赫尔穆特]";
 	mes "I can feel the earth is shaking.";
 	mes "An attack is expected soon. I have to make preparation.";
 	close;
 
 OnTouch:
 	if (ep16_lug == 9 || ep16_lug == 10) {
-		mes "[Helmut]";
+		mes "[赫尔穆特]";
 		mes "Give shout of concentration!!!";
 		for ( .@i = 1; .@i < 9; ++.@i )
 			npctalk "Hab!", "Border Guards#ep16lug0" + .@i, bc_area;
 		next;
-		mes "[Helmut]";
+		mes "[赫尔穆特]";
 		mes "Louder!!!!";
 		for ( .@i = 1; .@i < 9; ++.@i )
 			npctalk "Hab!", "Border Guards#ep16lug0" + .@i, bc_area;
 		next;
-		mes "[Helmut]";
+		mes "[赫尔穆特]";
 		mes "We!!!!!!";
 		next;
 		for ( .@i = 1; .@i < 9; ++.@i )
@@ -8622,13 +8622,13 @@ yuno_fild01,244,176,3	script	Kalbern#ep16lug02	4_M_RUSCHILD,{
 //prontera,269,73,5	script	Ordinary Man#ep16lug02	4_M_04,5,5,{	// no OnTouch
 prontera,269,73,5	script	Ordinary Man#ep16lug02	4_M_04,{
 	if (ep16_lug >= 12) {
-		mes "[Myer]";
+		mes "[迈耶]";
 		mes "Thank you for coming here to deliver the message. Without you, I would not have listened to anything like the one I heard today.";
 		next;
-		mes "[Myer]";
+		mes "[迈耶]";
 		mes "Fight, fight, and fight.... I don't want that either.";
 		next;
-		mes "[Myer]";
+		mes "[迈耶]";
 		mes "They are my family who are closer to me than anyone.";
 		close;
 	}
@@ -11754,7 +11754,7 @@ prt_cas_q,94,7,7	script	艾萨克·维格纳#ep16wig	4_EP16_ISAAC,{
 		mes "May I ask you for one more thing? I have heard that there is ^0000cda strange rumor^000000 circulating in Prontera.";
 		next;
 		mes "[艾萨克]";
-		mes "It is supposed to be about ^0000cdHelmut Roegenburg^000000. Would you investigate about the rumor and let me know the truth?";
+		mes "It is supposed to be about ^0000cd赫尔穆特·雷根布尔格^000000. Would you investigate about the rumor and let me know the truth?";
 		next;
 		mes "[艾萨克]";
 		mes "Since I have a reputation to keep. I cannot afford to have a scandal. Please help me.";
@@ -11803,7 +11803,7 @@ prt_cas_q,94,7,7	script	艾萨克·维格纳#ep16wig	4_EP16_ISAAC,{
 		mes "Dear adventurer, you are back. Did you deliver the thing safely? What did he say about the rumor?";
 		next;
 		mes "[" + .@name$ + "]";
-		mes "Here is the ^0000cddocument^000000 about it. It is written by Wolf Roegenburg himself.";
+		mes "Here is the ^0000cddocument^000000 about it. It is written by 沃尔夫·雷根布尔格 himself.";
 		next;
 		mes "[艾萨克]";
 		mes "Let's see... Hum... So the new business will be delayed indefinitely. The direction of the business will be changed.";
@@ -13508,8 +13508,8 @@ prt_cas,89,257,3	script	Karian#ep16_1	4_M_MINSTREL1,{
 	close3;
 }
 
-prt_cas,85,223,1	script	Maximilian Roegenburg#ep16wig01	4_EP16_MAX,{
-	mes "[Maximilian]";
+prt_cas,85,223,1	script	马克西米利安·雷根布尔格#ep16wig01	4_EP16_MAX,{
+	mes "[马克西米利安]";
 	mes "I have heard that my grandson is under indebtedness to your son these days.";
 	next;
 	mes "[勒维耶]";
@@ -13536,7 +13536,7 @@ prt_cas,84,225,4	script	勒维耶·维格纳#ep16wig01	4_EP16_LOUVIERE,{
 	mes "[勒维耶]";
 	mes "Dear Roegenburg, how are your children doing? I often hear about your third grandson from Isaac/";
 	next;
-	mes "[Maximilian]";
+	mes "[马克西米利安]";
 	mes "Oh, they are doing fine. Please visit our home when you get the time.";
 	close;
 }
