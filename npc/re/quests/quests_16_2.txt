@@ -3038,7 +3038,7 @@ OnTouch:
 		cloakoffnpcself( "Nihil#ep162_02" );
 		cloakoffnpcself( "菲洛彭特斯#ep162_03" );
 		cloakoffnpcself( "斯琪亚#ep162_05" );
-		cloakoffnpcself( "Rookie#ep162_01" );
+		cloakoffnpcself( "新人#ep162_01" );
 		cloakoffnpcself( "雷兹#ep162_01" );
 		npctalk "Mr. 雷兹, was that a joke?", "菲洛彭特斯#ep162_03", bc_self;
 		sleep2 2000;
@@ -3122,12 +3122,12 @@ ein_in01,269,285,5	script	Nihil#ep162_02	4_EP16_NIHIL,{
 		npctalk "Unless you are a useless idiot.", "菲洛彭特斯#ep162_03", bc_self;
 		next;
 		cutin "16loo_02.bmp",1;
-		mes "[Rookie]";
+		mes "[新人]";
 		mes "Wow, he sure has a big mouth~";
 		mes "If my sister Elena heard it, she might have shot him in the head!";
 		next;
 		cutin "16loo_01.bmp",1;
-		mes "[Rookie]";
+		mes "[新人]";
 		mes "We've picked out the combatants. Since this operation is confidential, we selected those who we can fully trust.";
 		mes "And the investigation of the buildings and geographical features?";
 		next;
@@ -3146,7 +3146,7 @@ ein_in01,269,285,5	script	Nihil#ep162_02	4_EP16_NIHIL,{
 		npctalk "No retreat path.", "菲洛彭特斯#ep162_03", bc_self;
 		next;
 		cutin "16loo_01.bmp",1;
-		mes "[Rookie]";
+		mes "[新人]";
 		mes "Hmm. Then all we have to do is get in there and block the only entrance?";
 		next;
 		cutin "ep16_nihi_miseria_heine01.bmp",2;
@@ -3159,7 +3159,7 @@ ein_in01,269,285,5	script	Nihil#ep162_02	4_EP16_NIHIL,{
 		npctalk "That's quite possible.", "菲洛彭特斯#ep162_03", bc_self;
 		next;
 		cutin "16loo_01.bmp",1;
-		mes "[Rookie]";
+		mes "[新人]";
 		mes "Leave it to us!";
 		mes "The 反叛者 hasn't just been napping.";
 		mes "Then the rest here are all surplus manpower?";
@@ -3201,21 +3201,21 @@ ein_in01,269,285,5	script	Nihil#ep162_02	4_EP16_NIHIL,{
 		mes "I am counting on you.";
 		next;
 		cutin "16loo_01.bmp",1;
-		mes "[Rookie]";
+		mes "[新人]";
 		mes "Now let's get going.";
 		mes "It will be dark soon.";
 		mes "It's the end of the week, so security might not be so tight.";
 		next;
 		cutin "ep16_tes01.bmp",0;
 		mes "[泰丝]";
-		mes "The location is ^4d4dffOperation Spot in one o'clock, Northern field in 艾因布罗克^000000.";
-		mes "In the field, please cooperate with the 反叛者.";
+		mes "地点是^4d4dff艾因布罗克北部野外，一点钟方向的作战地点^000000。";
+		mes "在战场上请与反叛者合作。";
 		next;
 		cutin "16loo_01.bmp",1;
-		mes "[Rookie]";
+		mes "[新人]";
 		mes "The exact ^4d4dffcoordinates of the operation spot are 280, 332^000000. The person in charge of the operation may be ... ^4d4dffJulian^000000.";
 		next;
-		mes "[Rookie]";
+		mes "[新人]";
 		mes "Go find Julian!";
 		mes "Of course I'm going too.";
 		next;
@@ -3243,8 +3243,8 @@ ein_in01,269,285,5	script	Nihil#ep162_02	4_EP16_NIHIL,{
 		next;
 		cutin "ep16_tes01.bmp",0;
 		mes "[泰丝]";
-		mes "The location is ^4d4dffOperation Spot in one o'clock, Northern field in 艾因布罗克^000000.";
-		mes "In the field, please cooperate with the 反叛者.";
+		mes "地点是^4d4dff艾因布罗克北部野外，一点钟方向的作战地点^000000。";
+		mes "在战场上请与反叛者合作。";
 		close3;
 	}
 	if (terra_gloria_main == 22)
@@ -3259,20 +3259,20 @@ ein_in01,274,278,3	script	雷兹#ep162_01	4_M_LAZY,{
 	if (terra_gloria_main == 18) {
 		cutin "16lei_01.bmp",2;
 		mes "[雷兹]";
-		mes "Well, it seems like everyone is here. Maybe I can step out?";
-		mes "From now on, Rookie, the heron emeritus agent, will handle it!";
+		mes "看来大家都到齐了。我可以先撤了吧？";
+		mes "接下来就交给退休苍鹭特工，新人！";
 		close3;
 	}
 	if (terra_gloria_main == 19) {
 		cutin "16lei_01.bmp",2;
 		mes "[雷兹]";
-		mes "I've done my job~";
-		mes "Now I'm counting on Rookie!";
-		mes "I'm on vacation from now on!";
+		mes "我的工作完成了~";
+		mes "接下来拜托新人了！";
+		mes "我从现在开始休假！";
 		close3;
 		cutin "",255;
-		npctalk "Who says that?!", "菲洛彭特斯#ep162_03", bc_self;
-		npctalk "Hey, 雷兹! You are irresponsible!", "Rookie#ep162_01", bc_self;
+		npctalk "谁说的？！", "菲洛彭特斯#ep162_03", bc_self;
+		npctalk "喂，雷兹！你太不负责了！", "新人#ep162_01", bc_self;
 		end;
 	}
 	end;
@@ -3281,20 +3281,20 @@ OnInit:
 	end;
 }
 
-ein_in01,272,282,3	script	Rookie#ep162_01	4_M_ROOKIE,{
+ein_in01,272,282,3	script	新人#ep162_01	4_M_ROOKIE,{
 	if (terra_gloria_main == 18) {
-		npctalk "Adventurer, you're late.", "", bc_self;
+		npctalk "冒险者，你迟到了。", "", bc_self;
 		end;
 	}
 	if (terra_gloria_main == 19) {
 		cutin "16loo_01.bmp",2;
-		mes "[Rookie]";
-		mes "Most of the squadron will be standing by in the operation spot.";
-		mes "They will take a chance to start it, right?";
-		mes "I think they will get in when it gets dark ...";
+		mes "[新人]";
+		mes "大部分队员会在作战地点待命。";
+		mes "他们会找机会开始吧？";
+		mes "我想天黑后他们会进去……";
 		next;
-		mes "[Rookie]";
-		mes "Let's get there before it's too late.";
+		mes "[新人]";
+		mes "趁还来得及，我们过去吧。";
 		close3;
 	}
 	end;
@@ -3305,14 +3305,14 @@ OnInit:
 
 ein_in01,271,284,3	script	斯琪亚#ep162_05	4_EP16_SKIA,{
 	if (terra_gloria_main == 18) {
-		npctalk "Please listen to Nihil first.", "", bc_self;
+		npctalk "先听尼希尔说。", "", bc_self;
 		end;
 	}
 	if (terra_gloria_main == 19) {
 		cutin "ep16_skia_nerius01.bmp",0;
 		mes "[斯琪亚]";
-		mes "I will be in the shade.";
-		mes "Oh~ I'm excited to use a sword after such a long time!";
+		mes "我会在暗处待命。";
+		mes "哦~好久没挥剑了，真兴奋！";
 		close3;
 	}
 	end;
@@ -3323,13 +3323,13 @@ OnInit:
 
 ein_in01,269,282,1	script	菲洛彭特斯#ep162_03	4_M_PHILOFONTES,{
 	if (terra_gloria_main == 18) {
-		npctalk "... Please talk to the Prince first.", "", bc_self;
+		npctalk "……请先和王子谈。", "", bc_self;
 		end;
 	}
 	if (terra_gloria_main == 19) {
 		mes "[泰丝]";
-		mes "The location is ^4d4dffOperation Spot in one o'clock, Northern field in 艾因布罗克^000000.";
-		mes "In the field, please cooperate with the 反叛者.";
+		mes "地点是^4d4dff艾因布罗克北部野外，一点钟方向的作战地点^000000。";
+		mes "在战场上请与反叛者合作。";
 		close;
 	}
 	if (terra_gloria_main == 22)
@@ -3342,47 +3342,47 @@ OnInit:
 
 
 // 艾因布罗克 Field - instance
-ein_fild04,284,332,3	script	Rookie#ep162_02	4_M_ROOKIE,{
+ein_fild04,284,332,3	script	新人#ep162_02	4_M_ROOKIE,{
 	if (terra_gloria_main < 19) {
-		mes "[Rookie]";
-		mes "... I really hate training ...";
+		mes "[新人]";
+		mes "……我真的很讨厌训练……";
 		close;
 	}
 	if (terra_gloria_main == 19) {
 		cutin "16loo_01.bmp",2;
-		mes "[Rookie]";
-		mes "^4d4dffJulian^000000 is the person in charge of the operation here.";
-		mes "Please go and ask him.";
+		mes "[新人]";
+		mes "^4d4dff朱利安^000000是这里行动的负责人。";
+		mes "请去问他。";
 		close3;
 	}
 	if (terra_gloria_main == 20) {// First instance completed
 		cutin "16loo_01.bmp",2;
-		mes "[Rookie]";
-		mes "They are like rats in a trap. All we have to do is the cleanup~ I'm going in, too.";
+		mes "[新人]";
+		mes "他们就像瓮中之鳖。我们只要清场~我也进去。";
 		next;
-		select("Good. I'm counting on you.");
-		mes "[Rookie]";
-		mes "It's natural.";
-		mes "You haven't found that thing you were looking for yet.";
-		mes "I will let you go. Could you just find that thing?";
+		select("好，拜托你了。");
+		mes "[新人]";
+		mes "那是当然。";
+		mes "你还没找到你要找的东西吧。";
+		mes "我放你进去，你只管找到那东西，行吗？";
 		close2;
 		warp "que_swat",155,50;
 		end;
 	}
 	cutin "16loo_01.bmp",2;
-	mes "[Rookie]";
-	mes "As they occupied this place, they are remodeling some of the routes to make a training camp.";
-	mes "... Oh ... I hate it already.";
+	mes "[新人]";
+	mes "他们占领这里后，正在改造部分路线做训练营。";
+	mes "……哦……我已经开始讨厌了。";
 	next;
-	if (select( "Enter the military base.", "Good. I'm counting on you." ) == 2) {
-		mes "[Rookie]";
-		mes "Oh ... arg ...";
+	if (select( "进入军事基地。", "好，拜托你了。" ) == 2) {
+		mes "[新人]";
+		mes "哦……呃……";
 		close3;
 	}
-	mes "[Rookie]";
-	mes "There are still come remnants inside the research facilities.";
-	mes "Actually ... they are more like monsters.";
-	mes "Anyway, take care of yourself.";
+	mes "[新人]";
+	mes "研究设施里还有一些残党。";
+	mes "其实……他们更像怪物。";
+	mes "总之，自己小心。";
 	close2;
 	warp "que_swat",155,50;
 	end;
@@ -3394,67 +3394,67 @@ OnInit:
 
 que_swat,147,57,5	duplicate(dummy_cloaked_npc)	斯琪亚#ep162_07	4_EP16_SKIA
 
-que_swat,150,58,3	script	Rookie#ep162_03	4_M_ROOKIE,{
+que_swat,150,58,3	script	新人#ep162_03	4_M_ROOKIE,{
 	if (checkweight(501,1) == 0) {
-		mes "- Cannot progress with quest because you have too many items in your possession. -";
+		mes "- 携带道具过多，无法继续任务。 -";
 		close;
 	}
 	if (terra_gloria_main < 22) {
 		cutin "16loo_01.bmp",2;
-		mes "[Rookie]";
-		mes "The ^4d4dffcentral area^000000 seems to be located in this laboratory, ^4d4dffdeep inside the building's basement^000000.";
+		mes "[新人]";
+		mes "^4d4dff中央区域^000000似乎在这座实验室^4d4dff建筑地下深处^000000。";
 		mes "Since we, the 反叛者, have completely occupied this place, please feel free to go there.";
 		next;
-		mes "[Rookie]";
-		mes "Teleport?";
-		mes "They cannot use it.";
-		mes "We have blocked it.";
-		mes "Actually, it's something we had never thought of ...";
-		npctalk "You are the exception! Use it whenever you want!", "", bc_self;
+		mes "[新人]";
+		mes "传送？";
+		mes "他们用不了。";
+		mes "我们封锁了。";
+		mes "其实，这是我们之前没想到的……";
+		npctalk "你是例外！想用就用！", "", bc_self;
 		next;
-		mes "[Rookie]";
-		mes "The man with shiny blonde hair told me to block magic related to movement as well.";
-		mes "Well, I know that the magic is more common in Rune Midgarts. Isn't it?";
+		mes "[新人]";
+		mes "那个金发闪闪的男人让我把移动相关魔法也封锁。";
+		mes "我知道这种魔法在卢恩-米德加尔特更常见，对吧？";
 		next;
-		mes "[Rookie]";
-		mes "After all, I hope you will find what you are looking for as soon as possible.";
+		mes "[新人]";
+		mes "总之，希望你尽快找到要找的东西。";
 		close3;
 	}
 	if (terra_gloria_main == 22) {
 		cutin "16loo_01.bmp",2;
-		mes "[Rookie]";
-		mes "Wow, welcome back.";
+		mes "[新人]";
+		mes "哇，欢迎回来。";
 		cloakoffnpcself( "斯琪亚#ep162_07" );
 		npctalk "Hero!", "斯琪亚#ep162_07", bc_self;
 		next;
 		mes "[斯琪亚]";
-		mes "I heard a loud sound inside the central room. I tried to get in there, but it had already been blocked.";
+		mes "我听到中央房间里有巨响，想进去但已经被封住了。";
 		next;
 		cutin "16loo_01.bmp",2;
-		mes "[Rookie]";
-		mes "Right. I was bounced out by an unknown force and could not defend the entrance until the end.";
-		mes "I am sorry.";
+		mes "[新人]";
+		mes "对。我被一股未知力量弹出来，最后没能守住入口。";
+		mes "抱歉。";
 		next;
 		mes "[斯琪亚]";
-		mes "... What on earth was it?";
+		mes "……那到底是什么？";
 		next;
 		mes "[斯琪亚]";
-		mes "On my god ... Seyren Windsor?";
-		mes "And you've found it?";
+		mes "天啊……赛伦·温莎？";
+		mes "你找到它了？";
 		next;
 		mes "[斯琪亚]";
-		mes "Then we must go back quickly.";
-		mes "Our mission is completed.";
-		mes "Let's go back to the hotel first.";
+		mes "那必须赶快回去。";
+		mes "我们的任务完成了。";
+		mes "先回旅馆吧。";
 		next;
 		cutin "16loo_01.bmp",2;
-		mes "[Rookie]";
-		mes "Yeah. The rest of it is our task.";
-		mes "There are still plenty of monster experimental subjects inside, but";
-		mes "That's what we have to contend with.";
+		mes "[新人]";
+		mes "嗯，剩下的交给我们。";
+		mes "里面还有很多怪物实验体，但";
+		mes "那是我们要对付的。";
 		next;
-		mes "[Rookie]";
-		mes "Damn, go away!";
+		mes "[新人]";
+		mes "可恶，滚开！";
 		close2;
 		cloakonnpcself( "斯琪亚#ep162_07" );
 		warp "ein_fild04",279,339;
@@ -3462,18 +3462,18 @@ que_swat,150,58,3	script	Rookie#ep162_03	4_M_ROOKIE,{
 	}
 	if (terra_gloria_main == 23) {
 		cutin "16loo_01.bmp",2;
-		mes "[Rookie]";
+		mes "[新人]";
 		mes "Oh, I hate it here.";
 		mes "I want to go back to our hidout soon.";
 		mes "Shall we get out of here?";
 		next;
 		if (select( "Leave.", "Stay." ) == 2) {
-			mes "[Rookie]";
+			mes "[新人]";
 			mes "Hmm, are you the type of person who looks for trouble?";
 			mes "Well, we appreciate it if you help us clean up the remnants.";
 			close3;
 		}
-		mes "[Rookie]";
+		mes "[新人]";
 		mes "Follow me, then.";
 		close2;
 		warp "ein_fild04",279,339;
@@ -3483,7 +3483,7 @@ que_swat,150,58,3	script	Rookie#ep162_03	4_M_ROOKIE,{
 		npctalk "... Shall I go in now?", "", bc_self;
 		end;
 	}
-	mes "[Rookie]";
+	mes "[新人]";
 	mes "Shall we leave now?";
 	cutin "16loo_01.bmp",2;
 	next;
@@ -3491,22 +3491,22 @@ que_swat,150,58,3	script	Rookie#ep162_03	4_M_ROOKIE,{
 	case 1:
 		break;
 	case 2:
-		mes "[Rookie]";
+		mes "[新人]";
 		mes "Follow me, then.";
 		close2;
 		warp "ein_fild04",279,339;
 		end;
 	case 3:
-		mes "[Rookie]";
+		mes "[新人]";
 		mes "Since this fuss is likely to continue for a while, we'd be glad if you would stay here and help us~";
 		close3;
 	case 4:
-		mes "[Rookie]";
+		mes "[新人]";
 		mes "Why did Werner do that?";
 		mes "I don't understand.";
 		mes "... No. Maybe it's weird to understand a lunatic.";
 		next;
-		mes "[Rookie]";
+		mes "[新人]";
 		mes "Anyways, We have to observe the central room's core.";
 		mes "As long as there are magic inside, the same thing will happen again.";
 		close3;
@@ -3515,37 +3515,37 @@ que_swat,150,58,3	script	Rookie#ep162_03	4_M_ROOKIE,{
 	case -1:
 		switch( checkquest(7742,HUNTING) ) {
 		case -1:
-			mes "[Rookie]";
+			mes "[新人]";
 			mes "Welcome.";
 			mes "Without any further ado,";
 			mes "We would like to hunt the ^4d4dffpet child^000000 guy. Will you join us?";
 			next;
 			if (select( "I am the pet child hunter!", "Reject!" ) == 2) {
-				mes "[Rookie]";
+				mes "[新人]";
 				mes "No, why?";
 				mes "It's just a monster!";
 				mes "We just have to kill it!";
 				mes "Then who should we ask to do it?";
 				close;
 			}
-			mes "[Rookie]";
+			mes "[新人]";
 			mes "Let's reveal its secret!";
 			mes "Let's find out why it keeps showing up!";
 			setquest 7742;// Sweeping the remnants
 			close3;
 		case 0:
 		case 1:
-			mes "[Rookie]";
+			mes "[新人]";
 			mes "It's in the central room. The place full of strange spirits in the middle of the central room.";
 			mes "Let me open the door for you first.";
 			close3;
 		case 2:
-			mes "[Rookie]";
+			mes "[新人]";
 			mes "Great! You're so cool!";
 			mes "Was it a replication of the former experimental subject? Self-replication?";
 			mes "They haven't found out the exact mechanism yet.";
 			next;
-			mes "[Rookie]";
+			mes "[新人]";
 			mes "Anyhow, thank you for your support.";
 			mes "We will count on you again next time.";
 			erasequest 7742;// Sweeping the remnants
@@ -3557,25 +3557,25 @@ que_swat,150,58,3	script	Rookie#ep162_03	4_M_ROOKIE,{
 		end;
 	case 0:
 	case 1:
-		mes "[Rookie]";
+		mes "[新人]";
 		mes "The same monster is regenerated every single day. Isn't it a bit odd?";
 		next;
 		cutin "16loo_02.bmp",2;
-		mes "[Rookie]";
+		mes "[新人]";
 		mes "Maybe this guy is one of the objects that were split by transplanting the hearts of Ymir ...";
 		next;
 		cutin "16loo_01.bmp",2;
-		mes "[Rookie]";
+		mes "[新人]";
 		mes "Anyway, let's see if that guy shows up again.";
 		mes "It's so~ interesting.";
 		close3;
 	case 2:
 		erasequest 7743;// Sweeping the remnants (Standby)
-		mes "[Rookie]";
+		mes "[新人]";
 		mes "Did you call it a pet child?";
 		mes "Seems like they are completely leaving that guy to the adventurer";
 		next;
-		mes "[Rookie]";
+		mes "[新人]";
 		mes "If you want, do not hesitate to tell me any time.";
 		mes "I will give you a mission to kill the pet child.";
 		close3;
@@ -3603,7 +3603,7 @@ que_swat,141,57,5	script	反叛者 squadder#ep16	4_M_GUNSLINGER2,{
 
 que_swat,145,57,3	script	菲洛彭特斯#ep162_04	4_M_PHILOFONTES,{
 	if (checkweight(501,1) == 0) {
-		mes "- Cannot progress with quest because you have too many items in your possession. -";
+		mes "- 携带道具过多，无法继续任务。 -";
 		close;
 	}
 	if (terra_gloria_main < 24) {
@@ -3651,7 +3651,7 @@ que_swat,145,57,3	script	菲洛彭特斯#ep162_04	4_M_PHILOFONTES,{
 		questinfo_refresh();
 		close2;
 		cutin "",255;
-		npctalk "Oh, please come here for a moment.", "Rookie#ep162_03", bc_self;
+		npctalk "Oh, please come here for a moment.", "新人#ep162_03", bc_self;
 		end;
 	}
 	switch( checkquest(7745,PLAYTIME) ) {
@@ -3770,7 +3770,7 @@ que_swat,159,53,5	script	Yudmil#ep162_2	4_M_GUNSLINGER2,{
 
 que_swat,161,53,3	script	Yuslan#ep162_1	4_M_GUNSLINGER3,{
 	if (checkweight(501,1) == 0) {
-		mes "- Cannot progress with quest because you have too many items in your possession. -";
+		mes "- 携带道具过多，无法继续任务。 -";
 		close;
 	}
 	if (terra_gloria_main < 20)
@@ -4724,7 +4724,7 @@ rebel_in,70,78,3	script	Elena Volkova#16.2rm	4_F_ELENA,{
 			cutin "162elena_01.bmp",2;
 			mes "[USU commander Elena]";
 			mes "But before I scold you about it...";
-			mes "I am sorry.";
+			mes "抱歉。";
 			npctalk "Jana Levedeva: Pardon...?", "Jana Levedeva#16.2rms", bc_self;
 			npctalk "Ilya Lebedev: Sorry...?", "Ilya Lebedev#16.2rms", bc_self;
 			next;
@@ -5889,7 +5889,7 @@ rebel_in,86,61,5	script	雷兹#16nego05	4_M_LAZY,{
 		npctalk "Why should we listen to this nonsense? Get them out of here!", "Senior#16nego01", bc_self;
 		next;
 		cutin "16loo_01.bmp",0;
-		mes "[Rookie]";
+		mes "[新人]";
 		mes "^0000cdRookie^000000. Lucky is my nickname.";
 		next;
 		mes "[Senior]";
@@ -5897,7 +5897,7 @@ rebel_in,86,61,5	script	雷兹#16nego05	4_M_LAZY,{
 		npctalk "Take him out first!!!", "Senior#16nego01", bc_self;
 		next;
 		cutin "16loo_03.bmp",0;
-		mes "[Rookie]";
+		mes "[新人]";
 		mes "I told you! Old men, are you deaf now? I didn't know who they were! This is unfair!";
 		emotion ET_CRY, getnpcid(0, "Rookie#16nego02");
 		npctalk "He says he didn't know.", "Senior#16nego04", bc_self;
@@ -5905,14 +5905,14 @@ rebel_in,86,61,5	script	雷兹#16nego05	4_M_LAZY,{
 		npctalk "Then why did you bring them in?", "Senior#16nego02", bc_self;
 		next;
 		cutin "16loo_01.bmp",0;
-		mes "[Rookie]";
+		mes "[新人]";
 		mes "If they had an intention to attack us, they would have done it already, rather than asking for tea. And what can these two do against many of us?";
 		npctalk "They don't look so strong.", "Rookie#16nego02", bc_self;
 		sleep2 300;
 		npctalk "Your comments are misleading, but I'm not going to correct them right now.", "", bc_self;
 		next;
 		cutin "16loo_02.bmp",0;
-		mes "[Rookie]";
+		mes "[新人]";
 		mes "Whatever they do, you are going to handle them. Aren't you? You are legends of the 反叛者.";
 		emotion ET_SMILE, getnpcid(0, "Rookie#16nego02");
 		npctalk "Well.. It's true.", "Senior#16nego03", bc_self;
@@ -5920,7 +5920,7 @@ rebel_in,86,61,5	script	雷兹#16nego05	4_M_LAZY,{
 		npctalk "That's why we are doing this now.", "Senior#16nego02", bc_self;
 		next;
 		cutin "16loo_01.bmp",0;
-		mes "[Rookie]";
+		mes "[新人]";
 		mes "I don't know where they come from. But by the time they came all the way here, perhaps they need to talk to the seniors. I will bring the tea and enjoy the talk.";
 		npctalk "Where are you going!", "Senior#16nego01", bc_self;
 		npctalk "That guy has a great sense and wits.", "", bc_self;
@@ -5996,7 +5996,7 @@ rebel_in,86,61,5	script	雷兹#16nego05	4_M_LAZY,{
 		next;
 		cutin "16loo_02.bmp",0;
 		cloakoffnpcself( "Rookie#16nego02" );
-		mes "[Rookie]";
+		mes "[新人]";
 		mes "Drink tea, please.";
 		next;
 		mes "[Senior]";
@@ -6004,7 +6004,7 @@ rebel_in,86,61,5	script	雷兹#16nego05	4_M_LAZY,{
 		npctalk "Let us go now.", "Senior#16nego01", bc_self;
 		next;
 		cutin "16loo_01.bmp",0;
-		mes "[Rookie]";
+		mes "[新人]";
 		mes "Where are you going? I brought the tea in reference to the number of people here.";
 		next;
 		mes "[Senior]";
@@ -6012,14 +6012,14 @@ rebel_in,86,61,5	script	雷兹#16nego05	4_M_LAZY,{
 		npctalk "If you have an upset stomach while drinking tea, there is no cure.", "Senior#16nego02", bc_self;
 		next;
 		cutin "16loo_03.bmp",0;
-		mes "[Rookie]";
+		mes "[新人]";
 		mes "Come on, what's wrong with you~ You can drink it so quickly. It's not good after it gets cold. Your stomach must have got cold by now. You're not so healthy either.";
 		next;
-		mes "[Rookie]";
+		mes "[新人]";
 		mes "Can't you just drink the tea before leaving? I struggled to get this tea... You also liked it...";
 		next;
 		cutin "16loo_01.bmp",0;
-		mes "[Rookie]";
+		mes "[新人]";
 		mes "And if we feel uncomfortable, they also feel uncomfortable. So it's not such a bad condition. Come on. Drinking a cup of tea is not a hard thing to do.";
 		npctalk "Come to think of it, you're right.", "Senior#16nego03", bc_self;
 		next;
@@ -6029,7 +6029,7 @@ rebel_in,86,61,5	script	雷兹#16nego05	4_M_LAZY,{
 		npctalk "The crow is sorry to hear that.", "", bc_self;
 		next;
 		cutin "16loo_02.bmp",0;
-		mes "[Rookie]";
+		mes "[新人]";
 		mes "Please. The tea is innocent. have a peaceful tea time. Never fight in front of food. You taught me all these words. Didn't you?";
 		next;
 		mes "[Senior]";
@@ -6174,7 +6174,7 @@ rebel_in,86,61,5	script	雷兹#16nego05	4_M_LAZY,{
 		mes "Hmm... I knew it would be difficult. But I'm surprised that they are not even listening to me.";
 		next;
 		cutin "16loo_03.bmp",0;
-		mes "[Rookie]";
+		mes "[新人]";
 		mes "Phew. These old men will never change.";
 		emotion ET_HNG, getnpcid(0, "Rookie#16nego02");
 		npctalk "Perhaps an inconvenience is their motto.", "Rookie#16nego02", bc_self;
@@ -6184,7 +6184,7 @@ rebel_in,86,61,5	script	雷兹#16nego05	4_M_LAZY,{
 		mes "Your name is Rookie. Right?";
 		next;
 		cutin "16loo_01.bmp",0;
-		mes "[Rookie]";
+		mes "[新人]";
 		mes "You know it already. Why do you ask?";
 		npctalk "You have a strange habit.", "Rookie#16nego02", bc_self;
 		next;
@@ -6203,7 +6203,7 @@ rebel_in,86,61,5	script	雷兹#16nego05	4_M_LAZY,{
 		mes "Unless you live here, it's hard to find out who has the authority.";
 		next;
 		cutin "16loo_01.bmp",0;
-		mes "[Rookie]";
+		mes "[新人]";
 		mes "I don't know what you are talking about. If you finished drinking the tea, please leave.";
 		npctalk "I have so many things to do.", "Rookie#16nego02", bc_self;
 		next;
@@ -6223,7 +6223,7 @@ rebel_in,86,61,5	script	雷兹#16nego05	4_M_LAZY,{
 		npctalk "It's frustrating to live like this. Isn't it?", "", bc_self;
 		next;
 		cutin "16loo_01.bmp",0;
-		mes "[Rookie]";
+		mes "[新人]";
 		mes "And when we are in trouble, you'll abandon us again. There are still many people who haven't washed the wound from what happened in the past. Do you really think they'll help you?";
 		npctalk "Although I wasn't directly involved in it, I don't want to help you either.", "Rookie#16nego02", bc_self;
 		next;
@@ -6232,7 +6232,7 @@ rebel_in,86,61,5	script	雷兹#16nego05	4_M_LAZY,{
 		mes "That's why I am asking for your help. I guess you can change their mind by persuading them.";
 		next;
 		cutin "16loo_03.bmp",0;
-		mes "[Rookie]";
+		mes "[新人]";
 		mes "Who? Me?";
 		npctalk "Who else is here?", "", bc_self;
 		sleep2 300;
@@ -6245,7 +6245,7 @@ rebel_in,86,61,5	script	雷兹#16nego05	4_M_LAZY,{
 		mes "In every place, there is a hidden key person who moves the whole group even though you cannot that person easily. Here, it's you.";
 		next;
 		cutin "16loo_01.bmp",0;
-		mes "[Rookie]";
+		mes "[新人]";
 		mes "Well, I guess you are overrating me. They regard me as an unimportant guy here. I dont't take any important mission. All I do is errands and clean-ups. Do you honestly think I'm a key person?";
 		next;
 		cutin "16lei_01.bmp",2;
@@ -6258,7 +6258,7 @@ rebel_in,86,61,5	script	雷兹#16nego05	4_M_LAZY,{
 		npctalk "Lucky Rookie. That's why they call you 'Lucky'. Right?", "", bc_self;
 		next;
 		cutin "16loo_01.bmp",0;
-		mes "[Rookie]";
+		mes "[新人]";
 		mes "I don't know what you mean by 'such abilities'. But I guess you have nothing to talk about by now. The seniors are gone.";
 		next;
 		cutin "16lei_02.bmp",2;
@@ -6266,12 +6266,12 @@ rebel_in,86,61,5	script	雷兹#16nego05	4_M_LAZY,{
 		mes "That's why I'm trying to help you. Please convince others.";
 		next;
 		cutin "16loo_01.bmp",0;
-		mes "[Rookie]";
+		mes "[新人]";
 		mes "I have nowhere else to go. Neither does everyone else here. We cannot just help you trusting your promise.";
 		npctalk "You are asking too much.", "Rookie#16nego02", bc_self;
 		next;
 		cutin "16loo_01.bmp",0;
-		mes "[Rookie]";
+		mes "[新人]";
 		mes "It may be a matter of cooperation for you. But for us, it's a matter of survival.";
 		next;
 		cutin "16lei_03.bmp",2;
@@ -6282,7 +6282,7 @@ rebel_in,86,61,5	script	雷兹#16nego05	4_M_LAZY,{
 		mes "But if you help us, we can sort it out. That's something only you can do. We really need your help.";
 		next;
 		cutin "16loo_01.bmp",0;
-		mes "[Rookie]";
+		mes "[新人]";
 		mes "If you really need help, go to someone else.";
 		next;
 		cutin "16lei_02.bmp",2;
@@ -6292,20 +6292,20 @@ rebel_in,86,61,5	script	雷兹#16nego05	4_M_LAZY,{
 		npctalk "Please don't be so mean.", "", bc_self;
 		next;
 		cutin "16loo_01.bmp",0;
-		mes "[Rookie]";
+		mes "[新人]";
 		mes "The people who were sitting here are seniors. They are anchors and symbols of 反叛者s.";
 		next;
 		cutin "16loo_03.bmp",0;
-		mes "[Rookie]";
+		mes "[新人]";
 		mes "But as they got old, they retired from the front line. Now they drink tea and watch the junior 反叛者s grow up.";
 		next;
 		cutin "16loo_01.bmp",0;
-		mes "[Rookie]";
+		mes "[新人]";
 		mes "So other people are responsible for all the inside jobs. They are the ones ^0000cdwho move the 反叛者 practically^000000. They are decision makers.";
 		npctalk "Yeah, so?", "", bc_self;
 		next;
 		cutin "16loo_03.bmp",0;
-		mes "[Rookie]";
+		mes "[新人]";
 		mes "If you convince them, the public opinion change. Once the public opinion changes, what can seniors do about it?";
 		next;
 		cutin "16lei_01.bmp",2;
@@ -6315,7 +6315,7 @@ rebel_in,86,61,5	script	雷兹#16nego05	4_M_LAZY,{
 		npctalk "So we've been talking to the wrong people.", "", bc_self;
 		next;
 		cutin "16loo_03.bmp",0;
-		mes "[Rookie]";
+		mes "[新人]";
 		mes "In my opinion, I think it's better for us to be accepted in a wide world rather than living here like this.";
 		npctalk "We will be competitive anywhere we go.", "Rookie#16nego02", bc_self;
 		next;
@@ -6347,28 +6347,28 @@ rebel_in,86,61,5	script	雷兹#16nego05	4_M_LAZY,{
 		mes "Well, maybe...";
 		next;
 		cutin "16loo_01.bmp",0;
-		mes "[Rookie]";
+		mes "[新人]";
 		mes "They are in the ^0000cdroom in the 2nd floor2^000000. You can go up and meet them.";
 		npctalk "As long as you behave yourself, they won't be mad at you. ... Maybe.", "Rookie#16nego02", bc_self;
 		next;
-		mes "[Rookie]";
+		mes "[新人]";
 		mes "Do you see the rooms on the 2nd floor? I don't know how many of them are there. But you only have to meet the most important people.";
 		next;
-		mes "[Rookie]";
+		mes "[新人]";
 		mes "Let's see... You meet ^0000cdRupert^000000, the strict gentleman and ^0000cdElena^000000, the hunting dog first.";
 		next;
 		cutin "16loo_03.bmp",0;
-		mes "[Rookie]";
+		mes "[新人]";
 		mes "By the way, never call Elena 'hunting dog' in front of her. She's going to disintegrate you.";
 		next;
 		cutin "16loo_01.bmp",0;
-		mes "[Rookie]";
+		mes "[新人]";
 		mes "Anyone else...? Oh, the next one is the good-hearted ^0000cdold women, I mean ladies^000000. Then you meet the Special Force commander ^0000cdErst^000000...";
 		npctalk "They are too many!", "", bc_self;
 		sleep2 300;
 		npctalk "This is a huge system that cannot be operated by one or two members. And there is no one else.", "Rookie#16nego02", bc_self;
 		next;
-		mes "[Rookie]";
+		mes "[新人]";
 		mes "You can meet these ^0000cdfour teams^000000 and talk to them. As I told you earlier, be careful when you talk. Some of them are short-tempered.";
 		npctalk "I hope you won't have a hole in your head...", "Rookie#16nego02", bc_self;
 		next;
@@ -6414,14 +6414,14 @@ rebel_in,86,61,5	script	雷兹#16nego05	4_M_LAZY,{
 		mes "So, why did you leave your home?";
 		next;
 		cutin "16loo_03.bmp",0;
-		mes "[Rookie]";
+		mes "[新人]";
 		mes "It's quite obvious. My family had a secondhand store. As you know, the amount iron consumption is so great in this area. Some people joke that they steal your spoon while your eyes are closed.";
 		npctalk "But it's a joke. They don't actually steal anything.", "Rookie#16nego02", bc_self;
 		sleep2 300;
 		npctalk "Yeah, I know.", "", bc_self;
 		next;
 		cutin "16loo_01.bmp",0;
-		mes "[Rookie]";
+		mes "[新人]";
 		mes "Normally they use the iron dug from mines. But since it cannot meet the demands, a lot of used iron is also consumed. Our family bought the iron and resold it.";
 		next;
 		cutin "16lei_02.bmp",2;
@@ -6430,7 +6430,7 @@ rebel_in,86,61,5	script	雷兹#16nego05	4_M_LAZY,{
 		npctalk "That's right.", "Rookie#16nego02", bc_self;
 		next;
 		cutin "16loo_03.bmp",0;
-		mes "[Rookie]";
+		mes "[新人]";
 		mes "My brothers helped my parents. As you see, I'm so small and used to be sick when I was a kid.";
 		next;
 		cutin "16lei_03.bmp",2;
@@ -6439,7 +6439,7 @@ rebel_in,86,61,5	script	雷兹#16nego05	4_M_LAZY,{
 		npctalk "Have you been to my house? How do you know it so well?", "Rookie#16nego02", bc_self;
 		next;
 		cutin "16loo_03.bmp",0;
-		mes "[Rookie]";
+		mes "[新人]";
 		mes "I had no other choice.";
 		next;
 		cutin "16lei_03.bmp",2;
@@ -6447,7 +6447,7 @@ rebel_in,86,61,5	script	雷兹#16nego05	4_M_LAZY,{
 		mes "I don't agree with you. Everyone has different ability and you must be good at something. You just didn't find it earlier. Anyway, what happened next?";
 		next;
 		cutin "16loo_01.bmp",0;
-		mes "[Rookie]";
+		mes "[新人]";
 		mes "As my family ignored me, I decided to leave the house to find something I am capable of.";
 		next;
 		cutin "16lei_01.bmp",2;
@@ -6456,7 +6456,7 @@ rebel_in,86,61,5	script	雷兹#16nego05	4_M_LAZY,{
 		npctalk "You are so smart and wise.", "", bc_self;
 		next;
 		cutin "16loo_03.bmp",0;
-		mes "[Rookie]";
+		mes "[新人]";
 		mes "Then I met 戈尼 and came here. But I found that there's nothing I could do here as well.";
 		npctalk "戈尼? The guy who was bloody?", "", bc_self;
 		next;
@@ -6465,7 +6465,7 @@ rebel_in,86,61,5	script	雷兹#16nego05	4_M_LAZY,{
 		mes "Everyone is a monster here. Look at 戈尼. He was bleeding and almost dead. But He was still alive. The truth is that other guys are extraordinary and you are normal.";
 		next;
 		cutin "16loo_01.bmp",0;
-		mes "[Rookie]";
+		mes "[新人]";
 		mes "But I'm not at the level they require here. Whenever I get a gun in my hand, my eyes are sore and my hands are shaking. I can't aim a target properly...";
 		npctalk "It's a lack of self-confidence.", "", bc_self;
 		npctalk "I guess so. While I train, I have no problem.", "Rookie#16nego02", bc_self;
@@ -6475,7 +6475,7 @@ rebel_in,86,61,5	script	雷兹#16nego05	4_M_LAZY,{
 		mes "So you are in charge of the housekeeping here?";
 		next;
 		cutin "16loo_02.bmp",0;
-		mes "[Rookie]";
+		mes "[新人]";
 		mes "Not a housekeeping. A sort of cleaning-up?";
 		next;
 		cutin "",255;
@@ -6504,7 +6504,7 @@ rebel_in,86,61,5	script	雷兹#16nego05	4_M_LAZY,{
 		npctalk "The government caused this tragedy!", "Senior#16nego04", bc_self;
 		next;
 		cutin "16loo_01.bmp",0;
-		mes "[Rookie]";
+		mes "[新人]";
 		mes "Fine. You live forever in this isolated place! But what about the children who don't know anything about it?";
 		next;
 		mes "[Senior]";
@@ -6512,24 +6512,24 @@ rebel_in,86,61,5	script	雷兹#16nego05	4_M_LAZY,{
 		emotion ET_ANGER, getnpcid(0, "Senior#16nego04");
 		npctalk "Even children must know the truth!", "Senior#16nego04", bc_self;
 		next;
-		mes "[Rookie]";
+		mes "[新人]";
 		mes "I don't know! However, no one else will know it unless we talk about it. Go out there and ask anyone.";
 		next;
 		cutin "16loo_03.bmp",0;
-		mes "[Rookie]";
+		mes "[新人]";
 		mes "Ask them if they know that happened on that day. I bet nobody does. Unless we talk about it, how can anyone ever find it out?";
 		npctalk "What does it mean for us to live like this?", "Rookie#16nego02", bc_self;
 		next;
 		cutin "16loo_01.bmp",0;
-		mes "[Rookie]";
+		mes "[新人]";
 		mes "You hate to help the government that once abandoned us? It shows that we used to be nothing for them, but now they our help. Does that mean some compensation for us?";
 		next;
 		cutin "16loo_03.bmp",0;
-		mes "[Rookie]";
+		mes "[新人]";
 		mes "If they need our help, we can just use them. We are not as weak as we used to.";
 		next;
 		cutin "16loo_01.bmp",0;
-		mes "[Rookie]";
+		mes "[新人]";
 		mes "If you want a revenge, maybe this is the opportunity! A revenge doesn't always mean an armed revenge.";
 		next;
 		mes "[Senior]";
@@ -6545,7 +6545,7 @@ rebel_in,86,61,5	script	雷兹#16nego05	4_M_LAZY,{
 		mes "......";
 		next;
 		cutin "16loo_01.bmp",0;
-		mes "[Rookie]";
+		mes "[新人]";
 		mes "戈尼?";
 		next;
 		cutin "16go_03.bmp",2;
@@ -6561,7 +6561,7 @@ rebel_in,86,61,5	script	雷兹#16nego05	4_M_LAZY,{
 		mes "Are you still doing the silent meditation?";
 		next;
 		cutin "16loo_01.bmp",0;
-		mes "[Rookie]";
+		mes "[新人]";
 		mes "For the favor...";
 		next;
 		cutin "16lei_02.bmp",2;
@@ -6573,7 +6573,7 @@ rebel_in,86,61,5	script	雷兹#16nego05	4_M_LAZY,{
 		mes "Be quiet. I hear it all.";
 		next;
 		cutin "16loo_01.bmp",0;
-		mes "[Rookie]";
+		mes "[新人]";
 		mes "... 戈尼 says we have to pay for the favor they did to him.";
 		next;
 		mes "[Senior]";
@@ -6606,7 +6606,7 @@ rebel_in,86,61,5	script	雷兹#16nego05	4_M_LAZY,{
 		npctalk "Rookie has a great ability.", "Senior#16nego03", bc_self;
 		next;
 		cutin "16loo_01.bmp",0;
-		mes "[Rookie]";
+		mes "[新人]";
 		mes "He says everyone on the 2nd floor decided to help them.";
 		next;
 		mes "[Senior]";
@@ -6614,12 +6614,12 @@ rebel_in,86,61,5	script	雷兹#16nego05	4_M_LAZY,{
 		npctalk "Erst and Elena? That's impossible!", "Senior#16nego04", bc_self;
 		next;
 		cutin "16loo_03.bmp",0;
-		mes "[Rookie]";
+		mes "[新人]";
 		mes "If you are curious, go upstairs and check it. They might slap you on the back.";
 		npctalk "Sounds like everybody here is cool.", "", bc_self;
 		next;
 		cutin "16loo_01.bmp",0;
-		mes "[Rookie]";
+		mes "[新人]";
 		mes "Seems like most of us agree. I don't think anything good will happen if you're still against it.";
 		next;
 		cutin "16lei_01.bmp",2;
@@ -6664,7 +6664,7 @@ rebel_in,86,61,5	script	雷兹#16nego05	4_M_LAZY,{
 		mes "......";
 		next;
 		cutin "16loo_02.bmp",0;
-		mes "[Rookie]";
+		mes "[新人]";
 		mes "Yes. Let me handle this place. You go inside and get ready.";
 		next;
 		cutin "16lei_01.bmp",0;
@@ -6689,7 +6689,7 @@ rebel_in,86,61,5	script	雷兹#16nego05	4_M_LAZY,{
 		npctalk "What do you think? You like it. Don't you?", "", bc_self;
 		next;
 		cutin "16loo_01.bmp",0;
-		mes "[Rookie]";
+		mes "[新人]";
 		mes "Work with me? I don't think I can do anything useful for you.";
 		next;
 		cutin "16lei_03.bmp",2;
@@ -6739,7 +6739,7 @@ rebel_in,86,61,5	script	雷兹#16nego05	4_M_LAZY,{
 		npctalk "Adventurer. I know you'd leave me soon.", "", bc_self;
 		next;
 		cutin "16loo_01.bmp",0;
-		mes "[Rookie]";
+		mes "[新人]";
 		mes "Oh, could you be explain it to me in detail?";
 		next;
 		cutin "16lei_01.bmp",2;
@@ -6748,7 +6748,7 @@ rebel_in,86,61,5	script	雷兹#16nego05	4_M_LAZY,{
 		emotion ET_BEST;
 		next;
 		cutin "16loo_02.bmp",0;
-		mes "[Rookie]";
+		mes "[新人]";
 		mes "We are now cooperating, aren't we?";
 		emotion ET_BEST, getnpcid(0, "Rookie#16nego02");
 		npctalk "We? Did you say 'we'? You people are so cool.", "", bc_self;
@@ -6767,7 +6767,7 @@ rebel_in,86,61,5	script	雷兹#16nego05	4_M_LAZY,{
 		mes "......";
 		next;
 		cutin "16loo_01.bmp",0;
-		mes "[Rookie]";
+		mes "[新人]";
 		mes "戈尼?";
 		next;
 		mes "[戈尼]";
@@ -6779,7 +6779,7 @@ rebel_in,86,61,5	script	雷兹#16nego05	4_M_LAZY,{
 		mes "What did he say?";
 		next;
 		cutin "16loo_01.bmp",0;
-		mes "[Rookie]";
+		mes "[新人]";
 		mes "He says we have prepared someone to proceed the cooperation. If you go to the passage to the store, you can meet that person.";
 		npctalk "Thanks.", "Rookie#16nego02", bc_self;
 		cloakonnpcself( "戈尼#16nego04" );
@@ -11988,46 +11988,46 @@ rebel_in,87,68,5	duplicate(dummy_cloaked_npc)	#16negofire	CLEAR_NPC
 
 rebel_in,88,61,5	script	Rookie#16nego02	4_M_ROOKIE,{
 	if (checkweight(501,1) == 0) {
-		mes "[Rookie]";
+		mes "[新人]";
 		mes "Why do you carry so many stuffs? Unless you want to give them away, make your bag lighter and come back.";
 		close;
 	}
 	if ((MaxWeight - Weight) < 1000) {
-		mes "[Rookie]";
+		mes "[新人]";
 		mes "Why do you carry so many stuffs? Unless you want to give them away, make your bag lighter and come back.";
 		close;
 	}
 	if (terra_gloria_main < 16) {
 		cutin "16loo_03.bmp",2;
-		mes "[Rookie]";
+		mes "[新人]";
 		mes "If you value your life, don't stimulate the people here. Many of them are short-tempered.";
 		next;
-		mes "[Rookie]";
+		mes "[新人]";
 		mes "As you promised me, just drink a cup of tea and go back.";
 		close3;
 	}
 	if (terra_gloria_main == 16) {
 		if (isbegin_quest(14602) != 2 || terra_gloria_lady_part < 14) {
 			cutin "16loo_01.bmp",2;
-			mes "[Rookie]";
+			mes "[新人]";
 			mes "Did you meet all of them? They must be on the 2nd floor.";
 			next;
-			mes "[Rookie]";
+			mes "[新人]";
 			mes "Can you see the doors on the 2nd floor? Just visit four of them.";
 			next;
 			cutin "16loo_03.bmp",2;
-			mes "[Rookie]";
+			mes "[新人]";
 			mes "As long as you behave yourself... nothing bad will happen. Maybe...?";
 			close3;
 		}
 		cutin "16loo_01.bmp",2;
-		mes "[Rookie]";
+		mes "[新人]";
 		mes "Did you meet everyone on the 2nd floor? Great job. It must have been frightening.";
 		next;
-		mes "[Rookie]";
+		mes "[新人]";
 		mes "Although they are quite frightening... they are all good people.";
 		next;
-		mes "[Rookie]";
+		mes "[新人]";
 		mes "Don't you have to report to 雷兹 now?";
 		close3;
 	}
@@ -12045,13 +12045,13 @@ rebel_in,88,61,5	script	Rookie#16nego02	4_M_ROOKIE,{
 			mes "Rookie, how have you been?";
 			next;
 			cutin "16loo_02.bmp",2;
-			mes "[Rookie]";
+			mes "[新人]";
 			mes "Adventurer, how was your business? 雷兹 told me that I could fully trust you.";
 			npctalk "But I was still worried about sending you alone...", "", bc_self;
 			sleep2 300;
 			npctalk "Hey! The adventurer is a hero who saved a nation without anybody's help. Trust me!", "雷兹#16nego05", bc_self;
 			next;
-			mes "[Rookie]";
+			mes "[新人]";
 			mes "All of us are also eager and preparing many things. We should not disappoint that person~";
 			next;
 			mes "[" + strcharinfo(0) + "]";
@@ -12062,7 +12062,7 @@ rebel_in,88,61,5	script	Rookie#16nego02	4_M_ROOKIE,{
 			mes "I'm still here. This fellow cannot leave immediately. Neither can I.";
 			next;
 			cutin "16loo_01.bmp",2;
-			mes "[Rookie]";
+			mes "[新人]";
 			mes "What I've been doing recently?";
 			next;
 			.@quest_id = rand(14603,14605);
@@ -12071,14 +12071,14 @@ rebel_in,88,61,5	script	Rookie#16nego02	4_M_ROOKIE,{
 	case 0:
 	case 1:
 		cutin "16loo_01.bmp",2;
-		mes "[Rookie]";
+		mes "[新人]";
 		mes "Adventurer? I told you to take a good rest. Didn't I?";
 		next;
-		mes "[Rookie]";
+		mes "[新人]";
 		mes "At this time of the day, everyone is taking a rest. Please go back and rest.";
 		next;
 		cutin "16loo_03.bmp",2;
-		mes "[Rookie]";
+		mes "[新人]";
 		mes "I'm afraid you will collapse from overwork. The health is the most important. Please take some rest.";
 		close3;
 	case 2:
@@ -12090,11 +12090,11 @@ rebel_in,88,61,5	script	Rookie#16nego02	4_M_ROOKIE,{
 		switch( isbegin_quest(14603) ) {
 		case 0:
 			cutin "16loo_01.bmp",2;
-			mes "[Rookie]";
+			mes "[新人]";
 			mes "Welcome, adventurer.";
 			next;
 			cutin "16loo_03.bmp",2;
-			mes "[Rookie]";
+			mes "[新人]";
 			mes "Although you didn't have to come here, you took the trouble. I mean... Thanks.";
 			next;
 			mes "[" + strcharinfo(0) + "]";
@@ -12105,7 +12105,7 @@ rebel_in,88,61,5	script	Rookie#16nego02	4_M_ROOKIE,{
 			mes "Here come Denny again, the superstar!!!";
 			next;
 			cutin "16loo_03.bmp",2;
-			mes "[Rookie]";
+			mes "[新人]";
 			mes "Well, speak of the devil.";
 			next;
 			cloakonnpcself( "Denny#16nego01" );
@@ -12114,7 +12114,7 @@ rebel_in,88,61,5	script	Rookie#16nego02	4_M_ROOKIE,{
 			mes "Yikes! It's cold!";
 			next;
 			cutin "16loo_02.bmp",2;
-			mes "[Rookie]";
+			mes "[新人]";
 			mes "My job is to prevent such a fool from doing silly things.";
 			next;
 			emotion ET_ANGER, getnpcid(0, "Denny#16nego02");
@@ -12122,7 +12122,7 @@ rebel_in,88,61,5	script	Rookie#16nego02	4_M_ROOKIE,{
 			mes "Oh, come on! Who keeps putting the bucket here? Every time I take it away, somebody puts it here again! Who is it? Is it a pervert who enjoys watching other people's feet getting wet?";
 			next;
 			cutin "16loo_01.bmp",2;
-			mes "[Rookie]";
+			mes "[新人]";
 			mes "It's me.";
 			next;
 			cloakonnpcself( "Denny#16nego02" );
@@ -12131,7 +12131,7 @@ rebel_in,88,61,5	script	Rookie#16nego02	4_M_ROOKIE,{
 			mes "Hey! How can you do this to me?";
 			emotion ET_FRET, getnpcid(0, "Denny#16nego03");
 			next;
-			mes "[Rookie]";
+			mes "[新人]";
 			mes "As long as you ^0000cdwalk on the pipe^000000 instead of the stairs, it's your fault. The pipe is innocent. How can you do that to the pipe!";
 			next;
 			mes "[Denny]";
@@ -12139,13 +12139,13 @@ rebel_in,88,61,5	script	Rookie#16nego02	4_M_ROOKIE,{
 			emotion ET_ANGER, getnpcid(0, "Denny#16nego03");
 			next;
 			cutin "16loo_03.bmp",2;
-			mes "[Rookie]";
+			mes "[新人]";
 			mes "Do not complain it to me. Talk to the one who designed this place.";
 			next;
 			mes "[Denny]";
 			mes "Where is that person!";
 			next;
-			mes "[Rookie]";
+			mes "[新人]";
 			mes "He's dead. Not here.";
 			next;
 			emotion ET_CRY, getnpcid(0, "Denny#16nego03");
@@ -12153,14 +12153,14 @@ rebel_in,88,61,5	script	Rookie#16nego02	4_M_ROOKIE,{
 			mes "...... You are doing this to me on purpose, aren't you? Why do you hate mu so much?";
 			next;
 			cutin "16loo_01.bmp",2;
-			mes "[Rookie]";
+			mes "[新人]";
 			mes "Why do you think I put this bucket here?";
 			next;
 			emotion ET_HNG, getnpcid(0, "Denny#16nego03");
 			mes "[Denny]";
 			mes "Because you like to see my feet get wet.";
 			next;
-			mes "[Rookie]";
+			mes "[新人]";
 			mes "Hey!!! Are you saying I'm a pervert? You keep walking on the pipe every day with that huge boday. As a result, this skinny pipe is damaged! There! And there! Can you see the water leakage?";
 			next;
 			emotion ET_ANGER, getnpcid(0, "Rookie#16nego02");
@@ -12168,14 +12168,14 @@ rebel_in,88,61,5	script	Rookie#16nego02	4_M_ROOKIE,{
 			mes "Oh, it's true.";
 			next;
 			cutin "16loo_03.bmp",2;
-			mes "[Rookie]";
+			mes "[新人]";
 			mes "I put the bucket there to receive the leaking water! Once the pipe is entirely broken, there will be a flood in this place! Don't you have the brain to think of it?";
 			next;
 			mes "[Denny]";
 			mes "Well, I didn't think about it. Why don't you repair the pipe?";
 			next;
 			cutin "16loo_02.bmp",2;
-			mes "[Rookie]";
+			mes "[新人]";
 			mes "That's why I've been waiting here!";
 			next;
 			mes "[Denny]";
@@ -12183,55 +12183,55 @@ rebel_in,88,61,5	script	Rookie#16nego02	4_M_ROOKIE,{
 			next;
 			cutin "16loo_01.bmp",2;
 			emotion ET_OK, getnpcid(0, "Denny#16nego03");
-			mes "[Rookie]";
+			mes "[新人]";
 			mes "No. I will just supervise it.";
 			next;
 			mes "[Denny]";
 			mes "Then who's going to repair it? There's nobody here.";
 			next;
 			cutin "16loo_02.bmp",2;
-			mes "[Rookie]";
+			mes "[新人]";
 			mes "Are you sure there's nobody here?";
 			next;
 			mes "[Denny]";
 			mes "Adventurer?";
 			next;
 			cutin "16loo_03.bmp",2;
-			mes "[Rookie]";
+			mes "[新人]";
 			mes "No, I can't make our guest work.";
 			next;
 			mes "[Denny]";
 			mes "Then?";
 			next;
 			cutin "16loo_02.bmp",2;
-			mes "[Rookie]";
+			mes "[新人]";
 			mes "Do you know who it is?";
 			next;
 			mes "[Denny]";
 			mes "Oh... me?";
 			next;
 			emotion ET_SCRATCH, getnpcid(0, "Denny#16nego03");
-			mes "[Rookie]";
+			mes "[新人]";
 			mes "Exactly! As a reward, I will give you an opportunity to bring the parts to repair the pipe.";
 			next;
 			mes "[Denny]";
 			mes "Well, I'm quite busy...";
 			next;
 			cutin "16loo_01.bmp",2;
-			mes "[Rookie]";
+			mes "[新人]";
 			mes "I know you are off-duty today.";
 			next;
 			mes "[Denny]";
 			mes "I'm so hungry and have to eat... I should take care of my kitty... And...";
 			next;
-			mes "[Rookie]";
+			mes "[新人]";
 			mes "You are the one who damaged it. So you must repair it.";
 			next;
 			mes "[Denny]";
 			mes "Please, please! To repair this, we need some metal things. To get them, I have to enter the mine!!";
 			next;
 			cutin "16loo_02.bmp",2;
-			mes "[Rookie]";
+			mes "[新人]";
 			mes "That's correct! Go get them now.";
 			next;
 			mes "[Denny]";
@@ -12239,7 +12239,7 @@ rebel_in,88,61,5	script	Rookie#16nego02	4_M_ROOKIE,{
 			next;
 			emotion ET_CRY, getnpcid(0, "Denny#16nego03");
 			cutin "16loo_03.bmp",2;
-			mes "[Rookie]";
+			mes "[新人]";
 			mes "Ouch, you are right. Then what shall we do...? We need to repair it as soon as possible.";
 			next;
 			mes "[Denny]";
@@ -12250,28 +12250,28 @@ rebel_in,88,61,5	script	Rookie#16nego02	4_M_ROOKIE,{
 			emotion ET_SWEAT, playerattached();
 			next;
 			cutin "16loo_01.bmp",2;
-			mes "[Rookie]";
+			mes "[新人]";
 			mes "Hey! How can you say that to the guest!";
 			next;
 			mes "[Denny]";
 			mes "Hey, why! Adventurers normally carry about 30,000 metal things in their pockets! That's what I found from most adventurers!";
 			next;
 			cutin "16loo_03.bmp",2;
-			mes "[Rookie]";
+			mes "[新人]";
 			mes "Is that... true?";
 			next;
 			mes "[" + strcharinfo(0) + "]";
 			mes "No, I never bring that many.";
 			next;
 			cutin "16loo_01.bmp",2;
-			mes "[Rookie]";
+			mes "[新人]";
 			mes "Hey, look at that!";
 			next;
 			mes "[Denny]";
 			mes "But you can get them so easily! Since we have only handled stuffs like guns, it's hard for us to get them. I've seen many adventures who get those items quite easily.";
 			next;
 			cutin "16loo_03.bmp",2;
-			mes "[Rookie]";
+			mes "[新人]";
 			mes "Is that... true?";
 			next;
 			mes "[" + strcharinfo(0) + "]";
@@ -12281,11 +12281,11 @@ rebel_in,88,61,5	script	Rookie#16nego02	4_M_ROOKIE,{
 			mes "Everyone says no to this question. But they still get them like a piece of cake! I saw them!";
 			next;
 			cutin "16loo_01.bmp",2;
-			mes "[Rookie]";
+			mes "[新人]";
 			mes "Adventurer, I don't know whether it is true or not. But would you mind bringing them for us?";
 			next;
 			cutin "16loo_03.bmp",2;
-			mes "[Rookie]";
+			mes "[新人]";
 			mes "This pipe will be destroyed completely. Then there will be flood here. Since this place is a hideout, it will be revealed once it is flooded. Then... We will...";
 			next;
 			mes "[Denny]";
@@ -12293,13 +12293,13 @@ rebel_in,88,61,5	script	Rookie#16nego02	4_M_ROOKIE,{
 			emotion ET_CRY, getnpcid(0, "Denny#16nego03");
 			next;
 			cutin "16loo_01.bmp",2;
-			mes "[Rookie]";
+			mes "[新人]";
 			mes "We really have to repair it urgently. But this guy cannot go to the mine due to a certain reason. Also, I cannot go to the mine for other job. We will certainly compensate for your support.";
 			next;
 			mes "[Denny]";
 			mes "Compensate? You never told me about it! Let me do it!";
 			next;
-			mes "[Rookie]";
+			mes "[新人]";
 			mes "So you're going to the mine?";
 			next;
 			mes "[Denny]";
@@ -12308,7 +12308,7 @@ rebel_in,88,61,5	script	Rookie#16nego02	4_M_ROOKIE,{
 			mes "[" + strcharinfo(0) + "]";
 			mes "Now that you mention it... I will go. What do you need?";
 			next;
-			mes "[Rookie]";
+			mes "[新人]";
 			mes "We need ^0000cdfive Steel and 15 Old Steel Plate^000000.";
 			next;
 			mes "[Denny]";
@@ -12326,7 +12326,7 @@ rebel_in,88,61,5	script	Rookie#16nego02	4_M_ROOKIE,{
 				next;
 				cloakonnpcself( "Denny#16nego03" );
 				cutin "16loo_03.bmp",2;
-				mes "[Rookie]";
+				mes "[新人]";
 				mes "Phew, he's so rude. We have no choice. I will look for someone else to do it. You don't have to worry about this.";
 				close3;
 			}
@@ -12337,7 +12337,7 @@ rebel_in,88,61,5	script	Rookie#16nego02	4_M_ROOKIE,{
 			mes "Look! What did I say? Every adventurer is strong!";
 			next;
 			cutin "16loo_03.bmp",2;
-			mes "[Rookie]";
+			mes "[新人]";
 			mes "Hey, would you reject it in front of someone? Adventurer? You don't have to do this.";
 			next;
 			mes "[" + strcharinfo(0) + "]";
@@ -12348,13 +12348,13 @@ rebel_in,88,61,5	script	Rookie#16nego02	4_M_ROOKIE,{
 			next;
 			cloakonnpcself( "Denny#16nego03" );
 			cutin "16loo_01.bmp",2;
-			mes "[Rookie]";
+			mes "[新人]";
 			mes "Be careful!";
 			setquest 14603;// Pipe repair materials
 			close3;
 		case 1:
 			cutin "16loo_02.bmp",2;
-			mes "[Rookie]";
+			mes "[新人]";
 			mes "Great job, adventurer. I must have been hard for you to take that job all of a sudden.";
 			next;
 			cloakoffnpcself( "Denny#16nego01" );
@@ -12381,7 +12381,7 @@ rebel_in,88,61,5	script	Rookie#16nego02	4_M_ROOKIE,{
 				next;
 				cloakonnpcself( "Denny#16nego03" );
 				cutin "16loo_01.bmp",2;
-				mes "[Rookie]";
+				mes "[新人]";
 				mes "What kind of superstar is that? After all, we are counting on you. He is more persistent than he looks. So I am saying this for you.";
 				close3;
 			}
@@ -12400,7 +12400,7 @@ rebel_in,88,61,5	script	Rookie#16nego02	4_M_ROOKIE,{
 				next;
 				cloakonnpcself( "Denny#16nego03" );
 				cutin "16loo_01.bmp",2;
-				mes "[Rookie]";
+				mes "[新人]";
 				mes "What kind of superstar is that? After all, we are counting on you. He is more persistent than he looks. So I am saying this for you.";
 				close3;
 			}
@@ -12415,11 +12415,11 @@ rebel_in,88,61,5	script	Rookie#16nego02	4_M_ROOKIE,{
 			next;
 			cloakonnpcself( "Denny#16nego03" );
 			cutin "16loo_03.bmp",2;
-			mes "[Rookie]";
+			mes "[新人]";
 			mes "He went back only after saying what he wants. How spoiled! But I didn't educate him like that.";
 			next;
 			cutin "16loo_01.bmp",2;
-			mes "[Rookie]";
+			mes "[新人]";
 			mes "Please take a good rest today. We will count on you again tomorrow. You must be exhausted.";
 			erasequest 14603;// Pipe repair materials
 			delitem 999,5;// Steel
@@ -12435,11 +12435,11 @@ rebel_in,88,61,5	script	Rookie#16nego02	4_M_ROOKIE,{
 		switch( isbegin_quest(14604) ) {
 		case 0:
 			cutin "16loo_01.bmp",2;
-			mes "[Rookie]";
+			mes "[新人]";
 			mes "Welcome, adventurer.";
 			next;
 			cutin "16loo_03.bmp",2;
-			mes "[Rookie]";
+			mes "[新人]";
 			mes "Although you didn't have to come here, you took the trouble. I mean... Thanks.";
 			next;
 			mes "[" + strcharinfo(0) + "]";
@@ -12450,17 +12450,17 @@ rebel_in,88,61,5	script	Rookie#16nego02	4_M_ROOKIE,{
 			mes "Yikes, it's so cold!";
 			next;
 			cutin "16loo_03.bmp",2;
-			mes "[Rookie]";
+			mes "[新人]";
 			mes "I have to listen to complaints of all the people. That's a problem.";
 			next;
 			cutin "16loo_01.bmp",2;
-			mes "[Rookie]";
+			mes "[新人]";
 			mes "What's so cold? It's the same as yesterday";
 			next;
 			mes "[Cyan]";
 			mes "Hey, my feeling is so accurate. It's colder today. Look. You put on more clothes.";
 			next;
-			mes "[Rookie]";
+			mes "[新人]";
 			mes "Oh! When did I get dressed like this!";
 			emotion ET_HUK;
 			next;
@@ -12469,7 +12469,7 @@ rebel_in,88,61,5	script	Rookie#16nego02	4_M_ROOKIE,{
 			mes "[Cyan]";
 			mes "Let's see... I thought so. The fireplace is weaker now. No firewood?";
 			next;
-			mes "[Rookie]";
+			mes "[新人]";
 			mes "Well, it's true.";
 			next;
 			cloakoffnpcself( "Cyan#16nego02" );
@@ -12478,7 +12478,7 @@ rebel_in,88,61,5	script	Rookie#16nego02	4_M_ROOKIE,{
 			mes "Once this last firewood is burnt out, I will die... Last... firewood...";
 			next;
 			cutin "16loo_02.bmp",2;
-			mes "[Rookie]";
+			mes "[新人]";
 			mes "Who told you that you'd die? You're so healthy!";
 			next;
 			emotion ET_ANGER;
@@ -12487,28 +12487,28 @@ rebel_in,88,61,5	script	Rookie#16nego02	4_M_ROOKIE,{
 			emotion ET_FRET;
 			next;
 			cutin "16loo_01.bmp",2;
-			mes "[Rookie]";
+			mes "[新人]";
 			mes "Oh, don't die. If you die, who's going to take care of those 12 kids. Please don't die.";
 			next;
 			mes "[Cyan]";
 			mes "Hey! Who are my kids! And why do I have to feed them? What happened?";
 			next;
 			cutin "16loo_03.bmp",2;
-			mes "[Rookie]";
+			mes "[新人]";
 			mes "Your spouse... died during a mission.";
 			next;
 			mes "[Cyan]";
 			mes "My god! So who's my spouse?";
 			next;
 			cutin "16loo_02.bmp",2;
-			mes "[Rookie]";
+			mes "[新人]";
 			mes "Well... The Teddy bear?";
 			next;
 			mes "[Cyan]";
 			mes "Oops! No! Let's say this adventurer is my spouse.";
 			next;
 			cutin "16loo_01.bmp",2;
-			mes "[Rookie]";
+			mes "[新人]";
 			mes "Hey! That's rude!";
 			next;
 			mes "[Cyan]";
@@ -12521,7 +12521,7 @@ rebel_in,88,61,5	script	Rookie#16nego02	4_M_ROOKIE,{
 			mes "Oh, this jacket looks good. That's why you don't feel cold. We always receive cheap clothes so we can easily fell the cold.";
 			next;
 			cutin "16loo_03.bmp",2;
-			mes "[Rookie]";
+			mes "[新人]";
 			mes "The adventurer is busy now. What are you talking about?";
 			next;
 			mes "[Cyan]";
@@ -12542,7 +12542,7 @@ rebel_in,88,61,5	script	Rookie#16nego02	4_M_ROOKIE,{
 			next;
 			cutin "16loo_01.bmp",2;
 			emotion ET_PROFUSELY_SWEAT, playerattached();
-			mes "[Rookie]";
+			mes "[新人]";
 			mes "Hey! You're being rude to the adventurer! Just distinguish the reality and fantasy!";
 			next;
 			mes "[Cyan]";
@@ -12556,7 +12556,7 @@ rebel_in,88,61,5	script	Rookie#16nego02	4_M_ROOKIE,{
 				mes "My dear, are you leaving me? I'm suffering from the cold weather!";
 				next;
 				emotion ET_CRY;
-				mes "[Rookie]";
+				mes "[新人]";
 				mes "Adventurer, don't worry about Cyon. I will take care of this fellow.";
 				next;
 				mes "[Cyan]";
@@ -12574,7 +12574,7 @@ rebel_in,88,61,5	script	Rookie#16nego02	4_M_ROOKIE,{
 			mes "Oh dear, you are so kind and lovely.";
 			next;
 			cutin "16loo_03.bmp",2;
-			mes "[Rookie]";
+			mes "[新人]";
 			mes "You've dont it again. I've gotta hand it to you.";
 			next;
 			emotion ET_SWEAT;
@@ -12582,7 +12582,7 @@ rebel_in,88,61,5	script	Rookie#16nego02	4_M_ROOKIE,{
 			mes "I need some Burnt Trees, about 10 of them. Since they are well-dried, they will be burnt well. And there's better coal to keep the fire long. Bring some coal please, three of them.";
 			next;
 			cutin "16loo_01.bmp",2;
-			mes "[Rookie]";
+			mes "[新人]";
 			mes "Coal? Why? It leaves too much ash.";
 			next;
 			mes "[Cyan]";
@@ -12594,14 +12594,14 @@ rebel_in,88,61,5	script	Rookie#16nego02	4_M_ROOKIE,{
 			mes "[Cyan]";
 			mes "Oops! And defeat 10 Waste Stoves!";
 			next;
-			mes "[Rookie]";
+			mes "[新人]";
 			mes "Why?";
 			next;
 			mes "[Cyan]";
 			mes "You need to defeat them to get coal!";
 			next;
 			cutin "16loo_03.bmp",2;
-			mes "[Rookie]";
+			mes "[新人]";
 			mes "Come on. The adventurer knows it already.";
 			next;
 			mes "[Cyan]";
@@ -12610,13 +12610,13 @@ rebel_in,88,61,5	script	Rookie#16nego02	4_M_ROOKIE,{
 			cutin "16loo_01.bmp",2;
 			cloakonnpcself( "Cyan#16nego02" );
 			emotion ET_PROFUSELY_SWEAT, playerattached();
-			mes "[Rookie]";
+			mes "[新人]";
 			mes "Phew... We will count on you anyway. Regardless of what that fellow told you, everyone will get a cold once the fire goes out.";
 			setquest .@quest_id;
 			close3;
 		case 1:
 			cutin "16loo_02.bmp",2;
-			mes "[Rookie]";
+			mes "[新人]";
 			mes "Adventurer, seems like you gave so much effort!";
 			next;
 			cloakoffnpcself( "Cyan#16nego02" );
@@ -12635,7 +12635,7 @@ rebel_in,88,61,5	script	Rookie#16nego02	4_M_ROOKIE,{
 				next;
 				cloakonnpcself( "Cyan#16nego02" );
 				cutin "16loo_03.bmp",2;
-				mes "[Rookie]";
+				mes "[新人]";
 				mes "That's so spoiled. Adventurer, We will count on you again. If you don't bring them, Cyan will pester you all day long.";
 				close3;
 			}
@@ -12651,7 +12651,7 @@ rebel_in,88,61,5	script	Rookie#16nego02	4_M_ROOKIE,{
 				next;
 				cloakonnpcself( "Cyan#16nego02" );
 				cutin "16loo_03.bmp",2;
-				mes "[Rookie]";
+				mes "[新人]";
 				mes "That's so spoiled. Adventurer, We will count on you again. If you don't bring them, Cyan will pester you all day long.";
 				close3;
 			}
@@ -12667,14 +12667,14 @@ rebel_in,88,61,5	script	Rookie#16nego02	4_M_ROOKIE,{
 			mes "Oh, it's warm now. As warm as your love~";
 			next;
 			cutin "16loo_03.bmp",2;
-			mes "[Rookie]";
+			mes "[新人]";
 			mes "Could you please stop saying 'dear'? You are repeating my joke too much.";
 			next;
 			mes "[Cyan]";
 			mes "Hey! You started!";
 			next;
 			cutin "16loo_01.bmp",2;
-			mes "[Rookie]";
+			mes "[新人]";
 			mes "It was a joke. Joke! Joke! Joke!";
 			next;
 			mes "[Cyan]";
@@ -12683,7 +12683,7 @@ rebel_in,88,61,5	script	Rookie#16nego02	4_M_ROOKIE,{
 			mes "[Cyan]";
 			mes "So my dear, will you come back tomorrow?";
 			next;
-			mes "[Rookie]";
+			mes "[新人]";
 			mes "Not again!!!";
 			next;
 			mes "[Cyan]";
@@ -12696,7 +12696,7 @@ rebel_in,88,61,5	script	Rookie#16nego02	4_M_ROOKIE,{
 			mes "My dear, you are so kind! But I may not be here tomorrow for a mission. Please don't be disappointed!";
 			next;
 			cutin "16loo_03.bmp",2;
-			mes "[Rookie]";
+			mes "[新人]";
 			mes "I don't think the adventurer will ever be disappointed.";
 			next;
 			mes "[Cyan]";
@@ -12704,7 +12704,7 @@ rebel_in,88,61,5	script	Rookie#16nego02	4_M_ROOKIE,{
 			next;
 			cloakonnpcself( "#16negofire" );
 			cloakonnpcself( "Cyan#16nego02" );
-			mes "[Rookie]";
+			mes "[新人]";
 			mes "Phew, I am exhausted as well. Please take a good rest now and come back after the ^0000cddawn^000000.";
 			erasequest 14604;// National Fuel Solar Fuel
 			delitem 7068,10;// Burn_Tree
@@ -12720,11 +12720,11 @@ rebel_in,88,61,5	script	Rookie#16nego02	4_M_ROOKIE,{
 		switch( isbegin_quest(14605) ) {
 		case 0:
 			cutin "16loo_01.bmp",2;
-			mes "[Rookie]";
+			mes "[新人]";
 			mes "Welcome, adventurer.";
 			next;
 			cutin "16loo_03.bmp",2;
-			mes "[Rookie]";
+			mes "[新人]";
 			mes "Although you didn't have to come here, you took the trouble. I mean... Thanks.";
 			next;
 			mes "[" + strcharinfo(0) + "]";
@@ -12735,18 +12735,18 @@ rebel_in,88,61,5	script	Rookie#16nego02	4_M_ROOKIE,{
 			mes "Twinkle twinkle little star~ My shooting star, you are still beautiful.";
 			next;
 			cutin "16loo_02.bmp",2;
-			mes "[Rookie]";
+			mes "[新人]";
 			mes "It's to make those kids quiet.";
 			next;
 			cutin "16loo_01.bmp",2;
-			mes "[Rookie]";
+			mes "[新人]";
 			mes "Are you fumbling it again! It might run down!";
 			next;
 			mes "[Magenta]";
 			mes "It was you who told me to possess it all the time!";
 			next;
 			cutin "16loo_02.bmp",2;
-			mes "[Rookie]";
+			mes "[新人]";
 			mes "I didn't mean to wash it every hour! You're so stubborn!";
 			next;
 			mes "[Magenta]";
@@ -12754,33 +12754,33 @@ rebel_in,88,61,5	script	Rookie#16nego02	4_M_ROOKIE,{
 			next;
 			emotion ET_HUK;
 			cutin "16loo_01.bmp",2;
-			mes "[Rookie]";
+			mes "[新人]";
 			mes "What? Flaw? Talk to the master there...";
 			next;
 			mes "[Magenta]";
 			mes "No. That's not the flaw I am talking about. Although its name is Shooting Star, it doesn't twinkle at all.";
 			next;
 			cutin "16loo_03.bmp",2;
-			mes "[Rookie]";
+			mes "[新人]";
 			mes "What kind of flaw is that? It doesn't matter how it looks! The performance more important!";
 			next;
 			mes "[Magenta]";
 			mes "Oh, Lucky... Lucky, Lucky! Although you live in a place like this, your sense has to be youthful. That's the way you stay young. It's as important as being physically healthy.";
 			next;
 			cutin "16loo_01.bmp",2;
-			mes "[Rookie]";
+			mes "[新人]";
 			mes "Why is it so important?";
 			next;
 			mes "[Magenta]";
 			mes "Okay. Here's an item with a good performance and dull outward. And here's another one with a good performance and good outward. Which one would you choose?";
 			next;
-			mes "[Rookie]";
+			mes "[新人]";
 			mes "I like something dull.";
 			next;
 			mes "[Magenta]";
 			mes "Look at your taste... You really don't know the trend, do you?";
 			next;
-			mes "[Rookie]";
+			mes "[新人]";
 			mes "Regardless of the trend, it's my constant taste.";
 			next;
 			emotion ET_OK, getnpcid(0, "Magenta#16nego01");
@@ -12788,21 +12788,21 @@ rebel_in,88,61,5	script	Rookie#16nego02	4_M_ROOKIE,{
 			mes "Yes, I see. I respect your taste. Then please respect my taste too.";
 			next;
 			cutin "16loo_03.bmp",2;
-			mes "[Rookie]";
+			mes "[新人]";
 			mes "... Right.";
 			next;
 			mes "[Magenta]";
 			mes "Oh, what can I do? This part has to be thin... Right! I want to add some glitters to ammunitions.";
 			next;
 			cutin "16loo_01.bmp",2;
-			mes "[Rookie]";
+			mes "[新人]";
 			mes "Why do you need them for ammunitions?";
 			next;
 			mes "[Magenta]";
 			mes "Since it's Shooting Star, it must twinkle! The Shooting Start that generates its last light by burning itself! The glitters will be spread... Just by imagining it, it's so beautiful.";
 			next;
 			cutin "16loo_03.bmp",2;
-			mes "[Rookie]";
+			mes "[新人]";
 			mes "If you do that, you will get tracked.";
 			next;
 			emotion ET_SPARK, getnpcid(0, "Magenta#16nego01");
@@ -12810,14 +12810,14 @@ rebel_in,88,61,5	script	Rookie#16nego02	4_M_ROOKIE,{
 			mes "It's okay. I can publicize myself through the entire Continent. Let me grinder something hard and put it...";
 			next;
 			cutin "16loo_02.bmp",2;
-			mes "[Rookie]";
+			mes "[新人]";
 			mes "Well. Do as you wish. If you like converting so much, why don't you become an assistant of the master there?";
 			next;
 			mes "[Magenta]";
 			mes "I prefer being on active duty. By the way... How do I get them?";
 			next;
 			cutin "16loo_01.bmp",2;
-			mes "[Rookie]";
+			mes "[新人]";
 			mes "What are you talking about? You have to go out and get them yourself.";
 			next;
 			mes "[Magenta]";
@@ -12848,7 +12848,7 @@ rebel_in,88,61,5	script	Rookie#16nego02	4_M_ROOKIE,{
 			mes "My friend told me. Hmm.. What can I do? Can I ask you for a favor, adventurer?";
 			next;
 			cutin "16loo_03.bmp",2;
-			mes "[Rookie]";
+			mes "[新人]";
 			mes "Oh, you shouldn't be asking such a thing. The adventurer is our guest.";
 			next;
 			if (select( "What is it?", "I'm quite busy..." ) == 2) {
@@ -12856,14 +12856,14 @@ rebel_in,88,61,5	script	Rookie#16nego02	4_M_ROOKIE,{
 				mes "I'm quite busy...";
 				next;
 				cutin "16loo_01.bmp",2;
-				mes "[Rookie]";
+				mes "[新人]";
 				mes "The adventure is busy! You shouldn't be asking such a thing!";
 				next;
 				mes "[Magenta]";
 				mes "I see... Please come back if you remember it later on. I will be waiting for you. Bye... then.";
 				next;
 				cloakonnpcself( "Magenta#16nego01" );
-				mes "[Rookie]";
+				mes "[新人]";
 				mes "See you later. Be careful.";
 				close3;
 			}
@@ -12886,14 +12886,14 @@ rebel_in,88,61,5	script	Rookie#16nego02	4_M_ROOKIE,{
 			mes "Please bring ^0000cd 10 pieces of crystal and 10 pieces of black crystal^000000. You can get them by defeating ^0000cdObsidians and Minerals^000000. Be careful!";
 			next;
 			cloakonnpcself( "Magenta#16nego01" );
-			mes "[Rookie]";
+			mes "[新人]";
 			mes "Phew. He's so loud. I will count on you, adventurer.";
 			setquest 14605;// Sparkling things
 			close3;
 		case 1:
 		case 2:
 			cutin "16loo_02.bmp",2;
-			mes "[Rookie]";
+			mes "[新人]";
 			mes "Welcome back, adventurer. I know you are suffering from the weird guy.";
 			next;
 			cloakoffnpcself( "Magenta#16nego01" );
@@ -12912,7 +12912,7 @@ rebel_in,88,61,5	script	Rookie#16nego02	4_M_ROOKIE,{
 				next;
 				cloakonnpcself( "Magenta#16nego01" );
 				cutin "16loo_03.bmp",2;
-				mes "[Rookie]";
+				mes "[新人]";
 				mes "Phew, so complicated. We will count on you. That fellow is so persistent.";
 				close3;
 			}
@@ -12928,7 +12928,7 @@ rebel_in,88,61,5	script	Rookie#16nego02	4_M_ROOKIE,{
 				next;
 				cloakonnpcself( "Magenta#16nego01" );
 				cutin "16loo_03.bmp",2;
-				mes "[Rookie]";
+				mes "[新人]";
 				mes "Phew, so complicated. We will count on you. That fellow is so persistent.";
 				close3;
 			}
@@ -12939,14 +12939,14 @@ rebel_in,88,61,5	script	Rookie#16nego02	4_M_ROOKIE,{
 			mes "So it is true that adventurers are so talented. I was a bit worried when I was requesting.";
 			next;
 			cutin "16loo_01.bmp",2;
-			mes "[Rookie]";
+			mes "[新人]";
 			mes "Where did you pick up that story?";
 			next;
 			mes "[Magenta]";
 			mes "Pick up that story? Are you saying the adventurer is not talented? After seeing with your eyes?";
 			next;
 			cutin "16loo_03.bmp",2;
-			mes "[Rookie]";
+			mes "[新人]";
 			mes "No, I mean...";
 			next;
 			mes "[Magenta]";
@@ -12962,7 +12962,7 @@ rebel_in,88,61,5	script	Rookie#16nego02	4_M_ROOKIE,{
 			mes "Oh, come to think of it... Adventurer! Can you bring them tomorrow? They are so beautiful and I would like to try everything.";
 			next;
 			cutin "16loo_01.bmp",2;
-			mes "[Rookie]";
+			mes "[新人]";
 			mes "The adventurer is busy.";
 			next;
 			mes "[" + strcharinfo(0) + "]";
@@ -12979,7 +12979,7 @@ rebel_in,88,61,5	script	Rookie#16nego02	4_M_ROOKIE,{
 			next;
 			cloakonnpcself( "Magenta#16nego01" );
 			cutin "16loo_03.bmp",2;
-			mes "[Rookie]";
+			mes "[新人]";
 			mes "That fellow is really loud, isn't he? I apologize on behalf of him. Please take a good rest and come back ^0000cdafter the dawn^000000.";
 			erasequest 14605;// Sparkling things
 			delitem 7321,10;// Fragment_Of_Crystal
@@ -12993,11 +12993,11 @@ rebel_in,88,61,5	script	Rookie#16nego02	4_M_ROOKIE,{
 		switch( isbegin_quest(14606) ) {
 		case 0:
 			cutin "16loo_01.bmp",2;
-			mes "[Rookie]";
+			mes "[新人]";
 			mes "Welcome, adventurer.";
 			next;
 			cutin "16loo_03.bmp",2;
-			mes "[Rookie]";
+			mes "[新人]";
 			mes "Although you didn't have to come here, you took the trouble. I mean... Thanks.";
 			next;
 			mes "[" + strcharinfo(0) + "]";
@@ -13007,7 +13007,7 @@ rebel_in,88,61,5	script	Rookie#16nego02	4_M_ROOKIE,{
 			mes "[Denny]";
 			mes "Here come Denny again, the superstar!!!";
 			next;
-			mes "[Rookie]";
+			mes "[新人]";
 			mes "Can't you please skip that performance?";
 			next;
 			mes "[Denny]";
@@ -13026,7 +13026,7 @@ rebel_in,88,61,5	script	Rookie#16nego02	4_M_ROOKIE,{
 			mes "Cheer up!";
 			next;
 			cloakonnpcself( "Denny#16nego03" );
-			mes "[Rookie]";
+			mes "[新人]";
 			mes "Ouch, I'm so busy. Sorry to request you again. Go, adventurer!";
 			erasequest 14609;// Quiet time
 			setquest 14606;// Pipe repair materials
@@ -13034,7 +13034,7 @@ rebel_in,88,61,5	script	Rookie#16nego02	4_M_ROOKIE,{
 		case 1:
 		case 2:
 			cutin "16loo_02.bmp",2;
-			mes "[Rookie]";
+			mes "[新人]";
 			mes "Welcome back, adventurer. Thank you for your support. Our silly kid gave you some trouble.";
 			next;
 			cloakoffnpcself( "Denny#16nego01" );
@@ -13064,7 +13064,7 @@ rebel_in,88,61,5	script	Rookie#16nego02	4_M_ROOKIE,{
 				next;
 				cloakonnpcself( "Denny#16nego03" );
 				cutin "16loo_03.bmp",2;
-				mes "[Rookie]";
+				mes "[新人]";
 				mes "What a spoiled kid. I apologize on behalf of him. We will count on you for the rest items.";
 				close3;
 			}
@@ -13083,7 +13083,7 @@ rebel_in,88,61,5	script	Rookie#16nego02	4_M_ROOKIE,{
 				next;
 				cloakonnpcself( "Denny#16nego03" );
 				cutin "16loo_03.bmp",2;
-				mes "[Rookie]";
+				mes "[新人]";
 				mes "What a spoiled kid. I apologize on behalf of him. We will count on you for the rest items.";
 				close3;
 			}
@@ -13098,11 +13098,11 @@ rebel_in,88,61,5	script	Rookie#16nego02	4_M_ROOKIE,{
 			next;
 			cloakonnpcself( "Denny#16nego03" );
 			cutin "16loo_03.bmp",2;
-			mes "[Rookie]";
+			mes "[新人]";
 			mes "He went back only after saying what he wants. How spoiled! But I didn't educate him like that.";
 			next;
 			cutin "16loo_01.bmp",2;
-			mes "[Rookie]";
+			mes "[新人]";
 			mes "Please take a good rest today. We will count on you again tomorrow. You must be exhausted.";
 			erasequest 14606;// Pipe repair materials
 			delitem 999,5;// Steel
@@ -13116,11 +13116,11 @@ rebel_in,88,61,5	script	Rookie#16nego02	4_M_ROOKIE,{
 		switch( isbegin_quest(14607) ) {
 		case 0:
 			cutin "16loo_01.bmp",2;
-			mes "[Rookie]";
+			mes "[新人]";
 			mes "Welcome, adventurer.";
 			next;
 			cutin "16loo_03.bmp",2;
-			mes "[Rookie]";
+			mes "[新人]";
 			mes "Although you didn't have to come here, you took the trouble. I mean... Thanks.";
 			next;
 			mes "[" + strcharinfo(0) + "]";
@@ -13131,17 +13131,17 @@ rebel_in,88,61,5	script	Rookie#16nego02	4_M_ROOKIE,{
 			mes "Yikes, it's so cold!";
 			next;
 			cutin "16loo_03.bmp",2;
-			mes "[Rookie]";
+			mes "[新人]";
 			mes "I have to listen to complaints of all the people. That's a problem.";
 			next;
 			cutin "16loo_01.bmp",2;
-			mes "[Rookie]";
+			mes "[新人]";
 			mes "What's so cold? It's the same as yesterday";
 			next;
 			mes "[Cyan]";
 			mes "Hey, my feeling is so accurate. It's colder today. Look. You put on more clothes.";
 			next;
-			mes "[Rookie]";
+			mes "[新人]";
 			mes "Oh! When did I get dressed like this!";
 			emotion ET_HUK;
 			next;
@@ -13150,7 +13150,7 @@ rebel_in,88,61,5	script	Rookie#16nego02	4_M_ROOKIE,{
 			mes "[Cyan]";
 			mes "Let's see... I thought so. The fireplace is weaker now. No firewood?";
 			next;
-			mes "[Rookie]";
+			mes "[新人]";
 			mes "Well, it's true.";
 			next;
 			cloakoffnpcself( "Cyan#16nego02" );
@@ -13159,7 +13159,7 @@ rebel_in,88,61,5	script	Rookie#16nego02	4_M_ROOKIE,{
 			mes "Once this last firewood is burnt out, I will die... Last... firewood...";
 			next;
 			cutin "16loo_03.bmp",2;
-			mes "[Rookie]";
+			mes "[新人]";
 			mes "Who told you that you'd die? You're so healthy!";
 			next;
 			emotion ET_ANGER;
@@ -13168,28 +13168,28 @@ rebel_in,88,61,5	script	Rookie#16nego02	4_M_ROOKIE,{
 			next;
 			cutin "16loo_01.bmp",2;
 			emotion ET_FRET, getnpcid(0, "Cyan#16nego02");
-			mes "[Rookie]";
+			mes "[新人]";
 			mes "Oh, don't die. If you die, who's going to take care of those 12 kids. Please don't die.";
 			next;
 			mes "[Cyan]";
 			mes "Hey! Who are my kids! And why do I have to feed them? What happened?";
 			next;
 			cutin "16loo_03.bmp",2;
-			mes "[Rookie]";
+			mes "[新人]";
 			mes "Your spouse... died during a mission.";
 			next;
 			mes "[Cyan]";
 			mes "My god! So who's my spouse?";
 			next;
 			cutin "16loo_02.bmp",2;
-			mes "[Rookie]";
+			mes "[新人]";
 			mes "Well... The Teddy bear?";
 			next;
 			mes "[Cyan]";
 			mes "Oops! No! Let's say this adventurer is my spouse.";
 			next;
 			cutin "16loo_01.bmp",2;
-			mes "[Rookie]";
+			mes "[新人]";
 			mes "Hey! That's rude!";
 			next;
 			mes "[Cyan]";
@@ -13201,7 +13201,7 @@ rebel_in,88,61,5	script	Rookie#16nego02	4_M_ROOKIE,{
 			mes "[Cyan]";
 			mes "Oh, this jacket looks good. That's why you don't feel cold. We always receive cheap clothes so we can easily fell the cold.";
 			next;
-			mes "[Rookie]";
+			mes "[新人]";
 			mes "The adventurer is busy now. What are you talking about?";
 			next;
 			mes "[Cyan]";
@@ -13221,7 +13221,7 @@ rebel_in,88,61,5	script	Rookie#16nego02	4_M_ROOKIE,{
 			emotion ET_THROB, getnpcid(0, "Cyan#16nego02");
 			next;
 			emotion ET_SWEAT, playerattached();
-			mes "[Rookie]";
+			mes "[新人]";
 			mes "Hey! You're being rude to the adventurer! Just distinguish the reality and fantasy!";
 			next;
 			mes "[Cyan]";
@@ -13234,7 +13234,7 @@ rebel_in,88,61,5	script	Rookie#16nego02	4_M_ROOKIE,{
 			mes "Oh dear, you are so kind and lovely.";
 			next;
 			cutin "16loo_03.bmp",2;
-			mes "[Rookie]";
+			mes "[新人]";
 			mes "You've dont it again. I've gotta hand it to you.";
 			emotion ET_SWEAT;
 			next;
@@ -13242,7 +13242,7 @@ rebel_in,88,61,5	script	Rookie#16nego02	4_M_ROOKIE,{
 			mes "I need some Burnt Tree. About 10 of them. Since they are well-dried, they will be burnt well. And there's better than coal to keep the fire long. Bring some coal please. Three of them.";
 			next;
 			cutin "16loo_01.bmp",2;
-			mes "[Rookie]";
+			mes "[新人]";
 			mes "Coal? Why? It leaves too much ash.";
 			next;
 			mes "[Cyan]";
@@ -13254,14 +13254,14 @@ rebel_in,88,61,5	script	Rookie#16nego02	4_M_ROOKIE,{
 			mes "[Cyan]";
 			mes "Oops! And defeat ^0000cd10 Waste Stoves^000000!";
 			next;
-			mes "[Rookie]";
+			mes "[新人]";
 			mes "Why?";
 			next;
 			mes "[Cyan]";
 			mes "You need to defeat them to get coal!";
 			next;
 			cutin "16loo_03.bmp",2;
-			mes "[Rookie]";
+			mes "[新人]";
 			mes "Come on. The adventurer knows it already.";
 			next;
 			mes "[Cyan]";
@@ -13269,7 +13269,7 @@ rebel_in,88,61,5	script	Rookie#16nego02	4_M_ROOKIE,{
 			next;
 			cloakonnpcself( "Cyan#16nego02" );
 			emotion ET_SWEAT, playerattached();
-			mes "[Rookie]";
+			mes "[新人]";
 			mes "Phew... We will count on you anyway. Regardless of what that fellow told you, everyone will get a cold once the fire goes out.";
 			erasequest 14609;// Quiet time
 			setquest 14607;// National Fuel Solar Fuel
@@ -13277,7 +13277,7 @@ rebel_in,88,61,5	script	Rookie#16nego02	4_M_ROOKIE,{
 		case 1:
 		case 2:
 			cutin "16loo_02.bmp",2;
-			mes "[Rookie]";
+			mes "[新人]";
 			mes "Welcome back, adventurer. Thank you for your support. Our silly kid gave you some trouble.";
 			next;
 			mes "[Cyan]";
@@ -13299,7 +13299,7 @@ rebel_in,88,61,5	script	Rookie#16nego02	4_M_ROOKIE,{
 				next;
 				cloakonnpcself( "Cyan#16nego02" );
 				cutin "16loo_03.bmp",2;
-				mes "[Rookie]";
+				mes "[新人]";
 				mes "Sorry. Some of our kids are spoiled... We will count on you.";
 				close3;
 			}
@@ -13315,7 +13315,7 @@ rebel_in,88,61,5	script	Rookie#16nego02	4_M_ROOKIE,{
 				next;
 				cloakonnpcself( "Cyan#16nego02" );
 				cutin "16loo_03.bmp",2;
-				mes "[Rookie]";
+				mes "[新人]";
 				mes "Sorry. Some of our kids are spoiled... We will count on you.";
 				close3;
 			}
@@ -13341,11 +13341,11 @@ rebel_in,88,61,5	script	Rookie#16nego02	4_M_ROOKIE,{
 			next;
 			cloakonnpcself( "Cyan#16nego02" );
 			cutin "16loo_03.bmp",2;
-			mes "[Rookie]";
+			mes "[新人]";
 			mes "There he leaves again without saying goodbye to you. Sorry about him. Some of our kids are spoiled. But not every 反叛者 is like that.";
 			next;
 			cutin "16loo_01.bmp",2;
-			mes "[Rookie]";
+			mes "[新人]";
 			mes "Please take a good rest today. We will count on you again tomorrow.";
 			erasequest 14607;// National Fuel Solar Fuel
 			delitem 7068,10;// Burn_Tree
@@ -13359,11 +13359,11 @@ rebel_in,88,61,5	script	Rookie#16nego02	4_M_ROOKIE,{
 		switch( isbegin_quest(14608) ) {
 		case 0:
 			cutin "16loo_01.bmp",2;
-			mes "[Rookie]";
+			mes "[新人]";
 			mes "Welcome, adventurer.";
 			next;
 			cutin "16loo_03.bmp",2;
-			mes "[Rookie]";
+			mes "[新人]";
 			mes "Although you didn't have to come here, you took the trouble. I mean... Thanks.";
 			next;
 			mes "[" + strcharinfo(0) + "]";
@@ -13387,7 +13387,7 @@ rebel_in,88,61,5	script	Rookie#16nego02	4_M_ROOKIE,{
 			next;
 			cloakonnpcself( "Magenta#16nego01" );
 			cutin "16loo_03.bmp",2;
-			mes "[Rookie]";
+			mes "[新人]";
 			mes "Ouch, Sorry to request you again. It must be tough for you now.";
 			erasequest 14609;// Quiet time
 			setquest 14608;// Sparkling things
@@ -13395,7 +13395,7 @@ rebel_in,88,61,5	script	Rookie#16nego02	4_M_ROOKIE,{
 		case 1:
 		case 2:
 			cutin "16loo_02.bmp",2;
-			mes "[Rookie]";
+			mes "[新人]";
 			mes "Welcome back, adventurer. Thank you for your support. That flake gave you some trouble.";
 			next;
 			cloakoffnpcself( "Magenta#16nego01" );
@@ -13414,7 +13414,7 @@ rebel_in,88,61,5	script	Rookie#16nego02	4_M_ROOKIE,{
 				next;
 				cloakonnpcself( "Magenta#16nego01" );
 				cutin "16loo_03.bmp",2;
-				mes "[Rookie]";
+				mes "[新人]";
 				mes "Sorry. Some of our kids are spoiled... We will count on you.";
 				close3;
 			}
@@ -13430,7 +13430,7 @@ rebel_in,88,61,5	script	Rookie#16nego02	4_M_ROOKIE,{
 				next;
 				cloakonnpcself( "Magenta#16nego01" );
 				cutin "16loo_03.bmp",2;
-				mes "[Rookie]";
+				mes "[新人]";
 				mes "Sorry. Some of our kids are spoiled... We will count on you.";
 				close3;
 			}
@@ -13442,10 +13442,10 @@ rebel_in,88,61,5	script	Rookie#16nego02	4_M_ROOKIE,{
 			next;
 			cloakonnpcself( "Magenta#16nego01" );
 			cutin "16loo_03.bmp",2;
-			mes "[Rookie]";
+			mes "[新人]";
 			mes "There he leaves again without saying goodbye to you. Sorry about him. Some of our kids are spoiled. But not every 反叛者 is like that.";
 			next;
-			mes "[Rookie]";
+			mes "[新人]";
 			mes "Please take a good rest today. We will count on you again tomorrow.";
 			erasequest 14608;// Sparkling things
 			delitem 7321,10;// Fragment_Of_Crystal
@@ -13489,7 +13489,7 @@ slabw01,235,137,3	script	Suspicious cabinet#hide01	4_ENERGY_WHITE,{
 	enablenpc "Hiding researcher#" + strnpcinfo(2);
 	npctalk "Arrrgh!", "Hiding researcher#" + strnpcinfo(2);
 	cutin "16loo_02.bmp",0;
-	mes "[Rookie]";
+	mes "[新人]";
 	mes "Let me take him out!";
 	mes "Seems like there are still some researchers hiding like this.";
 	setquest .@quest_id;
