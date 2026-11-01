@@ -3516,7 +3516,7 @@ que_swat,150,58,3	script	新人#ep162_03	4_M_ROOKIE,{
 		switch( checkquest(7742,HUNTING) ) {
 		case -1:
 			mes "[新人]";
-			mes "Welcome.";
+			mes "欢迎。";
 			mes "Without any further ado,";
 			mes "We would like to hunt the ^4d4dffpet child^000000 guy. Will you join us?";
 			next;
@@ -6855,7 +6855,7 @@ function	script	F_TerraGloria_Lady	{
 		cloakoffnpcself( "反叛者 Guard leader#1" );
 		mes "[反叛者 Guard leader]";
 		mes "Why is it so noisy here?";
-		npctalk "反叛者 Guard leader : Be quiet!", "反叛者 Guard leader#1", bc_self;
+		npctalk "近卫队长拉西斯： Be quiet!", "反叛者 Guard leader#1", bc_self;
 		emotion ET_FRET, getnpcid(0, "反叛者 Guard leader#1");
 		next;
 		mes "[反叛者 guard]";
@@ -6873,7 +6873,7 @@ function	script	F_TerraGloria_Lady	{
 		next;
 		mes "[反叛者 Guard leader]";
 		mes "Rookie?";
-		npctalk "反叛者 Guard leader : Rookie?", "反叛者 Guard leader#1", bc_self;
+		npctalk "近卫队长拉西斯： Rookie?", "反叛者 Guard leader#1", bc_self;
 		next;
 		mes "[反叛者 Guard leader]";
 		mes "Arrrgh... That kid?";
@@ -6898,7 +6898,7 @@ function	script	F_TerraGloria_Lady	{
 		mes "[反叛者 Guard leader]";
 		mes "I said no!";
 		mes "You're so annoying!";
-		npctalk "反叛者 Guard leader : I said no. And that's it!", "反叛者 Guard leader#1", bc_self;
+		npctalk "近卫队长拉西斯： I said no. And that's it!", "反叛者 Guard leader#1", bc_self;
 		next;
 		mes "[反叛者 Guard leader]";
 		mes "If it hadn't been for the order of our leader, I could just knock you out right here......";
@@ -6920,7 +6920,7 @@ function	script	F_TerraGloria_Lady	{
 			mes "[近卫队长拉西斯]";
 			mes "A good idea.";
 			mes "The exit is downstairs. Go there.";
-			npctalk "反叛者 Guard leader : Hey~ Hey~ Go away!", "反叛者 Guard leader#1", bc_self;
+			npctalk "近卫队长拉西斯： Hey~ Hey~ Go away!", "反叛者 Guard leader#1", bc_self;
 			cloakonnpcself( "反叛者 Guard leader#1" );
 			close;
 		}
@@ -6929,7 +6929,7 @@ function	script	F_TerraGloria_Lady	{
 		mes "You're so rude!";
 		mes "Do you want to die right now?";
 		emotion ET_HUK, getnpcid(0, "反叛者 Guard leader#1");
-		npctalk "反叛者 Guard leader : Hey!! Pipe down!!!!!", "反叛者 Guard leader#1", bc_self;
+		npctalk "近卫队长拉西斯： Hey!! Pipe down!!!!!", "反叛者 Guard leader#1", bc_self;
 		next;
 		mes "[???]";
 		mes "Oops!";
@@ -6950,11 +6950,11 @@ function	script	F_TerraGloria_Lady	{
 		mes "[近卫队长拉西斯]";
 		mes "...... I see.";
 		mes "Follow me.";
-		npctalk "反叛者 Guard leader : Ha... I'll be scolded by the leader..", "反叛者 Guard leader#1", bc_self;
+		npctalk "近卫队长拉西斯： Ha... I'll be scolded by the leader..", "反叛者 Guard leader#1", bc_self;
 		next;
 		mes "[近卫队长拉西斯]";
 		mes "If you behave rudely, you won't go back alive.";
-		npctalk "反叛者 Guard leader : If anything goes wrong, we will die together!", "反叛者 Guard leader#1", bc_self;
+		npctalk "近卫队长拉西斯： If anything goes wrong, we will die together!", "反叛者 Guard leader#1", bc_self;
 		cloakonnpcself( "反叛者 Guard leader#1" );
 		erasequest 11454;// Doubt
 		setquest 11455;// Doubt
@@ -6983,7 +6983,7 @@ OnTouch:
 	if (terra_gloria_lady_part == 10) {
 		mes "- You hear the conversation from inside the room. -";
 		next;
-		mes "[反叛者 senior 里德什]";
+		mes "[元老里德什]";
 		mes "... So I was thinking that you were having dementia.";
 		cutin "ep162_rds03.bmp",0;
 		next;
@@ -6991,26 +6991,26 @@ OnTouch:
 		mes "I'm not that old yet.";
 		cutin "ep162_dn01.bmp",2;
 		next;
-		mes "[反叛者 senior 里德什]";
+		mes "[元老里德什]";
 		mes "Come to think of it, you should make yourself up!";
 		cutin "ep162_rds03.bmp",0;
 		next;
-		mes "[反叛者 senior 里德什]";
+		mes "[元老里德什]";
 		mes "This is why you look older!";
 		next;
-		mes "[反叛者 senior 里德什]";
+		mes "[元老里德什]";
 		mes "Sometimes you look older than 科特尼斯!";
 		next;
 		mes "[元老狄恩]";
 		mes "Oops, really?";
 		cutin "ep162_dn01.bmp",2;
 		next;
-		mes "[反叛者 senior 科特尼斯]";
+		mes "[元老科特尼斯]";
 		mes "Phew!";
 		mes "Not so old!";
 		cutin "ep162_ctn01.bmp",2;
 		next;
-		mes "[反叛者 senior 科特尼斯]";
+		mes "[元老科特尼斯]";
 		mes "It seems like you have more wrinkles these days.";
 		mes "Why don't you put on some anti-wrinkle cream?";
 		next;
@@ -7018,19 +7018,19 @@ OnTouch:
 		mes "This all is because of the air here!";
 		cutin "ep162_dn01.bmp",2;
 		next;
-		mes "[反叛者 senior 里德什]";
+		mes "[元老里德什]";
 		mes "You're right!";
 		mes "This type of air is critical to the dry skin like yours!";
 		cutin "ep162_rds01.bmp",0;
 		next;
-		mes "[反叛者 senior 里德什]";
+		mes "[元老里德什]";
 		mes "Come to think of it, remember that kid who came here before?";
 		mes "Tell him to buy some cosmetics from Rune-Midgarts!";
 		next;
-		mes "[反叛者 senior 里德什]";
+		mes "[元老里德什]";
 		mes "I have heard there's a fascinating cosmetic shop there.";
 		next;
-		mes "[反叛者 senior 里德什]";
+		mes "[元老里德什]";
 		mes "It's difficult for our kids to go all the way there to buy cosmetics.";
 		mes "There is a problem with the position as well...";
 		cutin "ep162_rds03.bmp",0;
@@ -7039,7 +7039,7 @@ OnTouch:
 		mes "That kid? Who are you talking about?";
 		cutin "ep162_dn01.bmp",2;
 		next;
-		mes "[反叛者 senior 里德什]";
+		mes "[元老里德什]";
 		mes "The kid from the 秘密之翼~";
 		cutin "ep162_rds01.bmp",0;
 		next;
@@ -7048,15 +7048,15 @@ OnTouch:
 		mes "I remember I asked him for an errand. Will he be back here?";
 		cutin "ep162_dn01.bmp",2;
 		next;
-		mes "[反叛者 senior 里德什]";
+		mes "[元老里德什]";
 		mes "It's like you solved the whole problem. And they won't get past you.";
 		cutin "ep162_rds02.bmp",0;
 		next;
-		mes "[反叛者 senior 里德什]";
+		mes "[元老里德什]";
 		mes "Of course, we have some important thoughts~";
 		cutin "ep162_rds03.bmp",0;
 		next;
-		mes "[反叛者 senior 里德什]";
+		mes "[元老里德什]";
 		mes "You're so great. How can you think of such an idea in that short moment?";
 		next;
 		mes "[元老狄恩]";
@@ -7066,7 +7066,7 @@ OnTouch:
 		mes "[元老狄恩]";
 		mes "Although they are all novices, they can be an obstacle for us in defeating the 秘密之翼.";
 		next;
-		mes "[反叛者 senior 里德什]";
+		mes "[元老里德什]";
 		mes "That's true.";
 		cutin "ep162_rds01.bmp",0;
 		next;
@@ -7078,11 +7078,11 @@ OnTouch:
 		mes "So we will pretend to cooperate with the 秘密之翼 and get rid of the annoying ones first.";
 		cutin "ep162_dn04.bmp",2;
 		next;
-		mes "[反叛者 senior 里德什]";
+		mes "[元老里德什]";
 		mes "Let's finish them before they realize we have a plan to attack them.";
 		cutin "ep162_rds05.bmp",0;
 		next;
-		mes "[反叛者 senior 里德什]";
+		mes "[元老里德什]";
 		mes "We're 反叛者s. And we are at the end of guns.";
 		next;
 		mes "[元老狄恩]";
@@ -7094,38 +7094,38 @@ OnTouch:
 		mes "This is good to have this opportunity before I die.";
 		cutin "ep162_dn01.bmp",2;
 		next;
-		mes "[反叛者 senior 里德什]";
+		mes "[元老里德什]";
 		mes "Come on, sister!";
 		mes "Don't talk about dying!";
 		cutin "ep162_rds03.bmp",0;
 		next;
-		mes "[反叛者 senior 里德什]";
-		mes "I saw 鲁柏 crying after you said that.";
+		mes "[元老里德什]";
+		mes "你说完之后，我看到鲁柏哭了。";
 		cutin "ep162_rds04.bmp",0;
 		next;
-		mes "[反叛者 senior 里德什]";
-		mes "He's not cute anymore, he is just a middle-aged man. But to him, you're like mother.";
+		mes "[元老里德什]";
+		mes "他已经不可爱了，只是个中年男人。但对他来说，你就像母亲。";
 		cutin "ep162_rds03.bmp",0;
 		next;
-		mes "[反叛者 senior 里德什]";
-		mes "And to me...";
+		mes "[元老里德什]";
+		mes "而对我来说……";
 		next;
 		mes "[元老狄恩]";
-		mes "Yes, I see.";
+		mes "是，我明白。";
 		cutin "ep162_dn01.bmp",2;
 		next;
 		mes "[元老狄恩]";
-		mes "What we have now is a pleasant party. I'm looking forward to it.";
-		mes "Hahaha.";
+		mes "现在我们有场愉快的派对，我很期待。";
+		mes "哈哈哈。";
 		cutin "ep162_dn04.bmp",2;
 		next;
-		mes "[反叛者 senior 里德什]";
-		mes "I'm expecting it so much!";
+		mes "[元老里德什]";
+		mes "我太期待了！";
 		cutin "ep162_rds05.bmp",0;
 		next;
-		mes "[反叛者 senior 科特尼斯]";
-		mes "Then I'll fix the party accessories in advance.";
-		mes "Hohohoho.";
+		mes "[元老科特尼斯]";
+		mes "那我提前修整派对装饰。";
+		mes "呵呵呵呵。";
 		cutin "ep162_ctn02.bmp",2;
 		terra_gloria_lady_part = 11;
 		setquest 11463;// You said the party is ready?
@@ -7145,22 +7145,22 @@ rebel_in,166,88,3	script	科特尼斯#162gmbs	4_F_COATNEIS,{
 	if (terra_gloria_lady_part < 3) {
 		cutin "ep162_ctn01.bmp",2;
 		mes "[科特尼斯]";
-		mes "Nice to meet you.";
-		mes "Take a seat and have some cookies.";
+		mes "很高兴见到你。";
+		mes "请坐，吃点饼干。";
 		close3;
 	}
 	if (terra_gloria_lady_part < 7) {
 		cutin "ep162_ctn01.bmp",2;
 		mes "[科特尼斯]";
-		mes "Phew.. It sounds so serious.";
-		mes "It's dangerous to be excited at our age...";
+		mes "唉……听起来真严肃。";
+		mes "我们这个年纪太激动可危险……";
 		close3;
 	}
 	// if (terra_gloria_lady_part >= 11) {// to 13
 	cutin "ep162_ctn01.bmp",2;
-	mes "[反叛者 senior 科特尼斯]";
-	mes "Oops! Welcome.";
-	mes "We have been talking about the party that will be held soon.";
+	mes "[元老科特尼斯]";
+	mes "哎呀！欢迎。";
+	mes "我们正在聊即将举行的派对。";
 	close3;
 }
 
@@ -7168,112 +7168,112 @@ rebel_in,166,86,3	script	里德什#162gmbs	4_F_LEEDSH,{
 	if (terra_gloria_lady_part < 3) {
 		cutin "ep162_rds01.bmp",0;
 		mes "[里德什]";
-		mes "It's been a long time since an outsider came in here for the last time.";
+		mes "上次有外人进来，已经是很久以前了。";
 		close3;
 	}
 	if (terra_gloria_lady_part < 7) {
 		cutin "ep162_rds02.bmp",0;
 		mes "[里德什]";
-		mes "If you do not want me to make a nice hole in your head, leave now.";
-		npctalk "里德什 : You'll feel a cool breeze in your head!", "", bc_self;
+		mes "不想我给你的脑袋开个漂亮的洞，就现在离开。";
+		npctalk "里德什：你脑袋里会吹进凉风！", "", bc_self;
 		close3;
 	}
 	// if (terra_gloria_lady_part >= 11) {// to 13
 	cutin "ep162_rds03.bmp",0;
-	mes "[反叛者 senior 里德什]";
-	mes "Don't be so panic.";
-	mes "I talked it out with my sister.";
-	npctalk "里德什 : I am not such a scary person~", "", bc_self;
+	mes "[元老里德什]";
+	mes "别这么紧张。";
+	mes "我和妹妹谈过了。";
+	npctalk "里德什：我没那么可怕~", "", bc_self;
 	close3;
 }
 
-rebel_in,164,88,5	script	Dien#162gmbs	4_F_DIENE,4,4,{
+rebel_in,164,88,5	script	狄恩#162gmbs	4_F_DIENE,4,4,{
 	if (terra_gloria_lady_part < 3) {
 		cutin "ep162_dn01.bmp",2;
 		mes "[狄恩]";
-		mes "Welcome.";
+		mes "欢迎。";
 		next;
 		mes "[狄恩]";
-		mes "Don't just be standing there. Sit down here.";
+		mes "别站着，坐这里。";
 		emotion ET_COMEON;
 		close3;
 	}
 	if (terra_gloria_lady_part == 3) {
 		mes "[狄恩]";
-		mes "Good.";
+		mes "很好。";
 		cutin "ep162_dn01.bmp",2;
 		next;
 		mes "[狄恩]";
-		mes "Let me persuade the people who are against this.";
+		mes "让我去说服反对的人。";
 		next;
 		mes "[里德什]";
-		mes "What!!!!!!!!!!!!!";
-		mes "Sister!";
-		mes "Are you crazy?";
-		mes "What the hell are you saying!";
+		mes "什么！！！！！！！！";
+		mes "姐姐！";
+		mes "你疯了吗？";
+		mes "你到底在说什么！";
 		cutin "ep162_rds04.bmp",0;
 		emotion ET_HUK, getnpcid(0, "里德什#162gmbs");
 		next;
 		mes "[里德什]";
-		mes "That's the request from the president!";
-		mes "The guy who destroyed us!";
+		mes "那是总统的请求！";
+		mes "毁掉我们的那个人！";
 		cutin "ep162_rds02.bmp",0;
 		next;
 		mes "[狄恩]";
-		mes "Calm down, 里德什.";
-		npctalk "狄恩： I thought about it a lot.", "", bc_self;
+		mes "冷静，里德什。";
+		npctalk "狄恩：我想了很多。", "", bc_self;
 		cutin "ep162_dn03.bmp",2;
 		next;
 		mes "[里德什]";
-		mes "I will never accept it!";
+		mes "我绝不接受！";
 		cutin "ep162_rds04.bmp",0;
 		next;
 		mes "[???]";
-		mes "Well... If Dien agrees, I will agree, too.";
+		mes "嗯……如果狄恩同意，我也同意。";
 		cutin "ep162_ctn01.bmp",2;
 		next;
 		mes "[里德什]";
-		mes "What's wrong with you, 科特尼斯!";
-		mes "This is the request from those guys!";
-		mes "Those guys who destroyed us!";
-		npctalk "里德什 : Have you forgotten how much we suffered because of it?", "里德什#162gmbs", bc_self;
+		mes "你怎么了，科特尼斯！";
+		mes "这是那些家伙的请求！";
+		mes "毁掉我们的那些家伙！";
+		npctalk "里德什：你忘了我们因此受了多少苦吗？", "里德什#162gmbs", bc_self;
 		emotion ET_HUK, getnpcid(0, "里德什#162gmbs");
 		cutin "ep162_rds04.bmp",0;
 		next;
 		mes "[科特尼斯]";
-		mes "Dien must have some thoughts about it.";
+		mes "狄恩一定有她的考虑。";
 		emotion ET_HUM, getnpcid(0, "科特尼斯#162gmbs");
 		cutin "ep162_ctn01.bmp",2;
 		next;
 		mes "[里德什]";
-		mes "Although you are my sister, I will never accept this!";
+		mes "就算你是我姐姐，我也绝不接受！";
 		emotion ET_STARE, getnpcid(0, "里德什#162gmbs");
 		cutin "ep162_rds02.bmp",0;
 		next;
 		mes "[狄恩]";
-		mes "... You'd better go out now.";
-		mes "If you stay here longer, you might get an air hole in your head.";
+		mes "……你最好现在出去。";
+		mes "再待下去，你脑袋上可能会多一个洞。";
 		cutin "ep162_dn03.bmp",2;
 		next;
 		mes "[狄恩]";
-		mes "I know you've met 鲁柏. Have you met ^ff0000埃尔斯特^000000?";
+		mes "我知道你见过鲁柏。见过^ff0000埃尔斯特^000000了吗？";
 		cutin "ep162_dn01.bmp",2;
 		next;
 		mes "[狄恩]";
-		mes "Larcis. Go with this adventurer and hand them this letter.";
+		mes "拉西斯，陪这位冒险者去，把这封信交给他们。";
 		next;
 		mes "[狄恩]";
-		mes "And tell the kids in front of the door not to enter here until 里德什 calms down.";
+		mes "还有，告诉门口那些孩子，里德什冷静前别进来。";
 		next;
 		cutin "",255;
 		mes "[近卫队长拉西斯]";
-		mes "Yes, I will.";
-		emotion ET_OK, getnpcid(0, "反叛者 Guard leader#2");
+		mes "是，我会的。";
+		emotion ET_OK, getnpcid(0, "近卫队长拉西斯#2");
 		next;
 		mes "[近卫队长拉西斯]";
-		mes "Follow me. We are going to commander 埃尔斯特 first.";
-		emotion ET_GO, getnpcid(0, "反叛者 Guard leader#2");
-		npctalk "反叛者 Guard leader : To find commander 埃尔斯特's room, go out of this room and walk through the left corridor.", "反叛者 Guard leader#2", bc_self;
+		mes "跟我来，我们先去埃尔斯特指挥官那里。";
+		emotion ET_GO, getnpcid(0, "近卫队长拉西斯#2");
+		npctalk "近卫队长拉西斯：要找埃尔斯特指挥官的房间，出了这间房走左侧走廊。", "近卫队长拉西斯#2", bc_self;
 		erasequest 11456;// Doubt
 		setquest 11457;// Doubt
 		completequest 14601;// Ladies on second floor
@@ -7282,8 +7282,8 @@ rebel_in,164,88,5	script	Dien#162gmbs	4_F_DIENE,4,4,{
 	}
 	if (terra_gloria_lady_part == 4) {
 		mes "[狄恩]";
-		mes "... You'd better go out now.";
-		mes "If you stay here longer, you might get an air hole in your head.";
+		mes "……你最好现在出去。";
+		mes "再待下去，你脑袋上可能会多一个洞。";
 		cutin "ep162_dn03.bmp",2;
 		next;
 		mes "[狄恩]";
@@ -7291,37 +7291,37 @@ rebel_in,164,88,5	script	Dien#162gmbs	4_F_DIENE,4,4,{
 		cutin "ep162_dn01.bmp",2;
 		next;
 		mes "[狄恩]";
-		mes "Larcis. Go with this adventurer and hand them this letter.";
+		mes "拉西斯，陪这位冒险者去，把这封信交给他们。";
 		next;
 		mes "[狄恩]";
-		mes "And tell the kids in front of the door not to enter here until 里德什 calms down.";
+		mes "还有，告诉门口那些孩子，里德什冷静前别进来。";
 		next;
 		cutin "",255;
 		mes "[近卫队长拉西斯]";
-		mes "Yes, I will.";
-		emotion ET_OK, getnpcid(0, "反叛者 Guard leader#2");
+		mes "是，我会的。";
+		emotion ET_OK, getnpcid(0, "近卫队长拉西斯#2");
 		next;
 		mes "[近卫队长拉西斯]";
-		mes "Follow me. We are going to commander 埃尔斯特 first.";
-		npctalk "反叛者 Guard leader : To find commander 埃尔斯特's room, go out of this room and walk through the left corridor.", "反叛者 Guard leader#2", bc_self;
+		mes "跟我来，我们先去埃尔斯特指挥官那里。";
+		npctalk "近卫队长拉西斯：要找埃尔斯特指挥官的房间，出了这间房走左侧走廊。", "近卫队长拉西斯#2", bc_self;
 		close;
 	}
 	if (terra_gloria_lady_part < 7) {
 		mes "[狄恩]";
-		mes "I'm surprised that 埃尔斯特 accepted it so easily.";
-		npctalk "狄恩： I thought there would a disaster.", "Dien#162gmbs", bc_self;
+		mes "埃尔斯特这么容易接受，真让我惊讶。";
+		npctalk "狄恩：我还以为会出大乱子。", "狄恩#162gmbs", bc_self;
 		cutin "ep162_dn01.bmp",2;
 		next;
 		mes "[狄恩]";
-		mes "Without further delay, meet 鲁柏 again.";
-		npctalk "狄恩： If all of us agree, he cannot help but approve it.", "Dien#162gmbs", bc_self;
+		mes "别再耽搁，再去见鲁柏。";
+		npctalk "狄恩：如果大家都同意，他也只能批准。", "狄恩#162gmbs", bc_self;
 		close3;
 	}
 	// if (terra_gloria_lady_part == 11) {// 12 - 13
 	mes "[元老狄恩]";
-	mes "Welcome.";
+	mes "欢迎。";
 	mes "Since most of the kids are busy these days, I feel somewhat bored.";
-	npctalk "狄恩： I have many things to prepare.", "Dien#162gmbs", bc_self;
+	npctalk "狄恩： I have many things to prepare.", "狄恩#162gmbs", bc_self;
 	cutin "ep162_dn01.bmp",2;
 	next;
 	mes "[元老狄恩]";
@@ -7334,12 +7334,12 @@ rebel_in,164,88,5	script	Dien#162gmbs	4_F_DIENE,4,4,{
 	next;
 	mes "[元老狄恩]";
 	mes "I didn't really mean to ask you for a favor. It's so kind of you to remember it!";
-	npctalk "狄恩： What a sensation!", "Dien#162gmbs", bc_self;
+	npctalk "狄恩： What a sensation!", "狄恩#162gmbs", bc_self;
 	next;
 	mes "[元老狄恩]";
 	mes "We were talking about the party we are planning soon.";
 	mes "It was nearly over. But several ingredients are missing.";
-	npctalk "狄恩： It's such an important party.", "Dien#162gmbs", bc_self;
+	npctalk "狄恩： It's such an important party.", "狄恩#162gmbs", bc_self;
 	next;
 	mes "[元老狄恩]";
 	mes "Since Larcis is in charge of our business, please ask him. He will tell you what we need.";
@@ -7491,7 +7491,7 @@ OnTouch:
 		mes "No wonder they started talking about 戈尼. It seemed like they were hiding something from the beginning!";
 		next;
 		mes "[里德什]";
-		mes "If you do not want me to make a nice hole in your head, leave now.";
+		mes "不想我给你的脑袋开个漂亮的洞，就现在离开。";
 		next;
 		mes "[里德什]";
 		mes "And tell them!";
@@ -7520,7 +7520,7 @@ OnTouch:
 		npctalk "Dien We are not so mean.", "", bc_self;
 		next;
 		mes "[里德什]";
-		mes "Sister!";
+		mes "姐姐！";
 		mes "Don't even listen!";
 		npctalk "里德什 : Whatever it is, it's nonsense!", "里德什#162gmbs", bc_self;
 		cutin "ep162_rds02.bmp",0;
@@ -7587,7 +7587,7 @@ OnTouch:
 	end;
 }
 
-rebel_in,162,87,5	script	反叛者 Guard leader#2	4_M_REBELLION,{
+rebel_in,162,87,5	script	近卫队长拉西斯#2	4_M_REBELLION,{
 	if (checkweight(501,1) == 0 || (MaxWeight - Weight) < 1000) {
 		mes "- You have too many items in your inventory.";
 		mes "Please arrange your inventory and try again. -";
@@ -7619,7 +7619,7 @@ rebel_in,162,87,5	script	反叛者 Guard leader#2	4_M_REBELLION,{
 		next;
 		mes "[近卫队长拉西斯]";
 		mes "But... they told us to bring them. So we have to go and get them.";
-		npctalk "反叛者 Guard leader : An order is an order... I can't reject it.", "", bc_self;
+		npctalk "近卫队长拉西斯： An order is an order... I can't reject it.", "", bc_self;
 		next;
 		mes "[近卫队长拉西斯]";
 		mes "If you're willing to go, tell me!";
