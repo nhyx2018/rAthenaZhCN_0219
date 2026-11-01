@@ -2930,7 +2930,7 @@ prt_cas,309,200,5	script	Royal Head Chef#ep16_1	4_EP16_COOK,{
 	}
 	if (ep16_cookbs == 12) {
 		mes "[Head Chef]";
-		mes "Oh!";
+		mes "哦！";
 		mes "This exquisite taste made by the master!";
 		mes "It is perfect!";
 		cutin "ep16cook_king_1",2;
@@ -3189,7 +3189,7 @@ prt_cas,319,211,3	script	Royal Sauce Master#ep16	4_M_ALCHE_B,{
 			close;
 		}
 		mes "[Oriental Oyster]";
-		mes "Oh!";
+		mes "哦！";
 		mes "Very good!";
 		mes "Thanks to you, I could make the perfect sauce!";
 		mes "Bring it to the Head Chef now!";
@@ -3212,7 +3212,7 @@ prt_cas,319,211,3	script	Royal Sauce Master#ep16	4_M_ALCHE_B,{
 	}
 	if (ep16_cookbs == 12) {
 		mes "[Oriental Oyster]";
-		mes "Oh!";
+		mes "哦！";
 		mes "Very good!";
 		mes "Thanks to you, I could make the perfect sauce!";
 		next;
@@ -3522,7 +3522,7 @@ prt_cas,82,268,5	script	Mark Ishar#ep16_1	4_EP16_MARK,{
 		next;
 		select("Tell him about Tamarin.");
 		mes "[Mark]";
-		mes "Oh!";
+		mes "哦！";
 		mes "He...";
 		mes "He was making fun of me for working here! How great!";
 		emotion ET_FRET;
@@ -3543,7 +3543,7 @@ prt_cas,82,268,5	script	Mark Ishar#ep16_1	4_EP16_MARK,{
 	}
 	if (ep16_cookbs == 19) {
 		mes "[Mark]";
-		mes "Oh!";
+		mes "哦！";
 		mes "He...";
 		mes "He was making fun of me for working here! How great!";
 		cutin "mark_wt_2",0;
@@ -9180,40 +9180,40 @@ prt_cas_q,87,132,6	script	保镖#ep16_1_m	4_M_JOB_KNIGHT1,{
 		callfunc("F_geoborg_text");
 	if (ep16_gaobs == 1) {
 		mes "[保镖杰拉德]";
-		mes "Extend the queen every courtesy.";
+		mes "请对女王陛下多加礼遇。";
 		close;
 	}
 	if (ep16_gaobs == 2) {
 		mes "[保镖马丁]";
-		mes "I have something to you. Please talk to Jerad here.";
+		mes "我有话和你说，请和这里的杰拉德谈。";
 		close;
 	}
 	if (ep16_gaobs == 4 || ep16_gaobs == 5) {
 		mes "[保镖马丁]";
-		mes "I don't know why but Scarlet and Lidion have been on bad terms for a long time.";
+		mes "I don't know why but Scarlet and 利迪翁 have been on bad terms for a long time.";
 		next;
 		mes "[保镖马丁]";
-		mes "They are similar in age so that it would have been nice if they are friends...";
-		mes "However, they both have such strong personalities.";
+		mes "她们年纪相仿，本来能成为朋友就好了……";
+		mes "但两人个性都很强。";
 		next;
 		mes "[保镖马丁]";
-		mes "Of course, Scarlet looks several times younger.";
-		mes "It is supposed to be the characteristic of the Jahas.";
+		mes "当然，斯卡蕾特看起来年轻好几倍。";
+		mes "据说是贾哈家族的特征。";
 		close;
 	}
 	if (ep16_gaobs > 6 && ep16_gaobs <= 13) {
 		mes "[保镖马丁]";
-		mes "Ernst told me that he would go to the Banquet Hall.";
-		mes "I wonder if he is still there.";
+		mes "恩斯特说他会去宴会厅。";
+		mes "不知道他还在不在。";
 		close;
 	}
 	if (ep16_gaobs == 14) {
 		mes "[保镖马丁]";
-		mes "Ha...";
+		mes "哈……";
 		close;
 	}
 	mes "[保镖马丁]";
-	mes "Do you have any business left here?";
+	mes "还有事吗？";
 	close;
 }
 
@@ -9222,68 +9222,68 @@ prt_cas_q,85,127,3	script	保镖#ep16_1_g	1_M_YOUNGKNIGHT,{
 		callfunc("F_geoborg_text");
 	if (ep16_gaobs == 1) {
 		mes "[保镖马丁]";
-		mes "Extend the queen every courtesy.";
+		mes "请对女王陛下多加礼遇。";
 		close;
 	}
 	if (ep16_gaobs == 2) {
 		mes "[保镖杰拉德]";
-		mes "Please excuse me for all the trouble.";
+		mes "抱歉给你添麻烦了。";
 		next;
 		mes "[保镖马丁]";
 		mes "非常抱歉。";
-		mes "There was nothing suspicious found of your belongings.";
-		mes "Let me return your bag.";
+		mes "你的行李没有发现可疑物品。";
+		mes "把包还给你。";
 		next;
 		mes "[保镖杰拉德]";
-		mes "Have you been going through it?";
+		mes "你们翻过了？";
 		next;
 		mes "[保镖马丁]";
-		mes "It doesn't hurt to be careful when there are a lot of passengers around here.";
-		mes "I don't want to experience such thing again.";
+		mes "这里人多，谨慎点没坏处。";
+		mes "我不想再经历那种事。";
 		next;
 		mes "[保镖杰拉德]";
-		mes "Ha...";
+		mes "哈……";
 		mes "非常抱歉。";
 		next;
 		mes "[保镖杰拉德]";
-		mes "If you don't mind, how about talking to the members of the Geoborg family in the Banquet Hall?";
+		mes "不介意的话，去宴会厅和格奥伯格家族的人谈谈如何？";
 		next;
 		mes "[保镖杰拉德]";
-		mes "She has been taking care of the state affairs alone. Not to mention the Royal Assembly...";
-		mes "She hasn't been able to sleep for days.";
+		mes "她一直独自处理国政，更别说王室会议了……";
+		mes "她已经好几天没睡。";
 		next;
 		mes "[保镖杰拉德]";
-		mes "Oh!";
-		mes "The queen's sister 'Scarlet Jaha' headed to the Banquet Hall a little while ago. You may be able to meet her there.";
+		mes "哦！";
+		mes "女王的妹妹‘斯卡蕾特·贾哈’刚才去了宴会厅，也许能在那里见到她。";
 		next;
 		mes "[保镖杰拉德]";
-		mes "She is not one of the members of the family, but she knows everything about the queen.";
+		mes "她不是家族成员，但对女王的事无所不知。";
 		erasequest 11401;// The Geoborgs
 		setquest 11402;// The Geoborgs
 		ep16_gaobs = 3;
 		mes "[保镖杰拉德]";
-		mes "Oh!";
-		mes "The queen's sister 'Scarlet Jaha' headed to the Banquet Hall a little while ago. You may be able to meet her there.";
+		mes "哦！";
+		mes "女王的妹妹‘斯卡蕾特·贾哈’刚才去了宴会厅，也许能在那里见到她。";
 		next;
 		mes "[保镖杰拉德]";
-		mes "She is not one of the members of the family, but she knows everything about the queen.";
+		mes "她不是家族成员，但对女王的事无所不知。";
 		close;
 	}
 	if (ep16_gaobs == 3) {
 		mes "[保镖杰拉德]";
-		mes "Oh!";
-		mes "The queen's sister 'Scarlet Jaha' headed to the Banquet Hall a little while ago. You may be able to meet her there.";
+		mes "哦！";
+		mes "女王的妹妹‘斯卡蕾特·贾哈’刚才去了宴会厅，也许能在那里见到她。";
 		next;
 		mes "[保镖杰拉德]";
-		mes "She is not one of the members of the family, but she knows everything about the queen.";
+		mes "她不是家族成员，但对女王的事无所不知。";
 		close;
 	}
 	if (ep16_gaobs > 3 && ep16_gaobs < 7) {
 		mes "[保镖杰拉德]";
-		mes "Scarlet is much older than the queen, but she doesn't look that old at all.";
+		mes "斯卡蕾特比女王大很多，但完全看不出来。";
 		next;
 		mes "[保镖杰拉德]";
-		mes "Of course, the queen is well along in years now as well...";
+		mes "当然，女王现在也上了年纪……";
 		close;
 	}
 	if (ep16_gaobs > 6 && ep16_gaobs <= 13) {
@@ -9300,7 +9300,7 @@ prt_cas_q,85,127,3	script	保镖#ep16_1_g	1_M_YOUNGKNIGHT,{
 		close;
 	}
 	mes "[保镖马丁]";
-	mes "Do you have any business left here?";
+	mes "还有事吗？";
 	close;
 }
 
@@ -9455,7 +9455,7 @@ prt_cas,73,244,5	script	斯凯林·萨哈#ep16_1	1_F_LIBRARYGIRL,{
 		next;
 		select("...");
 		mes "[斯凯林]";
-		mes "Oh!";
+		mes "哦！";
 		mes "Don't be startled.";
 		mes "It is a joke.";
 		mes "Hahaha.";
@@ -9464,19 +9464,19 @@ prt_cas,73,244,5	script	斯凯林·萨哈#ep16_1	1_F_LIBRARYGIRL,{
 		mes "[斯凯林]";
 		mes "As you know, the Geoborg family is the descendant of...";
 		next;
-		mes "[Lidion Geoborg]";
+		mes "[利迪翁 Geoborg]";
 		mes "Tristan I who have founded the kingdom!";
 		mes "Is there anyone who doesn't know the story in this kingdom?";
 		mes "Dear Lady Jaha.";
 		next;
 		mes "[斯凯林]";
 		mes "Oh, my!";
-		mes "Lidion Geoborg!";
+		mes "利迪翁 Geoborg!";
 		mes "Why are you out here in the Banquet Hall? You must not be feeling so well.";
 		mes "You should have been taking a rest in your manor!";
 		emotion ET_FRET;
 		next;
-		mes "[Lidion Geoborg]";
+		mes "[利迪翁 Geoborg]";
 		mes "I couldn't risk letting a lady of the Jaha family pretend to know about the Geoborg family. I couldn't just take a rest.";
 		erasequest 11402;// The Geoborgs
 		setquest 11403;// The Geoborgs
@@ -9486,12 +9486,12 @@ prt_cas,73,244,5	script	斯凯林·萨哈#ep16_1	1_F_LIBRARYGIRL,{
 	if (ep16_gaobs == 4) {
 		mes "[斯凯林]";
 		mes "Oh, my!";
-		mes "Lidion Geoborg!";
+		mes "利迪翁 Geoborg!";
 		mes "Why are you out here in the Banquet Hall? You must not be feeling so well.";
 		mes "You should have been taking a rest in your manor!";
 		emotion ET_FRET;
 		next;
-		mes "[Lidion Geoborg]";
+		mes "[利迪翁 Geoborg]";
 		mes "I couldn't risk letting a lady of the Jaha family pretend to know about the Geoborg family. I couldn't just take a rest.";
 		close;
 	}
@@ -9502,7 +9502,7 @@ prt_cas,73,244,5	script	斯凯林·萨哈#ep16_1	1_F_LIBRARYGIRL,{
 		emotion ET_FRET;
 		next;
 		mes "[斯凯林]";
-		mes "Oh!";
+		mes "哦！";
 		mes "Well... For that reason, the Geoborg family will retire to a quiet life for a while as soon as the Royal Assembly is over.";
 		next;
 		mes "[斯凯林]";
@@ -9545,7 +9545,7 @@ prt_cas,73,244,5	script	斯凯林·萨哈#ep16_1	1_F_LIBRARYGIRL,{
 			close;
 		}
 		mes "[斯凯林]";
-		mes "Oh!";
+		mes "哦！";
 		mes "Haven't you found him yet?";
 		mes "Should I ask Catherine?";
 		next;
@@ -9576,29 +9576,29 @@ prt_cas,73,244,5	script	斯凯林·萨哈#ep16_1	1_F_LIBRARYGIRL,{
 		next;
 		mes "[斯凯林]";
 		mes "If you have some time to spare, please tell me some fun stories from your adventure.";
-		mes "I am sick of listening to Lidion's nitpicking.";
+		mes "I am sick of listening to 利迪翁's nitpicking.";
 		close;
 	}
 }
 
-prt_cas,82,240,3	script	Lidion Geoborg#ep16_1	4_M_DOCTOR,{
+prt_cas,82,240,3	script	利迪翁 Geoborg#ep16_1	4_M_DOCTOR,{
 	if (ep16_gaobs == 4) {
-		mes "[Lidion Geoborg]";
+		mes "[利迪翁 Geoborg]";
 		mes "We, the Geoborg family, is one of the seven royal families, but we are the creme de la creme for producing the highest number of kings in the history.";
 		next;
-		mes "[Lidion Geoborg]";
+		mes "[利迪翁 Geoborg]";
 		mes "In fact, we are settled in Prontera, the center of the Rune-Midgarts.";
 		next;
-		mes "[Lidion Geoborg]";
+		mes "[利迪翁 Geoborg]";
 		mes "Despite the series of unfortunate events regarding the princes after the death of King Tristan III,";
 		next;
-		mes "[Lidion Geoborg]";
+		mes "[利迪翁 Geoborg]";
 		mes "Prince 恩斯特·格奥伯格 was elected as the most regnant candidate in the last Royal Assembly. It shows just influential the Geoborg family is.";
 		next;
 		mes "[斯凯林]";
 		mes "He has given up from the position.";
 		next;
-		mes "[Lidion Geoborg]";
+		mes "[利迪翁 Geoborg]";
 		mes "What?";
 		npctalk "What?";
 		next;
@@ -9606,15 +9606,15 @@ prt_cas,82,240,3	script	Lidion Geoborg#ep16_1	4_M_DOCTOR,{
 		mes "I said!";
 		mes "Prince Ernst gave up his position as the candidate to the throne.";
 		next;
-		mes "[Lidion Geoborg]";
+		mes "[利迪翁 Geoborg]";
 		mes "What a nonsense!";
 		next;
 		mes "[斯凯林]";
-		mes "Oh!";
+		mes "哦！";
 		mes "You didn't know!";
 		mes "You must have been separated from the outside world for too long!";
 		next;
-		mes "[Lidion Geoborg]";
+		mes "[利迪翁 Geoborg]";
 		mes "Arghhhh!";
 		mes "I won't let this punk... Ernst....!";
 		npctalk "Arghhhh!";
@@ -9623,7 +9623,7 @@ prt_cas,82,240,3	script	Lidion Geoborg#ep16_1	4_M_DOCTOR,{
 		mes "Punk?";
 		mes "Even if you are an elder of the family, he is still a prince. You should extend him every courtesy.";
 		next;
-		mes "[Lidion Geoborg]";
+		mes "[利迪翁 Geoborg]";
 		mes "Arghhhh!";
 		npctalk "Arghhhh!";
 		erasequest 11403;// The Geoborgs
@@ -9632,7 +9632,7 @@ prt_cas,82,240,3	script	Lidion Geoborg#ep16_1	4_M_DOCTOR,{
 		close;
 	}
 	if (ep16_gaobs >= 5 && ep16_gaobs <= 13) {
-		mes "[Lidion Geoborg]";
+		mes "[利迪翁 Geoborg]";
 		mes "Arghhhh!";
 		mes "I won't let this punk... Ernst....!";
 		npctalk "Arghhhh!";
@@ -9641,12 +9641,12 @@ prt_cas,82,240,3	script	Lidion Geoborg#ep16_1	4_M_DOCTOR,{
 		mes "Punk?";
 		mes "Even if you are an elder of the family, he is still a prince. You should extend him every courtesy.";
 		next;
-		mes "[Lidion Geoborg]";
+		mes "[利迪翁 Geoborg]";
 		mes "Arghhhh!";
 		npctalk "Arghhhh!";
 		close;
 	}
-	mes "[Lidion Geoborg]";
+	mes "[利迪翁 Geoborg]";
 	mes "Tut...";
 	mes "Letting anybody in like this... The dignity of the palace has fallen down to the ground.";
 	close;
