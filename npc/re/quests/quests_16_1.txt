@@ -5378,7 +5378,7 @@ prt_cas_q,21,83,3	script	弗里德里希·S·海涅#ep16_01	4_EP16_STOLZ,{
 		mes "I hope it works this time.";
 		next;
 		mes "[弗里德里希]";
-		mes "Please save the piece of Ymir Heart from 瓦尔基里.";
+		mes "请从瓦尔基里手中保住依美乐心脏碎片。";
 		setquest 7705;// Hope You Cannot Let Go
 		close3;
 	case 0:
@@ -14214,11 +14214,11 @@ prt_cas,161,168,5	script	Royal Guardian Knight#02	4_M_CRU,{
 	mes "You are a visitor to the Prontera Palace.";
 	mes "Do you need a guide?";
 	next;
-	switch( select( "瓦尔基里 Realm", "Royal Villa", "Banquet Hall" ) ) {
+	switch( select( "瓦尔基里领域", "王宫别馆", "宴会厅" ) ) {
 	case 1:
 		mes "[守护骑士]";
 		mes "You may move to the northern corridor from here.";
-		mes "There is the entrance to 瓦尔基里 Realm in the middle of the northern corridor.";
+		mes "北侧走廊中段有通往瓦尔基里领域的入口。";
 		close;
 	case 2:
 		mes "[守护骑士]";
