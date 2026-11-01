@@ -7589,54 +7589,54 @@ OnTouch:
 
 rebel_in,162,87,5	script	近卫队长拉西斯#2	4_M_REBELLION,{
 	if (checkweight(501,1) == 0 || (MaxWeight - Weight) < 1000) {
-		mes "- You have too many items in your inventory.";
-		mes "Please arrange your inventory and try again. -";
+		mes "- 携带道具过多。";
+		mes "请整理背包后再试。 -";
 		close;
 	}
 	disable_items;
 	if (terra_gloria_lady_part < 12) {
 		mes "[近卫队长拉西斯]";
-		mes "Quiet inside!!";
+		mes "里面安静点！！";
 		close;
 	}
 	if (terra_gloria_lady_part == 12) {
 		mes "[近卫队长拉西斯]";
-		mes "What's going on here?";
+		mes "这是怎么回事？";
 		next;
 		mes "[近卫队长拉西斯]";
-		mes "Preparation for the party?";
-		mes "She has never told me anything about party!";
+		mes "派对准备？";
+		mes "她从没跟我说过派对的事！";
 		next;
 		mes "[近卫队长拉西斯]";
-		mes "Oh! I remember she told me to bring something suspicious.";
+		mes "哦！我记得她让我带些可疑的东西。";
 		next;
 		mes "[近卫队长拉西斯]";
-		mes "High Class Tea for Dien, Old Letter for 里德什 and Very Shining Ring for 科特尼斯.";
+		mes "给狄恩的上等茗茶、给里德什的老旧信纸、给科特尼斯的光芒戒指。";
 		next;
 		mes "[近卫队长拉西斯]";
-		mes "At first sight, they don't look strange. But their locations are quite suspicious... They are in the northeastern corner of 艾因布罗克. I have no idea how we can get them in such a place...";
-		npctalk "Guard leader : It sounds dangerous...", "", bc_self;
+		mes "乍看没什么奇怪，但地点很可疑……在艾因布洛克东北角。真不知道那种地方怎么拿到。";
+		npctalk "近卫队长：听起来很危险……", "", bc_self;
 		next;
 		mes "[近卫队长拉西斯]";
-		mes "But... they told us to bring them. So we have to go and get them.";
-		npctalk "近卫队长拉西斯： An order is an order... I can't reject it.", "", bc_self;
+		mes "但……他们让我们带回来，只能去拿。";
+		npctalk "近卫队长拉西斯：命令就是命令……无法拒绝。", "", bc_self;
 		next;
 		mes "[近卫队长拉西斯]";
-		mes "If you're willing to go, tell me!";
-		mes "Of course, we will compensate you.";
+		mes "如果你愿意去，告诉我！";
+		mes "当然，我们会补偿你。";
 		completequest 11464;// You said the party is ready?
 		terra_gloria_lady_part = 13;
 		close;
 	}
 	mes "[近卫队长拉西斯]";
-	mes "You're here!";
-	mes "Then would you please have a look at the tasks given by Dien, 里德什 and 科特尼斯?";
+	mes "你来了！";
+	mes "那请看看狄恩、里德什和科特尼斯给的任务吧？";
 	next;
 	setarray .@quest_id[0], 11465, 11467, 11469;
 	setarray .@item_id[0], 25165, 25167, 25166;
 	setarray .@amount[0], 1, 1, 4;
 	while(true) {
-		setarray .@menu$[0], "Dien's High Class Tea", "里德什's Old Letter", "科特尼斯's Very Shining Ring", "Don't do it.";
+		setarray .@menu$[0], "狄恩的上等茗茶", "里德什的老旧信纸", "科特尼斯的光芒戒指", "不做。";
 		for ( .@i = 0; .@i < 3; ++.@i ) {
 			switch( checkquest(.@quest_id[.@i],HUNTING) ) {
 			case -1:
