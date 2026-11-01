@@ -5306,12 +5306,12 @@ dic_in01,165,104,0	script	弗雷德#13_3_in	454,{
 			mes "他们得等到其他皮欧姆或高尔顿回来吗？";
 			close;
 		}
-		else if (ep13_3_bra == 7) {
-			mes "[弗雷德]";
-			mes "原来他们的魔力之石用完了。";
-			mes "他们得等到其他皮欧姆或高尔顿回来吗？";
-			close;
-		}
+	else if (ep13_3_bra == 7) {
+		mes "[弗雷德]";
+		mes "原来他们的魔力之石用完了。";
+		mes "他们得等到其他皮欧姆或高尔顿回来吗？";
+		close;
+	}
 		else if (ep13_3_bra == 8) {
 			if (checkweight(1201,1) == 0) {
 				mes "[弗雷德]";
@@ -6069,17 +6069,12 @@ dic_in01,349,129,5	script	博伊#13_3	449,{
 			close;
 		}
 		else if (ep13_3_bra == 7) {
-			if (checkquest(11175,PLAYTIME) > 1) {
-				mes "[博伊]";
-				mes "我做到了！";
-				mes "因为很久没做手工活了，我有点紧张，不过我觉得自己做得不错。";
-				mes "请把这些带给他们。";
-				set ep13_3_bra, 8;
-				changequest 11175,11176;
-				close;
-			}
 			mes "[博伊]";
-			mes "我还在做，请再休息一会儿。";
+			mes "我做到了！";
+			mes "因为很久没做手工活了，我有点紧张，不过我觉得自己做得不错。";
+			mes "请把这些带给他们。";
+			set ep13_3_bra, 8;
+			changequest 11175,11176;
 			close;
 		}
 		mes "[博伊]";
