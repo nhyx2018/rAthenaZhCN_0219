@@ -4501,121 +4501,121 @@ OnTouch:
 
 prt_cas_q,14,184,5	script	伊森霍诺·沃尔特#ep16wal	4_M_1STPRIN1,{
 	if (checkweight(1304,3) == 0) {
-		mes "[Isenhonor Walther]";
-		mes "You seem to have a lot of luggage. Are you OK?";
-		mes "It looks a lot and large.";
+		mes "[伊森霍诺]";
+		mes "你行李好像很多，没事吗？";
+		mes "看起来又多又大。";
 		next;
-		mes "[Isenhonor Walther]";
-		mes "How about cutting down some?";
+		mes "[伊森霍诺]";
+		mes "要不要减少一些？";
 		close;
 	}
 	.@name$ = strcharinfo(0);
 	if (ep16_wal == 0) {
 		mes "[伊森霍诺]";
-		mes "You must be an adventurer. Thank you for visiting this gloomy place.";
+		mes "你一定是冒险者。谢谢你来到这阴沉的地方。";
 		next;
 		mes "[伊森霍诺]";
-		mes "The representative of our family is over there. I hope you have a good time then.";
+		mes "我们家族的代表在那边。希望你过得愉快。";
 		close;
 	}
 	if (ep16_wal == 1) {
 		mes "[" + .@name$ + "]";
-		mes "Hello?";
+		mes "你好？";
 		next;
 		mes "[伊森霍诺]";
-		mes "What are you doing here? The Banquet Hall is over there.";
+		mes "你在这里做什么？宴会厅在那边。";
 		next;
 		mes "[" + .@name$ + "]";
-		mes "I was sorry that I didn't get the time to talk to you then.";
+		mes "刚才没时间和你说话，很抱歉。";
 		next;
 		mes "[伊森霍诺]";
-		mes "What story? You mean the story of my brother being killed for his violent behavior? You seemed to hear it so eagerly. I hope you don't believe that bullshit.";
+		mes "什么话？我哥哥因暴力行为被杀那件事？你听得那么起劲。希望你别信那些鬼话。";
 		next;
 		mes "[" + .@name$ + "]";
-		mes "Oh, well...";
+		mes "哦，那个……";
 		next;
 		mes "[伊森霍诺]";
-		mes "I cannot believe that my brother has acted violently. Even if he did, there must have been a ^0000cdreason.^000000";
+		mes "我不信哥哥会施暴。就算有，也一定有^0000cd原因^000000。";
 		next;
 		mes "[伊森霍诺]";
-		mes "My brother, he must have done it for something. No one knows the truth, but people seem to believe the gossip.";
+		mes "哥哥一定是为了什么。没人知道真相，大家却相信流言。";
 		next;
 		mes "[" + .@name$ + "]";
-		mes "If you want to clear the name of your brother, you can investigate on your own.";
+		mes "想洗清你哥哥的名声，可以自己调查。";
 		next;
 		mes "[伊森霍诺]";
-		mes "I am trying. But ^0000cdthe elders of my family don't want me to dig out the dishonorable incident^000000.";
+		mes "我在试。但^0000cd家族长辈不想让我挖出这件不光彩的事^000000。";
 		next;
 		mes "[伊森霍诺]";
-		mes "Also, it is impossible to meet ^0000cdErnst Geoborg^000000.";
+		mes "Also, it is impossible to meet ^0000cd恩斯特·格奥伯格^000000.";
 		next;
 		mes "[" + .@name$ + "]";
-		mes "Wouldn't he meet you?";
+		mes "他也不见你吗？";
 		next;
 		mes "[伊森霍诺]";
-		mes "No. any access to him is blocked.";
+		mes "不，任何接触都被封锁了。";
 		next;
 		mes "[伊森霍诺]";
-		mes "The ^0000cdGuardian Knight^000000 and ^0000cdErnst Geoborg^000000 are the only people who know what has happened that day. However it is impossible to meet them. I don't know where to begin...";
+		mes "The ^0000cdGuardian Knight^000000 and ^0000cd恩斯特·格奥伯格^000000 are the only people who know what has happened that day. However it is impossible to meet them. I don't know where to begin...";
 		next;
 		mes "[" + .@name$ + "]";
-		mes "A Guardian Knight? Did your brother have a Guardian Knight?";
+		mes "守护骑士？你哥哥有守护骑士？";
 		next;
 		mes "[伊森霍诺]";
-		mes "Yes. Each member of the Walther family has a Guardian Knight. Our family is in overseas trade so that we often travel by ship.";
+		mes "对。沃尔特家族每人都有守护骑士。我们做海外贸易，常坐船。";
 		next;
 		mes "[伊森霍诺]";
-		mes "As you know, the sailors are not a gentle bunch and we tend to carry money with us so that we are often threatened. We all have to bring Guardian Knights with us.";
+		mes "水手可不好惹，我们又常带钱，经常受威胁，所以都得带守护骑士。";
 		next;
 		mes "[" + .@name$ + "]";
-		mes "Where is your Guardian Knight then, Isenhonor?";
+		mes "那你的守护骑士呢，伊森霍诺？";
 		next;
 		mes "[伊森霍诺]";
-		mes "I am sick of Guardian Knights since my brother's Guardian Knight abandoned my brother and ran away. I don't want to call them Guardian Knights.";
+		mes "哥哥的守护骑士抛弃他逃跑后，我就厌烦守护骑士了。不想再叫他们守护骑士。";
 		next;
 		mes "[伊森霍诺]";
-		mes "What should I call a Guardian Knight who betrays the master and runs away?";
+		mes "背叛主人逃跑的守护骑士，该叫什么？";
 		next;
 		mes "[" + .@name$ + "]";
-		mes "I think it would be a good idea to start from your Guardian Knight. Since they worked together as Guardian Knight, he must know something.";
+		mes "我觉得从你哥哥的守护骑士查起。他们一起行动，他一定知道些什么。";
 		next;
 		mes "[伊森霍诺]";
-		mes "Well, when I asked, he told me he knew nothing. If he did, he must have told me before I even asked.";
-		mes "They were pretty close and often exercised together.";
+		mes "我问过，他说什么都不知道。如果知道，早就会告诉我。";
+		mes "他们关系很好，经常一起训练。";
 		next;
 		mes "[伊森霍诺]";
-		mes "Oh, well, since they were so close, he could have tried to defend his friend.";
-		mes "Why didn't I think of that...";
+		mes "哦，既然这么亲近，他也许想为朋友辩护。";
+		mes "我怎么没想到……";
 		next;
 		mes "[" + .@name$ + "]";
-		mes "Let me talk to him now. If I hear anything, it would be a good thing. Even if I don't get to hear anything it would still count as a try.";
+		mes "我去和他谈谈。听到什么最好，听不到也算试过。";
 		next;
 		mes "[伊森霍诺]";
-		mes "Why would you go through such trouble?";
+		mes "你何必这么麻烦？";
 		next;
 		mes "[" + .@name$ + "]";
-		mes "Well, I have a hunch. As an adventurer, my instinct says that there must be something going on.";
+		mes "我有预感。作为冒险者，直觉告诉我其中有问题。";
 		next;
 		mes "[伊森霍诺]";
-		mes "Do all the adventurers count on their hunch like that? This could be dangerous. It is no matter to approach with a hunch.";
+		mes "冒险者都这么凭直觉？可能很危险。凭直觉接近可不行。";
 		next;
 		mes "[" + .@name$ + "]";
-		mes "That is why it is called an adventure. Adventurers where the adventures are.";
+		mes "所以才叫冒险。冒险者在有冒险的地方。";
 		next;
 		mes "[伊森霍诺]";
-		mes "I don't understand.";
+		mes "我不明白。";
 		next;
 		mes "[" + .@name$ + "]";
-		mes "You may call it a needless meddling out of curiosity. However, I cannot neglect anyone in distress.";
+		mes "你可以说我是好奇多管闲事。但我不能无视陷入困境的人。";
 		next;
 		mes "[伊森霍诺]";
-		mes "I appreciate your help though. I am desperate enough to accept your favor. However, I don't think you wouldn't hear much from the Guardian Knight though.";
+		mes "不过谢谢帮忙。我走投无路才接受。但那守护骑士大概也说不出什么。";
 		next;
 		mes "[伊森霍诺]";
-		mes "If you want to meet him anyway, go to ^0000cdour manor in the south of Alberta^000000. He must be there.";
+		mes "真想见他，就去^0000cd阿尔贝塔南边的我们宅邸^000000。他应该在那里。";
 		next;
 		mes "[" + .@name$ + "]";
-		mes "Well then.";
+		mes "那么。";
 		completequest 14469;// Look around the Walther Family
 		setquest 14470;// In Search of the Guardian Knight
 		ep16_wal = 2;
@@ -4629,23 +4629,23 @@ prt_cas_q,14,184,5	script	伊森霍诺·沃尔特#ep16wal	4_M_1STPRIN1,{
 	}
 	if (ep16_wal < 6) {
 		mes "[伊森霍诺]";
-		mes "Adventurer, how did your meeting with the Guardian Knight in Alberta go? Not that I expect too much...";
+		mes "冒险者，和阿尔贝塔守护骑士谈得怎么样？虽然我没抱太大希望……";
 		next;
 		mes "[伊森霍诺]";
-		mes "However, still, I have hoped to hear good news from you...";
+		mes "但还是希望听到好消息……";
 		close;
 	}
 	if (ep16_wal == 6) {
 		if (countitem(6929) < 1) {
 			mes "[伊森霍诺]";
-			mes "Adventurer, you are back. How did it go?";
+			mes "冒险者，你回来了。怎么样？";
 			next;
 			mes "[" + .@name$ + "]";
-			mes "Yes, I have something for you...";
-			mes "Oh? Where did it go?";
+			mes "是，我有东西给你……";
+			mes "哦？哪去了？";
 			next;
 			mes "[" + .@name$ + "]";
-			mes "I must have left it back. Let me go bring it for you.";
+			mes "我大概忘在那边了，去拿来。";
 			close;
 		}
 		mes "[伊森霍诺]";
@@ -5112,7 +5112,7 @@ veins,156,160,7	script	K#ep16wal	4_M_RASWORD,{
 	if (checkweight(1304,3) == 0) {
 		mes "[K]";
 		mes "You seem to carry a heavy burden.";
-		mes "How about cutting down some?";
+		mes "要不要减少一些？";
 		close;
 	}
 	if (ep16_wal < 5) {
@@ -5887,11 +5887,11 @@ OnInit:
 prt_cas_q,90,186,5	script	马克西米利安·雷根布尔格#ep16lug	4_EP16_MAX,{
 	if (checkweight(1301,1) == 0) {
 		mes "[马克西米利安]";
-		mes "You seem to have a lot of luggage. Are you OK?";
-		mes "It looks a lot and large.";
+		mes "你行李好像很多，没事吗？";
+		mes "看起来又多又大。";
 		next;
 		mes "[马克西米利安]";
-		mes "How about cutting down some?";
+		mes "要不要减少一些？";
 		close;
 	}
 	if (BaseLevel < 100) {
@@ -9593,7 +9593,7 @@ prt_cas,82,240,3	script	Lidion Geoborg#ep16_1	4_M_DOCTOR,{
 		mes "Despite the series of unfortunate events regarding the princes after the death of King Tristan III,";
 		next;
 		mes "[Lidion Geoborg]";
-		mes "Prince Ernst Geoborg was elected as the most regnant candidate in the last Royal Assembly. It shows just influential the Geoborg family is.";
+		mes "Prince 恩斯特·格奥伯格 was elected as the most regnant candidate in the last Royal Assembly. It shows just influential the Geoborg family is.";
 		next;
 		mes "[斯凯林]";
 		mes "He has given up from the position.";
@@ -10365,11 +10365,11 @@ prt_cas_q,95,9,5	script	尤尔根·维格纳#ep16wig	4_M_4THPRIN1,{
 	if (checkweight(1304,3) == 0) {
 		cutin "16jur_nor",0;
 		mes "[尤尔根]";
-		mes "You seem to have a lot of luggage. Are you OK?";
-		mes "It looks a lot and large.";
+		mes "你行李好像很多，没事吗？";
+		mes "看起来又多又大。";
 		next;
 		mes "[尤尔根]";
-		mes "How about cutting down some?";
+		mes "要不要减少一些？";
 		close3;
 	}
 	if (ep16_wig == 0) {
