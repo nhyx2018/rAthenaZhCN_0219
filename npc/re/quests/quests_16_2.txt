@@ -13987,26 +13987,26 @@ rebel_in,109,54,3	script	亚娜·列别杰娃#16.2rm	4_F_ANYA,{
 	if (lebedev_quest_16_2 == 8) {
 		mes "[亚娜]";
 		mes "......";
-		mes "We'll be scolded...";
-		mes "But we have no choice. It's our fault. Please report to our commander.";
-		npctalk "亚娜: What if she tells us to leave this unit...?", "", bc_self;
+		mes "我们会被骂……";
+		mes "但没办法，是我们的错。请向指挥官报告吧。";
+		npctalk "亚娜：如果她让我们离开部队怎么办……？", "", bc_self;
 		close;
 	}
 	if (lebedev_quest_16_2 == 9) {
 		mes "[亚娜]";
-		mes "Call from USU commander?";
-		mes "She will tell us that story...";
+		mes "USU指挥官叫我们？";
+		mes "她要讲那件事……";
 		next;
 		emotion ET_THINK;
 		mes "[亚娜]";
-		mes "We'll be kicked out...?";
+		mes "我们会被赶走吗……？";
 		next;
 		mes "[" + strcharinfo(0) + "]";
-		mes "I'm coming with you. I will defend you.";
+		mes "我和你们一起去，我会替你们说话。";
 		next;
 		mes "[伊利亚]";
-		mes "Thank you...";
-		mes "...I hope 亚娜 cheers up.";
+		mes "谢谢……";
+		mes "……希望亚娜振作起来。";
 		erasequest 16018;// Encourage instead of punishment
 		setquest 16019;// 埃琳娜·沃尔科娃's Solution
 		lebedev_quest_16_2 = 10;
@@ -14015,11 +14015,11 @@ rebel_in,109,54,3	script	亚娜·列别杰娃#16.2rm	4_F_ANYA,{
 	}
 	if (lebedev_quest_16_2 == 10) {
 		mes "[亚娜]";
-		mes "Yes, I'm coming!";
+		mes "好，我来了！";
 		next;
 		mes "[亚娜]";
-		mes "I'm scared what she's going to tell us... But we will still meet her.";
-		npctalk "伊利亚: It's all our fault anyway.", "伊利亚·列别杰夫#16.2rm", bc_self;
+		mes "我害怕她要说什么……但还是得去见她。";
+		npctalk "伊利亚：反正都是我们的错。", "伊利亚·列别杰夫#16.2rm", bc_self;
 		close;
 	}
 	.@genre$ = Sex ? "brother" : "sister";
@@ -14029,9 +14029,9 @@ rebel_in,109,54,3	script	亚娜·列别杰娃#16.2rm	4_F_ANYA,{
 	case 0:
 	case 1:
 		mes "[亚娜]";
-		mes "Oh, It's Older " + .@genre$ + " " + strcharinfo(0) + " !";
-		mes "By the way, we are quite sleepy now after wandering around all day long...";
-		mes "I wonder it's already time for us to be sleepy. Let's play together tomorrow...Zzz";
+		mes "哦，是" + .@genre$ + " " + strcharinfo(0) + "！";
+		mes "对了，我们逛了一整天，好困……";
+		mes "好像到睡觉时间了。明天再一起玩……Zzz";
 		close;
 	case 2:
 		erasequest 16020;// Daily babysitting
@@ -14045,123 +14045,123 @@ rebel_in,109,54,3	script	亚娜·列别杰娃#16.2rm	4_F_ANYA,{
 		continue;
 	if (.@i == .@size_quest_list) {
 		mes "[亚娜]";
-		mes "Oh, It's Older " + .@genre$ + " " + strcharinfo(0) + " !";
-		mes "Have you come to play with us? Or for another business?";
+		mes "哦，是" + .@genre$ + " " + strcharinfo(0) + "！";
+		mes "你是来陪我们玩的？还是有事？";
 		next;
-		if (select( "I have come to play with you!", "I have come for another business. But I wanted to say hello." ) == 2) {
+		if (select( "来陪你们玩！", "有事，但想先打个招呼。" ) == 2) {
 			mes "[亚娜]";
-			mes "I see... If you are busy, we shouldn't bother you.";
-			mes "But please don't go away without coming back to us.";
+			mes "这样啊……你忙的话，我们就不打扰了。";
+			mes "但别走了就不回来。";
 			close;
 		}
 		emotion ET_SMILE;
 		mes "[亚娜]";
-		mes "Wow! Really?";
-		mes "But Older " + .@genre$ + " the truth is that you are not playing with us. Older " + .@genre$ + " we are playing with you. Haha!";
-		mes "Hmm... What are we going to do?";
+		mes "哇！真的？";
+		mes "不过老实说，不是你在陪我们玩，是我们陪你玩。哈哈！";
+		mes "嗯……我们做什么好？";
 		next;
 		.@r = rand( getarraysize( .@quest_id ) );
 		switch( .@quest_id[.@r] ) {
 		case 16021:
 			mes "[亚娜]";
-			mes "Hmm.. Commander 埃琳娜 told us to make a hobby.";
-			mes "I guess reading is a fine hobby. Isn't it?";
+			mes "嗯……埃琳娜指挥官让我们培养爱好。";
+			mes "我觉得读书是不错的爱好，对吧？";
 			next;
 			mes "[亚娜]";
-			mes "Please borrow a book for us from the juvenile section of Prontera library.";
-			mes "The book's name is... ^0000CDIt's dizzy after being shaken 1,000 times^000000. Please borrow this for me.";
-			npctalk "伊利亚: They say it's such a famous book.", "伊利亚·列别杰夫#16.2rm", bc_self;
+			mes "请去普隆德拉图书馆儿童区帮我们借本书。";
+			mes "书名是……^0000CD《摇一千次会头晕》^000000。请帮我借这本。";
+			npctalk "伊利亚：听说这是本很有名的书。", "伊利亚·列别杰夫#16.2rm", bc_self;
 			setquest 16021;// Service: Book lending agent
 			next;
 			mes "[亚娜]";
-			mes "The juvenile corner of the Prontera library has designated rental system. You can ask the ^0000CDlibrarian in charge of juveniles^000000.";
+			mes "普隆德拉图书馆儿童区有专门的借阅制度，可以问^0000CD负责儿童的图书管理员^000000。";
 			close;
 		case 16022:
 			mes "[亚娜]";
-			mes "Hmm.. Commander 埃琳娜 told us to make a hobby.";
-			mes "I guess reading is a fine hobby. Isn't it?";
+			mes "嗯……埃琳娜指挥官让我们培养爱好。";
+			mes "我觉得读书是不错的爱好，对吧？";
 			next;
 			mes "[亚娜]";
-			mes "Please rent a book for us from the juvenile section of Prontera Library.";
-			mes "The book's name is... ^0000CD反叛者, the history of liberty^000000. Please borrow this book for me.";
-			npctalk "伊利亚: After looking at its name, I feel like I must read it.", "伊利亚·列别杰夫#16.2rm", bc_self;
+			mes "请去普隆德拉图书馆儿童区帮我们租本书。";
+			mes "书名是……^0000CD《反叛者，自由的历史》^000000。请帮我借这本。";
+			npctalk "伊利亚：看名字就觉得必须读。", "伊利亚·列别杰夫#16.2rm", bc_self;
 			setquest 16022;// Service: Book lending agent
 			next;
 			mes "[亚娜]";
-			mes "The juvenile corner of the Prontera library has designated rental system. You can ask the ^0000CDlibrarian in charge of juveniles^000000.";
+			mes "普隆德拉图书馆儿童区有专门的借阅制度，可以问^0000CD负责儿童的图书管理员^000000。";
 			close;
 		case 16023:
 			mes "[亚娜]";
-			mes "Hmm.. Commander 埃琳娜 told us to make a hobby.";
-			mes "I guess reading is a fine hobby. Isn't it?";
+			mes "嗯……埃琳娜指挥官让我们培养爱好。";
+			mes "我觉得读书是不错的爱好，对吧？";
 			next;
 			mes "[伊利亚]";
-			mes "I would be glad if borrow a book for me from the juvenile section of Prontera library.";
-			mes "The book's name is... ^0000CDNorgroad Horizon^000000.";
-			npctalk "伊利亚: It's about the great adventurer who explores Norgroad.", "伊利亚·列别杰夫#16.2rm", bc_self;
+			mes "能帮我从普隆德拉图书馆儿童区借本书就好了。";
+			mes "书名是……^0000CD《诺格罗德地平线》^000000。";
+			npctalk "伊利亚：讲的是探索诺格罗德的伟大冒险者。", "伊利亚·列别杰夫#16.2rm", bc_self;
 			setquest 16023;// Service: Book lending agent
 			next;
 			mes "[亚娜]";
-			mes "The juvenile corner of the Prontera library has designated rental system. You can ask the ^0000CDlibrarian in charge of juveniles^000000.";
+			mes "普隆德拉图书馆儿童区有专门的借阅制度，可以问^0000CD负责儿童的图书管理员^000000。";
 			close;
 		case 16025:
 			mes "[亚娜]";
-			mes "Today, we would like to go to 艾因贝克 mine to research explosives. But I guess it would be dangerous if only two of us go there.";
+			mes "今天想去艾因贝克矿山研究炸药，但只有我们两个去太危险。";
 			next;
 			mes "[" + strcharinfo(0) + "]";
-			mes "You mean, you're dangerous for the mine? Right?";
+			mes "你是说你们对矿山很危险？对吧？";
 			next;
 			mes "[伊利亚]";
-			mes "No! How can you say that? There are so many dangerous monsters in the mine!";
-			mes "And 亚娜 says she's curious to see if there are materials suitable for our research...";
+			mes "不！你怎么能这么说？矿山里有很多危险怪物！";
+			mes "亚娜说想看看有没有适合研究的材料……";
 			next;
 			mes "[伊利亚]";
-			mes "Therefore Older " + .@genre$ + " please implement a previous exploration for us.";
-			mes "Please defeat 30 Pitman in 艾因贝克 mine and bring us a Gun Powder.";
-			mes "Older " + .@genre$ + " I'm sure this is a piece of cake for you. We will count on you!";
-			npctalk "伊利亚: We will count on you!", "伊利亚·列别杰夫#16.2rm", bc_self;
+			mes "所以请" + .@genre$ + "先替我们探路。";
+			mes "请在艾因贝克矿山击败30只皮特曼，带回1个火药。";
+			mes "这对" + .@genre$ + "来说小菜一碟。拜托了！";
+			npctalk "伊利亚：拜托了！", "伊利亚·列别杰夫#16.2rm", bc_self;
 			setquest 16026;// Service: Exploring the Mine Dungeon
 			close;
 		case 16026:
 			mes "[亚娜]";
-			mes "Today, we would like to go to 艾因贝克 mine to research explosives. But I guess it would be dangerous if only two of us go there.";
+			mes "今天想去艾因贝克矿山研究炸药，但只有我们两个去太危险。";
 			next;
 			mes "[" + strcharinfo(0) + "]";
-			mes "You mean, you're dangerous for the mine? Right?";
+			mes "你是说你们对矿山很危险？对吧？";
 			next;
 			mes "[伊利亚]";
-			mes "No! How can you say that? There are so many dangerous monsters in the mine!";
-			mes "And 亚娜 says she's curious to see if there are materials suitable for our research...";
+			mes "不！你怎么能这么说？矿山里有很多危险怪物！";
+			mes "亚娜说想看看有没有适合研究的材料……";
 			next;
 			mes "[伊利亚]";
-			mes "So we'd like to request you to implement a previous exploration.";
-			mes "Please defeat 20 Venomous and 20 Noxious in 艾因贝克 mine and bring us one Explosive Powder.";
-			mes "I know this will be cumbersome. But we will count on you.";
-			npctalk "亚娜: Please!";
+			mes "所以想请你先去探路。";
+			mes "请在艾因贝克矿山击败20只毒液魔和20只诺克西斯，带回1个爆炸粉末。";
+			mes "我知道很麻烦，但拜托了。";
+			npctalk "亚娜：拜托！";
 			setquest 16026;// Service: Exploring the Mine Dungeon
 			close;
 		case 16027:
 			emotion ET_DELIGHT;
 			mes "[亚娜]";
-			mes "Older " + .@genre$ + ", Older " + .@genre$ + "! We made some cookies!";
-			mes "Of course we didn't do the entire cooking... Milo prepared ingredients and the cooking space.";
+			mes "哦，" + .@genre$ + "！我们做了饼干！";
+			mes "当然不是全我们做的……米洛准备了材料和厨房。";
 			next;
 			mes "[亚娜]";
-			mes "It tastes good! Certainly not better than those cooked by grandma 露西. But it's still wonderful.";
+			mes "味道不错！虽然不如露西奶奶做的，但还是很棒。";
 			next;
-			npctalk "I prefer the cookies of 露西, but I should start eating these.";
+			npctalk "我更喜欢露西的饼干，但先吃这些吧。";
 			mes "[亚娜]";
-			mes "Older " + .@genre$ + " Please have some! Older " + .@genre$ + " This is for you... And could you please these five bundles to people around you?";
+			mes "请尝尝！这是给你的……能帮我把这五包送给周围的人吗？";
 			next;
 			mes "[亚娜]";
-			mes "To Milo, Mason and Rachel.";
-			mes "And to commander Adler and commander 埃琳娜 as well, please.";
-			mes "Make sure you tell them we made these.";
+			mes "给米洛、梅森和瑞秋。";
+			mes "还有阿德勒指挥官和埃琳娜指挥官。";
+			mes "一定要告诉他们是我们做的。";
 			if (checkweight(25161,5) == 0) {
 				next;
 				mes "[亚娜]";
-				mes "You don't have enough space in your bag.";
-				mes "Please make some space. We don't want the cookies to get broken.";
+				mes "背包空间不足。";
+				mes "请腾出空间，别把饼干弄碎。";
 				close;
 			}
 			getitem 25161,5;// Handmade_cookie2
@@ -14222,7 +14222,7 @@ rebel_in,109,54,3	script	亚娜·列别杰娃#16.2rm	4_F_ANYA,{
 			mes "Oh! We're going to 艾因贝克 mine. Please implement a previous exploration for us.";
 			next;
 			mes "[伊利亚]";
-			mes "Please defeat 30 Pitman in 艾因贝克 mine and bring us a Gun Powder.";
+			mes "请在艾因贝克矿山击败30只皮特曼，带回1个火药。";
 			mes "We are about to experiment the degree of firepower in reference to the amount of Gun Powder!";
 			close;
 		}
@@ -14241,7 +14241,7 @@ rebel_in,109,54,3	script	亚娜·列别杰娃#16.2rm	4_F_ANYA,{
 			mes "Oh! We're going to 艾因贝克 mine. Please implement a previous exploration for us.";
 			next;
 			mes "[伊利亚]";
-			mes "Please defeat 20 Venomous and 20 Noxious in 艾因贝克 mine and bring us one Explosive Powder.";
+			mes "请在艾因贝克矿山击败20只毒液魔和20只诺克西斯，带回1个爆炸粉末。";
 			mes "亚娜 is researching whether we can apply the Explosive Powder to grenades.";
 			close;
 		}
