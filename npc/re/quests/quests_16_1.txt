@@ -9375,59 +9375,59 @@ prt_cas_q,93,129,3	script	女王#ep16_1	4_EP16_EGEO,{
 	}
 	if (ep16_gaobs > 5 && ep16_gaobs < 14) {
 		mes "[凯瑟琳·D·吉尔伯格女王]";
-		mes "You mean Prince Ernst?";
-		mes "Well?";
+		mes "你是说恩斯特王子？";
+		mes "怎么？";
 		cutin "ep16gao_1",2;
 		next;
 		mes "[凯瑟琳·D·吉尔伯格女王]";
-		mes "He comes here to say good morning and either helps me the work or does other things.";
+		mes "他每天来问安，然后帮我处理工作或做别的事。";
 		cutin "ep16gao_2",2;
 		next;
 		mes "[凯瑟琳·D·吉尔伯格女王]";
-		mes "Ever since the banquet started, he has been carrying his work to somewhere else.";
+		mes "宴会开始后，他就把工作带到别处去了。";
 		next;
 		mes "[凯瑟琳·D·吉尔伯格女王]";
-		mes "He could be somewhere in the Banquet Hall.";
+		mes "可能在宴会厅某处。";
 		close3;
 	}
 	if (ep16_gaobs == 14) {
 		mes "[凯瑟琳·D·吉尔伯格女王]";
-		mes "Haven't you met Prince Ernst yet?";
-		mes "He just stopped by and went out again...";
+		mes "还没见到恩斯特王子？";
+		mes "他刚来了一下又出去了……";
 		cutin "ep16gao_1",2;
 		next;
 		mes "[凯瑟琳·D·吉尔伯格女王]";
-		mes "I am worried about the representative of our family wandering around like this.";
+		mes "我们家族的代表这样到处晃，我很担心。";
 		next;
-		select("Tell her about what you have heard.");
+		select("告诉她你听到的事。");
 		mes "[凯瑟琳·D·吉尔伯格女王]";
-		mes "Oh...";
-		mes "Dear hero, please don't mind such stories much.";
+		mes "哦……";
+		mes "亲爱的英雄，请别太在意那些话。";
 		cutin "ep16gao_3",2;
 		next;
 		mes "[凯瑟琳·D·吉尔伯格女王]";
-		mes "It is a problem that we, the Geoborg family, should get over ourselves.";
+		mes "那是我们格奥伯格家族自己该克服的问题。";
 		close3;
 	}
 	switch( rand(1,3) ) {
 	case 1:
 		mes "[凯瑟琳·D·吉尔伯格女王]";
-		mes "The ink pad of the highest quality to be used in the royal debate room?";
-		mes "It is the clerk who writes down everything. Why are they buying luxury item that no one will ever use...";
+		mes "王室议事厅要用最高级的印泥？";
+		mes "记录的是书记官，为什么买没人会用的奢侈品……";
 		emotion ET_FRET;
 		cutin "ep16gao_3",2;
 		close3;
 	case 2:
 		mes "[凯瑟琳·D·吉尔伯格女王]";
-		mes "I have enough dresses to last my lifetime. Why do they keep making them...";
-		mes "A cutback!";
+		mes "我的礼服一辈子都穿不完，为什么还一直做……";
+		mes "削减预算！";
 		emotion ET_FRET;
 		cutin "ep16gao_1.bmp",2;
 		close3;
 	case 3:
 		mes "[凯瑟琳·D·吉尔伯格女王]";
-		mes "Hum.. Trade request from Marol Kingdom...";
-		mes "I should dispatch an envoy to take care of it soon...";
+		mes "嗯……马罗尔王国的贸易请求……";
+		mes "得尽快派使者处理……";
 		cutin "ep16gao_2.bmp",2;
 		close3;
 	}
@@ -9437,27 +9437,27 @@ prt_cas_q,93,129,3	script	女王#ep16_1	4_EP16_EGEO,{
 prt_cas,73,244,5	script	斯凯林·萨哈#ep16_1	1_F_LIBRARYGIRL,{
 	if (ep16_gaobs < 3) {
 		mes "[斯凯林]";
-		mes "Oh, what can I help you, dear adventurer?";
+		mes "哦，亲爱的冒险者，有什么能帮你？";
 		emotion ET_SMILE;
 		close;
 	}
 	if (ep16_gaobs == 3) {
 		mes "[斯凯林]";
-		mes "Oh, what can I help you, dear adventurer?";
+		mes "哦，亲爱的冒险者，有什么能帮你？";
 		emotion ET_SMILE;
 		next;
-		select("Ask about the Geoborg family.");
+		select("询问格奥伯格家族。");
 		mes "[斯凯林]";
-		mes "Heh!";
-		mes "Is there no one around here who is curious about me?";
-		mes "Everyone who ever talks to me talk about that!";
+		mes "嘿！";
+		mes "这里就没人对我好奇吗？";
+		mes "每个和我说话的人都问那个！";
 		emotion ET_FRET;
 		next;
-		select("...");
+		select("……");
 		mes "[斯凯林]";
 		mes "哦！";
-		mes "Don't be startled.";
-		mes "It is a joke.";
+		mes "别吓到。";
+		mes "开玩笑的。";
 		mes "Hahaha.";
 		emotion ET_SMILE;
 		next;
