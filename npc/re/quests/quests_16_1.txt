@@ -10,155 +10,158 @@
 //============================================================
 
 // Main Quest
-prontera,121,72,3	script	Royal Messenger#e16_pr	4_M_ZONDAOYAJI,5,5,{
+prontera,121,72,3	script	皇家使者#e16_pr	4_M_ZONDAOYAJI,5,5,{
 	if (checkweight(1301,5) == 0) {
-		mes "- You cannot proceed with the quest since you have too many items. -";
+		mes "- 你携带的物品太多，无法继续任务。 -";
 		close;
 	}
 	switch( ep16_royal ) {
 	case 0:
-		if (BaseLevel < 100 || (ep13_ryu < 100 && ep13_start < 100)) {// Access to the New World pre-req (Onward to the New World Quest or Cat Paw Agent Quest)
-			mes "[Royal Messenger]";
-			mes "Hello!";
-			mes "Now ^4d4dffthe palace is hosting a banquet for the returning heroes from Vacuum^000000.";
-			mes "Please tell me ^4d4dffwhere the heroes who have participated in the expedition are^000000 if you know any.";
+		if (BaseLevel < 100 || (ep13_ryu < 100 && ep13_start < 100)) {
+			mes "[皇家使者]";
+			mes "你好！";
+			mes "现在^4d4dff王宫正在为从灰烬真空归来的英雄举办宴会^000000。";
+			mes "如果你知道^4d4dff参加过远征的英雄在哪里^000000，请告诉我。";
 			next;
-			mes "[Royal Messenger]";
-			mes "I wonder where they are. They are so scattered that it is difficult to locate each one of them. Hahaha!";
+			mes "[皇家使者]";
+			mes "他们到底在哪里呢？大家分散得太广，很难一个个找到。哈哈哈！";
 			close;
 		}
-		mes "[Royal Messenger]";
-		mes "Oh, wait. You are...";
-		mes "" + strcharinfo(0) + ", right?";
-		mes "Let's see.";
+		mes "[皇家使者]";
+		mes "哦，等等。你是……";
+		mes "" + strcharinfo(0) + "，对吧？";
+		mes "让我看看。";
 		next;
-		mes "[Royal Messenger]";
-		mes "I am right. You look exactly the same as the montage from the guild. Hahahaha!";
-		mes "My eyes are doing what they are supposed to do now, I guess.";
+		mes "[皇家使者]";
+		mes "没错！你和公会里的照片一模一样。哈哈哈！";
+		mes "看来我的眼睛还没花。";
 		next;
-		mes "[Royal Messenger]";
-		mes "It is difficult to find the freelance adventurers who don't belong to the military.";
-		mes "It was very difficult to find you since you are not bound to anywhere.";
+		mes "[皇家使者]";
+		mes "要找到不属于军队的自由冒险者真不容易。";
+		mes "你居无定所，可让我找得好苦。";
 		next;
-		select("May I help you?");
-		mes "[Royal Messenger]";
-		mes "Help? Sure thing!";
-		mes "You know that there is a banquet taking place in celebration of subjugating Morocc.";
-		mes "An invitation has been issued for you. But it was just impossible to meet you.";
+		select("有什么需要我帮忙的吗？");
+		mes "[皇家使者]";
+		mes "帮忙？当然！";
+		mes "你知道王宫正在举办庆祝击败梦罗克的宴会吧。";
+		mes "你收到了邀请函，但一直找不到你。";
 		next;
-		mes "[Royal Messenger]";
-		mes "I am sure that all the Royal Messengers of the city must be looking for with the portrait of you.";
-		mes "Hey, since we don't have enough time, please take this invitation for you.";
+		mes "[皇家使者]";
+		mes "我相信城里所有皇家使者都拿着你的画像在找你。";
+		mes "时间不多，请收下这份邀请函。";
 		next;
-		mes "[Royal Messenger]";
-		mes "You must attend the banquet. Do you understand? ^4d4dffYou've been invited as a special guest^000000.";
+		mes "[皇家使者]";
+		mes "请务必出席宴会。明白吗？^4d4dff你被邀请为特别嘉宾^000000。";
 		next;
-		unittalk getcharid(3), "" + strcharinfo(0) + " : A special guest?", bc_self;
-		mes "[Royal Messenger]";
-		mes "The people in the palace will fill you up with the details.";
-		mes "I am just a messenger after all.";
-		mes "Although the banquet will be held for quite a while, don't take too much time to get there.";
+		unittalk getcharid(3), "" + strcharinfo(0) + "：特别嘉宾？", bc_self;
+		mes "[皇家使者]";
+		mes "王宫里的人会详细告诉你。";
+		mes "我毕竟只是个传信的。";
+		mes "宴会会持续一段时间，但别太晚到。";
 		next;
-		mes "[Royal Messenger]";
-		mes "Make sure to bring the invitation with you. Don't forget!";
-		mes "Why don't you go right now? ^4d4dffI can teleport you there now if you want^000000.";
+		mes "[皇家使者]";
+		mes "记得带好邀请函，别忘了！";
+		mes "不如现在就去？^4d4dff如果你愿意，我可以马上送你过去^000000。";
 		getitem 6933,1;// Banquet_Invitation
 		setquest 7681;// Invitation to Royal Banquet
 		ep16_royal = 1;
 		next;
-		if (select( "I'll go on my own.", "I'll go right away." ) == 1) {
-			mes "[Royal Messenger]";
-			mes "You can visit the Prontera Palace.";
-			mes "You may show the invitation to the guard at the gate or";
-			mes "A servant in charge of the banquet.";
+		if (select( "我自己过去。", "现在送我过去。" ) == 1) {
+			mes "[皇家使者]";
+			mes "你可以去普隆德拉王宫。";
+			mes "把邀请函给门口守卫看，";
+			mes "或者给负责宴会的侍从看。";
 			next;
-			mes "[Royal Messenger]";
-			mes "Since I have delivered the invitation to you, I shall wait for another one.";
-			mes "I hope you have a good time there, dear hero.";
+			mes "[皇家使者]";
+			mes "既然邀请函已经送到，我还要去找另一位。";
+			mes "祝你在宴会上玩得开心，英雄。";
 			close;
 		}
-		mes "[Royal Messenger]";
-		mes "Let me teleport you there right away.";
-		mes "When you arrive, there will be a servant for reception. You can show the invitation then.";
+		mes "[皇家使者]";
+		mes "我现在就送你过去。";
+		mes "到达后会有接待的侍从，出示邀请函即可。";
 		close2;
 		warp "prontera",156,327;
 		end;
 	case 1:
-		mes "[Royal Messenger]";
-		mes "Why are you still here?";
-		mes "What can I do for you?";
+		mes "[皇家使者]";
+		mes "你怎么还在这里？";
+		mes "有什么需要我帮忙的吗？";
 		next;
-		if (select( "Send me to the Banquet Hall.", "I have lost the invitation." ) == 2) {
+		if (select( "送我去宴会厅。", "我把邀请函弄丢了。" ) == 2) {
 			if (countitem(6933) < 1) {
-				mes "[Royal Messenger]";
-				mes "What a shame! What happened?";
-				mes "Well, since the message that you'll be there has already been sent there,";
-				mes "You may not really need the invitation anyways.";
+				mes "[皇家使者]";
+				mes "真遗憾！发生什么了？";
+				mes "既然你将会到场的消息已经传过去了，";
+				mes "邀请函可能也不需要了。";
 				next;
-				mes "[Royal Messenger]";
-				mes "When you go to the palace, the servant in charge will recognize you.";
-				mes "Don't worry, and you may go to the palace now.";
+				mes "[皇家使者]";
+				mes "你去王宫时，负责的侍从会认出你。";
+				mes "别担心，现在就去王宫吧。";
 				close;
 			}
-			mes "[Royal Messenger]";
-			mes "Eh? What is that you have in your pocket? It looks like an invitation to me.";
-			mes "I may have a tiny set of eyes, but I wouldn't miss it.";
+			mes "[皇家使者]";
+			mes "咦？你口袋里是什么？看起来像邀请函。";
+			mes "我眼睛虽然小，但不会看漏。";
 			next;
-			mes "[Royal Messenger]";
-			mes "Since you have found your invitation, let's get going! Hahahaha!";
+			mes "[皇家使者]";
+			mes "既然找到邀请函了，我们走吧！哈哈哈！";
 			close;
 		}
-		mes "[Royal Messenger]";
-		mes "Let me teleport you there right away.";
-		mes "When you arrive, there will be a servant for reception. You can show the invitation then.";
+		mes "[皇家使者]";
+		mes "我现在就送你过去。";
+		mes "到达后会有接待的侍从，出示邀请函即可。";
 		close2;
 		warp "prontera",156,327;
 		end;
 	default:
-		mes "[Royal Messenger]";
-		mes "I have heard that you have attended the banquet safely.";
-		mes "I need to find the others and send them to the banquet as well.";
+		mes "[皇家使者]";
+		mes "听说你已经平安出席宴会了。";
+		mes "我还要去找其他人，把他们也送去宴会。";
 		close2;
-		npctalk "I want to go home...", "", bc_self;
+		npctalk "我想回家……", "", bc_self;
 		end;
 	}
 
 OnTouch:
 	if (ep16_royal == 0 && BaseLevel > 99 && (ep13_ryu > 99 || ep13_start > 99))
-		npctalk "Wait! You must be... " + strcharinfo(0) + ". I have something to tell you!", "", bc_self;
+		npctalk "等等！你一定是……" + strcharinfo(0) + "。我有话要告诉你！", "", bc_self;
 	else
-		npctalk "I am looking for the hero who returned from the expedition...", "", bc_self;
+		npctalk "我正在寻找从远征归来的英雄……", "", bc_self;
+	end;
+OnInit:
+	questinfo(QTYPE_QUEST, QMARK_YELLOW, "ep16_royal == 0 && BaseLevel >= 100 && (ep13_ryu > 99 || ep13_start > 99)");
 	end;
 }
-rachel,119,131,3	duplicate(Royal Messenger#e16_pr)	Royal Messenger#e16_ra	4_M_ZONDAOYAJI,5,5
-aldebaran,159,113,3	duplicate(Royal Messenger#e16_pr)	Royal Messenger#e16_ald	4_M_ZONDAOYAJI,5,5
-alberta,119,59,3	duplicate(Royal Messenger#e16_pr)	Royal Messenger#e16_alb	4_M_ZONDAOYAJI,5,5
-veins,200,108,5	duplicate(Royal Messenger#e16_pr)	Royal Messenger#e16_ve	4_M_ZONDAOYAJI,5,5
-geffen,123,68,3	duplicate(Royal Messenger#e16_pr)	Royal Messenger#e16_ge	4_M_ZONDAOYAJI,5,5
-payon,168,65,3	duplicate(Royal Messenger#e16_pr)	Royal Messenger#e16_pa	4_M_ZONDAOYAJI,5,5
-morocc,152,97,5	duplicate(Royal Messenger#e16_pr)	Royal Messenger#e16_mo	4_M_ZONDAOYAJI,5,5
-yuno,162,132,3	duplicate(Royal Messenger#e16_pr)	Royal Messenger#e16_yu	4_M_ZONDAOYAJI,5,5
-lighthalzen,152,100,5	duplicate(Royal Messenger#e16_pr)	Royal Messenger#e16_lh	4_M_ZONDAOYAJI,5,5
+rachel,119,131,3	duplicate(皇家使者#e16_pr)	皇家使者#e16_ra	4_M_ZONDAOYAJI,5,5
+aldebaran,159,113,3	duplicate(皇家使者#e16_pr)	皇家使者#e16_ald	4_M_ZONDAOYAJI,5,5
+alberta,119,59,3	duplicate(皇家使者#e16_pr)	皇家使者#e16_alb	4_M_ZONDAOYAJI,5,5
+veins,200,108,5	duplicate(皇家使者#e16_pr)	皇家使者#e16_ve	4_M_ZONDAOYAJI,5,5
+geffen,123,68,3	duplicate(皇家使者#e16_pr)	皇家使者#e16_ge	4_M_ZONDAOYAJI,5,5
+payon,168,65,3	duplicate(皇家使者#e16_pr)	皇家使者#e16_pa	4_M_ZONDAOYAJI,5,5
+morocc,152,97,5	duplicate(皇家使者#e16_pr)	皇家使者#e16_mo	4_M_ZONDAOYAJI,5,5
+yuno,162,132,3	duplicate(皇家使者#e16_pr)	皇家使者#e16_yu	4_M_ZONDAOYAJI,5,5
+lighthalzen,152,100,5	duplicate(皇家使者#e16_pr)	皇家使者#e16_lh	4_M_ZONDAOYAJI,5,5
 
-prontera,150,331,4	script	Royal Guard#ep16_ect01	8W_SOLDIER,4,4,{
+prontera,150,331,4	script	皇家守卫#ep16_ect01	8W_SOLDIER,4,4,{
 	if (ep16_royal == 1) {
-		mes "[Guard]";
-		mes "Here comes the hero!";
-		mes "The Banquet Hall is inside the palace. You may follow the passage to get there.";
-		mes "Let me send a message for the Chamberlain to find you.";
+		mes "[守卫]";
+		mes "英雄来了！";
+		mes "宴会厅在王宫内部，沿着通道走就能到。";
+		mes "我会通知侍从长来接你。";
 		close;
 	}
-	npctalk "Welcome to the glorious Prontera Palace in the heart of Rune-Midgarts!", "Royal Guard#ep16_ect01", bc_self;// Royal Guard#ep16_ect01 only
+	npctalk "欢迎来到位于卢恩-米德加尔特中心的荣耀普隆德拉王宫！", "皇家守卫#ep16_ect01", bc_self;
 	end;
 
 OnTouch:
 	if (ep16_royal > 0) {
-		npctalk "Eternal glory to the hero of the Midgards!", "Royal Guard#ep16_ect01", bc_self;
-		npctalk "Eternal glory to the hero of the Midgards!", "Royal Guard#ep16_ect02", bc_self;
+		npctalk "米德加尔特英雄万岁！", "皇家守卫#ep16_ect01", bc_self;
+		npctalk "米德加尔特英雄万岁！", "皇家守卫#ep16_ect02", bc_self;
 	}
 	end;
 }
-prontera,161,331,4	duplicate(Royal Guard#ep16_ect01)	Royal Guard#ep16_ect02	8W_SOLDIER
+prontera,161,331,4	duplicate(皇家守卫#ep16_ect01)	皇家守卫#ep16_ect02	8W_SOLDIER
 
 prt_cas,215,146,0	script	#ep16_evt_01_on	HIDDEN_WARP_NPC,1,1,{
 	end;
