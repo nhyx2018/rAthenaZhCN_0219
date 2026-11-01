@@ -1837,7 +1837,7 @@ prt_lib,88,90,1	script	Room of Consciousness#evt_gate01	PORTAL,{
 	if (ep16_royal == 8) {
 		mes "You can move to where the ritual of blessing is held.";
 		next;
-		if (select( "Enter.", "Do not enter." ) == 2) {
+		if (select( "进入。", "不进入。" ) == 2) {
 			mes "[尼勒姆]";
 			mes "Hum... This gate is only activated temporarily so that it doesn't last long.";
 			close;
@@ -1849,8 +1849,8 @@ prt_lib,88,90,1	script	Room of Consciousness#evt_gate01	PORTAL,{
 		switch( instance_enter("Ritual of Blessing") ) {
 		case IE_OTHER:
 			mes "[尼勒姆]";
-			mes "Oh, well, the movement of magic seems uneasy.";
-			mes "Hum, shall we try again later?";
+			mes "哦，魔力流动好像不太稳定。";
+			mes "嗯，要不过会儿再试？";
 			close;
 		case IE_NOINSTANCE:
 			mes "[尼勒姆]";
@@ -1858,8 +1858,8 @@ prt_lib,88,90,1	script	Room of Consciousness#evt_gate01	PORTAL,{
 			mes "等等。";
 			close;
 		case IE_NOMEMBER:
-			mes "^4d4dffThis is an event proceeding through memorial.";
-			mes "Only the party leader can enter.^000000";
+			mes "^4d4dff这是通过纪念进行的活动。";
+			mes "只有队长才能进入。^000000";
 			close;
 		case IE_OK:
 			mapannounce "prt_lib", "Party member " + strcharinfo(0) + " of party's " + getpartyname( getcharid(1) ) + " enters 祝福仪式.", bc_map,0xFF99,FW_NORMAL,12;
@@ -2628,34 +2628,34 @@ prt_lib_q,91,85,3	script	尼勒姆#ep16_lib_q	4_M_JOB_WIZARD,{
 				close;
 			case 2:
 				mes "[尼勒姆]";
-				mes "Ha, since our work here is done, you shall go and report to Archduke Stoltze, right?";
-				mes "Ha, ha, this it for today-";
+				mes "哈，这里的事完成了，你该去向施托尔策大公报告了吧？";
+				mes "哈哈，今天就到这里——";
 				next;
 				mes "[尼勒姆]";
-				mes "Phew, it was difficult to maintain it. It was very difficult.";
+				mes "呼，维持这个真难，太难了。";
 				close;
 			}
 		case 0:
 		case 1:
 			mes "[尼勒姆]";
-			mes "Hum... I am afraid it would be difficult.";
-			mes "Even for a genius magician like yours truly, there is a certain limit. I am a human after all.";
+			mes "嗯……恐怕很难。";
+			mes "就算是我这种天才魔法师，也有极限。毕竟我是人类。";
 			next;
 			mes "[尼勒姆]";
-			mes "Connecting multiple dimensions is not as easy as it sounds.";
-			mes "Please cut me some slack!";
+			mes "连接多个次元可没听起来那么容易。";
+			mes "请体谅我一下！";
 			next;
 			mes "[尼勒姆]";
-			mes "Let me do this when the raging magical flow is stabilized-????";
+			mes "等狂暴的魔力流稳定下来再说吧——？？？？";
 			close;
 		case 2:
 			erasequest 7706;// 尼勒姆 Is Not Almighty
 			mes "[尼勒姆]";
-			mes "Hum... Shall I clear the surroundings a little?";
-			mes "Wait, I'll get ready.";
+			mes "嗯……要把周围清理一下吗？";
+			mes "等等，我准备一下。";
 			next;
 			mes "[尼勒姆]";
-			mes "It won't take long. Please wait.";
+			mes "不会太久，请稍等。";
 			close;
 		}
 	}
@@ -2663,45 +2663,45 @@ prt_lib_q,91,85,3	script	尼勒姆#ep16_lib_q	4_M_JOB_WIZARD,{
 
 prt_lib_q,88,90,1	script	Swaying Space#evt_gate02	4_ENERGY_RED,{
 	if (checkquest(7706,PLAYTIME) > 0 || checkquest(7705,HUNTING) > 1) {
-		mes "The uneasy flow of magical power can be sensed near the twisted space.";
-		mes "The gap connected by force disappeared after serving its duty.";
+		mes "扭曲空间附近能感觉到不安定的魔力流。";
+		mes "强行连接的缝隙完成使命后消失了。";
 		cloakonnpcself( "Swaying Space#evt_gate02" );
 		close;
 	}
 	if (getcharid(1) == 0 || is_party_leader() == false) {// solo instance
-		mes "^4d4dffOnly the party leader can enter MD [Room of Consciousness].^000000";
+		mes "^4d4dff只有队长才能进入副本[意识房间]。^000000";
 		close;
 	}
 	if ((ep16_royal == 19 && isbegin_quest(7700) == 1) || (ep16_royal > 19 && (checkquest(7705,HUNTING) == 0 || checkquest(7705,HUNTING) == 1))) {
-		mes "You can move to the place where the piece of Ymir Heart was in the past.";
+		mes "可以前往依美乐心脏碎片过去所在的地方。";
 		next;
-		if (select( "Enter.", "Do not enter." ) == 2) {
+		if (select( "进入。", "不进入。" ) == 2) {
 			mes "[尼勒姆]";
-			mes "Hum, I have just torn and connected these spaces by force.";
-			mes "Such thing is possible since I am a genius!";
+			mes "嗯，我刚把空间强行撕开连接起来。";
+			mes "因为我是天才，所以做得到！";
 			close;
 		}
 		if (getcharid(1) == 0 || is_party_leader() == false) {
-			mes "^4d4dffOnly the party leader can enter MD [Room of Consciousness].^000000";
+			mes "^4d4dff只有队长才能进入副本[意识房间]。^000000";
 			close;
 		}
 		switch( instance_enter("Room of Consciousness") ) {
 		case IE_OTHER:
 			mes "[尼勒姆]";
-			mes "Oh, well, the movement of magic seems uneasy.";
-			mes "Hum, shall we try again later?";
+			mes "哦，魔力流动好像不太稳定。";
+			mes "嗯，要不过会儿再试？";
 			close;
 		case IE_NOINSTANCE:
 			mes "[尼勒姆]";
-			mes "Hum, is it too difficult to connect it by force?";
+			mes "嗯，强行连接太难了吗？";
 			mes "等等。";
 			close;
 		case IE_NOMEMBER:
-			mes "^4d4dffThis is an event proceeding through memorial.";
-			mes "Only the party leader can enter.^000000";
+			mes "^4d4dff这是通过纪念进行的活动。";
+			mes "只有队长才能进入。^000000";
 			close;
 		case IE_OK:
-			mapannounce strnpcinfo(4), "Party member " + strcharinfo(0) + " of party's " + getpartyname( getcharid(1) ) + " enters Room of Consciousness.", bc_map,0xFF99,FW_NORMAL,12;
+			mapannounce strnpcinfo(4), "队伍 " + getpartyname( getcharid(1) ) + " 的成员 " + strcharinfo(0) + " 进入了意识房间。", bc_map,0xFF99,FW_NORMAL,12;
 			//warp "1@mir",101,10;
 			end;
 		}
@@ -13932,7 +13932,7 @@ prt_cas,218,182,3	script	Royal Guardian Knight#01	4_M_CRU,{
 	npctalk "Would you attend the Banquet?", "", bc_self;
 	mes "Would you enter the Banquet Hall?";
 	next;
-	if (select( "Enter.", "Do not enter." ) == 2) {
+	if (select( "进入。", "不进入。" ) == 2) {
 		mes "[Royal Guardian Knight]";
 		mes "The Banquet Hall will be open at all times. Please honor the banquet with your presence.";
 		close;
