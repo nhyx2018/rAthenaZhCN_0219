@@ -4771,44 +4771,44 @@ rebel_in,70,78,3	script	埃琳娜·沃尔科娃#16.2rm	4_F_ELENA,{
 			next;
 			cutin "162elena_01.bmp",2;
 			mes "[USU指挥官埃琳娜]";
-			mes "Don't make me say it twice. I told you I was responsible for what happened.";
+			mes "别让我说第二遍。我说了，这事我负责。";
 			next;
 			cutin "",255;
 			mes "[伊利亚]";
-			mes "Oh... Thank you so much!";
-			mes "And... Sorry.";
-			npctalk "伊利亚: I'm sorry... Commander 沃尔科娃...", "伊利亚·列别杰夫#16.2rms", bc_self;
+			mes "哦……太感谢了！";
+			mes "还有……对不起。";
+			npctalk "伊利亚：对不起……沃尔科娃指挥官……", "伊利亚·列别杰夫#16.2rms", bc_self;
 			next;
 			mes "[亚娜]";
-			mes "Thank you, commander...!";
-			npctalk "亚娜: I am sorry...", "亚娜·列别杰娃#16.2rms", bc_self;
+			mes "谢谢指挥官……！";
+			npctalk "亚娜：对不起……", "亚娜·列别杰娃#16.2rms", bc_self;
 			next;
 			cutin "162elena_02.bmp",2;
 			mes "[USU指挥官埃琳娜]";
-			mes "That's all about it. You can go back now. There's something I'd like to discuss with the adventurer.";
-			mes "And if you need anything, talk to me any time.";
+			mes "就这样。你们先回去吧，我和冒险者有话要说。";
+			mes "有需要随时来找我。";
 			next;
 			cutin "",255;
 			mes "[列别杰夫 twins]";
-			mes "Yes!";
+			mes "是！";
 			next;
 			cloakonnpcself( "伊利亚·列别杰夫#16.2rms" );
 			cloakonnpcself( "亚娜·列别杰娃#16.2rms" );
 			cutin "162elena_01.bmp",2;
 			mes "[USU指挥官埃琳娜]";
 			mes "呼……";
-			mes "Great job, " + strcharinfo(0) + ".";
-			mes "Thanks to your support and concern, we managed to do this.";
+			mes "干得好，" + strcharinfo(0) + "。";
+			mes "多亏你的支持和关心，我们才能解决。";
 			next;
 			mes "[USU指挥官埃琳娜]";
-			mes "Ha... I told them to do what they want. And they will wonder what to do for a while.";
-			mes "For those guys to do what they want, they'll need your help again.";
-			mes "Please help them at that time.";
+			mes "哈……我让他们做想做的事，他们大概会迷茫一阵。";
+			mes "他们想做自己的事时，还会需要你帮忙。";
+			mes "到时候请帮帮他们。";
 			next;
 			cutin "162elena_02.bmp",2;
 			mes "[USU指挥官埃琳娜]";
-			mes "......Thanks.";
-			mes "I will count on you in the future.";
+			mes "……谢谢。";
+			mes "以后也拜托你了。";
 			completequest 16019;// 埃琳娜·沃尔科娃's Solution
 			getexp 200000,200000;
 			getitem 25155,10;// Swz_Honor_Token
@@ -4817,13 +4817,13 @@ rebel_in,70,78,3	script	埃琳娜·沃尔科娃#16.2rm	4_F_ELENA,{
 			close3;
 		}
 		mes "[USU指挥官埃琳娜]";
-		mes "Are you taking care of them well?";
-		mes "Wow, I am relieved that they have a babysitter now.";
+		mes "你把他们照顾得好吗？";
+		mes "哇，现在有保姆照顾他们，我放心了。";
 		next;
 		cutin "162elena_02.bmp",2;
 		mes "[USU指挥官埃琳娜]";
-		mes "Haha! Just kidding. Thank you for your support. You're so reliable.";
-		mes "Take care of the guys please.";
+		mes "哈哈！开玩笑的。谢谢你的支持，你真可靠。";
+		mes "请照顾好他们。";
 		close3;
 	}
 	end;
@@ -4841,23 +4841,23 @@ OnInit:
 	end;
 }
 
-rebel_in,177,30,3	script	Sorita Doritas#16.2rm	4_M_GUNSLINGER3,{
-	mes "[Tough Guy Sorita]";
-	mes "What is it now?";
+rebel_in,177,30,3	script	索丽塔·多里塔斯#16.2rm	4_M_GUNSLINGER3,{
+	mes "[硬汉索丽塔]";
+	mes "又怎么了？";
 	next;
-	if (select( "I want to go out.", "Nothing." ) == 2) {
-		mes "[Tough Guy Sorita]";
-		mes "Do not talk to me when you have nothing to say.";
+	if (select( "我想出去。", "没什么。" ) == 2) {
+		mes "[硬汉索丽塔]";
+		mes "没什么事就别跟我说话。";
 		close;
 	}
-	mes "[Tough Guy Sorita]";
-	mes "What are you talking about? So you're telling me you would like to run away without fighting? Aren't you?";
+	mes "[硬汉索丽塔]";
+	mes "你在说什么？你是想不战而逃？";
 	next;
-	mes "[Tough Guy Sorita]";
-	mes "You must be kidding. What kind of nonsense is this! Why did you come here in the first place and annoy me?";
+	mes "[硬汉索丽塔]";
+	mes "开什么玩笑！胡说八道什么！你一开始为什么要来烦我？";
 	next;
 	emotion ET_FRET;
-	mes "[Tough Guy Sorita]";
+	mes "[硬汉索丽塔]";
 	mes "该死，指挥官给我这种没用的活，我已经够烦了。你还来添乱。滚出去！";
 	close2;
 	warp "rebel_in",68,76;
@@ -7387,7 +7387,7 @@ OnTouch:
 		next;
 		mes "[狄恩]";
 		mes "Oh! Right!";
-		mes "Yes!";
+		mes "是！";
 		cutin "ep162_dn01.bmp",2;
 		next;
 		mes "[狄恩]";
