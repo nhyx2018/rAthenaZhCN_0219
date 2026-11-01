@@ -2263,6 +2263,8 @@ mid_camp,261,284,4	script	教官#ep13bs	405,{
 		mes "你需要和其他人共用军营，";
 		mes "所以记得在那边";
 		mes "和他们聊聊。<NAVI>[迭戈]<INFO>mid_camp,266,263,0,101,0</INFO></NAVI>";
+		if (ep13_newbs == 5)
+			setquest 11087;
 		close;
 	}
 	if (ep13_newbs == 12) {
