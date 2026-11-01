@@ -206,25 +206,25 @@ prt_cas_q,21,39,3	script	尼希尔·M·海涅#ep162_01	4_EP16_NIHIL,{
 		cloakoffnpcself( "克鲁斯#ep162_03" );
 		next;
 		cutin "ep16_crux_findel01.bmp",0;
-		mes "[Crux]";
+		mes "[克鲁斯]";
 		mes "Sorry I'm late.";
 		mes "I found out a lot about Bruno.";
 		npctalk "This is the report.", "克鲁斯#ep162_03", bc_self;
 		next;
-		mes "[Crux]";
+		mes "[克鲁斯]";
 		mes "During the extradition procedure, I had to receive a little help from the Schwaltzvalt government.";
 		next;
-		mes "[Crux]";
+		mes "[克鲁斯]";
 		mes "It was due to my position, and I am not a free adventurer ... Lady Skia handled it quite well for me ...";
 		next;
-		mes "[Crux]";
+		mes "[克鲁斯]";
 		mes "There was an unexpected bonus.";
 		mes "I managed to get detailed data about the man and got a confession without making much fuss.";
 		next;
-		mes "[Crux]";
+		mes "[克鲁斯]";
 		mes "I think it was possible because we convinced both sides that we would guarantee their security.";
 		next;
-		mes "[Crux]";
+		mes "[克鲁斯]";
 		mes "I passed some of the unimportant details of the man's confession to the Schwartz government. Also, I handed Bruno to Schwartz.";
 		next;
 		cutin "ep16_spica_nerius05.bmp",1;
@@ -306,7 +306,7 @@ prt_cas_q,21,39,3	script	尼希尔·M·海涅#ep162_01	4_EP16_NIHIL,{
 		mes "Your job is to wait until Miss Spica completes her task and bring her back safely.";
 		next;
 		cutin "ep16_crux_findel01.bmp",0;
-		mes "[Crux]";
+		mes "[克鲁斯]";
 		mes "... I'm counting on you for Miss Spica.";
 		mes "Then I will go to Yuno now.";
 		npctalk "Go ahead. Request a meeting along with Skia in advance.", "斯皮卡·内里乌斯#ep162_01", bc_self;
@@ -625,7 +625,7 @@ prt_cas_q,18,37,5	script	斯琪亚·内里乌斯#ep162_01	4_EP16_SKIA,{
 		next;
 		mes "[Kronecker]";
 		mes "Then I will let you young people enjoy the conversation.";
-		mes "See you later.";
+		mes "待会儿见。";
 		next;
 		cutin "ep16_spica_nerius01.bmp",1;
 		mes "[斯皮卡]";
@@ -678,140 +678,140 @@ OnInit:
 
 
 // Lighthalzen airport
-lhz_airport,187,40,6	duplicate(dummy_cloaked_npc)	Skia#ep162_03	4_EP16_SKIA
+lhz_airport,187,40,6	duplicate(dummy_cloaked_npc)	斯琪亚#ep162_03	4_EP16_SKIA
 
 lhz_airport,189,39,3	script	克鲁斯#ep162_01	4_EP16_CRUX,{
 	if (terra_gloria_main < 3) {
 		cutin "ep16_crux_findel03.bmp",1;
-		mes "[Crux]";
-		mes "Oh, hello.";
-		mes "Nice to meet you here.";
-		mes "Me? I am just doing the task the Lady gave me.";
+		mes "[克鲁斯]";
+		mes "哦，你好。";
+		mes "很高兴在这里见到你。";
+		mes "我？我只是在执行小姐交给我的任务。";
 		sleep2 300;
 		cutin "ep16_crux_findel02.bmp",1;
 		close2;
 		cutin "",255;
-		npctalk "I have to finish quickly and go back ...", "", bc_self;
+		npctalk "得快点完成回去……", "", bc_self;
 		end;
 	}
 	if (terra_gloria_main == 3) {
 		cutin "ep16_crux_findel01.bmp",2;
-		mes "[Crux]";
-		mes "Ah, have you arrived?";
-		mes "Have you come alone?";
-		mes "I heard Skia was coming too ...";
+		mes "[克鲁斯]";
+		mes "啊，你到了？";
+		mes "你一个人来的吗？";
+		mes "我听说斯琪亚也会来……";
 		next;
-		cloakoffnpcself( "Skia#ep162_03" );
-		npctalk "I'm here!", "Skia#ep162_03", bc_self;
-		mes "[Crux]";
-		mes "Oh! You've arrived.";
-		mes "The Prince of the Heine family ordered me, so I came to Lighthalzen. Do you think that man will show up?";
+		cloakoffnpcself( "斯琪亚#ep162_03" );
+		npctalk "我来了！", "斯琪亚#ep162_03", bc_self;
+		mes "[克鲁斯]";
+		mes "哦！你来了。";
+		mes "海尔内家族的公子命令我来里希塔乐镇。你觉得那个人会出现吗？";
 		cutin "ep16_crux_findel03.bmp",2;
 		next;
 		cutin "ep16_skia_nerius01.bmp",0;
 		mes "[斯琪亚]";
-		mes "I think he will.";
-		mes "That man who used to be a chamberlain ... Didn't you write on the report that he was trying to contact someone?";
+		mes "我觉得会。";
+		mes "那个曾经当侍从长的男人……你不是在报告里写他正试图联系某人吗？";
 		next;
-		mes "[Crux]";
-		mes "Yes. I did.";
-		mes "I thought he was seeking the person behind the chamberlain.";
-		mes "He was also asking for more payment.";
+		mes "[克鲁斯]";
+		mes "是的，我写了。";
+		mes "我认为他是在找侍从长背后的人。";
+		mes "他还在要求更多报酬。";
 		cutin "ep16_crux_findel01.bmp",2;
 		next;
 		cutin "ep16_skia_nerius01.bmp",0;
 		mes "[斯琪亚]";
-		mes "According to Nihil, the person behind the chamberlain is likely to be in Lighthalzen.";
-		mes "Here or Einbroch. But Nihil said those guys would probably hate a city full of smoke.";
+		mes "据尼希尔说，侍从长背后的人很可能在里希塔乐镇。";
+		mes "这里或艾因布罗克。但尼希尔说那些人大概讨厌烟雾弥漫的城市。";
 		next;
-		mes "[Crux]";
-		mes "Hmm. Really?";
-		mes "Then the person behind him may be in a high position or have authority. Or he/she might be rich.";
+		mes "[克鲁斯]";
+		mes "嗯，真的吗？";
+		mes "那他背后的人可能地位很高、有权势，或者很有钱。";
 		cutin "ep16_crux_findel01.bmp",2;
 		next;
 		cutin "ep16_skia_nerius01.bmp",0;
 		mes "[斯琪亚]";
-		mes "Umm. Anyway, what we have to do is find that guy here in Lighthalzen.";
-		mes "And what do we know about his features and clothes?";
+		mes "嗯。总之，我们要在里希塔乐镇找到那个人。";
+		mes "我们知道他的外貌和衣着吗？";
 		next;
-		mes "[Crux]";
-		mes "A man with a neat appearance, with light brown hair down to his shoulders.";
-		mes "His name is Bruno ... Since it's such a common name, it may be an alias.";
+		mes "[克鲁斯]";
+		mes "一个外表整洁、浅棕色头发垂到肩膀的男人。";
+		mes "他叫布鲁诺……这名字太常见，可能是化名。";
 		cutin "ep16_crux_findel01.bmp",2;
 		next;
-		mes "[Crux]";
-		mes "I will investigate southern Lighthalzen, and the lady will investigate nearby the department store and hotel.";
-		mes "Adventurer, please search ^4d4dffthe north and northeast area^000000.";
+		mes "[克鲁斯]";
+		mes "我调查里希塔乐镇南部，小姐调查百货商店和旅馆附近。";
+		mes "冒险者，请搜索^4d4dff北部和东北部地区^000000。";
 		next;
-		mes "[Crux]";
-		mes "Once you find anything, ^4d4dffplease meet in front of the central department store and we'll share information^000000.";
-		mes "Now let us move quickly.";
+		mes "[克鲁斯]";
+		mes "一旦发现线索，^4d4dff请到中央百货商店前集合，交换情报^000000。";
+		mes "现在我们快行动吧。";
 		next;
 		cutin "ep16_skia_nerius01.bmp",0;
 		mes "[斯琪亚]";
-		mes "Oh, yes.";
-		mes "Crux ... You are a great actor.";
-		mes "See you later.";
-		mes "You too, hero!";
+		mes "哦，好。";
+		mes "克鲁斯……你真是个很棒的演员。";
+		mes "待会儿见。";
+		mes "你也是，英雄！";
 		erasequest 7731;// Secret Action
 		setquest 7732;// Searching the suspect
 		terra_gloria_main = 4;
 		close2;
-		cloakonnpcself( "Skia#ep162_03" );
+		cloakonnpcself( "斯琪亚#ep162_03" );
 		cutin "",255;
 		end;
 	}
 	if (terra_gloria_main == 4) {
-		mes "[Crux]";
-		mes "I will investigate southern Lighthalzen, including the airport.";
-		mes "Adventurer, please take care of the north and northeast areas.";
+		mes "[克鲁斯]";
+		mes "我调查里希塔乐镇南部，包括机场。";
+		mes "冒险者，北部和东北部就交给你了。";
 		cutin "ep16_crux_findel01.bmp",1;
 		next;
-		mes "[Crux]";
-		mes "Once you find anything, ^4d4dffplease meet in front of the central department store and we'll share information^000000.";
+		mes "[克鲁斯]";
+		mes "一旦发现线索，^4d4dff请到中央百货商店前集合，交换情报^000000。";
 		close3;
 	}
 	if (terra_gloria_main == 5) {
-		mes "[Crux]";
-		mes "Really? He headed to the slum?";
-		mes "We are in trouble.";
-		mes "I will follow you with the lady by any means.";
-		mes "Adventurer, please go there first.";
+		mes "[克鲁斯]";
+		mes "真的吗？他去了贫民窟？";
+		mes "这下麻烦了。";
+		mes "我会和小姐想办法跟过去。";
+		mes "冒险者，请你先过去。";
 		cutin "ep16_crux_findel03.bmp",1;
 		close3;
 	}
 	if (terra_gloria_main == 6) {
 		cutin "ep16_crux_findel01.bmp",1;
-		mes "[Crux]";
-		mes "You mean ... Bruno?";
-		mes "It will be difficult to use the airship. So we are moving separately.";
+		mes "[克鲁斯]";
+		mes "你说……布鲁诺？";
+		mes "使用飞空艇会很困难，所以我们分开行动。";
 		next;
-		mes "[Crux]";
-		mes "Don't worry about me, I will see you again in the palace.";
-		mes "Please give my regards to Lady Spica.";
+		mes "[克鲁斯]";
+		mes "不用担心我，我们会在王宫再见的。";
+		mes "请代我向斯皮卡小姐问好。";
 		close3;
 	}
 	if (terra_gloria_main == 7) {
 		cutin "ep16_crux_findel03.bmp",1;
-		mes "[Crux]";
-		mes "Don't you have to go to Yuno?";
+		mes "[克鲁斯]";
+		mes "你不是要去朱诺吗？";
 		close3;
 	}
 	if (terra_gloria_main == 8) {
 		cutin "ep16_crux_findel01.bmp",1;
-		mes "[Crux]";
-		mes "I have an appointment in the hotel in Lighthalzen.";
-		mes "Let's go.";
+		mes "[克鲁斯]";
+		mes "我在里希塔乐镇的旅馆有个约。";
+		mes "走吧。";
 		close3;
 	}
 	cutin "ep16_crux_findel01.bmp",1;
-	mes "[Crux]";
-	mes "I don't like leaving you like this for a long time ...";
-	mes "... I have no other choice.";
+	mes "[克鲁斯]";
+	mes "我不喜欢让你这样长时间离开……";
+	mes "……但我别无选择。";
 	next;
 	cutin "ep16_crux_findel02.bmp",1;
-	mes "[Crux]";
-	mes "This is what you want.";
+	mes "[克鲁斯]";
+	mes "这是你要的东西。";
 	close3;
 
 OnInit:
@@ -820,7 +820,7 @@ OnInit:
 }
 
 // Lighthalzen
-lighthalzen,202,167,5	script	Skia#ep162_n	4_EP16_SKIA,{
+lighthalzen,202,167,5	script	斯琪亚#ep162_n	4_EP16_SKIA,{
 	if (terra_gloria_main < 4) {
 		npctalk "Hmm~ Where on earth is he ...", "", bc_self;
 		end;
@@ -916,7 +916,7 @@ OnTouch:
 lighthalzen,307,265,5	duplicate(dummy_cloaked_npc)	Suspicious mercenary#ep	3454
 lighthalzen,305,264,6	duplicate(dummy_cloaked_npc)	克鲁斯#ep162_02	4_EP16_CRUX
 
-lighthalzen,306,267,5	script	Skia#ep162_04	4_EP16_SKIA,{
+lighthalzen,306,267,5	script	斯琪亚#ep162_04	4_EP16_SKIA,{
 	if (terra_gloria_main == 6) {
 		cutin "ep16_skia_nerius01.bmp",0;
 		mes "[斯琪亚]";
@@ -932,7 +932,7 @@ lighthalzen,306,267,5	script	Skia#ep162_04	4_EP16_SKIA,{
 	end;
 
 OnInit:
-	cloakonnpc "Skia#ep162_04";
+	cloakonnpc "斯琪亚#ep162_04";
 	end;
 }
 
@@ -958,7 +958,7 @@ lighthalzen,309,263,3	script	Man#ep162_02	1_M_01,{
 		sleep2 2000;
 		npctalk "Now, die.", "Suspicious mercenary#ep", bc_self;
 		sleep2 500;
-		cloakoffnpcself( "Skia#ep162_04" );
+		cloakoffnpcself( "斯琪亚#ep162_04" );
 		cloakoffnpcself( "克鲁斯#ep162_02" );
 		specialeffect EF_NPC_STOP, AREA, "Suspicious mercenary#ep";
 		specialeffect EF_HIT3, AREA, "Suspicious mercenary#ep";
@@ -966,12 +966,12 @@ lighthalzen,309,263,3	script	Man#ep162_02	1_M_01,{
 		npctalk "No ... What a shame ...", "Suspicious mercenary#ep", bc_self;
 		npctalk "No!!", "", bc_self;
 		sleep2 300;
-		npctalk "Are you all right?", "Skia#ep162_04", bc_self;
+		npctalk "Are you all right?", "斯琪亚#ep162_04", bc_self;
 		npctalk "Who is this guy? I overpowered him.", "克鲁斯#ep162_02", bc_self;
 		sleep2 2000;
 		unittalk getcharid(3), "" + strcharinfo(0) + " : I am all right.", bc_self;
 		sleep2 4000;
-		npctalk "This mercenary is same as the last time! If we capture this guy and investigate ...", "Skia#ep162_04", bc_self;
+		npctalk "This mercenary is same as the last time! If we capture this guy and investigate ...", "斯琪亚#ep162_04", bc_self;
 		npctalk "... Damn, not much I can do.", "Suspicious mercenary#ep", bc_self;
 		sleep2 2000;
 		specialeffect EF_BEGINSPELL, AREA, "Suspicious mercenary#ep";
@@ -981,7 +981,7 @@ lighthalzen,309,263,3	script	Man#ep162_02	1_M_01,{
 		specialeffect EF_MAGNUMBREAK, AREA, "Suspicious mercenary#ep";
 		specialeffect2 EF_GUARD;
 		specialeffect EF_GUARD, AREA, "克鲁斯#ep162_02";
-		specialeffect EF_GUARD, AREA, "Skia#ep162_04";
+		specialeffect EF_GUARD, AREA, "斯琪亚#ep162_04";
 		specialeffect EF_GUARD;
 		sleep2 1000;
 		cloakonnpcself( "Suspicious mercenary#ep" );
@@ -989,7 +989,7 @@ lighthalzen,309,263,3	script	Man#ep162_02	1_M_01,{
 		killmonster "lighthalzen", "Man#ep162_02::OnMobDead";
 		sleep2 2000;
 		npctalk "What!", "克鲁斯#ep162_02", bc_self;
-		npctalk "What is it? He killed himself?", "Skia#ep162_04", bc_self;
+		npctalk "What is it? He killed himself?", "斯琪亚#ep162_04", bc_self;
 		sleep2 2000;
 		npctalk "It was a suicide bombing, but he failed. He gave up his life too easily.", "克鲁斯#ep162_02", bc_self;
 		sleep2 3000;
@@ -997,17 +997,17 @@ lighthalzen,309,263,3	script	Man#ep162_02	1_M_01,{
 		sleep2 3000;
 		npctalk "You'd never imagine how long it took for us to get here ...", "克鲁斯#ep162_02", bc_self;
 		sleep2 3000;
-		npctalk "Hmm ... Crux, you take Bruno.", "Skia#ep162_04", bc_self;
+		npctalk "Hmm ... Crux, you take Bruno.", "斯琪亚#ep162_04", bc_self;
 		sleep2 3000;
-		npctalk "Bruno, you'd better cooperate with us.", "Skia#ep162_04", bc_self;
+		npctalk "Bruno, you'd better cooperate with us.", "斯琪亚#ep162_04", bc_self;
 		sleep2 2500;
-		npctalk "Otherwise you will be chased by those guys for the rest of your life, right? If you help us, we won't kill you.", "Skia#ep162_04", bc_self;
+		npctalk "Otherwise you will be chased by those guys for the rest of your life, right? If you help us, we won't kill you.", "斯琪亚#ep162_04", bc_self;
 		sleep2 1000;
 		npctalk "....", "", bc_self;
 		sleep2 3000;
-		npctalk "What? You're not answering?", "Skia#ep162_04", bc_self;
+		npctalk "What? You're not answering?", "斯琪亚#ep162_04", bc_self;
 		sleep2 3000;
-		npctalk "Well. Then I'll count on you, Crux.", "Skia#ep162_04", bc_self;
+		npctalk "Well. Then I'll count on you, Crux.", "斯琪亚#ep162_04", bc_self;
 		sleep2 2000;
 		npctalk "Yes, lady. See you in the palace.", "克鲁斯#ep162_02", bc_self;
 		sleep2 2000;
@@ -1017,7 +1017,7 @@ lighthalzen,309,263,3	script	Man#ep162_02	1_M_01,{
 		erasequest 7733;// Pursuit!
 		setquest 7734;// Arrest
 		terra_gloria_main = 6;
-		npctalk "Hero, shall we go back to the palace too?", "Skia#ep162_04", bc_self;
+		npctalk "Hero, shall we go back to the palace too?", "斯琪亚#ep162_04", bc_self;
 	}
 	end;
 
@@ -1037,49 +1037,49 @@ y_airport,168,41,3	script	克鲁斯#ep162_04	4_EP16_CRUX,{
 	}
 	if (terra_gloria_main == 7) {
 		cutin "ep16_crux_findel01.bmp",2;
-		mes "[Crux]";
+		mes "[克鲁斯]";
 		mes "I have been waiting.";
 		mes "Since there has been a change in the schedule, we might miss each other.";
 		next;
 		select("You are escorting Spica, right?");
-		mes "[Crux]";
+		mes "[克鲁斯]";
 		mes "That's what I would like to talk about.";
 		mes "Do you know Lady Skia and I requested a meeting in Yuno earlier?";
 		next;
-		mes "[Crux]";
+		mes "[克鲁斯]";
 		mes "Since there are too many eyes in Yuno as well as the presidential residence, they wanted to meet us in a different location.";
 		next;
-		mes "[Crux]";
+		mes "[克鲁斯]";
 		mes "I thought Lady Spica would draw their attention if she stayed too long in Yuno. So she moved to the appointed place immediately.";
 		next;
-		mes "[Crux]";
+		mes "[克鲁斯]";
 		mes "She disguised herself as a tourist ... and is now in ^4d4dffthe hotel in Lighthalzen^000000.";
 		next;
-		mes "[Crux]";
+		mes "[克鲁斯]";
 		mes "I wanted to send her a note to update the changed schedule. But I thought I would meet her here ... So I've been waiting.";
 		next;
 		cutin "ep16_crux_findel02.bmp",2;
-		mes "[Crux]";
+		mes "[克鲁斯]";
 		mes "... ...";
 		mes "Since we do these things secretly, this happens quite often.";
 		mes "I know it's funny, but I am sorry that your trip was in vain.";
 		next;
 		cutin "ep16_crux_findel01.bmp",2;
-		mes "[Crux]";
+		mes "[克鲁斯]";
 		mes "But the Schwartz government is positive about it.";
 		mes "However, I don't know what kind of card the ladies showed them ...";
 		next;
-		mes "[Crux]";
+		mes "[克鲁斯]";
 		mes "Well, I have to take care of my task.";
 		mes "Then let us go to ^4d4dffLighthalzen^000000.";
 		next;
 		if (select( "I will count on you.", "Wait a minute." ) == 2) {
-			mes "[Crux]";
+			mes "[克鲁斯]";
 			mes "Please tell me when you are ready.";
 			mes "Then we will get going.";
 			close3;
 		}
-		mes "[Crux]";
+		mes "[克鲁斯]";
 		mes "This way ...";
 		erasequest 7735;// Secret Action 2
 		setquest 7736;// Small differences between sightseeing and secret bussiness
@@ -1090,16 +1090,16 @@ y_airport,168,41,3	script	克鲁斯#ep162_04	4_EP16_CRUX,{
 	}
 	if (terra_gloria_main == 8) {
 		cutin "ep16_crux_findel01.bmp",2;
-		mes "[Crux]";
+		mes "[克鲁斯]";
 		mes "Let's go to Lighthalzen.";
 		next;
 		if (select( "I will count on you.", "Wait a minute." ) == 2) {
-			mes "[Crux]";
+			mes "[克鲁斯]";
 			mes "Please tell me when you are ready.";
 			mes "Then we will get going.";
 			close3;
 		}
-		mes "[Crux]";
+		mes "[克鲁斯]";
 		mes "This way ...";
 		close2;
 		warp "lhz_airport",185,37;
@@ -1107,14 +1107,14 @@ y_airport,168,41,3	script	克鲁斯#ep162_04	4_EP16_CRUX,{
 	}
 	if (terra_gloria_main < 18) {
 		cutin "ep16_crux_findel01.bmp",2;
-		mes "[Crux]";
+		mes "[克鲁斯]";
 		mes "The appointed place is ^4d4dffEinbroch train station^000000.";
 		mes "An agent named ^4d4dffLazy^000000 is waiting for us.";
 		mes "We have to hurry.";
 		close3;
 	}
 	cutin "ep16_crux_findel01.bmp",2;
-	mes "[Crux]";
+	mes "[克鲁斯]";
 	mes "I never imagined that I would be traveling overseas ... I hope everything goes well.";
 	close3;
 
@@ -1159,13 +1159,13 @@ lhz_in02,239,145,3	script	斯皮卡·内里乌斯#ep162_02	4_EP16_SPICA,{
 lhz_in02,237,146,6	script	克鲁斯#ep162_05	4_EP16_CRUX,{
 	if (terra_gloria_main == 8) {
 		cutin "ep16_crux_findel01.bmp",2;
-		mes "[Crux]";
+		mes "[克鲁斯]";
 		mes "Please talk to the representative of the Schwaltzvalt government along with the lady.";
 		close3;
 	}
 	if (terra_gloria_main == 9) {
 		cutin "ep16_crux_findel01.bmp",2;
-		mes "[Crux]";
+		mes "[克鲁斯]";
 		mes "The appointed place is ^4d4dffEinbroch train station^000000.";
 		mes "An agent named Lazy is waiting for you.";
 		mes "We have to hurry.";
@@ -1259,7 +1259,7 @@ lhz_in02,239,148,4	script	Philopontess#ep162_01	4_M_PHILOFONTES,{
 		mes "Since the royal family of Rune Midgarts is helping us, we decided to run a random inspection.";
 		next;
 		cutin "ep16_crux_findel03.bmp",1;
-		mes "[Crux]";
+		mes "[克鲁斯]";
 		mes "Sorry to interrupt you, but the only agents who can fight here are the adventurer and me ...";
 		next;
 		cutin "ep16_tes01.bmp",2;
@@ -2646,7 +2646,7 @@ rebel_in,21,45,5	script	Lazy#16nego04	4_M_LAZY,{
 		mes "Oh, I heard about you briefly. Thank you very much for saving my friend and taking him all the way here. The shop owner will compensate you.";
 		next;
 		mes "[??]";
-		mes "See you later.";
+		mes "待会儿见。";
 		next;
 		cutin "16lei_03.bmp",2;
 		mes "[Lazy]";
@@ -3037,7 +3037,7 @@ OnTouch:
 		setpcblock PCBLOCK_NPC, true;
 		cloakoffnpcself( "Nihil#ep162_02" );
 		cloakoffnpcself( "Philopontess#ep162_03" );
-		cloakoffnpcself( "Skia#ep162_05" );
+		cloakoffnpcself( "斯琪亚#ep162_05" );
 		cloakoffnpcself( "Rookie#ep162_01" );
 		cloakoffnpcself( "Lazy#ep162_01" );
 		npctalk "Mr. Lazy, was that a joke?", "Philopontess#ep162_03", bc_self;
@@ -3057,13 +3057,13 @@ OnTouch:
 		npctalk "This way.", "Nihil#ep162_02", bc_self;
 		sleep2 2000;
 		setpcblock PCBLOCK_NPC, false;
-		npctalk "Welcome, adventurer!", "Skia#ep162_05", bc_self;
+		npctalk "Welcome, adventurer!", "斯琪亚#ep162_05", bc_self;
 		end;
 	}
 	if (terra_gloria_main == 22) {
 		cloakoffnpcself( "Nihil#ep162_02" );
 		cloakoffnpcself( "Philopontess#ep162_03" );
-		cloakoffnpcself( "Skia#ep162_05" );
+		cloakoffnpcself( "斯琪亚#ep162_05" );
 	}
 	end;
 }
@@ -3303,7 +3303,7 @@ OnInit:
 	end;
 }
 
-ein_in01,271,284,3	script	Skia#ep162_05	4_EP16_SKIA,{
+ein_in01,271,284,3	script	斯琪亚#ep162_05	4_EP16_SKIA,{
 	if (terra_gloria_main == 18) {
 		npctalk "Please listen to Nihil first.", "", bc_self;
 		end;
@@ -3392,7 +3392,7 @@ OnInit:
 	end;
 }
 
-que_swat,147,57,5	duplicate(dummy_cloaked_npc)	Skia#ep162_07	4_EP16_SKIA
+que_swat,147,57,5	duplicate(dummy_cloaked_npc)	斯琪亚#ep162_07	4_EP16_SKIA
 
 que_swat,150,58,3	script	Rookie#ep162_03	4_M_ROOKIE,{
 	if (checkweight(501,1) == 0) {
@@ -3424,8 +3424,8 @@ que_swat,150,58,3	script	Rookie#ep162_03	4_M_ROOKIE,{
 		cutin "16loo_01.bmp",2;
 		mes "[Rookie]";
 		mes "Wow, welcome back.";
-		cloakoffnpcself( "Skia#ep162_07" );
-		npctalk "Hero!", "Skia#ep162_07", bc_self;
+		cloakoffnpcself( "斯琪亚#ep162_07" );
+		npctalk "Hero!", "斯琪亚#ep162_07", bc_self;
 		next;
 		mes "[斯琪亚]";
 		mes "I heard a loud sound inside the central room. I tried to get in there, but it had already been blocked.";
@@ -3456,7 +3456,7 @@ que_swat,150,58,3	script	Rookie#ep162_03	4_M_ROOKIE,{
 		mes "[Rookie]";
 		mes "Damn, go away!";
 		close2;
-		cloakonnpcself( "Skia#ep162_07" );
+		cloakonnpcself( "斯琪亚#ep162_07" );
 		warp "ein_fild04",279,339;
 		end;
 	}
