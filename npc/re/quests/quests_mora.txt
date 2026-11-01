@@ -1261,6 +1261,9 @@ mora,185,163,2	script	仓库管理员#ep14_1	516,{
 		close;
 	}
 	end;
+OnInit:
+	questinfo(QTYPE_QUEST, QMARK_YELLOW, "ep14_1_bs == 14");
+	end;
 }
 
 mora,35,119,4	script	朗多#ep14_1_bs	513,{
@@ -1279,6 +1282,9 @@ mora,35,119,4	script	朗多#ep14_1_bs	513,{
 			setquest 11193;
 	}
 	close;
+OnInit:
+	questinfo(QTYPE_QUEST, QMARK_YELLOW, "ep14_1_bs > 13 && ep14_1_bs2 == 10 && checkquest(11193) == -1");
+	end;
 }
 
 mora,98,66,4	script	莉莉蒂亚#ep14_1_bs	518,{
@@ -1306,6 +1312,9 @@ mora,98,66,4	script	莉莉蒂亚#ep14_1_bs	518,{
 	mes "[莉莉蒂亚]";
 	mes "这里的叶子总是很新鲜。而且，关于语言的烦恼也消失了。";
 	close;
+OnInit:
+	questinfo(QTYPE_QUEST, QMARK_YELLOW, "ep14_1_bs > 13 && ep14_1_bs2 == 11 && checkquest(11199) == -1");
+	end;
 }
 
 mora,139,102,2	script	哈明#ep14_1_bs	515,{
@@ -1334,6 +1343,9 @@ mora,139,102,2	script	哈明#ep14_1_bs	515,{
 	mes "那里是什么样子？";
 	mes "我一直想见见一种叫波利的生物。";
 	close;
+OnInit:
+	questinfo(QTYPE_QUEST, QMARK_YELLOW, "ep14_1_bs > 13 && ep14_1_bs2 == 12 && checkquest(11205) == -1");
+	end;
 }
 
 mora,55,124,2	script	琼斯#ep14_1_bs	495,{
@@ -1400,6 +1412,9 @@ mora,55,124,2	script	琼斯#ep14_1_bs	495,{
 		mes "对送货员这份职业感兴趣吗？";
 		close;
 	}
+	end;
+OnInit:
+	questinfo(QTYPE_QUEST2, QMARK_YELLOW, "ep14_1_bs >= 15 && ep14_1_bs <= 17");
 	end;
 }
 
@@ -2143,6 +2158,10 @@ mora,117,66,3	script	尤莉蒂#pa	521,{
 		mes "你听见轻轻的歌声。";
 		close;
 	}
+OnInit:
+	questinfo(QTYPE_QUEST, QMARK_YELLOW, "ep14_1_rope == 0 && BaseLevel >= 100");
+	questinfo(QTYPE_QUEST2, QMARK_YELLOW, "ep14_1_rope == 9");
+	end;
 }
 
 mora,115,68,3	script	尤莉蒂的朋友#pa	520,{
@@ -2243,6 +2262,9 @@ mora,115,68,3	script	尤莉蒂的朋友#pa	520,{
 		mes "谢谢你。我不会忘记你的帮助。";
 		close;
 	}
+OnInit:
+	questinfo(QTYPE_QUEST2, QMARK_YELLOW, "ep14_1_rope == 10");
+	end;
 }
 
 mora,65,145,3	script	皮特#pa	519,{
@@ -2391,6 +2413,9 @@ mora,65,145,3	script	皮特#pa	519,{
 		mes "他好像睡得很沉。";
 		close;
 	}
+OnInit:
+	questinfo(QTYPE_QUEST2, QMARK_YELLOW, "ep14_1_rope == 1 || ep14_1_rope == 3 || ep14_1_rope == 5");
+	end;
 }
 
 bif_fild01,132,338,3	script	洛佩#pa	461,2,2,{
@@ -3449,6 +3474,9 @@ L_CheckWeight:
 		close;
 	}
 	return;
+OnInit:
+	questinfo(QTYPE_QUEST, QMARK_YELLOW, "ep14_1_muk == 0");
+	end;
 }
 
 mora,114,79,0	script	黑影#ep14_muk	844,{
@@ -4469,6 +4497,9 @@ mora,133,80,6	script	艾蕾芬汀#pa0829	509,{
 	next;
 	mes "你接到了任务^005500"+.@n$+"^000000。打开任务窗口查看详情。";
 	close;
+OnInit:
+	questinfo(QTYPE_QUEST, QMARK_YELLOW, "ep14_1_mistwoods >= 10 && BaseLevel >= 135 && checkquest(12230,PLAYTIME) == -1");
+	end;
 }
 
 mora,115,98,8	script	霍查#pa0829	509,{
@@ -4544,6 +4575,9 @@ mora,115,98,8	script	霍查#pa0829	509,{
 	mes "嗯……"+strcharinfo(0)+".";
 	mes "可能是记录有误，但根据文件记载，你和这些任务没有任何关系。";
 	close;
+OnInit:
+	questinfo(QTYPE_QUEST2, QMARK_YELLOW, "checkquest(12225,HUNTING) == 2 || checkquest(12226,HUNTING) == 2 || checkquest(12227,HUNTING) == 2 || checkquest(12228,HUNTING) == 2 || checkquest(12229,HUNTING) == 2");
+	end;
 }
 
 mora,119,103,4	script	汪汪#pa0829	513,{
@@ -4652,6 +4686,9 @@ mora,119,103,4	script	汪汪#pa0829	513,{
 	next;
 	mes "你接到了任务^880088"+.@n$+"^000000。打开任务窗口查看详情。";
 	close;
+OnInit:
+	questinfo(QTYPE_QUEST, QMARK_YELLOW, "ep14_1_mistwoods >= 10 && BaseLevel >= 97 && checkquest(12241,PLAYTIME) == -1");
+	end;
 }
 
 mora,119,118,4	script	杂货商人#pa0	516,{
@@ -4740,6 +4777,9 @@ L_CheckQuest:
 		close;
 	}
 	return;
+OnInit:
+	questinfo(QTYPE_QUEST2, QMARK_YELLOW, "(checkquest(12231) > -1 && countitem(928) >= 4) || (checkquest(12232) > -1 && countitem(929) >= 5) || (checkquest(12233) > -1 && countitem(930) >= 1) || (checkquest(12234) > -1 && countitem(931) >= 3) || (checkquest(12235) > -1 && countitem(932) >= 3)");
+	end;
 }
 
 mora,124,108,7	script	汪呜噜#pa0829	514,{
@@ -4848,6 +4888,9 @@ mora,124,108,7	script	汪呜噜#pa0829	514,{
 	next;
 	mes "你接到了任务^880088"+.@n$+"^000000。打开任务窗口查看详情。";
 	close;
+OnInit:
+	questinfo(QTYPE_QUEST, QMARK_YELLOW, "ep14_1_mistwoods >= 10 && BaseLevel >= 97 && checkquest(12242,PLAYTIME) == -1");
+	end;
 }
 
 mora,127,112,4	script	日用品商人#pa08	518,{
@@ -4936,6 +4979,9 @@ L_CheckQuest:
 		close;
 	}
 	return;
+OnInit:
+	questinfo(QTYPE_QUEST2, QMARK_YELLOW, "(checkquest(12236) > -1 && countitem(934) >= 2) || (checkquest(12237) > -1 && countitem(935) >= 3) || (checkquest(12238) > -1 && countitem(936) >= 3) || (checkquest(12239) > -1 && countitem(937) >= 2) || (checkquest(12240) > -1 && countitem(938) >= 5)");
+	end;
 }
 
 mora,170,101,4	script	灵魂向导#pa0829	515,{
@@ -5061,6 +5107,9 @@ mora,170,101,4	script	灵魂向导#pa0829	515,{
 	mes "^990099失踪者"+.@n$+"^000000 的情报已找到。请查看任务窗口以获取更多信息。";
 	specialeffect2 EF_STEAL;
 	close;
+OnInit:
+	questinfo(QTYPE_QUEST, QMARK_YELLOW, "ep14_1_mistwoods >= 10 && BaseLevel >= 97 && checkquest(12253,PLAYTIME) == -1");
+	end;
 }
 
 mora,131,165,7	script	徘徊的客人#pa082	520,{
@@ -5346,6 +5395,10 @@ mora,114,163,5	script	骑士团头头#mo	522,{
 		}
 		close;
 	}
+	end;
+OnInit:
+	questinfo(QTYPE_QUEST, QMARK_YELLOW, "ep14_1_rope == 11");
+	questinfo(QTYPE_QUEST2, QMARK_YELLOW, "ep14_1_rope == 12");
 	end;
 }
 
