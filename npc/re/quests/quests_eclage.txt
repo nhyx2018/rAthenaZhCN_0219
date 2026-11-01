@@ -22,29 +22,29 @@
 // Teleport Cats (14.2 Cat Paw Addition)
 //============================================================
 -	script	Teleport Cat#ep14_2	-1,{
-	switch(atoi(charat(strnpcinfo(1),16))) {
-	case 1:
-		setarray .@map$[0],"Entrance to Mora";
+	switch(strcharinfo(3)) {
+	case "ecl_fild01":
+		setarray .@map$[0],"穆拉入口";
 		setarray .@cost[0],15;// Amount Canned Food
 		break;
-	case 2:
-		setarray .@map$[0],"Near Eclage","Near Splendide";
+	case "bif_fild02":
+		setarray .@map$[0],"埃克拉珠附近","斯普伦迪德附近";
 		setarray .@cost[0],15,55;
 		break;
-	case 3:
-		setarray .@map$[0],"Entrance to Mora","Midgard Allied Forces Post";
+	case "spl_fild02":
+		setarray .@map$[0],"穆拉入口","米德加尔特远征营地";
 		setarray .@cost[0],55,10;
 		break;
-	case 4:
-		setarray .@map$[0],"Near Splendide","Manuk Field";
+	case "mid_camp":
+		setarray .@map$[0],"斯普伦迪德附近","马努克原野";
 		setarray .@cost[0],10,10;
 		break;
-	case 5:
-		setarray .@map$[0],"Midgard Allied Forces Post","Near El Dicastes";
+	case "man_fild02":
+		setarray .@map$[0],"米德加尔特远征营地","埃迪斯特斯附近";
 		setarray .@cost[0],10,20;
 		break;
-	case 6:
-		setarray .@map$[0],"Manuk Field";
+	case "dic_fild01":
+		setarray .@map$[0],"马努克原野";
 		setarray .@cost[0],20;
 		break;
 	}
@@ -85,20 +85,20 @@
 		}
 		delitem 12636,.@price;// Malang_Sp_Can
 	}
-	if (.@choice$ == "Midgard Allied Forces Post") warp "mid_camp",180,247;
-	else if (.@choice$ == "Manuk Field") warp "man_fild02",133,47;
-	else if (.@choice$ == "Near Splendide") warp "spl_fild02",51,240;
-	else if (.@choice$ == "Near El Dicastes") warp "dic_fild01",159,264;
-	else if (.@choice$ == "Entrance to Mora") warp "bif_fild02",291,323;
-	else if (.@choice$ == "Near Eclage") warp "ecl_fild01",116,309;
+	if (.@choice$ == "米德加尔特远征营地") warp "mid_camp",180,247;
+	else if (.@choice$ == "马努克原野") warp "man_fild02",133,47;
+	else if (.@choice$ == "斯普伦迪德附近") warp "spl_fild02",51,240;
+	else if (.@choice$ == "埃迪斯特斯附近") warp "dic_fild01",159,264;
+	else if (.@choice$ == "穆拉入口") warp "bif_fild02",291,323;
+	else if (.@choice$ == "埃克拉珠附近") warp "ecl_fild01",116,309;
 	end;
 }
-ecl_fild01,118,311,4	duplicate(Teleport Cat#ep14_2)	Teleport Cat No.1	4_M_BOSSCAT
-bif_fild02,293,325,4	duplicate(Teleport Cat#ep14_2)	Teleport Cat No.2	4_M_BOSSCAT
-spl_fild02,53,242,4	duplicate(Teleport Cat#ep14_2)	Teleport Cat No.3	4_M_BOSSCAT
-mid_camp,207,234,4	duplicate(Teleport Cat#ep14_2)	Teleport Cat No.4	4_M_BOSSCAT
-man_fild02,135,49,4	duplicate(Teleport Cat#ep14_2)	Teleport Cat No.5	4_M_BOSSCAT
-dic_fild01,161,266,4	duplicate(Teleport Cat#ep14_2)	Teleport Cat No.6	4_M_BOSSCAT
+ecl_fild01,118,311,4	duplicate(Teleport Cat#ep14_2)	传送猫 1号	4_M_BOSSCAT
+bif_fild02,293,325,4	duplicate(Teleport Cat#ep14_2)	传送猫 2号	4_M_BOSSCAT
+spl_fild02,53,242,4	duplicate(Teleport Cat#ep14_2)	传送猫 3号	4_M_BOSSCAT
+mid_camp,207,234,4	duplicate(Teleport Cat#ep14_2)	传送猫 4号	4_M_BOSSCAT
+man_fild02,135,49,4	duplicate(Teleport Cat#ep14_2)	传送猫 5号	4_M_BOSSCAT
+dic_fild01,161,266,4	duplicate(Teleport Cat#ep14_2)	传送猫 6号	4_M_BOSSCAT
 
 // Eclage's Entrance
 //============================================================
