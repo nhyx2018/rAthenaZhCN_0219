@@ -4653,7 +4653,7 @@ rebel_in,70,78,3	script	埃琳娜·沃尔科娃#16.2rm	4_F_ELENA,{
 		}
 		if (lebedev_quest_16_2 == 8) {
 			cutin "",255;
-			mes "You told Elena Volkova what Lebedev twins told you.";
+			mes "You told 埃琳娜·沃尔科娃 what Lebedev twins told you.";
 			next;
 			cutin "162elena_01.bmp",2;
 			mes "[USU指挥官埃琳娜]";
@@ -4809,7 +4809,7 @@ rebel_in,70,78,3	script	埃琳娜·沃尔科娃#16.2rm	4_F_ELENA,{
 			mes "[USU指挥官埃琳娜]";
 			mes "......Thanks.";
 			mes "I will count on you in the future.";
-			completequest 16019;// Elena Volkova's Solution
+			completequest 16019;// 埃琳娜·沃尔科娃's Solution
 			getexp 200000,200000;
 			getitem 25155,10;// Swz_Honor_Token
 			lebedev_quest_16_2 = 11;
@@ -4864,13 +4864,13 @@ rebel_in,177,30,3	script	Sorita Doritas#16.2rm	4_M_GUNSLINGER3,{
 	end;
 }
 
-// rebel_in,177,28,5	script	Ivan Ivanov#16.2rm	4_M_REBELLION2,10,10,{
-// rebel_in,177,28,3	script	Ivan Ivanov#16.2rmA	HIDDEN_NPC,{
-rebel_in,177,28,5	script	Ivan Ivanov#16.2rm	4_M_REBELLION2,{
+// rebel_in,177,28,5	script	伊万·伊万诺夫#16.2rm	4_M_REBELLION2,10,10,{
+// rebel_in,177,28,3	script	伊万·伊万诺夫#16.2rmA	HIDDEN_NPC,{
+rebel_in,177,28,5	script	伊万·伊万诺夫#16.2rm	4_M_REBELLION2,{
 	end;
 OnInit:
 	questinfo( QTYPE_QUEST, QMARK_NONE, "isbegin_quest(16061) == 1" );
-	waitingroom "Enter 反叛者 arena",20,"Ivan Ivanov#16.2rm::OnEvent",1;
+	waitingroom "进入反叛者竞技场",20,"伊万·伊万诺夫#16.2rm::OnEvent",1;
 	end;
 OnEvent:
 	if (.event_start == 0) {
@@ -4884,11 +4884,11 @@ OnStart:
 	end;
 OnTimer3000:
 	stopnpctimer;
-	disablenpc "Naga#16.2rmA";
+	disablenpc "娜迦#16.2rmA";
 	areawarp "rebel_in",192,12,207,27,"rebel_in",68,76;
 	.event_start = 0;
 	if (getwaitingroomstate(33) == true)	// warp next player in waitingroom
-		donpcevent "Ivan Ivanov#16.2rm::OnEvent";
+		donpcevent "伊万·伊万诺夫#16.2rm::OnEvent";
 	end;
 }
 
@@ -4896,11 +4896,11 @@ rebel_in,200,19,0	script	#job_rmA	HIDDEN_WARP_NPC,12,12,{
 	end;
 OnTouch:
 	cloakonnpc "#job_rmA";
-	donpcevent "Milo River#16.2rmA::OnStart";
+	donpcevent "米洛·里弗#16.2rmA::OnStart";
 	.base_job = BaseJob;
 	end;
 OnStart:
-	monster "rebel_in",201,19, "Elena Volkova",3630,1, "#job_rmA::OnMobDead";	// EP16_2_E_BOLKOBA
+	monster "rebel_in",201,19, "埃琳娜·沃尔科娃",3630,1, "#job_rmA::OnMobDead";	// EP16_2_E_BOLKOBA
 	if (.base_job == Job_Priest)
 		setunitdata $@mobid[0], UMOB_HP, 19000;
 	else
@@ -4909,75 +4909,75 @@ OnStart:
 OnMobDead:
 	stopnpctimer;
 	completequest 16061;	// Fair and equitable result
-	npctalk "Milo River: " + strcharinfo(0) + ", you win! You can go out and magnify yourself. You are moving to the lobby in three seconds.";
-	donpcevent "Ivan Ivanov#16.2rm::OnStart";
-	enablenpc "Naga#16.2rmA";
+	npctalk "米洛·里弗：" + strcharinfo(0) + "，你赢了！可以出去好好炫耀。三秒后返回大厅。";
+	donpcevent "伊万·伊万诺夫#16.2rm::OnStart";
+	enablenpc "娜迦#16.2rmA";
 	end;
 OnInit:
 	cloakonnpc "#job_rmA";
 	end;
 }
 
-rebel_in,204,19,3	script	Milo River#16.2rmA	4_M_GUNSLINGER2,{
+rebel_in,204,19,3	script	米洛·里弗#16.2rmA	4_M_GUNSLINGER2,{
 	end;
 OnStart:
 	initnpctimer;
 	end;
 OnTimer4000:
-	npctalk "Milo River: Hel, hello. I am Milo River, the referee of this fight.";
+	npctalk "米洛·里弗：你、你好。我是这场战斗的裁判米洛·里弗。";
 	end;
 OnTimer6000:
-	npctalk "Milo River: The fight starts after 10 seconds. If you defeat commander Volkova in two minutes, you win.";
+	npctalk "米洛·里弗：战斗将在10秒后开始。两分钟内击败沃尔科娃指挥官就算获胜。";
 	end;
 OnTimer11000:
-	npctalk "Milo River: Five more seconds.";
+	npctalk "米洛·里弗：还有五秒。";
 	end;
 OnTimer12000:
-	npctalk "Milo River: Four more seconds.";
+	npctalk "米洛·里弗：还有四秒。";
 	end;
 OnTimer13000:
-	npctalk "Milo River: Three more seconds.";
+	npctalk "米洛·里弗：还有三秒。";
 	end;
 OnTimer14000:
-	npctalk "Milo River: Two more seconds.";
+	npctalk "米洛·里弗：还有两秒。";
 	end;
 OnTimer15000:
-	npctalk "Milo River: One more second.";
+	npctalk "米洛·里弗：还有一秒。";
 	end;
 OnTimer16000:
-	npctalk "Milo River: Let the match begin!";
+	npctalk "米洛·里弗：比赛开始！";
 	donpcevent "#job_rmA::OnStart";
 	end;
 OnTimer18000:
-	npctalk "Milo River: Sometimes she doesn't fight so hard according to her mood. Just hope that she is feeling good today.";
+	npctalk "米洛·里弗：她有时会看心情不太认真。但愿她今天心情不错。";
 	end;
 OnTimer126000:
-	npctalk "Milo River: The fight will end in 10 seconds.";
+	npctalk "米洛·里弗：战斗将在10秒后结束。";
 	end;
 OnTimer131000:
-	npctalk "Milo River: The fight will end in five seconds.";
+	npctalk "米洛·里弗：战斗将在五秒后结束。";
 	end;
 OnTimer132000:
-	npctalk "Milo River: Four more seconds.";
+	npctalk "米洛·里弗：还有四秒。";
 	end;
 OnTimer133000:
-	npctalk "Milo River: Three more seconds.";
+	npctalk "米洛·里弗：还有三秒。";
 	end;
 OnTimer134000:
-	npctalk "Milo River: Two more seconds.";
+	npctalk "米洛·里弗：还有两秒。";
 	end;
 OnTimer135000:
-	npctalk "Milo River: One more second.";
+	npctalk "米洛·里弗：还有一秒。";
 	end;
 OnTimer136000:
 	stopnpctimer;
 	killmonster "rebel_in", "#job_rmA::OnMobDead";
-	npctalk "Milo River: The fight is over. Due to the timeout, our commander wins. We will move to the lobby in three seconds.";
-	donpcevent "Ivan Ivanov#16.2rm::OnStart";
+	npctalk "米洛·里弗：战斗结束。因超时，指挥官获胜。三秒后返回大厅。";
+	donpcevent "伊万·伊万诺夫#16.2rm::OnStart";
 	end;
 }
 
-rebel_in,200,19,0	script	Naga#16.2rmA	HIDDEN_WARP_NPC,12,12,{
+rebel_in,200,19,0	script	娜迦#16.2rmA	HIDDEN_WARP_NPC,12,12,{
 	end;
 OnTouch:
 	setpcblock PCBLOCK_NPC, true;
@@ -9058,7 +9058,7 @@ rebel_in,91,67,3	script	Ericsson Adler#16.2rm	4_MAL_CAPTAIN,{
 		mes "You... You're the adventurer who showed up with the 秘密之翼.";
 		mes "What can I do for you?";
 		next;
-		mes "You told him what you heard from Elena Volkova and asked him for a consultation.";
+		mes "You told him what you heard from 埃琳娜·沃尔科娃 and asked him for a consultation.";
 		next;
 		mes "[Detached Force commander Ericsson]";
 		mes "If it was about the 秘密之翼, I would not have mentioned anything. But for that issue, I will help you.";
@@ -13820,7 +13820,7 @@ rebel_in,109,54,3	script	Jana Levedeva#16.2rm	4_F_ANYA,{
 			npctalk "Ilya Lebedev: Don't listen, Jaja...!!", "Ilya Lebedev#16.2rm", bc_self;
 			next;
 			mes "[" + strcharinfo(0) + "]";
-			mes "(......Looks like a huge mistake. Let's go back to ^0000CDElena Volkova^000000.)";
+			mes "(......Looks like a huge mistake. Let's go back to ^0000CD埃琳娜·沃尔科娃^000000.)";
 		}
 		else {
 			mes "[" + strcharinfo(0) + "]";
@@ -13838,7 +13838,7 @@ rebel_in,109,54,3	script	Jana Levedeva#16.2rm	4_F_ANYA,{
 			npctalk "Ilya Lebedev: ......", "Ilya Lebedev#16.2rm", bc_self;
 			next;
 			mes "[" + strcharinfo(0) + "]";
-			mes "(......This is getting difficult. Let's go back to ^0000CDElena Volkova^000000.)";
+			mes "(......This is getting difficult. Let's go back to ^0000CD埃琳娜·沃尔科娃^000000.)";
 		}
 		setquest 16015;// The cause of failure is a careless attempt
 		lebedev_quest_16_2 = 5;
@@ -13977,7 +13977,7 @@ rebel_in,109,54,3	script	Jana Levedeva#16.2rm	4_F_ANYA,{
 		npctalk "Ilya Lebedev: Yes. please.", "Ilya Lebedev#16.2rm", bc_self;
 		npctalk "Jana Levedeva: Yes...", "", bc_self;
 		mes "[" + strcharinfo(0) + "]";
-		mes "(You heard their story. Let's go to ^0000CDElena Volkova^000000 and tell her.)";
+		mes "(You heard their story. Let's go to ^0000CD埃琳娜·沃尔科娃^000000 and tell her.)";
 		lebedev_quest_16_2 = 8;
 		delitem 25161,1;// Handmade_cookie2
 		erasequest 16033;// Bring dessert and listen the story
@@ -14008,7 +14008,7 @@ rebel_in,109,54,3	script	Jana Levedeva#16.2rm	4_F_ANYA,{
 		mes "Thank you...";
 		mes "...I hope Jana cheers up.";
 		erasequest 16018;// Encourage instead of punishment
-		setquest 16019;// Elena Volkova's Solution
+		setquest 16019;// 埃琳娜·沃尔科娃's Solution
 		lebedev_quest_16_2 = 10;
 		questinfo_refresh();
 		close;
