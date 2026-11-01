@@ -1289,7 +1289,7 @@ prt_cas,104,240,5	script	斯琪亚·内里乌斯#ep16_02	4_EP16_SKIA,{
 		next;
 		cutin "ep16_skia_nerius01",0;
 		mes "[斯琪亚]";
-		mes "Right.";
+		mes "对。";
 		mes "Please excuse my babbling.";
 		mes "非常抱歉。";
 		close3;
@@ -1620,17 +1620,17 @@ prt_lib,76,80,3	script	图书管理员林德#ep16_lindt	1_M_01,{
 	}
 	if (ep16_royal == 22) {
 		mes "[图书管理员]";
-		mes "Oh, you are here.";
-		mes "Archduke Grantz has been waiting for you for a while.";
+		mes "哦，你来了。";
+		mes "格兰茨大公等你一会儿了。";
 		close;
 	}
 	mes "[图书管理员]";
-	mes "My family has been managing the Past Memories of the Royal Family for generations.";
-	mes "No wonder since it is the exclusive scriptorium for the royal family.";
+	mes "我家世代管理王家过去的记忆。";
+	mes "毕竟是王室专属的书库。";
 	next;
 	mes "[图书管理员]";
-	mes "It has not been long since I took over this position so I am not really that used to this.";
-	mes "I never expected to be visited by these many archdukes...";
+	mes "我接任不久，还不太习惯。";
+	mes "没想到会有这么多大公来访……";
 	close;
 }
 
@@ -1669,90 +1669,90 @@ prt_lib,91,85,3	script	魔法师尼勒姆#ep16_warp	4_M_JOB_WIZARD,{
 		close;
 	case 9:
 		mes "[尼勒姆]";
-		mes "Has anything happened in there?";
-		mes "What on earth...";
+		mes "里面发生什么了吗？";
+		mes "到底……";
 		next;
 		mes "[尼勒姆]";
-		mes "It is nothing that I should know and nowhere I should be part of. But still, I am curious about it.";
+		mes "本不该我知道，也不该我参与。但我还是好奇。";
 		next;
 		mes "[尼勒姆]";
-		mes "The movement of magical flow seems peculiar.";
-		mes "...I wonder if it is my imagination that the gate looks unstable.";
+		mes "魔力流动好像很奇特。";
+		mes "……门看起来不稳定，是我的错觉吗？";
 		close;
 	case 10:
 		mes "[尼勒姆]";
-		mes "Oh, this is troublesome.";
-		mes "There seems to be a problem with the gate now.";
+		mes "哦，麻烦了。";
+		mes "传送门现在好像出了问题。";
 		next;
 		mes "[尼勒姆]";
-		mes "Use of magic is restricted in this area. All I can do is to activate the gate here...";
+		mes "这一带限制魔法。我只能启动这里的门……";
 		next;
-		select("Where you are going with this...");
+		select("你到底想说什么……");
 		mes "[尼勒姆]";
-		mes "Oh, I mean...";
-		mes "You should get out here on foot.";
-		mes "Well, since things have turned out this way.";
-		next;
-		mes "[尼勒姆]";
-		mes "^4d4dffHere is the material what the archduke has seen earlier.^000000";
-		mes "" + strcharinfo(0) + ", why don't you take a look too?";
+		mes "哦，我是说……";
+		mes "你得从这里步行出去。";
+		mes "既然变成这样。";
 		next;
 		mes "[尼勒姆]";
-		mes "Well, not that I am curious about it.";
-		npctalk "(I really am...!)", "", bc_self;
+		mes "^4d4dff这是大公之前看过的资料。^000000";
+		mes "" + strcharinfo(0) + "，你也看看吧？";
 		next;
 		mes "[尼勒姆]";
-		mes "Just out of curiosity.... No, I mean ardor for study. Haha...";
-		mes "...Yes? Let's take a look... Make sure to share what is in there with me-";
+		mes "嗯，我可不是好奇。";
+		npctalk "（我真的很想看……！）", "", bc_self;
 		next;
 		mes "[尼勒姆]";
-		mes "Aren't you curious?";
-		mes "Since you are out here with the archduke, the librarian would show it to you with no doubt, you know.";
+		mes "纯粹好奇……不，我是说求知欲。哈哈……";
+		mes "……好吗？去看看吧……记得把内容告诉我——";
 		next;
 		mes "[尼勒姆]";
-		mes "I'll try to find a way to reactivate the gate.";
+		mes "你不好奇吗？";
+		mes "你和公爵一起来，图书管理员肯定会给你看。";
+		next;
+		mes "[尼勒姆]";
+		mes "我会想办法重新启动传送门。";
 		ep16_royal = 11;
 		setquest 7694;// I'd Like to See that Too
 		close;
 	case 11:
 		mes "[尼勒姆]";
-		mes "Aren't you curious?";
-		mes "Since you are out here with the archduke, the librarian would show it to you with no doubt, you know.";
+		mes "你不好奇吗？";
+		mes "你和公爵一起来，图书管理员肯定会给你看。";
 		next;
 		mes "[尼勒姆]";
-		mes "I'll try to find a way to reactivate the gate.";
+		mes "我会想办法重新启动传送门。";
 		close;
 	case 12:
 		mes "[尼勒姆]";
-		mes "...Oh well. ^4d4dffOnly open to the ones who know the truth^000000...";
-		mes "Argh, what a waste.";
+		mes "……好吧。^4d4dff只对知道真相的人开放^000000……";
+		mes "啊，真可惜。";
 		next;
 		mes "[尼勒姆]";
-		mes "Well, it is no use to stick around here.";
-		mes "I could cut the air with a knife earlier. Let's get out now.";
+		mes "待在这里也没用。";
+		mes "刚才气氛都能用刀切了。现在出去吧。";
 		next;
 		mes "[尼勒姆]";
-		mes "I took a look at the gate.";
-		mes "Has there been a big explosion of magic inside before?";
+		mes "我看过传送门了。";
+		mes "之前里面发生过巨大的魔力爆炸吗？";
 		next;
 		mes "[尼勒姆]";
-		mes "I sense some sort of magical distortion, which is similar to...";
-		mes "The ^4d4dffCrack of Dimension^000000!";
+		mes "我感觉到某种魔力扭曲，类似……";
+		mes "^4d4dff次元裂缝^000000！";
 		next;
 		mes "[尼勒姆]";
-		mes "Can we make a gate of dimension here?";
-		mes "That would be fun too.";
-		unittalk getcharid(3), "" + strcharinfo(0) + " : So how can we get out?", bc_self;
+		mes "我们能在这里开个次元门吗？";
+		mes "那也挺有趣。";
+		unittalk getcharid(3), "" + strcharinfo(0) + "：那我们怎么出去？", bc_self;
 		next;
 		mes "[尼勒姆]";
-		mes "Right.";
-		mes "Since the gate has become useless...";
-		mes "Let's walk out of here.";
+		mes "对。";
+		mes "既然传送门没用了……";
+		mes "我们走出去吧。";
 		next;
 		mes "[尼勒姆]";
-		mes "Do you see the crusader there?";
-		mes "He manages the entrance.";
-		mes "He will guide you.";
+		mes "看到那边的十字军了吗？";
+		mes "他管理入口。";
+		mes "他会给你带路。";
 		erasequest 7694;// I'd Like to See that Too
 		setquest 7695;// Escape from the Past Memories of the Royal Family
 		ep16_royal = 13;
@@ -1763,21 +1763,21 @@ prt_lib,91,85,3	script	魔法师尼勒姆#ep16_warp	4_M_JOB_WIZARD,{
 	case 16:
 	case 17:
 		mes "[尼勒姆]";
-		mes "Although there are direct gates installed in the palace for convenience,";
-		mes "There are passages you can walk directly in.";
+		mes "虽然王宫里为了方便装了直达门，";
+		mes "但也有可以直接走的通道。";
 		next;
 		mes "[尼勒姆]";
-		mes "This is one of the rare chances to use the secret passage.";
-		mes "Hahahaha...";
+		mes "这是难得能用秘密通道的机会。";
+		mes "哈哈哈哈……";
 		close;
 	case 18:
 		mes "[尼勒姆]";
-		mes "Haha, shall I get ready?";
-		mes "Come here! ^4d4dff次元传送器MkII^000000!!";
+		mes "哈哈，我准备一下？";
+		mes "过来！^4d4dff次元传送器MkII^000000！！";
 		next;
 		mes "[尼勒姆]";
 		mes "好了，走吧，亲爱的客人。";
-		mes "I wonder what we are going to see this time!";
+		mes "不知道这次会看到什么！";
 		setquest 7700;// Once More!
 		erasequest 7699;// To the Past
 		cloakoffnpcself( "次元传送器MkII#ep16_lib" );
@@ -1786,17 +1786,17 @@ prt_lib,91,85,3	script	魔法师尼勒姆#ep16_warp	4_M_JOB_WIZARD,{
 	case 20:
 	case 21:
 		mes "[尼勒姆]";
-		mes "We haven't solved all the secrets yet!";
-		mes "Well, we have to go back!";
+		mes "我们还没解开所有秘密！";
+		mes "得回去了！";
 		next;
 		cloakoffnpcself( "次元传送器MkII#ep16_lib" );
 		mes "[尼勒姆]";
-		mes "Let's finish it off this time!";
+		mes "这次做个了结！";
 		close;
 	case 22:
 		mes "[尼勒姆]";
 		mes "你在做什么？";
-		mes "Go grill the librarian to dig out the truth!";
+		mes "去逼问图书管理员，把真相挖出来！";
 		next;
 		cloakoffnpcself( "克罗内克·G·海涅#ep16_01_lib01" );
 		mes "[尼勒姆]";
@@ -3802,7 +3802,7 @@ prt_cas,361,142,5	script	Tamarin#ep16_1	4_EP16_TAMARIN,{
 		next;
 		mes "[Tamarin]";
 		mes "I think it is too late for me...";
-		mes "Hahahaha...";
+		mes "哈哈哈哈……";
 		next;
 		mes "[Tamarin]";
 		mes "If you find Dyu in the Banquet Hall, please tell him that I won't be able to go back with food since I am too busy.";
@@ -3816,7 +3816,7 @@ prt_cas,361,142,5	script	Tamarin#ep16_1	4_EP16_TAMARIN,{
 	if (ep16_cookbs > 15 && ep16_cookbs < 20) {
 		mes "[Tamarin]";
 		mes "I think it is too late for me...";
-		mes "Hahahaha...";
+		mes "哈哈哈哈……";
 		cutin "tama_cook_4",2;
 		next;
 		mes "[Tamarin]";
@@ -15856,7 +15856,7 @@ prt_q,231,310,4	script	Eryus#EP161BU02	4_F_03,{
 	}
 	if (isbegin_quest(5467) == 1) {
 		mes "[Eryus]";
-		mes "Oh, you are here.";
+		mes "哦，你来了。";
 		mes "The priest of the cathedral is taking care of my wife in there.";
 		next;
 		mes "[Eryus]";
