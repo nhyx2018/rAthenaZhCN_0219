@@ -2486,6 +2486,9 @@ dicastes01,223,190,1	script	卡里温#pa8029	453,{
 	}
 	mes "打开^800080任务窗口^000000即可查看委托详情和回报对象。";
 	close;
+OnInit:
+	questinfo(QTYPE_QUEST, QMARK_YELLOW, "ep13_3_invite >= 6 && BaseLevel >= 80 && checkquest(12137) == -1 && checkquest(12138) == -1 && checkquest(12139) == -1 && checkquest(12140) == -1 && checkquest(12141) == -1 && checkquest(12142) == -1 && checkquest(12143) == -1 && checkquest(12144) == -1 && checkquest(12145) == -1 && checkquest(12146) == -1 && checkquest(12147) == -1 && checkquest(12163,PLAYTIME) == -1");
+	end;
 }
 
 dicastes01,211,178,2	script	摩特卡#pa0829	453,{
@@ -2710,6 +2713,9 @@ dicastes01,211,178,2	script	摩特卡#pa0829	453,{
 		setquest 12164;
 		end;
 	}
+OnInit:
+	questinfo(QTYPE_QUEST, QMARK_YELLOW, "ep13_3_invite >= 6 && BaseLevel >= 80 && checkquest(12148) == -1 && checkquest(12149) == -1 && checkquest(12150) == -1 && checkquest(12151) == -1 && checkquest(12152) == -1 && checkquest(12153) == -1 && checkquest(12154) == -1 && checkquest(12155) == -1 && checkquest(12156) == -1 && checkquest(12157) == -1 && checkquest(12158) == -1 && checkquest(12164,PLAYTIME) == -1");
+	end;
 }
 
 dicastes01,175,217,5	script	卡利佛#pa0829	453,{
@@ -2852,6 +2858,9 @@ dicastes01,175,217,5	script	卡利佛#pa0829	453,{
 		mes "我已为你接下名为^990099丑脸鸟^000000的委托。开启^990099任务窗口^000000即可查看委托详情和回报对象。";
 		close;
 	}
+OnInit:
+	questinfo(QTYPE_QUEST, QMARK_YELLOW, "ep13_3_invite >= 6 && BaseLevel >= 100 && checkquest(12106) == -1 && checkquest(12107) == -1 && checkquest(12108) == -1 && checkquest(12109) == -1 && checkquest(12110) == -1 && checkquest(12111) == -1 && checkquest(12160,PLAYTIME) == -1");
+	end;
 }
 
 dicastes01,187,230,5	script	拉冯泰#pa0829	453,{
@@ -3023,6 +3032,9 @@ dicastes01,187,230,5	script	拉冯泰#pa0829	453,{
 		mes "我已为你接下名为^880088会动的石头^000000的委托。开启^990099任务窗口^000000即可查看委托详情和回报对象。";
 		close;
 	}
+OnInit:
+	questinfo(QTYPE_QUEST, QMARK_YELLOW, "ep13_3_invite >= 6 && BaseLevel >= 97 && checkquest(12099) == -1 && checkquest(12100) == -1 && checkquest(12101) == -1 && checkquest(12102) == -1 && checkquest(12103) == -1 && checkquest(12104) == -1 && checkquest(12105) == -1 && checkquest(12159,PLAYTIME) == -1");
+	end;
 }
 
 dicastes01,208,230,3	script	弗拉#pa0829	453,{
@@ -3214,6 +3226,9 @@ dicastes01,208,230,3	script	弗拉#pa0829	453,{
 		close;
 	}
 	close;
+OnInit:
+	questinfo(QTYPE_QUEST, QMARK_YELLOW, "ep13_3_invite >= 6 && BaseLevel >= 80 && checkquest(12117) == -1 && checkquest(12118) == -1 && checkquest(12119) == -1 && checkquest(12120) == -1 && checkquest(12121) == -1 && checkquest(12122) == -1 && checkquest(12123) == -1 && checkquest(12124) == -1 && checkquest(12125) == -1 && checkquest(12126) == -1 && checkquest(12161,PLAYTIME) == -1");
+	end;
 }
 
 dicastes01,225,211,3	script	德拉契斯#pa0829	453,{
@@ -3384,6 +3399,9 @@ dicastes01,225,211,3	script	德拉契斯#pa0829	453,{
 		mes "我已为你接下名为^880088蜂蜜小偷^000000的委托。开启^990099任务窗口^000000即可查看委托详情和回报对象。";
 		close;
 	}
+OnInit:
+	questinfo(QTYPE_QUEST, QMARK_YELLOW, "ep13_3_invite >= 6 && BaseLevel >= 80 && checkquest(12127) == -1 && checkquest(12128) == -1 && checkquest(12129) == -1 && checkquest(12130) == -1 && checkquest(12131) == -1 && checkquest(12132) == -1 && checkquest(12133) == -1 && checkquest(12134) == -1 && checkquest(12135) == -1 && checkquest(12136) == -1 && checkquest(12162,PLAYTIME) == -1");
+	end;
 }
 
 // Doha's Secret Orders
