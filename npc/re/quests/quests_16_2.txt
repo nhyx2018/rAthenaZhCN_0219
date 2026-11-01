@@ -2110,65 +2110,65 @@ einbech,217,82,3	script	雷兹#16nego03	4_M_LAZY,{
 		mes "把背的东西放下。";
 		next;
 		mes "[" + strcharinfo(0) + "]";
-		mes "Arrgh...";
+		mes "啊……";
 		cloakoffnpcself( "戈尼#16nego02" );
-		unittalk getcharid(3), "" + strcharinfo(0) + " : Oh, I feel alive now.", bc_self;
-		npctalk "You are exaggerating your pain.", "", bc_self;
+		unittalk getcharid(3), "" + strcharinfo(0) + "：哦，我感觉活过来了。", bc_self;
+		npctalk "你太夸张了。", "", bc_self;
 		next;
 		mes "[" + strcharinfo(0) + "]";
-		mes "Where am I? There's nobody here.";
+		mes "这是哪里？这里没人啊。";
 		next;
 		cutin "16lei_02.bmp",2;
 		mes "[雷兹]";
-		mes "You can see as much as you know. That's why I'm always tired. People all want me to look at them.";
-		npctalk "I will look at them later.", "", bc_self;
+		mes "知道多少就能看到多少。所以我才总是这么累，大家都想让我看他们。";
+		npctalk "以后再去看他们。", "", bc_self;
 		next;
 		cutin "16lei_01.bmp",2;
 		mes "[雷兹]";
-		mes "Anyway, let's get in here.";
+		mes "总之，我们进去吧。";
 		next;
 		mes "[" + strcharinfo(0) + "]";
-		mes "So, where am I?";
+		mes "所以，这是哪里？";
 		next;
 		cutin "16lei_03.bmp",2;
 		mes "[雷兹]";
-		mes "You talk too much! I told you we don't have much time. You can listen to my explanation later. Someone who was standing in front of this detected me already and went inside. We don't know what they will prepare.";
-		unittalk getcharid(3), "" + strcharinfo(0) + " : Well, you are type of a guy who really loves explaining things later on!", bc_self;
+		mes "你话太多了！我说过时间不多。解释以后再听。刚才站在这里的人已经发现我并进去了，不知道他们会准备什么。";
+		unittalk getcharid(3), "" + strcharinfo(0) + "：你还真是个总把解释推到以后的人！", bc_self;
 		next;
 		emotion ET_SWEAT, playerattached();
 		mes "[" + strcharinfo(0) + "]";
-		mes "Wait, are we going to leave him here?";
+		mes "等等，我们要把他留在这里？";
 		next;
 		cutin "16lei_02.bmp",2;
 		mes "[雷兹]";
-		mes "Yeah. Is there any problem? Is it a problem? Could it be a problem?";
+		mes "对啊。有问题吗？是问题吗？能算问题吗？";
 		next;
 		mes "[" + strcharinfo(0) + "]";
-		mes "You said that we should bring the injured man. Then you told me to carry him all the way here. Now you are abandoning him here?";
-		unittalk getcharid(3), "" + strcharinfo(0) + " : I, CARRIED, HIM, ALL THE WAY HERE. DIDN'T I?", bc_self;
+		mes "你说要带上受伤的人，又让我一路背他到这里。现在要把他丢下？";
+		unittalk getcharid(3), "" + strcharinfo(0) + "：我，一，路，把，他，背，过，来，了，对，吧？", bc_self;
 		sleep2 300;
-		npctalk "You can say all you want. I'm not afraid of you.", "", bc_self;
+		npctalk "你想说就说，我不怕你。", "", bc_self;
 		next;
 		cutin "16lei_03.bmp",2;
 		mes "[雷兹]";
-		mes "Don't worry about him. He's not going to die. Humans do not die so easily. The fact I'm still alive is the evidence.";
-		unittalk getcharid(3), "" + strcharinfo(0) + " : What kind of life was it...?", bc_self;
+		mes "别担心他，他不会死。人没那么容易死。我还活着就是证据。";
+		unittalk getcharid(3), "" + strcharinfo(0) + "：那是什么样的生活啊……？", bc_self;
 		next;
 		emotion ET_SWEAT, playerattached();
 		mes "[" + strcharinfo(0) + "]";
-		mes "That's not the issue here.";
+		mes "重点不是这个。";
 		next;
 		cutin "16lei_01.bmp",2;
 		mes "[雷兹]";
-		mes "Come on, let's get in. We don't have much time. Let's talk inside. Aren't you curious to know what's in there?";
-		npctalk "I'm curious! I'm curious! I want to know!", "", bc_self;
+		mes "好了，进去吧。时间不多，进去再说。你不好奇里面有什么吗？";
+		npctalk "好奇！好奇！我想知道！", "", bc_self;
 		next;
 		mes "[" + strcharinfo(0) + "]";
-		mes "We have to see something to get in there.";
+		mes "得找到入口才能进去。";
 		next;
 		cutin "16lei_01.bmp",2;
 		mes "[雷兹]";
-		mes "Look at this. There's an entrance here. This is ^0000cdan entrance hidden in the wall of the beach^000000. It is so fishy. Let's get inside and check what's there.";
+		mes "看这个。这里有入口。是^0000cd藏在海滩墙壁里的入口^000000。太可疑了。我们进去看看。";
 		erasequest 14597;// Corner of 艾因贝克
 		setquest 14598;// Invisible entrance
 		terra_gloria_main = 14;
@@ -2180,7 +2180,7 @@ einbech,217,82,3	script	雷兹#16nego03	4_M_LAZY,{
 	if (terra_gloria_main == 14) {
 		cutin "16lei_01.bmp",2;
 		mes "[雷兹]";
-		mes "What are you doing? Come in!";
+		mes "你在做什么？进来！";
 		close2;
 		cutin "",255;
 		cloakonnpcself( "雷兹#16nego03" );
@@ -2193,27 +2193,27 @@ OnInit:
 }
 
 // rebel_in
-rebel_in,27,45,3	script	Eri#16nego01	4_F_01,{
+rebel_in,27,45,3	script	艾莉#16nego01	4_F_01,{
 	if (terra_gloria_main < 15) {
-		mes "[Eri]";
-		mes "Oh, welcome. This is a weapon store, Clana Nemieri.";
+		mes "[艾莉]";
+		mes "哦，欢迎。这里是武器店克拉纳·内米耶里。";
 		close;
 	}
-	mes "[Eri]";
-	mes "In this store, even a small sound creates a huge resonant due to its structure. Please be quite when entering here.";
+	mes "[艾莉]";
+	mes "这家店的结构会让很小的声音产生巨大回响。进来时请保持安静。";
 	close2;
 	warp "rebel_in",40,43;
 	end;
 }
 
-rebel_in,24,45,3	script	Nemi#16nego01	4_M_MIDDLE,{
+rebel_in,24,45,3	script	内米#16nego01	4_M_MIDDLE,{
 	if (terra_gloria_main < 15) {
-		mes "[Nemi]";
-		mes "A real customer!! We have a customer in this period...";
+		mes "[内米]";
+		mes "真正的客人！！这种时候居然有客人……";
 		close;
 	}
-	mes "[Nemi]";
-	mes "Be quite when entering.";
+	mes "[内米]";
+	mes "进来时安静点。";
 	close2;
 	warp "rebel_in",40,43;
 	end;
@@ -2240,11 +2240,11 @@ OnInit:
 	end;
 }
 
-rebel_in,23,42,3	script	Lucky#16nego01	4_M_ROOKIE,{
+rebel_in,23,42,3	script	拉奇#16nego01	4_M_ROOKIE,{
 	if (terra_gloria_main < 15) {
 		cutin "16loo_01.bmp",0;
-		mes "[Lucky]";
-		mes "Who are you? This is not a place where anyone can come in. Please leave.";
+		mes "[拉奇]";
+		mes "你是谁？这里不是谁都能进来的地方，请离开。";
 		close2;
 		warp "einbech",215,80;
 		end;
@@ -2267,10 +2267,10 @@ rebel_in,21,45,5	script	雷兹#16nego04	4_M_LAZY,{
 		next;
 		mes "[Shopkeeper]";
 		mes "A real customer?";
-		emotion ET_HUK, getnpcid(0, "Eri#16nego01");
-		npctalk "I told you there would be a customer.", "Nemi#16nego01", bc_self;
+		emotion ET_HUK, getnpcid(0, "艾莉#16nego01");
+		npctalk "I told you there would be a customer.", "内米#16nego01", bc_self;
 		sleep2 300;
-		npctalk "I thought it was someone who stopped to ask the way.", "Eri#16nego01", bc_self;
+		npctalk "I thought it was someone who stopped to ask the way.", "艾莉#16nego01", bc_self;
 		next;
 		cutin "",255;
 		mes "[Shopkeeper]";
@@ -2278,9 +2278,9 @@ rebel_in,21,45,5	script	雷兹#16nego04	4_M_LAZY,{
 		next;
 		mes "[Shopkeeper]";
 		mes "Take a look around and tell me if there is anything you are looking for.";
-		npctalk "Don't we have to call inside?", "Nemi#16nego01", bc_self;
+		npctalk "Don't we have to call inside?", "内米#16nego01", bc_self;
 		sleep2 300;
-		npctalk "Calm down. Be cool.", "Eri#16nego01", bc_self;
+		npctalk "Calm down. Be cool.", "艾莉#16nego01", bc_self;
 		next;
 		cutin "16lei_01.bmp",2;
 		mes "[雷兹]";
@@ -2288,12 +2288,12 @@ rebel_in,21,45,5	script	雷兹#16nego04	4_M_LAZY,{
 		next;
 		mes "[Shopkeeper]";
 		mes "By the way... How did you find us? This is a small store that only limited people visit.";
-		npctalk "What are you saying?", "Eri#16nego01", bc_self;
+		npctalk "What are you saying?", "艾莉#16nego01", bc_self;
 		next;
 		mes "[雷兹]";
 		mes "I wanted to buy a self-defense gun. And someone recommended me this store.";
 		next;
-		emotion ET_SWEAT, getnpcid(0, "Nemi#16nego01");
+		emotion ET_SWEAT, getnpcid(0, "内米#16nego01");
 		mes "[Shopkeeper]";
 		mes "Who.. was it?";
 		next;
@@ -2307,7 +2307,7 @@ rebel_in,21,45,5	script	雷兹#16nego04	4_M_LAZY,{
 		next;
 		mes "[Shopkeeper]";
 		mes "Sir. That stuff is quite sensitive and you shouldn't tough it inconsiderately.";
-		npctalk "Please take your hands away from there.", "Eri#16nego01", bc_self;
+		npctalk "Please take your hands away from there.", "艾莉#16nego01", bc_self;
 		next;
 		cutin "16lei_03.bmp",2;
 		mes "[雷兹]";
@@ -2315,7 +2315,7 @@ rebel_in,21,45,5	script	雷兹#16nego04	4_M_LAZY,{
 		next;
 		mes "[Shopkeeper]";
 		mes "Oh.. That's one of the most popular products in our store.";
-		emotion ET_ANGER, getnpcid(0, "Nemi#16nego01");
+		emotion ET_ANGER, getnpcid(0, "内米#16nego01");
 		next;
 		cutin "16lei_02.bmp",2;
 		mes "[雷兹]";
@@ -2323,15 +2323,15 @@ rebel_in,21,45,5	script	雷兹#16nego04	4_M_LAZY,{
 		next;
 		mes "[Shopkeeper]";
 		mes "What did you say? Are you insulting my gun now?";
-		npctalk "I won't take it any more! Leave me alone!", "Nemi#16nego01", bc_self;
-		emotion ET_ANGER, getnpcid(0, "Nemi#16nego01");
+		npctalk "I won't take it any more! Leave me alone!", "内米#16nego01", bc_self;
+		emotion ET_ANGER, getnpcid(0, "内米#16nego01");
 		next;
 		mes "[雷兹]";
 		mes "No, I don't mean it. But if you heard it that way, then it's an insult.";
 		next;
 		mes "[Shopkeeper]";
 		mes "Calm down, Nemi. He's a customer.";
-		npctalk "Sir.", "Eri#16nego01", bc_self;
+		npctalk "Sir.", "艾莉#16nego01", bc_self;
 		next;
 		cutin "16lei_01.bmp",2;
 		mes "[雷兹]";
@@ -2355,7 +2355,7 @@ rebel_in,21,45,5	script	雷兹#16nego04	4_M_LAZY,{
 		sleep2 300;
 		unittalk getcharid(3), "" + strcharinfo(0) + " : Are you conducting psychological warfare?", bc_self;
 		next;
-		emotion ET_ANGER, getnpcid(0, "Nemi#16nego01");
+		emotion ET_ANGER, getnpcid(0, "内米#16nego01");
 		mes "[Shopkeeper]";
 		mes "Calm down, Nemi.";
 		next;
@@ -2366,9 +2366,9 @@ rebel_in,21,45,5	script	雷兹#16nego04	4_M_LAZY,{
 		next;
 		mes "[Shopkeeper]";
 		mes "Hey, who the hell are you?";
-		npctalk "I recognized it at once!", "Nemi#16nego01", bc_self;
+		npctalk "I recognized it at once!", "内米#16nego01", bc_self;
 		sleep2 300;
-		npctalk "Calm down! We shouldn't look suspicious!", "Eri#16nego01", bc_self;
+		npctalk "Calm down! We shouldn't look suspicious!", "艾莉#16nego01", bc_self;
 		sleep2 500;
 		unittalk getcharid(3), "" + strcharinfo(0) + " : By looking at your response, it doesn't look the name of a bullet.", bc_self;
 		next;
@@ -2393,7 +2393,7 @@ rebel_in,21,45,5	script	雷兹#16nego04	4_M_LAZY,{
 		next;
 		mes "[Shopkeeper]";
 		mes "Go back. We don't have what you want.";
-		npctalk "Even if we had one, we would not sell it to you.", "Nemi#16nego01", bc_self;
+		npctalk "Even if we had one, we would not sell it to you.", "内米#16nego01", bc_self;
 		next;
 		cutin "16lei_02.bmp",2;
 		mes "[雷兹]";
@@ -2410,14 +2410,14 @@ rebel_in,21,45,5	script	雷兹#16nego04	4_M_LAZY,{
 		next;
 		mes "[Shopkeeper]";
 		mes "你在说什么？";
-		emotion ET_QUESTION, getnpcid(0, "Nemi#16nego01");
+		emotion ET_QUESTION, getnpcid(0, "内米#16nego01");
 		next;
 		mes "[雷兹]";
 		mes "Just go outside and check it yourself.";
 		next;
 		mes "[Shopkeeper]";
 		mes "I won't tolerate you if you're playing shallow tricks.";
-		cloakonnpcself( "Nemi#16nego01" );
+		cloakonnpcself( "内米#16nego01" );
 		next;
 		cutin "16lei_02.bmp",2;
 		mes "[雷兹]";
@@ -2436,12 +2436,12 @@ rebel_in,21,45,5	script	雷兹#16nego04	4_M_LAZY,{
 		sleep2 500;
 		unittalk getcharid(3), "" + strcharinfo(0) + " : What! What is it? Why did you stop talking?", bc_self;
 		next;
-		cloakoffnpcself( "Nemi#16nego01" );
+		cloakoffnpcself( "内米#16nego01" );
 		cloakoffnpcself( "戈尼#16nego03" );
 		mes "[Shopkeeper]";
-		mes "Arrgh...";
+		mes "啊……";
 		next;
-		emotion ET_HUK, getnpcid(0, "Eri#16nego01");
+		emotion ET_HUK, getnpcid(0, "艾莉#16nego01");
 		mes "[Shopkeeper]";
 		mes "Oh, my goodness. Gonie! What happened!";
 		next;
@@ -2453,7 +2453,7 @@ rebel_in,21,45,5	script	雷兹#16nego04	4_M_LAZY,{
 		mes "Lucky?";
 		emotion ET_QUESTION;
 		next;
-		cloakonnpcself( "Eri#16nego01" );
+		cloakonnpcself( "艾莉#16nego01" );
 		mes "[Shopkeeper]";
 		mes "Hey, what did you to this guy?";
 		next;
@@ -2486,16 +2486,16 @@ rebel_in,21,45,5	script	雷兹#16nego04	4_M_LAZY,{
 		emotion ET_CRY;
 		next;
 		cutin "16loo_01.bmp",0;
-		cloakoffnpcself( "Eri#16nego01" );
-		cloakoffnpcself( "Lucky#16nego01" );
-		mes "[Lucky]";
+		cloakoffnpcself( "艾莉#16nego01" );
+		cloakoffnpcself( "拉奇#16nego01" );
+		mes "[拉奇]";
 		mes "Nemi, what happened? Is Gonie dead?";
-		emotion ET_STARE_ABOUT, getnpcid(0, "Lucky#16nego01");
+		emotion ET_STARE_ABOUT, getnpcid(0, "拉奇#16nego01");
 		npctalk "Dead? What a gossip.", "", bc_self;
 		next;
 		mes "[Shopkeeper]";
 		mes "No, he's not.";
-		emotion ET_SCRATCH, getnpcid(0, "Nemi#16nego01");
+		emotion ET_SCRATCH, getnpcid(0, "内米#16nego01");
 		next;
 		cutin "16lei_01.bmp",2;
 		mes "[雷兹]";
@@ -2503,7 +2503,7 @@ rebel_in,21,45,5	script	雷兹#16nego04	4_M_LAZY,{
 		npctalk "I saved his life!", "", bc_self;
 		next;
 		cutin "16loo_01.bmp",0;
-		mes "[Lucky]";
+		mes "[拉奇]";
 		mes "He's not doing very well. We have to take him there and lay him down. Wake up, Gonie. Can you walk?";
 		next;
 		cutin "16lei_02.bmp",2;
@@ -2522,8 +2522,8 @@ rebel_in,21,45,5	script	雷兹#16nego04	4_M_LAZY,{
 		next;
 		emotion ET_PROFUSELY_SWAT;
 		emotion ET_PROFUSELY_SWAT, playerattached();
-		emotion ET_HUK, getnpcid(0, "Nemi#16nego01");
-		emotion ET_HUK, getnpcid(0, "Eri#16nego01");
+		emotion ET_HUK, getnpcid(0, "内米#16nego01");
+		emotion ET_HUK, getnpcid(0, "艾莉#16nego01");
 		cutin "16go_01.bmp",1;
 		mes "[Gonie]";
 		mes "....!";
@@ -2551,8 +2551,8 @@ rebel_in,21,45,5	script	雷兹#16nego04	4_M_LAZY,{
 		next;
 		emotion ET_PROFUSELY_SWAT;
 		emotion ET_PROFUSELY_SWAT, playerattached();
-		emotion ET_HUK, getnpcid(0, "Nemi#16nego01");
-		emotion ET_HUK, getnpcid(0, "Eri#16nego01");
+		emotion ET_HUK, getnpcid(0, "内米#16nego01");
+		emotion ET_HUK, getnpcid(0, "艾莉#16nego01");
 		cutin "16go_01.bmp",1;
 		mes "[Gonie]";
 		mes "....!";
@@ -2560,9 +2560,9 @@ rebel_in,21,45,5	script	雷兹#16nego04	4_M_LAZY,{
 		cutin "16lei_02.bmp",2;
 		mes "[雷兹]";
 		mes "My god! You dropped him again. Don't work too hard.";
-		npctalk "Shouldn't you go and help?", "Eri#16nego01", bc_self;
+		npctalk "Shouldn't you go and help?", "艾莉#16nego01", bc_self;
 		sleep2 300;
-		npctalk "Oh.. Should I?", "Nemi#16nego01", bc_self;
+		npctalk "Oh.. Should I?", "内米#16nego01", bc_self;
 		next;
 		cutin "16loo_01.bmp",0;
 		mes "[??]";
@@ -2575,8 +2575,8 @@ rebel_in,21,45,5	script	雷兹#16nego04	4_M_LAZY,{
 		next;
 		emotion ET_PROFUSELY_SWAT;
 		emotion ET_PROFUSELY_SWAT, playerattached();
-		emotion ET_HUK, getnpcid(0, "Nemi#16nego01");
-		emotion ET_HUK, getnpcid(0, "Eri#16nego01");
+		emotion ET_HUK, getnpcid(0, "内米#16nego01");
+		emotion ET_HUK, getnpcid(0, "艾莉#16nego01");
 		cutin "16go_01.bmp",1;
 		mes "[Gonie]";
 		mes "......!!";
@@ -2584,9 +2584,9 @@ rebel_in,21,45,5	script	雷兹#16nego04	4_M_LAZY,{
 		cutin "16lei_03.bmp",2;
 		mes "[雷兹]";
 		mes "Gosh, why is your arm you so weak? Seems like this place is in trouble. You have no manpower so you hired such a weak person? My god.";
-		npctalk "Look at that. Gonie might die.", "Eri#16nego01", bc_self;
+		npctalk "Look at that. Gonie might die.", "艾莉#16nego01", bc_self;
 		sleep2 300;
-		npctalk "This time, he could really die.", "Eri#16nego01", bc_self;
+		npctalk "This time, he could really die.", "艾莉#16nego01", bc_self;
 		next;
 		cutin "16loo_01.bmp",0;
 		mes "[??]";
@@ -2605,8 +2605,8 @@ rebel_in,21,45,5	script	雷兹#16nego04	4_M_LAZY,{
 		specialeffect EF_DEATHSUMMON, AREA, "戈尼#16nego03";
 		emotion ET_PROFUSELY_SWAT;
 		emotion ET_PROFUSELY_SWAT, playerattached();
-		emotion ET_HUK, getnpcid(0, "Nemi#16nego01");
-		emotion ET_HUK, getnpcid(0, "Eri#16nego01");
+		emotion ET_HUK, getnpcid(0, "内米#16nego01");
+		emotion ET_HUK, getnpcid(0, "艾莉#16nego01");
 		next;
 		cutin "16go_02.bmp",1;
 		mes "[Gonie]";
@@ -2615,9 +2615,9 @@ rebel_in,21,45,5	script	雷兹#16nego04	4_M_LAZY,{
 		cutin "16loo_03.bmp",0;
 		mes "[??]";
 		mes "Gonie! Why are you so bloody? Did they attack you?";
-		npctalk "I wanted to deal with customers. But I have no choice now.", "Nemi#16nego01", bc_self;
+		npctalk "I wanted to deal with customers. But I have no choice now.", "内米#16nego01", bc_self;
 		next;
-		emotion ET_ANGER, getnpcid(0, "Nemi#16nego01");
+		emotion ET_ANGER, getnpcid(0, "内米#16nego01");
 		mes "[Shopkeeper]";
 		mes "you! It's because of you! You just can't lift him! Come on. Let's carry him together. You are so weak that you cannot lift anything heavier than a spoon.";
 		next;
@@ -2651,8 +2651,8 @@ rebel_in,21,45,5	script	雷兹#16nego04	4_M_LAZY,{
 		cutin "16lei_03.bmp",2;
 		mes "[雷兹]";
 		mes "Wait! They're sending us away like this? Seems like they are. Did I get it wrong?";
-		cloakonnpcself( "Nemi#16nego01" );
-		cloakonnpcself( "Lucky#16nego01" );
+		cloakonnpcself( "内米#16nego01" );
+		cloakonnpcself( "拉奇#16nego01" );
 		cloakonnpcself( "戈尼#16nego03" );
 		next;
 		mes "[雷兹]";
@@ -2689,10 +2689,10 @@ rebel_in,21,45,5	script	雷兹#16nego04	4_M_LAZY,{
 		mes "Who kicks me out! That's impossible! I will lie down here! Come out!";
 		unittalk getcharid(3), "" + strcharinfo(0) + " : I am so ashamed...", bc_self;
 		next;
-		cloakoffnpcself( "Nemi#16nego01" );
-		cloakoffnpcself( "Lucky#16nego01" );
+		cloakoffnpcself( "内米#16nego01" );
+		cloakoffnpcself( "拉奇#16nego01" );
 		cutin "16loo_03.bmp",0;
-		mes "[Lucky]";
+		mes "[拉奇]";
 		mes "Phew...";
 		next;
 		cutin "16lei_01.bmp",2;
@@ -2700,7 +2700,7 @@ rebel_in,21,45,5	script	雷兹#16nego04	4_M_LAZY,{
 		mes "He's here!!!";
 		next;
 		cutin "16loo_01.bmp",0;
-		mes "[Lucky]";
+		mes "[拉奇]";
 		mes "Your voice is so loud that it hurts my ears. Normally, stupid people have huge voices.";
 		npctalk "Who's stupid? Me?", "", bc_self;
 		next;
@@ -2711,14 +2711,14 @@ rebel_in,21,45,5	script	雷兹#16nego04	4_M_LAZY,{
 		unittalk getcharid(3), "" + strcharinfo(0) + " : 雷兹, please calm down!", bc_self;
 		next;
 		cutin "16loo_01.bmp",0;
-		mes "[Lucky]";
+		mes "[拉奇]";
 		mes "I see. Come in. We can give you a cup of tea as you wish.";
 		next;
 		mes "[Shopkeeper]";
 		mes "Are you sure it's okay?";
 		next;
 		cutin "16loo_03.bmp",0;
-		mes "[Lucky]";
+		mes "[拉奇]";
 		mes "Look at him. He can't even hurt us.";
 		next;
 		cutin "16lei_01.bmp",2;
@@ -2728,9 +2728,9 @@ rebel_in,21,45,5	script	雷兹#16nego04	4_M_LAZY,{
 		unittalk getcharid(3), "" + strcharinfo(0) + " : Really? Are you sure we are going in there?", bc_self;
 		next;
 		cutin "16loo_01.bmp",0;
-		mes "[Lucky]";
+		mes "[拉奇]";
 		mes "Follow me. It's this way.";
-		cloakonnpcself( "Lucky#16nego01" );
+		cloakonnpcself( "拉奇#16nego01" );
 		cloakonnpcself( "雷兹#16nego04" );
 		erasequest 14598;// Invisible entrance
 		setquest 14599;// A glass of tea gratitude
@@ -5672,7 +5672,7 @@ rebel_in,86,61,5	script	雷兹#16nego05	4_M_LAZY,{
 		npctalk "Exactly. I told you there would be a space behind the pillar. Didn't I?", "", bc_self;
 		next;
 		cutin "16loo_01.bmp",0;
-		mes "[Lucky]";
+		mes "[拉奇]";
 		mes "A sanatorium that looks after novices and senior citizens. There is nothing to see here. And it's too cold in here and your mouth might be twisted if you sleep here. That's why you'd better leave after drinking the tea.";
 		next;
 		cutin "16lei_03.bmp",2;
@@ -5681,7 +5681,7 @@ rebel_in,86,61,5	script	雷兹#16nego05	4_M_LAZY,{
 		next;
 		cutin "16loo_03.bmp",0;
 		emotion ET_QUESTION, getnpcid(0, "Rookie#16nego02");
-		mes "[Lucky]";
+		mes "[拉奇]";
 		mes "I gave you a cup of tea and I promised you to compensate. What else do you need?";
 		npctalk "If you wish too much, you may get bold.", "Rookie#16nego02", bc_self;
 		sleep2 300;
@@ -5693,7 +5693,7 @@ rebel_in,86,61,5	script	雷兹#16nego05	4_M_LAZY,{
 		emotion ET_MONEY;
 		next;
 		cutin "16loo_03.bmp",0;
-		mes "[Lucky]";
+		mes "[拉奇]";
 		mes "Well, then, you're leaving me with my gratitude.";
 		npctalk "Sounds good. We can save money.", "Rookie#16nego02", bc_self;
 		next;
@@ -5702,7 +5702,7 @@ rebel_in,86,61,5	script	雷兹#16nego05	4_M_LAZY,{
 		mes "No. According to my experience so far, everything that I cannot buy is useless.";
 		next;
 		cutin "16loo_03.bmp",0;
-		mes "[Lucky]";
+		mes "[拉奇]";
 		mes "I can't figure out what you want. Have a sit there anyway. I will give you a cup of tea that you desired.";
 		next;
 		cloakoffnpcself( "Magenta#16nego01" );
@@ -5724,7 +5724,7 @@ rebel_in,86,61,5	script	雷兹#16nego05	4_M_LAZY,{
 		npctalk "I'm not free like you. A superstar is always busy.", "Denny#16nego03", bc_self;
 		next;
 		cutin "16loo_02.bmp",0;
-		mes "[Lucky]";
+		mes "[拉奇]";
 		mes "I have a customer. I will get to you after giving them cups of tea. Both of you, please wait a minute.";
 		npctalk "You can wait. Right?", "Rookie#16nego02", bc_self;
 		next;
@@ -5777,7 +5777,7 @@ rebel_in,86,61,5	script	雷兹#16nego05	4_M_LAZY,{
 		npctalk "Why should I follow you?", "Senior#16nego04", bc_self;
 		next;
 		cutin "16loo_03.bmp",0;
-		mes "[Lucky]";
+		mes "[拉奇]";
 		mes "They saved Gonie's life. They came to this quiet 艾因贝克. They found injured Gonie ^0000cdaccidentally^000000 and healed him. Then they brought him ^0000cdright^000000 here.";
 		npctalk "Let me give you a lesson today!", "Senior#16nego01", bc_self;
 		sleep2 300;
@@ -5801,7 +5801,7 @@ rebel_in,86,61,5	script	雷兹#16nego05	4_M_LAZY,{
 		npctalk "They look like Lucky's customers.", "Senior#16nego03", bc_self;
 		next;
 		cutin "16loo_01.bmp",0;
-		mes "[Lucky]";
+		mes "[拉奇]";
 		mes "So, why did you come here? By the way, who are you?";
 		npctalk "Rookie doesn't know them either.", "Senior#16nego02", bc_self;
 		sleep2 500;
@@ -5863,11 +5863,11 @@ rebel_in,86,61,5	script	雷兹#16nego05	4_M_LAZY,{
 		emotion ET_SWEAT;
 		next;
 		cutin "16loo_01.bmp",0;
-		mes "[Lucky]";
+		mes "[拉奇]";
 		mes "Hey, calm down please! Put your guns in! No wonder you are hot headed elders!!";
 		next;
 		cutin "16loo_03.bmp",0;
-		mes "[Lucky]";
+		mes "[拉奇]";
 		mes "Although they have come here with a fishy purpose, it's true that they carried injured Gonie all the way here. Behave yourself, old men.";
 		npctalk "Fishy prupose!", "", bc_self;
 		npctalk "Why should we behave ourselves!", "Senior#16nego01", bc_self;
@@ -5877,7 +5877,7 @@ rebel_in,86,61,5	script	雷兹#16nego05	4_M_LAZY,{
 		mes "You are not surprised? So you knew it.";
 		next;
 		cutin "16loo_03.bmp",0;
-		mes "[Lucky]";
+		mes "[拉奇]";
 		mes "I didn't know who you were. But I knew you had a certain purpose. I had not told you my name but you were shouting 'Come out Rookie'. So I had a clue.";
 		next;
 		cutin "16lei_01.bmp",2;
@@ -9812,20 +9812,20 @@ rebel_in,19,48,5	script	Mason Bender#16.2rm	4_M_KHMAN,{
 		mes "[Mason Bender]";
 		mes "^FF0000Please leave!!!^000000";
 		next;
-		mes "[Nemi]";
+		mes "[内米]";
 		mes "How many of them? Not a single mortar.";
 		next;
-		mes "[Nemi]";
+		mes "[内米]";
 		mes "Mason is an excellent sniper and people called him genius. After he got injured, he volunteered here provisionally and now he loves this job.";
 		next;
-		mes "[Nemi]";
+		mes "[内米]";
 		mes "Although he does not have any talent in commerce, he is misunderstanding something by chance. Now he is so excited and has too many irons in the fire.";
 		next;
-		mes "[Eri]";
+		mes "[艾莉]";
 		mes "I guess we have to stop him as soon as possible.";
 		mes "Otherwise the store might be completely ruined.";
 		next;
-		mes "[Eri]";
+		mes "[艾莉]";
 		mes "I apologize on behalf of Mason that he kicked you out. Please come back tomorrow and give him a valuable advice so that he can rouse himself.";
 		close;
 	case 2:
@@ -9869,7 +9869,7 @@ rebel_in,19,48,5	script	Mason Bender#16.2rm	4_M_KHMAN,{
 			mes "[Mason Bender]";
 			mes "I will sell electric heaters to the people of Moroc. And I will sell refrigerators in Manuc!";
 			next;
-			mes "[Eri]";
+			mes "[艾莉]";
 			mes "...I hope he uses that passion elsewhere.";
 			close;
 		}
