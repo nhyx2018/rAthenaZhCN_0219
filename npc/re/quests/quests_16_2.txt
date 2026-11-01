@@ -4858,7 +4858,7 @@ rebel_in,177,30,3	script	Sorita Doritas#16.2rm	4_M_GUNSLINGER3,{
 	next;
 	emotion ET_FRET;
 	mes "[Tough Guy Sorita]";
-	mes "Dang, I have been quite upset after the commander gave me this useless work. And you make me even more upset. Get the hell out of here!";
+	mes "该死，指挥官给我这种没用的活，我已经够烦了。你还来添乱。滚出去！";
 	close2;
 	warp "rebel_in",68,76;
 	end;
