@@ -4547,7 +4547,7 @@ prt_cas_q,14,184,5	script	伊森霍诺·沃尔特#ep16wal	4_M_1STPRIN1,{
 		mes "我在试。但^0000cd家族长辈不想让我挖出这件不光彩的事^000000。";
 		next;
 		mes "[伊森霍诺]";
-		mes "Also, it is impossible to meet ^0000cd恩斯特·格奥伯格^000000.";
+		mes "而且见不到^0000cd恩斯特·格奥伯格^000000。";
 		next;
 		mes "[" + .@name$ + "]";
 		mes "他也不见你吗？";
@@ -4556,7 +4556,7 @@ prt_cas_q,14,184,5	script	伊森霍诺·沃尔特#ep16wal	4_M_1STPRIN1,{
 		mes "不，任何接触都被封锁了。";
 		next;
 		mes "[伊森霍诺]";
-		mes "The ^0000cdGuardian Knight^000000 and ^0000cd恩斯特·格奥伯格^000000 are the only people who know what has happened that day. However it is impossible to meet them. I don't know where to begin...";
+		mes "^0000cd守护骑士^000000和^0000cd恩斯特·格奥伯格^000000是唯一知道那天发生了什么的人。但见不到他们，不知从何查起……";
 		next;
 		mes "[" + .@name$ + "]";
 		mes "守护骑士？你哥哥有守护骑士？";
