@@ -4538,7 +4538,7 @@ rebel_in,70,78,3	script	埃琳娜·沃尔科娃#16.2rm	4_F_ELENA,{
 			mes "Although we let them do whatever they want outside, we teach them who's holding their lead.";
 			next;
 			mes "[USU指挥官埃琳娜]";
-			mes "And there are new members... ^0000CDJana Levedeva^000000 and ^0000CDIlya 列别杰夫^000000. They are twins and still young.";
+			mes "And there are new members... ^0000CD亚娜^000000 and ^0000CD伊利亚^000000. They are twins and still young.";
 			mes "Although they are young, their ability is outstanding. The problem is that they are out of control.";
 			next;
 			mes "[USU指挥官埃琳娜]";
@@ -4692,20 +4692,20 @@ rebel_in,70,78,3	script	埃琳娜·沃尔科娃#16.2rm	4_F_ELENA,{
 			mes "[USU指挥官埃琳娜]";
 			mes "So you're all here? I've heard the whole story.";
 			next;
-			cloakoffnpcself( "Ilya 列别杰夫#16.2rms" );
-			cloakoffnpcself( "Jana Levedeva#16.2rms" );
+			cloakoffnpcself( "伊利亚·列别杰夫#16.2rms" );
+			cloakoffnpcself( "亚娜·列别杰娃#16.2rms" );
 			cutin "",255;
-			mes "[Ilya 列别杰夫]";
+			mes "[伊利亚]";
 			mes "是。";
 			next;
-			mes "[Jana Levedeva]";
+			mes "[亚娜]";
 			mes "......Yes...";
 			next;
 			cutin "162elena_01.bmp",2;
 			mes "[USU指挥官埃琳娜]";
-			mes "Jana Levedeva and Ilya 列别杰夫! Attention!";
-			npctalk "Jana Levedeva: Yes!", "Jana Levedeva#16.2rms", bc_self;
-			npctalk "Ilya 列别杰夫: Yes! Yep!", "Ilya 列别杰夫#16.2rms", bc_self;
+			mes "亚娜 and 伊利亚! Attention!";
+			npctalk "亚娜: Yes!", "亚娜·列别杰娃#16.2rms", bc_self;
+			npctalk "伊利亚: Yes! Yep!", "伊利亚·列别杰夫#16.2rms", bc_self;
 			next;
 			emotion ET_ANGER, getnpcid(0, "埃琳娜·沃尔科娃#16.2rm");
 			mes "[USU指挥官埃琳娜]";
@@ -4725,8 +4725,8 @@ rebel_in,70,78,3	script	埃琳娜·沃尔科娃#16.2rm	4_F_ELENA,{
 			mes "[USU指挥官埃琳娜]";
 			mes "But before I scold you about it...";
 			mes "抱歉。";
-			npctalk "Jana Levedeva: Pardon...?", "Jana Levedeva#16.2rms", bc_self;
-			npctalk "Ilya 列别杰夫: Sorry...?", "Ilya 列别杰夫#16.2rms", bc_self;
+			npctalk "亚娜: Pardon...?", "亚娜·列别杰娃#16.2rms", bc_self;
+			npctalk "伊利亚: Sorry...?", "伊利亚·列别杰夫#16.2rms", bc_self;
 			next;
 			mes "[USU指挥官埃琳娜]";
 			mes "I didn't know that you had been forced so much and could not consider it. And I wasn't there for counseling even though I was your boss.";
@@ -4746,10 +4746,10 @@ rebel_in,70,78,3	script	埃琳娜·沃尔科娃#16.2rm	4_F_ELENA,{
 			mes "Would you please try to make sure this never happens again?";
 			next;
 			cutin "",255;
-			mes "[Jana Levedeva]";
+			mes "[亚娜]";
 			mes "...No... We are the ones who should apologize.";
 			next;
-			mes "[Ilya 列别杰夫]";
+			mes "[伊利亚]";
 			mes "It will never happen again...";
 			next;
 			cutin "162elena_01.bmp",2;
@@ -4758,7 +4758,7 @@ rebel_in,70,78,3	script	埃琳娜·沃尔科娃#16.2rm	4_F_ELENA,{
 			mes "But since you are minors, I would like to give you an opportunity to grow as much as possible.";
 			next;
 			mes "[USU指挥官埃琳娜]";
-			mes "Jana Levedeva and Ilya 列别杰夫. I will exclude you from the real fight for some time.";
+			mes "亚娜 and 伊利亚. I will exclude you from the real fight for some time.";
 			mes "Instead, feel free to do the works that you can do inside the unit.";
 			next;
 			mes "[USU指挥官埃琳娜]";
@@ -4766,7 +4766,7 @@ rebel_in,70,78,3	script	埃琳娜·沃尔科娃#16.2rm	4_F_ELENA,{
 			mes "Do what you want to do. Make sure you abide by the regulations.";
 			next;
 			cutin "",255;
-			mes "[Jana Levedeva]";
+			mes "[亚娜]";
 			mes "So we're... not being kicked out?";
 			next;
 			cutin "162elena_01.bmp",2;
@@ -4774,14 +4774,14 @@ rebel_in,70,78,3	script	埃琳娜·沃尔科娃#16.2rm	4_F_ELENA,{
 			mes "Don't make me say it twice. I told you I was responsible for what happened.";
 			next;
 			cutin "",255;
-			mes "[Ilya 列别杰夫]";
+			mes "[伊利亚]";
 			mes "Oh... Thank you so much!";
 			mes "And... Sorry.";
-			npctalk "Ilya 列别杰夫: I'm sorry... Commander 沃尔科娃...", "Ilya 列别杰夫#16.2rms", bc_self;
+			npctalk "伊利亚: I'm sorry... Commander 沃尔科娃...", "伊利亚·列别杰夫#16.2rms", bc_self;
 			next;
-			mes "[Jana Levedeva]";
+			mes "[亚娜]";
 			mes "Thank you, commander...!";
-			npctalk "Jana Levedeva: I am sorry...", "Jana Levedeva#16.2rms", bc_self;
+			npctalk "亚娜: I am sorry...", "亚娜·列别杰娃#16.2rms", bc_self;
 			next;
 			cutin "162elena_02.bmp",2;
 			mes "[USU指挥官埃琳娜]";
@@ -4792,8 +4792,8 @@ rebel_in,70,78,3	script	埃琳娜·沃尔科娃#16.2rm	4_F_ELENA,{
 			mes "[列别杰夫 twins]";
 			mes "Yes!";
 			next;
-			cloakonnpcself( "Ilya 列别杰夫#16.2rms" );
-			cloakonnpcself( "Jana Levedeva#16.2rms" );
+			cloakonnpcself( "伊利亚·列别杰夫#16.2rms" );
+			cloakonnpcself( "亚娜·列别杰娃#16.2rms" );
 			cutin "162elena_01.bmp",2;
 			mes "[USU指挥官埃琳娜]";
 			mes "呼……";
@@ -13615,49 +13615,49 @@ slabw01,194,91,3	script	Tommy#16nego02	4_M_GUNSLINGER2,{
 
 
 // twin quests
-rebel_in,105,54,5	script	Ilya 列别杰夫#16.2rm	4_M_ILYA,{
+rebel_in,105,54,5	script	伊利亚·列别杰夫#16.2rm	4_M_ILYA,{
 	if (lebedev_quest_16_2 < 11) {
 		switch( rand(4) ) {
 		case 0:
 			mes "The boy with silver hairs looked at me. He frowned and turned his head.";
 			next;
-			mes "[Ilya 列别杰夫]";
+			mes "[伊利亚]";
 			mes "......";
 			next;
 			mes "Although you talk to him, he would not listen at all.";
 			mes "Seems like it's easier to talk to the girl.";
 			close;
 		case 1:
-			mes "[Ilya 列别杰夫]";
+			mes "[伊利亚]";
 			mes ".........";
 			next;
-			mes "[Ilya 列别杰夫]";
+			mes "[伊利亚]";
 			mes ".....................";
 			next;
-			mes "[Ilya 列别杰夫]";
+			mes "[伊利亚]";
 			mes "...................................................";
 			next;
 			mes "He held his lips tight and looking at me.";
 			mes "Seems like it's easier to talk to the girl.";
 			close;
 		case 2:
-			mes "[Ilya 列别杰夫]";
+			mes "[伊利亚]";
 			mes "......Don't talk to Jana.";
 			next;
-			mes "[Ilya 列别杰夫]";
+			mes "[伊利亚]";
 			mes "......";
 			next;
-			mes "[Ilya 列别杰夫]";
+			mes "[伊利亚]";
 			mes "Don't talk to me either.";
 			next;
 			mes "He held his lips tight with a stubborn face..";
 			mes "Seems like it's easier to talk to the girl.";
 			close;
 		case 3:
-			mes "[Ilya 列别杰夫]";
+			mes "[伊利亚]";
 			mes "Jana... You're cute even when you're breathing...";
 			next;
-			mes "[Ilya 列别杰夫]";
+			mes "[伊利亚]";
 			mes "...?!!!";
 			mes "Why did you overhear me?";
 			next;
@@ -13668,112 +13668,112 @@ rebel_in,105,54,5	script	Ilya 列别杰夫#16.2rm	4_M_ILYA,{
 	}
 	switch( rand(4) ) {
 	case 0:
-		mes "[Ilya 列别杰夫]";
+		mes "[伊利亚]";
 		mes "Adventurer, could you please ask Jana?";
 		next;
-		mes "[Ilya 列别杰夫]";
+		mes "[伊利亚]";
 		mes "I mean.... how much she likes her older brother...";
 		next;
-		mes "[Jana Levedeva]";
+		mes "[亚娜]";
 		mes "Ilya, I heard that.";
 		next;
-		mes "[Ilya 列别杰夫]";
+		mes "[伊利亚]";
 		mes "Gosh! No, no... I was just...!!";
 		close;
 	case 1:
-		mes "[Ilya 列别杰夫]";
+		mes "[伊利亚]";
 		mes "I made cookies together with Jana. Yesterday, we read a book together. Tomorrow we will explore the dead mine...";
 		next;
-		mes "Ilya 列别杰夫 is be excited and boasting about what happened.";
+		mes "伊利亚 is be excited and boasting about what happened.";
 		close;
 	case 2:
-		mes "[Ilya 列别杰夫]";
+		mes "[伊利亚]";
 		mes "I want to be called by my first name, Ilya...";
 		next;
-		mes "[Ilya 列别杰夫]";
+		mes "[伊利亚]";
 		mes "I mean... by Jana. Not by you.";
 		next;
-		mes "[Ilya 列别杰夫]";
+		mes "[伊利亚]";
 		mes "Sometimes I wish she calls me 'brother'...";
 		next;
-		mes "[Ilya 列别杰夫]";
+		mes "[伊利亚]";
 		mes "Jana calls you Older " + ( Sex ? "brother" : "sister" ) + ". And why does she call me Ilya...?!";
 		close;
 	case 3:
-		mes "[Ilya 列别杰夫]";
+		mes "[伊利亚]";
 		mes "Shooting? I like it. But it's not the only reason I practice it.";
 		next;
-		mes "[Ilya 列别杰夫]";
+		mes "[伊利亚]";
 		mes "Because I have to support Jana. I will shoot anyone who puts a hand on Jana.";
 		next;
-		mes "Ilya 列别杰夫 looks quite excited.";
+		mes "伊利亚 looks quite excited.";
 		close;
 	}
 }
 
-rebel_in,109,54,3	script	Jana Levedeva#16.2rm	4_F_ANYA,{
+rebel_in,109,54,3	script	亚娜·列别杰娃#16.2rm	4_F_ANYA,{
 	if (lebedev_quest_16_2 == 0) {
-		mes "[Jana Levedeva]";
-		mes "I don't want to be treated as a child.";
-		mes "Do not stroke my head.";
+		mes "[亚娜]";
+		mes "我不想被当成小孩。";
+		mes "别摸我的头。";
 		next;
-		mes "[Jana Levedeva]";
-		mes "Ilya is the only one who can call me Jana.";
-		mes "Call me 列别杰夫a.";
+		mes "[亚娜]";
+		mes "只有伊利亚能叫我亚娜。";
+		mes "叫我列别杰娃。";
 		close;
 	}
 	if (lebedev_quest_16_2 == 1) {
-		mes "[Jana Levedeva]";
-		mes "......Who are you?";
-		mes "You don't look like 反叛者.";
+		mes "[亚娜]";
+		mes "……你是谁？";
+		mes "你不像反叛者。";
 		next;
 		mes "[" + strcharinfo(0) + "]";
-		mes "You are right. I'm an adventurer.";
+		mes "没错，我是冒险者。";
 		next;
-		mes "[Ilya 列别杰夫]";
-		mes "How did an adventurer come in here?";
+		mes "[伊利亚]";
+		mes "冒险者怎么进来的？";
 		next;
-		npctalk "Jana Levedeva: Oops, you are...", "", bc_self;
-		mes "[Jana Levedeva]";
-		mes "Are you the adventurer who defeated our commander?";
-		mes "So you're the one from the 秘密之翼, aren't you?";
+		npctalk "亚娜: Oops, you are...", "", bc_self;
+		mes "[亚娜]";
+		mes "你就是打败我们指挥官的那个冒险者？";
+		mes "所以你就是秘密之翼的人，对吧？";
 		next;
-		mes "[Jana Levedeva]";
-		mes "Huhu, the old guys here hate the 秘密之翼, but we don't care.";
-		mes "Since we want to fight hard in a mission, we welcome your proposal.";
+		mes "[亚娜]";
+		mes "呵呵，这里的老人讨厌秘密之翼，但我们不在乎。";
+		mes "我们想在任务里大干一场，所以欢迎你的提议。";
 		next;
-		npctalk "Ilya 列别杰夫: Me too!", "Ilya 列别杰夫#16.2rm", bc_self;
-		mes "[Ilya 列别杰夫]";
-		mes "Whatever Jana likes, I like it too.";
+		npctalk "伊利亚：我也是！", "伊利亚·列别杰夫#16.2rm", bc_self;
+		mes "[伊利亚]";
+		mes "亚娜喜欢什么，我就喜欢什么。";
 		next;
-		mes "[Jana Levedeva]";
-		mes "Have you brought any story filled with gunpowder?";
-		mes "...Well, we cannot be involved in the mission anyway.";
+		mes "[亚娜]";
+		mes "你带来充满火药味的故事了吗？";
+		mes "……反正我们也参与不了任务。";
 		next;
 		mes "[" + strcharinfo(0) + "]";
-		mes "You are still young.";
+		mes "你们还年轻。";
 		next;
 		emotion ET_FRET;
-		mes "[Jana Levedeva]";
-		mes "...We'll become adults in the near future.";
-		mes "We are not that much younger compared to other people here. Does putting on several years make any difference?";
+		mes "[亚娜]";
+		mes "……我们很快就会成年。";
+		mes "我们和这里其他人差不了几岁。多长几岁就有区别吗？";
 		next;
-		mes "[Jana Levedeva]";
-		mes "They all know that we have better abilities than adults.";
-		mes "If it wasn't for one thing... No, never mind.";
+		mes "[亚娜]";
+		mes "他们都知道我们比大人更有能力。";
+		mes "要不是因为那件事……不，算了。";
 		next;
-		mes "[Jana Levedeva]";
-		mes "It's so annoying...";
-		mes "Ilya, tell the adventurer to go away.";
+		mes "[亚娜]";
+		mes "真烦……";
+		mes "伊利亚，让这个冒险者走。";
 		next;
-		npctalk "Ilya 列别杰夫: Don't worry, Jana.", "Ilya 列别杰夫#16.2rm", bc_self;
-		mes "[Ilya 列别杰夫]";
-		mes "Please leave.";
-		mes "We don't want to talk to you any more.";
+		npctalk "伊利亚：别担心，亚娜。", "伊利亚·列别杰夫#16.2rm", bc_self;
+		mes "[伊利亚]";
+		mes "请离开。";
+		mes "我们不想再和你说话了。";
 		next;
 		mes "[" + strcharinfo(0) + "]";
-		mes "(So they started to hate me pretty early... What should I do?";
-		mes "Maybe I have to listen to ^0000CD反叛者s around them^000000.)";
+		mes "（这么早就讨厌我了……该怎么办？";
+		mes "也许得去听听^0000CD他们周围的反叛者^000000怎么说。）";
 		erasequest 16012;// Troublesome twin
 		setquest 16013;// Testimony: Chef's story
 		setquest 16014;// Testimony: Sniper's story
@@ -13782,16 +13782,16 @@ rebel_in,109,54,3	script	Jana Levedeva#16.2rm	4_F_ANYA,{
 	}
 	if (lebedev_quest_16_2 == 2 || lebedev_quest_16_2 == 3) {
 		emotion ET_FRET;
-		mes "[Jana Levedeva]";
-		mes "Ah, Ilya. That person keeps irritating me.";
+		mes "[亚娜]";
+		mes "啊，伊利亚。那个人一直惹我烦。";
 		next;
-		mes "[Ilya 列别杰夫]";
-		mes "Please leave.";
-		mes "I won't forgive you if you distress Jana.";
+		mes "[伊利亚]";
+		mes "请离开。";
+		mes "如果你让亚娜难过，我不会原谅你。";
 		close;
 	}
 	if (lebedev_quest_16_2 == 4) {
-		mes "[Jana Levedeva]";
+		mes "[亚娜]";
 		mes "You're here again?";
 		mes "We don't want to talk.";
 		next;
@@ -13803,21 +13803,21 @@ rebel_in,109,54,3	script	Jana Levedeva#16.2rm	4_F_ANYA,{
 			mes "Did you throw a grenade to the civilian zone during your actual mission?";
 			mes "Why did you do that?";
 			next;
-			mes "[Jana Levedeva]";
+			mes "[亚娜]";
 			mes "What...!!";
 			next;
-			npctalk "Ilya 列别杰夫: ...What, what the hell!", "Ilya 列别杰夫#16.2rm", bc_self;
-			mes "[Ilya 列别杰夫]";
+			npctalk "伊利亚: ...What, what the hell!", "伊利亚·列别杰夫#16.2rm", bc_self;
+			mes "[伊利亚]";
 			mes "Where did you hear this story!";
 			mes "Hey, why are you saying that?";
 			next;
-			npctalk "Jana Levedeva: Well, that was...";
-			emotion ET_ANGER, getnpcid(0, "Ilya 列别杰夫#16.2rm");
-			mes "[Ilya 列别杰夫]";
+			npctalk "亚娜: Well, that was...";
+			emotion ET_ANGER, getnpcid(0, "伊利亚·列别杰夫#16.2rm");
+			mes "[伊利亚]";
 			mes "Get lost! Stay away from Jana!";
 			emotion ET_SMILE;
-			npctalk "Jana Levedeva: I, I...";
-			npctalk "Ilya 列别杰夫: Don't listen, Jaja...!!", "Ilya 列别杰夫#16.2rm", bc_self;
+			npctalk "亚娜: I, I...";
+			npctalk "伊利亚: Don't listen, Jaja...!!", "伊利亚·列别杰夫#16.2rm", bc_self;
 			next;
 			mes "[" + strcharinfo(0) + "]";
 			mes "(......Looks like a huge mistake. Let's go back to ^0000CD埃琳娜·沃尔科娃^000000.)";
@@ -13827,15 +13827,15 @@ rebel_in,109,54,3	script	Jana Levedeva#16.2rm	4_F_ANYA,{
 			mes "There's something I would like to ask you.";
 			mes "I asked others and they say you were...";
 			next;
-			mes "[Jana Levedeva]";
+			mes "[亚娜]";
 			mes "...Why do you pry into our private affairs?";
 			next;
 			mes "[" + strcharinfo(0) + "]";
 			mes "I didn't pry into anything. I mean, they told me you look very tired these days...";
 			next;
-			mes "[Jana Levedeva]";
+			mes "[亚娜]";
 			mes "We are tired because someone is irritating us.";
-			npctalk "Ilya 列别杰夫: ......", "Ilya 列别杰夫#16.2rm", bc_self;
+			npctalk "伊利亚: ......", "伊利亚·列别杰夫#16.2rm", bc_self;
 			next;
 			mes "[" + strcharinfo(0) + "]";
 			mes "(......This is getting difficult. Let's go back to ^0000CD埃琳娜·沃尔科娃^000000.)";
@@ -13846,7 +13846,7 @@ rebel_in,109,54,3	script	Jana Levedeva#16.2rm	4_F_ANYA,{
 		close;
 	}
 	if (lebedev_quest_16_2 == 5 || lebedev_quest_16_2 == 6) {
-		mes "[Jana Levedeva]";
+		mes "[亚娜]";
 		mes "We don't want to talk to you. Just leave.";
 		next;
 		mes "[" + strcharinfo(0) + "]";
@@ -13855,7 +13855,7 @@ rebel_in,109,54,3	script	Jana Levedeva#16.2rm	4_F_ANYA,{
 	}
 	if (lebedev_quest_16_2 == 7) {
 		if (countitem(25161) < 1) {
-			mes "[Jana Levedeva]";
+			mes "[亚娜]";
 			mes "You're here again?";
 			next;
 			mes "[" + strcharinfo(0) + "]";
@@ -13866,24 +13866,24 @@ rebel_in,109,54,3	script	Jana Levedeva#16.2rm	4_F_ANYA,{
 		mes "[" + strcharinfo(0) + "]";
 		mes "Hello, guys?";
 		next;
-		mes "[Jana Levedeva]";
+		mes "[亚娜]";
 		mes "...Do you have so much free time? Why do you keep stalking us?";
 		next;
 		if (select( "There's something I would like to tell you.", "Want some cookie?" ) == 1) {
-			mes "[Jana Levedeva]";
+			mes "[亚娜]";
 			mes "I don't want to hear it.";
 			mes "Unless you pay us 1 million Zeny for listening to your story, leave now.";
 			close;
 		}
-		mes "[Jana Levedeva]";
+		mes "[亚娜]";
 		mes "I don't know what you are up to. But we...";
 		mes "...Wait, where did you get this cookie?";
-		npctalk "Jana Levedeva: This cookie basket, grandma 露西...?", "", bc_self;
+		npctalk "亚娜: This cookie basket, grandma 露西...?", "", bc_self;
 		next;
 		mes "[" + strcharinfo(0) + "]";
 		mes "Someone you know well told me to give this to you.";
 		next;
-		mes "[Ilya 列别杰夫]";
+		mes "[伊利亚]";
 		mes "......Commander Adler?";
 		next;
 		mes "[" + strcharinfo(0) + "]";
@@ -13891,17 +13891,17 @@ rebel_in,109,54,3	script	Jana Levedeva#16.2rm	4_F_ANYA,{
 		mes "Trust me. And tell the adventurer if you have any problem.";
 		mes "This is my request. Could you please tell me?";
 		next;
-		mes "[Jana Levedeva]";
+		mes "[亚娜]";
 		mes "......What...";
 		mes "That.. is a lie. How can I trust an adventurer...?";
-		npctalk "Jana Levedeva: Do you think you can lure us with a cookie?", "", bc_self;
-		npctalk "Ilya 列别杰夫: Jana...", "Ilya 列别杰夫#16.2rm", bc_self;
+		npctalk "亚娜: Do you think you can lure us with a cookie?", "", bc_self;
+		npctalk "伊利亚: Jana...", "伊利亚·列别杰夫#16.2rm", bc_self;
 		next;
 		mes "[" + strcharinfo(0) + "]";
 		mes "As I told you earlier, please think about commander Adler.";
 		mes "He's so worried about you. So am I, and so is commander 沃尔科娃.";
 		next;
-		mes "[Jana Levedeva]";
+		mes "[亚娜]";
 		mes "We...";
 		mes "No. We won't tell you.";
 		next;
@@ -13910,72 +13910,72 @@ rebel_in,109,54,3	script	Jana Levedeva#16.2rm	4_F_ANYA,{
 		mes "I heard you didn't ruin yourself like this before.";
 		mes "Why do you keep hurting yourself?";
 		next;
-		mes "[Jana Levedeva]";
-		npctalk "Jana Levedeva: Oh...", "", bc_self;
+		mes "[亚娜]";
+		npctalk "亚娜: Oh...", "", bc_self;
 		mes "Why do you say that? What do you know about us?";
 		mes "You know nothing!";
 		next;
-		mes "[Jana Levedeva]";
+		mes "[亚娜]";
 		mes "...I was so..";
 		mes "scared...... so...";
 		next;
 		mes "[" + strcharinfo(0) + "]";
 		mes "Scared...?";
 		next;
-		mes "[Jana Levedeva]";
+		mes "[亚娜]";
 		mes "And then... I got out of shape...";
 		mes "So I was scared... I did so... on purpose... sniffle.";
 		next;
-		mes "[Ilya 列别杰夫]";
+		mes "[伊利亚]";
 		mes "......";
 		next;
-		mes "[Ilya 列别杰夫]";
+		mes "[伊利亚]";
 		mes "I'm sure you know what happened during our first mission... not long ago.";
 		mes "After that. Jana had such a hard time.";
 		next;
-		mes "[Ilya 列别杰夫]";
+		mes "[伊利亚]";
 		mes "Because Jana and I had been so confident that we would do well.";
 		mes "Then it happened... and we... were so miserable.";
 		next;
-		mes "[Jana Levedeva]";
+		mes "[亚娜]";
 		mes "Sniffle. We didn't throw the grenade on purpose and we didn't enjoy it either. It's out fault. But, but...";
 		next;
-		mes "[Jana Levedeva]";
+		mes "[亚娜]";
 		mes "We were punished and moved to USU... Then we felt that everyone else regards us as horrible kids.";
-		npctalk "Jana Levedeva: Actually, we heard some people saying so. Even some people who don't know us said such things.", "", bc_self;
+		npctalk "亚娜: Actually, we heard some people saying so. Even some people who don't know us said such things.", "", bc_self;
 		next;
-		mes "[Ilya 列别杰夫]";
+		mes "[伊利亚]";
 		mes "We wanted to talk to commander Ericsson. But we couldn't, because we were assigned to another unit.";
 		next;
-		mes "[Jana Levedeva]";
+		mes "[亚娜]";
 		mes "We had no idea what to do. We just wanted to run away. Because everyone was blaming us and disappointed at us...";
 		mes "But we liked our unit and commander Ericsson...";
 		next;
-		mes "[Jana Levedeva]";
+		mes "[亚娜]";
 		mes "We thought that we had already ruined everything.";
 		mes "As everyone was already disappointed at us, we thought we could do whetever...";
-		npctalk "Ilya 列别杰夫: That's why we acted at our pleasure, thinking that we would be discharged soon.", "Ilya 列别杰夫#16.2rm", bc_self;
+		npctalk "伊利亚: That's why we acted at our pleasure, thinking that we would be discharged soon.", "伊利亚·列别杰夫#16.2rm", bc_self;
 		next;
-		mes "[Jana Levedeva]";
+		mes "[亚娜]";
 		mes "As we acted at our pleasure, things got worse and worse... So we were sacred...";
 		mes "Then we began to believe that we were the worst and hopeless kids...";
-		npctalk "Ilya 列别杰夫: So we thought that we would be left away again...", "Ilya 列别杰夫#16.2rm", bc_self;
+		npctalk "伊利亚: So we thought that we would be left away again...", "伊利亚·列别杰夫#16.2rm", bc_self;
 		next;
-		mes "[Ilya 列别杰夫]";
+		mes "[伊利亚]";
 		mes "It's just our excuse that nobody stopped us...";
 		mes "I'm sorry to have troubled you...";
 		next;
-		mes "[Jana Levedeva]";
+		mes "[亚娜]";
 		mes "I'm... sorry too...";
-		npctalk "Ilya 列别杰夫: And thank you....", "Ilya 列别杰夫#16.2rm", bc_self;
+		npctalk "伊利亚: And thank you....", "伊利亚·列别杰夫#16.2rm", bc_self;
 		next;
 		mes "[" + strcharinfo(0) + "]";
 		mes "That's what happened... Now I know you suffered a lot.";
 		mes "Can I tell this to your commander?";
 		mes "Of course I won't tell anyone else.";
 		next;
-		npctalk "Ilya 列别杰夫: Yes. please.", "Ilya 列别杰夫#16.2rm", bc_self;
-		npctalk "Jana Levedeva: Yes...", "", bc_self;
+		npctalk "伊利亚: Yes. please.", "伊利亚·列别杰夫#16.2rm", bc_self;
+		npctalk "亚娜: Yes...", "", bc_self;
 		mes "[" + strcharinfo(0) + "]";
 		mes "(You heard their story. Let's go to ^0000CD埃琳娜·沃尔科娃^000000 and tell her.)";
 		lebedev_quest_16_2 = 8;
@@ -13985,26 +13985,26 @@ rebel_in,109,54,3	script	Jana Levedeva#16.2rm	4_F_ANYA,{
 		close;
 	}
 	if (lebedev_quest_16_2 == 8) {
-		mes "[Jana Levedeva]";
+		mes "[亚娜]";
 		mes "......";
 		mes "We'll be scolded...";
 		mes "But we have no choice. It's our fault. Please report to our commander.";
-		npctalk "Jana Levedeva: What if she tells us to leave this unit...?", "", bc_self;
+		npctalk "亚娜: What if she tells us to leave this unit...?", "", bc_self;
 		close;
 	}
 	if (lebedev_quest_16_2 == 9) {
-		mes "[Jana Levedeva]";
+		mes "[亚娜]";
 		mes "Call from USU commander?";
 		mes "She will tell us that story...";
 		next;
 		emotion ET_THINK;
-		mes "[Jana Levedeva]";
+		mes "[亚娜]";
 		mes "We'll be kicked out...?";
 		next;
 		mes "[" + strcharinfo(0) + "]";
 		mes "I'm coming with you. I will defend you.";
 		next;
-		mes "[Ilya 列别杰夫]";
+		mes "[伊利亚]";
 		mes "Thank you...";
 		mes "...I hope Jana cheers up.";
 		erasequest 16018;// Encourage instead of punishment
@@ -14014,12 +14014,12 @@ rebel_in,109,54,3	script	Jana Levedeva#16.2rm	4_F_ANYA,{
 		close;
 	}
 	if (lebedev_quest_16_2 == 10) {
-		mes "[Jana Levedeva]";
+		mes "[亚娜]";
 		mes "Yes, I'm coming!";
 		next;
-		mes "[Jana Levedeva]";
+		mes "[亚娜]";
 		mes "I'm scared what she's going to tell us... But we will still meet her.";
-		npctalk "Ilya 列别杰夫: It's all our fault anyway.", "Ilya 列别杰夫#16.2rm", bc_self;
+		npctalk "伊利亚: It's all our fault anyway.", "伊利亚·列别杰夫#16.2rm", bc_self;
 		close;
 	}
 	.@genre$ = Sex ? "brother" : "sister";
@@ -14028,7 +14028,7 @@ rebel_in,109,54,3	script	Jana Levedeva#16.2rm	4_F_ANYA,{
 		break;
 	case 0:
 	case 1:
-		mes "[Jana Levedeva]";
+		mes "[亚娜]";
 		mes "Oh, It's Older " + .@genre$ + " " + strcharinfo(0) + " !";
 		mes "By the way, we are quite sleepy now after wandering around all day long...";
 		mes "I wonder it's already time for us to be sleepy. Let's play together tomorrow...Zzz";
@@ -14044,18 +14044,18 @@ rebel_in,109,54,3	script	Jana Levedeva#16.2rm	4_F_ANYA,{
 	for ( .@i = 0; .@i < .@size_quest_list && isbegin_quest(.@quest_list[.@i]) == 0; .@i++ )
 		continue;
 	if (.@i == .@size_quest_list) {
-		mes "[Jana Levedeva]";
+		mes "[亚娜]";
 		mes "Oh, It's Older " + .@genre$ + " " + strcharinfo(0) + " !";
 		mes "Have you come to play with us? Or for another business?";
 		next;
 		if (select( "I have come to play with you!", "I have come for another business. But I wanted to say hello." ) == 2) {
-			mes "[Jana Levedeva]";
+			mes "[亚娜]";
 			mes "I see... If you are busy, we shouldn't bother you.";
 			mes "But please don't go away without coming back to us.";
 			close;
 		}
 		emotion ET_SMILE;
-		mes "[Jana Levedeva]";
+		mes "[亚娜]";
 		mes "Wow! Really?";
 		mes "But Older " + .@genre$ + " the truth is that you are not playing with us. Older " + .@genre$ + " we are playing with you. Haha!";
 		mes "Hmm... What are we going to do?";
@@ -14063,103 +14063,103 @@ rebel_in,109,54,3	script	Jana Levedeva#16.2rm	4_F_ANYA,{
 		.@r = rand( getarraysize( .@quest_id ) );
 		switch( .@quest_id[.@r] ) {
 		case 16021:
-			mes "[Jana Levedeva]";
+			mes "[亚娜]";
 			mes "Hmm.. Commander 埃琳娜 told us to make a hobby.";
 			mes "I guess reading is a fine hobby. Isn't it?";
 			next;
-			mes "[Jana Levedeva]";
+			mes "[亚娜]";
 			mes "Please borrow a book for us from the juvenile section of Prontera library.";
 			mes "The book's name is... ^0000CDIt's dizzy after being shaken 1,000 times^000000. Please borrow this for me.";
-			npctalk "Ilya 列别杰夫: They say it's such a famous book.", "Ilya 列别杰夫#16.2rm", bc_self;
+			npctalk "伊利亚: They say it's such a famous book.", "伊利亚·列别杰夫#16.2rm", bc_self;
 			setquest 16021;// Service: Book lending agent
 			next;
-			mes "[Jana Levedeva]";
+			mes "[亚娜]";
 			mes "The juvenile corner of the Prontera library has designated rental system. You can ask the ^0000CDlibrarian in charge of juveniles^000000.";
 			close;
 		case 16022:
-			mes "[Jana Levedeva]";
+			mes "[亚娜]";
 			mes "Hmm.. Commander 埃琳娜 told us to make a hobby.";
 			mes "I guess reading is a fine hobby. Isn't it?";
 			next;
-			mes "[Jana Levedeva]";
+			mes "[亚娜]";
 			mes "Please rent a book for us from the juvenile section of Prontera Library.";
 			mes "The book's name is... ^0000CD反叛者, the history of liberty^000000. Please borrow this book for me.";
-			npctalk "Ilya 列别杰夫: After looking at its name, I feel like I must read it.", "Ilya 列别杰夫#16.2rm", bc_self;
+			npctalk "伊利亚: After looking at its name, I feel like I must read it.", "伊利亚·列别杰夫#16.2rm", bc_self;
 			setquest 16022;// Service: Book lending agent
 			next;
-			mes "[Jana Levedeva]";
+			mes "[亚娜]";
 			mes "The juvenile corner of the Prontera library has designated rental system. You can ask the ^0000CDlibrarian in charge of juveniles^000000.";
 			close;
 		case 16023:
-			mes "[Jana Levedeva]";
+			mes "[亚娜]";
 			mes "Hmm.. Commander 埃琳娜 told us to make a hobby.";
 			mes "I guess reading is a fine hobby. Isn't it?";
 			next;
-			mes "[Ilya 列别杰夫]";
+			mes "[伊利亚]";
 			mes "I would be glad if borrow a book for me from the juvenile section of Prontera library.";
 			mes "The book's name is... ^0000CDNorgroad Horizon^000000.";
-			npctalk "Ilya 列别杰夫: It's about the great adventurer who explores Norgroad.", "Ilya 列别杰夫#16.2rm", bc_self;
+			npctalk "伊利亚: It's about the great adventurer who explores Norgroad.", "伊利亚·列别杰夫#16.2rm", bc_self;
 			setquest 16023;// Service: Book lending agent
 			next;
-			mes "[Jana Levedeva]";
+			mes "[亚娜]";
 			mes "The juvenile corner of the Prontera library has designated rental system. You can ask the ^0000CDlibrarian in charge of juveniles^000000.";
 			close;
 		case 16025:
-			mes "[Jana Levedeva]";
+			mes "[亚娜]";
 			mes "Today, we would like to go to 艾因贝克 mine to research explosives. But I guess it would be dangerous if only two of us go there.";
 			next;
 			mes "[" + strcharinfo(0) + "]";
 			mes "You mean, you're dangerous for the mine? Right?";
 			next;
-			mes "[Ilya 列别杰夫]";
+			mes "[伊利亚]";
 			mes "No! How can you say that? There are so many dangerous monsters in the mine!";
 			mes "And Jana says she's curious to see if there are materials suitable for our research...";
 			next;
-			mes "[Ilya 列别杰夫]";
+			mes "[伊利亚]";
 			mes "Therefore Older " + .@genre$ + " please implement a previous exploration for us.";
 			mes "Please defeat 30 Pitman in 艾因贝克 mine and bring us a Gun Powder.";
 			mes "Older " + .@genre$ + " I'm sure this is a piece of cake for you. We will count on you!";
-			npctalk "Ilya 列别杰夫: We will count on you!", "Ilya 列别杰夫#16.2rm", bc_self;
+			npctalk "伊利亚: We will count on you!", "伊利亚·列别杰夫#16.2rm", bc_self;
 			setquest 16026;// Service: Exploring the Mine Dungeon
 			close;
 		case 16026:
-			mes "[Jana Levedeva]";
+			mes "[亚娜]";
 			mes "Today, we would like to go to 艾因贝克 mine to research explosives. But I guess it would be dangerous if only two of us go there.";
 			next;
 			mes "[" + strcharinfo(0) + "]";
 			mes "You mean, you're dangerous for the mine? Right?";
 			next;
-			mes "[Ilya 列别杰夫]";
+			mes "[伊利亚]";
 			mes "No! How can you say that? There are so many dangerous monsters in the mine!";
 			mes "And Jana says she's curious to see if there are materials suitable for our research...";
 			next;
-			mes "[Ilya 列别杰夫]";
+			mes "[伊利亚]";
 			mes "So we'd like to request you to implement a previous exploration.";
 			mes "Please defeat 20 Venomous and 20 Noxious in 艾因贝克 mine and bring us one Explosive Powder.";
 			mes "I know this will be cumbersome. But we will count on you.";
-			npctalk "Jana Levedeva: Please!";
+			npctalk "亚娜: Please!";
 			setquest 16026;// Service: Exploring the Mine Dungeon
 			close;
 		case 16027:
 			emotion ET_DELIGHT;
-			mes "[Jana Levedeva]";
+			mes "[亚娜]";
 			mes "Older " + .@genre$ + ", Older " + .@genre$ + "! We made some cookies!";
 			mes "Of course we didn't do the entire cooking... Milo prepared ingredients and the cooking space.";
 			next;
-			mes "[Jana Levedeva]";
+			mes "[亚娜]";
 			mes "It tastes good! Certainly not better than those cooked by grandma 露西. But it's still wonderful.";
 			next;
 			npctalk "I prefer the cookies of 露西, but I should start eating these.";
-			mes "[Jana Levedeva]";
+			mes "[亚娜]";
 			mes "Older " + .@genre$ + " Please have some! Older " + .@genre$ + " This is for you... And could you please these five bundles to people around you?";
 			next;
-			mes "[Jana Levedeva]";
+			mes "[亚娜]";
 			mes "To Milo, Mason and Rachel.";
 			mes "And to commander Adler and commander 埃琳娜 as well, please.";
 			mes "Make sure you tell them we made these.";
 			if (checkweight(25161,5) == 0) {
 				next;
-				mes "[Jana Levedeva]";
+				mes "[亚娜]";
 				mes "You don't have enough space in your bag.";
 				mes "Please make some space. We don't want the cookies to get broken.";
 				close;
@@ -14176,27 +14176,27 @@ rebel_in,109,54,3	script	Jana Levedeva#16.2rm	4_F_ANYA,{
 	}
 	switch( .@quest_list[.@i] ) {
 	case 16021:
-		mes "[Jana Levedeva]";
+		mes "[亚娜]";
 		mes "Did you forget what I asked you to borrow? It's dizzy after being shaken 1,000 times!";
 		mes "Last time I went there with Ilya, the librarian at juvenile section found it for me...";
 		close;
 	case 16022:
-		mes "[Jana Levedeva]";
+		mes "[亚娜]";
 		mes "Did you forget what I asked you to borrow? '反叛者, the history of liberty'!";
 		mes "Last time I went there with Ilya, the librarian at juvenile section found it for me...";
 		close;
 	case 16023:
-		mes "[Ilya 列别杰夫]";
+		mes "[伊利亚]";
 		mes "Norgroad Horizon, please.";
 		mes "If you tell the book name to the librarian, he/she will hand it you.";
 		close;
 	case 16024:
 		if (countitem(25160) < 1) {
-			mes "[Jana Levedeva]";
+			mes "[亚娜]";
 			mes "Oh, you're back? Please give the book!";
 			mes "The book... You don't have it? Don't tell me you lost it.";
 			next;
-			mes "[Jana Levedeva]";
+			mes "[亚娜]";
 			mes "If you lost it... You have to go to the library and report of the loss of that book.";
 			close;
 		}
@@ -14204,7 +14204,7 @@ rebel_in,109,54,3	script	Jana Levedeva#16.2rm	4_F_ANYA,{
 		mes "I'm back. Here's the book.";
 		mes "So you'll return it yourself?";
 		next;
-		mes "[Jana Levedeva]";
+		mes "[亚娜]";
 		mes "Wow! I wanted to read this!";
 		mes "Thank you, Older " + .@genre$ + "! Older " + .@genre$ + " do you want me to read this book for you? This must be exciting!";
 		next;
@@ -14218,15 +14218,15 @@ rebel_in,109,54,3	script	Jana Levedeva#16.2rm	4_F_ANYA,{
 		close;
 	case 16025:
 		if (checkquest(.@quest_list[.@i],HUNTING) != 2 || countitem(6244) < 1) {
-			mes "[Jana Levedeva]";
+			mes "[亚娜]";
 			mes "Oh! We're going to 艾因贝克 mine. Please implement a previous exploration for us.";
 			next;
-			mes "[Ilya 列别杰夫]";
+			mes "[伊利亚]";
 			mes "Please defeat 30 Pitman in 艾因贝克 mine and bring us a Gun Powder.";
 			mes "We are about to experiment the degree of firepower in reference to the amount of Gun Powder!";
 			close;
 		}
-		mes "[Ilya 列别杰夫]";
+		mes "[伊利亚]";
 		mes "Thank you for doing us a favor!";
 		mes "About the result, I will inform you later!";
 		delitem 6244,1;// Gun_Powder
@@ -14237,15 +14237,15 @@ rebel_in,109,54,3	script	Jana Levedeva#16.2rm	4_F_ANYA,{
 		close;
 	case 16026:
 		if (checkquest(.@quest_list[.@i],HUNTING) != 2 || countitem(6213) < 1) {
-			mes "[Jana Levedeva]";
+			mes "[亚娜]";
 			mes "Oh! We're going to 艾因贝克 mine. Please implement a previous exploration for us.";
 			next;
-			mes "[Ilya 列别杰夫]";
+			mes "[伊利亚]";
 			mes "Please defeat 20 Venomous and 20 Noxious in 艾因贝克 mine and bring us one Explosive Powder.";
 			mes "Jana is researching whether we can apply the Explosive Powder to grenades.";
 			close;
 		}
-		mes "[Ilya 列别杰夫]";
+		mes "[伊利亚]";
 		mes "Thank you for doing us a favor!";
 		mes "Jana says she will inform you about the result after the experiment!!";
 		delitem 6213,1;// Explosive_Powder
@@ -14260,24 +14260,24 @@ rebel_in,109,54,3	script	Jana Levedeva#16.2rm	4_F_ANYA,{
 				.@cookie++;
 		}
 		if (.@cookie > 0) {
-			mes "[Jana Levedeva]";
+			mes "[亚娜]";
 			mes "Please bring them to the five people I mentioned.";
 			mes "They are Milo, Mason, Rachel, commander Ericsson and commander 埃琳娜.";
 			if (countitem(25161) < 1) {
 				next;
-				mes "[Jana Levedeva]";
+				mes "[亚娜]";
 				mes "Oh, did you eat all those cookies?";
 				mes "You liked them, didn't you?";
 				mes "Oh, come on. How can you eat all of them!";
 				next;
-				mes "[Jana Levedeva]";
+				mes "[亚娜]";
 				mes "We will give you some more. Make sure you bring them to those five people please.";
 				mes "Glutton " + strcharinfo(0) + " Older " + .@genre$ + " we will make you more cookies for you next time!";
 				getitem 25161, .@cookie;// Handmade_cookie2
 			}
 			close;
 		}
-		mes "[Jana Levedeva]";
+		mes "[亚娜]";
 		mes "What did they say?";
 		mes "Did they like them? Huhu.";
 		mes "Don't you think I'm good at cooking?";
@@ -14309,8 +14309,8 @@ OnInit:
 	end;
 }
 
-rebel_in,70,75,1	duplicate(dummy_cloaked_npc)	Ilya 列别杰夫#16.2rms	4_M_ILYA
-rebel_in,69,75,1	duplicate(dummy_cloaked_npc)	Jana Levedeva#16.2rms	4_F_ANYA
+rebel_in,70,75,1	duplicate(dummy_cloaked_npc)	伊利亚·列别杰夫#16.2rms	4_M_ILYA
+rebel_in,69,75,1	duplicate(dummy_cloaked_npc)	亚娜·列别杰娃#16.2rms	4_F_ANYA
 
 prt_in,165,89,1	script	Librarian in charge of juveniles 	1_F_LIBRARYGIRL,{
 	setarray .@quest_id[0], 16021,16022,16023;
