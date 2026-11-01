@@ -4099,7 +4099,7 @@ rebel_in,70,78,3	script	埃琳娜·沃尔科娃#16.2rm	4_F_ELENA,{
 					next;
 					mes "[USU指挥官埃琳娜]";
 					mes "Just like the one I'm giving you now.";
-					mes "If you want to know what this is for, ask the stubborn guy named 'Strasse' below the stairs.";
+					mes "If you want to know what this is for, ask the stubborn guy named '斯特拉塞' below the stairs.";
 					erasequest 16060;	// Fighting is the language of warmonger
 					erasequest 16061;	// Fair and equitable result
 					setquest 16010;// Battle in great condition
@@ -4230,7 +4230,7 @@ rebel_in,70,78,3	script	埃琳娜·沃尔科娃#16.2rm	4_F_ELENA,{
 				next;
 				mes "[USU指挥官埃琳娜]";
 				mes "Just like the one I'm giving you now.";
-				mes "If you want to know what this is for, ask the stubborn guy named 'Strasse' below the stairs.";
+				mes "If you want to know what this is for, ask the stubborn guy named '斯特拉塞' below the stairs.";
 				erasequest 16011;// Arena entrance
 				erasequest 16060;	// Fighting is the language of warmonger
 				erasequest 16061;	// Fair and equitable result
@@ -6649,12 +6649,12 @@ rebel_in,86,61,5	script	雷兹#16nego05	4_M_LAZY,{
 		next;
 		cutin "",255;
 		mes "[元老]";
-		mes "I'm not leaving until I close his big mouth! I'm not leaving!";
-		npctalk "I'm not leaving!", "元老#16nego02", bc_self;
+		mes "不堵住他那张大嘴我就不走！我不走！";
+		npctalk "我不走！", "元老#16nego02", bc_self;
 		sleep2 300;
-		npctalk "Hey, behave yourself and let's go back. We have to set up a countermeasure.", "元老#16nego03", bc_self;
+		npctalk "喂，规矩点回去。我们得商量对策。", "元老#16nego03", bc_self;
 		sleep2 500;
-		npctalk "Well, I have to carry him.", "元老#16nego04", bc_self;
+		npctalk "那我只能把他扛走了。", "元老#16nego04", bc_self;
 		next;
 		cloakonnpcself( "元老#16nego02" );
 		cloakonnpcself( "元老#16nego03" );
@@ -6665,101 +6665,101 @@ rebel_in,86,61,5	script	雷兹#16nego05	4_M_LAZY,{
 		next;
 		cutin "16loo_02.bmp",0;
 		mes "[新人]";
-		mes "Yes. Let me handle this place. You go inside and get ready.";
+		mes "好，这里交给我。你们进去准备吧。";
 		next;
 		cutin "16lei_01.bmp",0;
 		cloakonnpcself( "戈尼#16nego04" );
 		mes "[雷兹]";
-		mes "I've never imagined that this would be done so perfectly. I owe you for this. Thanks.";
-		npctalk "The happiness is always with me.", "", bc_self;
+		mes "没想到能办得这么顺利。我欠你一个人情，谢谢。";
+		npctalk "幸福总是伴随着我。", "", bc_self;
 		next;
 		cutin "16lei_03.bmp",2;
 		mes "[雷兹]";
-		mes "Please go and send them a message. Tell them 'The Heron spread its wings' and they will understand.";
-		npctalk "What is that? Heron?", "Rookie#16nego02", bc_self;
+		mes "请去给他们传个消息，说‘苍鹭展翅了’，他们会明白。";
+		npctalk "那是什么？苍鹭？", "Rookie#16nego02", bc_self;
 		sleep2 300;
-		npctalk "Curious? Are you really curious?", "", bc_self;
+		npctalk "好奇？你真的好奇？", "", bc_self;
 		next;
 		mes "[" + strcharinfo(0) + "]";
-		mes "Should I go alone? Don't you have to send the message directly?";
+		mes "我一个人去？你不用亲自传消息吗？";
 		next;
 		cutin "16lei_01.bmp",2;
 		mes "[雷兹]";
-		mes "I am staying here. Hahaha. I really like this fellow and we can work together.";
-		npctalk "What do you think? You like it. Don't you?", "", bc_self;
+		mes "我留在这里。哈哈哈。我很喜欢这小子，我们可以合作。";
+		npctalk "你觉得呢？你喜欢吧？", "", bc_self;
 		next;
 		cutin "16loo_01.bmp",0;
 		mes "[新人]";
-		mes "Work with me? I don't think I can do anything useful for you.";
+		mes "和你合作？我不觉得能帮上什么忙。";
 		next;
 		cutin "16lei_03.bmp",2;
 		mes "[雷兹]";
-		mes "Exactly. That's something you should change. Self-confidence. In your case, the lack of confidence caused the lack of self-confidence.";
+		mes "就是这样，你该改改。自信点。你的问题是缺乏自信导致更没自信。";
 		next;
 		cutin "16lei_01.bmp",2;
 		mes "[雷兹]";
-		mes "Confidence can be obtained by yourself, through an achievement or by being approved by someone else a person. It's impossible here. This place is like a suit that does not fit for you.";
+		mes "自信可以靠自己、靠成就或别人的认可获得。但在这里不可能。这地方就像一件不合身的衣服。";
 		next;
 		cutin "16lei_03.bmp",2;
 		mes "[雷兹]";
-		mes "As long as there is just one person who trusts you, you can grow to infinity.";
+		mes "只要有一个人信任你，你就能无限成长。";
 		next;
 		mes "[雷兹]";
-		mes "You may not have realized it. But you are already doing it to everyone here. They all counting on you. Just trust yourself a little more.";
+		mes "你可能没意识到，但你已经在为这里所有人这么做。他们都依赖你。再多相信自己一点。";
 		next;
 		cutin "16lei_02.bmp",2;
 		mes "[雷兹]";
-		mes "If you don't get it, trust me. Because I trust you.";
-		unittalk getcharid(3), "" + strcharinfo(0) + " : This is called 'infinite confidence'.", bc_self;
+		mes "如果还不明白，就相信我。因为我信任你。";
+		unittalk getcharid(3), "" + strcharinfo(0) + "：这叫‘无限自信’。", bc_self;
 		next;
 		cutin "16lei_03.bmp",2;
 		emotion ET_BEST;
 		mes "[雷兹]";
-		mes "Now the generation has shifted. Today is the last day for the old generation and the first day for the new generation. And you are the link.";
+		mes "时代已经交替。今天是旧世代的最后一天，也是新世代的第一天。而你是连接点。";
 		next;
 		cutin "16lei_01.bmp",2;
 		mes "[雷兹]";
-		mes "You're too good to waste your talent here.";
+		mes "你太优秀了，不该把才能浪费在这里。";
 		next;
 		cutin "16lei_03.bmp",2;
 		mes "[雷兹]";
-		mes "First, you had the ability to find out that I had a certain purpose. You were also able to find out what's helpful for 反叛者s. Then you had the guts to implement it. You also have the humanity...";
+		mes "首先，你能看出我有目的；也能找出对反叛者有利的事；还有胆量去执行。你还有人情味……";
 		next;
 		mes "[雷兹]";
-		mes "Just a little polishing will help you spread your wings. You're supposed to use your brain. Why do you suffer by working physically?";
-		npctalk "Wings? So it's what you meant when you mentioned Heron?", "Rookie#16nego02", bc_self;
+		mes "稍加打磨你就能展翅。你该用脑子，为什么要靠体力受苦？";
+		npctalk "翅膀？所以你说苍鹭是这个意思？", "Rookie#16nego02", bc_self;
 		sleep2 300;
-		npctalk "Strictly speaking, no. But let's say it is similar.", "", bc_self;
+		npctalk "严格来说不是，但差不多。", "", bc_self;
 		next;
 		cutin "16lei_02.bmp",2;
 		mes "[雷兹]";
-		mes "If you want, I can help you. What do you think? I need a partner and I'm sure we can make a great duo.";
-		unittalk getcharid(3), "" + strcharinfo(0) + " : You said you'd make a duo with me.", bc_self;
+		mes "如果你愿意，我可以帮你。怎么样？我需要搭档，我们一定能组成很棒的二人组。";
+		unittalk getcharid(3), "" + strcharinfo(0) + "：你说过要和我组二人组。", bc_self;
 		sleep2 300;
-		npctalk "Adventurer. I know you'd leave me soon.", "", bc_self;
+		npctalk "冒险者，我知道你很快会离开我。", "", bc_self;
 		next;
 		cutin "16loo_01.bmp",0;
 		mes "[新人]";
-		mes "Oh, could you be explain it to me in detail?";
+		mes "哦，能详细给我解释吗？";
 		next;
 		cutin "16lei_01.bmp",2;
 		mes "[雷兹]";
-		mes "Sure. I have plenty of time. By the way, is it okay for me to stay here continuously?";
+		mes "当然。我时间多的是。对了，我可以一直待在这里吗？";
 		emotion ET_BEST;
 		next;
 		cutin "16loo_02.bmp",0;
 		mes "[新人]";
-		mes "We are now cooperating, aren't we?";
+		mes "我们现在是合作关系，不是吗？";
 		emotion ET_BEST, getnpcid(0, "Rookie#16nego02");
-		npctalk "We? Did you say 'we'? You people are so cool.", "", bc_self;
+		npctalk "我们？你说‘我们’？你们真酷。", "", bc_self;
 		next;
 		mes "[" + strcharinfo(0) + "]";
-		mes "Don't you think you're scouting him too plainly in someone else's house?";
+		mes "你不觉得在别人家里挖人太明显了吗？";
 		next;
 		cutin "16lei_02.bmp",2;
 		mes "[雷兹]";
-		mes "Is there anything wrong with it? You have this talented guy but you are not utilizing his ability. Are you? He's so talented!";
-		unittalk getcharid(3), "" + strcharinfo(0) + " : I think you are regarding him as an item.", bc_self;
+		mes "有什么问题？你们有这种人才却不利用，不是吗？他这么有才！";
+		unittalk getcharid(3), "" + strcharinfo(0) + "：我觉得你把他当物品了。", bc_self;
 		next;
 		cutin "16go_03.bmp",2;
 		cloakoffnpcself( "戈尼#16nego04" );
@@ -6772,42 +6772,42 @@ rebel_in,86,61,5	script	雷兹#16nego05	4_M_LAZY,{
 		next;
 		mes "[戈尼]";
 		mes "......";
-		npctalk "Already?", "Rookie#16nego02", bc_self;
+		npctalk "已经准备好了？", "Rookie#16nego02", bc_self;
 		next;
 		cutin "16lei_01.bmp",2;
 		mes "[雷兹]";
-		mes "What did he say?";
+		mes "他说什么？";
 		next;
 		cutin "16loo_01.bmp",0;
 		mes "[新人]";
-		mes "He says we have prepared someone to proceed the cooperation. If you go to the passage to the store, you can meet that person.";
-		npctalk "Thanks.", "Rookie#16nego02", bc_self;
+		mes "他说已经安排了推进合作的人。去通往商店的通道就能见到。";
+		npctalk "谢谢。", "Rookie#16nego02", bc_self;
 		cloakonnpcself( "戈尼#16nego04" );
 		next;
 		mes "[" + strcharinfo(0) + "]";
-		mes "Yes. I will meet that person and listen.";
+		mes "好，我去见那个人，听听他说什么。";
 		next;
 		cutin "16lei_01.bmp",2;
 		mes "[雷兹]";
-		mes "Adventurer, I need to have a long talk from now on. So I'm counting on you. When you go there, don't forget to use that place. I mean 'that place'.";
+		mes "冒险者，接下来我要长谈，就拜托你了。到了那里别忘了用‘那个地方’。";
 		next;
 		mes "[" + strcharinfo(0) + "]";
-		mes "Pardon? I see.. See you later.";
+		mes "什么？明白了……回头见。";
 		next;
 		mes "[雷兹]";
-		mes "Yikes! Wait a minute! I almost forgot. This is the reward specially prepared for this mission. I am giving all of them to you. You can exchange this with something useful.";
+		mes "哎呀！等等！差点忘了。这是为任务特别准备的报酬，全给你。可以拿去换有用的东西。";
 		next;
 		mes "[" + strcharinfo(0) + "]";
-		mes "Token of honor?";
+		mes "荣耀徽章？";
 		next;
 		mes "[雷兹]";
-		mes "Seems like the dull middle-aged person standing beside the stairs receives the tokens. His name is Strasse. If you are interested, go.";
+		mes "站在楼梯旁那个呆板的中年人好像负责收徽章，他叫斯特拉塞。有兴趣就去吧。";
 		next;
 		mes "[雷兹]";
-		mes "I gave you everything. Bye now. Say hello to the President!!";
-		npctalk "Tell his excellency to wait for a while even if his excellency misses me.", "", bc_self;
+		mes "都给你了。再见，替我向总统问好！！";
+		npctalk "告诉总统，就算想我也请等一等。", "", bc_self;
 		sleep2 300;
-		npctalk "Please visit us again, adventurer.", "Rookie#16nego02", bc_self;
+		npctalk "冒险者，请再来。", "Rookie#16nego02", bc_self;
 		erasequest 14614;// Convince the leaders
 		setquest 14615;// Between negotiation and deception
 		getitem 25155,10;	// Swz_Honor_Token
@@ -6818,7 +6818,7 @@ rebel_in,86,61,5	script	雷兹#16nego05	4_M_LAZY,{
 	}
 	cutin "16lei_01.bmp",2;
 	mes "[雷兹]";
-	mes "Yo! Welcome! Do you want a cup of tea? Did you send the message properly?";
+	mes "哟！欢迎！要喝杯茶吗？消息传到了吗？";
 	close3;
 
 OnInit:
@@ -6827,38 +6827,38 @@ OnInit:
 	end;
 }
 // Old Lady Room - Outside
-rebel_in,121,43,5	duplicate(dummy_cloaked_npc)	反叛者 Guard leader#1	4_M_REBELLION
+rebel_in,121,43,5	duplicate(dummy_cloaked_npc)	近卫队长拉西斯#1	4_M_REBELLION
 
 function	script	F_TerraGloria_Lady	{
 	if (terra_gloria_main < 16 || terra_gloria_lady_part == 0) {
-		mes "[反叛者 guard]";
+		mes "[反叛者守卫]";
 		mes "I'm sorry.";
 		mes "You cannot enter here.";
 		close;
 	}
 	if (terra_gloria_main == 16 && terra_gloria_lady_part == 1) {
-		mes "[反叛者 guard]";
+		mes "[反叛者守卫]";
 		mes "I'm sorry.";
 		mes "You cannot enter here.";
 		next;
 		select("Tell the guard that Rookie sent you.");
-		mes "[反叛者 guard]";
+		mes "[反叛者守卫]";
 		mes "Rookie?";
 		npctalk "反叛者 guard : Rookie?", "反叛者守卫#162gmbs1", bc_self;
 		npctalk "反叛者 guard : Rookie?", "反叛者 guard#162gmbs2", bc_self;
 		next;
-		mes "[反叛者 guard]";
+		mes "[反叛者守卫]";
 		mes "What's wrong with that guy?";
 		mes "Although he sent you here, you cannot enter.";
 		mes "Please go back.";
 		next;
-		cloakoffnpcself( "反叛者 Guard leader#1" );
+		cloakoffnpcself( "近卫队长拉西斯#1" );
 		mes "[反叛者 Guard leader]";
 		mes "Why is it so noisy here?";
-		npctalk "近卫队长拉西斯： Be quiet!", "反叛者 Guard leader#1", bc_self;
-		emotion ET_FRET, getnpcid(0, "反叛者 Guard leader#1");
+		npctalk "近卫队长拉西斯： Be quiet!", "近卫队长拉西斯#1", bc_self;
+		emotion ET_FRET, getnpcid(0, "近卫队长拉西斯#1");
 		next;
-		mes "[反叛者 guard]";
+		mes "[反叛者守卫]";
 		mes "I'm sorry!!!!";
 		npctalk "反叛者 guard : I'm sorry!!!!", "反叛者守卫#162gmbs1", bc_self;
 		npctalk "反叛者 guard : I'm sorry!!!!", "反叛者 guard#162gmbs2", bc_self;
@@ -6867,13 +6867,13 @@ function	script	F_TerraGloria_Lady	{
 		mes "Shut up!";
 		mes "How many times do you think I told you to be quiet!";
 		next;
-		mes "[反叛者 guard]";
+		mes "[反叛者守卫]";
 		mes "I am sorry..";
 		mes "This person wants to go inside, claiming that Rookie sent him/her.";
 		next;
 		mes "[反叛者 Guard leader]";
 		mes "Rookie?";
-		npctalk "近卫队长拉西斯： Rookie?", "反叛者 Guard leader#1", bc_self;
+		npctalk "近卫队长拉西斯： Rookie?", "近卫队长拉西斯#1", bc_self;
 		next;
 		mes "[反叛者 Guard leader]";
 		mes "Arrrgh... That kid?";
@@ -6883,7 +6883,7 @@ function	script	F_TerraGloria_Lady	{
 		next;
 		mes "[反叛者 Guard leader]";
 		mes "You...... You're the one who made a fuss downstairs a moment ago.";
-		npctalk "Guard leader : You came here with the lazy-looking guy.", "反叛者 Guard leader#1", bc_self;
+		npctalk "Guard leader : You came here with the lazy-looking guy.", "近卫队长拉西斯#1", bc_self;
 		next;
 		mes "[反叛者 Guard leader]";
 		mes "I have no idea what brought you here. But I can't let you in.";
@@ -6898,7 +6898,7 @@ function	script	F_TerraGloria_Lady	{
 		mes "[反叛者 Guard leader]";
 		mes "I said no!";
 		mes "You're so annoying!";
-		npctalk "近卫队长拉西斯： I said no. And that's it!", "反叛者 Guard leader#1", bc_self;
+		npctalk "近卫队长拉西斯： I said no. And that's it!", "近卫队长拉西斯#1", bc_self;
 		next;
 		mes "[反叛者 Guard leader]";
 		mes "If it hadn't been for the order of our leader, I could just knock you out right here......";
@@ -6906,7 +6906,7 @@ function	script	F_TerraGloria_Lady	{
 		mes "[???]";
 		mes "...... It's noisy outside.";
 		mes "What's going on? Larcis.";
-		emotion ET_HUK, getnpcid(0, "反叛者 Guard leader#1");
+		emotion ET_HUK, getnpcid(0, "近卫队长拉西斯#1");
 		next;
 		mes "[近卫队长拉西斯]";
 		mes "Nothing.";
@@ -6914,22 +6914,22 @@ function	script	F_TerraGloria_Lady	{
 		mes "[近卫队长拉西斯]";
 		mes "Hey, leave now.";
 		mes "You will be in trouble, if you keep making a fuss.";
-		emotion ET_PROFUSELY_SWAT, getnpcid(0, "反叛者 Guard leader#1");
+		emotion ET_PROFUSELY_SWAT, getnpcid(0, "近卫队长拉西斯#1");
 		next;
 		if (select( "Shout at him.", "Go back." ) == 2) {
 			mes "[近卫队长拉西斯]";
 			mes "A good idea.";
 			mes "The exit is downstairs. Go there.";
-			npctalk "近卫队长拉西斯： Hey~ Hey~ Go away!", "反叛者 Guard leader#1", bc_self;
-			cloakonnpcself( "反叛者 Guard leader#1" );
+			npctalk "近卫队长拉西斯： Hey~ Hey~ Go away!", "近卫队长拉西斯#1", bc_self;
+			cloakonnpcself( "近卫队长拉西斯#1" );
 			close;
 		}
 		mes "[近卫队长拉西斯]";
 		mes "What the hell was that!";
 		mes "You're so rude!";
 		mes "Do you want to die right now?";
-		emotion ET_HUK, getnpcid(0, "反叛者 Guard leader#1");
-		npctalk "近卫队长拉西斯： Hey!! Pipe down!!!!!", "反叛者 Guard leader#1", bc_self;
+		emotion ET_HUK, getnpcid(0, "近卫队长拉西斯#1");
+		npctalk "近卫队长拉西斯： Hey!! Pipe down!!!!!", "近卫队长拉西斯#1", bc_self;
 		next;
 		mes "[???]";
 		mes "Oops!";
@@ -6950,12 +6950,12 @@ function	script	F_TerraGloria_Lady	{
 		mes "[近卫队长拉西斯]";
 		mes "...... I see.";
 		mes "Follow me.";
-		npctalk "近卫队长拉西斯： Ha... I'll be scolded by the leader..", "反叛者 Guard leader#1", bc_self;
+		npctalk "近卫队长拉西斯： Ha... I'll be scolded by the leader..", "近卫队长拉西斯#1", bc_self;
 		next;
 		mes "[近卫队长拉西斯]";
 		mes "If you behave rudely, you won't go back alive.";
-		npctalk "近卫队长拉西斯： If anything goes wrong, we will die together!", "反叛者 Guard leader#1", bc_self;
-		cloakonnpcself( "反叛者 Guard leader#1" );
+		npctalk "近卫队长拉西斯： If anything goes wrong, we will die together!", "近卫队长拉西斯#1", bc_self;
+		cloakonnpcself( "近卫队长拉西斯#1" );
 		erasequest 11454;// Doubt
 		setquest 11455;// Doubt
 		terra_gloria_lady_part = 2;
@@ -7717,7 +7717,7 @@ rebel_in,162,87,5	script	近卫队长拉西斯#2	4_M_REBELLION,{
 				mes "... Anyway, you did a great job.";
 				next;
 				mes "[近卫队长拉西斯]";
-				mes "If you bring this token to Strasse at the stairs at 10 o'clock in the corridor of the 2nd floor, you will receive something useful in return.";
+				mes "If you bring this token to 斯特拉塞 at the stairs at 10 o'clock in the corridor of the 2nd floor, you will receive something useful in return.";
 				delitem 25165,1;// High_Class_Tea
 				erasequest 11465;// Dien's High Class Tea
 				setquest 11466;// Dien's High Class Tea
@@ -7731,7 +7731,7 @@ rebel_in,162,87,5	script	近卫队长拉西斯#2	4_M_REBELLION,{
 				mes "There must be a reason, as 里德什 told us to bring it...";
 				next;
 				mes "[近卫队长拉西斯]";
-				mes "If you bring this token to Strasse at the stairs at 10 o'clock in the corridor of the 2nd floor, you will receive something useful in return.";
+				mes "If you bring this token to 斯特拉塞 at the stairs at 10 o'clock in the corridor of the 2nd floor, you will receive something useful in return.";
 				delitem 25167,1;// Old_Letter
 				erasequest 11467;// 里德什's Old Letter
 				setquest 11468;// 里德什's Old Letter
@@ -7745,7 +7745,7 @@ rebel_in,162,87,5	script	近卫队长拉西斯#2	4_M_REBELLION,{
 				mes "科特尼斯 said it's a ring. Then it's a ring...";
 				next;
 				mes "[近卫队长拉西斯]";
-				mes "If you bring this token to Strasse at the stairs at 10 o'clock in the corridor of the 2nd floor, you will receive something useful in return.";
+				mes "If you bring this token to 斯特拉塞 at the stairs at 10 o'clock in the corridor of the 2nd floor, you will receive something useful in return.";
 				delitem 25166,4;	// Very_Shining_Ring
 				getitem 25155,3;	// Swz_Honor_Token
 				erasequest 11469;// 科特尼斯s's Shiny Ring
@@ -11475,38 +11475,38 @@ rebel_in,99,51,3	script	Imperial Operator#ext162	4_M_REPAIR,{
 	end;
 }
 
-rebel_in,74,67,5	script	Strasse#rebel_in	4_M_TATIO,{
+rebel_in,74,67,5	script	斯特拉塞#rebel_in	4_M_TATIO,{
 	disable_items;
 	if (checkweight(501,1) == 0) {
-		mes "[Strasse]";
+		mes "[斯特拉塞]";
 		mes "You have too much in your inventory.";
 		mes "Please make it lighter and come back.";
 		close;
 	}
 	if ((MaxWeight - Weight) < 1000) {
-		mes "[Strasse]";
+		mes "[斯特拉塞]";
 		mes "You have too much in your inventory.";
 		mes "Please make it lighter and come back.";
 		close;
 	}
-	mes "[Strasse]";
+	mes "[斯特拉塞]";
 	mes "Hello. How may I help you?";
 	next;
 	if (countitem(25155) < 1) {
-		mes "[Strasse]";
+		mes "[斯特拉塞]";
 		mes "Hmm... You don't have any Schwartz Honor Tokens.";
 		mes "Please come back after taking care of other tasks.";
 		close;
 	}
-	mes "[Strasse]";
+	mes "[斯特拉塞]";
 	mes "Oh, you brought the Schwartz Honor Tokens.";
 	mes "I always thank you for your help.";
 	mes "We have to show you our gratitude in return.";
 	next;
-	mes "[Strasse]";
+	mes "[斯特拉塞]";
 	mes "For our cooperators who brought certain amount of tokens, we will grant gifts. Please choose items you require.";
 	next;
-	mes "[Strasse]";
+	mes "[斯特拉塞]";
 	mes "Which one would you like to select?";
 	next;
 
@@ -11519,24 +11519,24 @@ rebel_in,74,67,5	script	Strasse#rebel_in	4_M_TATIO,{
 		28426, 1500;	// Mercenary_Ring_B
 
 	.@s = (select( "Agenda Robe", "Consultation Robe", "Costume Combat Vestige", "Hat of Republic", "Mercenary Ring A type", "Mercenary Ring B type" ) - 1) * 2;
-	mes "[Strasse]";
+	mes "[斯特拉塞]";
 	mes mesitemlink( .@item[.@s], false ) + "? I got it.";
 	mes "You need " + .@item[.@s+1] + " Schwartz Honor Tokens.";
 	mes "Are you sure you want this?";
 	next;
 	if (select( "Yes", "No" ) == 2) {
-		mes "[Strasse]";
+		mes "[斯特拉塞]";
 		mes "Please come back after you decided.";
 		close;
 	}
 	if (countitem(25155) < .@item[.@s+1]) {// Swz_Honor_Token
-		mes "[Strasse]";
+		mes "[斯特拉塞]";
 		mes "You don't have enough tokens...";
 		mes "Please collect some more.";
 		close;
 	}
 	// custom text
-	mes "[Strasse]";
+	mes "[斯特拉塞]";
 	mes "Here is your " + mesitemlink( .@item[.@s], false ) + ".";
 	delitem 25155, .@item[.@s+1];
 	getitem .@item[.@s],1;
