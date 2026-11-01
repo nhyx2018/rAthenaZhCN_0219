@@ -2927,37 +2927,37 @@ mid_campin,106,122,4	script	接待员布林克#ep13b	89,{
 
 -	script	Diego#ep13bs_	-1,{
 	if (ep13_newbs < 5) {
-		mes "[迪亚哥]";
+		mes "[迭戈]";
 		mes "我现在很忙！";
 		emotion ET_PROFUSELY_SWEAT;
 		close;
 	}
 	if (ep13_newbs == 5) {
-		mes "[迪亚哥]";
+		mes "[迭戈]";
 		mes "哇，这帐篷真大！";
 		mes "喂，那边的冒险者。请帮帮我。";
 		emotion ET_CRY;
 		next;
 		switch(select("帮他。:不帮。")) {
 		case 1:
-			mes "[迪亚哥]";
+			mes "[迭戈]";
 			mes "谢谢。";
 			emotion ET_THANKS;
 			next;
 			mes "["+ strcharinfo(0) +"]";
 			mes "你需要什么？";
 			next;
-			mes "[迪亚哥]";
+			mes "[迭戈]";
 			mes "Ah...";
 			mes "我经过这里的时候……";
 			mes "不小心踢到了柱子，";
 			mes "现在它断了。";
 			next;
-			mes "[迪亚哥]";
+			mes "[迭戈]";
 			mes "我得去请别人帮忙，";
 			mes "这里我先扶着柱子。";
 			next;
-			mes "[迪亚哥]";
+			mes "[迭戈]";
 			mes "嗯，让我想想……";
 			mes "能遇到你真是幸运，";
 			mes "路过的"+ strcharinfo(0) +".";
@@ -2966,30 +2966,30 @@ mid_campin,106,122,4	script	接待员布林克#ep13b	89,{
 			mes "哈！！你怎么知道我的名字？！";
 			emotion ET_HUK, playerattached();
 			next;
-			mes "[迪亚哥]";
+			mes "[迭戈]";
 			mes "你的名牌上写着。";
 			emotion ET_THINK;
 			next;
 			select("那我该怎么帮你。");
-			mes "[迪亚哥]";
+			mes "[迭戈]";
 			mes "我扶着这根柱子，";
 			mes "请去找修好它的材料。";
 			next;
-			mes "[迪亚哥]";
+			mes "[迭戈]";
 			mes "我需要木条撑住";
 			mes "这根柱子，还要绳子绑好。";
 			next;
-			mes "[迪亚哥]";
+			mes "[迭戈]";
 			mes "营地西边有很多树，";
 			mes "可以找到树枝";
 			mes "用来当柱子。";
 			next;
-			mes "[迪亚哥]";
+			mes "[迭戈]";
 			mes "还能在营地东边的原野";
 			mes "找到一种叫^0000FF猪笼草^000000的";
 			mes "奇怪植物，它的藤非常结实。";
 			next;
-			mes "[迪亚哥]";
+			mes "[迭戈]";
 			mes "我想用";
 			mes "这些应该就能修好";
 			mes "^0000FF20根普通的树枝和20根结实的藤^000000。";
@@ -2998,7 +2998,7 @@ mid_campin,106,122,4	script	接待员布林克#ep13b	89,{
 			setquest 11087;
 			close;
 		case 2:
-			mes "[迪亚哥]";
+			mes "[迭戈]";
 			mes "...";
 			mes "你也太狠了。";
 			mes "呜……";
@@ -3008,14 +3008,14 @@ mid_campin,106,122,4	script	接待员布林克#ep13b	89,{
 	}
 	if (ep13_newbs == 6) {
 		if ((countitem(6041) > 19) && (countitem(6042) > 19)) {
-			mes "[迪亚哥]";
+			mes "[迭戈]";
 			mes "哦！！";
 			mes "你终于把";
 			mes "材料带来了！";
 			mes "太感谢你了！！";
 			emotion ET_CRY;
 			next;
-			mes "[迪亚哥]";
+			mes "[迭戈]";
 			mes "好，我扶着这根柱子，";
 			mes "请你把树枝接上";
 			mes "再用藤绑好。";
@@ -3026,7 +3026,7 @@ mid_campin,106,122,4	script	接待员布林克#ep13b	89,{
 			close;
 		}
 		else {
-			mes "[迪亚哥]";
+			mes "[迭戈]";
 			mes "我想用";
 			mes "这些应该就能修好";
 			mes "^0000FF20根普通的树枝和20根结实的藤^000000。";
@@ -3035,14 +3035,14 @@ mid_campin,106,122,4	script	接待员布林克#ep13b	89,{
 		}
 	}
 	if (ep13_newbs == 7) {
-		mes "[迪亚哥]";
+		mes "[迭戈]";
 		mes "好，我扶着这根柱子，";
 		mes "请你把树枝接上";
 		mes "再用藤绑好。";
 		close;
 	}
 	if (ep13_newbs == 8) {
-		mes "[迪亚哥]";
+		mes "[迭戈]";
 		mes "另一根也请照这样处理。";
 		close;
 	}
@@ -3056,7 +3056,7 @@ mid_campin,106,122,4	script	接待员布林克#ep13b	89,{
 			close;
 		}
 		else {
-			mes "[迪亚哥]";
+			mes "[迭戈]";
 			mes "多亏你的帮忙，";
 			mes "我才能守住军营。";
 			mes "我遇到麻烦的时候，";
@@ -3069,14 +3069,14 @@ mid_campin,106,122,4	script	接待员布林克#ep13b	89,{
 			mes "留守这个军营的。";
 			emotion ET_PROFUSELY_SWEAT, playerattached();
 			next;
-			mes "[迪亚哥]";
+			mes "[迭戈]";
 			mes "哦！！！";
 			mes "那这真的是缘分啊！！！";
 			mes "这是这个营地的";
 			mes "特产，";
 			mes "^0000FF巧克力派^000000。";
 			next;
-			mes "[迪亚哥]";
+			mes "[迭戈]";
 			mes "请进来";
 			mes "好好休息，为明天的";
 			mes "远征做准备！！";
@@ -3089,7 +3089,7 @@ mid_campin,106,122,4	script	接待员布林克#ep13b	89,{
 		}
 	}
 	else {
-		mes "[迪亚哥]";
+		mes "[迭戈]";
 		mes "我现在很忙！";
 		emotion ET_PROFUSELY_SWEAT;
 		close;
