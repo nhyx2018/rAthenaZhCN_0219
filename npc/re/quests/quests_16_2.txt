@@ -3035,7 +3035,7 @@ ein_in01,273,275,0	script	#ep162_evt04	HIDDEN_WARP_NPC,1,1,{
 OnTouch:
 	if (terra_gloria_main == 18) {
 		setpcblock PCBLOCK_NPC, true;
-		cloakoffnpcself( "Nihil#ep162_02" );
+		cloakoffnpcself( "尼希尔#ep162_02" );
 		cloakoffnpcself( "菲洛彭特斯#ep162_03" );
 		cloakoffnpcself( "斯琪亚#ep162_05" );
 		cloakoffnpcself( "新人#ep162_01" );
@@ -3054,21 +3054,21 @@ OnTouch:
 		sleep2 2000;
 		npctalk "我们欢迎的客人等的人来了，对吧？", "雷兹#ep162_01", bc_self;
 		sleep2 2000;
-		npctalk "这边。", "Nihil#ep162_02", bc_self;
+		npctalk "这边。", "尼希尔#ep162_02", bc_self;
 		sleep2 2000;
 		setpcblock PCBLOCK_NPC, false;
 		npctalk "欢迎，冒险者！", "斯琪亚#ep162_05", bc_self;
 		end;
 	}
 	if (terra_gloria_main == 22) {
-		cloakoffnpcself( "Nihil#ep162_02" );
+		cloakoffnpcself( "尼希尔#ep162_02" );
 		cloakoffnpcself( "菲洛彭特斯#ep162_03" );
 		cloakoffnpcself( "斯琪亚#ep162_05" );
 	}
 	end;
 }
 
-ein_in01,269,285,5	script	Nihil#ep162_02	4_EP16_NIHIL,{
+ein_in01,269,285,5	script	尼希尔#ep162_02	4_EP16_NIHIL,{
 	if (terra_gloria_main == 18) {
 		mes "[尼希尔]";
 		mes "很高兴再见到你。";
@@ -5680,10 +5680,10 @@ rebel_in,86,61,5	script	雷兹#16nego05	4_M_LAZY,{
 		mes "你也太小气了。我救了他的命，你就这样对我？";
 		next;
 		cutin "16loo_03.bmp",0;
-		emotion ET_QUESTION, getnpcid(0, "Rookie#16nego02");
+		emotion ET_QUESTION, getnpcid(0, "新人#16nego02");
 		mes "[拉奇]";
 		mes "我给了你茶，也答应补偿。你还想要什么？";
-		npctalk "贪心太多会倒霉的。", "Rookie#16nego02", bc_self;
+		npctalk "贪心太多会倒霉的。", "新人#16nego02", bc_self;
 		sleep2 300;
 		npctalk "你在诅咒我吗？拜托！别让我倒霉！", "", bc_self;
 		next;
@@ -5695,7 +5695,7 @@ rebel_in,86,61,5	script	雷兹#16nego05	4_M_LAZY,{
 		cutin "16loo_03.bmp",0;
 		mes "[拉奇]";
 		mes "那就带着我的感谢走吧。";
-		npctalk "听起来不错，还能省钱。", "Rookie#16nego02", bc_self;
+		npctalk "听起来不错，还能省钱。", "新人#16nego02", bc_self;
 		next;
 		cutin "16lei_01.bmp",2;
 		mes "[雷兹]";
@@ -5726,7 +5726,7 @@ rebel_in,86,61,5	script	雷兹#16nego05	4_M_LAZY,{
 		cutin "16loo_02.bmp",0;
 		mes "[拉奇]";
 		mes "我有客人。给他们上完茶就来找你们，两位稍等。";
-		npctalk "你们能等吧？", "Rookie#16nego02", bc_self;
+		npctalk "你们能等吧？", "新人#16nego02", bc_self;
 		next;
 		mes "[丹尼]";
 		mes "我很急……";
@@ -5899,7 +5899,7 @@ rebel_in,86,61,5	script	雷兹#16nego05	4_M_LAZY,{
 		cutin "16loo_03.bmp",0;
 		mes "[新人]";
 		mes "我说了！老人家，你们聋了吗？我不知道他们是谁！太不公平了！";
-		emotion ET_CRY, getnpcid(0, "Rookie#16nego02");
+		emotion ET_CRY, getnpcid(0, "新人#16nego02");
 		npctalk "他说他不知道。", "元老#16nego04", bc_self;
 		sleep2 300;
 		npctalk "那你为什么带他们进来？", "元老#16nego02", bc_self;
@@ -5907,14 +5907,14 @@ rebel_in,86,61,5	script	雷兹#16nego05	4_M_LAZY,{
 		cutin "16loo_01.bmp",0;
 		mes "[新人]";
 		mes "如果他们想攻击，早就动手了，不会还来要茶。而且他们两个人能对我们这么多人做什么？";
-		npctalk "他们看起来不强。", "Rookie#16nego02", bc_self;
+		npctalk "他们看起来不强。", "新人#16nego02", bc_self;
 		sleep2 300;
 		npctalk "你的话有误导性，但我现在不纠正。", "", bc_self;
 		next;
 		cutin "16loo_02.bmp",0;
 		mes "[新人]";
 		mes "不管他们做什么，你们都能应付，对吧？你们可是反叛者的传说。";
-		emotion ET_SMILE, getnpcid(0, "Rookie#16nego02");
+		emotion ET_SMILE, getnpcid(0, "新人#16nego02");
 		npctalk "嗯……确实。", "元老#16nego03", bc_self;
 		sleep2 300;
 		npctalk "所以我们现在才这么做。", "元老#16nego02", bc_self;
@@ -5925,7 +5925,7 @@ rebel_in,86,61,5	script	雷兹#16nego05	4_M_LAZY,{
 		npctalk "你去哪！", "元老#16nego01", bc_self;
 		npctalk "这小子挺有头脑。", "", bc_self;
 		next;
-		cloakonnpcself( "Rookie#16nego02" );
+		cloakonnpcself( "新人#16nego02" );
 		cutin "16lei_01.bmp",2;
 		mes "[雷兹]";
 		mes "哈哈哈！很高兴见到你们。我突然在闲暇时间闯进来，吓到你们了吗？";
@@ -5995,7 +5995,7 @@ rebel_in,86,61,5	script	雷兹#16nego05	4_M_LAZY,{
 		npctalk "拜托……先谈谈……", "", bc_self;
 		next;
 		cutin "16loo_02.bmp",0;
-		cloakoffnpcself( "Rookie#16nego02" );
+		cloakoffnpcself( "新人#16nego02" );
 		mes "[新人]";
 		mes "请喝茶。";
 		next;
@@ -6176,8 +6176,8 @@ rebel_in,86,61,5	script	雷兹#16nego05	4_M_LAZY,{
 		cutin "16loo_03.bmp",0;
 		mes "[新人]";
 		mes "唉，这些老人永远不会变。";
-		emotion ET_HNG, getnpcid(0, "Rookie#16nego02");
-		npctalk "也许‘麻烦’就是他们的座右铭。", "Rookie#16nego02", bc_self;
+		emotion ET_HNG, getnpcid(0, "新人#16nego02");
+		npctalk "也许‘麻烦’就是他们的座右铭。", "新人#16nego02", bc_self;
 		next;
 		cutin "16lei_01.bmp",2;
 		mes "[雷兹]";
@@ -6186,7 +6186,7 @@ rebel_in,86,61,5	script	雷兹#16nego05	4_M_LAZY,{
 		cutin "16loo_01.bmp",0;
 		mes "[新人]";
 		mes "你早就知道，还问什么？";
-		npctalk "你这习惯真奇怪。", "Rookie#16nego02", bc_self;
+		npctalk "你这习惯真奇怪。", "新人#16nego02", bc_self;
 		next;
 		cutin "16lei_03.bmp",2;
 		mes "[雷兹]";
@@ -6205,7 +6205,7 @@ rebel_in,86,61,5	script	雷兹#16nego05	4_M_LAZY,{
 		cutin "16loo_01.bmp",0;
 		mes "[新人]";
 		mes "不知道你在说什么。茶喝完就请离开。";
-		npctalk "我还有很多事要做。", "Rookie#16nego02", bc_self;
+		npctalk "我还有很多事要做。", "新人#16nego02", bc_self;
 		next;
 		cutin "16lei_02.bmp",2;
 		mes "[雷兹]";
@@ -6225,7 +6225,7 @@ rebel_in,86,61,5	script	雷兹#16nego05	4_M_LAZY,{
 		cutin "16loo_01.bmp",0;
 		mes "[新人]";
 		mes "等我们再有难，你们又会抛弃我们。很多人过去的伤还没好。你真觉得他们会帮你们？";
-		npctalk "虽然我没直接参与，但我也不想帮你们。", "Rookie#16nego02", bc_self;
+		npctalk "虽然我没直接参与，但我也不想帮你们。", "新人#16nego02", bc_self;
 		next;
 		cutin "16lei_02.bmp",2;
 		mes "[雷兹]";
@@ -6236,7 +6236,7 @@ rebel_in,86,61,5	script	雷兹#16nego05	4_M_LAZY,{
 		mes "谁？我？";
 		npctalk "这里还有谁？", "", bc_self;
 		sleep2 300;
-		npctalk "冒险者？", "Rookie#16nego02", bc_self;
+		npctalk "冒险者？", "新人#16nego02", bc_self;
 		sleep2 500;
 		npctalk "哈哈哈，你真幽默。哈哈哈。", "", bc_self;
 		next;
@@ -6268,7 +6268,7 @@ rebel_in,86,61,5	script	雷兹#16nego05	4_M_LAZY,{
 		cutin "16loo_01.bmp",0;
 		mes "[新人]";
 		mes "我无处可去，这里的人也一样。不能仅凭你的承诺就帮你。";
-		npctalk "你要求太多了。", "Rookie#16nego02", bc_self;
+		npctalk "你要求太多了。", "新人#16nego02", bc_self;
 		next;
 		cutin "16loo_01.bmp",0;
 		mes "[新人]";
@@ -6317,7 +6317,7 @@ rebel_in,86,61,5	script	雷兹#16nego05	4_M_LAZY,{
 		cutin "16loo_03.bmp",0;
 		mes "[新人]";
 		mes "我觉得与其这样躲在这里，不如被更广阔的世界接纳。";
-		npctalk "我们到哪里都有竞争力。", "Rookie#16nego02", bc_self;
+		npctalk "我们到哪里都有竞争力。", "新人#16nego02", bc_self;
 		next;
 		cutin "16lei_01.bmp",2;
 		mes "[雷兹]";
@@ -6337,7 +6337,7 @@ rebel_in,86,61,5	script	雷兹#16nego05	4_M_LAZY,{
 		cutin "16lei_01.bmp",2;
 		mes "[雷兹]";
 		mes "幸亏那些元老比较理性，我们才能活着说话。要是有一个脾气爆的……唉……";
-		npctalk "没错。你运气好，真正脾气爆的人现在在楼上。", "Rookie#16nego02", bc_self;
+		npctalk "没错。你运气好，真正脾气爆的人现在在楼上。", "新人#16nego02", bc_self;
 		next;
 		cutin "16lei_02.bmp",2;
 		mes "[雷兹]";
@@ -6349,7 +6349,7 @@ rebel_in,86,61,5	script	雷兹#16nego05	4_M_LAZY,{
 		cutin "16loo_01.bmp",0;
 		mes "[新人]";
 		mes "他们在^0000cd二楼房间^000000，你可以上去见他们。";
-		npctalk "只要你规矩点，他们不会生你的气……大概。", "Rookie#16nego02", bc_self;
+		npctalk "只要你规矩点，他们不会生你的气……大概。", "新人#16nego02", bc_self;
 		next;
 		mes "[新人]";
 		mes "看到二楼那些房间了吗？不知道有多少人，但你只要见最重要的几个。";
@@ -6366,11 +6366,11 @@ rebel_in,86,61,5	script	雷兹#16nego05	4_M_LAZY,{
 		mes "还有谁……哦，接下来是好心的^0000cd老太太，我是说女士们^0000cd。然后见特种部队指挥官^0000cd埃尔斯特^000000……";
 		npctalk "人太多了！", "", bc_self;
 		sleep2 300;
-		npctalk "这是个大系统，一两个人可撑不起来。而且也没别人了。", "Rookie#16nego02", bc_self;
+		npctalk "这是个大系统，一两个人可撑不起来。而且也没别人了。", "新人#16nego02", bc_self;
 		next;
 		mes "[新人]";
 		mes "去见这^0000cd四组人^000000并谈谈。就像我说的，说话小心点，有些人脾气不好。";
-		npctalk "希望你的脑袋别被打出个洞……", "Rookie#16nego02", bc_self;
+		npctalk "希望你的脑袋别被打出个洞……", "新人#16nego02", bc_self;
 		next;
 		cutin "16lei_01.bmp",2;
 		mes "[雷兹]";
@@ -6416,7 +6416,7 @@ rebel_in,86,61,5	script	雷兹#16nego05	4_M_LAZY,{
 		cutin "16loo_03.bmp",0;
 		mes "[新人]";
 		mes "这很明显。我家开的是二手商店。你也知道，这一带铁的消耗量非常大。有人开玩笑说，你一闭眼他们就把你的勺子偷走。";
-		npctalk "不过那只是玩笑。他们其实什么都没偷。", "Rookie#16nego02", bc_self;
+		npctalk "不过那只是玩笑。他们其实什么都没偷。", "新人#16nego02", bc_self;
 		sleep2 300;
 		npctalk "是啊，我知道。", "", bc_self;
 		next;
@@ -6427,7 +6427,7 @@ rebel_in,86,61,5	script	雷兹#16nego05	4_M_LAZY,{
 		cutin "16lei_02.bmp",2;
 		mes "[雷兹]";
 		mes "而你帮不上他们？";
-		npctalk "没错。", "Rookie#16nego02", bc_self;
+		npctalk "没错。", "新人#16nego02", bc_self;
 		next;
 		cutin "16loo_03.bmp",0;
 		mes "[新人]";
@@ -6436,7 +6436,7 @@ rebel_in,86,61,5	script	雷兹#16nego05	4_M_LAZY,{
 		cutin "16lei_03.bmp",2;
 		mes "[雷兹]";
 		mes "哦，所以他们把你当成没用的孩子？";
-		npctalk "你去过我家？怎么知道得这么清楚？", "Rookie#16nego02", bc_self;
+		npctalk "你去过我家？怎么知道得这么清楚？", "新人#16nego02", bc_self;
 		next;
 		cutin "16loo_03.bmp",0;
 		mes "[新人]";
@@ -6468,7 +6468,7 @@ rebel_in,86,61,5	script	雷兹#16nego05	4_M_LAZY,{
 		mes "[新人]";
 		mes "但我达不到这里的要求。每次拿枪，我眼睛发酸、手发抖，根本瞄不准……";
 		npctalk "这是缺乏自信。", "", bc_self;
-		npctalk "也许吧。训练时我没问题。", "Rookie#16nego02", bc_self;
+		npctalk "也许吧。训练时我没问题。", "新人#16nego02", bc_self;
 		next;
 		cutin "16lei_01.bmp",2;
 		mes "[雷兹]";
@@ -6518,7 +6518,7 @@ rebel_in,86,61,5	script	雷兹#16nego05	4_M_LAZY,{
 		cutin "16loo_03.bmp",0;
 		mes "[新人]";
 		mes "问他们知不知道那天的事。我敢说没人知道。我们不说，别人怎么可能知道？";
-		npctalk "我们这样活着有什么意义？", "Rookie#16nego02", bc_self;
+		npctalk "我们这样活着有什么意义？", "新人#16nego02", bc_self;
 		next;
 		cutin "16loo_01.bmp",0;
 		mes "[新人]";
@@ -6551,7 +6551,7 @@ rebel_in,86,61,5	script	雷兹#16nego05	4_M_LAZY,{
 		cutin "16go_03.bmp",2;
 		mes "[戈尼]";
 		mes "......";
-		npctalk "确实……", "Rookie#16nego02", bc_self;
+		npctalk "确实……", "新人#16nego02", bc_self;
 		next;
 		cutin "",255;
 		mes "[元老]";
@@ -6598,7 +6598,7 @@ rebel_in,86,61,5	script	雷兹#16nego05	4_M_LAZY,{
 		cutin "16go_03.bmp",2;
 		mes "[戈尼]";
 		mes "......";
-		npctalk "真的吗？我也这么想。", "Rookie#16nego02", bc_self;
+		npctalk "真的吗？我也这么想。", "新人#16nego02", bc_self;
 		next;
 		mes "[元老]";
 		mes "那家伙说了什么？";
@@ -6676,7 +6676,7 @@ rebel_in,86,61,5	script	雷兹#16nego05	4_M_LAZY,{
 		cutin "16lei_03.bmp",2;
 		mes "[雷兹]";
 		mes "请去给他们传个消息，说‘苍鹭展翅了’，他们会明白。";
-		npctalk "那是什么？苍鹭？", "Rookie#16nego02", bc_self;
+		npctalk "那是什么？苍鹭？", "新人#16nego02", bc_self;
 		sleep2 300;
 		npctalk "好奇？你真的好奇？", "", bc_self;
 		next;
@@ -6727,7 +6727,7 @@ rebel_in,86,61,5	script	雷兹#16nego05	4_M_LAZY,{
 		next;
 		mes "[雷兹]";
 		mes "稍加打磨你就能展翅。你该用脑子，为什么要靠体力受苦？";
-		npctalk "翅膀？所以你说苍鹭是这个意思？", "Rookie#16nego02", bc_self;
+		npctalk "翅膀？所以你说苍鹭是这个意思？", "新人#16nego02", bc_self;
 		sleep2 300;
 		npctalk "严格来说不是，但差不多。", "", bc_self;
 		next;
@@ -6750,7 +6750,7 @@ rebel_in,86,61,5	script	雷兹#16nego05	4_M_LAZY,{
 		cutin "16loo_02.bmp",0;
 		mes "[新人]";
 		mes "我们现在是合作关系，不是吗？";
-		emotion ET_BEST, getnpcid(0, "Rookie#16nego02");
+		emotion ET_BEST, getnpcid(0, "新人#16nego02");
 		npctalk "我们？你说‘我们’？你们真酷。", "", bc_self;
 		next;
 		mes "[" + strcharinfo(0) + "]";
@@ -6772,7 +6772,7 @@ rebel_in,86,61,5	script	雷兹#16nego05	4_M_LAZY,{
 		next;
 		mes "[戈尼]";
 		mes "......";
-		npctalk "已经准备好了？", "Rookie#16nego02", bc_self;
+		npctalk "已经准备好了？", "新人#16nego02", bc_self;
 		next;
 		cutin "16lei_01.bmp",2;
 		mes "[雷兹]";
@@ -6781,7 +6781,7 @@ rebel_in,86,61,5	script	雷兹#16nego05	4_M_LAZY,{
 		cutin "16loo_01.bmp",0;
 		mes "[新人]";
 		mes "他说已经安排了推进合作的人。去通往商店的通道就能见到。";
-		npctalk "谢谢。", "Rookie#16nego02", bc_self;
+		npctalk "谢谢。", "新人#16nego02", bc_self;
 		cloakonnpcself( "戈尼#16nego04" );
 		next;
 		mes "[" + strcharinfo(0) + "]";
@@ -6807,7 +6807,7 @@ rebel_in,86,61,5	script	雷兹#16nego05	4_M_LAZY,{
 		mes "都给你了。再见，替我向总统问好！！";
 		npctalk "告诉总统，就算想我也请等一等。", "", bc_self;
 		sleep2 300;
-		npctalk "冒险者，请再来。", "Rookie#16nego02", bc_self;
+		npctalk "冒险者，请再来。", "新人#16nego02", bc_self;
 		erasequest 14614;// Convince the leaders
 		setquest 14615;// Between negotiation and deception
 		getitem 25155,10;	// Swz_Honor_Token
@@ -9401,7 +9401,7 @@ OnInit:
 	end;
 }
 
-einbroch,162,153,3	script	Huge Tree#16.2rm	4_BULLETIN_BOARD2,{
+einbroch,162,153,3	script	大树#16.2rm	4_BULLETIN_BOARD2,{
 	if (isbegin_quest(16047) == 1) {
 		if (countitem(25152) < 1) {
 			mes "你翻了翻背包。";
@@ -9942,7 +9942,7 @@ OnInit:
 	end;
 }
 
-einbech,71,168,1	script	Tired Looking Man#16.2r	4_M_SEAMAN,{
+einbech,71,168,1	script	疲惫男子#16.2r	4_M_SEAMAN,{
 	switch( isbegin_quest(16055) ) {
 	case 0:
 		mes "[疲惫的男子]";
@@ -9981,7 +9981,7 @@ OnInit:
 	end;
 }
 
-einbech,79,100,3	script	Tired Looking Old man#1	4_M_BARYO_OLD,{
+einbech,79,100,3	script	疲惫老人#1	4_M_BARYO_OLD,{
 	switch( isbegin_quest(16056) ) {
 	case 0:
 		mes "[疲惫的老人]";
@@ -10416,44 +10416,44 @@ rebel_in,108,27,3	script	米洛·里弗#16.2rm	4_M_GUNSLINGER2,{
 				}
 			}
 		case 1:
-			cloakoffnpcself( "Charity#16.2rm" );
+			cloakoffnpcself( "查丽蒂#16.2rm" );
 			mes "[查丽蒂]";
 			mes "喵~";
 			if (isbegin_quest(16041) == 1) {// daily
-				cloakoffnpcself( "Morana Rudel#16.2rm" );
-				npctalk "查丽蒂小姐！她回来了！", "Morana Rudel#16.2rm", bc_self;
+				cloakoffnpcself( "莫拉娜·鲁德尔#16.2rm" );
+				npctalk "查丽蒂小姐！她回来了！", "莫拉娜·鲁德尔#16.2rm", bc_self;
 				sleep2 1000;
-				cloakoffnpcself( "Nice Looking Gun#16.2rm" );
-				npctalk "查丽蒂小姐！你还是一如既往地漂亮！", "Nice Looking Gun#16.2rm", bc_self;
+				cloakoffnpcself( "漂亮的枪#16.2rm" );
+				npctalk "查丽蒂小姐！你还是一如既往地漂亮！", "漂亮的枪#16.2rm", bc_self;
 				sleep2 1000;
-				npctalk "查丽蒂小姐！我爱你！！！", "Morana Rudel#16.2rm", bc_self;
+				npctalk "查丽蒂小姐！我爱你！！！", "莫拉娜·鲁德尔#16.2rm", bc_self;
 				next;
 				mes "[米洛·里弗]";
 				mes "哦……！！";
 				mes "查丽蒂！你没事太好了！看看她柔软的毛！查丽蒂！！";
 				next;
 				sleep2 500;
-				npctalk "查丽蒂小姐看我了！", "Nice Looking Gun#16.2rm", bc_self;
+				npctalk "查丽蒂小姐看我了！", "漂亮的枪#16.2rm", bc_self;
 				sleep2 1000;
-				npctalk "不，傻瓜！她一定是在看水！", "Morana Rudel#16.2rm", bc_self;
+				npctalk "不，傻瓜！她一定是在看水！", "莫拉娜·鲁德尔#16.2rm", bc_self;
 				sleep2 1000;
-				npctalk "不！她真的用那双闪亮的眼睛看我了！", "Nice Looking Gun#16.2rm", bc_self;
+				npctalk "不！她真的用那双闪亮的眼睛看我了！", "漂亮的枪#16.2rm", bc_self;
 				mes "[" + strcharinfo(0) + "]";
 				mes "是我把她带回来的，他好像根本不在乎我……";
 				next;
 				emotion ET_BIGTHROB;
 				mes "[米洛·里弗]";
 				mes "查丽蒂小姐！被这个灰头土脸的冒险者带回来，你一定累坏了……要我准备洗澡水吗？还是先吃饭？或者……让我先摸摸你？！";
-				npctalk "住手！我来摸她！！", "Nice Looking Gun#16.2rm", bc_self;
+				npctalk "住手！我来摸她！！", "漂亮的枪#16.2rm", bc_self;
 				sleep2 1000;
-				npctalk "让我摸摸查丽蒂……哦，我忍不住了！", "Morana Rudel#16.2rm", bc_self;
+				npctalk "让我摸摸查丽蒂……哦，我忍不住了！", "莫拉娜·鲁德尔#16.2rm", bc_self;
 				next;
 				mes "[" + strcharinfo(0) + "]";
 				mes "他们是故意的吗？";
 				sleep2 1000;
-				npctalk "我爱你查丽蒂！美丽的查丽蒂！", "Morana Rudel#16.2rm", bc_self;
+				npctalk "我爱你查丽蒂！美丽的查丽蒂！", "莫拉娜·鲁德尔#16.2rm", bc_self;
 				sleep2 1000;
-				npctalk "查丽蒂永远！哦，请把我的灵魂带去猫天堂！！！", "Nice Looking Gun#16.2rm", bc_self;
+				npctalk "查丽蒂永远！哦，请把我的灵魂带去猫天堂！！！", "漂亮的枪#16.2rm", bc_self;
 				sleep2 1000;
 				completequest 16041;// Investigation: Capture strolling cat operation
 			}
@@ -10493,8 +10493,8 @@ rebel_in,108,27,3	script	米洛·里弗#16.2rm	4_M_GUNSLINGER2,{
 				sleep2 1000;
 				npctalk "哦，查丽蒂小姐。看看她的身姿和声音。她太棒了！";
 			}
-			cloakonnpcself( "Morana Rudel#16.2rm" );
-			cloakonnpcself( "Nice Looking Gun#16.2rm" );
+			cloakonnpcself( "莫拉娜·鲁德尔#16.2rm" );
+			cloakonnpcself( "漂亮的枪#16.2rm" );
 			if (countitem(25162) > 0)
 				delitem 25162,1;	// Anchovy_cookie
 			erasequest 16044;// In charge of Charity
@@ -10504,7 +10504,7 @@ rebel_in,108,27,3	script	米洛·里弗#16.2rm	4_M_GUNSLINGER2,{
 			next;
 			mes "[查丽蒂]";
 			mes "喵~";
-			cloakonnpcself( "Charity#16.2rm" );
+			cloakonnpcself( "查丽蒂#16.2rm" );
 			close;
 		case 2:
 			end;
@@ -10564,12 +10564,12 @@ OnInit:
 }
 
 // Milo River - Cat Event
-rebel_in,105,28,5	duplicate(dummy_cloaked_npc)	Morana Rudel#16.2rm	4_F_REBELLION2
-rebel_in,104,24,7	duplicate(dummy_cloaked_npc)	Nice Looking Gun#16.2rm	4_M_REBELLION3
-rebel_in,106,25,3	duplicate(dummy_cloaked_npc)	Charity#16.2rm	4_CAT
+rebel_in,105,28,5	duplicate(dummy_cloaked_npc)	莫拉娜·鲁德尔#16.2rm	4_F_REBELLION2
+rebel_in,104,24,7	duplicate(dummy_cloaked_npc)	漂亮的枪#16.2rm	4_M_REBELLION3
+rebel_in,106,25,3	duplicate(dummy_cloaked_npc)	查丽蒂#16.2rm	4_CAT
 
 // Milo - Cat
-einbech,34,209,3	script	Empty bench#16.2rm2	HIDDEN_NPC,{
+einbech,34,209,3	script	空长椅#16.2rm2	HIDDEN_NPC,{
 	if (isbegin_quest(16041) == 1 || isbegin_quest(16043) == 1) {
 		if (countitem(25162) < 1) {
 			mes "没有凤尾鱼饼干了。回米洛那里再拿一些吧。";
@@ -10591,10 +10591,10 @@ einbech,34,209,3	script	Empty bench#16.2rm2	HIDDEN_NPC,{
 			disablenpc();
 			close;
 		}
-		if (strnpcinfo(0) == "Empty bench#16.2rm2")
-			cloakoffnpcself( "Charity#16.2rmb2" );
+		if (strnpcinfo(0) == "空长椅#16.2rm2")
+			cloakoffnpcself( "查丽蒂#16.2rmb2" );
 		else
-			cloakoffnpcself( "Charity#16.2rmb3" );
+			cloakoffnpcself( "查丽蒂#16.2rmb3" );
 		mes "[查丽蒂]";
 		mes "喵~";
 		next;
@@ -10607,10 +10607,10 @@ einbech,34,209,3	script	Empty bench#16.2rm2	HIDDEN_NPC,{
 		setquest 16044;// In charge of Charity
 		close2;
 	}
-	if (strnpcinfo(0) == "Empty bench#16.2rm2")
-		cloakonnpcself( "Charity#16.2rmb2" );
+	if (strnpcinfo(0) == "空长椅#16.2rm2")
+		cloakonnpcself( "查丽蒂#16.2rmb2" );
 	else
-		cloakonnpcself( "Charity#16.2rmb3" );
+		cloakonnpcself( "查丽蒂#16.2rmb3" );
 	end;
 
 OnTimer30000:
@@ -10618,12 +10618,12 @@ OnTimer30000:
 	enablenpc();
 	end;
 }
-einbech,144,98,3	duplicate(Empty bench#16.2rm2)	Empty bench#16.2rm3	HIDDEN_NPC
+einbech,144,98,3	duplicate(空长椅#16.2rm2)	空长椅#16.2rm3	HIDDEN_NPC
 
-einbech,34,203,7	duplicate(dummy_cloaked_npc)	Charity#16.2rmb2	4_CAT
-einbech,141,98,5	duplicate(dummy_cloaked_npc)	Charity#16.2rmb3	4_CAT
+einbech,34,203,7	duplicate(dummy_cloaked_npc)	查丽蒂#16.2rmb2	4_CAT
+einbech,141,98,5	duplicate(dummy_cloaked_npc)	查丽蒂#16.2rmb3	4_CAT
 
-rebel_in,90,51,5	script	Rachel Smith#16.2rm	4_F_GUNSLINGER2,{
+rebel_in,90,51,5	script	瑞秋·史密斯#16.2rm	4_F_GUNSLINGER2,{
 	if (terra_gloria_main < 17) {
 		mes "[拉切尔·史密斯]";
 		mes "我负责这里的修理。补给由那边负责。";
@@ -10890,7 +10890,7 @@ OnInit:
 	end;
 }
 
-ein_in01,38,21,3	script	Blacksmith Jack#16.2rm	4_M_MIDDLE1,{
+ein_in01,38,21,3	script	铁匠杰克#16.2rm	4_M_MIDDLE1,{
 	if (rachel_quest_16_2 == 1) {
 		mes "[铁匠杰克]";
 		mes "看来你在找人。有什么事？";
@@ -10945,7 +10945,7 @@ OnInit:
 }
 
 // Misc npcs
-rebel_in,72,32,7	script	Danae#16nego01	4_F_REBELLION2,{
+rebel_in,72,32,7	script	达娜厄#16nego01	4_F_REBELLION2,{
 	mes "[达娜厄]";
 	mes "这个很好吃。还没有任务吗？";
 	next;
@@ -10957,7 +10957,7 @@ rebel_in,72,32,7	script	Danae#16nego01	4_F_REBELLION2,{
 	close;
 }
 
-rebel_in,72,29,5	script	Grinder#16nego01	4_M_REBELLION,{
+rebel_in,72,29,5	script	格林德#16nego01	4_M_REBELLION,{
 	mes "[格林德]";
 	mes "哦，真辛苦。不是吗？";
 	next;
@@ -10975,7 +10975,7 @@ rebel_in,72,29,5	script	Grinder#16nego01	4_M_REBELLION,{
 	close;
 }
 
-rebel_in,75,31,3	script	Tommy#16nego01	4_M_GUNSLINGER2,{
+rebel_in,75,31,3	script	汤米#16nego01	4_M_GUNSLINGER2,{
 	mes "[汤米]";
 	mes "你为什么一直擦它？";
 	next;
@@ -10987,7 +10987,7 @@ rebel_in,75,31,3	script	Tommy#16nego01	4_M_GUNSLINGER2,{
 	close;
 }
 
-rebel_in,72,27,5	script	Fang#16nego01	4_F_REBELLION3,{
+rebel_in,72,27,5	script	范格#16nego01	4_F_REBELLION3,{
 	mes "[范格]";
 	mes "累死了。喝杯茶就睡。";
 	next;
@@ -11005,7 +11005,7 @@ rebel_in,72,27,5	script	Fang#16nego01	4_F_REBELLION3,{
 	close;
 }
 
-rebel_in,75,26,3	script	Ben#16nego01	4_M_REBELLION,{
+rebel_in,75,26,3	script	本#16nego01	4_M_REBELLION,{
 	mes "[本]";
 	mes "啊，好饿。今天巡逻什么也没发生。";
 	next;
@@ -11014,7 +11014,7 @@ rebel_in,75,26,3	script	Ben#16nego01	4_M_REBELLION,{
 	close;
 }
 
-rebel_in,75,23,3	script	Markman#16nego01	4_M_TELEPORTER,{
+rebel_in,75,23,3	script	马克曼#16nego01	4_M_TELEPORTER,{
 	mes "[马克曼]";
 	mes "我喜欢值夜班时看书。第三卷在哪？";
 	next;
@@ -11023,7 +11023,7 @@ rebel_in,75,23,3	script	Markman#16nego01	4_M_TELEPORTER,{
 	close;
 }
 
-rebel_in,82,33,3	script	Tott#16nego01	4_F_03,{
+rebel_in,82,33,3	script	托特#16nego01	4_F_03,{
 	mes "[托特]";
 	mes "夜钓是最好的钓鱼方式。水声、微光，还有夜里独处的感觉。";
 	next;
@@ -11032,13 +11032,13 @@ rebel_in,82,33,3	script	Tott#16nego01	4_F_03,{
 	close;
 }
 
-rebel_in,90,24,5	script	Maymay#16nego01	4_F_02,{
+rebel_in,90,24,5	script	梅梅#16nego01	4_F_02,{
 	mes "[梅梅]";
 	mes "哦，我得把这个做完……呼……";
 	close;
 }
 
-rebel_in,97,24,5	script	Corona#16nego01	4_M_SCIENCE,{
+rebel_in,97,24,5	script	科罗娜#16nego01	4_M_SCIENCE,{
 	mes "[科罗娜]";
 	mes "这光，真美。太完美了！";
 	next;
@@ -11051,7 +11051,7 @@ rebel_in,97,24,5	script	Corona#16nego01	4_M_SCIENCE,{
 }
 
 // Enchants
-rebel_in,90,40,5	script	Hogar#pa0829	4_M_MASKMAN,{
+rebel_in,90,40,5	script	霍加#pa0829	4_M_MASKMAN,{
 	disable_items;
 	if (checkweight(501,1) == 0) {
 		mes "看来你的东西太多了。减少一些再来吧。";
@@ -11376,7 +11376,7 @@ rebel_in,90,40,5	script	Hogar#pa0829	4_M_MASKMAN,{
 }
 
 // Exchanges
-rebel_in,100,40,4	script	Butterfly Merchant#rebel_in	4_M_ORIENT02,{
+rebel_in,100,40,4	script	蝴蝶商人#rebel_in	4_M_ORIENT02,{
 	mes "[蝴蝶商人]";
 	mes "... ... ... ... ...";
 	mes "你需要" + getitemname(100904) + "吗？";	// Teleport_Ep16_01
@@ -11385,7 +11385,7 @@ rebel_in,100,40,4	script	Butterfly Merchant#rebel_in	4_M_ORIENT02,{
 	end;
 }
 
-rebel_in,99,51,3	script	Imperial Operator#ext162	4_M_REPAIR,{
+rebel_in,99,51,3	script	帝国操作员#ext162	4_M_REPAIR,{
 	mes "[帝国兑换员]";
 	mes "你好。";
 	mes "我们有可用" + mesitemlink( 25155, false ) + "兑换的^4d4dff帝国^000000装备。";
@@ -11543,17 +11543,17 @@ rebel_in,74,67,5	script	斯特拉塞#rebel_in	4_M_TATIO,{
 	close;
 }
 
-rebel_in,89,46,3	script	Rotten#16nego01	4_M_SITDOWN,{
+rebel_in,89,46,3	script	罗滕#16nego01	4_M_SITDOWN,{
 	mes "[罗滕]";
 	mes "啊，我讨厌打扫。怎么没人开发一台自动打扫的机器呢？";
 	close;
 }
 
-rebel_in,104,37,5	duplicate(dummy_cloaked_npc)	Daryl#16nego01	4_M_REBELLION2
-rebel_in,103,37,7	duplicate(dummy_cloaked_npc)	Trainee#16nego01	4_F_GUNSLINGER3
-rebel_in,104,39,5	duplicate(dummy_cloaked_npc)	Trainee#16nego02	4_M_GUNSLINGER3
+rebel_in,104,37,5	duplicate(dummy_cloaked_npc)	达里尔#16nego01	4_M_REBELLION2
+rebel_in,103,37,7	duplicate(dummy_cloaked_npc)	训练生#16nego01	4_F_GUNSLINGER3
+rebel_in,104,39,5	duplicate(dummy_cloaked_npc)	训练生#16nego02	4_M_GUNSLINGER3
 
-rebel_in,108,36,3	script	Master#16nego02	4_F_HUWOMAN,{
+rebel_in,108,36,3	script	教官#16nego02	4_F_HUWOMAN,{
 	if (checkweight(25155,3) == 0 || (MaxWeight - Weight) < 1000) {
 		emotion ET_OHNO;
 		mes "[教官]";
@@ -11803,7 +11803,7 @@ rebel_in,108,36,3	script	Master#16nego02	4_F_HUWOMAN,{
 		mes "[教官]";
 		mes "话说回来，他差不多该到了。";
 		next;
-		cloakoffnpcself( "Daryl#16nego01" );
+		cloakoffnpcself( "达里尔#16nego01" );
 		mes "[达里尔]";
 		mes "我来了。";
 		next;
@@ -11837,14 +11837,14 @@ rebel_in,108,36,3	script	Master#16nego02	4_F_HUWOMAN,{
 		next;
 		mes "[达里尔]";
 		mes "对不起。";
-		emotion ET_SORRY, getnpcid(0, "Daryl#16nego01");
+		emotion ET_SORRY, getnpcid(0, "达里尔#16nego01");
 		next;
 		mes "[教官]";
 		mes "这可不像道歉的态度。你弄丢的是借来的东西。现在把你的交出来。";
 		next;
 		mes "[达里尔]";
 		mes "不！绝对不行！别碰我！呀啊！";
-		emotion ET_HELP, getnpcid(0, "Daryl#16nego01");
+		emotion ET_HELP, getnpcid(0, "达里尔#16nego01");
 		next;
 		mes "[" + strcharinfo(0) + "]";
 		mes "那个……我可以走了吗？";
@@ -11867,7 +11867,7 @@ rebel_in,108,36,3	script	Master#16nego02	4_F_HUWOMAN,{
 		mes "[教官]";
 		mes "你上次借的武器……你说弄丢了吧？";
 		next;
-		emotion ET_SCRATCH, getnpcid(0, "Daryl#16nego01");
+		emotion ET_SCRATCH, getnpcid(0, "达里尔#16nego01");
 		mes "[达里尔]";
 		mes "天啊。它怎么会在那里……";
 		next;
@@ -11883,12 +11883,12 @@ rebel_in,108,36,3	script	Master#16nego02	4_F_HUWOMAN,{
 		mes "[教官]";
 		mes "你的大小姐我们先保管一阵子。你去训练室好好反省反省！";
 		next;
-		cloakoffnpcself( "Trainee#16nego01" );
-		cloakoffnpcself( "Trainee#16nego02" );
+		cloakoffnpcself( "训练生#16nego01" );
+		cloakoffnpcself( "训练生#16nego02" );
 		mes "[教官]";
 		mes "训练生！！！";
-		npctalk "是！！", "Trainee#16nego01", bc_self;
-		npctalk "是！！", "Trainee#16nego02", bc_self;
+		npctalk "是！！", "训练生#16nego01", bc_self;
+		npctalk "是！！", "训练生#16nego02", bc_self;
 		next;
 		mes "[教官]";
 		mes "过来把他拖出去！";
@@ -11898,13 +11898,13 @@ rebel_in,108,36,3	script	Master#16nego02	4_F_HUWOMAN,{
 		next;
 		mes "[达里尔]";
 		mes "不！别拿我当靶子！我还不想死！！！对不起！是我的错！我再也不敢了！";
-		emotion ET_CRY, getnpcid(0, "Daryl#16nego01");
-		npctalk "走吧。", "Trainee#16nego01", bc_self;
-		npctalk "这次我开枪绝不会失手。", "Trainee#16nego02", bc_self;
+		emotion ET_CRY, getnpcid(0, "达里尔#16nego01");
+		npctalk "走吧。", "训练生#16nego01", bc_self;
+		npctalk "这次我开枪绝不会失手。", "训练生#16nego02", bc_self;
 		next;
-		cloakonnpcself( "Trainee#16nego01" );
-		cloakonnpcself( "Trainee#16nego02" );
-		cloakonnpcself( "Daryl#16nego01" );
+		cloakonnpcself( "训练生#16nego01" );
+		cloakonnpcself( "训练生#16nego02" );
+		cloakonnpcself( "达里尔#16nego01" );
 		mes "[教官]";
 		mes "你现在一定很累了。先休息吧。明天还能拜托你吗？有兴趣的话，黎明后再来找我们。";
 		emotion ET_SWEAT, playerattached();
@@ -11929,7 +11929,7 @@ OnInit:
 	end;
 }
 
-ein_fild09,70,175,5	script	Suspicious Heap of Earth#1	4_SOIL,{
+ein_fild09,70,175,5	script	可疑的土堆#1	4_SOIL,{
 	if (isbegin_quest(14610) == 0 && isbegin_quest(14611) == 0)
 		end;
 	if (countitem(25153) >= 3) {	// what if true but hunting not completed?
@@ -11962,31 +11962,31 @@ OnTimer300000:
 	enablenpc();
 	end;
 }
-ein_fild09,136,157,5	duplicate(Suspicious Heap of Earth#1)	Suspicious Heap of Earth#2	4_SOIL
-ein_fild09,87,192,5	duplicate(Suspicious Heap of Earth#1)	Suspicious Heap of Earth#3	4_SOIL
-ein_fild09,95,234,5	duplicate(Suspicious Heap of Earth#1)	Suspicious Heap of Earth#4	4_SOIL
-ein_fild09,179,248,5	duplicate(Suspicious Heap of Earth#1)	Suspicious Heap of Earth#5	4_SOIL
-ein_fild09,127,276,5	duplicate(Suspicious Heap of Earth#1)	Suspicious Heap of Earth#6	4_SOIL
-ein_fild09,89,289,5	duplicate(Suspicious Heap of Earth#1)	Suspicious Heap of Earth#7	4_SOIL
-ein_fild09,103,352,5	duplicate(Suspicious Heap of Earth#1)	Suspicious Heap of Earth#8	4_SOIL
-ein_fild09,164,290,5	duplicate(Suspicious Heap of Earth#1)	Suspicious Heap of Earth#9	4_SOIL
-ein_fild09,256,320,5	duplicate(Suspicious Heap of Earth#1)	Suspicious Heap of Earth#10	4_SOIL
-ein_fild09,256,282,5	duplicate(Suspicious Heap of Earth#1)	Suspicious Heap of Earth#11	4_SOIL
-ein_fild09,335,239,5	duplicate(Suspicious Heap of Earth#1)	Suspicious Heap of Earth#12	4_SOIL
-ein_fild09,332,216,5	duplicate(Suspicious Heap of Earth#1)	Suspicious Heap of Earth#13	4_SOIL
-ein_fild09,135,305,5	duplicate(Suspicious Heap of Earth#1)	Suspicious Heap of Earth#14	4_SOIL
+ein_fild09,136,157,5	duplicate(可疑的土堆#1)	可疑的土堆#2	4_SOIL
+ein_fild09,87,192,5	duplicate(可疑的土堆#1)	可疑的土堆#3	4_SOIL
+ein_fild09,95,234,5	duplicate(可疑的土堆#1)	可疑的土堆#4	4_SOIL
+ein_fild09,179,248,5	duplicate(可疑的土堆#1)	可疑的土堆#5	4_SOIL
+ein_fild09,127,276,5	duplicate(可疑的土堆#1)	可疑的土堆#6	4_SOIL
+ein_fild09,89,289,5	duplicate(可疑的土堆#1)	可疑的土堆#7	4_SOIL
+ein_fild09,103,352,5	duplicate(可疑的土堆#1)	可疑的土堆#8	4_SOIL
+ein_fild09,164,290,5	duplicate(可疑的土堆#1)	可疑的土堆#9	4_SOIL
+ein_fild09,256,320,5	duplicate(可疑的土堆#1)	可疑的土堆#10	4_SOIL
+ein_fild09,256,282,5	duplicate(可疑的土堆#1)	可疑的土堆#11	4_SOIL
+ein_fild09,335,239,5	duplicate(可疑的土堆#1)	可疑的土堆#12	4_SOIL
+ein_fild09,332,216,5	duplicate(可疑的土堆#1)	可疑的土堆#13	4_SOIL
+ein_fild09,135,305,5	duplicate(可疑的土堆#1)	可疑的土堆#14	4_SOIL
 
 rebel_in,90,60,3	duplicate(dummy_cloaked_npc)	玛真塔#16nego01	4_M_GUNSLINGER2
 rebel_in,90,62,3	duplicate(dummy_cloaked_npc)	戈尼#16nego04	4_M_GONY
-rebel_in,94,71,5	duplicate(dummy_cloaked_npc)	Denny#16nego01	4_M_REBELLION3
-rebel_in,95,65,3	duplicate(dummy_cloaked_npc)	Denny#16nego02	4_M_REBELLION3
+rebel_in,94,71,5	duplicate(dummy_cloaked_npc)	丹尼#16nego01	4_M_REBELLION3
+rebel_in,95,65,3	duplicate(dummy_cloaked_npc)	丹尼#16nego02	4_M_REBELLION3
 rebel_in,90,62,3	duplicate(dummy_cloaked_npc)	丹尼#16nego03	4_M_REBELLION3
-rebel_in,90,66,3	duplicate(dummy_cloaked_npc)	Cyan#16nego01	4_F_REBELLION3
-rebel_in,90,59,3	duplicate(dummy_cloaked_npc)	Cyan#16nego02	4_F_REBELLION3
+rebel_in,90,66,3	duplicate(dummy_cloaked_npc)	赛安#16nego01	4_F_REBELLION3
+rebel_in,90,59,3	duplicate(dummy_cloaked_npc)	赛安#16nego02	4_F_REBELLION3
 
 rebel_in,87,68,5	duplicate(dummy_cloaked_npc)	#16negofire	CLEAR_NPC
 
-rebel_in,88,61,5	script	Rookie#16nego02	4_M_ROOKIE,{
+rebel_in,88,61,5	script	新人#16nego02	4_M_ROOKIE,{
 	if (checkweight(501,1) == 0) {
 		mes "[新人]";
 		mes "为什么带这么多东西？除非是想送人，不然先把包减轻再回来。";
@@ -12100,7 +12100,7 @@ rebel_in,88,61,5	script	Rookie#16nego02	4_M_ROOKIE,{
 			mes "[" + strcharinfo(0) + "]";
 			mes "……你跟我说必须来的，不是吗？";
 			next;
-			cloakoffnpcself( "Denny#16nego01" );
+			cloakoffnpcself( "丹尼#16nego01" );
 			mes "[丹尼]";
 			mes "超级巨星丹尼又登场了！！！";
 			next;
@@ -12108,8 +12108,8 @@ rebel_in,88,61,5	script	Rookie#16nego02	4_M_ROOKIE,{
 			mes "[新人]";
 			mes "真是说曹操曹操到。";
 			next;
-			cloakonnpcself( "Denny#16nego01" );
-			cloakoffnpcself( "Denny#16nego02" );
+			cloakonnpcself( "丹尼#16nego01" );
+			cloakoffnpcself( "丹尼#16nego02" );
 			mes "[丹尼]";
 			mes "呀！好冷！";
 			next;
@@ -12117,7 +12117,7 @@ rebel_in,88,61,5	script	Rookie#16nego02	4_M_ROOKIE,{
 			mes "[新人]";
 			mes "我的工作就是防止这种蠢货干蠢事。";
 			next;
-			emotion ET_ANGER, getnpcid(0, "Denny#16nego02");
+			emotion ET_ANGER, getnpcid(0, "丹尼#16nego02");
 			mes "[丹尼]";
 			mes "哎哟！谁老把水桶放这儿？我每次拿走，就又有人放回来！是谁？是喜欢看别人脚被淋湿的变态吗？";
 			next;
@@ -12125,7 +12125,7 @@ rebel_in,88,61,5	script	Rookie#16nego02	4_M_ROOKIE,{
 			mes "[新人]";
 			mes "是我。";
 			next;
-			cloakonnpcself( "Denny#16nego02" );
+			cloakonnpcself( "丹尼#16nego02" );
 			cloakoffnpcself( "丹尼#16nego03" );
 			mes "[丹尼]";
 			mes "喂！你怎么能这样对我？";
@@ -12163,7 +12163,7 @@ rebel_in,88,61,5	script	Rookie#16nego02	4_M_ROOKIE,{
 			mes "[新人]";
 			mes "喂！！！你是说我是变态？你每天拖着那么大的身子在管道上走。结果这根细管道就坏了！这里！还有那里！看到漏水了吗？";
 			next;
-			emotion ET_ANGER, getnpcid(0, "Rookie#16nego02");
+			emotion ET_ANGER, getnpcid(0, "新人#16nego02");
 			mes "[丹尼]";
 			mes "哦，真的耶。";
 			next;
@@ -12357,11 +12357,11 @@ rebel_in,88,61,5	script	Rookie#16nego02	4_M_ROOKIE,{
 			mes "[新人]";
 			mes "干得好，冒险者。突然接下这活，你一定很辛苦。";
 			next;
-			cloakoffnpcself( "Denny#16nego01" );
+			cloakoffnpcself( "丹尼#16nego01" );
 			mes "[丹尼]";
 			mes "超级巨星丹尼又登场了！！！";
 			next;
-			cloakonnpcself( "Denny#16nego01" );
+			cloakonnpcself( "丹尼#16nego01" );
 			cloakoffnpcself( "丹尼#16nego03" );
 			mes "[丹尼]";
 			mes "冒险者！都带来了吗？让我看看。";
@@ -12445,7 +12445,7 @@ rebel_in,88,61,5	script	Rookie#16nego02	4_M_ROOKIE,{
 			mes "[" + strcharinfo(0) + "]";
 			mes "……你跟我说必须来的，不是吗？";
 			next;
-			cloakoffnpcself( "Cyan#16nego02" );
+			cloakoffnpcself( "赛安#16nego02" );
 			mes "[赛安]";
 			mes "呀，好冷啊！";
 			next;
@@ -12464,16 +12464,16 @@ rebel_in,88,61,5	script	Rookie#16nego02	4_M_ROOKIE,{
 			mes "哦！我什么时候穿成这样的！";
 			emotion ET_HUK;
 			next;
-			cloakonnpcself( "Cyan#16nego02" );
-			cloakoffnpcself( "Cyan#16nego01" );
+			cloakonnpcself( "赛安#16nego02" );
+			cloakoffnpcself( "赛安#16nego01" );
 			mes "[赛安]";
 			mes "我看看……果然。壁炉的火变小了。没柴火了？";
 			next;
 			mes "[新人]";
 			mes "嗯，确实。";
 			next;
-			cloakoffnpcself( "Cyan#16nego02" );
-			cloakonnpcself( "Cyan#16nego01" );
+			cloakoffnpcself( "赛安#16nego02" );
+			cloakonnpcself( "赛安#16nego01" );
 			mes "[赛安]";
 			mes "等这最后一块柴烧完，我就要死了……最后……一块柴……";
 			next;
@@ -12562,7 +12562,7 @@ rebel_in,88,61,5	script	Rookie#16nego02	4_M_ROOKIE,{
 				mes "[赛安]";
 				mes "亲爱的，想我就回来！";
 				next;
-				cloakonnpcself( "Cyan#16nego02" );
+				cloakonnpcself( "赛安#16nego02" );
 				mes "[" + strcharinfo(0) + "]";
 				mes "好的，我会的。";
 				close3;
@@ -12608,7 +12608,7 @@ rebel_in,88,61,5	script	Rookie#16nego02	4_M_ROOKIE,{
 			mes "小心点，亲爱的～";
 			next;
 			cutin "16loo_01.bmp",2;
-			cloakonnpcself( "Cyan#16nego02" );
+			cloakonnpcself( "赛安#16nego02" );
 			emotion ET_PROFUSELY_SWEAT, playerattached();
 			mes "[新人]";
 			mes "唉……总之还是拜托你了。不管那家伙说什么，火一灭大家都会感冒的。";
@@ -12619,7 +12619,7 @@ rebel_in,88,61,5	script	Rookie#16nego02	4_M_ROOKIE,{
 			mes "[新人]";
 			mes "冒险者，看来你费了不少力气！";
 			next;
-			cloakoffnpcself( "Cyan#16nego02" );
+			cloakoffnpcself( "赛安#16nego02" );
 			mes "[赛安]";
 			mes "欢迎回来，亲爱的！！！都给我带来了吧？对吧？";
 			next;
@@ -12633,7 +12633,7 @@ rebel_in,88,61,5	script	Rookie#16nego02	4_M_ROOKIE,{
 				mes "[赛安]";
 				mes "还有别忘了打倒10只左右的废弃暖炉！我要上床睡了。好冷！";
 				next;
-				cloakonnpcself( "Cyan#16nego02" );
+				cloakonnpcself( "赛安#16nego02" );
 				cutin "16loo_03.bmp",2;
 				mes "[新人]";
 				mes "真是太任性了。冒险者，又要拜托你了。你要是不带来，赛安会缠你一整天。";
@@ -12649,7 +12649,7 @@ rebel_in,88,61,5	script	Rookie#16nego02	4_M_ROOKIE,{
 				mes "[赛安]";
 				mes "打倒^0000cd10只废弃暖炉^000000。我要上床睡了。好冷！";
 				next;
-				cloakonnpcself( "Cyan#16nego02" );
+				cloakonnpcself( "赛安#16nego02" );
 				cutin "16loo_03.bmp",2;
 				mes "[新人]";
 				mes "真是太任性了。冒险者，又要拜托你了。你要是不带来，赛安会缠你一整天。";
@@ -12703,7 +12703,7 @@ rebel_in,88,61,5	script	Rookie#16nego02	4_M_ROOKIE,{
 			mes "现在我要进去睡了。再见！";
 			next;
 			cloakonnpcself( "#16negofire" );
-			cloakonnpcself( "Cyan#16nego02" );
+			cloakonnpcself( "赛安#16nego02" );
 			mes "[新人]";
 			mes "唉，我也累坏了。现在好好休息，^0000cd黎明^000000后再来吧。";
 			erasequest 14604;// National Fuel Solar Fuel
@@ -13003,7 +13003,7 @@ rebel_in,88,61,5	script	Rookie#16nego02	4_M_ROOKIE,{
 			mes "[" + strcharinfo(0) + "]";
 			mes "……你跟我说必须来的，不是吗？";
 			next;
-			cloakoffnpcself( "Denny#16nego01" );
+			cloakoffnpcself( "丹尼#16nego01" );
 			mes "[丹尼]";
 			mes "超级巨星丹尼又登场了！！！";
 			next;
@@ -13037,14 +13037,14 @@ rebel_in,88,61,5	script	Rookie#16nego02	4_M_ROOKIE,{
 			mes "[新人]";
 			mes "欢迎回来，冒险者。谢谢你的帮忙。我们那傻孩子给你添麻烦了。";
 			next;
-			cloakoffnpcself( "Denny#16nego01" );
+			cloakoffnpcself( "丹尼#16nego01" );
 			mes "[丹尼]";
 			mes "冒险者来了？";
 			next;
 			mes "[丹尼]";
 			mes "超级巨星丹尼又登场了！！！";
 			next;
-			cloakonnpcself( "Denny#16nego01" );
+			cloakonnpcself( "丹尼#16nego01" );
 			cloakoffnpcself( "丹尼#16nego03" );
 			mes "[丹尼]";
 			mes "冒险者！都带来了吗？让我看看。";
@@ -13126,7 +13126,7 @@ rebel_in,88,61,5	script	Rookie#16nego02	4_M_ROOKIE,{
 			mes "[" + strcharinfo(0) + "]";
 			mes "……你跟我说必须来的，不是吗？";
 			next;
-			cloakoffnpcself( "Cyan#16nego02" );
+			cloakoffnpcself( "赛安#16nego02" );
 			mes "[赛安]";
 			mes "呀，好冷啊！";
 			next;
@@ -13145,16 +13145,16 @@ rebel_in,88,61,5	script	Rookie#16nego02	4_M_ROOKIE,{
 			mes "哦！我什么时候穿成这样的！";
 			emotion ET_HUK;
 			next;
-			cloakonnpcself( "Cyan#16nego02" );
-			cloakoffnpcself( "Cyan#16nego01" );
+			cloakonnpcself( "赛安#16nego02" );
+			cloakoffnpcself( "赛安#16nego01" );
 			mes "[赛安]";
 			mes "让我看看……果然如此。壁炉的火变弱了。没有柴火了吗？";
 			next;
 			mes "[新人]";
 			mes "嗯，确实是这样。";
 			next;
-			cloakoffnpcself( "Cyan#16nego02" );
-			cloakonnpcself( "Cyan#16nego01" );
+			cloakoffnpcself( "赛安#16nego02" );
+			cloakonnpcself( "赛安#16nego01" );
 			mes "[赛安]";
 			mes "这最后一块柴火烧完，我就要死了……最后的……柴火……";
 			next;
@@ -13167,7 +13167,7 @@ rebel_in,88,61,5	script	Rookie#16nego02	4_M_ROOKIE,{
 			mes "拜托，我正感伤的时候，你就顺着我的话说啊！！";
 			next;
 			cutin "16loo_01.bmp",2;
-			emotion ET_FRET, getnpcid(0, "Cyan#16nego02");
+			emotion ET_FRET, getnpcid(0, "赛安#16nego02");
 			mes "[新人]";
 			mes "哦，别死啊。你要是死了，那12个孩子谁来照顾？求你别死。";
 			next;
@@ -13218,7 +13218,7 @@ rebel_in,88,61,5	script	Rookie#16nego02	4_M_ROOKIE,{
 			next;
 			mes "[赛安]";
 			mes "因为太冷了，我出不了门。所以亲爱的，能帮我带些柴火来吗？";
-			emotion ET_THROB, getnpcid(0, "Cyan#16nego02");
+			emotion ET_THROB, getnpcid(0, "赛安#16nego02");
 			next;
 			emotion ET_SWEAT, playerattached();
 			mes "[新人]";
@@ -13267,7 +13267,7 @@ rebel_in,88,61,5	script	Rookie#16nego02	4_M_ROOKIE,{
 			mes "[赛安]";
 			mes "亲爱的，小心点哦~";
 			next;
-			cloakonnpcself( "Cyan#16nego02" );
+			cloakonnpcself( "赛安#16nego02" );
 			emotion ET_SWEAT, playerattached();
 			mes "[新人]";
 			mes "呼……总之就拜托你了。不管那家伙说了什么，火一灭大家都会冻着的。";
@@ -13283,7 +13283,7 @@ rebel_in,88,61,5	script	Rookie#16nego02	4_M_ROOKIE,{
 			mes "[赛安]";
 			mes "什么？冒险者？我的亲爱的？";
 			next;
-			cloakoffnpcself( "Cyan#16nego02" );
+			cloakoffnpcself( "赛安#16nego02" );
 			mes "[赛安]";
 			mes "亲爱的~~~ 你来晚了！我等你好久了！这次又把该带的东西带来了吗？我是说柴火。";
 			next;
@@ -13297,7 +13297,7 @@ rebel_in,88,61,5	script	Rookie#16nego02	4_M_ROOKIE,{
 				mes "[赛安]";
 				mes "还有，别忘了打倒大约10只废气魔！我要钻回被窝睡了。太冷了！";
 				next;
-				cloakonnpcself( "Cyan#16nego02" );
+				cloakonnpcself( "赛安#16nego02" );
 				cutin "16loo_03.bmp",2;
 				mes "[新人]";
 				mes "抱歉。我们家有些孩子被惯坏了……还是拜托你了。";
@@ -13313,7 +13313,7 @@ rebel_in,88,61,5	script	Rookie#16nego02	4_M_ROOKIE,{
 				mes "[赛安]";
 				mes "去打倒^0000cd10废气魔^000000吧。我要钻回被窝睡了，太冷了！";
 				next;
-				cloakonnpcself( "Cyan#16nego02" );
+				cloakonnpcself( "赛安#16nego02" );
 				cutin "16loo_03.bmp",2;
 				mes "[新人]";
 				mes "抱歉。我们家有些孩子被惯坏了……还是拜托你了。";
@@ -13322,8 +13322,8 @@ rebel_in,88,61,5	script	Rookie#16nego02	4_M_ROOKIE,{
 			mes "[赛安]";
 			mes "燃烧一半的木材和煤矿，你都带来了！所以我才喜欢你啊，亲爱的！";
 			next;
-			cloakonnpcself( "Cyan#16nego02" );
-			cloakoffnpcself( "Cyan#16nego01" );
+			cloakonnpcself( "赛安#16nego02" );
+			cloakoffnpcself( "赛安#16nego01" );
 			cloakoffnpcself( "#16negofire" );
 			mes "[赛安]";
 			mes "好。把木柴和煤矿放进去……点火！！！！！！！！";
@@ -13332,14 +13332,14 @@ rebel_in,88,61,5	script	Rookie#16nego02	4_M_ROOKIE,{
 			mes "[赛安]";
 			mes "哦，现在暖和了。就像你的爱一样温暖~";
 			next;
-			cloakonnpcself( "Cyan#16nego01" );
-			cloakoffnpcself( "Cyan#16nego02" );
+			cloakonnpcself( "赛安#16nego01" );
+			cloakoffnpcself( "赛安#16nego02" );
 			cloakonnpcself( "#16negofire" );
 			next;
 			mes "[赛安]";
 			mes "太感谢你了！下次还会再拜托你的！我——的——亲——爱——的！";
 			next;
-			cloakonnpcself( "Cyan#16nego02" );
+			cloakonnpcself( "赛安#16nego02" );
 			cutin "16loo_03.bmp",2;
 			mes "[新人]";
 			mes "他又这样不跟你道别就走了。真抱歉。我们家有些孩子被惯坏了。不过也不是每个反叛者都这样。";
@@ -13472,7 +13472,7 @@ OnInit:
 	end;
 }
 
-slabw01,235,137,3	script	Suspicious cabinet#hide01	4_ENERGY_WHITE,{
+slabw01,235,137,3	script	可疑的柜子#hide01	4_ENERGY_WHITE,{
 	if (isbegin_quest(7744) == 0 || isbegin_quest(7760) > 0) {
 		unittalk getcharid(3), "" + strcharinfo(0) + " : 现在没什么特别的。", bc_self;
 		end;
@@ -13486,8 +13486,8 @@ slabw01,235,137,3	script	Suspicious cabinet#hide01	4_ENERGY_WHITE,{
 	unittalk getcharid(3), "" + strcharinfo(0) + " : ……这里看起来可疑！", bc_self;
 	progressbar "000000",3;
 	disablenpc();
-	enablenpc "Hiding researcher#" + strnpcinfo(2);
-	npctalk "呃啊！", "Hiding researcher#" + strnpcinfo(2);
+	enablenpc "躲藏的研究员#" + strnpcinfo(2);
+	npctalk "呃啊！", "躲藏的研究员#" + strnpcinfo(2);
 	cutin "16loo_02.bmp",0;
 	mes "[新人]";
 	mes "让我把他揪出来！";
@@ -13508,105 +13508,105 @@ slabw01,235,137,3	script	Suspicious cabinet#hide01	4_ENERGY_WHITE,{
 		}
 	}
 	close2;
-	disablenpc "Hiding researcher#" + strnpcinfo(2);
+	disablenpc "躲藏的研究员#" + strnpcinfo(2);
 	cutin "",255;
 	end;
 OnTimer30000:
 	enablenpc();
-	disablenpc "Hiding researcher#" + strnpcinfo(2);
+	disablenpc "躲藏的研究员#" + strnpcinfo(2);
 	stopnpctimer;
 	end;
 }
 
-slabw01,235,137,3	script	Hiding researcher#hide01	4_M_ALCHE_A,{
+slabw01,235,137,3	script	躲藏的研究员#hide01	4_M_ALCHE_A,{
 	end;
 OnInit:
 	disablenpc();
 	end;
 }
 
-slabw01,254,131,3	duplicate(Suspicious cabinet#hide01)	Suspicious cabinet#hide02	4_ENERGY_WHITE
-slabw01,254,131,3	duplicate(Hiding researcher#hide01)	Hiding researcher#hide02	4_M_ALCHE_A
+slabw01,254,131,3	duplicate(可疑的柜子#hide01)	可疑的柜子#hide02	4_ENERGY_WHITE
+slabw01,254,131,3	duplicate(躲藏的研究员#hide01)	躲藏的研究员#hide02	4_M_ALCHE_A
 
-slabw01,247,111,3	duplicate(Suspicious cabinet#hide01)	Suspicious gap#hide03	4_ENERGY_WHITE
-slabw01,247,111,3	duplicate(Hiding researcher#hide01)	Hiding researcher#hide03	4_M_ALCHE_A
+slabw01,247,111,3	duplicate(可疑的柜子#hide01)	可疑的缝隙#hide03	4_ENERGY_WHITE
+slabw01,247,111,3	duplicate(躲藏的研究员#hide01)	躲藏的研究员#hide03	4_M_ALCHE_A
 
-slabw01,255,63,3	duplicate(Suspicious cabinet#hide01)	Suspicious gap#hide04	4_ENERGY_WHITE
-slabw01,255,63,3	duplicate(Hiding researcher#hide01)	Hiding researcher#hide04	4_M_ALCHE_A
+slabw01,255,63,3	duplicate(可疑的柜子#hide01)	可疑的缝隙#hide04	4_ENERGY_WHITE
+slabw01,255,63,3	duplicate(躲藏的研究员#hide01)	躲藏的研究员#hide04	4_M_ALCHE_A
 
-slabw01,179,58,3	duplicate(Suspicious cabinet#hide01)	Suspicious desk#hide05	4_ENERGY_WHITE
-slabw01,180,57,3	duplicate(Hiding researcher#hide01)	Hiding researcher#hide05	4_M_ALCHE_A
+slabw01,179,58,3	duplicate(可疑的柜子#hide01)	可疑的书桌#hide05	4_ENERGY_WHITE
+slabw01,180,57,3	duplicate(躲藏的研究员#hide01)	躲藏的研究员#hide05	4_M_ALCHE_A
 
-slabw01,143,100,3	duplicate(Suspicious cabinet#hide01)	Suspicious test tube#hide06	4_ENERGY_WHITE
-slabw01,143,100,3	duplicate(Hiding researcher#hide01)	Hiding researcher#hide06	4_M_ALCHE_A
-// slabw01,143,100,3	duplicate(Hiding researcher#hide01)	Researcher inside a test#hide06	4_M_ALCHE_A
+slabw01,143,100,3	duplicate(可疑的柜子#hide01)	可疑的试管#hide06	4_ENERGY_WHITE
+slabw01,143,100,3	duplicate(躲藏的研究员#hide01)	躲藏的研究员#hide06	4_M_ALCHE_A
+// slabw01,143,100,3	duplicate(躲藏的研究员#hide01)	试管里的研究员#hide06	4_M_ALCHE_A
 
-slabw01,247,34,3	duplicate(Suspicious cabinet#hide01)	Suspicious bookshelf#hide07	4_ENERGY_WHITE
-slabw01,247,34,3	duplicate(Hiding researcher#hide01)	Hiding researcher#hide07	4_M_ALCHE_A
+slabw01,247,34,3	duplicate(可疑的柜子#hide01)	可疑的书架#hide07	4_ENERGY_WHITE
+slabw01,247,34,3	duplicate(躲藏的研究员#hide01)	躲藏的研究员#hide07	4_M_ALCHE_A
 
-slabw01,231,125,3	duplicate(Suspicious cabinet#hide01)	Suspicious trash can#hide08	4_ENERGY_WHITE
-slabw01,231,124,3	duplicate(Hiding researcher#hide01)	Hiding researcher#hide08	4_M_ALCHE_A
+slabw01,231,125,3	duplicate(可疑的柜子#hide01)	可疑的垃圾桶#hide08	4_ENERGY_WHITE
+slabw01,231,124,3	duplicate(躲藏的研究员#hide01)	躲藏的研究员#hide08	4_M_ALCHE_A
 
 
-slabw01,103,66,3	script	Ben#16nego02	4_M_REBELLION,5,5,{
+slabw01,103,66,3	script	本#16nego02	4_M_REBELLION,5,5,{
 	end;
 OnTouch:
 	npctalk "经过那边时要小心。那里有高压电流。";
 	end;
 }
 
-slabw01,79,97,3	script	Maymay#16nego02	4_F_REBELLION3,{
+slabw01,79,97,3	script	梅梅#16nego02	4_F_REBELLION3,{
 	npctalk "那条轨道看起来就像巨大生物的脊骨。";
 	end;
 }
 
-slabw01,143,138,7	script	Grinder#16nego02	4_M_REBELLION,{
+slabw01,143,138,7	script	格林德#16nego02	4_M_REBELLION,{
 	npctalk "看看这个痕迹。发生了什么？";
 	sleep2 2000;
-	npctalk "别想了。", "Fang#16nego02";
+	npctalk "别想了。", "范格#16nego02";
 	sleep2 2000;
 	npctalk "我猜它会永远出现在我梦里。";
 	sleep2 2000;
-	npctalk "集中精神！执行任务时要集中精神！", "Fang#16nego02";
+	npctalk "集中精神！执行任务时要集中精神！", "范格#16nego02";
 	end;
 }
 
-slabw01,144,139,5	script	Fang#16nego02	4_F_REBELLION3,{
+slabw01,144,139,5	script	范格#16nego02	4_F_REBELLION3,{
 	npctalk "有什么特别的吗？";
 	sleep2 2000;
-	npctalk "有。我最近查过这个地方。", "Grinder#16nego02";
+	npctalk "有。我最近查过这个地方。", "格林德#16nego02";
 	sleep2 2000;
 	npctalk "很好。在这里待命，直到接到下一个命令。";
 	end;
 }
 
-slabw01,214,139,5	script	Danae#16nego02	4_F_REBELLION2,{
+slabw01,214,139,5	script	达娜厄#16nego02	4_F_REBELLION2,{
 	npctalk "这种地方居然有餐厅。不知道他们能不能咽得下饭。";
 	sleep2 2000;
 	npctalk "哦……听起来不太妙。";
 	end;
 }
 
-slabw01,245,74,3	script	Denny#16nego04	4_M_REBELLION3,{
+slabw01,245,74,3	script	丹尼#16nego04	4_M_REBELLION3,{
 	npctalk "他们肯定是匆忙离开的。东西都留在这里。";
 	sleep2 2000;
 	npctalk "这地方已经被超级明星丹尼占领了。去别的地方吧！";
 	end;
 }
 
-slabw01,229,47,7	script	Cyan#16nego03	4_F_REBELLION3,{
+slabw01,229,47,7	script	赛安#16nego03	4_F_REBELLION3,{
 	npctalk "呃啊……我全身每个地方都酸痛。";
 	sleep2 2000;
 	npctalk "既然他们让我待命，我可以坐在这里。";
 	end;
 }
 
-slabw01,217,56,5	script	Magenta#16nego02	4_M_GUNSLINGER2,{
+slabw01,217,56,5	script	玛真塔#16nego02	4_M_GUNSLINGER2,{
 	npctalk "他们太坏了。但我同时又觉得同情。";
 	end;
 }
 
-slabw01,194,91,3	script	Tommy#16nego02	4_M_GUNSLINGER2,{
+slabw01,194,91,3	script	汤米#16nego02	4_M_GUNSLINGER2,{
 	npctalk "这里的情况好像已经平息了。我们四处看看？";
 	sleep2 2000;
 	npctalk "就算四处看，我们也什么都不知道。";
@@ -14389,7 +14389,7 @@ prt_in,165,89,1	script	Librarian in charge of juveniles 	1_F_LIBRARYGIRL,{
 }
 
 // Items Quests given by Small Leather Bag (ID: 23087) - not repeatable
-prt_in,177,26,6	script	Knight Windsor#ep162	4_M_JOB_KNIGHT1,{
+prt_in,177,26,6	script	温莎骑士#ep162	4_M_JOB_KNIGHT1,{
 	switch( isbegin_quest(7746) ) {
 	case 0:
 		if (countitem(25180) < 1)
@@ -14474,7 +14474,7 @@ prt_in,177,26,6	script	Knight Windsor#ep162	4_M_JOB_KNIGHT1,{
 	end;
 }
 
-prt_monk,93,254,3	script	Sister Margaret#ep162	1_F_PRIEST,{
+prt_monk,93,254,3	script	玛格丽特修女#ep162	1_F_PRIEST,{
 	switch( isbegin_quest(7748) ) {
 	case 0:
 		if (countitem(25181) < 1) {
@@ -14536,7 +14536,7 @@ prt_monk,93,254,3	script	Sister Margaret#ep162	1_F_PRIEST,{
 	}
 }
 
-yuno_in01,163,31,3	script	Blacksmith Cleaver#ep16	4_TOWER_17,{
+yuno_in01,163,31,3	script	铁匠克利弗#ep16	4_TOWER_17,{
 	switch( isbegin_quest(7749) ) {
 	case 0:
 		if (countitem(25183) < 1) {
@@ -14607,7 +14607,7 @@ yuno_in01,163,31,3	script	Blacksmith Cleaver#ep16	4_TOWER_17,{
 	}
 }
 
-que_job01,89,91,1	script	Guile Marovitz#ep162	1_M_JOBTESTER,{
+que_job01,89,91,1	script	盖尔·马罗维茨#ep162	1_M_JOBTESTER,{
 	switch( isbegin_quest(7750) ) {
 	case 0:
 		if (countitem(25182) < 1) {
@@ -14660,7 +14660,7 @@ que_job01,89,91,1	script	Guile Marovitz#ep162	1_M_JOBTESTER,{
 	}
 }
 
-payon_in03,194,39,3	script	Hunter Sherine#ep162	4_F_JOB_HUNTER,{
+payon_in03,194,39,3	script	猎人谢琳#ep162	4_F_JOB_HUNTER,{
 	switch( isbegin_quest(7751) ) {
 	case 0:
 		if (countitem(25184) < 1) {
