@@ -2419,6 +2419,24 @@ OnInit:
 }
 
 bif_fild01,132,338,3	script	洛佩#pa	461,2,2,{
+	if (ep14_1_rope == 7) {
+		mes "我看见一个可疑的男子。要不要试着和他说话？";
+		next;
+		switch(select("别理他。:和他说话。")) {
+		case 1:
+			close;
+		case 2:
+			mes "[可疑男子]";
+			mes ".";
+			mes "...";
+			mes "........!!!";
+			next;
+			mes "[可疑男子]";
+			mes "啊啊啊啊啊啊啊！！！！！";
+			set ep14_1_rope,8;
+			close;
+		}
+	}
 	if (ep14_1_rope < 8) {
 		mes "[可疑男子]";
 		mes "......";
