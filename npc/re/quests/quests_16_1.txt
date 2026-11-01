@@ -17516,7 +17516,7 @@ prt_prison,267,184,8	script	囚犯267BD184#EP161B	4_DRACULA,{
 }
 
 // Sector C
-prt_prison,265,154,4	script	Prisoner 265CM154#EP161C	4_MOONLIGHT,{
+prt_prison,265,154,4	script	囚犯265CM154#EP161C	4_MOONLIGHT,{
 	if (checkweight(1301,1) == 0) {
 		mes "- 由于道具数量过多，无法继续任务。 -";
 		close;
@@ -17743,7 +17743,7 @@ prt_prison,276,195,4	duplicate(垃圾堆#EP161C01)	垃圾堆#EP161C29	4_ENERGY_BLACK
 prt_prison,188,186,4	duplicate(垃圾堆#EP161C01)	垃圾堆#EP161C30	4_ENERGY_BLACK
 
 // Sector D
-prt_prison,243,17,4	script	Prisoner 243DV17#EP161D	4_PORING,{
+prt_prison,243,17,4	script	囚犯243DV17#EP161D	4_PORING,{
 	if (checkweight(1301,1) == 0) {
 		mes "- 由于道具数量过多，无法继续任务。 -";
 		close;
@@ -18054,7 +18054,7 @@ prt_prison,237,139,4	duplicate(火把#EP161EB01)	火把#EP161EB18	CLEAR_NPC
 prt_prison,246,140,4	duplicate(火把#EP161EB01)	火把#EP161EB19	CLEAR_NPC
 
 // Sector F
-prt_prison,117,188,4	script	Prisoner 117FM188#EP161F	4_MISTRESS,{
+prt_prison,117,188,4	script	囚犯117FM188#EP161F	4_MISTRESS,{
 	if (checkweight(1301,1) == 0) {
 		mes "- 由于道具数量过多，无法继续任务。 -";
 		close;
@@ -18218,7 +18218,7 @@ prt_prison,117,188,4	script	Prisoner 117FM188#EP161F	4_MISTRESS,{
 }
 
 // Sector G
-prt_prison,103,214,4	script	Prisoner 103GD214#EP161G	4_DARKLORD,{
+prt_prison,103,214,4	script	囚犯103GD214#EP161G	4_DARKLORD,{
 	if (checkweight(1301,1) == 0) {
 		mes "- 由于道具数量过多，无法继续任务。 -";
 		close;
@@ -18446,7 +18446,7 @@ prt_prison,103,214,4	script	Prisoner 103GD214#EP161G	4_DARKLORD,{
 }
 
 // Sector H
-prt_prison,55,115,2	script	Prisoner 55HK115#EP161H	4_STORMKNIGHT,{
+prt_prison,55,115,2	script	囚犯55HK115#EP161H	4_STORMKNIGHT,{
 	if (checkweight(1301,1) == 0) {
 		mes "- 由于道具数量过多，无法继续任务。 -";
 		close;
