@@ -7648,7 +7648,7 @@ OnTimer3600000:
 		donpcevent "塔塔乔#alba02::OnDisable";
 	}
 	else if (.@monster == 2) {
-		monster "mid_camp",154,273,"逃跑的三角幼狮兽",1989,1,"#monster_master::OnMyMobDead";
+		monster "mid_camp",154,273,"逃跑的希斯利安",1989,1,"#monster_master::OnMyMobDead";
 		mapannounce "mid_camp", "饲养员塔布：啊啊！我的希斯利安跑了！",bc_map,"0x00ff00";
 		donpcevent "希尔斯里昂#alba01::OnDisable";
 	}
@@ -10521,7 +10521,7 @@ OnInit:
 
 OnEnable:
 	monster "man_fild01",0,0,"猪笼草",1988,7,"ep13_man_fild01_mon_edq::OnMyMobDead";
-	monster "man_fild01",0,0,"三角幼狮兽",1989,7,"ep13_man_fild01_mon_edq::OnMyMobDead";
+	monster "man_fild01",0,0,"希斯利安",1989,7,"ep13_man_fild01_mon_edq::OnMyMobDead";
 	initnpctimer;
 	end;
 

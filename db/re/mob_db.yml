@@ -41709,8 +41709,8 @@ Body:
         StealProtected: true
   - Id: 1989
     AegisName: HILLSRION
-    Name: 三角幼狮兽
-    JapaneseName: 三角幼狮兽
+    Name: 希斯利安
+    JapaneseName: 希斯利安
     Level: 123
     Hp: 26126
     BaseExp: 3249
@@ -42136,7 +42136,7 @@ Body:
       FixedItemDrop: true
   - Id: 1998
     AegisName: G_HILLSRION
-    Name: 三角幼狮兽
+    Name: 希斯利安
     Level: 123
     Hp: 26126
     Attack: 953
