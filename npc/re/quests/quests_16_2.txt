@@ -4625,12 +4625,12 @@ rebel_in,70,78,3	script	埃琳娜·沃尔科娃#16.2rm	4_F_ELENA,{
 			npctalk "埃琳娜·沃尔科娃： I wanted to solve this problem myself if possible.", "", bc_self;
 			next;
 			mes "[USU指挥官埃琳娜]";
-			mes "Go downstairs and find ^0000CDEricsson Adler, commander of a detached force^000000. He must be nearby the fireplace.";
+			mes "Go downstairs and find ^0000CDEricsson 阿德勒, commander of a detached force^000000. He must be nearby the fireplace.";
 			mes "He's middle-aged man... and a former boss of the twins.";
 			next;
 			mes "[USU指挥官埃琳娜]";
 			mes "Since the guys have been assigned to my unit, I wanted to take care of them here. But they're not helping us.";
-			mes "If I ask Adler about the guys, it won't look so good. That's why I am requesting you. Please.";
+			mes "If I ask 阿德勒 about the guys, it won't look so good. That's why I am requesting you. Please.";
 			erasequest 16015;// The cause of failure is a careless attempt
 			setquest 16016;// Borrowing wisdom of the experts
 			lebedev_quest_16_2 = 6;
@@ -4639,7 +4639,7 @@ rebel_in,70,78,3	script	埃琳娜·沃尔科娃#16.2rm	4_F_ELENA,{
 		}
 		if (lebedev_quest_16_2 == 6) {
 			mes "[USU指挥官埃琳娜]";
-			mes "^0000CDEricsson Adler, commander of a detached force^000000 must be nearby the fireplace.";
+			mes "^0000CDEricsson 阿德勒, commander of a detached force^000000 must be nearby the fireplace.";
 			next;
 			mes "[USU指挥官埃琳娜]";
 			mes "He's a former boss of the twins.";
@@ -4670,7 +4670,7 @@ rebel_in,70,78,3	script	埃琳娜·沃尔科娃#16.2rm	4_F_ELENA,{
 			mes "We should not have done it...";
 			next;
 			mes "[USU指挥官埃琳娜]";
-			mes "And I should have talked to Adler beforehand.";
+			mes "And I should have talked to 阿德勒 beforehand.";
 			mes "Thanks, " + strcharinfo(0) + ". You helped me so much.";
 			next;
 			mes "[USU指挥官埃琳娜]";
@@ -9404,129 +9404,129 @@ OnInit:
 einbroch,162,153,3	script	Huge Tree#16.2rm	4_BULLETIN_BOARD2,{
 	if (isbegin_quest(16047) == 1) {
 		if (countitem(25152) < 1) {
-			mes "You searched through your back.";
+			mes "你翻了翻背包。";
 			next;
 			mes "[" + strcharinfo(0) + "]";
-			mes "Where did I put the flower...?";
-			mes "It's not there. Maybe I should buy another one...";
+			mes "我把花放哪了……？";
+			mes "不在。也许得再买一束……";
 			close;
 		}
-		mes "[Strange Voice]";
-		mes "There is a small sign in front of the tree.";
+		mes "[奇怪的声音]";
+		mes "树前有个小牌子。";
 		mes " ";
-		mes " - Here lies a kind " + (Sex ? "boy" : "girl") + " -";
+		mes " - 这里长眠着一位善良的" + (Sex ? "少年" : "少女") + " -";
 		mes " ";
-		mes "Should I put the bouquet down?";
+		mes "要放下花束吗？";
 		next;
-		if (select( "Put the bouquet down.", "Don't put the bouquet down." ) == 2) {
-			mes "Before laying the flower, you checked whether that tree was the right one.";
+		if (select( "放下花束。", "不放花束。" ) == 2) {
+			mes "献花前，你确认了是不是这棵树。";
 			close;
 		}
-		mes "I put down the Cherished Bouquet and took a moment of silence.";
+		mes "你放下吊唁花篮，默哀片刻。";
 		next;
-		mes "[Strange Voice]";
-		mes "Who's there?";
+		mes "[奇怪的声音]";
+		mes "是谁在那里？";
 		next;
-		mes "Beside the tree, a small grandmother held out her hand.";
+		mes "树旁，一位矮小的老奶奶伸出了手。";
 		next;
-		mes "[Grandma]";
-		mes "Do you... know who it is? did you know Irene??";
-		mes "Looking at the clothes, I think you're a traveler. My memory is fading.";
+		mes "[老奶奶]";
+		mes "你……知道这是谁吗？你认识艾琳吗？";
+		mes "看你的穿着，应该是旅行者。我的记忆越来越模糊了。";
 		next;
 		mes "[" + strcharinfo(0) + "]";
-		mes "I came here out of a favor.";
+		mes "我是受人所托来的。";
 		next;
-		mes "[Grandma]";
-		mes "A favor? Adler's and that?";
-		mes "I'm Irene's grandmother who fell asleep here. My name is 露西.";
+		mes "[老奶奶]";
+		mes "受人所托？阿德勒的托付吗？";
+		mes "我是艾琳的奶奶，刚才在这里睡着了。我叫露西。";
 		next;
-		mes "[Grandma 露西]";
-		mes "At this time of year, Adler is the children who come to me always at this time of year, but this year I will not be able to candles.";
+		mes "[露西奶奶]";
+		mes "每年这个时候，阿德勒……那些孩子总会来看我，但今年我连蜡烛都点不了了。";
 		next;
-		if (select( "Goodbye.", "Report on Commander Ericsson and Mrs. Irene." ) == 1) {
-			mes "[Grandma 露西]";
-			mes "Bye. Thank you for coming all the way to this countryside.";
+		if (select( "再见。", "向埃里克森指挥官报告艾琳的事。" ) == 1) {
+			mes "[露西奶奶]";
+			mes "再见。谢谢你大老远来这乡下。";
 			next;
-			mes "[Grandma 露西]";
-			mes "Irene will thank you. Bye...";
+			mes "[露西奶奶]";
+			mes "艾琳会感谢你的。再见……";
 			erasequest 16047;// Quiet memorial ceremony
 			setquest 16048;// Traces of old story
 			delitem 25152,1;// Cherish_Bouquet
 			close;
 		}
 		mes "[" + strcharinfo(0) + "]";
-		mes "How did commander Adler know Irene?";
+		mes "阿德勒指挥官怎么认识艾琳的？";
 		next;
-		mes "[Grandma 露西]";
-		mes "Commander?";
-		mes "...So it was true. Mr. Adler was a soldier with high position after all.";
+		mes "[露西奶奶]";
+		mes "指挥官？";
+		mes "……原来是真的。阿德勒先生果然是高级军官。";
 		next;
-		mes "[Grandma 露西]";
-		mes "Although it's a long story to tell a stranger, I will tell you. And you've been sent by Mr. Adler..";
+		mes "[露西奶奶]";
+		mes "虽然对陌生人说来话长，但我告诉你吧。而且你是阿德勒先生派来的……";
 		next;
-		mes "[Grandma 露西]";
-		mes "I've been living in 艾因贝克 with Irene for a long time.";
-		mes "Irene's mom and dad left the house seeking a better job. It's been more than 10 years since we lost contact.";
+		mes "[露西奶奶]";
+		mes "我和艾琳在艾因贝克住了很久。";
+		mes "艾琳的父母为了找更好的工作离家，已经失联十多年。";
 		next;
-		mes "[Grandma 露西]";
-		mes "As you know, there are many accidents in 艾因贝克.";
-		mes "There were only old people left in the village. So it must have been boring for Irene. But she didn't want to move to another village because she believed that her parents would come back one day.";
+		mes "[露西奶奶]";
+		mes "如你所知，艾因贝克事故很多。";
+		mes "村里只剩老人，艾琳一定很无聊。但她不愿搬走，相信父母总有一天会回来。";
 		next;
-		mes "[Grandma 露西]";
-		mes "And... About this time that year, it was when the mine was not closed yet. I heard a rumor that there were bad guys called rebel forces deep inside the mine.";
+		mes "[露西奶奶]";
+		mes "而且……那年这时候矿山还没关闭，听说深处藏着叫反叛者的坏人。";
 		next;
-		mes "[Grandma 露西]";
-		mes "She would go to the mine every day to sell some food. And on that day, I told her not to go there.";
-		mes "But she said it would be okay and went to the mine...";
-		next;
-		mes "[" + strcharinfo(0) + "]";
-		mes "(Grandma 露西 started to shed tears and you handed her your handkerchief)";
-		next;
-		mes "[Grandma 露西]";
-		mes "Thank you... There was an accident on that day... One of the tunnels was collapsed and some people never came back.";
-		mes "Irene was one of them...";
+		mes "[露西奶奶]";
+		mes "她每天去矿山卖吃的。那天我让她别去。";
+		mes "但她说没事，还是去了矿山……";
 		next;
 		mes "[" + strcharinfo(0) + "]";
-		mes "You must have been devastated...";
+		mes "（露西奶奶开始流泪，你递上手帕）";
 		next;
-		mes "[Grandma 露西]";
-		mes "Although they said it was an accident, there was a rumor.";
-		mes "People told me that there were bad guys hiding in the mine and soldiers came to get them.";
-		next;
-		mes "[Grandma 露西]";
-		mes "But it was not important to me at all.";
-		mes "I just felt devastated to lose my son, daughter-in-law and granddaughter. I was absent-minded and did not find any reason to live on...";
-		next;
-		mes "[Grandma 露西]";
-		mes "That's when Mr. Adler visited me.";
-		mes "I was so surprised when he knocked the door of my house...He came in and bowed down to me all of a sudden.";
-		next;
-		mes "[Grandma 露西]";
-		mes "I was surprised again and asked him why. Then he told me about Irene.";
-		next;
-		mes "[Grandma 露西]";
-		mes "He said that Irene's death was his fault and apologized knocking his head on the floor...";
-		mes "I didn't know what was going on and just told him to stop it.";
-		next;
-		mes "[Grandma 露西]";
-		mes "He didn't tell me a detailed story. He left the house and came back later. Then he would send flowers and money to me.";
-		next;
-		mes "[Grandma 露西]";
-		mes "Thanks to his support, I recovered myself. Then I moved to 艾因布罗克e and planted this tree to remember Irene.";
-		next;
-		mes "[Grandma 露西]";
-		mes "Every time he gave me flowers or money, I always refused. But he insisted to give them to me...";
-		mes "I wondered why he was doing this. Nevertheless, he was a high-ranking soldier...";
+		mes "[露西奶奶]";
+		mes "谢谢……那天出了事故……一条坑道塌了，有些人再也没回来。";
+		mes "艾琳就是其中之一……";
 		next;
 		mes "[" + strcharinfo(0) + "]";
-		mes ".........";
-		mes "Thank you very much for telling me the hard story.";
+		mes "你一定很受打击……";
 		next;
-		mes "[Grandma 露西]";
-		mes "Welcome. Thanks to you, I heard the story about Mr. Adler. It makes me feel much better now.";
+		mes "[露西奶奶]";
+		mes "虽然说是事故，但有传闻。";
+		mes "有人说矿山里藏着坏人，士兵来抓他们。";
 		next;
-		mes "[Grandma 露西]";
-		mes "Thank you. If you don't mind, please stop by my house occasionally and talk to this old woman...";
+		mes "[露西奶奶]";
+		mes "但那些对我来说一点都不重要。";
+		mes "失去儿子、儿媳和孙女让我崩溃。我魂不守舍，找不到活下去的理由……";
+		next;
+		mes "[露西奶奶]";
+		mes "就在那时，阿德勒先生来看我。";
+		mes "他敲我家门时我很惊讶……一进来就突然向我跪下。";
+		next;
+		mes "[露西奶奶]";
+		mes "我更惊讶，问他为什么。他告诉了我艾琳的事。";
+		next;
+		mes "[露西奶奶]";
+		mes "他说艾琳的死是他的错，还磕头道歉……";
+		mes "我不知道怎么回事，只让他停下。";
+		next;
+		mes "[露西奶奶]";
+		mes "他没细说，离开后又回来，之后常送花和钱给我。";
+		next;
+		mes "[露西奶奶]";
+		mes "多亏他的支持，我才恢复过来，后来搬到艾因布罗克，种下这棵树纪念艾琳。";
+		next;
+		mes "[露西奶奶]";
+		mes "每次他送花送钱我都拒绝，但他坚持要给……";
+		mes "我不明白他为什么这样。毕竟他是高级军官……";
+		next;
+		mes "[" + strcharinfo(0) + "]";
+		mes "……";
+		mes "非常感谢你告诉我这些沉重的事。";
+		next;
+		mes "[露西奶奶]";
+		mes "不客气。多亏你，我听到了阿德勒先生的事，现在好受多了。";
+		next;
+		mes "[露西奶奶]";
+		mes "谢谢。如果不介意，偶尔来我家陪老太婆说说话……";
 		erasequest 16047;// Quiet memorial ceremony
 		setquest 16048;// Traces of old story
 		delitem 25152,1;// Cherish_Bouquet
@@ -9534,31 +9534,31 @@ einbroch,162,153,3	script	Huge Tree#16.2rm	4_BULLETIN_BOARD2,{
 	}
 	if (isbegin_quest(16052) == 1) {
 		if (countitem(25152) < 1) {
-			mes "You searched through your back.";
+			mes "你翻了翻背包。";
 			next;
 			mes "[" + strcharinfo(0) + "]";
-			mes "Where did I put the flower...?";
-			mes "It's not there. Maybe I should buy another one...";
+			mes "我把花放哪了……？";
+			mes "不在。也许得再买一束……";
 			close;
 		}
-		mes "You dedicated the Bunch Of Flowers and paid a silent tribute briefly.";
+		mes "你献上花束，简短默哀。";
 		next;
 		mes "[" + strcharinfo(0) + "]";
-		mes "Rest in peace, Irene...";
+		mes "安息吧，艾琳……";
 		next;
-		mes "[Grandma 露西]";
-		mes "Traveler. You came again. Thank you.";
-		mes "If you see Mr. Adler, please send him my gratitude.";
+		mes "[露西奶奶]";
+		mes "旅行者，你又来了。谢谢。";
+		mes "如果见到阿德勒先生，请代我道谢。";
 		next;
-		mes "Just then, you met grandma 露西 near the tree and said hello to her.";
+		mes "这时，你在树旁遇到露西奶奶，向她问好。";
 		erasequest 16052;// Quiet memorial ceremony
 		setquest 16053;// Ongoing old story
 		delitem 25152,1;// Cherish_Bouquet
 		close;
 	}
-	mes "[Huge Tree]";
-	mes "There is a small sign in front of the tree.";
-	mes "- Here lies a kind girl -";
+	mes "[大树]";
+	mes "树前有个小牌子。";
+	mes "- 这里长眠着一位善良的少女 -";
 	close;
 
 OnInit:
@@ -13629,7 +13629,7 @@ rebel_in,105,54,5	script	伊利亚·列别杰夫#16.2rm	4_M_ILYA,{
 			close;
 		case 1:
 			mes "[伊利亚]";
-			mes ".........";
+			mes "……";
 			next;
 			mes "[伊利亚]";
 			mes ".....................";
@@ -14699,7 +14699,7 @@ payon_in03,194,39,3	script	Hunter Sherine#ep162	4_F_JOB_HUNTER,{
 		mes "I don't know who she was thinking about when she took this.";
 		next;
 		mes "[Sherine]";
-		mes ".........";
+		mes "……";
 		mes "The spare button is missing.";
 		mes "... Would she have sewn it on well?";
 		next;
