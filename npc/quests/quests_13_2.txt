@@ -3644,7 +3644,8 @@ mid_camp,197,237,3	script	黑森林机械师#1	869,{
 			close;
 		}
 		else if (ep13_2_rhea == 12) {
-			set .@trs_time01,checkquest(8253,PLAYTIME);
+			// 0219：取消异界语言翻译机的一小时等待，保留任务介绍文本
+			set .@trs_time01,2;
 			if (.@trs_time01 == 2) {
 				mes "[机械工程师多兰斯]";
 				mes "唉，我现在该怎么办？！";
