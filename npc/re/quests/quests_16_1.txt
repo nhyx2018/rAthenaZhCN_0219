@@ -4649,33 +4649,33 @@ prt_cas_q,14,184,5	script	伊森霍诺·沃尔特#ep16wal	4_M_1STPRIN1,{
 			close;
 		}
 		mes "[伊森霍诺]";
-		mes "You are back. How did it go?";
+		mes "你回来了。怎么样？";
 		next;
-		mes "I told him the story of meeting the Guardian Knight of 伊森纳姆 and the conversation with him.";
-		next;
-		mes "[" + .@name$ + "]";
-		mes "This is the ^0000cdletter^000000.";
-		next;
-		mes "[伊森霍诺]";
-		mes "Well, this indeed is the seal of our family, and it is my brother's handwriting.";
-		next;
-		mes "[伊森霍诺]";
-		mes "As you said, my brother's Guardian Knight must have not betrayed my brother.";
-		next;
-		mes "[伊森霍诺]";
-		mes "My brother indeed must have done such a thing for a reason.";
+		mes "我讲了见到伊森纳姆的守护骑士以及和他的对话。";
 		next;
 		mes "[" + .@name$ + "]";
-		mes "I guess this is all I can do you now.";
+		mes "这是那封^0000cd信^000000。";
 		next;
 		mes "[伊森霍诺]";
-		mes "I understand. I should take on from here. Thank you for your help.";
+		mes "这确实是我们家族的印章，也是哥哥的笔迹。";
 		next;
 		mes "[伊森霍诺]";
-		mes "Please come back anytime when you need the help of the Walther family.";
+		mes "如你所说，哥哥的守护骑士一定没有背叛他。";
 		next;
 		mes "[伊森霍诺]";
-		mes "You are a valuable guest for us, the Walther family, from now on, dear adventurer. I'll help you anytime you want.";
+		mes "哥哥那么做一定有原因。";
+		next;
+		mes "[" + .@name$ + "]";
+		mes "我想目前只能做到这些。";
+		next;
+		mes "[伊森霍诺]";
+		mes "我明白。接下来该我接手了。谢谢你的帮助。";
+		next;
+		mes "[伊森霍诺]";
+		mes "需要沃尔特家族帮忙时，随时回来。";
+		next;
+		mes "[伊森霍诺]";
+		mes "从现在起，你是沃尔特家族的贵客，亲爱的冒险者。随时愿意帮你。";
 		delitem 6929,1;// Letters_Stamped_Seal
 		completequest 14474;// Report to Isenhonor
 		getitem 6919,10;// TokenOfHonor
@@ -4684,13 +4684,13 @@ prt_cas_q,14,184,5	script	伊森霍诺·沃尔特#ep16wal	4_M_1STPRIN1,{
 		close;
 	}
 	mes "[伊森霍诺]";
-	mes "Based on the piece of information you have brought me, I am collecting other information too. It is not enough year, but I believe that I can unveil the truth someday.";
+	mes "基于你带来的情报，我也在收集其他信息。现在还不足，但我相信总有一天能揭开真相。";
 	next;
 	mes "[伊森霍诺]";
-	mes "I called Simon from Alberta. I need to gather all the help I can get now.";
+	mes "我叫西蒙从阿尔贝塔来了。现在需要集中所有能得到的帮助。";
 	next;
 	mes "[伊森霍诺]";
-	mes "I will see you again when the truth is revealed.";
+	mes "真相揭开时再见。";
 	close;
 }
 
