@@ -9209,24 +9209,24 @@ rebel_in,91,67,3	script	埃里克森·阿德勒#16.2rm	4_MAL_CAPTAIN,{
 			}
 			else {
 				mes "[分队长埃里克森]";
-				mes "I see. What did she say?";
+				mes "原来如此。她说了什么？";
 				next;
-				mes "You told him what you heard from 露西.";
-				next;
-				mes "[分队长埃里克森]";
-				mes "...Perhaps there must have been a huge misunderstanding.";
-				mes "Please don't tell about it anyone else in the 反叛者, except 列别杰夫 twins.";
+				mes "你把从露西那里听到的告诉了他。";
 				next;
 				mes "[分队长埃里克森]";
-				mes "If only she was alive...";
+				mes "……也许其中有很大的误会。";
+				mes "除了列别杰夫双胞胎，别告诉反叛者里的其他人。";
 				next;
 				mes "[分队长埃里克森]";
-				mes "No, I shouldn't think like that.";
+				mes "要是她还活着……";
+				next;
+				mes "[分队长埃里克森]";
+				mes "不，我不该那么想。";
 			}
 			next;
 			mes "[分队长埃里克森]";
-			mes "Thank you for going.";
-			mes "If you do not mind, will you stop by sometimes and put down some flowers?";
+			mes "谢谢你跑一趟。";
+			mes "如果不介意，偶尔能去放些花吗？";
 			completequest 16048;// Traces of old story
 			setquest 16049;// Quiet dawn
 			getitem 25155,10;// Swz_Honor_Token
@@ -9238,30 +9238,30 @@ rebel_in,91,67,3	script	埃里克森·阿德勒#16.2rm	4_MAL_CAPTAIN,{
 		// fall through
 	case 1:// daily
 		mes "[分队长埃里克森]";
-		mes "Will you stop by 艾因布罗克 again and offer flowers?";
+		mes "要再去艾因布罗克献花吗？";
 		next;
 		if (select( "我帮你。", "抱歉，我很忙。" ) == 2) {
 			mes "[分队长埃里克森]";
-			mes "Is that so.";
-			mes "I'm sorry. It's not fun anyway.";
+			mes "这样啊。";
+			mes "抱歉，反正也不是什么有趣的事。";
 			next;
 			mes "[分队长埃里克森]";
-			mes "I hope you can stop by later when you have time.";
+			mes "希望你有空再去。";
 			close;
 		}
 		mes "[分队长埃里克森]";
-		mes "There is a tree on the south side from the 艾因布罗克 observatory. You will find a ^0000CDflower girl^000000 nearby.";
-		mes "Thank you very much.";
+		mes "艾因布罗克天文台南边有棵树，附近能找到^0000CD卖花女孩^000000。";
+		mes "非常感谢。";
 		if (isbegin_quest(16050) == 0)
 			setquest 16050;// Tribute hour
 		close;
 	case 2:
 		if (isbegin_quest(16053) == 1) {
-			mes "I've been to 艾因布罗克.";
+			mes "我去过艾因布罗克了。";
 			next;
 			mes "[分队长埃里克森]";
-			mes "Thank you for going. I'd have to stop by myself, but I seldom have time.";
-			mes "Because these are busy times.";
+			mes "谢谢跑一趟。我本该自己去，但很少有空。";
+			mes "最近太忙了。";
 			erasequest 16053;// Ongoing old story
 			erasequest 16050;// Tribute hour
 			setquest 16049;// Quiet dawn
@@ -9293,44 +9293,44 @@ OnInit:
 	end;
 }
 
-einbroch,167,160,3	script	Flower Girl#16.2rm	1_M_SIZ,{
+einbroch,167,160,3	script	卖花女孩#16.2rm	1_M_SIZ,{
 	if (isbegin_quest(16045) == 1) {
-		mes "[Flower Girl]";
-		mes "Hello. How about a flower?";
+		mes "[卖花女孩]";
+		mes "你好，要买花吗？";
 		next;
 		mes "[" + strcharinfo(0) + "]";
-		mes "Please bring me a bouquet.";
+		mes "请给我一束花。";
 		next;
-		mes "[Flower Girl]";
-		mes "Yes, I understand!";
-		mes "Oh, what should I do...";
+		mes "[卖花女孩]";
+		mes "好的，明白了！";
+		mes "哦，怎么办……";
 		next;
-		mes "[Flower Girl]";
-		mes "I have the flowers, but I ran out of paper to make a bouquet.";
-		mes "The shop I usually buy the paper from is closed...";
-		mes "I cannot go very far alone.";
+		mes "[卖花女孩]";
+		mes "花有，但包花束的纸用完了。";
+		mes "平时买纸的店关门了……";
+		mes "我一个人不能走太远。";
 		next;
-		mes "[Flower Girl]";
-		mes "Please.";
-		mes "If you bring ^0000CD3 Slick Paper^000000, I will make a bouquet for you without having to pay for the flowers.";
+		mes "[卖花女孩]";
+		mes "拜托了。";
+		mes "带来^0000CD3张光滑的纸^000000，我就免费帮你包花束。";
 		completequest 16045;// Veteran's small memorial service
 		setquest 16046;// DIY obtaining bouquet materials
 		close;
 	}
 	if (isbegin_quest(16046) == 1 || isbegin_quest(16051) == 1) {
-		mes "[Flower Girl]";
-		mes "Did you bring ^0000CD3 Slick Paper^000000?";
-		mes "If you bring, I will make a bouquet for you without having to pay for the flowers.";
+		mes "[卖花女孩]";
+		mes "你带来^0000CD3张光滑的纸^000000了吗？";
+		mes "带来就免费帮你包。";
 		if (countitem(7111) < 3)
 			close;
 		next;
-		if (select( "Hand over the slick paper.", "Do not give the paper." ) == 2) {
-			mes "[Flower Girl]";
-			mes "Oh, I'm sorry... Didn't you need a bouquet?";
+		if (select( "交出光滑的纸。", "不给纸。" ) == 2) {
+			mes "[卖花女孩]";
+			mes "哦，抱歉……你不需要花束吗？";
 			close;
 		}
-		mes "[Flower Girl]";
-		mes "Here, this bouquet is beautiful.";
+		mes "[卖花女孩]";
+		mes "给，这束花很漂亮。";
 		delitem 7111,3;// Smooth_Paper
 		getitem 25152,1;// Cherish_Bouquet
 		if (isbegin_quest(16046) == 1) {
@@ -9345,53 +9345,53 @@ einbroch,167,160,3	script	Flower Girl#16.2rm	1_M_SIZ,{
 	}
 	if (isbegin_quest(16047) == 1 || isbegin_quest(16052) == 1) {
 		if (countitem(25152) < 1) {
-			mes "[Flower Girl]";
-			mes "Hello, welcome back. Which flower do you need?";
+			mes "[卖花女孩]";
+			mes "你好，欢迎回来。需要什么花？";
 			next;
 			mes "[" + strcharinfo(0) + "]";
-			mes "Could you make me a Bunch Of Flowers with carnations?";
+			mes "能用康乃馨帮我包一束花吗？";
 			next;
-			mes "[Flower Girl]";
-			mes "Oops... As you know, I still don't have enough paper to wrap the flower.";
-			mes "If you bring me ^0000CDthree smooth paper^000000, I will make it for you.";
+			mes "[卖花女孩]";
+			mes "哎呀……如你所知，我纸还是不够包花。";
+			mes "带来^0000CD3张光滑的纸^000000，我就帮你包。";
 			next;
-			if (select( "Hand over the slick paper.", "Do not give the paper." ) == 2) {
-				mes "[Flower Girl]";
-				mes "Oops! Sorry. A Bunch Of Flowers... Don't you need it?";
+			if (select( "交出光滑的纸。", "不给纸。" ) == 2) {
+				mes "[卖花女孩]";
+				mes "哎呀！抱歉。花束……你不要了吗？";
 				close;
 			}
 			if (countitem(7111) < 3) {
-				mes "[Flower Girl]";
-				mes "Sorry. If I don't have enough smooth paper, I cannot make a Bunch Of Flowers...";
+				mes "[卖花女孩]";
+				mes "抱歉，光滑的纸不够就包不了花束……";
 				close;
 			}
-			mes "[Flower Girl]";
-			mes "Here, this bouquet is beautiful.";
+			mes "[卖花女孩]";
+			mes "给，这束花很漂亮。";
 			delitem 7111,3;// Smooth_Paper
 			getitem 25152,1;// Cherish_Bouquet
 			close;
 		}
-		mes "[Flower Girl]";
-		mes "Flower quickly wither, but they are beautiful when they bloom.";
+		mes "[卖花女孩]";
+		mes "花很快会凋谢，但盛开时很美。";
 		close;
 	}
 	if (isbegin_quest(16050) == 1) {
-		mes "[Flower Girl]";
-		mes "Hello, you're here again. What flowers do you need?";
+		mes "[卖花女孩]";
+		mes "你好，又来了。需要什么花？";
 		next;
 		mes "[" + strcharinfo(0) + "]";
-		mes "Can you make a bouquet of carnations?";
+		mes "能包一束康乃馨吗？";
 		next;
-		mes "[Flower Girl]";
-		mes "Oh my... I'm sorry, I still don't have enough paper to make a bouquet...";
-		mes "If you bring 3 pieces of ^0000CD smooth paper ^000000, I will make it.";
+		mes "[卖花女孩]";
+		mes "天啊……抱歉，纸还是不够包花束……";
+		mes "带来3张^0000CD光滑的纸^000000，我就包。";
 		completequest 16050;// Tribute hour
 		setquest 16051;// DIY obtaining bouquet materials
 		close;
 	}
-	mes "[Flower Girl]";
-	mes "Flowers, buy some flowers.";
-	mes "Phew... The air is so hazy that the flowers wither quickly...";
+	mes "[卖花女孩]";
+	mes "卖花，买点花吧。";
+	mes "唉……空气太浑浊，花很快就谢……";
 	close;
 
 OnInit:
