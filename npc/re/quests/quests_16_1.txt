@@ -1905,7 +1905,7 @@ prt_lib,88,80,0	script	#ep16_lib_evt01	HIDDEN_WARP_NPC,1,1,{
 OnTouch:
 	if (ep16_royal == 9) {
 		cloakoffnpcself( "Ian Walther#ep16_lib01" );
-		cloakoffnpcself( "Levuiere Wigner#ep16_lib01" );
+		cloakoffnpcself( "勒维耶·维格纳#ep16_lib01" );
 		cloakoffnpcself( "Maximilian Roegenburg#ep16_lib01" );
 		cloakoffnpcself( "克罗内克·G·海涅#ep16_01_lib01" );
 		cloakoffnpcself( "尼希尔·M·海涅#ep16_lib01" );
@@ -1921,7 +1921,7 @@ OnTouch:
 	end;
 OnInit:
 	cloakonnpc "Ian Walther#ep16_lib01";
-	cloakonnpc "Levuiere Wigner#ep16_lib01";
+	cloakonnpc "勒维耶·维格纳#ep16_lib01";
 	cloakonnpc "Maximilian Roegenburg#ep16_lib01";
 	cloakonnpc "克罗内克·G·海涅#ep16_01_lib01";
 	cloakonnpc "尼希尔·M·海涅#ep16_lib01";
@@ -2084,8 +2084,8 @@ prt_lib,85,82,5	script	Ian Walther#ep16_lib01	1_M_JOBTESTER,{
 			setpcblock PCBLOCK_NPC, false;
 			npctalk "It describes how I feel now.", "Ian Walther#ep16_lib01", bc_self;
 		}
-		else if (strnpcinfo(1) == "Levuiere Wigner")
-			npctalk "...How will the things turn out from here...", "Levuiere Wigner#ep16_lib01", bc_self;
+		else if (strnpcinfo(1) == "勒维耶·维格纳")
+			npctalk "...How will the things turn out from here...", "勒维耶·维格纳#ep16_lib01", bc_self;
 		else
 			npctalk "Incredible.", "Maximilian Roegenburg#ep16_lib01", bc_self;
 		end;
@@ -2135,7 +2135,7 @@ prt_lib,85,82,5	script	Ian Walther#ep16_lib01	1_M_JOBTESTER,{
 		mes "How troublesome.";
 		mes "Have you seen this document before?";
 		next;
-		mes "[Levuiere]";
+		mes "[勒维耶]";
 		mes "What is it?";
 		mes "We are in the middle of something important.";
 		next;
@@ -2146,7 +2146,7 @@ prt_lib,85,82,5	script	Ian Walther#ep16_lib01	1_M_JOBTESTER,{
 		mes "[克罗内克]";
 		mes "However, ^4d4dffTerra Gloria^000000 is gone...";
 		npctalk "Is Terra Gloria...?", "Ian Walther#ep16_lib01", bc_self;
-		npctalk "Is it gone? What happened...?", "Levuiere Wigner#ep16_lib01", bc_self;
+		npctalk "Is it gone? What happened...?", "勒维耶·维格纳#ep16_lib01", bc_self;
 		npctalk "!!!!!", "Maximilian Roegenburg#ep16_lib01", bc_self;
 		next;
 		mes "[克罗内克]";
@@ -2178,7 +2178,7 @@ prt_lib,85,82,5	script	Ian Walther#ep16_lib01	1_M_JOBTESTER,{
 		mes "Was me.";
 		sleep2 500;
 		npctalk "What?", "Ian Walther#ep16_lib01", bc_self;
-		npctalk "!!!", "Levuiere Wigner#ep16_lib01", bc_self;
+		npctalk "!!!", "勒维耶·维格纳#ep16_lib01", bc_self;
 		npctalk "Ha!", "Maximilian Roegenburg#ep16_lib01", bc_self;
 		mes "...So...";
 		next;
@@ -2243,11 +2243,11 @@ prt_lib,85,82,5	script	Ian Walther#ep16_lib01	1_M_JOBTESTER,{
 		mes "...Do you know anything about this, dear guest?";
 		next;
 		select("Tell them about the thing happened in the Banquet Hall.");
-		mes "[Levuiere]";
+		mes "[勒维耶]";
 		mes "...Did such thing happen?";
 		mes "A person who looks like a scientist and drug...";
 		next;
-		mes "[Levuiere]";
+		mes "[勒维耶]";
 		mes "If it is true, Lord Heine must have not done such a thing on purpose.";
 		mes "Someone must have taken advantage on him according to a plot...";
 		next;
@@ -2301,7 +2301,7 @@ prt_lib,85,82,5	script	Ian Walther#ep16_lib01	1_M_JOBTESTER,{
 		sleep2 3000;
 		cloakonnpcself( "Ian Walther#ep16_lib01" );
 		sleep2 500;
-		cloakonnpcself( "Levuiere Wigner#ep16_lib01" );
+		cloakonnpcself( "勒维耶·维格纳#ep16_lib01" );
 		cloakonnpcself( "Maximilian Roegenburg#ep16_lib01" );
 		sleep2 500;
 		npctalk "Nyhill, come with me.", "克罗内克·G·海涅#ep16_01_lib02", bc_self;
@@ -2323,7 +2323,7 @@ prt_lib,85,82,5	script	Ian Walther#ep16_lib01	1_M_JOBTESTER,{
 	sleep2 3000;
 	cloakonnpcself( "Ian Walther#ep16_lib01" );
 	sleep2 500;
-	cloakonnpcself( "Levuiere Wigner#ep16_lib01" );
+	cloakonnpcself( "勒维耶·维格纳#ep16_lib01" );
 	cloakonnpcself( "Maximilian Roegenburg#ep16_lib01" );
 	sleep2 500;
 	npctalk "Nyhill, come with me.", "克罗内克·G·海涅#ep16_01_lib02", bc_self;
@@ -2333,7 +2333,7 @@ prt_lib,85,82,5	script	Ian Walther#ep16_lib01	1_M_JOBTESTER,{
 	cloakonnpcself( "尼希尔·M·海涅#ep16_lib01" );
 	end;
 }
-prt_lib,88,83,4	duplicate(Ian Walther#ep16_lib01)	Levuiere Wigner#ep16_lib01	4_EP16_LOUVIERE
+prt_lib,88,83,4	duplicate(Ian Walther#ep16_lib01)	勒维耶·维格纳#ep16_lib01	4_EP16_LOUVIERE
 prt_lib,91,78,2	duplicate(Ian Walther#ep16_lib01)	Maximilian Roegenburg#ep16_lib01	4_EP16_MAX
 
 
@@ -5897,7 +5897,7 @@ prt_cas_q,90,186,5	script	Maximilian Roegenburg#ep16lug	4_EP16_MAX,{
 	if (BaseLevel < 100) {
 		mes "[Maximilian]";
 		mes "The Roegenburg welcomes adventurers with various experiences, but it is somewhat early for us to work with you.";
-		mes "I hope I will see you later.";
+		mes "希望以后还能见到你。";
 		close;
 	}
 	if (ep16_lug == 0) {
@@ -7166,7 +7166,7 @@ prt_cas_q,96,186,3	script	Wolf Roegenburg#ep16lug	4_EP16_WOLF,{
 		mes "Yes, pleas go ahead.";
 		next;
 		mes "[Wolf]";
-		mes "I hope you will visit the Wigner and bring a thing from ^0000cdIsaac Wigner^000000.";
+		mes "I hope you will visit the Wigner and bring a thing from ^0000cd艾萨克·维格纳^000000.";
 		next;
 		mes "[Wolf]";
 		mes "Originally, I should do that, but I think I need to talk with Myer seriously. So I would like to do that for me...";
@@ -7181,7 +7181,7 @@ prt_cas_q,96,186,3	script	Wolf Roegenburg#ep16lug	4_EP16_WOLF,{
 		mes "Ah, no it is not. If you feel unpleasant, I am sorry. I just don't have reliable person.";
 		next;
 		mes "[" + strcharinfo(0) + "]";
-		mes "Ok. Go to the Wigner and ask Isaac Wigner for the thing that you requested. Is that right?";
+		mes "Ok. Go to the Wigner and ask 艾萨克·维格纳 for the thing that you requested. Is that right?";
 		next;
 		mes "[Wolf]";
 		mes "Yes. right.";
@@ -10011,208 +10011,208 @@ prt_cas_q,153,116,1	script	Strong Guards#ep16wig02	8W_SOLDIER,{
 }
 
 // Wigner
-prt_cas_q,82,21,1	script	Levuiere Wigner#ep16wig	4_EP16_LOUVIERE,{
+prt_cas_q,82,21,1	script	勒维耶·维格纳#ep16wig	4_EP16_LOUVIERE,{
 	if (BaseLevel < 100) {
-		mes "[Levuiere]";
-		mes "Dear adventurer, although I respect your hard work going through all the obstacles and hardships, it is still a little too early for you to be here.";
-		mes "I hope I will see you later.";
+		mes "[勒维耶]";
+		mes "亲爱的冒险者，我尊重你一路克服艰难险阻的努力，但现在来这里还太早了些。";
+		mes "希望以后还能见到你。";
 		close;
 	}
 	if (ep16_wig == 0) {
 		if (isbegin_quest(7682) != 1) {
-			mes "[Levuiere]";
-			mes "Who are you?";
-			mes "Only the people with permission can enter this place. Please leave.";
+			mes "[勒维耶]";
+			mes "你是谁？";
+			mes "只有获得许可的人才能进入这里，请离开。";
 			close;
 		}
-		mes "[Levuiere]";
-		mes "Dear adventurer, welcome to the Wigner family. My name is ^0000cdLevuiere Wigner^000000.";
+		mes "[勒维耶]";
+		mes "亲爱的冒险者，欢迎来到维格纳家族。我是^0000cd勒维耶·维格纳^000000。";
 		next;
-		mes "[Levuiere]";
-		mes "I am honored by your visit while you are attending the banquet held for you, dear adventurer.";
+		mes "[勒维耶]";
+		mes "亲爱的冒险者，在你参加为自己举办的宴会时还来拜访，真是荣幸。";
 		next;
-		mes "[Levuiere]";
-		mes "This banquet carries more meaning than celebration since the Royal Assembly is conducted at the same time. Did you hear that?";
+		mes "[勒维耶]";
+		mes "这场宴会不只是庆祝，因为同时还要召开王室会议。你听说了吗？";
 		next;
-		mes "[Levuiere]";
-		mes "There is a candidate from our family who participates in the Royal Assembly as well. Would you like to meet him?";
+		mes "[勒维耶]";
+		mes "我们家族也有参加王室会议的候选人。你想见见他吗？";
 		next;
-		mes "[Levuiere]";
-		mes "She is the lady of the Wigner house, ^0000cdCatherine Wigner^000000.";
+		mes "[勒维耶]";
+		mes "这位是维格纳家的夫人^0000cd凯瑟琳·维格纳^000000。";
 		next;
-		mes "[Catherine]";
-		mes "How do you do? Please make yourself at home while you are staying with us, the Wigner family. Please let me know if you experience any inconvenience here.";
+		mes "[凯瑟琳]";
+		mes "你好。在维格纳家逗留期间请随意。如果有什么不便，请告诉我。";
 		next;
-		mes "[Catherine]";
-		mes "We, Wigners, will support as much as possible for your convenience, dear adventurer.";
+		mes "[凯瑟琳]";
+		mes "亲爱的冒险者，我们维格纳家会尽力为你提供方便。";
 		next;
-		mes "[Catherine]";
-		mes "Please visit our manor too if you have the time, dear adventurer. You are always welcome.";
-		mes "Where is ^0000cdJurgen^000000 now?";
+		mes "[凯瑟琳]";
+		mes "亲爱的冒险者，有空也请来我们的庄园做客，随时欢迎。";
+		mes "^0000cd尤尔根^000000现在在哪里？";
 		next;
-		cloakoffnpcself( "Jurgen Wigner#ep16wig00" );
-		cloakonnpcself( "Jurgen Wigner#ep16wig" );
+		cloakoffnpcself( "尤尔根·维格纳#ep16wig00" );
+		cloakonnpcself( "尤尔根·维格纳#ep16wig" );
 		cutin "16jur_nor",0;
-		mes "[Jurgen]";
-		mes "Are you looking for me?";
+		mes "[尤尔根]";
+		mes "你在找我吗？";
 		next;
 		cutin "",255;
-		mes "[Levuiere]";
-		mes "There you are! Dear adventurer, this is the ^0000cdheir of the Wigner family^000000, and the ^0000cdcandidate for the throne^000000 participating in the Royal Assembly this time.";
+		mes "[勒维耶]";
+		mes "你来了！亲爱的冒险者，这位是^0000cd维格纳家族的继承人^000000，也是这次参加王室会议的^0000cd王位候选人^000000。";
 		next;
 		cutin "16jur_nor",0;
-		mes "[Jurgen]";
-		mes "Hello. My name is ^0000cdJurgen Wigner^000000. It is very nice to meet you.";
+		mes "[尤尔根]";
+		mes "你好。我叫^0000cd尤尔根·维格纳^000000，很高兴见到你。";
 		next;
-		mes "[Jurgen]";
-		mes "Dear adventurer, please make yourself home here. If you need anything or find anything inconvenient, please let us know anytime.";
+		mes "[尤尔根]";
+		mes "亲爱的冒险者，请把这里当自己家。有需要或不便，随时告诉我们。";
 		next;
 		mes "[" + strcharinfo(0) + "]";
-		mes "Thank you for your hospitality.";
+		mes "谢谢你的招待。";
 		next;
-		mes "[Jurgen]";
-		mes "Then, please excuse me.";
+		mes "[尤尔根]";
+		mes "那么，我先失陪了。";
 		next;
-		cloakonnpcself( "Jurgen Wigner#ep16wig00" );
-		cloakoffnpcself( "Jurgen Wigner#ep16wig" );
+		cloakonnpcself( "尤尔根·维格纳#ep16wig00" );
+		cloakoffnpcself( "尤尔根·维格纳#ep16wig" );
 		cutin "",255;
-		mes "[Levuiere]";
-		mes "Tut, I am worried that he lacks sociability. He would have to meet a lot of people as the heir of the house, you know. Dear adventurer, please excuse my son's discourtesy.";
+		mes "[勒维耶]";
+		mes "唉，我担心他不够擅长交际。作为家族继承人，他以后要见很多人。亲爱的冒险者，请原谅我儿子的失礼。";
 		next;
-		mes "[Levuiere]";
-		mes "If time allows, would you like to meet our children? They have been excited to meet the hero who defeated Morocc in the banquet.";
+		mes "[勒维耶]";
+		mes "如果有时间，要不要见见我们的孩子们？他们一直很期待在宴会上见到击败梦罗克的英雄。";
 		setquest 14475;// To Jurgen
 		ep16_wig = 1;
 		next;
-		mes "[Levuiere]";
-		mes "Then please make yourself at home and take a look around, dear adventurer.";
+		mes "[勒维耶]";
+		mes "那么亲爱的冒险者，请随意四处看看。";
 		close;
 	}
 	if (ep16_wig == 1) {
-		mes "[Levuiere]";
+		mes "[勒维耶]";
 		mes "Dear adventurer, please make yourself home and take your time looking around here.";
 		next;
-		mes "[Levuiere]";
+		mes "[勒维耶]";
 		mes "If time allows, would you please tell our children the stories of your adventures? It would be an invaluable experience for them.";
 		next;
-		mes "[Levuiere]";
+		mes "[勒维耶]";
 		mes "Then, have a restful time.";
 		close;
 	}
 	if (ep16_wig == 2) {
-		mes "[Levuiere]";
+		mes "[勒维耶]";
 		mes "Dear adventurer, did you meet the children? I would love to have some tea with you and listen to your stories if you are available.";
 		next;
-		mes "[Levuiere]";
+		mes "[勒维耶]";
 		mes "We like to hear the stories of adventurers very much.";
 		mes "Those adventures are valuable experiences that money cannot buy.";
 		next;
-		mes "[Catherine]";
+		mes "[凯瑟琳]";
 		mes "I wonder if our children have observed their manners though. We must have spoiled them for that they sometimes act so imprudently.";
 		next;
-		mes "[Catherine]";
+		mes "[凯瑟琳]";
 		mes "I am trying to warn them a little these days, Please excuse their behaviors if they have done anything rude to you.";
 		next;
 		mes "[" + strcharinfo(0) + "]";
 		mes "Not at all. Jurgen seemed to have grown since my last visit.";
 		mes "Katrin and Isaac impressed me as well.";
 		next;
-		mes "[Catherine]";
+		mes "[凯瑟琳]";
 		mes "We have been too easy on them.";
 		mes "We are ashamed that we were not prepared properly for the Royal Assembly last time.";
 		next;
-		mes "[Levuiere]";
+		mes "[勒维耶]";
 		mes "It is not important whether he becomes the king or not.";
 		mes "If he is a king material, he will be. If not, he doesn't have to be the king. I don't want to stress him out for that.";
 		next;
-		mes "[Catherine]";
+		mes "[凯瑟琳]";
 		mes "Don't you have any ambitions? What a glory would it be if we turn out a king from our family of our generation!";
 		mes "Since our ancestors founded this kingdom, we deserve to produce a king.";
 		next;
-		mes "[Levuiere]";
+		mes "[勒维耶]";
 		mes "The king is a hollow position. It only comes with responsibilities?";
 		mes "Haven't I told you before? Did you forget?";
 		next;
-		mes "[Levuiere]";
+		mes "[勒维耶]";
 		mes "If our family turns out a king, much of our fortune will be spent. Once, our family has really suffered from it.";
 		mes "Near the king, there are always a swarm of pesky flies.";
 		next;
-		mes "[Catherine]";
+		mes "[凯瑟琳]";
 		mes "You know, it could be the exact opposite.";
 		mes "It may reinforce our family.";
 		next;
-		mes "[Catherine]";
+		mes "[凯瑟琳]";
 		mes "Now there are Katrin and Isaac who can back up Jurgen.";
 		next;
-		mes "[Levuiere]";
+		mes "[勒维耶]";
 		mes "Hum... Isaac.";
 		mes "Thinking of him makes me confident.";
 		next;
 		mes "[" + strcharinfo(0) + "]";
 		mes "You must trust Isaac quite a lot.";
 		next;
-		mes "[Levuiere]";
+		mes "[勒维耶]";
 		mes "Oh, we must have left you out of the conversation, dear adventurer.";
 		mes "I am sorry.";
 		next;
 		mes "[" + strcharinfo(0) + "]";
 		mes "Not at all. I have been enjoying the conversation.";
 		next;
-		mes "[Levuiere]";
+		mes "[勒维耶]";
 		mes "Now that you mention it, how do you find our third child, Isaac?";
 		mes "He is the most Wigner-like one among the children.";
 		next;
-		mes "[Levuiere]";
+		mes "[勒维耶]";
 		mes "While Jurgen is interested in the looks, he doesn't really care for money or the throne...";
 		mes "If Katrin was a son, I would have gladly leave everything to her.";
 		next;
-		mes "[Levuiere]";
+		mes "[勒维耶]";
 		mes "Fortunately, the third child who used to be a mischievous boy has grown up to be suitable for the name of Wigner.";
 		mes "Not that the other two are inadequate.";
 		next;
 		mes "[" + strcharinfo(0) + "]";
 		mes "I know what you mean.";
 		next;
-		mes "[Catherine]";
+		mes "[凯瑟琳]";
 		mes "Nevertheless, don't talk like that in front of the children. It is not good to favor a child.";
 		next;
-		mes "[Levuiere]";
+		mes "[勒维耶]";
 		mes "As a member of the Wigner family, one must be able to cope with criticism.";
 		mes "They should be able to determine what's right upon listening to the words of other people. Also, they need to be able to deal with the hard truths.";
 		next;
-		mes "[Catherine]";
+		mes "[凯瑟琳]";
 		mes "Please don't talk like that in front of the children.";
 		next;
-		mes "[Levuiere]";
+		mes "[勒维耶]";
 		mes "I never talk to them like this you know.";
 		next;
-		mes "[Catherine]";
+		mes "[凯瑟琳]";
 		mes "Anyways, Isaac seems busy doing something these days. Do you know what he is doing?";
 		next;
-		mes "[Levuiere]";
+		mes "[勒维耶]";
 		mes "I heard that he is doing something with the third son of the Roegenburg family. You don't need to worry about Isaac. He knows how to take care of himself.";
 		next;
-		mes "[Katrin]";
+		mes "[卡特琳]";
 		mes "Arghhhhhhhhh!";
 		next;
 		emotion ET_HUK;
-		mes "[Levuiere]";
+		mes "[勒维耶]";
 		mes "^0000cdKatrin?^000000";
 		next;
-		emotion ET_HUK, getnpcid(0, "Catherine Wigner#ep16wig");
-		mes "[Catherine]";
+		emotion ET_HUK, getnpcid(0, "凯瑟琳·维格纳#ep16wig");
+		mes "[凯瑟琳]";
 		mes "^0000cdKatrin?^000000 Has something happened to my baby? I should get going...";
 		next;
 		mes "[" + strcharinfo(0) + "]";
 		mes "You two stay here. It might be dangerous. Let me go take a look first.";
-		cloakonnpcself( "Isaac Wigner#ep16wig" );
+		cloakonnpcself( "艾萨克·维格纳#ep16wig" );
 		erasequest 14476;// To Levuiere and His Wife
 		setquest 14477;// What Is Going on?
 		ep16_wig = 3;
 		close;
 	}
 	if (ep16_wig == 3) {
-		mes "[Levuiere]";
+		mes "[勒维耶]";
 		mes "Has something happened to our child, I mean, Katrin?";
 		mes "Shouldn't I go down there myself?";
 		next;
@@ -10222,17 +10222,17 @@ prt_cas_q,82,21,1	script	Levuiere Wigner#ep16wig	4_EP16_LOUVIERE,{
 		close;
 	}
 	if (ep16_wig < 12) {
-		mes "[Levuiere]";
+		mes "[勒维耶]";
 		mes "Dear adventurer, welcome.";
 		mes "I asked what had happened to the children, but they didn't tell me.";
 		next;
-		mes "[Catherine]";
+		mes "[凯瑟琳]";
 		mes "Are they hiding something bad from me...?";
 		next;
 		mes "[" + strcharinfo(0) + "]";
 		mes "No, they are not. You don't have to worry about it.";
 		next;
-		mes "[Catherine]";
+		mes "[凯瑟琳]";
 		mes "Then please tell me what it is about.";
 		next;
 		mes "[" + strcharinfo(0) + "]";
@@ -10241,74 +10241,74 @@ prt_cas_q,82,21,1	script	Levuiere Wigner#ep16wig	4_EP16_LOUVIERE,{
 		close;
 	}
 	if (ep16_wig < 16) {
-		mes "[Levuiere]";
+		mes "[勒维耶]";
 		mes "Dear adventurer, you seem busy.";
 		mes "Is it about what our children have asked you?";
 		next;
-		mes "[Catherine]";
+		mes "[凯瑟琳]";
 		mes "We have decided not to question it any more.";
 		mes "They have grown up, but we still tend to baby them too much...";
 		next;
-		mes "[Levuiere]";
+		mes "[勒维耶]";
 		mes "Anyways, if you need help, please let me know anytime.";
 		mes "And thank you for helping our children.";
 		close;
 	}
 	if (ep16_wig > 15) {
-		mes "[Levuiere]";
+		mes "[勒维耶]";
 		mes "Dear adventurer, I have heard the story from the children.";
 		mes "They didn't go into all the details, but I heard that they owed you a huge favor.";
 		next;
-		mes "[Catherine]";
+		mes "[凯瑟琳]";
 		mes "The children are getting along so much better these days.";
 		mes "Not that they were on bad terms, but now they seen to care for one another more. I am so glad.";
 		next;
-		mes "[Levuiere]";
+		mes "[勒维耶]";
 		mes "You seem to be the messenger of luck to our family.";
 		mes "It is our family tradition to keep a person like you close and treat well.";
 		next;
-		mes "[Catherine]";
+		mes "[凯瑟琳]";
 		mes "Please visit our manor after the banquet is over.";
 		mes "We would be honored to have you as a guest to our home.";
 		close;
 	}
 }
 
-prt_cas_q,82,23,0	script	Catherine Wigner#ep16wig	1_F_LIBRARYGIRL,{
+prt_cas_q,82,23,0	script	凯瑟琳·维格纳#ep16wig	1_F_LIBRARYGIRL,{
 	if (ep16_wig == 0) {
-		mes "[Catherine]";
+		mes "[凯瑟琳]";
 		mes "Hello, dear adventurer. Welcome!";
 		mes "We are honored by your visit to the Wigner family.";
 		next;
-		mes "[Catherine]";
+		mes "[凯瑟琳]";
 		mes "Please let me know if you experience any inconvenience here.";
 		mes "As the lady of the house I would make your stay as pleasant as possible.";
 		next;
-		mes "[Catherine]";
-		mes "You may talk to the head of the family standing next to me. His name is Levuiere Wigner.";
+		mes "[凯瑟琳]";
+		mes "You may talk to the head of the family standing next to me. His name is 勒维耶·维格纳.";
 		close;
 	}
 	if (ep16_wig <= 2) {
-		mes "[Catherine]";
+		mes "[凯瑟琳]";
 		mes "Have you met our children? Having a conversation with you would be an invaluable experience for our children, dear adventurer.";
 		mes "They haven't been through any trouble growing up so we feel that they lack in various life experiences.";
 		next;
-		mes "[Catherine]";
+		mes "[凯瑟琳]";
 		mes "Since I am married to a man from the family which has founded this country, I want to raise my children worthy of the name. However, my husband is not interested in fame and power.";
 		next;
-		mes "[Catherine]";
+		mes "[凯瑟琳]";
 		mes "I feel very sorry about it.";
 		next;
-		mes "[Catherine]";
+		mes "[凯瑟琳]";
 		mes "However, I tend to let our children to whatever they want to do, which makes me wonder if I have spoiled them...";
 		next;
-		mes "[Catherine]";
+		mes "[凯瑟琳]";
 		mes "I'd like to hear your stories for that.";
 		mes "It is always a great joy to listen to the stories of the people who have gone through a lot of experiences.";
 		close;
 	}
 	if (ep16_wig == 3) {
-		mes "[Catherine]";
+		mes "[凯瑟琳]";
 		mes "What if anything has happened to my baby, Katrin?";
 		mes "I'd better I go down there myself.";
 		next;
@@ -10316,22 +10316,22 @@ prt_cas_q,82,23,0	script	Catherine Wigner#ep16wig	1_F_LIBRARYGIRL,{
 		mes "It could be dangerous, please wait here for a minute.";
 		mes "Let me go down there and see what has happened.";
 		next;
-		mes "[Catherine]";
+		mes "[凯瑟琳]";
 		mes "I hope everything is OK.";
 		close;
 	}
 	if (ep16_wig < 12) {
-		mes "[Levuiere]";
+		mes "[勒维耶]";
 		mes "Dear adventurer, welcome.";
 		mes "I asked what had happened to the children, but they didn't tell me.";
 		next;
-		mes "[Catherine]";
+		mes "[凯瑟琳]";
 		mes "Are they hiding something bad from me...?";
 		next;
 		mes "[" + strcharinfo(0) + "]";
 		mes "No, they are not. You don't have to worry about it.";
 		next;
-		mes "[Catherine]";
+		mes "[凯瑟琳]";
 		mes "Then please tell me what it is about.";
 		next;
 		mes "[" + strcharinfo(0) + "]";
@@ -10340,123 +10340,123 @@ prt_cas_q,82,23,0	script	Catherine Wigner#ep16wig	1_F_LIBRARYGIRL,{
 		close;
 	}
 	if (ep16_wig < 16) {
-		mes "[Catherine]";
+		mes "[凯瑟琳]";
 		mes "I wonder if our children haven't bothered you much. Although we are very curious, we have decided not to question it any more.";
 		mes "They have grown up, but we still tend to baby them too much...";
 		next;
-		mes "[Levuiere]";
+		mes "[勒维耶]";
 		mes "Anyways, if you need help, please let me know anytime.";
 		mes "And thank you for helping our children.";
 		close;
 	}
 	if (ep16_wig > 15) {
-		mes "[Catherine]";
+		mes "[凯瑟琳]";
 		mes "For some reason, our children have become very close to one another.";
 		mes "I think it is all thanks to you.";
 		next;
-		mes "[Catherine]";
+		mes "[凯瑟琳]";
 		mes "Please visit our manor after the banquet is over.";
 		mes "Please give us the opportunity to treat you, dear adventurer.";
 		close;
 	}
 }
 
-prt_cas_q,95,9,5	script	Jurgen Wigner#ep16wig	4_M_4THPRIN1,{
+prt_cas_q,95,9,5	script	尤尔根·维格纳#ep16wig	4_M_4THPRIN1,{
 	if (checkweight(1304,3) == 0) {
 		cutin "16jur_nor",0;
-		mes "[Jurgen]";
+		mes "[尤尔根]";
 		mes "You seem to have a lot of luggage. Are you OK?";
 		mes "It looks a lot and large.";
 		next;
-		mes "[Jurgen]";
+		mes "[尤尔根]";
 		mes "How about cutting down some?";
 		close3;
 	}
 	if (ep16_wig == 0) {
-		mes "[Jurgen]";
+		mes "[尤尔根]";
 		mes "Are you a fan of mine? Did you make an appointment? If you are a guest of mine, why don't you go see my father over there?";
 		close;
 	}
 	if (ep16_wig == 1) {
 		cutin "16jur_nor",0;
-		mes "[Jurgen]";
+		mes "[尤尔根]";
 		mes "Dear adventurer, I am glad that you are still here. Sorry about my bad manners earlier. I wanted to have more conversation with you. However, if I make any mistakes while I talk in front of my mother, I get scolded.";
 		next;
-		mes "[Jurgen]";
+		mes "[尤尔根]";
 		mes "Not that she would be harsh on my, but it still kind of bothers me so I had to leave. I am sorry.";
 		next;
-		mes "[Jurgen]";
-		mes "Dear adventurer, since you are already here, may I introduce my family to you? This elegant lady here is my sister, ^0000cdKatrin Wigner^000000.";
+		mes "[尤尔根]";
+		mes "Dear adventurer, since you are already here, may I introduce my family to you? This elegant lady here is my sister, ^0000cd卡特琳·维格纳^000000.";
 		next;
 		cutin "16kat_nor",2;
-		mes "[Katrin]";
+		mes "[卡特琳]";
 		mes "You shouldn't call me your sister, but the first daughter of the Wigner family in this occasion.";
 		next;
-		mes "[Katrin]";
+		mes "[卡特琳]";
 		mes "Dear adventurer, I am honored to meet you. I hope you have a restful stay with the Wigners.";
 		next;
 		cutin "16jur_nor",0;
-		mes "[Jurgen]";
-		mes "This is my brother, ^0000cdIsaac Wigner^000000.";
+		mes "[尤尔根]";
+		mes "This is my brother, ^0000cd艾萨克·维格纳^000000.";
 		next;
-		mes "[Jurgen]";
+		mes "[尤尔根]";
 		mes "He is the youngest child of the Wigner family. Unlike my sister and I who are not interested in the family business, he is a prodigy who will shine the name of the Wigner family.";
 		next;
 		cutin "16isa",1;
-		mes "[Isaac]";
-		mes "Hello? I am Isaac Wigner. What a trouble you are going through to visit a boring family like this. I hope you have fun here if you can...";
+		mes "[艾萨克]";
+		mes "Hello? I am 艾萨克·维格纳. What a trouble you are going through to visit a boring family like this. I hope you have fun here if you can...";
 		next;
 		cutin "16kat_ang",2;
-		mes "[Katrin]";
+		mes "[卡特琳]";
 		mes "Isaac, I have warned you about such manner of speaking before.";
 		mes "You are also being disrespectful to Jurgen who has just introduced you. Are you going to put us all to shame?";
 		next;
 		cutin "16isa",1;
-		mes "[Isaac]";
+		mes "[艾萨克]";
 		mes "It is a joke, just a joke! Sister, you are so inflexible.";
 		mes "In a dreary atmosphere like this, this adventurer deserves to laugh a little, right?";
 		next;
 		cutin "16kat_nor",2;
-		mes "[Katrin]";
+		mes "[卡特琳]";
 		mes "You are not being funny but disrespectful to the guest. Dear adventurer, please excuse the bad manners. I am sorry.";
 		next;
 		cutin "16jur_nor",0;
-		mes "[Jurgen]";
+		mes "[尤尔根]";
 		mes "By the way, I want to go home as soon as possible. This place is too narrow and gloomy.";
 		mes "I would like to be in the Banquet Hall at least.";
 		next;
-		mes "[Jurgen]";
+		mes "[尤尔根]";
 		mes "There must be a lot of people who want to see me. I am obliged to show my face.";
 		next;
-		mes "[Jurgen]";
+		mes "[尤尔根]";
 		mes "My presence will light up the dark palace, you know. I should entertain the bored people there.";
 		next;
 		cutin "16kat_ang",2;
-		mes "[Katrin]";
+		mes "[卡特琳]";
 		mes "You are insulting the Royal Assembly. You need to do your best. Royal Assembly is more sacred that you think.";
 		next;
 		cutin "16kat_nor",2;
-		mes "[Katrin]";
+		mes "[卡特琳]";
 		mes "You shouldn't forget that you are one of the candidates for the throne who will lead the kingdom with the seven royal families.";
 		next;
-		mes "[Katrin]";
+		mes "[卡特琳]";
 		mes "It means that you shouldn't act like a child. I have told you not to take the weight of your responsibility and duty so lightly.";
 		next;
 		cutin "16jur_nor",0;
-		mes "[Jurgen]";
+		mes "[尤尔根]";
 		mes "Of course, I know that well. That's why I have tidied up my looks and fixed my hair perfectly.";
 		mes "I tried not to loosen up, you know.";
 		next;
-		mes "[Jurgen]";
+		mes "[尤尔根]";
 		mes "You need to be able to groom yourself up well to take care of greater matters.";
 		mes "Of course, I am well-prepared.";
 		next;
-		mes "[Jurgen]";
+		mes "[尤尔根]";
 		mes "Would you like to see my new cape?";
 		mes "It goes with the color of my eyes. It would definitely brighten up the palace.";
 		next;
 		cutin "16isa",1;
-		mes "[Isaac]";
+		mes "[艾萨克]";
 		if (ep16_lug == 2 || ep16_lug == 3 || ep16_lug == 7 || ep16_lug == 8) {
 			mes "Oh, not again. Dear adventurer, you should be used to this to have a conversation with my brother at our home.";
 			next;
@@ -10464,13 +10464,13 @@ prt_cas_q,95,9,5	script	Jurgen Wigner#ep16wig	4_M_4THPRIN1,{
 		else {
 			mes "Oh, there he goes again. I should get going now. Dear adventurer, I would like to see you later.";
 			next;
-			cloakonnpcself( "Isaac Wigner#ep16wig" );
+			cloakonnpcself( "艾萨克·维格纳#ep16wig" );
 		}
 		cutin "16kat_nor",2;
-		mes "[Katrin]";
+		mes "[卡特琳]";
 		mes "Dear adventurer, I guess that is it for today. If you are not busy, ^0000cdwhy don't you go have a cup of tea with our parents^000000?";
 		next;
-		mes "[Katrin]";
+		mes "[卡特琳]";
 		mes "My parents love to hear the stories of adventurers.";
 		next;
 		mes "[" + strcharinfo(0) + "]";
@@ -10485,473 +10485,473 @@ prt_cas_q,95,9,5	script	Jurgen Wigner#ep16wig	4_M_4THPRIN1,{
 		if (achievementinfo(130000, ACHIEVEINFO_COUNT4) == 0)
 			achievementupdate(130000, ACHIEVEINFO_COUNT4, 1);
 		cutin "16jur_nor",0;
-		mes "[Jurgen]";
+		mes "[尤尔根]";
 		mes "Our ^0000cdparents^000000 are over there. They'd like to talk to you.";
 		mes "By the way, are there many people waiting outside the door?";
 		next;
-		mes "[Jurgen]";
+		mes "[尤尔根]";
 		mes "They are waiting for me. However, it is a little tiring to meet them all one by one.";
 		mes "It is very demanding to guard the world's peace with my beauty.";
 		close3;
 	}
 	if (ep16_wig == 2) {
 		cutin "16jur_nor",0;
-		mes "[Jurgen]";
+		mes "[尤尔根]";
 		mes "Our ^0000cdparents^000000 are over there. They'd like to talk to you.";
 		mes "By the way, are there many people waiting outside the door?";
 		next;
-		mes "[Jurgen]";
+		mes "[尤尔根]";
 		mes "They are waiting for me. However, it is a little tiring to meet them all one by one.";
 		mes "It is very demanding to guard the world's peace with my beauty.";
 		close3;
 	}
 	if (ep16_wig == 3) {
 		cutin "16jur_sim",0;
-		mes "[Jurgen]";
+		mes "[尤尔根]";
 		mes "It seems that my sister has lost something. I couldn't understand her words since she was in such a hurry.";
 		mes "Would you please ask her what it is about?";
 		close3;
 	}
 	if (ep16_wig >= 4 && ep16_wig < 14) {
 		cutin "16jur_sim",0;
-		mes "[Jurgen]";
+		mes "[尤尔根]";
 		mes "Whatever she has lost, it must be very valuable to her. I feel that she'd better get someone to help her to find it.";
 		mes "Well, then she would be scolded by our father though...";
 		next;
-		mes "[Jurgen]";
+		mes "[尤尔根]";
 		mes "I wonder if you can look into it as fast and quietly as possible.";
 		mes "My sister's fate depends on your hands.";
 		next;
-		mes "[Jurgen]";
+		mes "[尤尔根]";
 		mes "It seems that she may drop dead if she doesn't find whatever she has lost.";
 		close3;
 	}
 	if (ep16_wig == 14) {
 		cutin "16jur_nor",0;
-		mes "[Jurgen]";
+		mes "[尤尔根]";
 		mes "Dear adventurer, you are here. How did it go?";
 		next;
 		mes "[" + strcharinfo(0) + "]";
 		mes "No. Everyone has seen it there, but no one has seen it taken.";
 		next;
-		mes "[Jurgen]";
+		mes "[尤尔根]";
 		mes "How about the one who has taken it? Oh, right, the one who has taken it wouldn't say so.";
 		next;
 		mes "[" + strcharinfo(0) + "]";
 		mes "By the way, people seem to have a strange prejudice about Katrin. I know the words they say are not true, but you'd better to something about it.";
 		next;
 		cutin "16jur_sim",0;
-		mes "[Jurgen]";
+		mes "[尤尔根]";
 		mes "What do you meant?";
 		next;
 		mes "[" + strcharinfo(0) + "]";
 		mes "Well, please don't take it wrong. Some people have said that Katrin may have done it to draw attention or they cannot trust Katrin.";
 		next;
-		mes "[Jurgen]";
+		mes "[尤尔根]";
 		mes "What a nonsense! Phew... This is exactly why I have told her to open her heart to others and talk more...";
 		next;
-		cloakoffnpcself( "Katrin Wigner#ep16wig" );
+		cloakoffnpcself( "卡特琳·维格纳#ep16wig" );
 		cutin "16kat_nor",2;
-		mes "[Katrin]";
+		mes "[卡特琳]";
 		mes "Why should I do that? I don't care about the people who don't know me well anyway.";
 		next;
 		cutin "16jur_nor",0;
-		mes "[Jurgen]";
+		mes "[尤尔根]";
 		mes "Sister, when did you come back?";
 		next;
 		cutin "16kat_nor",2;
-		mes "[Katrin]";
+		mes "[卡特琳]";
 		mes "I came here just a minute ago. However, I heard what you said. So, do you think it's my fault to hear such things?";
 		next;
 		cutin "16jur_nor",0;
-		mes "[Jurgen]";
+		mes "[尤尔根]";
 		mes "You are to blame to a certain level. Look at me. I always to treat others with all my hearts. They all love me for that.";
 		next;
 		cutin "16kat_nor",2;
-		mes "[Katrin]";
+		mes "[卡特琳]";
 		mes "Do you think people like you for your attitude?";
 		mes "Don't you remember the trouble that all the family members have been through because of your attitude issue during the Royal Assembly?";
 		next;
 		cutin "16jur_sim",0;
-		mes "[Jurgen]";
+		mes "[尤尔根]";
 		mes "If it is not my attitude, then for what?";
 		next;
 		cutin "16kat_nor",2;
-		mes "[Katrin]";
+		mes "[卡特琳]";
 		mes "What do you think?";
 		next;
 		cutin "16jur_sim",0;
-		mes "[Jurgen]";
+		mes "[尤尔根]";
 		mes "Do you mean that it is for my looks?";
 		next;
 		cutin "16kat_ang",2;
-		mes "[Katrin]";
+		mes "[卡特琳]";
 		mes "Can you deny it? Since you were young, when you are doing nothing, no, even when you are rude, people have been nice to you.";
 		next;
-		mes "[Katrin]";
+		mes "[卡特琳]";
 		mes "They all smiled at you to please the pretty-looking heir of the Wigner family, the candidate to the throne.";
 		next;
 		cutin "16jur_sim",0;
-		mes "[Jurgen]";
+		mes "[尤尔根]";
 		mes "You say that is for my looks?";
 		next;
 		cutin "16kat_nor",2;
-		mes "[Katrin]";
+		mes "[卡特琳]";
 		mes "Looks have played an important role. You cannot deny it. Looks are part of your talent, right?";
 		mes "Especially, in our family. You should know it by now.";
 		next;
 		cutin "16jur_sim",0;
-		mes "[Jurgen]";
+		mes "[尤尔根]";
 		mes "Even if it's all for my looks, have I ever wanted it to be that way?";
 		next;
 		cutin "16kat_nor",2;
-		mes "[Katrin]";
+		mes "[卡特琳]";
 		mes "Even when I am not doing anything wrong, I am always compared to my handsome brother, and bad rumors follow me. Do you think I have ever wanted it to be that way?";
 		next;
 		cutin "16jur_sim",0;
-		mes "[Jurgen]";
+		mes "[尤尔根]";
 		mes "That's why you need to open up to others and act nice...";
 		next;
 		cutin "16kat_nor",2;
-		mes "[Katrin]";
+		mes "[卡特琳]";
 		mes "The best way not to cause misunderstanding is to be silent. When I don't talk, I don't make a mistake.";
 		next;
 		cutin "16jur_sim",0;
-		mes "[Jurgen]";
+		mes "[尤尔根]";
 		mes "That doesn't always work. About what happened today, you know. Even when you were silent...";
 		next;
 		cutin "16kat_ang",2;
-		mes "[Katrin]";
+		mes "[卡特琳]";
 		mes "I am already doing my best! You know what? The darkest shadow is always right next to the brightest light! It is just like me next to you! I have been trying!";
 		next;
-		mes "[Katrin]";
+		mes "[卡特琳]";
 		mes "However, people don't see who I really am! What else should I do now?";
 		next;
 		mes "[" + strcharinfo(0) + "]";
 		mes "Both of you should calm down.";
 		next;
-		cloakoffnpcself( "Isaac Wigner#ep16wig" );
+		cloakoffnpcself( "艾萨克·维格纳#ep16wig" );
 		cutin "16isa",1;
-		mes "[Isaac]";
+		mes "[艾萨克]";
 		mes "Yes. Whatever it is, you'd better calm down. I could hear you yelling at each other from the other end of the hallway.";
 		next;
-		mes "[Isaac]";
+		mes "[艾萨克]";
 		mes "Our family is supposed to have a reputation to keep, isn't it?";
 		next;
-		mes "[Isaac]";
+		mes "[艾萨克]";
 		mes "What you have ruined last time is about to be recovered now, brother.";
 		next;
 		cutin "16kat_nor",2;
-		mes "[Katrin]";
+		mes "[卡特琳]";
 		mes "......";
 		next;
 		cutin "16isa",1;
-		mes "[Isaac]";
+		mes "[艾萨克]";
 		mes "By the way, ^0000cdisn't it your box^000000, sister? It was on the table while there are a bunch of people hanging out. I kept it not to get it lost.";
 		next;
 		cutin "16jur_sim",0;
-		mes "[Jurgen]";
+		mes "[尤尔根]";
 		mes "This... ^0000cdWas it you who had taken it^000000?";
 		next;
 		cutin "16kat_ang",2;
-		mes "[Katrin]";
+		mes "[卡特琳]";
 		mes "You should have let me know when you were taking it. Do you know how much trouble I have been through for this?";
 		next;
 		cutin "16isa",1;
-		mes "[Isaac]";
+		mes "[艾萨克]";
 		mes "Wait, this is unfair! No? I have taken it with me for your sake, sister.";
 		next;
-		mes "[Isaac]";
+		mes "[艾萨克]";
 		mes "You know how our father gets furious if anything goes missing in our house!";
 		next;
-		mes "[Isaac]";
+		mes "[艾萨克]";
 		mes "He would go on and on about how we don't need a person who cannot manage even a small thing in the Wigner family and how management skill is the greatest virtue of our family... Just think about it scares me.";
 		next;
 		cutin "16jur_sim",0;
-		mes "[Jurgen]";
+		mes "[尤尔根]";
 		mes "What is in there? Why did you fuss about it so much?";
 		next;
 		cutin "16kat_nor",2;
-		mes "[Katrin]";
+		mes "[卡特琳]";
 		mes "There is nothing which is considered valuable by others in it. However, it is the most precious thing to me. Look.";
 		next;
 		cutin "16jur_sim",0;
-		mes "[Jurgen]";
+		mes "[尤尔根]";
 		mes "A note?";
 		next;
 		cutin "16isa",1;
-		mes "[Isaac]";
+		mes "[艾萨克]";
 		mes "A diary?";
 		next;
 		cutin "16kat_ang",2;
-		mes "[Katrin]";
+		mes "[卡特琳]";
 		mes "It is better to avoid a futile conversation. If you don't talk, you don't make mistakes. However, there are moments that you want to be honest with yourself.";
 		next;
 		cutin "16kat_nor",2;
-		mes "[Katrin]";
+		mes "[卡特琳]";
 		mes "This diary has been capturing the moments that I want be true to myself.";
 		next;
-		mes "[Katrin]";
+		mes "[卡特琳]";
 		mes "Nevertheless, I still am mistaken by others even I stay quiet. I guess silence has not been the best policy after all. Since I have my diary back, I should get going.";
 		mes "Dear adventurer, please excuse me for all the trouble.";
 		next;
 		cutin "16jur_sim",0;
-		mes "[Jurgen]";
+		mes "[尤尔根]";
 		mes "Sister, I...";
 		next;
 		cutin "16kat_nor",2;
-		mes "[Katrin]";
+		mes "[卡特琳]";
 		mes "That's all right now. I'll forget it all. You don't have to care about it either.";
 		next;
-		cloakonnpcself( "Katrin Wigner#ep16wig" );
+		cloakonnpcself( "卡特琳·维格纳#ep16wig" );
 		cutin "16isa",1;
-		mes "[Isaac]";
+		mes "[艾萨克]";
 		mes "She walks so fast. What was it all about?";
 		next;
 		cutin "16jur_sim",0;
-		mes "[Jurgen]";
+		mes "[尤尔根]";
 		mes "It's all because you have taken the box without a word... Phew... Well, long story short, our sister is upset.";
 		next;
 		cutin "16isa",1;
-		mes "[Isaac]";
+		mes "[艾萨克]";
 		mes "Argh! Why is she upset?";
 		next;
 		cutin "16jur_sim",0;
-		mes "[Jurgen]";
+		mes "[尤尔根]";
 		mes "It is complicated. I guess there are some bad rumors about her out there.";
 		next;
 		cutin "16isa",1;
-		mes "[Isaac]";
+		mes "[艾萨克]";
 		mes "Oh, I have heard about it before. However, I thought you would take care of it since it is mainly your fault.";
 		next;
 		cutin "16jur_sim",0;
-		mes "[Jurgen]";
+		mes "[尤尔根]";
 		mes "You knew about that? Why didn't you tell me about it?";
 		next;
 		cutin "16isa",1;
-		mes "[Isaac]";
+		mes "[艾萨克]";
 		mes "Even if I did, you wouldn't have taken it seriously. It is true that you were born with that blessed looks.";
 		next;
-		mes "[Isaac]";
+		mes "[艾萨克]";
 		mes "That's why the people around you have looked up to you. Not that our parents have been hard on us. No wonder you have grown up to be so carefree.";
 		next;
 		cutin "16jur_sim",0;
-		mes "[Jurgen]";
+		mes "[尤尔根]";
 		mes "Are you picking up a fight with me?";
 		next;
 		cutin "16isa",1;
-		mes "[Isaac]";
+		mes "[艾萨克]";
 		mes "No, listen to me. I am telling the truth here. No hard feelings.";
 		next;
-		mes "[Isaac]";
+		mes "[艾萨克]";
 		mes "Due to your superlative looks, we have been quite disadvantaged, growing up.";
 		next;
-		mes "[Isaac]";
+		mes "[艾萨克]";
 		mes "Do you remember what our sister has said? How the darkest shadow is always right next to the brightest light? It is true.";
 		next;
 		cutin "16jur_sim",0;
-		mes "[Jurgen]";
+		mes "[尤尔根]";
 		mes "I don't get it. Beauty is a good thing. Everyone likes it.";
 		next;
 		cutin "16isa",1;
-		mes "[Isaac]";
+		mes "[艾萨克]";
 		mes "The people who see it may appreciate it. However, the people right next to it are being compared to it.";
 		mes "Among the three of us, it must have been the hardest for our sister.";
 		next;
-		mes "[Isaac]";
+		mes "[艾萨克]";
 		mes "Imagine a plain person standing next to an angelic beauty. Despite looking completely normal, she or he would look unattractive and somber. We have been compared to you like that, all our lives.";
 		next;
-		mes "[Isaac]";
+		mes "[艾萨克]";
 		mes "Our sister must have suffered from the stress even more. She has managed to endure it with her extraordinary patience and generosity. In fact, I think she could be an angel.";
 		next;
 		cutin "16jur_sim",0;
-		mes "[Jurgen]";
+		mes "[尤尔根]";
 		mes "I didn't know that... At all..";
 		next;
-		mes "[Jurgen]";
+		mes "[尤尔根]";
 		mes "What should I do now?";
 		next;
 		cutin "16isa",1;
-		mes "[Isaac]";
+		mes "[艾萨克]";
 		mes "I don't think it is entirely your fault. It was our parents who have created you like that.";
 		mes "Oh, well, you are to blame for your carefreeness though.";
 		next;
-		mes "[Isaac]";
+		mes "[艾萨克]";
 		mes "Anyway, who we need to worry about is our sister. Has she ever been mad at us? What should we do when she is upset?";
 		next;
 		cutin "16jur_sim",0;
-		mes "[Jurgen]";
+		mes "[尤尔根]";
 		mes "Well, she has been mad at me once when I was young.";
 		mes "I guess it was somewhat similar to what has just happened. She said something about comparison then...";
 		next;
 		cutin "16isa",1;
-		mes "[Isaac]";
+		mes "[艾萨克]";
 		mes "I was too young to remember it. However, I do remember how our sister became very quiet after arguing with you.";
 		mes "You have been the main culprit of it after all.";
 		next;
 		cutin "16jur_sim",0;
-		mes "[Jurgen]";
+		mes "[尤尔根]";
 		mes "It is not the time to waste time to distinguish between right and wrong. What should we do, dear adventurer.";
 		next;
 		mes "[" + strcharinfo(0) + "]";
 		mes "I don't know. Have you ever tried to countervail someone's anger?";
 		next;
-		mes "[Jurgen]";
+		mes "[尤尔根]";
 		mes "No. No one's ever been mad at me, except our sister.";
 		next;
-		mes "[Jurgen]";
+		mes "[尤尔根]";
 		mes "Dear adventurer, please help us out here.";
 		next;
 		cutin "16isa",1;
-		mes "[Isaac]";
+		mes "[艾萨克]";
 		mes "Leave me out of it. I wasn't the one who got her mad.";
 		next;
 		cutin "16jur_sim",0;
-		mes "[Jurgen]";
+		mes "[尤尔根]";
 		mes "You were the cause of the problem.";
 		next;
 		cutin "16isa",1;
-		mes "[Isaac]";
+		mes "[艾萨克]";
 		mes "I was trying to keep it safe... Please, dear adventurer, help us!";
 		next;
 		mes "[" + strcharinfo(0) + "]";
 		mes "What can you do? You'd better wait until your sister lets off steam... Or, you could try giving her something she likes...";
 		next;
 		cutin "16jur_sim",0;
-		mes "[Jurgen]";
+		mes "[尤尔根]";
 		mes "What doesn't she like? Do you know?";
 		next;
 		cutin "16isa",1;
-		mes "[Isaac]";
+		mes "[艾萨克]";
 		mes "I know as much as you do.";
 		next;
 		cutin "16jur_sim",0;
-		mes "[Jurgen]";
+		mes "[尤尔根]";
 		mes "Which means you know nothing, great!";
 		next;
 		mes "[" + strcharinfo(0) + "]";
 		mes "She seems to value experiences and memories. Don't you have any good memories with her? Trace back your memory back a little.";
 		next;
 		cutin "16jur_nor",0;
-		mes "[Jurgen]";
+		mes "[尤尔根]";
 		mes "Hum... Hum... There's no such... Wait! Yes, I remember one!";
 		next;
 		cutin "16isa",1;
-		mes "[Isaac]";
+		mes "[艾萨克]";
 		mes "What? Is there any?";
 		next;
 		cutin "16jur_nor",0;
-		mes "[Jurgen]";
+		mes "[尤尔根]";
 		mes "Do you remember how we walked around the Comodo beach together during the summer vacation? We picked up some pretty stones on the shore and in the cave.";
 		next;
-		mes "[Jurgen]";
+		mes "[尤尔根]";
 		mes "Our sister really liked...This clear stone containing some sea water and a piece of coral inside.";
 		next;
 		cutin "16isa",1;
-		mes "[Isaac]";
+		mes "[艾萨克]";
 		mes "The Sea Stone?";
 		next;
 		cutin "16jur_nor",0;
-		mes "[Jurgen]";
+		mes "[尤尔根]";
 		mes "Yes, that's it! She lined up those stones near the window and enjoyed looking at them glittering in the sun.";
 		next;
 		cutin "16isa",1;
-		mes "[Isaac]";
+		mes "[艾萨克]";
 		mes "Oh, I remember now. I remember seeing them glittering in her room.";
 		next;
 		mes "[" + strcharinfo(0) + "]";
 		mes "The ^0000cdSea Stone^000000? What is it?";
 		next;
 		cutin "16jur_nor",0;
-		mes "[Jurgen]";
+		mes "[尤尔根]";
 		mes "It is a pretty stone which can only be found in Comodo. It is called the Sea Stone because it looks as if there is the sea captured inside of it, with the sea water and corals.";
 		next;
 		cutin "16isa",1;
-		mes "[Isaac]";
+		mes "[艾萨克]";
 		mes "Some romantics call it, the gift from a mermaid.";
 		next;
 		cutin "16jur_nor",0;
-		mes "[Jurgen]";
+		mes "[尤尔根]";
 		mes "You may find them upon digging the ground on the Comodo beach once in a while. Our sister, Isaac and I used to dig them out whenever we are on summer vacation.";
 		next;
 		cutin "16isa",1;
-		mes "[Isaac]";
+		mes "[艾萨克]";
 		mes "I have heard that it is not found on the beach these days. Instead, you can get it by killing the ^0000cdMedusa inside the cave in the west of Comodo^000000.";
 		next;
 		cutin "16jur_nor",0;
-		mes "[Jurgen]";
+		mes "[尤尔根]";
 		mes "What? Did the Medusa take them all?";
 		next;
 		cutin "16isa",1;
-		mes "[Isaac]";
+		mes "[艾萨克]";
 		mes "Who knows? It is supposed to be the gift from a mermaid. Some say, the Mermen have given them to the Medusa. Well, this also sounds like a fairytale.";
 		next;
 		cutin "16jur_nor",0;
-		mes "[Jurgen]";
+		mes "[尤尔根]";
 		mes "How do you know it so well?";
 		next;
 		cutin "16isa",1;
-		mes "[Isaac]";
+		mes "[艾萨克]";
 		mes "I have once tried to distribute them all over the continent. You used to be able to get them by just digging the ground. Tourists used to pick them up as souvenirs or gamblers used to use them as talismans for their prayers to the sea-god.";
 		next;
-		mes "[Isaac]";
+		mes "[艾萨克]";
 		mes "Since it became hard to get them, I have given up the plan. The game is not worth the candle, having to kill the Medusa on the way.";
 		next;
 		cutin "16jur_nor",0;
-		mes "[Jurgen]";
+		mes "[尤尔根]";
 		mes "I didn't know that. Anyway, I remember there was something else next to the stone.";
 		next;
 		cutin "16isa",1;
-		mes "[Isaac]";
+		mes "[艾萨克]";
 		mes "There were some flowers, a bunch of them. What flower was that? I lasted so long that it never seemed to wither at all.";
 		next;
 		cutin "16jur_sim",0;
-		mes "[Jurgen]";
+		mes "[尤尔根]";
 		mes "Dear adventurer, do you have any idea what flower that would have been?";
 		next;
 		mes "[" + strcharinfo(0) + "]";
 		mes "If it didn't whither for so long, it could have been a Witherless Rose.";
 		next;
 		cutin "16isa",1;
-		mes "[Isaac]";
+		mes "[艾萨克]";
 		mes "Is there such a thing? Why do you need a Witherless Rose when you can just buy another flower before the older one withers?";
 		next;
 		mes "[" + strcharinfo(0) + "]";
 		mes "You want what you like to last long. If you replace it with another flower, it is not the same flower you liked anymore.";
 		next;
 		cutin "16jur_nor",0;
-		mes "[Jurgen]";
+		mes "[尤尔根]";
 		mes "Hum... Well, I guess I can imagine myself being replaced with another person. I understand it now.";
 		next;
 		cutin "16isa",1;
-		mes "[Isaac]";
+		mes "[艾萨克]";
 		mes "So, when are you going to get them for us?";
 		next;
 		mes "[" + strcharinfo(0) + "]";
 		mes "What?";
 		next;
-		mes "[Isaac]";
+		mes "[艾萨克]";
 		mes "You didn't think that we would go there to get them ourselves, did you?";
 		next;
-		mes "[Isaac]";
+		mes "[艾萨克]";
 		mes "I am busy with my business, and Jurgen attracts too many people around him.";
 		next;
-		mes "[Isaac]";
+		mes "[艾萨克]";
 		mes "We need someone else we can trust, who happens to be right in front of us.";
 		next;
 		cutin "16jur_sim",0;
-		mes "[Jurgen]";
+		mes "[尤尔根]";
 		mes "I was worried about it as well. Please, dear adventurer, help us. The loving relationship among us depends on you.";
 		next;
 		mes "[" + strcharinfo(0) + "]";
 		mes "If you say so... How many of them do you need? Where can I get the Sea Stone?";
 		next;
 		cutin "16jur_nor",0;
-		mes "[Jurgen]";
+		mes "[尤尔根]";
 		mes "Hum... I guess we need ^0000cd1 Witherless Rose^000000 and ^0000cd10 Sea Stones^000000 since we want to decorate the window with them.";
 		next;
 		cutin "16isa",1;
-		mes "[Isaac]";
+		mes "[艾萨克]";
 		mes "We are depending on you.";
 		erasequest 14486;// I Heard the Story
 		setquest 14487;// Please Find the Token of Memory
@@ -10961,113 +10961,113 @@ prt_cas_q,95,9,5	script	Jurgen Wigner#ep16wig	4_M_4THPRIN1,{
 	if (ep16_wig == 15) {
 		if (countitem(748) < 1 || countitem(6927) < 10) {
 			cutin "16jur_sim",0;
-			mes "[Jurgen]";
+			mes "[尤尔根]";
 			mes "Dear adventurer, you came! Did you bring what we asked you for? Please tell us that you did.";
 			next;
 			mes "[" + strcharinfo(0) + "]";
 			mes "I wasn't able to bring them all.";
 			next;
-			mes "[Jurgen]";
+			mes "[尤尔根]";
 			mes "Why? Did you forget what to bring by any chance? Let me tell you once more.";
 			next;
-			mes "[Jurgen]";
+			mes "[尤尔根]";
 			mes "^0000cd10 Sea Stones^000000. You can get them while hunting Medusa in Comodo. They are valuable because it is difficult to kill Medusa.";
 			next;
-			mes "[Jurgen]";
+			mes "[尤尔根]";
 			mes "And ^0000cd1 Witherless Rose^000000.";
 			next;
-			mes "[Jurgen]";
+			mes "[尤尔根]";
 			mes "I know that's a lot of things to bring, but I believe we need them all to make our sister feel better.";
 			close3;
 		}
-		mes "[Jurgen]";
+		mes "[尤尔根]";
 		mes "Dear adventurer, did you bring what we asked you for? Please tell us that you did.";
 		next;
 		cutin "16isa",1;
-		mes "[Isaac]";
+		mes "[艾萨克]";
 		mes "Yes, please tell us that you did. We tried our best to balance out her anger. However, she's been giving the cold shoulder to us.";
 		next;
 		mes "[" + strcharinfo(0) + "]";
 		mes "I brought them. You'd better not to press an angry person so impatiently like that, you know.";
 		next;
 		cutin "16jur_nor",0;
-		mes "[Jurgen]";
+		mes "[尤尔根]";
 		mes "Whoa, they are all here! You saved our lives. We should call our sister now. What if she is still mad at us...";
 		next;
 		cutin "16isa",1;
-		mes "[Isaac]";
+		mes "[艾萨克]";
 		mes "I have already called her.";
 		next;
-		cloakoffnpcself( "Katrin Wigner#ep16wig" );
+		cloakoffnpcself( "卡特琳·维格纳#ep16wig" );
 		cutin "16kat_nor",2;
-		mes "[Katrin]";
+		mes "[卡特琳]";
 		mes "Why do you keep calling me? Please leave me alone for that I am not mad at you any more.";
 		next;
 		cutin "16jur_sim",0;
-		mes "[Jurgen]";
+		mes "[尤尔根]";
 		mes "Sister, forgive us. Please stop being mad at us.";
 		next;
 		cutin "16kat_nor",2;
-		mes "[Katrin]";
+		mes "[卡特琳]";
 		mes "...Do you know what you have done wrong?";
 		next;
 		cutin "16isa",1;
-		mes "[Isaac]";
+		mes "[艾萨克]";
 		mes "I don't think I am to blame, but I am sorry that I have taken your stuff without telling you.";
 		next;
 		cutin "16jur_sim",0;
-		mes "[Jurgen]";
+		mes "[尤尔根]";
 		mes "Well, I am sorry about it all. I haven't been considerate of your feelings. However, it wouldn't have hurt you to open up to me a little, since we are family.";
 		next;
-		mes "[Jurgen]";
+		mes "[尤尔根]";
 		mes "If we don't be honest to each other, we will just grow away. We will get our wires crossed again.";
 		next;
 		cutin "16kat_nor",2;
-		mes "[Katrin]";
+		mes "[卡特琳]";
 		mes "You are right. I have given it a thought as well. I think some part of it is my fault. I should have been honest with you, at least.";
 		next;
 		cutin "16jur_nor",0;
-		mes "[Jurgen]";
+		mes "[尤尔根]";
 		mes "When we were young, we used to talk a lot, and have some good times. Look at these. We used to run around looking for things like these. Do you remember this stone? You liked to watch them glitter in the sun.";
 		next;
 		cutin "16kat_nor",2;
-		mes "[Katrin]";
+		mes "[卡特琳]";
 		mes "They are.. When did you get them...?";
 		next;
 		cutin "16jur_nor",0;
-		mes "[Jurgen]";
+		mes "[尤尔根]";
 		mes "The adventurer helped us. I guess those were the times when we were the closest to one another. Look at this.";
 		mes "This stone is so clear that you can see the seawater and coral reef inside right through it.";
 		next;
-		mes "[Jurgen]";
+		mes "[尤尔根]";
 		mes "I think people are just the same. We don't need to show everything, but we do need to show some to let others know how pretty we are inside.";
 		next;
 		cutin "16kat_nor",2;
-		mes "[Katrin]";
+		mes "[卡特琳]";
 		mes "Yes, you are right. I think you have got the point. I'll try. I'll do it to avoid any more misunderstanding.";
 		next;
-		mes "[Katrin]";
+		mes "[卡特琳]";
 		mes "By the way, when did you learn to talk like that? I think I am finally able to talk with you guys now.";
 		next;
 		cutin "16jur_sim",0;
-		mes "[Jurgen]";
+		mes "[尤尔根]";
 		mes "You mean, you haven't been able to talk with us?";
 		next;
 		cutin "16isa",1;
-		mes "[Isaac]";
+		mes "[艾萨克]";
 		mes "Well, thanks to my effort, we brothers and sister have become close to one another again.";
 		mes "Thank you for your work, dear adventurer. This is not much, but I hope you take it. Sorry about all the trouble you have been through for us.";
 		next;
-		mes "[Isaac]";
+		mes "[艾萨克]";
 		mes "Material reward has never seems to small before.";
 		mes "I guess what you have done for us is just that priceless.";
 		next;
 		cutin "16kat_nor",2;
-		mes "[Katrin]";
+		mes "[卡特琳]";
 		mes "I am sorry to cause such an embarrassing scene in front of you. If you have time, please come by again. We will make sure to receive you properly next time.";
 		next;
 		cutin "16jur_nor",0;
-		mes "[Jurgen]";
+		mes "[尤尔根]";
 		mes "Dear adventurer, I have learned new lessons and earned many things, thanks to you. If you need our help, we will try to help you as much as we can. I wish you luck!";
 		completequest 14487;// Please Find the Token of Memory
 		delitem 6927, countitem(6927);// Filled_With_SeaStones
@@ -11084,7 +11084,7 @@ prt_cas_q,95,9,5	script	Jurgen Wigner#ep16wig	4_M_4THPRIN1,{
 			mes "Jurgen, Hello?";
 			next;
 			cutin "16jur_nor",0;
-			mes "[Jurgen]";
+			mes "[尤尔根]";
 			mes "Oh, dear adventurer, welcome.";
 			mes "Are you enjoying the banquet? Do you need any help by any chance?";
 			next;
@@ -11093,7 +11093,7 @@ prt_cas_q,95,9,5	script	Jurgen Wigner#ep16wig	4_M_4THPRIN1,{
 			mes "I wonder how your sister is doing these days as well.";
 			next;
 			cutin "16jur_nor",0;
-			mes "[Jurgen]";
+			mes "[尤尔根]";
 			mes "Thanks to your help, we have never been better than this.";
 			mes "I've been talking to my sister much more, and..";
 			next;
@@ -11107,7 +11107,7 @@ prt_cas_q,95,9,5	script	Jurgen Wigner#ep16wig	4_M_4THPRIN1,{
 			mes "I am sorry. I thought no one was here. I just wanted to clean the room, I am really sorry. I'll come back later.";
 			next;
 			cutin "16jur_nor",0;
-			mes "[Jurgen]";
+			mes "[尤尔根]";
 			mes "Not at all. Please come in. It is a nonsense that you cannot clean the room because of the people inside.";
 			next;
 			cutin "",255;
@@ -11119,13 +11119,13 @@ prt_cas_q,95,9,5	script	Jurgen Wigner#ep16wig	4_M_4THPRIN1,{
 			mes "Hello...";
 			next;
 			cutin "16jur_nor",0;
-			mes "[Jurgen]";
+			mes "[尤尔根]";
 			mes "Is this the person from the last time? Whom you asked about the box...?";
 			next;
 			mes "[" + strcharinfo(0) + "]";
 			mes "Yes, she is.";
 			next;
-			mes "[Jurgen]";
+			mes "[尤尔根]";
 			mes "I am sorry about that. We were desperate and in a hurry. I apologize if you were upset by it.";
 			next;
 			cutin "",255;
@@ -11140,7 +11140,7 @@ prt_cas_q,95,9,5	script	Jurgen Wigner#ep16wig	4_M_4THPRIN1,{
 			mes "I am sorry.";
 			next;
 			cutin "16jur_nor",0;
-			mes "[Jurgen]";
+			mes "[尤尔根]";
 			mes "No, that's OK.";
 			next;
 			cutin "",255;
@@ -11150,10 +11150,10 @@ prt_cas_q,95,9,5	script	Jurgen Wigner#ep16wig	4_M_4THPRIN1,{
 			next;
 			cloakonnpcself( "Maid#ep16wig01" );
 			cutin "16jur_sim",0;
-			mes "[Jurgen]";
+			mes "[尤尔根]";
 			mes "You shouldn't have to... Well, she's gone...";
 			next;
-			mes "[Jurgen]";
+			mes "[尤尔根]";
 			mes "Well, dear adventurer?";
 			next;
 			mes "[" + strcharinfo(0) + "]";
@@ -11161,7 +11161,7 @@ prt_cas_q,95,9,5	script	Jurgen Wigner#ep16wig	4_M_4THPRIN1,{
 			next;
 			cutin "16jur_sim",0;
 			emotion ET_THROB;
-			mes "[Jurgen]";
+			mes "[尤尔根]";
 			mes "Well, I think ^0000cdI have fallen in love^000000 .";
 			next;
 			cutin "",255;
@@ -11174,63 +11174,63 @@ prt_cas_q,95,9,5	script	Jurgen Wigner#ep16wig	4_M_4THPRIN1,{
 			next;
 			cutin "16jur_nor",0;
 			emotion ET_THROB;
-			mes "[Jurgen]";
+			mes "[尤尔根]";
 			mes "I have never met anyone who looks directly into my eyes like that.";
 			next;
-			mes "[Jurgen]";
+			mes "[尤尔根]";
 			mes "I fell in love with her. I love her dignified and calm voice. Unaffected behaviors That tone of voice reflecting strong will...";
 			next;
-			mes "[Jurgen]";
+			mes "[尤尔根]";
 			mes "All the women I have seen so far are like flowers in the greenhouse. However, she resembles a wild flower in the field.";
 			next;
-			mes "[Jurgen]";
+			mes "[尤尔根]";
 			mes "She is totally different from the ladies I have met before.";
 			next;
-			mes "[Jurgen]";
+			mes "[尤尔根]";
 			mes "Dear adventurer! How can I tell someone I have fallen in love at first sight how I feel? Should I go take her hands and say I love her?";
 			next;
 			mes "[" + strcharinfo(0) + "]";
 			mes "What? You don't know anything about it?";
 			next;
 			cutin "16jur_nor",0;
-			mes "[Jurgen]";
+			mes "[尤尔根]";
 			mes "She is my ^0000cdfirst love^000000. My life will never be the same since I have met her.";
 			next;
 			mes "[" + strcharinfo(0) + "]";
 			mes "Hum... Try to remember what all the people outside the door have done to you.";
 			next;
 			cutin "16jur_sim",0;
-			mes "[Jurgen]";
+			mes "[尤尔根]";
 			mes "Well... Nothing that I can recall... Hum... There have been some impressive people though. There was this person who penetrated defense and hid behind the curtain in my room...";
 			next;
 			mes "[" + strcharinfo(0) + "]";
 			mes "Hum... That's impressive. However, it is a crime. You should forget it.";
 			next;
 			cutin "16jur_nor",0;
-			mes "[Jurgen]";
+			mes "[尤尔根]";
 			mes "There was this person who sent me a life-size golden statue. I sent it back since I didn't need it and it didn't look as good as real me.";
 			next;
-			mes "[Jurgen]";
+			mes "[尤尔根]";
 			mes "How about sending her a gold statue looking exactly like me?";
 			next;
 			mes "[" + strcharinfo(0) + "]";
 			mes "She will be repelled if you try too hard like that from the very beginning. How about sending her a ^0000cdletter^000000 with a small gift?";
 			next;
-			mes "[Jurgen]";
+			mes "[尤尔根]";
 			mes "It is a good idea! Please wait a moment!";
 			next;
 			mes "[" + strcharinfo(0) + "]";
 			mes "What? Wait for what?";
 			next;
 			cutin "16jur_sim",0;
-			mes "[Jurgen]";
+			mes "[尤尔根]";
 			mes "Did you forget? If I take a step out of that door, I'll draw attention.";
 			next;
-			mes "[Jurgen]";
+			mes "[尤尔根]";
 			mes "It would cause her trouble, wouldn't it. By the way, I didn't even get the chance to ask her what her name was.";
 			next;
 			cutin "16jur_nor",0;
-			mes "[Jurgen]";
+			mes "[尤尔根]";
 			mes "Please send this letter to her with this box containing jewelry.";
 			next;
 			if (select( "OK.", "It will be difficult." ) == 2) {
@@ -11238,10 +11238,10 @@ prt_cas_q,95,9,5	script	Jurgen Wigner#ep16wig	4_M_4THPRIN1,{
 				mes "It will be difficult. I have other things to do.";
 				next;
 				cutin "16jur_sim",0;
-				mes "[Jurgen]";
+				mes "[尤尔根]";
 				mes "Sorry about the difficult request. I guess I should go there myself. You may be able to see the news that the heir of the Wigner family has been crushed to death by his followers on Daily Rune-Midgarts tomorrow morning.";
 				next;
-				mes "[Jurgen]";
+				mes "[尤尔根]";
 				mes "Or, the poor maid could be hospitalized by tomorrow. Anyway, I understand.";
 				close3;
 			}
@@ -11254,7 +11254,7 @@ prt_cas_q,95,9,5	script	Jurgen Wigner#ep16wig	4_M_4THPRIN1,{
 		}
 		if (ep16_wig == 17) {
 			cutin "16jur_nor",0;
-			mes "[Jurgen]";
+			mes "[尤尔根]";
 			mes "Dear adventurer! I've been waiting for you. How did it go? Has she said she loves me too?";
 			next;
 			mes "[" + strcharinfo(0) + "]";
@@ -11263,7 +11263,7 @@ prt_cas_q,95,9,5	script	Jurgen Wigner#ep16wig	4_M_4THPRIN1,{
 		}
 		if (ep16_wig == 18) {
 			cutin "16jur_nor",0;
-			mes "[Jurgen]";
+			mes "[尤尔根]";
 			mes "Dear adventurer! I've been waiting for you.";
 			mes "How did it go? Has she said she loves me too?";
 			next;
@@ -11271,81 +11271,81 @@ prt_cas_q,95,9,5	script	Jurgen Wigner#ep16wig	4_M_4THPRIN1,{
 			mes "No, actually... She ^0000cdturned it down^000000. She returned what you had sent her as well.";
 			next;
 			cutin "16jur_sim",0;
-			mes "[Jurgen]";
+			mes "[尤尔根]";
 			mes "She turned me down?";
 			mes "Why? Did she say that she didn't like my looks? Or wasn't what I had sent her enough for her?";
 			next;
 			mes "[" + strcharinfo(0) + "]";
 			mes "No, not that... She has said she is currently not in the situation to go out with someone. She seems to have a reason.";
 			next;
-			mes "[Jurgen]";
+			mes "[尤尔根]";
 			mes "Does she already have a boyfriend? I am not surprised. She is so attractive after all. No wonder I have fallen for her.";
 			next;
 			mes "[" + strcharinfo(0) + "]";
 			mes "No, not that either... She just has said she is currently not in the situation to date someone.";
 			next;
-			mes "[Jurgen]";
+			mes "[尤尔根]";
 			mes "Whoa... ^0000cdIt is my first time to want something so badly in this life^000000. Never did I know that it would be so difficult to get.";
 			mes "Is living such a difficult thing?";
 			next;
 			cutin "16jur_nor",0;
-			mes "[Jurgen]";
+			mes "[尤尔根]";
 			mes "However, my father has told me that I should always try at least three times.";
 			next;
-			mes "[Jurgen]";
+			mes "[尤尔根]";
 			mes "First try to begin, second try to confirm and the third try to give up since it is not meant to be.";
 			next;
-			mes "[Jurgen]";
+			mes "[尤尔根]";
 			mes "So, dear adventurer. Please do this one more time for me.";
 			next;
 			mes "[" + strcharinfo(0) + "]";
 			mes "Well, I think you should write the letter again...";
 			next;
-			mes "[Jurgen]";
+			mes "[尤尔根]";
 			mes "I need something special. Something pretty and shiny which reflects my feelings...";
 			next;
-			mes "[Jurgen]";
+			mes "[尤尔根]";
 			mes "The Sea Stone! And flower!";
 			next;
 			mes "[" + strcharinfo(0) + "]";
 			mes "What?";
 			next;
-			mes "[Jurgen]";
+			mes "[尤尔根]";
 			mes "I want to send her ^0000cdthe heart that is as wide and beautiful as the sea^000000 and ^0000cdthe amaranthine heart for her^000000.";
 			next;
 			mes "[" + strcharinfo(0) + "]";
 			mes "Should I go get them all myself as well?";
 			next;
 			cutin "16jur_sim",0;
-			mes "[Jurgen]";
+			mes "[尤尔根]";
 			mes "Please, dear adventurer, be the messenger of love for me. Please send her my heart wider than the sea which never withers.";
 			next;
 			mes "[" + strcharinfo(0) + "]";
 			mes "If you say so, I'll do it.";
 			next;
 			cutin "16jur_nor",0;
-			mes "[Jurgen]";
+			mes "[尤尔根]";
 			mes "Please send her my letter with ^0000cd15 Sea Stones and 1 Witherless Rose^000000.";
 			next;
-			mes "[Jurgen]";
+			mes "[尤尔根]";
 			mes "As I told you before, you can get the Sea Stone from killing Medusa.";
 			next;
-			mes "[Jurgen]";
+			mes "[尤尔根]";
 			mes "Dear adventurer, I will never forget this and make it up to you. We, Wigners, never forget any debt.";
 			next;
 			mes "[" + strcharinfo(0) + "]";
 			mes "Not that I am doing it expecting something in return, but I will deliver them to her since you look so desperate.";
 			next;
-			mes "[Jurgen]";
+			mes "[尤尔根]";
 			mes "Thank you! Oh, do you happen to get her name by any chance?";
 			next;
 			mes "[" + strcharinfo(0) + "]";
 			mes "Mary, her name is Mary.";
 			next;
-			mes "[Jurgen]";
+			mes "[尤尔根]";
 			mes "^0000cdMary^000000. It is a common but pretty name. What is common means that it is well loved by many people. I'll get all my things embroidered with this name from now on.";
 			next;
-			mes "[Jurgen]";
+			mes "[尤尔根]";
 			mes "Dear adventurer, you may set off now. Please deliver my feelings to her safely.";
 			erasequest 14489;// I Have to Turn It Down
 			setquest 14490;// My Love Once More
@@ -11354,89 +11354,89 @@ prt_cas_q,95,9,5	script	Jurgen Wigner#ep16wig	4_M_4THPRIN1,{
 		}
 		if (ep16_wig == 19) {
 			cutin "16jur_nor",0;
-			mes "[Jurgen]";
+			mes "[尤尔根]";
 			mes "Did you deliver my heart to Mary safely? You have come back so early.";
 			next;
-			mes "[Jurgen]";
+			mes "[尤尔根]";
 			mes "Have you forgotten what you have to bring with you?";
 			next;
-			mes "[Jurgen]";
+			mes "[尤尔根]";
 			mes "You need to bring ^0000cd15 Sea Stones which you can get from killing Medusa and 1 Witherless Rose^000000.";
 			next;
-			mes "[Jurgen]";
+			mes "[尤尔根]";
 			mes "Mary wouldn't feel uncomfortable if I express my feelings with ordinary things like these, right? Please send her my heart wider than the sea which never withers.";
 			close3;
 		}
 		if (ep16_wig == 20) {
 			cutin "16jur_nor",0;
-			mes "[Jurgen]";
+			mes "[尤尔根]";
 			mes "Dear adventurer! You are back!";
 			mes "I couldn't stop thinking about her even while you were gone.";
 			next;
 			emotion ET_THROB;
-			mes "[Jurgen]";
+			mes "[尤尔根]";
 			mes "Even when I eat, drink a tea, look into the mirror and talking to other people! I though about her all day. It was painful but I was in a flutter.";
 			next;
 			mes "[" + strcharinfo(0) + "]";
 			mes "That's what falling in love is like.";
 			next;
 			cutin "16jur_sim",0;
-			mes "[Jurgen]";
+			mes "[尤尔根]";
 			mes "Oh, then I must have been doing bad things to numerous people. There is nothing I can do for them.";
 			next;
 			cutin "16jur_nor",0;
-			mes "[Jurgen]";
+			mes "[尤尔根]";
 			mes "By the way, since your hands are empty, I guess she has accepted my heart at last!";
 			next;
 			mes "[" + strcharinfo(0) + "]";
 			mes "Well, hum... She didn't react negatively, but you'd better be careful since you don't know each other yet.";
 			mes "Why don't you spare her some time?";
 			next;
-			mes "[Jurgen]";
+			mes "[尤尔根]";
 			mes "She must have not accepted my heart completely then. I am all right though! She hasn't turned me down yet!";
 			next;
 			cutin "16jur_sim",0;
-			mes "[Jurgen]";
+			mes "[尤尔根]";
 			mes "I didn't know how painful it was to love someone. I did know how I would be fidgety about a word or gesture of her.";
 			next;
 			mes "[" + strcharinfo(0) + "]";
 			mes "It is true. Winning someone's heart is the hardest thing.";
 			next;
 			cutin "16jur_nor",0;
-			mes "[Jurgen]";
+			mes "[尤尔根]";
 			mes "I guess I should be nicer to the people who like me.";
 			next;
 			mes "[" + strcharinfo(0) + "]";
 			mes "I don't think that is a good idea...";
 			next;
-			mes "[Jurgen]";
+			mes "[尤尔根]";
 			mes "Dear adventurer, thank you again. Would you come by again tomorrow?";
 			next;
 			mes "[" + strcharinfo(0) + "]";
 			mes "What?";
 			next;
-			mes "[Jurgen]";
+			mes "[尤尔根]";
 			mes "It seems like a good sign. Paddle as the wave approaches. That's one of the many mottos of our family.";
 			next;
 			emotion ET_THROB;
-			mes "[Jurgen]";
+			mes "[尤尔根]";
 			mes "I want to let her know of my blazing heart every day.";
 			next;
-			mes "[Jurgen]";
+			mes "[尤尔根]";
 			mes "I have a feeling that everything will turn out great if you send it for me.";
 			next;
 			mes "[" + strcharinfo(0) + "]";
 			mes "How about allowing her some time?";
 			next;
 			cutin "16jur_sim",0;
-			mes "[Jurgen]";
+			mes "[尤尔根]";
 			mes "What if she forgets about me? Then, please send her my message once a day. You wouldn't say no, right?";
 			next;
 			cutin "16jur_nor",0;
-			mes "[Jurgen]";
+			mes "[尤尔根]";
 			mes "Oh, I almost forgot. It is not much, but please accept this as my token of gratitude for the messenger of my love.";
 			next;
-			mes "[Jurgen]";
+			mes "[尤尔根]";
 			mes "I'll see you tomorrow then!";
 			erasequest 14491;// I Have to Turn It Down Again
 			setquest 14492;// There Is a Silver Lining
@@ -11447,46 +11447,46 @@ prt_cas_q,95,9,5	script	Jurgen Wigner#ep16wig	4_M_4THPRIN1,{
 		}
 		if (isbegin_quest(14493) == 1) {// daily
 			cutin "16jur_nor",0;
-			mes "[Jurgen]";
+			mes "[尤尔根]";
 			mes "Did you deliver my heart to Mary safely? You have come back so early.";
 			next;
-			mes "[Jurgen]";
+			mes "[尤尔根]";
 			mes "Have you forgotten what you have to bring with you?";
 			next;
-			mes "[Jurgen]";
+			mes "[尤尔根]";
 			mes "You need to bring ^0000cd15 Sea Stones which you can get from killing Medusa and 1 Witherless Rose^000000.";
 			next;
-			mes "[Jurgen]";
+			mes "[尤尔根]";
 			mes "Mary wouldn't feel uncomfortable if I express my feelings with ordinary things like these, right?";
 			next;
-			mes "[Jurgen]";
+			mes "[尤尔根]";
 			mes "Please send her my heart wider than the sea which never withers.";
 			close3;
 		}
 		if (isbegin_quest(14494) == 1) {
 			cutin "16jur_nor",0;
-			mes "[Jurgen]";
+			mes "[尤尔根]";
 			mes "Dear adventurer, I'd like to call you who has delivered my message of love to her, the ^0000cdMessenger of Love^000000.";
 			next;
 			mes "[" + strcharinfo(0) + "]";
 			mes "Please don't...";
 			next;
-			mes "[Jurgen]";
+			mes "[尤尔根]";
 			mes "^0000cdCupid of Love^000000...";
 			next;
 			mes "[" + strcharinfo(0) + "]";
 			mes "Please stop it.";
 			next;
-			mes "[Jurgen]";
+			mes "[尤尔根]";
 			mes "On the day Mary accepts my feelings, I would like to give you a huge pure gold statue.";
 			next;
 			mes "[" + strcharinfo(0) + "]";
 			mes "You really don't have to do that.";
 			next;
-			mes "[Jurgen]";
+			mes "[尤尔根]";
 			mes "However, this is the only thing I can offer you for now. Please visit our manor later. There are some real valuable things.";
 			next;
-			mes "[Jurgen]";
+			mes "[尤尔根]";
 			mes "Then dear adventurer, I'll see you again tomorrow.";
 			erasequest 14494;// I Have to Turn It Down Again
 			setquest 14492;// There Is a Silver Lining
@@ -11498,37 +11498,37 @@ prt_cas_q,95,9,5	script	Jurgen Wigner#ep16wig	4_M_4THPRIN1,{
 	case 0:
 	case 1:
 		cutin "16jur_nor",0;
-		mes "[Jurgen]";
+		mes "[尤尔根]";
 		mes "Dear adventurer, what brought you here around this time? May I help you?";
 		next;
-		mes "[Jurgen]";
+		mes "[尤尔根]";
 		mes "Are you here to deliver my message of love to Mary?";
 		next;
-		mes "[Jurgen]";
+		mes "[尤尔根]";
 		mes "Oh, well, it was you who had said that she would be repelled by my impatience.";
 		next;
-		mes "[Jurgen]";
+		mes "[尤尔根]";
 		mes "I am trying hard not to send her my love letter every minute and second. Please comeback when the time comes.";
 		close3;
 	case 2:
 		cutin "16jur_nor",0;
-		mes "[Jurgen]";
+		mes "[尤尔根]";
 		mes "Dear adventurer, you came! It seems that something good may happen today.";
 		next;
-		mes "[Jurgen]";
+		mes "[尤尔根]";
 		mes "Please deliver her the message of my love with deliver my message of love with ^0000cd15 Sea Stones and 1 Witherless Rose^000000.";
 		next;
-		mes "[Jurgen]";
+		mes "[尤尔根]";
 		mes "Do you remember? You can get the Sea Stone by killing Medusa.";
 		next;
 		emotion ET_CRY;
-		mes "[Jurgen]";
+		mes "[尤尔根]";
 		mes "Please send them to her and tell me how Mary is doing today. I am sad that she doesn't come here to clean the room anymore.";
 		next;
-		mes "[Jurgen]";
+		mes "[尤尔根]";
 		mes "I want to go see her myself. However, I guess she will feel uncomfortable.";
 		next;
-		mes "[Jurgen]";
+		mes "[尤尔根]";
 		mes "Dear adventurer, I am depending on you!";
 		erasequest 14492;// There Is a Silver Lining
 		setquest 14493;// Today I Feel
@@ -11536,50 +11536,50 @@ prt_cas_q,95,9,5	script	Jurgen Wigner#ep16wig	4_M_4THPRIN1,{
 	}
 }
 
-prt_cas_q,96,7,1	script	Katrin Wigner#ep16wig	4_EP16_POE,{
+prt_cas_q,96,7,1	script	卡特琳·维格纳#ep16wig	4_EP16_POE,{
 	if (ep16_wig < 3) {
 		cutin "16kat_nor",2;
-		mes "[Katrin]";
+		mes "[卡特琳]";
 		mes "Dear adventurer, we are honored to have you with us. Have you met our father who is the head of the Wigner family?";
 		next;
-		mes "[Katrin]";
+		mes "[卡特琳]";
 		mes "How about meeting Jurgen, the hair of the Wigner family who is participating in the Royal Assembly?";
 		next;
-		mes "[Katrin]";
+		mes "[卡特琳]";
 		mes "Then, have a comfortable time in the Wigner family.";
 		close3;
 	}
 	if (ep16_wig == 3) {
 		cutin "16kat_nor",2;
-		mes "[Katrin]";
+		mes "[卡特琳]";
 		mes "I am over!";
 		next;
 		mes "[" + strcharinfo(0) + "]";
 		mes "What is going on?";
 		next;
 		cutin "16jur_sim",0;
-		mes "[Jurgen]";
+		mes "[尤尔根]";
 		mes "Sister, please calm down. Where did you put it? Are you sure you have left it here?";
 		next;
 		cutin "16kat_nor",2;
-		mes "[Katrin]";
+		mes "[卡特琳]";
 		mes "Here, I have left it right here! After talking to the adventurer, I put it here and... It was gone... Where did it go?";
 		next;
 		mes "[" + strcharinfo(0) + "]";
 		mes "What did you lose?";
 		next;
-		mes "[Katrin]";
+		mes "[卡特琳]";
 		mes "My jewelry box... Well, it is technically not a jewelry box since it doesn't hold any jewelry in it, but anyways, ^0000cda small box containing something very important is missing.^000000";
 		next;
-		mes "[Katrin]";
+		mes "[卡特琳]";
 		mes "I took it out of my bag and out it here. Then it was gone. What should I do? I don't know what I should do without it... I cannot afford to let anyone see it...";
 		next;
 		cutin "16jur_sim",0;
-		mes "[Jurgen]";
+		mes "[尤尔根]";
 		mes "It could be the ^0000cdmaid^000000 who came here earlier to clean the room. She may have taken it.";
 		next;
 		cutin "16kat_nor",2;
-		mes "[Katrin]";
+		mes "[卡特琳]";
 		mes "You haven't seen her taking it. You shouldn't doubt other people without proof.";
 		next;
 		cutin "",255;
@@ -11587,43 +11587,43 @@ prt_cas_q,96,7,1	script	Katrin Wigner#ep16wig	4_EP16_POE,{
 		mes "Not that I am suspicious of her, but it may help to ask her. If she saw it or when was the last time she saw it...";
 		next;
 		cutin "16kat_nor",2;
-		mes "[Katrin]";
+		mes "[卡特琳]";
 		mes "Please don't. She would be upset if she feels that she is being suspected.";
 		next;
 		cutin "16jur_sim",0;
-		mes "[Jurgen]";
+		mes "[尤尔根]";
 		mes "But you are being so nervous. Isn't it an important thing to you?";
 		next;
 		cutin "16kat_nor",2;
-		mes "[Katrin]";
+		mes "[卡特琳]";
 		mes "It is, but...";
 		next;
 		cutin "16jur_nor",0;
-		mes "[Jurgen]";
+		mes "[尤尔根]";
 		mes "You really need to get it back, right?";
 		next;
 		cutin "16kat_nor",2;
-		mes "[Katrin]";
+		mes "[卡特琳]";
 		mes "You are right, but...";
 		next;
 		mes "[" + strcharinfo(0) + "]";
 		mes "I'll make sure to ask her about it as politely as possible. Please relax and wait here.";
 		next;
-		mes "[Katrin]";
+		mes "[卡特琳]";
 		mes "I don't know if is the best idea. I don't want her to feel that we are suspecting her.";
 		next;
 		cutin "16jur_nor",0;
-		mes "[Jurgen]";
+		mes "[尤尔根]";
 		mes "Just wait until the adventurer comes back. The adventurer is really experienced in this kind of stuff.";
 		next;
 		cutin "16kat_nor",2;
-		mes "[Katrin]";
+		mes "[卡特琳]";
 		mes "Should I...";
 		mes "Then, please help me, dear adventurer. I'll go search other pleases then.";
 		next;
-		cloakonnpcself( "Katrin Wigner#ep16wig" );
+		cloakonnpcself( "卡特琳·维格纳#ep16wig" );
 		cutin "16jur_nor",0;
-		mes "[Jurgen]";
+		mes "[尤尔根]";
 		mes "Please, help her. I have heard that ^0000cdthe maids are in the kitchen^000000.";
 		erasequest 14477;// What Is Going on?
 		setquest 14478;// Searching for the Clue
@@ -11632,75 +11632,75 @@ prt_cas_q,96,7,1	script	Katrin Wigner#ep16wig	4_EP16_POE,{
 	}
 	if (ep16_wig < 12) {
 		cutin "16kat_nor",2;
-		mes "[Katrin]";
+		mes "[卡特琳]";
 		mes "Oh, what should I do?";
 		mes "I should have taken better care of it...";
 		next;
-		mes "[Katrin]";
+		mes "[卡特琳]";
 		mes "Please make sure not to hurt other people's feelings.";
 		mes "I would like to go find it myself, but I am not in the situation to do that...";
 		next;
-		mes "[Katrin]";
+		mes "[卡特琳]";
 		mes "I don't even want to imagine anyone else sees it though...";
 		mes "I would be embarrassed to death.";
 		close3;
 	}
 	if (ep16_wig == 15) {
 		cutin "16kat_nor",2;
-		mes "[Katrin]";
+		mes "[卡特琳]";
 		mes "Please leave me alone now!";
 		mes "Ah, it was you, dear adventurer. Please excuse me.";
 		next;
 		mes "[" + strcharinfo(0) + "]";
 		mes "Your feeling must have been hurt by your brothers.";
 		next;
-		mes "[Katrin]";
+		mes "[卡特琳]";
 		mes "It is not that.";
 		mes "I am... I am just angry at myself.";
 		next;
-		mes "[Katrin]";
+		mes "[卡特琳]";
 		mes "Something like this never would have happened if was more careful...";
 		mes "Moreover, I shouldn't have said such things to my brothers either.";
 		next;
-		mes "[Katrin]";
+		mes "[卡特琳]";
 		mes "However, I couldn't take it anymore when I heard the rumors and Jurgen's attitude...";
 		mes "I thought I was used to those things... I guess I am not.";
 		next;
-		mes "[Katrin]";
+		mes "[卡特琳]";
 		mes "I should have given it up by now...";
 		mes "Oh, I am sorry. I believe you haven't come here to listen to a story like this.";
 		next;
-		mes "[Katrin]";
+		mes "[卡特琳]";
 		mes "I am sorry, but I want to be alone for now.";
 		mes "Please.";
 		close3;
 	}
 	if (ep16_wig > 15) {
 		cutin "16kat_nor",2;
-		mes "[Katrin]";
+		mes "[卡特琳]";
 		mes "Thanks to you, we have become closer to one another now.";
 		mes "Now I can open up to my brothers more.";
 		next;
-		mes "[Katrin]";
+		mes "[卡特琳]";
 		mes "I have tried to hide my feelings and save my words. However, I have realized that It is not the best policy.";
 		mes "From now own, I am going to tell them how I feel to avoid any misunderstanding.";
 		next;
-		mes "[Katrin]";
+		mes "[卡特琳]";
 		mes "Dear adventurer, thank you.";
 		close3;
 	}
 	cutin "16kat_nor",2;
-	mes "[Katrin]";
+	mes "[卡特琳]";
 	mes "I believe I haven't met you before. Are you here to see my father?";
 	next;
-	mes "[Katrin]";
+	mes "[卡特琳]";
 	mes "My father is over there.";
 	close3;
 }
 
-prt_cas_q,94,7,7	script	Isaac Wigner#ep16wig	4_EP16_ISAAC,{
+prt_cas_q,94,7,7	script	艾萨克·维格纳#ep16wig	4_EP16_ISAAC,{
 	if (checkweight(1304,3) == 0) {
-		mes "[Isaac Wigner]";
+		mes "[艾萨克·维格纳]";
 		mes "Dear adventurer, do you know the old saying that the emptier it is, the more you can fill it?";
 		mes "It is one of the many aphorisms passing down in our family.";
 		close;
@@ -11708,61 +11708,61 @@ prt_cas_q,94,7,7	script	Isaac Wigner#ep16wig	4_EP16_ISAAC,{
 	.@name$ = strcharinfo(0);
 	if (ep16_lug == 2) {
 		mes "[" + .@name$ + "]";
-		mes "Hello, Isaac Wigner.";
+		mes "Hello, 艾萨克·维格纳.";
 		next;
 		cutin "16isa",1;
-		mes "[Isaac]";
+		mes "[艾萨克]";
 		mes "Oh, welcome, dear adventurer, my brother is over there...";
 		next;
 		mes "[" + .@name$ + "]";
 		mes "No. I am here to see you, Isaac.";
 		next;
-		mes "[Isaac]";
+		mes "[艾萨克]";
 		mes "Is it about Wolf?";
 		next;
 		mes "[" + .@name$ + "]";
 		mes "Yes. How did you know it...?";
 		next;
-		mes "[Isaac]";
+		mes "[艾萨克]";
 		mes "Wolf is not here even after the time he has promised. He is the man of his word. Something must have happened to him.";
 		next;
-		mes "[Isaac]";
+		mes "[艾萨克]";
 		mes "I never expected you would come here instead though. So is he cancelling the appointment today then?";
 		next;
 		mes "[" + .@name$ + "]";
 		mes "Yes, he is. And he asked me to get ^0000cda certain thing^000000 from you, Isaac.";
 		next;
-		mes "[Isaac]";
+		mes "[艾萨克]";
 		mes "That thing...? Wolf must trust you, dear adventurer. Or it could be...";
 		next;
 		mes "[" + .@name$ + "]";
 		mes "Some kind of a test.";
 		next;
-		mes "[Isaac]";
+		mes "[艾萨克]";
 		mes "Don't take it the wrong way. I am just be careful. In order to do what I do, I need to know who I can trust first.";
 		next;
 		mes "[" + .@name$ + "]";
 		mes "I understand.";
 		next;
-		mes "[Isaac]";
+		mes "[艾萨克]";
 		mes "You can bring it to Wolf. Please be careful with it.";
 		next;
 		mes "[" + .@name$ + "]";
 		mes "OK.";
 		next;
-		mes "[Isaac]";
+		mes "[艾萨克]";
 		mes "May I ask you for one more thing? I have heard that there is ^0000cda strange rumor^000000 circulating in Prontera.";
 		next;
-		mes "[Isaac]";
+		mes "[艾萨克]";
 		mes "It is supposed to be about ^0000cdHelmut Roegenburg^000000. Would you investigate about the rumor and let me know the truth?";
 		next;
-		mes "[Isaac]";
+		mes "[艾萨克]";
 		mes "Since I have a reputation to keep. I cannot afford to have a scandal. Please help me.";
 		if (ep16_wig > 1 && ep16_wig < 15) {
 			next;
-			mes "[Isaac]";
+			mes "[艾萨克]";
 			mes "Please excuse me then.";
-			cloakonnpcself( "Isaac Wigner#ep16wig" );
+			cloakonnpcself( "艾萨克·维格纳#ep16wig" );
 		}
 		erasequest 14496;// To Isaac
 		setquest 14497;// Delivery for Wolf
@@ -11772,61 +11772,61 @@ prt_cas_q,94,7,7	script	Isaac Wigner#ep16wig	4_EP16_ISAAC,{
 	}
 	if (ep16_lug == 3) {
 		cutin "16isa",1;
-		mes "[Isaac]";
+		mes "[艾萨克]";
 		mes "Have you deliver the thing to Wolf safely? You should be careful with it since it can be dangerous.";
 		next;
-		mes "[Isaac]";
+		mes "[艾萨克]";
 		mes "And, don't forget to ask about the rumor as well.";
 		if (ep16_wig > 1 && ep16_wig < 15) {
 			next;
-			mes "[Isaac]";
+			mes "[艾萨克]";
 			mes "Please excuse me then.";
-			cloakonnpcself( "Isaac Wigner#ep16wig" );
+			cloakonnpcself( "艾萨克·维格纳#ep16wig" );
 		}
 		close3;
 	}
 	if (ep16_lug == 7) {
 		if (countitem(6931) < 1) {
 			cutin "16isa",1;
-			mes "[Isaac]";
+			mes "[艾萨克]";
 			mes "Dear adventurer, you are back. Did you deliver the thing safely? What did he say about the rumor?";
 			next;
 			mes "[" + .@name$ + "]";
 			mes "Here is the document about that. Here... It was. Wait, I must have forget to bring it with me. I am sorry. I'll be back with it soon.";
 			next;
-			mes "[Isaac]";
+			mes "[艾萨克]";
 			mes "Such things happen. Take your time. I'll be waiting for you.";
 			close3;
 		}
 		cutin "16isa",1;
-		mes "[Isaac]";
+		mes "[艾萨克]";
 		mes "Dear adventurer, you are back. Did you deliver the thing safely? What did he say about the rumor?";
 		next;
 		mes "[" + .@name$ + "]";
 		mes "Here is the ^0000cddocument^000000 about it. It is written by Wolf Roegenburg himself.";
 		next;
-		mes "[Isaac]";
+		mes "[艾萨克]";
 		mes "Let's see... Hum... So the new business will be delayed indefinitely. The direction of the business will be changed.";
 		next;
-		mes "[Isaac]";
+		mes "[艾萨克]";
 		mes "I'll see you again after taking care of the matters. - W. R.";
 		next;
-		mes "[Isaac]";
+		mes "[艾萨克]";
 		mes "It means that he would stop the deal about the war, right? The rumor must have been quite threatening.";
 		next;
-		mes "[Isaac]";
+		mes "[艾萨克]";
 		mes "I feel sorry. It would have been a great chance for me to impress my family.";
 		next;
-		mes "[Isaac]";
+		mes "[艾萨克]";
 		mes "Well, I believe Wolf would find a better direction to the business. Please tell Wolf that I support his decision. And that I am excited about his new business.";
 		next;
 		mes "[" + .@name$ + "]";
 		mes "Yes, I will.";
 		if (ep16_wig > 1 && ep16_wig < 15) {
 			next;
-			mes "[Isaac]";
+			mes "[艾萨克]";
 			mes "Please excuse me then.";
-			cloakonnpcself( "Isaac Wigner#ep16wig" );
+			cloakonnpcself( "艾萨克·维格纳#ep16wig" );
 		}
 		delitem 6931,1;// Secret_Documents
 		erasequest 14502;// To Isaac
@@ -11836,80 +11836,80 @@ prt_cas_q,94,7,7	script	Isaac Wigner#ep16wig	4_EP16_ISAAC,{
 	}
 	if (ep16_lug == 8) {
 		cutin "16isa",1;
-		mes "[Isaac]";
+		mes "[艾萨克]";
 		mes "It is a shame.";
 		mes "It was a great opportunity for me and Wolf.";
 		next;
-		mes "[Isaac]";
+		mes "[艾萨克]";
 		mes "However, since my partner wants to quit, I shouldn't force him to carry on with it.";
 		mes "I believe that Wolf must already have the plan about the next business item in his mind.";
 		next;
-		mes "[Isaac]";
+		mes "[艾萨克]";
 		mes "That's why I accepted his suggestion to be partners in business.";
 		if (ep16_wig > 1 && ep16_wig < 15) {
 			next;
-			mes "[Isaac]";
+			mes "[艾萨克]";
 			mes "Please excuse me then.";
-			cloakonnpcself( "Isaac Wigner#ep16wig" );
+			cloakonnpcself( "艾萨克·维格纳#ep16wig" );
 		}
 		close3;
 	}
 
 	if (ep16_wig == 1 || ep16_wig == 2) {
 		cutin "16isa",1;
-		mes "[Isaac]";
+		mes "[艾萨克]";
 		mes "Dear adventurer, since you are here to the Wigner family, why don't you go meet some other members of the family?";
 		mes "Like my parents, my brother who is the candidate to the throne or my sister who is the eldest child.";
 		next;
-		mes "[Isaac]";
+		mes "[艾萨克]";
 		mes "I believe that you would have more productive time with them.";
 		close3;
 	}
 	if (ep16_wig == 15) {
 		cutin "16isa",1;
-		mes "[Isaac]";
+		mes "[艾萨克]";
 		mes "Dear adventurer, did you bring what I had asked you?";
 		next;
-		mes "[Isaac]";
+		mes "[艾萨克]";
 		mes "I'd like to go get them myself or ask other people to do it. But, I feel a little uncomfortable since it is a family matter.";
 		next;
-		mes "[Isaac]";
+		mes "[艾萨克]";
 		mes "I know how it is troubling you, but please help us. You have not forgotten what to bring, have you?";
 		next;
-		mes "[Isaac]";
+		mes "[艾萨克]";
 		mes "You need to bring ^0000cd10 Sea Stones and 1 Witherless Rose^000000.";
 		next;
-		mes "[Isaac]";
+		mes "[艾萨克]";
 		mes "Our fate depends on you! We may be able to get along again or we may become distant.";
 		next;
-		mes "[Isaac]";
+		mes "[艾萨克]";
 		mes "Please bring them to us as soon as possible!";
 		close3;
 	}
 	if (ep16_wig > 15) {
 		cutin "16isa",1;
-		mes "[Isaac]";
+		mes "[艾萨克]";
 		mes "Thanks to you, my brother and sister have become close to each other again.";
 		mes "What would they do without me?";
 		next;
-		mes "[Isaac]";
+		mes "[艾萨克]";
 		mes "Dear adventurer, I'll see you around then.";
 		close3;
 	}
 	cutin "16isa",1;
-	mes "[Isaac]";
+	mes "[艾萨克]";
 	mes "Is it your first time to visit the Wigner family?";
 	mes "Then, ^0000cdyou should meet our parents^000000 over there first.";
 	close3;
 }
 
-prt_cas_q,80,23,5	script	Jurgen Wigner#ep16wig00	4_M_4THPRIN1,{
+prt_cas_q,80,23,5	script	尤尔根·维格纳#ep16wig00	4_M_4THPRIN1,{
 	end;
 OnInit:
 	cloakonnpc();
 	end;
 }
-prt_cas_q,93,10,4	duplicate(Jurgen Wigner#ep16wig00)	Maid#ep16wig01	1_F_04
+prt_cas_q,93,10,4	duplicate(尤尔根·维格纳#ep16wig00)	Maid#ep16wig01	1_F_04
 
 prt_cas_q,95,11,4	script	Womenfolk#ep16wig01	1_F_03,{
 	mes "[Womenfolk]";
@@ -11924,12 +11924,12 @@ OnTimer600000:
 	npctalk "Oh my! Jurgen! My prince! I love you! Please look this way!", "Womenfolk#ep16wig01";
 	emotion ET_CHUP, getnpcid(0, "Womenfolk#ep16wig01");
 	sleep 2000;
-	npctalk "Are you... I have seen you before... Well... Are you here to see me?", "Jurgen Wigner#ep16wig";
+	npctalk "Are you... I have seen you before... Well... Are you here to see me?", "尤尔根·维格纳#ep16wig";
 	sleep 2000;
 	npctalk "Dear Jurgen! Please be with me together! Forever!", "Womenfolk#ep16wig01";
 	specialeffect EF_HEARTCASTING,AREA,"Womenfolk#ep16wig01";
 	sleep 2000;
-	npctalk "That's a bit difficult...", "Jurgen Wigner#ep16wig";
+	npctalk "That's a bit difficult...", "尤尔根·维格纳#ep16wig";
 	sleep 2000;
 	enablenpc "Strong Guards#ep16wig03";
 	enablenpc "Strong Guards#ep16wig04";
@@ -11973,7 +11973,7 @@ OnTimer480000:
 	npctalk "That woman must have given me the wrong set of coordinates!", "Bachelor#ep16wig01";
 	sleep 2000;
 	npctalk "Oh, it is hot!", "Bachelor#ep16wig01";
-	npctalk "Well, you didn't need to show me the blazing love for me with your entire body.", "Jurgen Wigner#ep16wig";
+	npctalk "Well, you didn't need to show me the blazing love for me with your entire body.", "尤尔根·维格纳#ep16wig";
 	sleep 2000;
 	npctalk "Oh, it's hot! Jurgen, please save me... Argh!", "Bachelor#ep16wig01";
 	sleep 3000;
@@ -12009,26 +12009,26 @@ prt_cas_q,74,21,5	script	#ep16wig003	HIDDEN_NPC,5,5,{
 	end;
 OnTouch:
 	if (ep16_wig == 2 || ep16_wig == 3) {
-		cloakoffnpcself( "Katrin Wigner#ep16wig" );
+		cloakoffnpcself( "卡特琳·维格纳#ep16wig" );
 		if (ep16_lug == 2 || ep16_lug == 7)
-			cloakoffnpcself( "Isaac Wigner#ep16wig" );
+			cloakoffnpcself( "艾萨克·维格纳#ep16wig" );
 		else
-			cloakonnpcself( "Isaac Wigner#ep16wig" );
+			cloakonnpcself( "艾萨克·维格纳#ep16wig" );
 	}
 	else if (ep16_wig > 3 && ep16_wig < 15) {
-		cloakonnpcself( "Katrin Wigner#ep16wig" );
+		cloakonnpcself( "卡特琳·维格纳#ep16wig" );
 		if (ep16_lug == 2 || ep16_lug == 7)
-			cloakoffnpcself( "Isaac Wigner#ep16wig" );
+			cloakoffnpcself( "艾萨克·维格纳#ep16wig" );
 		else
-			cloakonnpcself( "Isaac Wigner#ep16wig" );
+			cloakonnpcself( "艾萨克·维格纳#ep16wig" );
 	}
 	else if (ep16_wig == 15) {
-		cloakonnpcself( "Katrin Wigner#ep16wig" );
-		cloakoffnpcself( "Isaac Wigner#ep16wig" );
+		cloakonnpcself( "卡特琳·维格纳#ep16wig" );
+		cloakoffnpcself( "艾萨克·维格纳#ep16wig" );
 	}
 	else {
-		cloakoffnpcself( "Katrin Wigner#ep16wig" );
-		cloakoffnpcself( "Isaac Wigner#ep16wig" );
+		cloakoffnpcself( "卡特琳·维格纳#ep16wig" );
+		cloakoffnpcself( "艾萨克·维格纳#ep16wig" );
 	}
 	end;
 }
@@ -12037,26 +12037,26 @@ prt_cas_q,95,7,5	script	#ep16wig004	HIDDEN_NPC,5,5,{
 	end;
 OnTouch:
 	if (ep16_wig == 2 || ep16_wig == 3) {
-		cloakoffnpcself( "Katrin Wigner#ep16wig" );
+		cloakoffnpcself( "卡特琳·维格纳#ep16wig" );
 		if (ep16_lug == 2 || ep16_lug == 7)
-			cloakoffnpcself( "Isaac Wigner#ep16wig" );
+			cloakoffnpcself( "艾萨克·维格纳#ep16wig" );
 		else
-			cloakonnpcself( "Isaac Wigner#ep16wig" );
+			cloakonnpcself( "艾萨克·维格纳#ep16wig" );
 	}
 	else if (ep16_wig > 3 && ep16_wig < 15) {
-		cloakonnpcself( "Katrin Wigner#ep16wig" );
+		cloakonnpcself( "卡特琳·维格纳#ep16wig" );
 		if (ep16_lug == 2 || ep16_lug == 7)
-			cloakoffnpcself( "Isaac Wigner#ep16wig" );
+			cloakoffnpcself( "艾萨克·维格纳#ep16wig" );
 		else
-			cloakonnpcself( "Isaac Wigner#ep16wig" );
+			cloakonnpcself( "艾萨克·维格纳#ep16wig" );
 	}
 	else if (ep16_wig == 15) {
-		cloakonnpcself( "Katrin Wigner#ep16wig" );
-		cloakoffnpcself( "Isaac Wigner#ep16wig" );
+		cloakonnpcself( "卡特琳·维格纳#ep16wig" );
+		cloakoffnpcself( "艾萨克·维格纳#ep16wig" );
 	}
 	else {
-		cloakoffnpcself( "Katrin Wigner#ep16wig" );
-		cloakoffnpcself( "Isaac Wigner#ep16wig" );
+		cloakoffnpcself( "卡特琳·维格纳#ep16wig" );
+		cloakoffnpcself( "艾萨克·维格纳#ep16wig" );
 	}
 	end;
 }
@@ -13512,28 +13512,28 @@ prt_cas,85,223,1	script	Maximilian Roegenburg#ep16wig01	4_EP16_MAX,{
 	mes "[Maximilian]";
 	mes "I have heard that my grandson is under indebtedness to your son these days.";
 	next;
-	mes "[Levuiere]";
+	mes "[勒维耶]";
 	mes "Not at all. My son is supposed to be learning from your smart grandson. Haha.";
 	next;
-	mes "[Catherine]";
+	mes "[凯瑟琳]";
 	mes "Please take care of our son, Isaac.";
 	close;
 }
 
-prt_cas,85,225,4	script	Catherine Wigner#ep16wig01	1_F_LIBRARYGIRL,{
-	mes "[Catherine]";
+prt_cas,85,225,4	script	凯瑟琳·维格纳#ep16wig01	1_F_LIBRARYGIRL,{
+	mes "[凯瑟琳]";
 	mes "Many things have changed since the last time we were here in the palace. I want to come here more often, but we cannot find the excuse to come...";
 	next;
-	mes "[Levuiere]";
+	mes "[勒维耶]";
 	mes "You can come here with an invitation. It is not difficult visiting here.";
 	next;
-	mes "[Catherine]";
+	mes "[凯瑟琳]";
 	mes "You know that is not what I mean...";
 	close;
 }
 
-prt_cas,84,225,4	script	Levuiere Wigner#ep16wig01	4_EP16_LOUVIERE,{
-	mes "[Levuiere]";
+prt_cas,84,225,4	script	勒维耶·维格纳#ep16wig01	4_EP16_LOUVIERE,{
+	mes "[勒维耶]";
 	mes "Dear Roegenburg, how are your children doing? I often hear about your third grandson from Isaac/";
 	next;
 	mes "[Maximilian]";
@@ -13565,8 +13565,8 @@ prt_cas,105,224,4	script	Beatrice#ep16wig	4_F_02,{
 	close;
 }
 
-prt_cas,107,225,5	script	Isaac Wigner#ep16wig01	4_EP16_ISAAC,{
-	mes "[Isaac]";
+prt_cas,107,225,5	script	艾萨克·维格纳#ep16wig01	4_EP16_ISAAC,{
+	mes "[艾萨克]";
 	mes "Hahahahaha!";
 	mes "I should have seen the face! Please invite me to one of those events next time.";
 	next;
@@ -13582,17 +13582,17 @@ prt_cas,107,225,5	script	Isaac Wigner#ep16wig01	4_EP16_ISAAC,{
 	mes "[Bryan]";
 	mes "Don't you say such a thing!";
 	next;
-	mes "[Isaac]";
+	mes "[艾萨克]";
 	mes "Oh! I am sorry to keep Bryan with me. Please excuse me.";
 	next;
-	mes "[Isaac]";
+	mes "[艾萨克]";
 	mes "However, please understand. It is the most important time for our business. I'll tell him to devote his time to you after this time is over, dear Sophia.";
 	next;
 	mes "[Sophia]";
 	mes "Oh, you should keep those words!";
 	next;
-	mes "[Isaac]";
-	mes "I'll make sure of it. I swear in the name of Isaac Wigner.";
+	mes "[艾萨克]";
+	mes "I'll make sure of it. I swear in the name of 艾萨克·维格纳.";
 	next;
 	mes "[Isabella]";
 	mes "Haha, since you have promised me in the name of your family, I guess I can trust you, Isaac.";
@@ -15891,7 +15891,7 @@ prt_q,108,164,4	script	Female#EP161BU03	4W_F_01,{
 	if (isbegin_quest(5464) == 1) {
 		emotion ET_QUESTION;
 		mes "[Ellie]";
-		mes "Who are you?";
+		mes "你是谁？";
 		next;
 		mes "[" + strcharinfo(0) + "]";
 		mes "I have been asked by your husband.";
