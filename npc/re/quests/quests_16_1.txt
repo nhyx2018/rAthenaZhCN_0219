@@ -5690,7 +5690,7 @@ prt_cas_q,19,85,4	script	克罗内克·G·海涅#ep16_01	4_EP16_GRANZ,{
 		mes "只能回到过去。";
 		next;
 		mes "[克罗内克]";
-		mes "弗里茨, how did it go?";
+		mes "弗里茨，怎么样了？";
 		next;
 		cutin "ep16_friedrich_stolz_heine",1;
 		mes "[弗里德里希]";
