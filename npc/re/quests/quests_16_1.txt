@@ -16120,11 +16120,11 @@ prt_q,148,49,0	script	告示牌#EP161ETC12	2_BULLETIN_BOARD,{
 	close;
 }
 
-prt_q,155,190,4	script	Kriemhild	GUILD_FLAG,{ end; }
-prt_q,146,194,3	duplicate(Kriemhild)	Swanhild	GUILD_FLAG
-prt_q,143,203,2	duplicate(Kriemhild)	Fadhgridh	GUILD_FLAG
-prt_q,167,203,6	duplicate(Kriemhild)	Skoegul	GUILD_FLAG
-prt_q,165,194,5	duplicate(Kriemhild)	Gondul	GUILD_FLAG
+prt_q,155,190,4	script	克里姆希尔德	GUILD_FLAG,{ end; }
+prt_q,146,194,3	duplicate(克里姆希尔德)	Swanhild	GUILD_FLAG
+prt_q,143,203,2	duplicate(克里姆希尔德)	Fadhgridh	GUILD_FLAG
+prt_q,167,203,6	duplicate(克里姆希尔德)	Skoegul	GUILD_FLAG
+prt_q,165,194,5	duplicate(克里姆希尔德)	Gondul	GUILD_FLAG
 
 // GM NPC
 prt_q,5,5,6	script	普隆德拉地下城向导#EP161PG	4_EP16_SPIEGEL,{
@@ -16962,7 +16962,7 @@ prt_pri00,58,128,4	script	守望者特凯斯#ep16	4_M_JOB_HUNTER,{
 
 
 // Sector A
-prt_prison,243,265,6	script	Prisoner 243AD265#EP161A	4_M_DRAKE,{
+prt_prison,243,265,6	script	囚犯243AD265#EP161A	4_M_DRAKE,{
 	if (checkweight(1301,1) == 0) {
 		mes "- 由于道具数量过多，无法继续任务。 -";
 		close;
@@ -17322,7 +17322,7 @@ prt_prison,169,81,6	duplicate(黑影#EP161A01)	黑影#EP161A04	4_GHOST_STAND
 prt_prison,203,215,4	duplicate(黑影#EP161A01)	黑影#EP161A05	4_GHOST_STAND
 
 // Sector B
-prt_prison,267,184,8	script	Prisoner 267BD184#EP161B	4_DRACULA,{
+prt_prison,267,184,8	script	囚犯267BD184#EP161B	4_DRACULA,{
 	if (checkweight(1301,1) == 0) {
 		mes "- 由于道具数量过多，无法继续任务。 -";
 		close;
