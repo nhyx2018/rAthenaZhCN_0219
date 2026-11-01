@@ -64,7 +64,7 @@ ein_fild04,275,342,5	script	突击队指挥官#	4_M_REBELLION3,{
 		mes "发生了未知错误。";
 		close;
 	case IE_OK:
-		mapannounce "ein_fild04", "" + strcharinfo(0) + "的队伍，" + getpartyname( getcharid(1) ) + ", is entering the " + .@md_name$ + ".", bc_map, 0xFF99;
+		mapannounce "ein_fild04", "" + strcharinfo(0) + "的队伍，" + getpartyname( getcharid(1) ) + "，正在进入" + .@md_name$ + "。", bc_map, 0xFF99;
 		setquest 12375;// Base maintenance
 		// if (terra_gloria_main == 20)
 		// 	warp "1@swat",35,65;
@@ -1602,7 +1602,7 @@ OnTouch:
 		mes "不，别用那种眼神看我。这女孩从不跟其他男人说话。所以我就成了负责她的人。";
 		next;
 		mes "[朱利安]";
-		mes "... It's real.";
+		mes "……是真的。";
 		close2;
 		if (is_party_leader() == true && 'status_instance == 2)
 			donpcevent instance_npcname("Julian#8") + "::OnStart";
