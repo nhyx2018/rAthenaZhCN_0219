@@ -8643,7 +8643,7 @@ OnInit:
 }
 
 // Richard
-prt_cas_q,80,80,4	script	Butler for the Richards#EP161GAM	1_M_LIBRARYMASTER,{
+prt_cas_q,80,80,4	script	理查德家管家#EP161GAM	1_M_LIBRARYMASTER,{
 	if (checkweight(1301,1) == 0) {
 		mes "- You cannot proceed with the quest since you have too many items. -";
 		close;
@@ -8654,7 +8654,7 @@ prt_cas_q,80,80,4	script	Butler for the Richards#EP161GAM	1_M_LIBRARYMASTER,{
 	case 0:
 	case 1:
 		.@r = rand(1,5);
-		mes "[Butler]";
+		mes "[管家]";
 		if (.@r == 1)
 			mes "It is a fast way to get stronger to take a good rest after a hard battle.";
 		else if (.@r == 2)
@@ -8668,50 +8668,50 @@ prt_cas_q,80,80,4	script	Butler for the Richards#EP161GAM	1_M_LIBRARYMASTER,{
 		close;
 	case 2:
 		erasequest 5414;// [Stand by]Warrior Discipline
-		mes "[Butler]";
+		mes "[管家]";
 		mes "I feel that you must be raring to get some action. I guess it is the time to proceed with the next training.";
 		close;
 	}
 	.@ep161_family00 = isbegin_quest(5402) + isbegin_quest(5403);
 	if (.@ep161_family00 == 0) {
 		if ((isbegin_quest(7681) == 2 && isbegin_quest(7682) == 1) || ep16_royal == 2) {
-			mes "[Butler]";
-			mes "How do you do? I have been waiting for you after being informed by the Chamberlain.";
+			mes "[管家]";
+			mes "你好，接到侍从长的通知后我一直在等你。";
 			next;
-			mes "[Butler]";
-			mes "This it the room of the Richard family which has been controlling the military power of the kingdom.";
+			mes "[管家]";
+			mes "这里是掌控王国军权的理查德家族的房间。";
 			next;
-			mes "[Butler]";
-			mes "I have heard your name for that " + strcharinfo(0) + ", you are the hero in the subjugation of Morocc";
+			mes "[管家]";
+			mes "我听说过你的名字，" + strcharinfo(0) + "，你就是讨伐梦罗克的英雄。";
 			next;
-			mes "[Butler]";
-			mes "Oh! I am sorry to take too much of your time. Inside the room, there is Po, the next head of the family, waiting for you.";
+			mes "[管家]";
+			mes "哦！抱歉占用你太多时间。房间里，下一任家主波正在等你。";
 			next;
-			mes "[Butler]";
-			mes "Let me escort you inside.";
+			mes "[管家]";
+			mes "我带你进去。";
 			setquest 5402;// The Royal Richard
 			close;
 		}
-		mes "[Butler]";
-		mes "This it the room of the Richard family.";
+		mes "[管家]";
+		mes "这里是理查德家族的房间。";
 		next;
-		mes "[Butler]";
-		mes "Po, the next head of the family, is taking a rest. Please come back later.";
+		mes "[管家]";
+		mes "下一任家主波正在休息，请稍后再来。";
 		close;
 	}
 	if (.@ep161_family00 == 1) {
-		mes "[Butler]";
-		mes "Inside the room, there is Po, the next head of the family, waiting for you.";
+		mes "[管家]";
+		mes "房间里，下一任家主波正在等你。";
 		close;
 	}
 	if (.@ep161_family00 == 2) {
-		mes "[Butler]";
+		mes "[管家]";
 		mes "Have you met the next head of the family?";
 		next;
-		mes "[Butler]";
+		mes "[管家]";
 		mes "If the next head of the family meets you " + strcharinfo(0) + ", please...";
 		next;
-		mes "[Butler]";
+		mes "[管家]";
 		mes "Oh! I am sorry about my bad manners. It is nothing. Please never mind...";
 		close;
 	}
@@ -8732,58 +8732,58 @@ prt_cas_q,80,80,4	script	Butler for the Richards#EP161GAM	1_M_LIBRARYMASTER,{
 
 	if (.@ep161_family00 == 3) {
 		if (BaseLevel < 140) {
-			mes "[Butler]";
+			mes "[管家]";
 			mes "I heard from Po the next head of the family that you are going to try the Richard battle training program.";
 			next;
-			mes "[Butler]";
+			mes "[管家]";
 			mes "For now, the training would be too overwhelming for you. You'd better learn the basics before proceeding with the training.";
 			close;
 		}
 		if (.@i == .@size) {
-			mes "[Butler]";
+			mes "[管家]";
 			mes "I heard from Po the next head of the family that you are going to try the Richard battle training program.";
 			next;
-			mes "[Butler]";
+			mes "[管家]";
 			mes "The training of the Richard family is differentiated from other training programs.";
 			next;
-			mes "[Butler]";
+			mes "[管家]";
 			mes "You must have been getting yourself trained by hunting the monsters individually.";
 			next;
-			mes "[Butler]";
+			mes "[管家]";
 			mes "From now on, you can be trained with hunting certain types of monsters such as human, animal, insect, fish, plant, demon, angel, nothing and dragon monsters.";
 			next;
-			mes "[Butler]";
+			mes "[管家]";
 			mes "It is supposed to be more effective to swing a sword than to say 100 words.";
 		}
 	}
 	else if (.@ep161_family00 == 4) {
-		mes "[Butler]";
+		mes "[管家]";
 		mes "Good. Are you ready now?";
 	}
 	else {
-		mes "[Butler]";
+		mes "[管家]";
 		mes "Hum, there seems to be an issue which cannot be resolved. Well, try again and if the same issue occurs, take a screenshot and send it to the admin team.";
 		close;
 	}
 	if (.@i == .@size) {
 		while( true ) {
 			next;
-			mes "[Butler]";
+			mes "[管家]";
 			mes "Please select a training program to try.";
 			next;
 			.@s = select( "Warrior Discipline-Human", "Warrior Discipline-Animal", "Warrior Discipline-Insect", "Warrior Discipline-Fish", "Warrior Discipline-Plant", "Warrior Discipline-Devil", "Warrior Discipline-Angel", "Warrior Discipline-Immortal", "Warrior Discipline-Intangible", "Warrior Discipline-Dragon" ) - 1;
-			mes "[Butler]";
+			mes "[管家]";
 			mes "This training involves hunting 50 " + .@training_list$[.@s] + " monsters of Level 140 or higher.";
 			next;
-			mes "[Butler]";
+			mes "[管家]";
 			mes "Would you try this training?";
 			next;
 			if (select( "Try.", "Do not try." ) == 2) {
-				mes "[Butler]";
+				mes "[管家]";
 				mes "Hum... You don't like the contents of the training? Well, it's OK. Why don't you choose another training?";
 				continue;
 			}
-			mes "[Butler]";
+			mes "[管家]";
 			mes "You shouldn't let your guard down even when you feel that the training is too easy for your level. Good luck...";
 			setquest .@quest_list[.@s];
 			close;
@@ -8798,79 +8798,79 @@ prt_cas_q,80,80,4	script	Butler for the Richards#EP161GAM	1_M_LIBRARYMASTER,{
 		setquest 5414;// [Stand by]Warrior Discipline
 		getexp 500000,550000;
 		getitem 6919,4;// TokenOfHonor
-		mes "[Butler]";
+		mes "[管家]";
 		mes "Congratulations on completing the training.";
 		next;
-		mes "[Butler]";
+		mes "[管家]";
 		mes "If you keep training, you'll achieve the goal you want.";
 		next;
-		mes "[Butler]";
+		mes "[管家]";
 		mes "This is what I have prepared for the reward for completing training.";
 		next;
-		mes "[Butler]";
+		mes "[管家]";
 		mes "We thank you for training with us since it benefits the Richard family. Don't feel pressured.";
 		close;
 	}
-	mes "[Butler]";
+	mes "[管家]";
 	mes "You are participating in the training. Do you need anything?";
 	next;
 	switch( select( "No.", "About the way of training", "About the goal of training", "Give up the training." ) ) {
 	case 1:
-		mes "[Butler]";
+		mes "[管家]";
 		mes "You should deal with the training like the actual fight! Do not let your guard down during the training.";
 		close;
 	case 2:
-		mes "[Butler]";
+		mes "[管家]";
 		mes "The Richard family has always been concerned about the ways to produce more excellent warriors.";
 		next;
-		mes "[Butler]";
+		mes "[管家]";
 		mes "One of the former heads of the family felt that the way to train with a certain monster had a limit.";
 		next;
-		mes "[Butler]";
+		mes "[管家]";
 		mes "The former and former head of the family... Oh! Just to clear things out, he is retired, but he is not dead.";
 		next;
-		mes "[Butler]";
+		mes "[管家]";
 		mes "Hum... Let's come back down to the business... He has come up with the method to train with the monster depending on the level of the trainee or the type of the monster.";
 		next;
-		mes "[Butler]";
+		mes "[管家]";
 		mes "Well... The training began like that...";
 		close;
 	case 3:
-		mes "[Butler]";
+		mes "[管家]";
 		mes "The goal of the training... It is an easy and difficult question.";
 		next;
-		mes "[Butler]";
+		mes "[管家]";
 		mes "The most obvious goal must be getting stronger. I would have answered if I was younger.";
 		next;
-		mes "[Butler]";
+		mes "[管家]";
 		mes "However, I would like to answer that it is to protect the people around me.";
 		next;
-		mes "[Butler]";
+		mes "[管家]";
 		mes "The goal may be different for each warrior.";
 		close;
 	case 4:
-		mes "[Butler]";
+		mes "[管家]";
 		mes "I won't stop you from giving up. However, you should know that the progress of your training so far won't be reflected in the next training.";
 		next;
 		if (select( "Do not give up.", "Give up." ) == 1) {
-			mes "[Butler]";
+			mes "[管家]";
 			mes "Good decision. You should deal with the training like the actual fight! Do not let your guard down during the training.";
 			close;
 		}
 		erasequest .@quest_list[.@i];
-		mes "[Butler]";
+		mes "[管家]";
 		mes "Too bad. If you finished the training, you must have been able to reap the benefit of hard work.";
 		close;
 	}
 }
 
-prt_cas_q,93,74,4	script	Po Richard#EP161GAM	4_M_6THPRIN1,{
+prt_cas_q,93,74,4	script	波·理查德#EP161GAM	4_M_6THPRIN1,{
 	if (checkweight(1301,1) == 0) {
 		mes "- You cannot proceed with the quest since you have too many items. -";
 		close;
 	}
 	if (BaseLevel < 100) {
-		mes "[Po Richard]";
+		mes "[波·理查德]";
 		mes "An adventurer? I guess you need to try harder now.";
 		close3;
 	}
@@ -8878,55 +8878,55 @@ prt_cas_q,93,74,4	script	Po Richard#EP161GAM	4_M_6THPRIN1,{
 	if (.@ep161_family00 == 0) {
 		cutin "richard_po02",2;
 		emotion ET_PROFUSELY_SWEAT;
-		mes "[Po Richard]";
-		mes "I'd like to take a rest now.";
+		mes "[波·理查德]";
+		mes "我现在想休息。";
 		next;
-		mes "[Po Richard]";
-		mes "You must be an adventurer invited to the palace. I am taking a rest now. Talk to the butler in front of the door to make an appointment.";
+		mes "[波·理查德]";
+		mes "你一定是受邀来王宫的冒险者。我正在休息，要和门外的管家预约。";
 		next;
-		mes "[Po Richard]";
-		mes "That is the way to do it in the palace.";
+		mes "[波·理查德]";
+		mes "王宫里就是这种规矩。";
 		close3;
 	}
 	if (.@ep161_family00 == 1) {
 		cutin "richard_po01",2;
 		emotion ET_SPARK;
-		mes "[Po Richard]";
-		mes "You must be the adventurer who has made a great contribution in the subjugation of the dark lord. Your work is known in the palace as well.";
+		mes "[波·理查德]";
+		mes "你就是在讨伐黑暗领主中立下大功的冒险者吧。你的事迹在王宫也很有名。";
 		next;
-		mes "[Po Richard]";
-		mes "Especially, us, the Richard family, are interested in your work.";
+		mes "[波·理查德]";
+		mes "尤其是我们理查德家族，对你的功绩很感兴趣。";
 		next;
-		mes "[Po Richard]";
-		mes "Do you want to know why?";
+		mes "[波·理查德]";
+		mes "想知道为什么吗？";
 		next;
-		mes "[Po Richard]";
-		mes "Well, even if you don't want to know, I am going to say what I want to say anyway.";
+		mes "[波·理查德]";
+		mes "就算你不想知道，我也要说。";
 		next;
-		mes "[Po Richard]";
-		mes "In fact, it was not your will to come here. I am pretty sure that you must have come here since the his nibs called you. I understand that.";
+		mes "[波·理查德]";
+		mes "其实你来这里并非本意。我确信你是被那位大人叫来的，我理解。";
 		next;
-		mes "[Po Richard]";
-		mes "Although the adventurers may care less about the palace affairs, the Richard family is in charge of the military force of Rune-Midgarts.";
+		mes "[波·理查德]";
+		mes "冒险者或许不太关心王宫事务，但理查德家族掌管卢恩-米德加尔特的军事。";
 		next;
 		emotion ET_QUESTION;
-		mes "[Po Richard]";
-		mes "We produce many excellent warriors as well. Hum! I am curious all of a sudden. Have you heard of the warrior from the Richard family?";
+		mes "[波·理查德]";
+		mes "我们也培养了许多优秀战士。嗯！我突然好奇，你听说过理查德家族的战士吗？";
 		next;
 		switch( select( "Yes, I have.", "No, I haven't." ) ) {
 		case 1:
-			mes "[Po Richard]";
-			mes "Hahaha, I guess the name of Richard must be known to the adventurers as well.";
+			mes "[波·理查德]";
+			mes "哈哈哈，看来理查德之名连冒险者也知道。";
 			break;
 		case 2:
 			cutin "richard_po02",2;
 			emotion ET_SCRATCH;
-			mes "[Po Richard]";
-			mes "Oh, my. I must have been a braggart. The Richard family should try harder.";
+			mes "[波·理查德]";
+			mes "哎呀，我真是自夸过头了。理查德家族还得多努力。";
 			break;
 		}
 		next;
-		mes "[Po Richard]";
+		mes "[波·理查德]";
 		mes "Well, since it is not important, I guess we should let it pass. It's been a long time since I say this much. I am thirsty.";
 		next;
 		completequest 5402;// The Royal Richard
@@ -8936,58 +8936,58 @@ prt_cas_q,93,74,4	script	Po Richard#EP161GAM	4_M_6THPRIN1,{
 			completequest 7682;// Socializing Starts from an Eye Contact
 			setquest 7685;// What Is the Next Thing on the Schedule ?
 		}
-		mes "[Po Richard]";
+		mes "[波·理查德]";
 		mes "Shall we take a rest before proceeding?";
 		close3;
 	}
 	if (.@ep161_family00 == 2) {
 		cutin "richard_po01",2;
-		mes "[Po Richard]";
+		mes "[波·理查德]";
 		mes "Well, let's talk about the reason that the Richard family has been interested in you then.";
 		next;
-		mes "[Po Richard]";
+		mes "[波·理查德]";
 		mes "As known, the Richard family is producing outstanding warriors. We run a systematic training system to support that.";
 		next;
-		mes "[Po Richard]";
+		mes "[波·理查德]";
 		mes "I am not fond of such training, but I believe that it is an effective training program based on the know-how of the family.";
 		next;
-		mes "[Po Richard]";
+		mes "[波·理查德]";
 		mes "Please listen up since I am about to get to the point.";
 		next;
-		mes "[Po Richard]";
+		mes "[波·理查德]";
 		mes "I guess the adventurers were not that interested; however, there were many members of the royal family participating in the subjugation of the dark lord. I have been reported of your work from them.";
 		next;
-		mes "[Po Richard]";
+		mes "[波·理查德]";
 		mes "When I was reported of the contributions you made, a question came to my mind. What if a free roaming adventure take part in the strict training system? What would happen? I got curious.";
 		next;
 		emotion ET_COMEON;
-		mes "[Po Richard]";
+		mes "[波·理查德]";
 		mes "I would like to make a handsome payment if a renowned adventurer like you helps us.";
 		next;
-		mes "[Po Richard]";
+		mes "[波·理查德]";
 		mes "I feel that it is an attractive offer. Would you challenge the warrior training system of the Richard family?";
 		next;
 		if (select( "I'll try.", "I decline." ) == 2) {
 			emotion ET_OTL;
-			mes "[Po Richard]";
+			mes "[波·理查德]";
 			mes "I guess the offer hasn't been attractive to you. I am sorry, but come back later when you change your mind.";
 			close3;
 		}
 		emotion ET_OK;
-		mes "[Po Richard]";
+		mes "[波·理查德]";
 		mes "Indeed! I like the quick decision. I value the spirit of challenge.";
 		next;
-		mes "[Po Richard]";
+		mes "[波·理查德]";
 		mes "Let me tell the butler about it. You can proceed with the training through him.";
 		setquest 5403;// The Royal Richard
 		close3;
 	}
 	if (.@ep161_family00 == 3) {
 		cutin "richard_po01",2;
-		mes "[Po Richard]";
+		mes "[波·理查德]";
 		mes "Don't underestimate the butler who would guide you through the training.";
 		next;
-		mes "[Po Richard]";
+		mes "[波·理查德]";
 		mes "He is a member of the Richard family himself. He is an outstanding warrior.";
 		close3;
 	}
@@ -9007,20 +9007,20 @@ prt_cas_q,93,74,4	script	Po Richard#EP161GAM	4_M_6THPRIN1,{
 		while( isbegin_quest(.@quest_list[.@i]) == 0 && .@i < .@size ) .@i++;
 
 		if (.@i == .@size) {
-			mes "[Po Richard]";
+			mes "[波·理查德]";
 			mes "I wonder if you are happy with the rewards of the training.";
 			next;
-			mes "[Po Richard]";
+			mes "[波·理查德]";
 			mes "It would be difficult to offer you a payment higher than that for now. Please do it as if you are having a part-time job.";
 			next;
-			mes "[Po Richard]";
+			mes "[波·理查德]";
 			mes "You may find it obvious. However, the more you get yourself trained, the more benefits that Richard family gets. We are willing to pay for it.";
 			close3;
 		}
-		mes "[Po Richard]";
+		mes "[波·理查德]";
 		mes "Oh! You must be participating in the training. Well, how do you find the training?";
 		next;
-		mes "[Po Richard]";
+		mes "[波·理查德]";
 		.@r = rand(1,10);
 		if (.@r == 1) {
 			emotion 29;
@@ -9058,7 +9058,7 @@ prt_cas_q,93,74,4	script	Po Richard#EP161GAM	4_M_6THPRIN1,{
 }
 
 // GM NPC
-prt_cas_q,120,100,4	script	Helper for the Royal Richard#EP161DY	4_M_6THPRIN2,{
+prt_cas_q,120,100,4	script	理查德王室助手#EP161DY	4_M_6THPRIN2,{
 	if (callfunc("F_GM_NPC",1854,0,1,9999) < 1)
 		end;
 	mes "[Helper for the Royal Richard]";
@@ -13938,7 +13938,7 @@ prt_cas,218,182,3	script	Royal Guardian Knight#01	4_M_CRU,{
 		close;
 	}
 	mes "[Royal Guardian Knight]";
-	mes "Let me escort you inside.";
+	mes "我带你进去。";
 	close2;
 	warp "prt_cas",93,212;
 	end;
