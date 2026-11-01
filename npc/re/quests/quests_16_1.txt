@@ -688,7 +688,7 @@ prt_cas_q,26,30,3	script	贝尔侍从长#ep16_main	4_M_RUSMAN1,{
 				end;
 			case 3:
 				mes "[贝尔]";
-				mes "I see.";
+				mes "原来如此。";
 				close2;
 				cloakonnpcself( "卡普拉职员#ep16_s01" );
 				cloakonnpcself( "Giant Beast Manager#ep16_s02" );
@@ -997,16 +997,16 @@ function	script	F_banquet_main_4_spica	{
 	mes "Hahaha.... I'll make sure the words don't get out.";
 	mes "Did you hear, Crux?";
 	mes "My sister wants to hang out quietly.";
-	npctalk "What... Yes...?", "Crux Findel#ep16_02", bc_self;
+	npctalk "What... Yes...?", "克鲁斯·芬德尔#ep16_02", bc_self;
 	next;
 	cutin "ep16_crux_findel03",2;
-	mes "[Crux]";
+	mes "[克鲁斯]";
 	mes "I mean, my ladies?";
 	mes "What do you mean by...?";
 	npctalk "You better not tell my mother!", "斯琪亚·内里乌斯#ep16_02", bc_self;
 	npctalk "You shouldn't.", "斯皮卡·内里乌斯#ep16_02", bc_self;
 	next;
-	mes "[Crux]";
+	mes "[克鲁斯]";
 	mes "You know that I am on your side, my lady, right?";
 	next;
 	cutin "ep16_spica_nerius06",2;
@@ -1016,7 +1016,7 @@ function	script	F_banquet_main_4_spica	{
 	npctalk "Oh, my! Crux, are you going to tell on us?", "斯琪亚·内里乌斯#ep16_02", bc_self;
 	next;
 	cutin "ep16_crux_findel03",2;
-	mes "[Crux]";
+	mes "[克鲁斯]";
 	mes "No! No, please!";
 	mes "...Oh? Isn't that Lord Heine?";
 	next;
@@ -1040,7 +1040,7 @@ function	script	F_banquet_main_4_spica	{
 	mes "Since when did you call each other by the first name?";
 	npctalk "Did you know?", "斯皮卡·内里乌斯#ep16_02", bc_self;
 	sleep2 1000;
-	npctalk "...No, no. I didn't.", "Crux Findel#ep16_02", bc_self;
+	npctalk "...No, no. I didn't.", "克鲁斯·芬德尔#ep16_02", bc_self;
 	next;
 	cutin "ep16_skia_nerius01",0;
 	mes "[斯琪亚]";
@@ -1090,7 +1090,7 @@ function	script	F_banquet_main_4_spica	{
 	mes "That's right. You better get angry and show your emotions...";
 	next;
 	cutin "ep16_crux_findel01",2;
-	mes "[Crux]";
+	mes "[克鲁斯]";
 	mes "...I don't know which family you are from, but you need to strop.";
 	mes "If you keep insulting my lady, I won't let it pass.";
 	next;
@@ -1177,7 +1177,7 @@ function	script	F_banquet_main_4_spica	{
 	mes "How can I turn down the invitation from the next head of the Nerius family?";
 	mes "Now... then.";
 	npctalk "It was fun!", "斯琪亚·内里乌斯#ep16_02", bc_self;
-	npctalk "...Which part of it was fun...?", "Crux Findel#ep16_02", bc_self;
+	npctalk "...Which part of it was fun...?", "克鲁斯·芬德尔#ep16_02", bc_self;
 	next;
 	cloakonnpcself( "尼希尔·M·海涅#ep16_02" );
 	cutin "ep16_spica_nerius01",2;
@@ -1192,7 +1192,7 @@ function	script	F_banquet_main_4_spica	{
 	mes "And, Crux.";
 	mes "Go dig out the Chamberlain who has given us the drink.";
 	sleep2 1000;
-	npctalk "Yes, my lady.", "Crux Findel#ep16_02", bc_self;
+	npctalk "Yes, my lady.", "克鲁斯·芬德尔#ep16_02", bc_self;
 	next;
 	mes "[斯皮卡]";
 	mes "No one can fool my eyes like this.";
@@ -1210,7 +1210,7 @@ function	script	F_banquet_main_4_spica	{
 	mes "[斯琪亚]";
 	mes "Oh, shaking. He is shaking!";
 	mes "Crux, did you see? Nyhill's steps shook.";
-	npctalk "I see why you have given me such an order.", "Crux Findel#ep16_02", bc_self;
+	npctalk "I see why you have given me such an order.", "克鲁斯·芬德尔#ep16_02", bc_self;
 	next;
 	cutin "ep16_spica_nerius06",2;
 	mes "[斯皮卡]";
@@ -1236,10 +1236,10 @@ function	script	F_banquet_main_4_spica	{
 	mes "I am well taken care of by Crux.";
 	npctalk "Crux, let's get back to the room.", "斯皮卡·内里乌斯#ep16_02", bc_self;
 	sleep2 1000;
-	npctalk "Yes, my lady.", "Crux Findel#ep16_02", bc_self;
+	npctalk "Yes, my lady.", "克鲁斯·芬德尔#ep16_02", bc_self;
 	next;
 	cloakonnpcself( "斯皮卡·内里乌斯#ep16_02" );
-	cloakonnpcself( "Crux Findel#ep16_02" );
+	cloakonnpcself( "克鲁斯·芬德尔#ep16_02" );
 	npctalk "How cold-hearted...", "斯琪亚·内里乌斯#ep16_02", bc_self;
 	mes "[斯琪亚]";
 	mes "Well, hero?";
@@ -1363,32 +1363,32 @@ prt_cas,106,240,3	script	斯皮卡·内里乌斯#ep16_02	4_EP16_SPICA,{
 	}
 }
 
-prt_cas,108,240,3	script	Crux Findel#ep16_02	4_EP16_CRUX,{
+prt_cas,108,240,3	script	克鲁斯·芬德尔#ep16_02	4_EP16_CRUX,{
 	if (ep16_royal < 4) {
 		if (isbegin_quest(7684) == 0) {
-			npctalk "......", "Crux Findel#ep16_02", bc_self;
+			npctalk "......", "克鲁斯·芬德尔#ep16_02", bc_self;
 			end;
 		}
 		cutin "ep16_crux_findel01.bmp",2;
-		mes "[Crux]";
+		mes "[克鲁斯]";
 		mes "Don't mind me.";
 		mes "I am just a bodyguard.";
 		close3;
 	}
 	if (ep16_royal == 4) {
 		cutin "ep16_crux_findel01",2;
-		mes "[Crux]";
+		mes "[克鲁斯]";
 		mes "I get to see you again.";
 		mes "The lady has been waiting for you.";
 		close3;
 	}
 	if (ep16_royal == 5) {
 		cutin "ep16_crux_findel01",2;
-		mes "[Crux]";
+		mes "[克鲁斯]";
 		mes "I am thinking about the order given by the lady.";
 		mes "I need to be apart from her to look into it...";
 		next;
-		mes "[Crux]";
+		mes "[克鲁斯]";
 		mes "Frankly, it makes me feel uneasy leaving her alone.";
 		next;
 		cutin "ep16_spica_nerius03",0;
@@ -1397,12 +1397,12 @@ prt_cas,108,240,3	script	Crux Findel#ep16_02	4_EP16_CRUX,{
 		mes "Or do I remind you of your daughter running along the river bank?";
 		next;
 		cutin "ep16_crux_findel02",2;
-		mes "[Crux]";
+		mes "[克鲁斯]";
 		mes "Daughter?";
 		mes "Hahaha. That is funny.";
 		mes "But you don't look your age to be honest.";
 		next;
-		mes "[Crux]";
+		mes "[克鲁斯]";
 		mes "You can be attacked by the kids again.";
 		next;
 		cutin "ep16_spica_nerius04",0;
@@ -1413,7 +1413,7 @@ prt_cas,108,240,3	script	Crux Findel#ep16_02	4_EP16_CRUX,{
 	}
 	if (ep16_royal >= 6) {
 		cutin "ep16_crux_findel01",2;
-		mes "[Crux]";
+		mes "[克鲁斯]";
 		mes "I guess we won't be able to return to the head house anytime soon.";
 		mes "Well, this actually could be a good thing.";
 		npctalk "...Oh, good. It is a good thing.", bc_self;
@@ -3916,13 +3916,13 @@ prt_cas_q,30,128,0	script	#ep16_evt_neriusroom	HIDDEN_WARP_NPC,2,2,{
 	end;
 OnTouch:
 	if (ep16_royal == 15) {
-		cloakonnpcself( "Bodyguard Crux#ep16_room01" );
+		cloakonnpcself( "保镖克鲁斯#ep16_room01" );
 		cloakonnpcself( "斯皮卡·内里乌斯#ep16_room01" );
 		cloakonnpcself( "斯琪亚·内里乌斯#ep16_room01" );
 		cloakoffnpcself( "斯皮卡·内里乌斯#ep16_room02" );
 	}
 	else if (ep16_royal > 2 && ep16_royal < 7) {
-		cloakonnpcself( "Bodyguard Crux#ep16_room01" );
+		cloakonnpcself( "保镖克鲁斯#ep16_room01" );
 		cloakonnpcself( "斯皮卡·内里乌斯#ep16_room01" );
 		cloakonnpcself( "斯琪亚·内里乌斯#ep16_room01" );
 	}
@@ -3935,113 +3935,113 @@ OnTouch:
 prt_cas_q,18,136,5	script	斯琪亚·内里乌斯#ep16_room01	4_EP16_SKIA,{
 	cutin "ep16_skia_nerius03",0;
 	mes "[斯琪亚]";
-	mes "Hello.";
-	mes "You must be the hero whom everyone talks about.";
-	mes "I am honored to meet you.";
+	mes "你好。";
+	mes "你就是大家口中的英雄吧。";
+	mes "很高兴见到你。";
 	close3;
 }
 
 prt_cas_q,20,139,3	script	斯皮卡·内里乌斯#ep16_room01	4_EP16_SPICA,{
 	if (ep16_royal < 2) {
 		mes "[斯皮卡]";
-		mes "Are you invited to the banquet?";
-		mes "This place is not the Banquet Hall.";
+		mes "你也是受邀参加宴会的吗？";
+		mes "这里不是宴会厅。";
 		close3;
 	}
 	if (ep16_royal == 2) {
 		switch( isbegin_quest(7684) ) {
 		case 0:
 			mes "[斯皮卡]";
-			mes "You must be " + strcharinfo(0) + " whom everyone talks about.";
-			mes "Thank you for visiting us.";
-			mes "I am Spica of the Nerius family.";
+			mes "你就是大家口中的" + strcharinfo(0) + "吧。";
+			mes "谢谢你来拜访我们。";
+			mes "我是内里乌斯家族的斯皮卡。";
 			cutin "ep16_spica_nerius01",1;
 			next;
 			mes "[斯琪亚]";
-			mes "I am Skia.";
+			mes "我是斯琪亚。";
 			mes "很高兴见到你。";
 			cutin "ep16_skia_nerius01",0;
 			next;
 			mes "[斯皮卡]";
-			mes "And he is my bodyguard.";
+			mes "这位是我的保镖。";
 			cutin "ep16_spica_nerius01",1;
 			next;
-			mes "[Crux]";
-			mes "My name is Crux Findel.";
-			mes "I am learning swordsmanship in the Nerius family.";
+			mes "[克鲁斯]";
+			mes "我叫克鲁斯·芬德尔。";
+			mes "我在内里乌斯家族学习剑术。";
 			cutin "ep16_crux_findel01",2;
 			next;
 			mes "[斯皮卡]";
-			mes "Our mother, the current head of the family, is supposed to be here.";
-			mes "However, since many heroes like you," + strcharinfo(0) + ", are said to attend this banquet,";
+			mes "我们的母亲，也就是现任家主，本来应该在这里。";
+			mes "不过听说有很多像你这样的英雄，" + strcharinfo(0) + "，会来参加这场宴会，";
 			cutin "ep16_spica_nerius01",1;
 			next;
 			mes "[斯皮卡]";
-			mes "Our mother let us come here to meet and learn from them.";
+			mes "母亲让我们来这里见见他们，向他们学习。";
 			next;
-			select("Where is the candidate for the throne?");
+			select("王位继承人在哪里？");
 			cutin "ep16_spica_nerius05",1;
 			mes "[斯皮卡]";
-			mes "Oh, you must be invited as the observer to the ritual...";
-			mes "I see.";
-			npctalk "He must be in the library.", "Bodyguard Crux#ep16_room01", bc_self;
+			mes "哦，你一定是作为仪式见证人被邀请的……";
+			mes "原来如此。";
+			npctalk "He must be in the library.", "保镖克鲁斯#ep16_room01", bc_self;
 			next;
 			cutin "ep16_spica_nerius01",1;
 			mes "[斯皮卡]";
-			mes "Erich is in the royal library.";
-			mes "I guess he could be looking for blueprints of some sort which interest him.";
+			mes "埃里希在王家图书馆。";
+			mes "他大概在找自己感兴趣的某种图纸。";
 			next;
 			cutin "ep16_spica_nerius02",1;
 			mes "[斯皮卡]";
-			mes "Nerius is not interested in the throne.";
-			mes "Erich didn't have to participate in the Royal Assembly.";
+			mes "内里乌斯家族对王位没有兴趣。";
+			mes "埃里希本来不必参加王室会议。";
 			next;
 			cutin "ep16_spica_nerius01",1;
 			mes "[斯皮卡]";
-			mes "Since he is just a candidate merely for effect, he must be doing what he wants to do now.";
+			mes "他只是为了形式才成为候选人，现在一定在做自己想做的事。";
 			next;
-			select("Why aren't you interested in the throne?");
+			select("为什么你们对王位没有兴趣？");
 			cutin "ep16_spica_nerius05",1;
 			mes "[斯皮卡]";
-			mes "It is one of the characteristics of the Nerius.";
-			mes "The family is led by women for generations. Therefore, we turn out more queens than kings.";
+			mes "这是内里乌斯家族的特征之一。";
+			mes "这个家族世代由女性领导，所以出的女王比国王多。";
 			next;
 			cutin "ep16_spica_nerius03",1;
 			mes "[斯皮卡]";
-			mes "If Erich hasn't come forth, one of us, Skia and I would have been elected as a candidate for the queen.";
+			mes "如果不是埃里希站出来，斯琪亚和我中的一个就会被选为女王候选人。";
 			next;
 			cutin "ep16_spica_nerius02",1;
 			mes "[斯皮卡]";
-			mes "Our mother didn't like it.";
-			mes "That's why Erich became a candidate for the throne. Poor cousin...";
+			mes "母亲不喜欢这样。";
+			mes "所以埃里希才成为王位候选人。可怜的堂兄……";
 			next;
 			cutin "ep16_spica_nerius01",1;
 			mes "[斯皮卡]";
-			mes "Well, I guess that's enough information about our family.";
-			mes "Have you exchanged greetings with all other families?";
+			mes "好了，关于我们家族就说到这里吧。";
+			mes "你已经和其他家族都问候过了吗？";
 			next;
 			mes "[斯皮卡]";
-			mes "Since freedom doesn't come often for us, I tend to enjoy it as much as possible.";
-			mes "So...";
+			mes "我们很少有机会自由活动，所以我想尽量享受。";
+			mes "所以……";
 			next;
 			cutin "ep16_skia_nerius03",0;
 			mes "[斯琪亚]";
-			mes "Why don't you enjoy it with us?";
-			mes "I believe the lord of the Heine family would make a good friend too.";
+			mes "要不要和我们一起享受？";
+			mes "我觉得海尔内家族的少主也会是个好朋友。";
 			next;
 			cutin "ep16_spica_nerius06",1;
 			mes "[斯皮卡]";
-			mes "Skia, my beloved twin.";
-			mes "You need to learn to speak more elegantly.";
-			npctalk "Gosh, stop nagging...", "斯琪亚·内里乌斯#ep16_room01", bc_self;
+			mes "斯琪亚，我亲爱的双胞胎妹妹。";
+			mes "你该学着说话更优雅一点。";
+			npctalk "天啊，别啰嗦了……", "斯琪亚·内里乌斯#ep16_room01", bc_self;
 			next;
-			npctalk "I can hear you.", "", bc_self;
+			npctalk "我听得见。", "", bc_self;
 			cutin "ep16_spica_nerius07",1;
 			mes "[斯皮卡]";
-			mes "Anyways, what I want to say is that";
-			mes "the Nerius family is always open to you," + strcharinfo(0) + ", so please visit us";
-			mes "anytime you want.";
-			npctalk "......", "Bodyguard Crux#ep16_room01", bc_self;
+			mes "总之，我想说的是，";
+			mes "内里乌斯家族随时欢迎你，" + strcharinfo(0) + "，所以请";
+			mes "随时来拜访我们。";
+			npctalk "......", "保镖克鲁斯#ep16_room01", bc_self;
 			next;
 			setquest 7684;// Visit the Nerius
 			completequest 7684;// Visit the Nerius
@@ -4054,36 +4054,36 @@ prt_cas_q,20,139,3	script	斯皮卡·内里乌斯#ep16_room01	4_EP16_SPICA,{
 		case 2:
 			if (isbegin_quest(7685) == 1) {
 				mes "[斯皮卡]";
-				mes "I guess other families must be ready by now and about to move soon.";
-				mes "We may have some time to spare.";
+				mes "其他家族现在应该也准备好了，很快就要出发。";
+				mes "我们还有一些空闲时间。";
 				cutin "ep16_spica_nerius01.bmp",1;
 				next;
 				mes "[斯皮卡]";
-				mes "" + strcharinfo(0) + ", why don't you go back to your room and wait for the message?";
+				mes "" + strcharinfo(0) + "，不如先回房间等消息？";
 				close3;
 			}
 			mes "[斯皮卡]";
-			mes "Why don't you go visit other families if you have not visited them all?";
+			mes "如果还没拜访完，就去其他家族看看吧。";
 			close;
 		}
 		if (isbegin_quest(7682) == 1 && isbegin_quest(5402) == 2 && isbegin_quest(7683) == 2 && isbegin_quest(7684) == 2 && ep16_wal > 1 && ep16_wig > 1 && ep16_lug > 1 && ep16_gaobs > 1) {
 			completequest 7682;// Socializing Starts from an Eye Contact
 			setquest 7685;// What Is the Next Thing on the Schedule ?
 			mes "[斯皮卡]";
-			mes "I guess other families must be ready by now and about to move soon.";
-			mes "We may have some time to spare.";
+			mes "其他家族现在应该也准备好了，很快就要出发。";
+			mes "我们还有一些空闲时间。";
 			cutin "ep16_spica_nerius01.bmp",1;
 			next;
 			mes "[斯皮卡]";
-			mes "" + strcharinfo(0) + ", why don't you go back to your room and wait for the message?";
+			mes "" + strcharinfo(0) + "，不如先回房间等消息？";
 			close3;
 		}
 		cutin "ep16_spica_nerius01.bmp",1;
 		mes "[斯皮卡]";
-		mes "We must get prepared for the Banquet now. We need some time to dress up.";
+		mes "我们得为宴会做准备了，需要时间换衣服。";
 		next;
 		mes "[斯皮卡]";
-		mes "Why don't you go visit other families if you have not visited them all?";
+		mes "如果还没拜访完，就去其他家族看看吧。";
 		next;
 		mes "[斯皮卡]";
 		mes "I'll send you a formal invitation to make up for this.";
@@ -4152,7 +4152,7 @@ prt_cas_q,20,139,3	script	斯皮卡·内里乌斯#ep16_room01	4_EP16_SPICA,{
 	cutin "ep16_spica_nerius05",1;
 	next;
 	cutin "ep16_crux_findel03",2;
-	mes "[Crux]";
+	mes "[克鲁斯]";
 	mes "Wha... What? Well...";
 	mes "It sounds plausible...";
 	mes "By the way, Lord Nyhill is under probation so he is not supposed to leave his room.";
@@ -4164,23 +4164,23 @@ prt_cas_q,20,139,3	script	斯皮卡·内里乌斯#ep16_room01	4_EP16_SPICA,{
 	next;
 	select("Crux, cheer up...");
 	cutin "ep16_crux_findel03",2;
-	mes "[Crux]";
+	mes "[克鲁斯]";
 	mes "Oh, are you leaving now?";
 	mes "It sure is wise of you to leave before the lady's head explodes.";
 	next;
 	cutin "ep16_crux_findel02",2;
-	mes "[Crux]";
+	mes "[克鲁斯]";
 	mes "See you later.";
 	close2;
 	cutin "",255;
 	npctalk "Why are you letting the guest out?", "", bc_self;
 	setpcblock PCBLOCK_NPC, true;
 	sleep2 3000;
-	npctalk "Yes, yes, my lady. I am at your service. Where are you?", "Bodyguard Crux#ep16_room01", bc_self;
+	npctalk "Yes, yes, my lady. I am at your service. Where are you?", "保镖克鲁斯#ep16_room01", bc_self;
 	sleep2 3000;
 	npctalk "You are not the one I am looking for!", "", bc_self;
 	sleep2 3000;
-	npctalk "Shall I leave too?", "Bodyguard Crux#ep16_room01", bc_self;
+	npctalk "Shall I leave too?", "保镖克鲁斯#ep16_room01", bc_self;
 	sleep2 3000;
 	npctalk "I don't mean that!", "", bc_self;
 	sleep2 3000;
@@ -4189,9 +4189,9 @@ prt_cas_q,20,139,3	script	斯皮卡·内里乌斯#ep16_room01	4_EP16_SPICA,{
 	end;
 }
 
-prt_cas_q,21,140,3	script	Bodyguard Crux#ep16_room01	4_EP16_CRUX,{
+prt_cas_q,21,140,3	script	保镖克鲁斯#ep16_room01	4_EP16_CRUX,{
 	cutin "ep16_crux_findel01",1;
-	mes "[Crux]";
+	mes "[克鲁斯]";
 	mes "Don't mind me.";
 	close3;
 }
@@ -5362,7 +5362,7 @@ prt_cas_q,21,83,3	script	弗里德里希·S·海涅#ep16_01	4_EP16_STOLZ,{
 		next;
 		if (select( "Yes.", "No." ) == 2) {
 			mes "[弗里德里希]";
-			mes "I see.";
+			mes "原来如此。";
 			mes "...Oh, do you know what Nyhill is doing?";
 			next;
 			mes "[弗里德里希]";
@@ -6972,7 +6972,7 @@ prt_cas_q,90,184,7	script	Helmut Roegenburg#ep16lug	4_EP16_HELMUT,{
 	if (ep16_lug == 0) {
 		cutin "16hel",0;
 		mes "[Helmut]";
-		mes "Hello.";
+		mes "你好。";
 		mes "I am Helmut Roegenburg.";
 		next;
 		mes "[Helmut]";
@@ -7675,7 +7675,7 @@ prt_cas_q,96,186,3	script	Wolf Roegenburg#ep16lug	4_EP16_WOLF,{
 		mes "The reason remains unknown, but they guess that the monsters came down to the town, chased by subjugation.";
 		next;
 		mes "[" + strcharinfo(0) + "]";
-		mes "I see.";
+		mes "原来如此。";
 		next;
 		mes "[Maximilian]";
 		mes "When we arrived at the site, the area was closed and no access was allowed, though my son and daughter-in-law was inside.";
@@ -9322,7 +9322,7 @@ prt_cas_q,93,129,3	script	Queen#ep16_1	4_EP16_EGEO,{
 		cutin "",255;
 		if (select( "Ask about the Geoborg family.", "Leave the room." ) == 2) {
 			mes "[Queen Catherine D. Geoborg]";
-			mes "I see.";
+			mes "原来如此。";
 			mes "Come back anytime if you have any other questions.";
 			cutin "ep16gao_1",2;
 			next;
@@ -14238,7 +14238,7 @@ prt_cas,270,168,3	duplicate(Royal Guardian Knight#02)	Royal Guardian Knight#03	4
 // Exchanges and enchants npc
 prt_cas,165,260,6	script	Noblesse Operator#ext161	4_F_CRU,{
 	mes "[Noblesse Operator]";
-	mes "Hello.";
+	mes "你好。";
 	mes "We have ^4d4dffNoblesse^000000 equipment that can be exchanged for " + mesitemlink( 6919 ) + ".";
 	mes "I will guide you to exchange items according to your job.";
 	close2;
@@ -16570,7 +16570,7 @@ prt_pri00,51,116,8	script	Ellond Lawrence#EP161ER	4_M_CRU,1,1,{
 	switch( isbegin_quest(5415) ) {
 	case 0:
 		mes "[Ellond Lawrence]";
-		mes "Hello.";
+		mes "你好。";
 		next;
 		mes "[Ellond Lawrence]";
 		mes "I am sorry to say this but unauthorized access to the area you see in the front is restricted. Sorry for the inconvenience and your cooperation will be appreciated.";
