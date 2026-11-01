@@ -167,43 +167,43 @@ prt_cas,215,146,0	script	#ep16_evt_01_on	HIDDEN_WARP_NPC,1,1,{
 	end;
 OnTouch:
 	if (isbegin_quest(7681) == 1) {
-		cloakoffnpcself( "Chamberlain Bell#ep16_01" );
+		cloakoffnpcself( "贝尔侍从长#ep16_01" );
 		setpcblock PCBLOCK_NPC, true;
 		sleep2 3000;
 		setpcblock PCBLOCK_NPC, false;
-		npctalk "I've been waiting for you. Sir " + strcharinfo(0) + "...", "Chamberlain Bell#ep16_01", bc_self;
+		npctalk "我一直在等你，" + strcharinfo(0) + "先生……", "贝尔侍从长#ep16_01", bc_self;
 	}
 	end;
 }
 
-prt_cas,217,150,3	script	Chamberlain Bell#ep16_01	4_M_RUSMAN1,{
+prt_cas,217,150,3	script	贝尔侍从长#ep16_01	4_M_RUSMAN1,{
 	if (isbegin_quest(7681) == 1) {
-		mes "[Chamberlain Bell]";
-		mes "You must be Sir " + strcharinfo(0) + "... Am I right?";
-		mes "You are here at last.";
-		mes "I've been waiting for you.";
-		mes "I am glad that the invitation have found you in time.";
+		mes "[贝尔]";
+		mes "你一定是" + strcharinfo(0) + "先生……我没说错吧？";
+		mes "你终于来了。";
+		mes "我一直在等你。";
+		mes "很高兴邀请函及时送到了你手上。";
 		next;
-		mes "[Belle]";
-		mes "I am Chamberlain Bell Twilight. I will be at your service during your stay at the palace.";
-		mes "You can call me Belle.";
+		mes "[贝尔]";
+		mes "我是王宫侍从长贝尔·崔莱特。你在王宫期间，由我为你服务。";
+		mes "你可以叫我贝尔。";
 		next;
-		mes "[Belle]";
-		mes "" + strcharinfo(0) + " since you have been invited as a special guest here, a separate guest room is prepared for you.";
-		mes "You may go upstairs and walk ^4d4dffstraight to the left corridor^000000.";
+		mes "[贝尔]";
+		mes "" + strcharinfo(0) + "，既然你是作为特别嘉宾受邀，我们为你准备了单独的客房。";
+		mes "上楼后^4d4dff沿左侧走廊一直走^000000。";
 		next;
-		mes "[Belle]";
-		mes "Let me go ahead and mall all the preparations.";
-		mes "Come with me, please.";
+		mes "[贝尔]";
+		mes "我先去准备。";
+		mes "请跟我来。";
 		close2;
-		cloakonnpcself( "Chamberlain Bell#ep16_01" );
+		cloakonnpcself( "贝尔侍从长#ep16_01" );
 		end;
 	}
 	end;
 OnInit:
-	cloakonnpc "Chamberlain Bell#ep16_01";
-	cloakonnpc "Chamberlain Bell#ep16_02";
-	cloakonnpc "Chamberlain Bell#ep16_03";
+	cloakonnpc "贝尔侍从长#ep16_01";
+	cloakonnpc "贝尔侍从长#ep16_02";
+	cloakonnpc "贝尔侍从长#ep16_03";
 	end;
 }
 
@@ -212,23 +212,23 @@ prt_cas,163,163,0	script	#ep16_evt_02_on	HIDDEN_WARP_NPC,3,3,{
 	end;
 OnTouch:
 	if (isbegin_quest(7681) == 1) {
-		cloakoffnpcself( "Chamberlain Bell#ep16_02" );
-		npctalk "This way. Sir " + strcharinfo(0) + "...", "Chamberlain Bell#ep16_02", bc_self;
+		cloakoffnpcself( "贝尔侍从长#ep16_02" );
+		npctalk "这边请，"+strcharinfo(0)+"先生……", "贝尔侍从长#ep16_02", bc_self;
 	}
 	end;
 }
 
-prt_cas,155,165,4	script	Chamberlain Bell#ep16_02	4_M_RUSMAN1,{
+prt_cas,155,165,4	script	贝尔侍从长#ep16_02	4_M_RUSMAN1,{
 	if (isbegin_quest(7681) == 1) {
-		mes "[Chamberlain Bell]";
-		mes "The special guestroom is prepared this way.";
-		mes "It is the ^4d4dfffirst room^000000 you'll see in there.";
+		mes "[贝尔]";
+		mes "特别客房在这边。";
+		mes "进去后看到的^4d4dff第一个房间^000000就是。";
 		next;
-		mes "[Chamberlain Bell]";
-		mes "Let me tell you the story in detail after moving into the room.";
-		mes "Come this way.";
+		mes "[贝尔]";
+		mes "进房后我再详细说明。";
+		mes "请走这边。";
 		close2;
-		cloakonnpcself( "Chamberlain Bell#ep16_02" );
+		cloakonnpcself( "贝尔侍从长#ep16_02" );
 	}
 	end;
 }
@@ -237,111 +237,111 @@ prt_cas_q,150,8,0	script	#ep16_evt_03_on	HIDDEN_WARP_NPC,1,1,{
 	end;
 OnTouch:
 	if (isbegin_quest(7681) == 1) {
-		cloakoffnpcself( "Chamberlain Bell#ep16_03" );
-		npctalk "This way. Sir " + strcharinfo(0) + "...", "Chamberlain Bell#ep16_03", bc_self;
+		cloakoffnpcself( "贝尔侍从长#ep16_03" );
+		npctalk "这边请，"+strcharinfo(0)+"先生……", "贝尔侍从长#ep16_03", bc_self;
 	}
 	end;
 }
 
-prt_cas_q,135,10,4	script	Chamberlain Bell#ep16_03	4_M_RUSMAN1,{
+prt_cas_q,135,10,4	script	贝尔侍从长#ep16_03	4_M_RUSMAN1,{
 	if (isbegin_quest(7681) == 1) {
-		mes "[Chamberlain Bell]";
-		mes "Let me tell you about the detailed schedule inside.";
-		mes "Let's go inside.";
+		mes "[贝尔]";
+		mes "我来说明一下里面的详细行程。";
+		mes "我们进去吧。";
 	}
 	else {
-		mes "[Chamberlain Bell]";
-		mes "I'll be waiting for you here in this room at all times.";
-		mes "You may find me when you need a help.";
+		mes "[贝尔]";
+		mes "我会一直在这个房间等你。";
+		mes "有需要随时来找我。";
 	}
 	close2;
-	cloakonnpcself( "Chamberlain Bell#ep16_03" );
+	cloakonnpcself( "贝尔侍从长#ep16_03" );
 	end;
 }
 
 // Belle Room
-prt_cas_q,26,30,3	script	Chamberlain Bell#ep16_main	4_M_RUSMAN1,{
+prt_cas_q,26,30,3	script	贝尔侍从长#ep16_main	4_M_RUSMAN1,{
 	switch( ep16_royal ) {
 	case 0:
-		mes "[Belle]";
+		mes "[贝尔]";
 		mes "This is the guest room for the officially invited guest.";
 		mes "Since this place forbids the access of outsiders, please leave.";
 		close;
 	case 1:
 		if (countitem(6933) > 0)
 			delitem 6933,1;// Banquet_Invitation
-		mes "[Belle]";
+		mes "[贝尔]";
 		mes "You must have come a long way here. Thank you.";
 		mes "Since you are a special guest, you have been assigned with a room in the royal villa.";
 		next;
-		mes "[Belle]";
+		mes "[贝尔]";
 		mes "I'll tell you about the schedule at all times. You can ask me anytime.";
 		next;
 		select("What do you mean by the special guest?");
-		mes "[Belle]";
+		mes "[贝尔]";
 		mes "The banquet hosted by the palace is to celebrate the return of the expedition and cherish their hard work...";
 		next;
-		mes "[Belle]";
+		mes "[贝尔]";
 		mes "However, more importantly, it is to fulfill the Royal Assembly.";
 		mes "The candidates for the throne have been evaluated before.";
 		mes "And heir to the throne will be determined.";
 		next;
-		mes "[Belle]";
+		mes "[贝尔]";
 		mes "There is a secret ritual passed down in the palace, which is held before the official coronation. The heir will be named the king upon passing the ritual.";
 		next;
-		mes "[Belle]";
+		mes "[贝尔]";
 		mes "Unless the heavens fall, the ritual will be finished safely, and Rune-Midgarts will meet the new king.";
 		next;
 		select("What's it got to do with me?");
-		mes "[Belle]";
+		mes "[贝尔]";
 		mes "I have told you just before.";
 		mes "There is a ritual to be held after the final decision.";
 		mes "You have been invited as an observer to the ritual.";
 		unittalk getcharid(3), "" + strcharinfo(0) + " : Me? An observer?", bc_self;
 		next;
-		mes "[Belle]";
+		mes "[贝尔]";
 		mes "It is the secret ritual of the palace to designate the king for the eternal glory of the seven royal families.";
 		mes "So that our new king is acknowledged by all the people of this land.";
 		next;
-		mes "[Belle]";
+		mes "[贝尔]";
 		mes "However, since special evaluation is allowed by the Royal Assembly,";
 		mes "It has been decided to select a personnel recommended by each guild";
 		next;
-		mes "[Belle]";
+		mes "[贝尔]";
 		mes "Or a hero who made a great contribution in the expedition as the observer of this ritual.";
 		next;
-		mes "[Belle]";
+		mes "[贝尔]";
 		mes "Consequently, you have been assigned. I have heard that you were recommended unanimously.";
 		next;
 		select("When will the ritual take place?");
-		mes "[Belle]";
+		mes "[贝尔]";
 		mes "As far as I know, it is supposed to be in the final stage.";
 		mes "Since the late king passed away all of a sudden, the palace has been in a state of disorder.";
 		next;
-		mes "[Belle]";
+		mes "[贝尔]";
 		mes "Fortunately, Rune-Midgarts is supported by the seven royal families.";
 		mes "It is the time to welcome our new king.";
 		next;
 		npctalk "If Morocc hadn't been resurrected...", "", bc_self;
-		mes "[Belle]";
+		mes "[贝尔]";
 		mes "Since you are invited as the observer,";
 		mes "You need to visit each facility and exchange greetings before attending the banquet.";
 		next;
-		mes "[Belle]";
+		mes "[贝尔]";
 		mes "This royal villa happens to be the place where the people from each family stays when they come to the capital. All other rooms except this one are occupied by other families.";
 		next;
-		mes "[Belle]";
+		mes "[贝尔]";
 		mes "They must have heard the news of your arrival by now.";
 		mes "How about ^4d4dffvisiting the Heine family near here^000000?";
 		next;
-		mes "[Belle]";
+		mes "[贝尔]";
 		mes "In the west villa, I mean, where we are now,";
 		mes "There are the residences for Heine, Nerius and Walther.";
 		next;
-		mes "[Belle]";
+		mes "[贝尔]";
 		mes "In the east across the corridor, there are residences for Wigner, Richard, Geoborg and Roegenburg.";
 		next;
-		mes "[Belle]";
+		mes "[贝尔]";
 		mes "You need to exchange greetings with the members of each families so make sure to visit them all.";
 		erasequest 7681;// Invitation to Royal Banquet
 		setquest 7682;// Socializing Starts from an Eye Contact
@@ -362,46 +362,46 @@ prt_cas_q,26,30,3	script	Chamberlain Bell#ep16_main	4_M_RUSMAN1,{
 				setquest 7685;// What Is the Next Thing on the Schedule ?
 			}
 			else {
-				mes "[Belle]";
+				mes "[贝尔]";
 				mes "The news of your arrival must have reached each family by now.";
 				mes "They must be waiting. Pay a visit and exchange greetings.";
 				next;
-				mes "[Belle]";
+				mes "[贝尔]";
 				mes "You have not visited the";
 				mes .@string$;
 				mes "family yet.";
 				next;
-				mes "[Belle]";
+				mes "[贝尔]";
 				mes "They are the most blue-blooded people, not used to be kept waiting.";
 				next;
-				mes "[Belle]";
+				mes "[贝尔]";
 				mes "In order to keep a smooth relationship with them, you may to there quickly.";
 				mes "Then, good bye.";
 				close;
 			}
 		}
-		mes "[Belle]";
+		mes "[贝尔]";
 		mes "Oh, you are back.";
 		mes "The assembly seems to take some time.";
 		next;
-		mes "[Belle]";
+		mes "[贝尔]";
 		mes "Since you have some time to spare, why don't you go enjoy the banquet in the Banquet Hall.";
 		next;
-		mes "[Belle]";
+		mes "[贝尔]";
 		mes "The ^4d4dffladies of the Nerius family have just asked to see you in the Banquet Hall^000000 .";
 		mes "" + strcharinfo(0) + ", you must have made a good impression.";
 		next;
-		mes "[Belle]";
+		mes "[贝尔]";
 		mes "When the time comes, the Court Mage will come to guide you. You may enjoy the banquet by then.";
 		next;
-		mes "[Belle]";
+		mes "[贝尔]";
 		mes "And this is some sort of reward which has been sent to you as a token of gratitude...";
 		next;
-		mes "[Belle]";
+		mes "[贝尔]";
 		mes "You can collect them and exchange with useful items.";
 		mes "You may get more in return for your help around the palace.";
 		next;
-		mes "[Belle]";
+		mes "[贝尔]";
 		mes "There must be someone ^4d4dffnear the Crusader's Office who would exchange^000000 them.";
 		mes "If you have some time, pay a visit.";
 		erasequest 7685;// What Is the Next Thing on the Schedule ?
@@ -410,35 +410,35 @@ prt_cas_q,26,30,3	script	Chamberlain Bell#ep16_main	4_M_RUSMAN1,{
 		getitem 6919,10;// TokenOfHonor
 		ep16_royal = 3;
 		next;
-		mes "[Belle]";
+		mes "[贝尔]";
 		mes "When the time comes, the Court Mage will come to guide you. You may enjoy the banquet by then.";
 		next;
-		mes "[Belle]";
+		mes "[贝尔]";
 		mes "If you go to the Banquet Hall, ^4d4dffmake sure to find the people from the Nerius family.^000000";
 		close;
 	case 3:
 	case 4:
 	case 5:
 	case 6:
-		mes "[Belle]";
+		mes "[贝尔]";
 		mes "When the time comes, the Court Mage will come to guide you. You may enjoy the banquet by then.";
 		next;
-		mes "[Belle]";
+		mes "[贝尔]";
 		mes "If you go to the Banquet Hall, ^4d4dffmake sure to find the people from the Nerius family.^000000";
 		close;
 	case 7:
-		mes "[Belle]";
+		mes "[贝尔]";
 		mes "Oh, how was the banquet?";
 		mes "The banquet is supposed to last long since it is held to welcome all the returning heroes from Ash-Vacuum...";
 		next;
-		mes "[Belle]";
+		mes "[贝尔]";
 		mes "By the way, the Court Mage has visited just before.";
 		mes "The Court Magician will be back soon after visiting other families.";
 		next;
 		cloakoffnpcself( "Court Mage Nillem#ep16_wiz01" );
 		npctalk "Yeah! Here comes Nillem the genius mage!", "Court Mage Nillem#ep16_wiz01", bc_self;
 		sleep2 1000;
-		mes "[Belle]";
+		mes "[贝尔]";
 		mes "There... Is the magician.";
 		mes "The Court Mage will give you the details.";
 		erasequest 7691;// Waiting for the Ritual
@@ -499,85 +499,85 @@ prt_cas_q,26,30,3	script	Chamberlain Bell#ep16_main	4_M_RUSMAN1,{
 		warp "prt_lib",89,44;
 		end;
 	case 14:
-		mes "[Belle]";
+		mes "[贝尔]";
 		mes "You are back.";
 		mes "There has been a message for you.";
 		mes "It says 'There will be an important meeting. Please wait until then.";
 		next;
-		mes "[Belle]";
+		mes "[贝尔]";
 		mes "You will be notified as soon as everything is settled.";
 		mes "Please enjoy the banquet until then.'";
 		next;
-		mes "[Belle]";
+		mes "[贝尔]";
 		mes "This is about it.";
 		mes "Apart from it, well, I am not supposed to be curious about this kind of things...";
 		next;
-		mes "[Belle]";
+		mes "[贝尔]";
 		mes "However, ^4d4dffI saw the court doctors and priests moving fast to the Heine family^000000.";
 		next;
-		mes "[Belle]";
+		mes "[贝尔]";
 		mes "They seemed to be in a hurry. Do you know what has happened?";
 		next;
 		select("This is a difficult question for me to answer...");
-		mes "[Belle]";
+		mes "[贝尔]";
 		mes "I am sorry that I asked.";
 		mes "Well, there is one more news.";
 		next;
-		mes "[Belle]";
+		mes "[贝尔]";
 		mes "The lady of the ^4d4dffNerius^000000 family has invited you to have a cup of tea with her.";
 		next;
-		mes "[Belle]";
+		mes "[贝尔]";
 		mes "She asked me to let her know as soon as you come. Shall I send her a message now?";
 		erasequest 7696;// What's Next?
 		ep16_royal = 15;
 		next;
 		if (select( "I'll visit her now.", "I'll visit her later." ) == 2) {
-			mes "[Belle]";
+			mes "[贝尔]";
 			mes "Let me know when you are ready.";
 			mes "I'll send her the message then.";
 			close;
 		}
-		mes "[Belle]";
+		mes "[贝尔]";
 		mes "Let me send the message now.";
 		mes "Good bye.";
 		setquest 7697;// Invitation from the Nerius
 		close;
 	case 15:
 		if (isbegin_quest(7697) == 0) {
-			mes "[Belle]";
+			mes "[贝尔]";
 			mes "Would you accept the invitation from the Nerius family now?";
 			next;
 			if (select( "I'll visit her now.", "I'll visit her later." ) == 2) {
-				mes "[Belle]";
+				mes "[贝尔]";
 				mes "Let me know when you are ready.";
 				mes "I'll send her the message then.";
 				close;
 			}
-			mes "[Belle]";
+			mes "[贝尔]";
 			mes "Let me send the message now.";
 			mes "Good bye.";
 			setquest 7697;// Invitation from the Nerius
 			close;
 		}
-		mes "[Belle]";
+		mes "[贝尔]";
 		mes "The Nerius family stays in the second room from this room.";
 		mes "The room next to the room of the Heine family.";
 		next;
-		mes "[Belle]";
+		mes "[贝尔]";
 		mes "I have sent the message that you would visit them soon. You may go there anytime.";
 		close;
 	case 16:
-		mes "[Belle]";
+		mes "[贝尔]";
 		mes "There has been a request from the Heine family to meet you.";
 		mes "They asked you to visit the Heine family as soon as you come back.";
 		close;
 	case 17:
-		mes "[Belle]";
+		mes "[贝尔]";
 		mes "Oh, you are back!";
 		mes "Let me call the Mage.";
 		next;
 		select("What is that about?");
-		mes "[Belle]";
+		mes "[贝尔]";
 		mes "Court Mage Nillem opened the door and left right away.";
 		mes "Saying, 'Where are you?' " + strcharinfo(0) + " The magician must be looking for you.";
 		close2;
@@ -594,7 +594,7 @@ prt_cas_q,26,30,3	script	Chamberlain Bell#ep16_main	4_M_RUSMAN1,{
 		next;
 		switch( select( "Call Nillem", "What is the next thing on the schedule?", "Please prepare some refreshments.", "Call Convenience Service" ) ) {
 		case 1:
-			mes "[Belle]";
+			mes "[贝尔]";
 			mes "Shall I call the Court Mage for you?";
 			mes "Wait a second.";
 			mes "I have just sent a message. The magician will arrive here soon.";
@@ -636,11 +636,11 @@ prt_cas_q,26,30,3	script	Chamberlain Bell#ep16_main	4_M_RUSMAN1,{
 			setpcblock PCBLOCK_NPC, false;
 			end;
 		case 2:
-			mes "[Belle]";
+			mes "[贝尔]";
 			mes "There is no special invitation for today.";
 			close;
 		case 3:
-			mes "[Belle]";
+			mes "[贝尔]";
 			.@r = rand(1,5);
 			if (.@r == 1)
 				mes "Here are some chamomile tea and ginger cookies. They will help you take a rest and get recovered from fatigue.";
@@ -659,13 +659,13 @@ prt_cas_q,26,30,3	script	Chamberlain Bell#ep16_main	4_M_RUSMAN1,{
 			percentheal 100,100;
 			close;
 		case 4:
-			mes "[Belle]";
+			mes "[贝尔]";
 			mes "Which service should I call for you?";
 			mes "All calls are available, but additional charge may apply to each service.";
 			next;
 			switch( select( "Kafra", "Giant Beast Manager", "No need." ) ) {
 			case 1:
-				mes "[Belle]";
+				mes "[贝尔]";
 				mes "You want the Kafra Service.";
 				mes "Let me make a call right away.";
 				close2;
@@ -676,7 +676,7 @@ prt_cas_q,26,30,3	script	Chamberlain Bell#ep16_main	4_M_RUSMAN1,{
 				npctalk "Kafra Service.", "卡普拉职员#ep16_s01", bc_self;
 				end;
 			case 2:
-				mes "[Belle]";
+				mes "[贝尔]";
 				mes "You need a Giant Beast Manager.";
 				mes "Let me make a call right away.";
 				close2;
@@ -687,7 +687,7 @@ prt_cas_q,26,30,3	script	Chamberlain Bell#ep16_main	4_M_RUSMAN1,{
 				npctalk "I am at your service.", "Giant Beast Manager#ep16_s02", bc_self;
 				end;
 			case 3:
-				mes "[Belle]";
+				mes "[贝尔]";
 				mes "I see.";
 				close2;
 				cloakonnpcself( "卡普拉职员#ep16_s01" );
@@ -5307,7 +5307,7 @@ prt_cas_q,21,83,3	script	Friedrich S. Heine#ep16_01	4_EP16_STOLZ,{
 	if (ep16_royal == 16) {
 		cutin "ep16_friedrich_stolz_heine",1;
 		mes "[Friedrich]";
-		mes "You are here at last.";
+		mes "你终于来了。";
 		mes "The archduke has been waiting for you.";
 		close3;
 	}
