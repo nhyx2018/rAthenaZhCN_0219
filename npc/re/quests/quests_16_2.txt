@@ -3995,7 +3995,7 @@ rebel_in,70,78,3	script	埃琳娜·沃尔科娃#16.2rm	4_F_ELENA,{
 				case 1:
 					if (BaseJob != Job_Priest) {
 						mes "[USU指挥官埃琳娜]";
-						mes "In the waiting room, there is ^0000CDIvan, the person in charge of entrance in arena^000000.";
+						mes "等候室里有^0000CD负责竞技场入口的伊万^000000。";
 						mes "按照伊万的指引，依次进入竞技场。";
 						next;
 						mes "[USU指挥官埃琳娜]";
@@ -4349,7 +4349,7 @@ rebel_in,70,78,3	script	埃琳娜·沃尔科娃#16.2rm	4_F_ELENA,{
 			next;
 			if (select( "Go to the waiting room", "Don't go to the waiting room." ) == 1) {
 				mes "[USU指挥官埃琳娜]";
-				mes "In the waiting room, there is ^0000CDIvan, the person in charge of entrance in arena^000000.";
+				mes "等候室里有^0000CD负责竞技场入口的伊万^000000。";
 				mes "按照伊万的指引，依次进入竞技场。";
 				next;
 				mes "[USU指挥官埃琳娜]";
