@@ -3463,52 +3463,52 @@ que_swat,150,58,3	script	新人#ep162_03	4_M_ROOKIE,{
 	if (terra_gloria_main == 23) {
 		cutin "16loo_01.bmp",2;
 		mes "[新人]";
-		mes "Oh, I hate it here.";
-		mes "I want to go back to our hidout soon.";
-		mes "Shall we get out of here?";
+		mes "哦，我讨厌这里。";
+		mes "我想快点回我们的藏身处。";
+		mes "我们离开这里吧？";
 		next;
-		if (select( "Leave.", "Stay." ) == 2) {
+		if (select( "离开。", "留下。" ) == 2) {
 			mes "[新人]";
-			mes "Hmm, are you the type of person who looks for trouble?";
-			mes "Well, we appreciate it if you help us clean up the remnants.";
+			mes "嗯，你是那种爱找麻烦的人吗？";
+			mes "如果你帮我们清剿残党，我们会很感激。";
 			close3;
 		}
 		mes "[新人]";
-		mes "Follow me, then.";
+		mes "那跟我来。";
 		close2;
 		warp "ein_fild04",279,339;
 		end;
 	}
 	if (terra_gloria_main == 24) {
-		npctalk "... Shall I go in now?", "", bc_self;
+		npctalk "……我现在要进去吗？", "", bc_self;
 		end;
 	}
 	mes "[新人]";
-	mes "Shall we leave now?";
+	mes "现在走吗？";
 	cutin "16loo_01.bmp",2;
 	next;
-	switch( select( "About the monster in the central room", "Leave.", "Stay.", "About YSF01" ) ) {
+	switch( select( "关于中央房间的怪物", "离开。", "留下。", "关于YSF01" ) ) {
 	case 1:
 		break;
 	case 2:
 		mes "[新人]";
-		mes "Follow me, then.";
+		mes "那跟我来。";
 		close2;
 		warp "ein_fild04",279,339;
 		end;
 	case 3:
 		mes "[新人]";
-		mes "Since this fuss is likely to continue for a while, we'd be glad if you would stay here and help us~";
+		mes "这阵骚动可能还会持续，你愿意留下帮忙就太好了~";
 		close3;
 	case 4:
 		mes "[新人]";
-		mes "Why did Werner do that?";
-		mes "I don't understand.";
-		mes "... No. Maybe it's weird to understand a lunatic.";
+		mes "维尔纳为什么那么做？";
+		mes "我不明白。";
+		mes "……不，也许理解一个疯子才奇怪。";
 		next;
 		mes "[新人]";
-		mes "Anyways, We have to observe the central room's core.";
-		mes "As long as there are magic inside, the same thing will happen again.";
+		mes "总之，我们必须监视中央房间的核心。";
+		mes "只要里面还有魔力，同样的事就会再发生。";
 		close3;
 	}
 	switch( checkquest(7743,PLAYTIME) ) {
@@ -3517,37 +3517,37 @@ que_swat,150,58,3	script	新人#ep162_03	4_M_ROOKIE,{
 		case -1:
 			mes "[新人]";
 			mes "欢迎。";
-			mes "Without any further ado,";
-			mes "We would like to hunt the ^4d4dffpet child^000000 guy. Will you join us?";
+			mes "闲话少说，";
+			mes "我们想去猎杀^4d4dff小可爱^000000，你要加入吗？";
 			next;
-			if (select( "I am the pet child hunter!", "Reject!" ) == 2) {
+			if (select( "我是小可爱猎人！", "拒绝！" ) == 2) {
 				mes "[新人]";
-				mes "No, why?";
-				mes "It's just a monster!";
-				mes "We just have to kill it!";
-				mes "Then who should we ask to do it?";
+				mes "不，为什么？";
+				mes "它只是个怪物！";
+				mes "杀掉就行了！";
+				mes "那该找谁去做？";
 				close;
 			}
 			mes "[新人]";
-			mes "Let's reveal its secret!";
-			mes "Let's find out why it keeps showing up!";
+			mes "揭开它的秘密吧！";
+			mes "查明它为什么不断出现！";
 			setquest 7742;// Sweeping the remnants
 			close3;
 		case 0:
 		case 1:
 			mes "[新人]";
-			mes "It's in the central room. The place full of strange spirits in the middle of the central room.";
-			mes "Let me open the door for you first.";
+			mes "它在中央房间，就是中央房间中间充满奇怪气息的地方。";
+			mes "我先给你开门。";
 			close3;
 		case 2:
 			mes "[新人]";
-			mes "Great! You're so cool!";
-			mes "Was it a replication of the former experimental subject? Self-replication?";
-			mes "They haven't found out the exact mechanism yet.";
+			mes "太好了！你真酷！";
+			mes "是以前实验体的复制品吗？自我复制？";
+			mes "他们还没查明具体机制。";
 			next;
 			mes "[新人]";
-			mes "Anyhow, thank you for your support.";
-			mes "We will count on you again next time.";
+			mes "总之，谢谢你的支援。";
+			mes "下次也拜托你。";
 			erasequest 7742;// Sweeping the remnants
 			setquest 7743;// Sweeping the remnants (Standby)
 			getitem 25155,3;	// Swz_Honor_Token
@@ -3558,26 +3558,26 @@ que_swat,150,58,3	script	新人#ep162_03	4_M_ROOKIE,{
 	case 0:
 	case 1:
 		mes "[新人]";
-		mes "The same monster is regenerated every single day. Isn't it a bit odd?";
+		mes "同样的怪物每天都会再生，不觉得有点奇怪吗？";
 		next;
 		cutin "16loo_02.bmp",2;
 		mes "[新人]";
-		mes "Maybe this guy is one of the objects that were split by transplanting the hearts of Ymir ...";
+		mes "也许这家伙是移植伊米尔心脏后分裂出的个体之一……";
 		next;
 		cutin "16loo_01.bmp",2;
 		mes "[新人]";
-		mes "Anyway, let's see if that guy shows up again.";
-		mes "It's so~ interesting.";
+		mes "总之，看看那家伙会不会再出现。";
+		mes "真~有意思。";
 		close3;
 	case 2:
 		erasequest 7743;// Sweeping the remnants (Standby)
 		mes "[新人]";
-		mes "Did you call it a pet child?";
-		mes "Seems like they are completely leaving that guy to the adventurer";
+		mes "你叫它小可爱？";
+		mes "看来他们把这家伙完全交给冒险者了。";
 		next;
 		mes "[新人]";
-		mes "If you want, do not hesitate to tell me any time.";
-		mes "I will give you a mission to kill the pet child.";
+		mes "想要的话随时告诉我。";
+		mes "我会给你猎杀小可爱的任务。";
 		close3;
 	}
 	end;
