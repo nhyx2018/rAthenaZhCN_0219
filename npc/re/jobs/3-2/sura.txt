@@ -626,7 +626,7 @@ OnTimer213000:
 	monster "sword_2-1",219,201,"»Ã¾õ",1483,1,"Buddy#Sura_Salon::OnMyMobDead";
 	end;
 OnTimer273000:
-	monster "sword_2-1",219,210,"",1480,1,"Buddy#Sura_Salon::OnMyMobDead";
+	monster "sword_2-1",219,210,"»Ã¾õ",1480,1,"Buddy#Sura_Salon::OnMyMobDead";
 	monster "sword_2-1",228,209,"»Ã¾õ",1446,1,"Buddy#Sura_Salon::OnMyMobDead";
 	monster "sword_2-1",228,201,"»Ã¾õ",1480,1,"Buddy#Sura_Salon::OnMyMobDead";
 	monster "sword_2-1",228,201,"»Ã¾õ",1479,1,"Buddy#Sura_Salon::OnMyMobDead";
