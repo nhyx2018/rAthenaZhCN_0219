@@ -80,7 +80,7 @@ verus01,149,155,5	script	文明探索者#pa0829_01	4_LGTSCIENCE,{
 		next;
 		if (select( "这不是我感兴趣的话题。", "有意思。有什么结果吗？" ) == 1) {
 			mes "[文明探索者]";
-			mes "Unfortunate.";
+			mes "真遗憾。";
 			close;
 		}
 		mes "[文明探索者]";
@@ -97,7 +97,7 @@ verus01,149,155,5	script	文明探索者#pa0829_01	4_LGTSCIENCE,{
 		next;
 		if (select( "不感兴趣。", "Ok." ) == 1) {
 			mes "[文明探索者]";
-			mes "Unfortunate.";
+			mes "真遗憾。";
 			close;
 		}
 		mes "[文明探索者]";

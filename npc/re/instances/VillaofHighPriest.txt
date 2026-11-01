@@ -536,7 +536,7 @@ OnMobDead:
 		mes "[米里亚姆]";
 		mes "那么，礼拜堂的调查就交给冒险者了。";
 		mes "我会带那些人撤离。";
-		mes "Please.";
+		mes "拜托了。";
 		npctalk "米里亚姆：里面的人，我来护送你们。我们出去吧。", instance_npcname("Miriam#miriam03");
 		close2;
 		cutin "",255;
@@ -1097,7 +1097,7 @@ OnMobDead2:
 		next;
 		select( "这个艾普理欧掉了出来。" );
 		mes "[米里亚姆]";
-		mes "Indeed...";
+		mes "确实……";
 		mes "它和教皇的很相似……";
 		mes "看看掉出来的艾普理欧，这一定是那个叫巴格的人造出来的。";
 		next;

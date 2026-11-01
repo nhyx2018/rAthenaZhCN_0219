@@ -388,7 +388,7 @@ OnTouch:
 		end;
 	cutin "ep162_dn03",2;
 	mes "[狄恩]";
-	mes "Finally..";
+	mes "终于……";
 	mes "如果跨过这扇门……";
 	next;
 	cutin "ep162_est01",2;
@@ -440,7 +440,7 @@ OnTouch:
 	cutin "ep162_rds01",2;
 	mes "[莉德希]";
 	mes "啊……抱歉……";
-	mes "Alright.";
+	mes "好吧。";
 	next;
 	mes "[莉德希]";
 	mes "在我们打开最后一扇门的时候，能不能请你回一趟^FF0000克莱纳 奈米艾利^000000？";

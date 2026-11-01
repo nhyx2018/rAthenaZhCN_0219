@@ -256,7 +256,7 @@ S_Enter:
 			mes "有个坏消息。";
 			mes "我听说";
 			mes "噩梦死神又出现了";
-			mes "again.";
+			mes "又来了。";
 			next;
 			mes "[护士玛艾妮]";
 			mes ""+ strcharinfo(0) +"的帮助";
@@ -328,7 +328,7 @@ S_Enter:
 		break;
 	case 3:
 		mes "[护士玛艾妮]";
-		mes "Alright.";
+		mes "好吧。";
 		mes "如果你改变主意，请再回来。";
 		break;
 	}
