@@ -1131,7 +1131,7 @@ function	script	F_banquet_main_4_spica	{
 	cutin "ep16_nihi_miseria_heine01",2;
 	mes "[尼希尔]";
 	mes "I am sorry, I apologize for her bad manners.";
-	mes ".....";
+	mes "……";
 	next;
 	cutin "ep16_skia_nerius02",0;
 	mes "[斯琪亚]";
@@ -1519,7 +1519,7 @@ prt_cas,25,35,5	script	斯琪亚·内里乌斯#ep16_7690	4_EP16_SKIA,{
 		cutin "ep16_nihi_miseria_heine04",2;
 		mes "[尼希尔]";
 		mes "He told me it was light champagne...";
-		mes ".....";
+		mes "……";
 		next;
 		select("Has anything happened to you?");
 		cutin "ep16_nihi_miseria_heine01",2;
@@ -1855,7 +1855,7 @@ prt_lib,88,90,1	script	Room of Consciousness#evt_gate01	PORTAL,{
 		case IE_NOINSTANCE:
 			mes "[尼勒姆]";
 			mes "The gate to the place where the ritual is held is not activated officially.";
-			mes "Wait a minute.";
+			mes "等等。";
 			close;
 		case IE_NOMEMBER:
 			mes "^4d4dffThis is an event proceeding through memorial.";
@@ -1958,92 +1958,92 @@ prt_lib,80,79,3	script	克罗内克·G·海涅#ep16_01_lib01	4_EP16_GRANZ,{
 		mes "我怕加冕礼上看不到大地荣耀的光辉。";
 		next;
 		mes "问题会从下一次加冕礼开始出现。";
-		mes "The people of the kingdom will be disheartened and worried about their future if the blessing of the earth is not given to the crowning of the king.";
+		mes "如果国王加冕时得不到大地的祝福，国民会灰心，也会担心未来。";
 		next;
-		mes "I consulted Varmunt the Great Sage about this.";
-		mes "He told me he could help and installed something in the Room of Consciousness.";
+		mes "我为此咨询了大贤者瓦尔蒙特。";
+		mes "他说能帮忙，并在意识房间装了一样东西。";
 		next;
-		mes "I was surprised to see what was installed there reacting with 大地荣耀.";
-		mes "It delivered enough magical power to 大地荣耀's Star of Blessing,";
+		mes "看到那装置与大地荣耀产生反应，我很惊讶。";
+		mes "它向大地荣耀的祝福之星输送了足够的魔力，";
 		next;
-		mes "And 大地荣耀 could give the blessing of the earth as usual.";
+		mes "大地荣耀得以像往常一样赐予大地祝福。";
 		next;
-		mes "Everything was all right.";
-		mes "Even if it was by the fake 依美乐心脏.";
+		mes "一切都没问题。";
+		mes "即使靠的是假依美乐心脏。";
 		next;
-		mes "大地荣耀, our beautiful crown.";
-		mes "In the blessed crown, there remained a piece of 依美乐心脏 which has been guarding Prontera for generations.";
+		mes "大地荣耀，我们美丽的王冠。";
+		mes "在受祝福的王冠中，仍留有守护普隆德拉世代的依美乐心脏碎片。";
 		next;
-		mes "It is enough.";
-		mes "It would be enough for our descendants.";
+		mes "这就够了。";
+		mes "对我们的后代也够了。";
 		next;
-		mes "Therefore, I wish no one else ever read this record,";
-		mes "And seal it with a condition which cannot be met.";
+		mes "因此，我希望再无人读到这份记录，";
+		mes "并用无法满足的条件将其封印。";
 		next;
-		mes "If one of our descendants happen to read this record,";
-		mes "Make sure to guard 大地荣耀.";
-		mes "It is the last piece of 依美乐心脏 left to us.^000000";
+		mes "如果我们的后代有人读到这份记录，";
+		mes "请务必守护大地荣耀。";
+		mes "那是留给我们的最后一块依美乐心脏碎片。^000000";
 		next;
 		mes "......";
 		next;
-		select("That's it...");
+		select("原来如此……");
 		mes "[尼勒姆]";
-		mes "Am I going to be killed now?";
-		mes "I think I have just found out all the secrets of the royal family.";
-		mes "Aren't you going to execute me?";
+		mes "我现在会被杀吗？";
+		mes "我好像刚知道了王室所有秘密。";
+		mes "你不处决我吗？";
 		next;
 		mes "[克罗内克]";
-		mes "..............Hum...";
-		mes "If you want, I will fulfill your wish.";
-		mes "But not now.";
+		mes "……嗯……";
+		mes "你愿意的话，我可以满足你。";
+		mes "但不是现在。";
 		next;
-		npctalk "Wow...", "魔法师尼勒姆#ep16_warp", bc_self;
+		npctalk "哇……", "魔法师尼勒姆#ep16_warp", bc_self;
 		mes "[Librarian]";
-		mes "Then... How about me?";
+		mes "那我……怎么办？";
 		next;
 		mes "[克罗内克]";
-		mes "If you say another word, I'll hang you with my own hands.";
+		mes "你再说一个字，我就亲手吊死你。";
 		next;
 		cutin "ep16_kronecker_granz_heine",2;
 		mes "[克罗内克]";
-		mes "I am surprised.";
-		mes "It means that we can bring a ^4d4dfffake 依美乐心脏^000000 or";
-		mes "The real piece of 依美乐心脏 to replace what has been destroyed.";
+		mes "我很惊讶。";
+		mes "这意味着我们可以带回^4d4dff假依美乐心脏^000000，或者";
+		mes "真正的心脏碎片来替换被毁掉的那块。";
 		next;
 		mes "[克罗内克]";
-		mes "The real problem is 大地荣耀...";
-		mes "It has been one of a kind to begin with.";
-		mes "Since it was made by crafting a small piece fallen from the heart...";
+		mes "真正的问题是大地荣耀……";
+		mes "它本来就是独一无二的。";
+		mes "它是用从心脏上掉落的一小块加工而成……";
 		next;
 		mes "[克罗内克]";
-		mes "Should we negotiate with the cooperation in Schwarzwald?";
-		mes "Wait a minute.";
-		mes ".....";
+		mes "要和施瓦茨瓦尔德的企业谈判吗？";
+		mes "等等。";
+		mes "……";
 		next;
-		select("What should I do now?");
+		select("我现在该做什么？");
 		mes "[克罗内克]";
-		mes "I am sorry to keep you waiting while I collect my thoughts.";
-		mes "Thank you for your work.";
-		next;
-		mes "[克罗内克]";
-		mes "May I ask you a favor?";
-		mes "Would you keep on visiting that place with 尼勒姆?";
+		mes "抱歉让你等我整理思绪。";
+		mes "谢谢你的努力。";
 		next;
 		mes "[克罗内克]";
-		mes "Although we are going to discuss about it in the official meeting, I don't think the result would be different.";
+		mes "能拜托你一件事吗？";
+		mes "你能继续和尼勒姆去那个地方吗？";
 		next;
 		mes "[克罗内克]";
-		mes "Please guard 依美乐心脏 there or bring it to us!";
-		mes "We don't keep our hope too high, but it would worth the try, wouldn't it?";
+		mes "虽然还要在正式会议上讨论，但我认为结果不会变。";
 		next;
 		mes "[克罗内克]";
-		mes "Please.";
-		mes "I'll get the approval for you to visit the Past Memories of the Royal Family everyday.";
-		mes "Please get the task from 弗里茨... I mean Friedrich.";
+		mes "请在那里守护依美乐心脏，或把它带回来！";
+		mes "希望不大，但值得一试，对吧？";
 		next;
 		mes "[克罗内克]";
-		mes "It is a shame, but you are the only hope left for us.";
-		mes "We are counting on you.";
+		mes "拜托了。";
+		mes "我会帮你取得每天进入王家过去记忆的许可。";
+		mes "任务去找弗里茨……我是说弗里德里希。";
+		next;
+		mes "[克罗内克]";
+		mes "很遗憾，但你是我们唯一的希望。";
+		mes "拜托你了。";
 		erasequest 7703;// Who Knows the Truth
 		getitem 6919,30;// TokenOfHonor
 		getexp 800000,800000;
@@ -2051,17 +2051,17 @@ prt_lib,80,79,3	script	克罗内克·G·海涅#ep16_01_lib01	4_EP16_GRANZ,{
 		ep16_royal = 23;
 		next;
 		cutin "",255;
-		mes "^4d4dffFrom now on, you can get daily quests related to the past Room of Consciousness from Friedrich Stoltze.^000000";
+		mes "^4d4dff从现在起，可以从弗里德里希·施托尔策处接取与过去意识房间相关的每日任务。^000000";
 		close;
 	}
 	if (ep16_royal > 22) {
 		cutin "ep16_kronecker_granz_heine",2;
 		mes "[克罗内克·G·海涅]";
-		mes "Then, I'll entrust the matter regarding this place to you and 尼勒姆.";
-		mes "For the sake of the royal family's legitimacy...";
+		mes "那么，这里的事就交给你和尼勒姆。";
+		mes "为了王室的正统性……";
 		next;
 		mes "[克罗内克·G·海涅]";
-		mes "Please carry out this mission in secret.";
+		mes "请秘密执行这项任务。";
 		close3;
 	}
 	end;
@@ -2694,7 +2694,7 @@ prt_lib_q,88,90,1	script	Swaying Space#evt_gate02	4_ENERGY_RED,{
 		case IE_NOINSTANCE:
 			mes "[尼勒姆]";
 			mes "Hum, is it too difficult to connect it by force?";
-			mes "Wait a minute.";
+			mes "等等。";
 			close;
 		case IE_NOMEMBER:
 			mes "^4d4dffThis is an event proceeding through memorial.";
@@ -5315,7 +5315,7 @@ prt_cas_q,21,83,3	script	弗里德里希·S·海涅#ep16_01	4_EP16_STOLZ,{
 		cutin "ep16_friedrich_stolz_heine",1;
 		mes "[弗里德里希]";
 		mes "尼勒姆 said he would visit your room after making all preparations. You may wait in your room.";
-		mes "We are counting on you.";
+		mes "拜托你了。";
 		close3;
 	}
 	if (ep16_royal < 23)
@@ -6000,7 +6000,7 @@ prt_cas_q,90,186,5	script	马克西米利安·雷根布尔格#ep16lug	4_EP16_MAX,{
 	if (ep16_lug == 9) {
 		mes "[马克西米利安]";
 		mes "Please bring Helmut. He must be in the ^0000cdcheckpoint near the border with Schwarzwald^000000. He is responsible for the patrol party.";
-		mes "Please.";
+		mes "拜托了。";
 		close;
 	}
 	if (ep16_lug == 10) {
@@ -11672,7 +11672,7 @@ prt_cas_q,96,7,1	script	卡特琳·维格纳#ep16wig	4_EP16_POE,{
 		next;
 		mes "[卡特琳]";
 		mes "I am sorry, but I want to be alone for now.";
-		mes "Please.";
+		mes "拜托了。";
 		close3;
 	}
 	if (ep16_wig > 15) {
@@ -12334,7 +12334,7 @@ prt_cas,322,216,5	script	Maid#ep16wig02	1_F_04,{
 		mes "Well, have you told the prince about it? Please make sure not to hurt his feelings much.";
 		next;
 		mes "[Maid]";
-		mes "Please.";
+		mes "拜托了。";
 		close;
 	}
 	if (ep16_wig == 19) {
@@ -14075,7 +14075,7 @@ prt_cas,379,124,3	script	Glamorous Girl#pop	4_F_ARUNA_POP,{
 	cutin "ra_bishop",2;
 	emotion ET_HUK, playerattached();
 	mes "[Glamorous Girl]";
-	mes ".....";
+	mes "……";
 	mes "In secret.";
 	next;
 	mes "[Glamorous Girl]";
