@@ -8398,6 +8398,9 @@ spl_fild02,314,165,0	script	鱼群#1::Fishinghole	844,3,3,{
 			set .@fcast,.@fcast - 3;
 		if (isequipped(2199)) //Angra_Manyu
 			set .@fcast,.@fcast - 4;
+		// 0219：mid_camp,75,135 的鱼群缩短为约1秒
+		if (strcharinfo(3) == "mid_camp")
+			set .@fcast,1;
 		progressbar "ffff00",.@fcast;
 		if (ep13_1_rhea == 13) {
 			if (rand(1,20) == 2) {
