@@ -331,15 +331,15 @@ OnEvent03:
 	end;
 
 OnEvent04:
-	npctalk "...checking the signal.";
+	npctalk "……检查信号。";
 	sleep 2000;
-	npctalk "...hacking channel checked.";
+	npctalk "……骇入频道检查完毕。";
 	sleep 2000;
-	npctalk "...recovering...";
+	npctalk "……恢复中……";
 	sleep 2000;
-	npctalk "...recovering...84%";
+	npctalk "……恢复中……84%";
 	sleep 2000;
-	npctalk "...recovery completed.";
+	npctalk "……恢复完成。";
 	sleep 2000;
 	npctalk "我们去中继器那边吧？";
 	sleep 2000;
@@ -374,15 +374,15 @@ OnEvent10:
 	end;
 
 OnEvent11:
-	npctalk "...checking the signal.";
+	npctalk "……检查信号。";
 	sleep 2000;
-	npctalk "...hacking channel checked.";
+	npctalk "……骇入频道检查完毕。";
 	sleep 2000;
-	npctalk "...recovering...";
+	npctalk "……恢复中……";
 	sleep 2000;
-	npctalk "...recovering...72%";
+	npctalk "……恢复中……72%";
 	sleep 2000;
-	npctalk "...recovery completed.";
+	npctalk "……恢复完成。";
 	sleep 2000;
 	npctalk "去下一个中继器吧～";
 	sleep 2000;
@@ -492,11 +492,11 @@ OnTouch:
 		sleep 2000;
 		specialeffect EF_DESPERADO, AREA, instance_npcname("Heart Hunter#md_hh08");
 		sleep 2000;
-		npctalk "...", instance_npcname("Heart Hunter#md_hh07");
+		npctalk "……", instance_npcname("Heart Hunter#md_hh07");
 		sleep 2000;
-		npctalk "...(Nods)", instance_npcname("Heart Hunter#md_hh06");
+		npctalk "……（点头）", instance_npcname("Heart Hunter#md_hh06");
 		sleep 1000;
-		npctalk "...", instance_npcname("Heart Hunter#md_hh08");
+		npctalk "……", instance_npcname("Heart Hunter#md_hh08");
 		sleep 1000;
 		npctalk "你们在互相发什么信号？";
 		sleep 1000;
@@ -541,7 +541,7 @@ OnTouch:
 		sleep2 2000;
 		npctalk "现在？再多点时间……是，不是……啊……";
 		sleep2 2000;
-		npctalk "... ... so far... no?!... Okay...";
+		npctalk "……到目前为止……没有？！……好吧……";
 		sleep2 2000;
 		emotion ET_THINK;
 		sleep2 2000;
