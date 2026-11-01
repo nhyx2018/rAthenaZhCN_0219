@@ -3200,10 +3200,10 @@ mid_campin,292,120,4	script	达维#ep13bs	849,{
 	close;
 }
 
-mid_camp,160,298,4	script	扬#ep13bs	865,{
+mid_camp,160,298,4	script	扎安#ep13bs	865,{
 	if (ep13_newbs == 15) {
 		if (countitem(6045) > 0) {
-			mes "[扬]";
+			mes "[扎安]";
 			mes "哇哇，这是什么呀~";
 			mes "嘿，是给我的吗？";
 			next;
@@ -3211,12 +3211,12 @@ mid_camp,160,298,4	script	扬#ep13bs	865,{
 			mes "是的……";
 			emotion ET_SWEAT, playerattached();
 			next;
-			mes "[扬]";
+			mes "[扎安]";
 			mes "啊啊，好激动呀~";
 			mes "我喜欢。";
 			emotion ET_COOL;
 			next;
-			mes "[扬]";
+			mes "[扎安]";
 			mes "我现在就想把它拆开~";
 			mes "请转告教官";
 			mes "我很感激~";
@@ -3228,7 +3228,7 @@ mid_camp,160,298,4	script	扬#ep13bs	865,{
 			close;
 		}
 		else {
-			mes "[扬]";
+			mes "[扎安]";
 			mes "我一个月前";
 			mes "订的东西，";
 			mes "怎么还没到？";
@@ -3237,28 +3237,28 @@ mid_camp,160,298,4	script	扬#ep13bs	865,{
 		}
 	}
 	else if (ep13_newbs == 16) {
-		mes "[扬]";
+		mes "[扎安]";
 		mes "我真的很想要。";
 		mes "我真的很喜欢~~";
 		next;
 		mes "["+ strcharinfo(0) +"]";
 		mes "那是……什么呀~~？";
 		next;
-		mes "[扬]";
+		mes "[扎安]";
 		mes "......";
 		mes "......";
 		next;
-		mes "[扬]";
+		mes "[扎安]";
 		mes "那、那是秘密……";
 		emotion ET_SHY;
 		close;
 	}
 	else {
-		mes "[扬]";
+		mes "[扎安]";
 		mes "我在这里研究得越多，";
 		mes "就越发现奇怪的东西。";
 		next;
-		mes "[扬]";
+		mes "[扎安]";
 		mes "这好像激起了我";
 		mes "身为科学家的热情？";
 		close;
