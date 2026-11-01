@@ -540,7 +540,7 @@ dic_in01,48,263,5	script	狩猎部1主管	449,{
 	mes "我先查一下你的记录。";
 	next;
 	mes "[狩猎部1号主管]";
-	set .@s$, "Oh, you completed all your requests. Confirmation complete.";
+	set .@s$, "哦，你完成了所有委托。确认完毕。";
 	que_dic(0,12099,4000,.@s$);
 	que_dic(0,12100,49000,.@s$);
 	que_dic(0,12101,18000,.@s$);
@@ -610,7 +610,7 @@ dic_in01,51,266,6	script	狩猎部2主管	449,{
 	mes "我先查一下你的记录。";
 	next;
 	mes "[狩猎部2号主管]";
-	set .@s$, "Oh, you completed all your requests. Confirmation complete.";
+	set .@s$, "哦，你完成了所有委托。确认完毕。";
 	que_dic(0,12106,77000,.@s$);
 	que_dic(0,12107,47000,.@s$);
 	que_dic(0,12108,50000,.@s$);
@@ -677,7 +677,7 @@ dic_in01,51,270,7	script	补给部1主管	449,{
 	mes "我先查一下你的记录。";
 	next;
 	mes "[补给部1号主管]";
-	set .@s$, "It's done. You can't start any other request till tomorrow, why don't you go to the famous pub and rest?";
+	set .@s$, "完成了。明天之前不能再接其他委托，不如去那家有名的酒馆休息一下吧？";
 	que_dic(1,12117,26300,6086,6,.@s$);
 	que_dic(1,12118,25600,6090,3,.@s$);
 	que_dic(1,12119,51100,6073,16,.@s$);
@@ -745,7 +745,7 @@ dic_in01,48,273,8	script	补给部2主管	449,{
 	mes "我先查一下你的记录。";
 	next;
 	mes "[补给部2号主管]";
-	set .@s$, "" + strcharinfo(0) + ", you handle your requests quite well. You are not like the pub owner who just sends requests here every day.";
+	set .@s$, "" + strcharinfo(0) + "，你的委托处理得相当好。不像那位每天只会往这里送委托的酒馆老板。";
 	que_dic(1,12127,65300,6023,5,.@s$);
 	que_dic(1,12128,65300,6020,21,.@s$);
 	que_dic(1,12129,82800,1042,27,.@s$);
@@ -812,7 +812,7 @@ dic_in01,43,273,1	script	运输部1主管	449,{
 	mes "我先查一下你的记录。";
 	next;
 	mes "[运输部1号主管]";
-	set .@s$, "Quantity check finished. Ahhh, you going to rest? Then why don't you visit the famous pub of the Capital? They have no yummy food though....";
+	set .@s$, "数量核对完毕。啊，你要休息了吗？那为什么不去首都那家有名的酒馆看看？不过那里没什么好吃的……";
 	que_dic(1,12137,30000,7143,4,.@s$);
 	que_dic(1,12138,25000,744,5,.@s$);
 	que_dic(1,12139,47500,748,1,.@s$);
@@ -886,7 +886,7 @@ dic_in01,40,270,2	script	运输部2主管	449,{
 	mes "我先查一下你的记录。";
 	next;
 	mes "[运输部2号主管。]";
-	set .@s$, "Well received. One less thing to worry about now.";
+	set .@s$, "收到了。现在少了一件要担心的事。";
 	que_dic(1,12148,23000,528,100,.@s$);
 	que_dic(1,12149,20750,512,100,.@s$);
 	que_dic(1,12150,20750,515,100,.@s$);
@@ -3677,7 +3677,7 @@ dic_in01,245,119,4	script	夏伊#ep133_13	884,{
 	cutin "ep13_shy",2;
 	mes "[夏伊]";
 	switch (rand(1,5)) {
-		case 1: mes ".. Burman Flone."; break;
+		case 1: mes "……博曼普罗内拉。"; break;
 		case 2: mes "什么？"; break;
 		case 3: mes "真无聊。什么事？"; break;
 		case 4: mes "唉……要点单吗？"; break;
@@ -3702,7 +3702,7 @@ dic_in01,245,119,4	script	夏伊#ep133_13	884,{
 				mes "算了。";
 				break;
 			}
-			setarray .@str$[1], "Tropical Sorgrat","Vermillion on the Beach.";
+			setarray .@str$[1], "热带索格拉特","海滩朱红";
 			setarray .@item[1], 12112,12113;
 			if (Zeny > 1999) {
 				mes "[夏伊]";
@@ -3841,9 +3841,9 @@ dic_in01,245,119,4	script	夏伊#ep133_13	884,{
 				mes "有收获吗？";
 				next;
 				setarray .@ward$, 
-					"7188","The Knits at the square are interested in Ahat.",
-					"7189","I heard from Pioms that most of the Saphas are interested in the minister.",
-					"7190","Galtens are interested in the Cat Merchant for their cat ears.";
+					"7188","广场上的编织物们对阿哈特很感兴趣。",
+					"7189","我从皮欧姆那里听说，大多数沙帕都对大臣感兴趣。",
+					"7190","加尔顿人对猫商人的猫耳很感兴趣。";
 				mes "[" + strcharinfo(0) + "]";
 				mes "我正在整理收集到的情报。";
 				for (set .@size, getarraysize(.@ward$); .@i < .@size; set .@i, .@i + 2)
@@ -3983,7 +3983,7 @@ dic_in01,245,119,4	script	夏伊#ep133_13	884,{
 				next;
 				setarray .@quest, 7194,7195,7196;
 				setarray .@item, 6306,6305,6307;
-				setarray .@str$, "bloodstain","frozen piece of skin","strange magical stone fragment";
+				setarray .@str$, "凝固的血痕","冻住的皮肤碎片","奇怪的魔力之石碎片";
 				
 				for (set .@size, getarraysize(.@item); .@i < .@size; set .@i, .@i + 1) {
 					if (countitem(.@item[.@i])) {
@@ -4583,7 +4583,7 @@ dic_fild01,231,174,5	script	皮凯伊#ep133_18	496,{
 		mes "夏伊让你来做什么？-";
 		next;
 		input .@inputstr$;
-		if (.@inputstr$ == "Shay's special drink will be delivered" || .@inputstr$ == "Shay's special drink will be delivered.") {
+		if (.@inputstr$ == "Shay's special drink will be delivered" || .@inputstr$ == "Shay's special drink will be delivered." || .@inputstr$ == "夏伊会送特制饮料来" || .@inputstr$ == "夏伊会外送特制鸡尾酒过来") {
 			mes "[" + strcharinfo(0) + "]";
 			mes "嗯。你要是再不配合，";
 			mes "夏伊的特制饮料就会送到你手上。";
@@ -4892,7 +4892,7 @@ dic_fild01,231,174,5	script	皮凯伊#ep133_18	496,{
 		}
 		else if (countitem(.@item[.@type]) == 10) {
 			if (checkquest(7202) >= 0) {
-				setarray .@str$, "stone fragments","bloodstains","pieces of skin";
+				setarray .@str$, "魔力之石碎片","凝固的血痕","皮肤碎片";
 				mes "还需要更多" + .@str$[.@type] + "，才能回远征营地向都夏复命。";
 			}
 			else {
@@ -4928,7 +4928,7 @@ dic_fild01,231,174,5	script	皮凯伊#ep133_18	496,{
 			donpcevent strnpcinfo(0)+"::OnDisable";
 			close;
 		}
-		setarray .@str$, "stone fragments","bloodstains","pieces of skin";
+		setarray .@str$, "魔力之石碎片","凝固的血痕","皮肤碎片";
 		mes "不需要再收集更多" + .@str$[.@type] + ".";
 		close;
 	}
@@ -5080,7 +5080,7 @@ dic_in01,165,104,0	script	弗雷德#13_3_in	454,{
 			mes "我只是有点累，仅此而已。";
 			next;
 			mes "[弗雷德]";
-			mes "来，坐下吃点这个。";
+			mes "来，坐下吃点这个。<ITEM>香蕉<INFO>513</INFO></ITEM>";
 			mes "外面那些猫给我的。对沙帕族用处不大，但我听说对人类有帮助。";
 			set ep13_3_bra, 2;
 			setquest 11171;
@@ -5320,11 +5320,11 @@ dic_in01,165,104,0	script	弗雷德#13_3_in	454,{
 				mes "泰勒需要一些治疗，但其他人都平安。";
 				next;
 				mes "[弗雷德]";
-				mes "我甚至不敢想象，要是没有你，" + strcharinfo(0) + ", weren't here to help.";
+				mes "我甚至不敢想象，要是没有你，" + strcharinfo(0) + "在这里帮忙。";
 				mes "我不想再失去任何朋友了。";
 				next;
 				mes "[弗雷德]";
-				mes "请收下这个，作为我的感谢与友情的证明。";
+				mes "请收下这个，作为我的感谢与友情的证明。<ITEM>钸镭耳环<INFO>2788</INFO></ITEM>";
 				mes "不是什么贵重东西，但希望你能收下。";
 				mes "我们或许种族不同，但可以成为很好的朋友。";
 				completequest 11176;
@@ -5414,7 +5414,7 @@ dic_dun01,205,43,5	script	布莱恩#ep13_3_	490,{
 			mes "我记得你。";
 			mes "这次你来有什么事？";
 			next;
-			select("把魔力之石交给布莱恩。");
+			select("把<ITEM>细小的魔力之石<INFO>6319</INFO></ITEM>交给布莱恩。");
 			mes "[" + strcharinfo(0) + "]";
 			mes "弗雷德让我把这个交给你。";
 			next;
@@ -5542,7 +5542,7 @@ dic_dun01,153,107,4	script	泰勒#13_3	489,{
 			mes "请帮我挠挠背~";
 			mes "上次你帮我挠的时候可舒服了。";
 			next;
-			switch (select("把魔力之石交给泰勒。")) {
+			switch (select("把<ITEM>细小的魔力之石<INFO>6319</INFO></ITEM>交给泰勒。")) {
 			case 1:
 			break;
 			}
@@ -5833,7 +5833,7 @@ dic_dun01,64,107,7	script	巴恩#13_3	490,{
 			mes "我发现肩膀上有一块深褐色的污渍。";
 			mes "洗不掉。我得回村子接受治疗。";
 			next;
-			select("交出魔力之石。");
+			select("交出<ITEM>细小的魔力之石<INFO>6319</INFO></ITEM>。");
 			mes "[" + strcharinfo(0) + "]";
 			mes "弗雷德让我把这个交给你。";
 			next;
