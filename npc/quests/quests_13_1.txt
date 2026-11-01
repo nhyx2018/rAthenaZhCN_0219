@@ -2923,6 +2923,9 @@ mid_campin,106,122,4	script	接待员布林克#ep13b	89,{
 		mes "……嗯……";
 		close;
 	}
+OnInit:
+	questinfo(QTYPE_QUEST, QMARK_YELLOW, "ep13_newbs == 4");
+	end;
 }
 
 -	script	Diego#ep13bs_	-1,{
@@ -3443,6 +3446,9 @@ mid_camp,166,248,4	script	巫师#ep13bs	937,{
 	mes "我想回家。";
 	emotion ET_CRY;
 	close;
+OnInit:
+	questinfo(QTYPE_QUEST, QMARK_YELLOW, "ep13_newbs == 5");
+	end;
 }
 
 spl_fild02,348,76,0	script	树#ep13bs1::ep13tree	111,{
@@ -3483,6 +3489,9 @@ spl_fild02,348,76,0	script	树#ep13bs1::ep13tree	111,{
 			close;
 		}
 	}
+	end;
+OnInit:
+	questinfo(QTYPE_QUEST, QMARK_YELLOW, "ep13_newbs == 6 && countitem(6042) < 20");
 	end;
 }
 
