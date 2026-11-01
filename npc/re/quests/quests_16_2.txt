@@ -3124,7 +3124,7 @@ ein_in01,269,285,5	script	Nihil#ep162_02	4_EP16_NIHIL,{
 		cutin "16loo_02.bmp",1;
 		mes "[新人]";
 		mes "Wow, he sure has a big mouth~";
-		mes "If my sister Elena heard it, she might have shot him in the head!";
+		mes "If my sister 埃琳娜 heard it, she might have shot him in the head!";
 		next;
 		cutin "16loo_01.bmp",1;
 		mes "[新人]";
@@ -3849,7 +3849,7 @@ OnInit:
 	end;
 }
 
-// Part Elena - Fight
+// Part 埃琳娜 - Fight
 rebel_in,70,78,3	script	埃琳娜·沃尔科娃#16.2rm	4_F_ELENA,{
 	if (terra_gloria_main < 16) {
 		cutin "162elena_01.bmp",2;
@@ -6279,108 +6279,108 @@ rebel_in,86,61,5	script	雷兹#16nego05	4_M_LAZY,{
 		mes "拜托。我们也是走投无路。两个国家的王室命运都危在旦夕。";
 		next;
 		mes "[雷兹]";
-		mes "But if you help us, we can sort it out. That's something only you can do. We really need your help.";
+		mes "但如果你帮我们，就能解决。这是只有你能做到的事，我们真的需要你。";
 		next;
 		cutin "16loo_01.bmp",0;
 		mes "[新人]";
-		mes "If you really need help, go to someone else.";
+		mes "真需要帮忙就找别人吧。";
 		next;
 		cutin "16lei_02.bmp",2;
 		mes "[雷兹]";
-		mes "You are as cold as ice. How merciless. Please show some mercy and help us.";
+		mes "你真是冷若冰霜，太无情了。请发发慈悲帮帮我们。";
 		emotion ET_CRY;
-		npctalk "Please don't be so mean.", "", bc_self;
+		npctalk "请别这么刻薄。", "", bc_self;
 		next;
 		cutin "16loo_01.bmp",0;
 		mes "[新人]";
-		mes "The people who were sitting here are seniors. They are anchors and symbols of 反叛者s.";
+		mes "刚才坐在这里的是元老，他们是反叛者的支柱和象征。";
 		next;
 		cutin "16loo_03.bmp",0;
 		mes "[新人]";
-		mes "But as they got old, they retired from the front line. Now they drink tea and watch the junior 反叛者s grow up.";
+		mes "但他们年纪大了，退出一线，现在喝茶看年轻反叛者成长。";
 		next;
 		cutin "16loo_01.bmp",0;
 		mes "[新人]";
-		mes "So other people are responsible for all the inside jobs. They are the ones ^0000cdwho move the 反叛者 practically^000000. They are decision makers.";
-		npctalk "Yeah, so?", "", bc_self;
+		mes "所以内部事务由其他人负责。^0000cd真正推动反叛者的是他们^0000cd，他们才是决策者。";
+		npctalk "嗯，所以呢？", "", bc_self;
 		next;
 		cutin "16loo_03.bmp",0;
 		mes "[新人]";
-		mes "If you convince them, the public opinion change. Once the public opinion changes, what can seniors do about it?";
+		mes "说服他们，舆论就会变。舆论一变，元老们还能怎样？";
 		next;
 		cutin "16lei_01.bmp",2;
 		mes "[雷兹]";
-		mes "Thank you. I prefer those who are wise and smart like you.";
+		mes "谢谢。我更喜欢像你这样聪明的人。";
 		emotion ET_BIGTHROB;
-		npctalk "So we've been talking to the wrong people.", "", bc_self;
+		npctalk "看来我们一直找错人了。", "", bc_self;
 		next;
 		cutin "16loo_03.bmp",0;
 		mes "[新人]";
-		mes "In my opinion, I think it's better for us to be accepted in a wide world rather than living here like this.";
-		npctalk "We will be competitive anywhere we go.", "Rookie#16nego02", bc_self;
+		mes "我觉得与其这样躲在这里，不如被更广阔的世界接纳。";
+		npctalk "我们到哪里都有竞争力。", "Rookie#16nego02", bc_self;
 		next;
 		cutin "16lei_01.bmp",2;
 		mes "[雷兹]";
-		mes "Adventurer, it's time for you to take an action. Please persuade them.";
+		mes "冒险者，该你行动了，请去说服他们。";
 		next;
 		mes "[" + strcharinfo(0) + "]";
-		mes "Should I?";
+		mes "我去？";
 		next;
 		cutin "16lei_02.bmp",2;
 		mes "[雷兹]";
-		mes "Did you seen the response from the seniors? Once I introduce myself, they might shoot at me make dozens of holes in my body.";
-		npctalk "I was so scared.", "", bc_self;
-		unittalk getcharid(3), "" + strcharinfo(0) + " : But you looked so calm!", bc_self;
+		mes "你看到元老们的反应了吗？我一自报身份，他们可能就开枪把我打成筛子。";
+		npctalk "我吓死了。", "", bc_self;
+		unittalk getcharid(3), "" + strcharinfo(0) + "：可你看起来那么冷静！", bc_self;
 		sleep2 900;
-		npctalk "I'm serious. You'd never imagine how nervous I was.", "", bc_self;
+		npctalk "我说真的。你根本想不到我有多紧张。", "", bc_self;
 		next;
 		cutin "16lei_01.bmp",2;
 		mes "[雷兹]";
-		mes "Since those seniors were relatively rational, we are alive and talking like this. If only there was one person with a short-temper... Phew...";
-		npctalk "That's right. You are lucky that the person with a real short temper is in the upstairs now.", "Rookie#16nego02", bc_self;
+		mes "幸亏那些元老比较理性，我们才能活着说话。要是有一个脾气爆的……唉……";
+		npctalk "没错。你运气好，真正脾气爆的人现在在楼上。", "Rookie#16nego02", bc_self;
 		next;
 		cutin "16lei_02.bmp",2;
 		mes "[雷兹]";
-		mes "Adventurer. You are a symbol of faith. Please go and show them your faith. That will take care of everything. Did you see what I did a moment ago? Do as I did.";
+		mes "冒险者，你是信仰的象征。去向他们展示你的信念，一切就好办。看到我刚才怎么做了吗？照做。";
 		next;
 		mes "[" + strcharinfo(0) + "]";
-		mes "Well, maybe...";
+		mes "嗯，也许吧……";
 		next;
 		cutin "16loo_01.bmp",0;
 		mes "[新人]";
-		mes "They are in the ^0000cdroom in the 2nd floor2^000000. You can go up and meet them.";
-		npctalk "As long as you behave yourself, they won't be mad at you. ... Maybe.", "Rookie#16nego02", bc_self;
+		mes "他们在^0000cd二楼房间^000000，你可以上去见他们。";
+		npctalk "只要你规矩点，他们不会生你的气……大概。", "Rookie#16nego02", bc_self;
 		next;
 		mes "[新人]";
-		mes "Do you see the rooms on the 2nd floor? I don't know how many of them are there. But you only have to meet the most important people.";
+		mes "看到二楼那些房间了吗？不知道有多少人，但你只要见最重要的几个。";
 		next;
 		mes "[新人]";
-		mes "Let's see... You meet ^0000cdRupert^000000, the strict gentleman and ^0000cdElena^000000, the hunting dog first.";
+		mes "我想想……先见^0000cd严格的绅士鲁柏^000000和^0000cd猎犬埃琳娜^000000。";
 		next;
 		cutin "16loo_03.bmp",0;
 		mes "[新人]";
-		mes "By the way, never call Elena 'hunting dog' in front of her. She's going to disintegrate you.";
+		mes "对了，千万别在埃琳娜面前叫她‘猎犬’，她会把你拆了。";
 		next;
 		cutin "16loo_01.bmp",0;
 		mes "[新人]";
-		mes "Anyone else...? Oh, the next one is the good-hearted ^0000cdold women, I mean ladies^000000. Then you meet the Special Force commander ^0000cdErst^000000...";
-		npctalk "They are too many!", "", bc_self;
+		mes "还有谁……哦，接下来是好心的^0000cd老太太，我是说女士们^0000cd。然后见特种部队指挥官^0000cd埃尔斯特^000000……";
+		npctalk "人太多了！", "", bc_self;
 		sleep2 300;
-		npctalk "This is a huge system that cannot be operated by one or two members. And there is no one else.", "Rookie#16nego02", bc_self;
+		npctalk "这是个大系统，一两个人可撑不起来。而且也没别人了。", "Rookie#16nego02", bc_self;
 		next;
 		mes "[新人]";
-		mes "You can meet these ^0000cdfour teams^000000 and talk to them. As I told you earlier, be careful when you talk. Some of them are short-tempered.";
-		npctalk "I hope you won't have a hole in your head...", "Rookie#16nego02", bc_self;
+		mes "去见这^0000cd四组人^000000并谈谈。就像我说的，说话小心点，有些人脾气不好。";
+		npctalk "希望你的脑袋别被打出个洞……", "Rookie#16nego02", bc_self;
 		next;
 		cutin "16lei_01.bmp",2;
 		mes "[雷兹]";
-		mes "Adventurer, good luck! I will be talking to Rookie. Cheer up.";
-		npctalk "Come back alive!", "", bc_self;
+		mes "冒险者，祝你好运！我去和新人聊，振作点。";
+		npctalk "活着回来！", "", bc_self;
 		erasequest 14599;// A glass of tea gratitude
 		setquest 14600;// Gentleman on second floor
 		setquest 14601;// Ladies on second floor
 		setquest 14602;// Hunter on second floor
-		setquest 14613;// Erst on second floor
+		setquest 14613;// 埃尔斯特 on second floor
 		setquest 14614;// Convince the leaders
 		terra_gloria_main = 16;
 		close3;
@@ -6610,8 +6610,8 @@ rebel_in,86,61,5	script	雷兹#16nego05	4_M_LAZY,{
 		mes "He says everyone on the 2nd floor decided to help them.";
 		next;
 		mes "[元老]";
-		mes "What? The ladies and Rupert as well?";
-		npctalk "Erst and Elena? That's impossible!", "元老#16nego04", bc_self;
+		mes "What? The ladies and 鲁柏 as well?";
+		npctalk "埃尔斯特 and 埃琳娜? That's impossible!", "元老#16nego04", bc_self;
 		next;
 		cutin "16loo_03.bmp",0;
 		mes "[新人]";
@@ -6632,7 +6632,7 @@ rebel_in,86,61,5	script	雷兹#16nego05	4_M_LAZY,{
 		next;
 		cutin "",255;
 		mes "[元老]";
-		mes "Oops... We have no other choice if the ladies and Rupert agreed with them...";
+		mes "Oops... We have no other choice if the ladies and 鲁柏 agreed with them...";
 		npctalk "Oops... We have no other choice...", "元老#16nego04", bc_self;
 		npctalk "If everyone thinks that way...", "元老#16nego03", bc_self;
 		sleep2 500;
@@ -7100,7 +7100,7 @@ OnTouch:
 		cutin "ep162_rds03.bmp",0;
 		next;
 		mes "[反叛者 senior 里德什]";
-		mes "I saw Rupert crying after you said that.";
+		mes "I saw 鲁柏 crying after you said that.";
 		cutin "ep162_rds04.bmp",0;
 		next;
 		mes "[反叛者 senior 里德什]";
@@ -7256,7 +7256,7 @@ rebel_in,164,88,5	script	Dien#162gmbs	4_F_DIENE,4,4,{
 		cutin "ep162_dn03.bmp",2;
 		next;
 		mes "[狄恩]";
-		mes "I know you've met Rupert. Have you met ^ff0000Erst^000000?";
+		mes "I know you've met 鲁柏. Have you met ^ff0000埃尔斯特^000000?";
 		cutin "ep162_dn01.bmp",2;
 		next;
 		mes "[狄恩]";
@@ -7271,9 +7271,9 @@ rebel_in,164,88,5	script	Dien#162gmbs	4_F_DIENE,4,4,{
 		emotion ET_OK, getnpcid(0, "反叛者 Guard leader#2");
 		next;
 		mes "[近卫队长拉西斯]";
-		mes "Follow me. We are going to commander Erst first.";
+		mes "Follow me. We are going to commander 埃尔斯特 first.";
 		emotion ET_GO, getnpcid(0, "反叛者 Guard leader#2");
-		npctalk "反叛者 Guard leader : To find commander Erst's room, go out of this room and walk through the left corridor.", "反叛者 Guard leader#2", bc_self;
+		npctalk "反叛者 Guard leader : To find commander 埃尔斯特's room, go out of this room and walk through the left corridor.", "反叛者 Guard leader#2", bc_self;
 		erasequest 11456;// Doubt
 		setquest 11457;// Doubt
 		completequest 14601;// Ladies on second floor
@@ -7287,7 +7287,7 @@ rebel_in,164,88,5	script	Dien#162gmbs	4_F_DIENE,4,4,{
 		cutin "ep162_dn03.bmp",2;
 		next;
 		mes "[狄恩]";
-		mes "I know you've met Rupert. Have you met Erst?";
+		mes "I know you've met 鲁柏. Have you met 埃尔斯特?";
 		cutin "ep162_dn01.bmp",2;
 		next;
 		mes "[狄恩]";
@@ -7302,18 +7302,18 @@ rebel_in,164,88,5	script	Dien#162gmbs	4_F_DIENE,4,4,{
 		emotion ET_OK, getnpcid(0, "反叛者 Guard leader#2");
 		next;
 		mes "[近卫队长拉西斯]";
-		mes "Follow me. We are going to commander Erst first.";
-		npctalk "反叛者 Guard leader : To find commander Erst's room, go out of this room and walk through the left corridor.", "反叛者 Guard leader#2", bc_self;
+		mes "Follow me. We are going to commander 埃尔斯特 first.";
+		npctalk "反叛者 Guard leader : To find commander 埃尔斯特's room, go out of this room and walk through the left corridor.", "反叛者 Guard leader#2", bc_self;
 		close;
 	}
 	if (terra_gloria_lady_part < 7) {
 		mes "[狄恩]";
-		mes "I'm surprised that Erst accepted it so easily.";
+		mes "I'm surprised that 埃尔斯特 accepted it so easily.";
 		npctalk "狄恩： I thought there would a disaster.", "Dien#162gmbs", bc_self;
 		cutin "ep162_dn01.bmp",2;
 		next;
 		mes "[狄恩]";
-		mes "Without further delay, meet Rupert again.";
+		mes "Without further delay, meet 鲁柏 again.";
 		npctalk "狄恩： If all of us agree, he cannot help but approve it.", "Dien#162gmbs", bc_self;
 		close3;
 	}
@@ -7787,10 +7787,10 @@ rebel_in,210,89,5	script	Special Force commander	4_F_ESTLOVELOY,{
 	}
 	if (terra_gloria_lady_part == 4) {
 		cutin "ep162_est01.bmp",2;
-		mes "[Special Force commander Erst]";
+		mes "[Special Force commander 埃尔斯特]";
 		mes "什么事？";
 		next;
-		mes "[Special Force commander Erst]";
+		mes "[Special Force commander 埃尔斯特]";
 		mes "And who's the guy beside you?";
 		mes "我以前没见过你。";
 		emotion ET_FRET;
@@ -7801,13 +7801,13 @@ rebel_in,210,89,5	script	Special Force commander	4_F_ESTLOVELOY,{
 		mes "Ah.. that is....";
 		emotion ET_PROFUSELY_SWAT, getnpcid(0, "反叛者 Guard leader#3");
 		next;
-		mes "[Special Force commander Erst]";
+		mes "[Special Force commander 埃尔斯特]";
 		mes "Ssssh!";
 		emotion ET_FRET;
 		npctalk "Special Force commander : Ssssh!", "", bc_self;
 		cutin "ep162_est03.bmp",2;
 		next;
-		mes "[Special Force commander Erst]";
+		mes "[Special Force commander 埃尔斯特]";
 		mes "Stop stalling...";
 		emotion ET_FRET;
 		npctalk "Special Force commander : Answer quickly!", "", bc_self;
@@ -7818,12 +7818,12 @@ rebel_in,210,89,5	script	Special Force commander	4_F_ESTLOVELOY,{
 		mes "Dien sent you a letter!";
 		emotion ET_PROFUSELY_SWAT, getnpcid(0, "反叛者 Guard leader#3");
 		next;
-		mes "[Special Force commander Erst]";
+		mes "[Special Force commander 埃尔斯特]";
 		mes "什么？";
 		mes "What did that grandma send?";
 		cutin "ep162_est01.bmp",2;
 		next;
-		mes "[Special Force commander Erst]";
+		mes "[Special Force commander 埃尔斯特]";
 		mes "Show it to me.";
 		npctalk "Special Force commander : What kind of plot is it?", "", bc_self;
 		next;
@@ -7831,35 +7831,35 @@ rebel_in,210,89,5	script	Special Force commander	4_F_ESTLOVELOY,{
 		mes "[近卫队长拉西斯]";
 		mes "Here..";
 		next;
-		mes "[Special Force commander Erst]";
+		mes "[Special Force commander 埃尔斯特]";
 		mes "Let's see..";
 		cutin "ep162_est01.bmp",2;
 		next;
-		mes "[Special Force commander Erst]";
+		mes "[Special Force commander 埃尔斯特]";
 		mes "I agree. Do you agree, too?";
 		mes "What the hell is this nonsense?";
 		cutin "ep162_est03.bmp",2;
 		next;
 		cutin "",255;
 		select("Explain him.");
-		mes "[Special Force commander Erst]";
+		mes "[Special Force commander 埃尔斯特]";
 		mes "什么？";
 		mes "Are you kidding me?";
 		cutin "ep162_est03.bmp",2;
 		next;
-		mes "[Special Force commander Erst]";
+		mes "[Special Force commander 埃尔斯特]";
 		mes "Finally, that old woman is out of her mind.";
 		npctalk "Special Force commander : Normally she goes crazy, even after hearing the word '秘密之翼'.", "", bc_self;
 		cutin "ep162_est01.bmp",2;
 		next;
-		mes "[Special Force commander Erst]";
+		mes "[Special Force commander 埃尔斯特]";
 		mes "Hey!";
 		mes "Larcis.";
 		mes "Are you sure she wrote this?";
 		cutin "ep162_est03.bmp",2;
 		emotion ET_HUK, getnpcid(0, "反叛者 Guard leader#3");
 		next;
-		mes "[Special Force commander Erst]";
+		mes "[Special Force commander 埃尔斯特]";
 		mes "Regardless of the old women, the vixen will not be quiet.";
 		emotion ET_OHNO;
 		next;
@@ -7867,46 +7867,46 @@ rebel_in,210,89,5	script	Special Force commander	4_F_ESTLOVELOY,{
 		mes "[近卫队长拉西斯]";
 		mes "It's clear that Dien wrote this!";
 		next;
-		mes "[Special Force commander Erst]";
+		mes "[Special Force commander 埃尔斯特]";
 		mes "Well, that's why she sent you here.";
 		cutin "ep162_est01.bmp",2;
 		next;
-		mes "[Special Force commander Erst]";
+		mes "[Special Force commander 埃尔斯特]";
 		mes "......";
 		emotion ET_THINK;
 		cutin "ep162_est03.bmp",2;
 		next;
-		mes "[Special Force commander Erst]";
+		mes "[Special Force commander 埃尔斯特]";
 		mes "Alright.";
 		cutin "ep162_est02.bmp",2;
 		next;
-		mes "[Special Force commander Erst]";
+		mes "[Special Force commander 埃尔斯特]";
 		mes "This could be the last wish of the old lady.";
 		next;
-		mes "[Special Force commander Erst]";
+		mes "[Special Force commander 埃尔斯特]";
 		mes "Let's agree with it.";
 		mes "For now.";
 		cloakonnpcself( "反叛者 Guard leader#3" );
 		erasequest 11457;// Doubt
 		setquest 11458;// Doubt
-		completequest 14613;// Erst on second floor
+		completequest 14613;// 埃尔斯特 on second floor
 		terra_gloria_lady_part = 5;
 		close3;
 	}
 	if (terra_gloria_lady_part == 5) {
 		cutin "ep162_est02.bmp",2;
-		mes "[Special Force commander Erst]";
+		mes "[Special Force commander 埃尔斯特]";
 		mes "Alright.";
 		next;
-		mes "[Special Force commander Erst]";
+		mes "[Special Force commander 埃尔斯特]";
 		mes "This could be the last wish of the old lady.";
 		next;
-		mes "[Special Force commander Erst]";
+		mes "[Special Force commander 埃尔斯特]";
 		mes "Let's agree with it.";
 		mes "For now.";
 		close3;
 	}
-	mes "[Special Force commander Erst]";
+	mes "[Special Force commander 埃尔斯特]";
 	mes "什么事？";
 	mes "Stop wandering around and get lost now.";
 	cutin "ep162_est02.bmp",2;
@@ -10661,7 +10661,7 @@ rebel_in,90,51,5	script	Rachel Smith#16.2rm	4_F_GUNSLINGER2,{
 		next;
 		mes "[Rachel Smith]";
 		mes "Aha, you are an advanturer.";
-		mes "Come to think of it, you must be that adventurer who had a sparring with commander Elena of USU. You're so brave.";
+		mes "Come to think of it, you must be that adventurer who had a sparring with commander 埃琳娜 of USU. You're so brave.";
 		next;
 		mes "[Rachel Smith]";
 		mes "I'm Rachel Smith. I'm a Blacksmith and I assist repairing weapons and maintenance.";
@@ -14064,7 +14064,7 @@ rebel_in,109,54,3	script	Jana Levedeva#16.2rm	4_F_ANYA,{
 		switch( .@quest_id[.@r] ) {
 		case 16021:
 			mes "[Jana Levedeva]";
-			mes "Hmm.. Commander Elena told us to make a hobby.";
+			mes "Hmm.. Commander 埃琳娜 told us to make a hobby.";
 			mes "I guess reading is a fine hobby. Isn't it?";
 			next;
 			mes "[Jana Levedeva]";
@@ -14078,7 +14078,7 @@ rebel_in,109,54,3	script	Jana Levedeva#16.2rm	4_F_ANYA,{
 			close;
 		case 16022:
 			mes "[Jana Levedeva]";
-			mes "Hmm.. Commander Elena told us to make a hobby.";
+			mes "Hmm.. Commander 埃琳娜 told us to make a hobby.";
 			mes "I guess reading is a fine hobby. Isn't it?";
 			next;
 			mes "[Jana Levedeva]";
@@ -14092,7 +14092,7 @@ rebel_in,109,54,3	script	Jana Levedeva#16.2rm	4_F_ANYA,{
 			close;
 		case 16023:
 			mes "[Jana Levedeva]";
-			mes "Hmm.. Commander Elena told us to make a hobby.";
+			mes "Hmm.. Commander 埃琳娜 told us to make a hobby.";
 			mes "I guess reading is a fine hobby. Isn't it?";
 			next;
 			mes "[Ilya Lebedev]";
@@ -14155,7 +14155,7 @@ rebel_in,109,54,3	script	Jana Levedeva#16.2rm	4_F_ANYA,{
 			next;
 			mes "[Jana Levedeva]";
 			mes "To Milo, Mason and Rachel.";
-			mes "And to commander Adler and commander Elena as well, please.";
+			mes "And to commander Adler and commander 埃琳娜 as well, please.";
 			mes "Make sure you tell them we made these.";
 			if (checkweight(25161,5) == 0) {
 				next;
@@ -14262,7 +14262,7 @@ rebel_in,109,54,3	script	Jana Levedeva#16.2rm	4_F_ANYA,{
 		if (.@cookie > 0) {
 			mes "[Jana Levedeva]";
 			mes "Please bring them to the five people I mentioned.";
-			mes "They are Milo, Mason, Rachel, commander Ericsson and commander Elena.";
+			mes "They are Milo, Mason, Rachel, commander Ericsson and commander 埃琳娜.";
 			if (countitem(25161) < 1) {
 				next;
 				mes "[Jana Levedeva]";
