@@ -376,7 +376,7 @@ prt_cas_q,26,30,3	script	贝尔侍从长#ep16_main	4_M_RUSMAN1,{
 				next;
 				mes "[贝尔]";
 				mes "In order to keep a smooth relationship with them, you may to there quickly.";
-				mes "Then, good bye.";
+				mes "那么，再见。";
 				close;
 			}
 		}
@@ -4125,7 +4125,7 @@ prt_cas_q,20,139,3	script	斯皮卡·内里乌斯#ep16_room01	4_EP16_SPICA,{
 	if (ep16_royal < 17)
 		end;
 	mes "[斯皮卡]";
-	mes "Sorry about all the trouble.";
+	mes "给你添麻烦了。";
 	mes "How unlucky of you to be involved in this mess.";
 	cutin "ep16_spica_nerius01",1;
 	next;
@@ -5339,15 +5339,15 @@ prt_cas_q,21,83,3	script	弗里德里希·S·海涅#ep16_01	4_EP16_STOLZ,{
 	case 1:
 		cutin "ep16_friedrich_stolz_heine",1;
 		mes "[弗里德里希]";
-		mes "Are you going back to that place?";
-		mes "尼勒姆 has told me.";
+		mes "你又要去那个地方吗？";
+		mes "尼勒姆告诉我了。";
 		next;
 		mes "[弗里德里希]";
-		mes "That it is difficult for him to connect multiple times since he is just a human after all.";
+		mes "他毕竟只是人类，多次连接很困难。";
 		next;
 		mes "[弗里德里希]";
-		mes "I appreciate your efforts for the royal family.";
-		mes "But don't push yourself too hard.";
+		mes "感谢你为王室付出。";
+		mes "但别太勉强自己。";
 		close3;
 	case 2:
 		erasequest 7706;// 尼勒姆 Is Not Almighty
@@ -5356,26 +5356,26 @@ prt_cas_q,21,83,3	script	弗里德里希·S·海涅#ep16_01	4_EP16_STOLZ,{
 	switch( checkquest(7705,HUNTING) ) {
 	case -1:
 		mes "[弗里德里希]";
-		mes "You are here, just in time.";
-		mes "Are you going there again today?";
+		mes "你来得正好。";
+		mes "今天又要去那里吗？";
 		cutin "ep16_friedrich_stolz_heine",1;
 		next;
-		if (select( "Yes.", "No." ) == 2) {
+		if (select( "是。", "不。" ) == 2) {
 			mes "[弗里德里希]";
 			mes "原来如此。";
-			mes "...Oh, do you know what Nyhill is doing?";
+			mes "……哦，你知道尼希尔在做什么吗？";
 			next;
 			mes "[弗里德里希]";
-			mes ".....Never mind.";
-			mes "He must be staying quietly since he has been sentenced to disciplinary confinement.";
+			mes "……算了。";
+			mes "他被判禁闭，应该会安静待着。";
 			next;
 			mes "[弗里德里希]";
-			mes "Then, good bye.";
+			mes "那么，再见。";
 			close3;
 		}
 		mes "[弗里德里希]";
-		mes "Sorry about all the trouble.";
-		mes "I hope it works this time.";
+		mes "给你添麻烦了。";
+		mes "希望这次能成功。";
 		next;
 		mes "[弗里德里希]";
 		mes "请从瓦尔基里手中保住依美乐心脏碎片。";
@@ -5385,43 +5385,43 @@ prt_cas_q,21,83,3	script	弗里德里希·S·海涅#ep16_01	4_EP16_STOLZ,{
 	case 1:
 		cutin "ep16_friedrich_stolz_heine",1;
 		mes "[弗里德里希]";
-		mes "...I know it is almost impossible to change the past.";
-		mes "But there is no other way.";
+		mes "……我知道改变过去几乎不可能。";
+		mes "但别无办法。";
 		next;
 		mes "[弗里德里希]";
-		mes "We need to try everything we can do.";
+		mes "我们必须尝试一切。";
 		next;
 		mes "[弗里德里希]";
-		mes "While you are on a mission down there, we are proceeding with the investigation.";
+		mes "你在下面执行任务时，我们也在继续调查。";
 		next;
 		mes "[弗里德里希]";
-		mes "We are searching for the lead to the intruders.";
-		mes "Let's play our parts well.";
+		mes "我们正在追查入侵者的线索。";
+		mes "各自做好自己的事吧。";
 		next;
 		mes "[弗里德里希]";
-		mes "尼勒姆 must be waiting for you.";
-		mes "Please do your best as always.";
+		mes "尼勒姆一定在等你。";
+		mes "请像往常一样尽力。";
 		close3;
 	case 2:
 		cutin "ep16_friedrich_stolz_heine",1;
 		mes "[弗里德里希]";
 		mes "你回来了。";
-		mes "Is it the same this time?";
-		mes "I suppose so.";
-		mes "But, I really don't think all the efforts will go wasted.";
+		mes "这次也一样吗？";
+		mes "我想也是。";
+		mes "但我不认为所有努力都会白费。";
 		next;
 		mes "[弗里德里希]";
-		mes "Thank you very much.";
-		mes "Someday, when you need the power of our family,";
-		mes "We will be on your side no matter what.";
+		mes "非常感谢。";
+		mes "将来你需要我们家族的力量时，";
+		mes "无论发生什么，我们都会站在你这边。";
 		next;
 		mes "[弗里德里希]";
-		mes "That is all we can give you for now as the reward.";
-		mes "I am sorry that we cannot offer you more.";
-		mes "I'll make sure there is no inconvenience to you while living in the palace.";
+		mes "目前能给的报酬只有这些。";
+		mes "抱歉不能给你更多。";
+		mes "我会确保你在王宫期间不受不便。";
 		next;
 		mes "[弗里德里希]";
-		mes "See you tomorrow then.";
+		mes "明天见。";
 		setquest 7706;// 尼勒姆 Is Not Almighty
 		erasequest 7705;// Hope You Cannot Let Go
 		getitem 6919,10;// TokenOfHonor
@@ -8569,7 +8569,7 @@ yuno_fild01,242,175,5	script	赫尔穆特·雷根布尔格#ep16lug02	4_EP16_HELMUT,5,5,{
 		mes "If you do so, Wolf will not insist on wars and Myer will not sacrifice himself like that anymore.";
 		next;
 		mes "[赫尔穆特]";
-		mes "Then, good bye.";
+		mes "那么，再见。";
 		close;
 	}
 	mes "[赫尔穆特]";
