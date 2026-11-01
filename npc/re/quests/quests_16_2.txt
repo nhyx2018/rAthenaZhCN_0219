@@ -948,7 +948,7 @@ lighthalzen,309,263,3	script	男子#ep162_02	1_M_01,{
 		cloakoffnpcself( "可疑佣兵#ep" );
 		npctalk "麻烦了。", "可疑佣兵#ep", bc_self;
 		sleep2 2000;
-		npctalk "……心脏……心脏猎人！心脏猎人怎么会在这里？！", "", bc_self;
+		npctalk "……心脏……邪心猎人！邪心猎人怎么会在这里？！", "", bc_self;
 		sleep2 2000;
 		npctalk ".....", "可疑佣兵#ep", bc_self;
 		sleep2 2000;
@@ -3839,7 +3839,7 @@ que_swat,161,53,3	script	尤斯兰#ep162_1	4_M_GUNSLINGER3,{
 		mes "我是说凯美拉。";
 		next;
 		mes "[尤斯兰]";
-		mes "没想到凯美拉比心脏猎人还难缠……";
+		mes "没想到凯美拉比邪心猎人还难缠……";
 		close;
 	}
 	end;
@@ -7537,7 +7537,7 @@ OnTouch:
 		cutin "",255;
 		select("Explain the situation.");
 		mes "[狄恩]";
-		mes "哇……心脏猎人……";
+		mes "哇……邪心猎人……";
 		cutin "ep162_dn03.bmp",2;
 		next;
 		mes "[里德什]";
@@ -7562,7 +7562,7 @@ OnTouch:
 		cutin "ep162_rds04.bmp",0;
 		next;
 		mes "[里德什]";
-		mes "连心脏猎人的小鬼都对付不了，还来求我们！";
+		mes "连邪心猎人的小鬼都对付不了，还来求我们！";
 		cutin "ep162_rds02.bmp",0;
 		next;
 		mes "[里德什]";
@@ -7681,11 +7681,11 @@ rebel_in,162,87,5	script	近卫队长拉西斯#2	4_M_REBELLION,{
 				erasequest (.@quest_id[.@s]+1);
 
 			if (.@s == 0)
-				setarray .@string$[0], "狄恩", "上等茗茶", "心脏猎人艾贝尔并取得1个上等茗茶";
+				setarray .@string$[0], "狄恩", "上等茗茶", "邪心猎人艾贝尔并取得1个上等茗茶";
 			else if (.@s == 1)
-				setarray .@string$[0], "里德什", "老旧信纸", "心脏猎人并取得老旧信纸";
+				setarray .@string$[0], "里德什", "老旧信纸", "邪心猎人并取得老旧信纸";
 			else
-				setarray .@string$[0], "科特尼斯", "光芒戒指", "5名心脏猎人护卫并带回4个光芒戒指";
+				setarray .@string$[0], "科特尼斯", "光芒戒指", "5名邪心猎人护卫并带回4个光芒戒指";
 			mes "[近卫队长拉西斯]";
 			mes "这是" + .@string$[0] + "要的" + .@string$[1] + "。";
 			mes "去艾因布罗克北部野外的东北角找朱利安，他会让你进去。";
