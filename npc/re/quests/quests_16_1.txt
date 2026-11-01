@@ -15295,10 +15295,10 @@ OnTouch:
 	if (isbegin_quest(5457) == 1)
 		cloakoffnpcself( "少女#EP161GU03" );
 	if (isbegin_quest(5463) == 1 || isbegin_quest(5467) == 1)
-		cloakoffnpcself( "Eryus#EP161BU02" );
+		cloakoffnpcself( "埃里乌斯#EP161BU02" );
 	else if (isbegin_quest(5465) == 1) {
-		cloakoffnpcself( "Eryus#EP161BU02" );
-		cloakoffnpcself( "Female#EP161BU04" );
+		cloakoffnpcself( "埃里乌斯#EP161BU02" );
+		cloakoffnpcself( "女子#EP161BU04" );
 	}
 	end;
 }
@@ -15450,7 +15450,7 @@ prt_q,47,339,5	script	士兵#EP161ETC01	8W_SOLDIER,{
 }
 prt_q,52,344,5	duplicate(士兵#EP161ETC01)	士兵#EP161ETC02	8W_SOLDIER
 
-prt_q,52,340,6	script	Knight Gray#EP161GU05	2_M_SWORDMASTER,7,7,{
+prt_q,52,340,6	script	格雷骑士#EP161GU05	2_M_SWORDMASTER,7,7,{
 	if (checkweight(1301,1) == 0) {
 		mes "- 由于道具数量过多，无法继续任务。 -";
 		close;
@@ -15467,7 +15467,7 @@ prt_q,52,340,6	script	Knight Gray#EP161GU05	2_M_SWORDMASTER,7,7,{
 OnTouch:
 	if (isbegin_quest(5458) == 1) {
 		cloakoffnpcself( "少女#EP161GU06" );
-		cloakoffnpcself( "Rosa Erinin#EP161GU07" );
+		cloakoffnpcself( "罗莎·艾琳#EP161GU07" );
 	}
 	if (isbegin_quest(5460) == 1) {
 		cloakoffnpcself( "士兵#EP161HU02" );
@@ -15476,7 +15476,7 @@ OnTouch:
 	end;
 }
 
-prt_q,41,337,5	script	Mercenary Guild Admin#EP161ETC03	8W_SOLDIER,{
+prt_q,41,337,5	script	佣兵公会管理员#EP161ETC03	8W_SOLDIER,{
 	mes "[佣兵公会管理员]";
 	mes "你是来雇佣佣兵的吗？";
 	next;
@@ -15489,9 +15489,9 @@ prt_q,41,337,5	script	Mercenary Guild Admin#EP161ETC03	8W_SOLDIER,{
 	close;
 }
 
-prt_q,55,347,6	script	Rosa Erinin#EP161GU07	4W_F_01,{
+prt_q,55,347,6	script	罗莎·艾琳#EP161GU07	4W_F_01,{
 	if (isbegin_quest(5458) == 1) {
-		emotion ET_STARE, getnpcid(0, "Rosa Erinin#EP161GU07");
+		emotion ET_STARE, getnpcid(0, "罗莎·艾琳#EP161GU07");
 		mes "[罗莎·艾莉宁]";
 		mes "洛文，你这次又跑哪去了？";
 		next;
@@ -15499,7 +15499,7 @@ prt_q,55,347,6	script	Rosa Erinin#EP161GU07	4W_F_01,{
 		mes "[洛文]";
 		mes "嘿嘿……谢谢你，亲爱的冒险者。";
 		next;
-		emotion ET_THANKS, getnpcid(0, "Rosa Erinin#EP161GU07");
+		emotion ET_THANKS, getnpcid(0, "罗莎·艾琳#EP161GU07");
 		mes "[罗莎·艾莉宁]";
 		mes "哦！亲爱的冒险者，谢谢你。她这人可难带了。";
 		next;
@@ -15515,7 +15515,7 @@ prt_q,55,347,6	script	Rosa Erinin#EP161GU07	4W_F_01,{
 		mes "[洛文]";
 		mes "谢谢你，再见！";
 		close2;
-		cloakonnpcself( "Rosa Erinin#EP161GU07" );
+		cloakonnpcself( "罗莎·艾琳#EP161GU07" );
 		cloakonnpcself( "少女#EP161GU06" );
 		end;
 	}
@@ -15529,14 +15529,14 @@ prt_q,55,347,6	script	Rosa Erinin#EP161GU07	4W_F_01,{
 	mes "[罗莎·艾莉宁]";
 	mes "亲爱的冒险者，你能看见我吗？真奇怪。我本不该被看见的。";
 	close2;
-	cloakonnpcself( "Rosa Erinin#EP161GU07" );
+	cloakonnpcself( "罗莎·艾琳#EP161GU07" );
 	end;
 
 OnInit:
 	cloakonnpc();
 	end;
 }
-prt_q,57,346,4	duplicate(Rosa Erinin#EP161GU07)	少女#EP161GU06	4_F_RUSCHILD
+prt_q,57,346,4	duplicate(罗莎·艾琳#EP161GU07)	少女#EP161GU06	4_F_RUSCHILD
 
 // Request 3
 prt_q,140,304,0	script	Soldier Quest_START#EP161QU03	HIDDEN_WARP_NPC,7,7,{
@@ -15709,13 +15709,13 @@ prt_q,38,261,0	script	Married couple Quest_START#EP161QU04	HIDDEN_WARP_NPC,6,6,{
 	end;
 OnTouch:
 	if (isbegin_quest(5451) == 1) {
-		cloakoffnpcself( "Eryus#EP161BU01" );
-		npctalk "埃留斯：艾莉！你在哪？亲爱的！我的爱人！", "Eryus#EP161BU01", bc_self;
+		cloakoffnpcself( "埃里乌斯#EP161BU01" );
+		npctalk "埃留斯：艾莉！你在哪？亲爱的！我的爱人！", "埃里乌斯#EP161BU01", bc_self;
 	}
 	end;
 }
 
-prt_q,38,261,6	script	Eryus#EP161BU01	4_F_03,{
+prt_q,38,261,6	script	埃里乌斯#EP161BU01	4_F_03,{
 	if (checkweight(1301,1) == 0) {
 		mes "- 由于道具数量过多，无法继续任务。 -";
 		close;
@@ -15760,13 +15760,13 @@ prt_q,38,261,6	script	Eryus#EP161BU01	4_F_03,{
 		mes "[埃留斯]";
 		mes "呜……请帮帮我，请找到我的妻子。";
 		close2;
-		cloakonnpcself( "Eryus#EP161BU01" );
+		cloakonnpcself( "埃里乌斯#EP161BU01" );
 		end;
 	}
 	mes "[埃留斯]";
 	mes "呜……我得找到我的妻子……而且我本不该被看见的。";
 	close2;
-	cloakonnpcself( "Eryus#EP161BU01" );
+	cloakonnpcself( "埃里乌斯#EP161BU01" );
 	end;
 
 OnInit:
@@ -15774,7 +15774,7 @@ OnInit:
 	end;
 }
 
-prt_q,231,310,4	script	Eryus#EP161BU02	4_F_03,{
+prt_q,231,310,4	script	埃里乌斯#EP161BU02	4_F_03,{
 	if (checkweight(1301,1) == 0) {
 		mes "- 由于道具数量过多，无法继续任务。 -";
 		close;
@@ -15816,7 +15816,7 @@ prt_q,231,310,4	script	Eryus#EP161BU02	4_F_03,{
 		mes "[埃留斯]";
 		mes "哦！谢天谢地！亲爱的冒险者……";
 		next;
-		emotion ET_PROFUSELY_SWEAT, getnpcid(0, "Female#EP161BU04");
+		emotion ET_PROFUSELY_SWEAT, getnpcid(0, "女子#EP161BU04");
 		mes "[艾莉]";
 		mes "哦，埃留斯……咳咳……咳咳……";
 		next;
@@ -15824,14 +15824,14 @@ prt_q,231,310,4	script	Eryus#EP161BU02	4_F_03,{
 		mes "[埃留斯]";
 		mes "艾莉，怎么了？你又发病了吗？你的药呢？";
 		next;
-		emotion ET_PROFUSELY_SWEAT, getnpcid(0, "Female#EP161BU04");
+		emotion ET_PROFUSELY_SWEAT, getnpcid(0, "女子#EP161BU04");
 		mes "[艾莉]";
 		mes "咳咳……咳咳……我一定是逃跑的时候弄掉了……";
 		next;
 		mes "[" + strcharinfo(0) + "]";
 		mes "你把药掉在哪了？";
 		next;
-		emotion ET_PROFUSELY_SWEAT, getnpcid(0, "Female#EP161BU04");
+		emotion ET_PROFUSELY_SWEAT, getnpcid(0, "女子#EP161BU04");
 		mes "[艾莉]";
 		mes "咳咳……咳咳……我不知道。咳，可能是在那边……咳咳……咳咳……";
 		next;
@@ -15846,7 +15846,7 @@ prt_q,231,310,4	script	Eryus#EP161BU02	4_F_03,{
 		mes "[埃留斯]";
 		mes "你愿意帮我们吗？拜托了。我们快没时间了。艾莉，撑住……";
 		close2;
-		cloakonnpcself( "Female#EP161BU04" );
+		cloakonnpcself( "女子#EP161BU04" );
 		end;
 	}
 	if (isbegin_quest(5466) == 1) {
@@ -15867,13 +15867,13 @@ prt_q,231,310,4	script	Eryus#EP161BU02	4_F_03,{
 		mes "[埃留斯]";
 		mes "真是太感谢了。愿神保佑你一路平安……";
 		close2;
-		cloakonnpcself( "Eryus#EP161BU02" );
+		cloakonnpcself( "埃里乌斯#EP161BU02" );
 		end;
 	}
 	mes "[埃留斯]";
 	mes "呜……我得找到我的妻子……而且我本不该被看见的。";
 	close2;
-	cloakonnpcself( "Eryus#EP161BU02" );
+	cloakonnpcself( "埃里乌斯#EP161BU02" );
 	end;
 
 OnInit:
@@ -15883,7 +15883,7 @@ OnInit:
 
 
 
-prt_q,108,164,4	script	Female#EP161BU03	4W_F_01,{
+prt_q,108,164,4	script	女子#EP161BU03	4W_F_01,{
 	if (checkweight(1301,1) == 0) {
 		mes "- 由于道具数量过多，无法继续任务。 -";
 		close;
@@ -15908,10 +15908,10 @@ prt_q,108,164,4	script	Female#EP161BU03	4W_F_01,{
 		mes "[艾莉]";
 		mes "谢谢你，亲爱的冒险者。";
 		close2;
-		cloakonnpcself( "Female#EP161BU03" );
+		cloakonnpcself( "女子#EP161BU03" );
 		end;
 	}
-	cloakonnpcself( "Female#EP161BU03" );
+	cloakonnpcself( "女子#EP161BU03" );
 	mes "[艾莉]";
 	mes "亲爱的冒险者，你能看见我吗？这可不太妙。";
 	close;
@@ -15921,13 +15921,13 @@ OnInit:
 	end;
 }
 
-prt_q,229,310,6	script	Female#EP161BU04	4W_F_01,{
+prt_q,229,310,6	script	女子#EP161BU04	4W_F_01,{
 	if (checkweight(1301,1) == 0) {
 		mes "- 由于道具数量过多，无法继续任务。 -";
 		close;
 	}
 	if (isbegin_quest(5465) == 1) {
-		emotion ET_THANKS, getnpcid(0, "Eryus#EP161BU02");
+		emotion ET_THANKS, getnpcid(0, "埃里乌斯#EP161BU02");
 		mes "[埃留斯]";
 		mes "哦！谢天谢地！亲爱的冒险者……";
 		next;
@@ -15935,7 +15935,7 @@ prt_q,229,310,6	script	Female#EP161BU04	4W_F_01,{
 		mes "[艾莉]";
 		mes "哦，埃留斯……咳咳……咳咳……";
 		next;
-		emotion ET_HUK, getnpcid(0, "Eryus#EP161BU02");
+		emotion ET_HUK, getnpcid(0, "埃里乌斯#EP161BU02");
 		mes "[埃留斯]";
 		mes "艾莉，怎么了？你又发病了吗？你的药呢？";
 		next;
@@ -15961,20 +15961,20 @@ prt_q,229,310,6	script	Female#EP161BU04	4W_F_01,{
 		mes "[埃留斯]";
 		mes "你愿意帮我们吗？拜托了。我们快没时间了。艾莉，撑住……";
 		close2;
-		cloakonnpcself( "Female#EP161BU04" );
+		cloakonnpcself( "女子#EP161BU04" );
 		end;
 	}
 	if (isbegin_quest(5466) == 1) {
 		mes "[艾莉]";
 		mes "咳咳……咳咳……咳咳……";
 		close2;
-		cloakonnpcself( "Female#EP161BU04" );
+		cloakonnpcself( "女子#EP161BU04" );
 		end;
 	}
 	mes "[艾莉]";
 	mes "亲爱的冒险者，你能看见我吗？这可不太妙。";
 	close2;
-	cloakonnpcself( "Female#EP161BU04" );
+	cloakonnpcself( "女子#EP161BU04" );
 	end;
 
 OnInit:
@@ -15982,11 +15982,11 @@ OnInit:
 	end;
 }
 
-prt_q,111,166,0	script	Emergency Medicine#EP161BU05	HIDDEN_WARP_NPC,6,6,{
+prt_q,111,166,0	script	急救药#EP161BU05	HIDDEN_WARP_NPC,6,6,{
 	end;
 OnTouch:
 	if (isbegin_quest(5464) == 1)
-		cloakoffnpcself( "Female#EP161BU03" );
+		cloakoffnpcself( "女子#EP161BU03" );
 	else if (isbegin_quest(5466) == 1) {
 		mes "这似乎是艾莉逃跑时掉落的药包。";
 		next;
@@ -16000,7 +16000,7 @@ OnTouch:
 	end;
 }
 
-prt_q,213,90,2	script	Dead Villager#EP161DIE01	4_M_DSTMANDEAD,2,2,{
+prt_q,213,90,2	script	死亡村民#EP161DIE01	4_M_DSTMANDEAD,2,2,{
 	mes "他似乎已经死了。";
 	close;
 OnTouch_:
@@ -16025,12 +16025,12 @@ OnTimer180000:
 	enablenpc();
 	end;
 }
-prt_q,214,85,6	duplicate(Dead Villager#EP161DIE01)	Dead Villager#EP161DIE02	4_M_LIEMAN,2,2
-prt_q,222,87,8	duplicate(Dead Villager#EP161DIE01)	Dead Villager#EP161DIE03	4_M_DIEMAN,2,2
-prt_q,149,188,2	duplicate(Dead Villager#EP161DIE01)	Dead Villager#EP161DIE04	4_M_LIEMAN,2,2
-prt_q,188,207,6	duplicate(Dead Villager#EP161DIE01)	Dead Villager#EP161DIE05	4_M_DIEMAN,2,2
+prt_q,214,85,6	duplicate(死亡村民#EP161DIE01)	死亡村民#EP161DIE02	4_M_LIEMAN,2,2
+prt_q,222,87,8	duplicate(死亡村民#EP161DIE01)	死亡村民#EP161DIE03	4_M_DIEMAN,2,2
+prt_q,149,188,2	duplicate(死亡村民#EP161DIE01)	死亡村民#EP161DIE04	4_M_LIEMAN,2,2
+prt_q,188,207,6	duplicate(死亡村民#EP161DIE01)	死亡村民#EP161DIE05	4_M_DIEMAN,2,2
 
-prt_q,109,94,8	script	Dead Villager#EP161DIE06	4_M_DSTMANDEAD,2,2,{
+prt_q,109,94,8	script	死亡村民#EP161DIE06	4_M_DSTMANDEAD,2,2,{
 	mes "他似乎已经死了。";
 	close;
 
@@ -16073,22 +16073,22 @@ OnTimer300000:
 	cloakoffnpc();
 	end;
 }
-prt_q,88,279,2	duplicate(Dead Villager#EP161DIE01)	Dead Villager#EP161DIE07	4_M_LIEMAN,2,2
-prt_q,89,207,6	duplicate(Dead Villager#EP161DIE01)	Dead Villager#EP161DIE08	4_M_DIEMAN,2,2
-prt_q,265,300,8	duplicate(Dead Villager#EP161DIE01)	Dead Villager#EP161DIE09	4_M_DSTMANDEAD,2,2
-prt_q,88,350,2	duplicate(Dead Villager#EP161DIE01)	Dead Villager#EP161DIE10	4_M_LIEMAN,2,2
-prt_q,156,275,6	duplicate(Dead Villager#EP161DIE01)	Dead Villager#EP161DIE11	4_M_DSTMANDEAD,2,2
-prt_q,104,114,8	duplicate(Dead Villager#EP161DIE01)	Dead Villager#EP161DIE12	4_M_DIEMAN,2,2
-prt_q,108,318,2	duplicate(Dead Villager#EP161DIE01)	Dead Villager#EP161DIE13	4_M_LIEMAN,2,2
-prt_q,238,129,6	duplicate(Dead Villager#EP161DIE01)	Dead Villager#EP161DIE14	4_M_DIEMAN,2,2
-prt_q,200,139,8	duplicate(Dead Villager#EP161DIE01)	Dead Villager#EP161DIE15	4_M_DIEMAN,2,2
-prt_q,74,227,2	duplicate(Dead Villager#EP161DIE01)	Dead Villager#EP161DIE16	4_M_DSTMANDEAD,2,2
-prt_q,220,350,6	duplicate(Dead Villager#EP161DIE01)	Dead Villager#EP161DIE17	4_M_DIEMAN,2,2
-prt_q,45,146,8	duplicate(Dead Villager#EP161DIE01)	Dead Villager#EP161DIE18	4_M_DIEMAN,2,2
-prt_q,227,219,2	duplicate(Dead Villager#EP161DIE01)	Dead Villager#EP161DIE19	4_M_DSTMANDEAD,2,2
-prt_q,146,252,6	duplicate(Dead Villager#EP161DIE01)	Dead Villager#EP161DIE20	4_M_LIEMAN,2,2
+prt_q,88,279,2	duplicate(死亡村民#EP161DIE01)	死亡村民#EP161DIE07	4_M_LIEMAN,2,2
+prt_q,89,207,6	duplicate(死亡村民#EP161DIE01)	死亡村民#EP161DIE08	4_M_DIEMAN,2,2
+prt_q,265,300,8	duplicate(死亡村民#EP161DIE01)	死亡村民#EP161DIE09	4_M_DSTMANDEAD,2,2
+prt_q,88,350,2	duplicate(死亡村民#EP161DIE01)	死亡村民#EP161DIE10	4_M_LIEMAN,2,2
+prt_q,156,275,6	duplicate(死亡村民#EP161DIE01)	死亡村民#EP161DIE11	4_M_DSTMANDEAD,2,2
+prt_q,104,114,8	duplicate(死亡村民#EP161DIE01)	死亡村民#EP161DIE12	4_M_DIEMAN,2,2
+prt_q,108,318,2	duplicate(死亡村民#EP161DIE01)	死亡村民#EP161DIE13	4_M_LIEMAN,2,2
+prt_q,238,129,6	duplicate(死亡村民#EP161DIE01)	死亡村民#EP161DIE14	4_M_DIEMAN,2,2
+prt_q,200,139,8	duplicate(死亡村民#EP161DIE01)	死亡村民#EP161DIE15	4_M_DIEMAN,2,2
+prt_q,74,227,2	duplicate(死亡村民#EP161DIE01)	死亡村民#EP161DIE16	4_M_DSTMANDEAD,2,2
+prt_q,220,350,6	duplicate(死亡村民#EP161DIE01)	死亡村民#EP161DIE17	4_M_DIEMAN,2,2
+prt_q,45,146,8	duplicate(死亡村民#EP161DIE01)	死亡村民#EP161DIE18	4_M_DIEMAN,2,2
+prt_q,227,219,2	duplicate(死亡村民#EP161DIE01)	死亡村民#EP161DIE19	4_M_DSTMANDEAD,2,2
+prt_q,146,252,6	duplicate(死亡村民#EP161DIE01)	死亡村民#EP161DIE20	4_M_LIEMAN,2,2
 
-prt_q,148,49,0	script	Sign#EP161ETC12	2_BULLETIN_BOARD,{
+prt_q,148,49,0	script	告示牌#EP161ETC12	2_BULLETIN_BOARD,{
 	mes "[卢恩-米德加尔特王国首都 普隆德拉]";
 	mes "欢迎来到普隆德拉，";
 	mes "这里是卢恩-米德加尔特的心脏！";
@@ -16127,7 +16127,7 @@ prt_q,167,203,6	duplicate(Kriemhild)	Skoegul	GUILD_FLAG
 prt_q,165,194,5	duplicate(Kriemhild)	Gondul	GUILD_FLAG
 
 // GM NPC
-prt_q,5,5,6	script	Pron Dungeon Helper#EP161PG	4_EP16_SPIEGEL,{
+prt_q,5,5,6	script	普隆德拉地下城向导#EP161PG	4_EP16_SPIEGEL,{
 	if (callfunc("F_GM_NPC",1854,0,1,9999) < 1)
 		end;
 	mes "[普隆德拉副本向导]";
@@ -16209,7 +16209,7 @@ prt_q,5,5,6	script	Pron Dungeon Helper#EP161PG	4_EP16_SPIEGEL,{
 }
 
 // Prison quests
-prt_pri00,46,130,7	script	Corrupt Warder#pa0829	4_M_KY_SOLD,{
+prt_pri00,46,130,7	script	腐败看守#pa0829	4_M_KY_SOLD,{
 	if (checkweight(1201,1) == 0) {
 		mes "携带的道具种类过多。请减少道具种类后重试。";
 		close;
@@ -16244,7 +16244,7 @@ prt_pri00,46,130,7	script	Corrupt Warder#pa0829	4_M_KY_SOLD,{
 	close;
 }
 
-prt_pri00,61,136,3	script	Dylan#pa0829	4_CAT_SAILOR5,{
+prt_pri00,61,136,3	script	迪伦#pa0829	4_CAT_SAILOR5,{
 	disable_items;
 	if (checkweight(1201,1) == 0) {
 		mes "携带的道具种类过多。请减少道具种类后重试。";
@@ -16555,7 +16555,7 @@ prt_pri00,61,136,3	script	Dylan#pa0829	4_CAT_SAILOR5,{
 	close;
 }
 
-prt_pri00,51,116,8	script	Ellond Lawrence#EP161ER	4_M_CRU,1,1,{
+prt_pri00,51,116,8	script	埃隆德·劳伦斯#EP161ER	4_M_CRU,1,1,{
 	if (checkweight(1301,1) == 0) {
 		mes "- 由于道具数量过多，无法继续任务。 -";
 		close;
@@ -17255,7 +17255,7 @@ prt_prison,243,265,6	script	Prisoner 243AD265#EP161A	4_M_DRAKE,{
 	}
 }
 
-prt_prison,205,139,4	script	Dark Shape#EP161A01	4_GHOST_STAND,{
+prt_prison,205,139,4	script	黑影#EP161A01	4_GHOST_STAND,{
 	if (checkweight(1301,1) == 0) {
 		mes "- 由于道具数量过多，无法继续任务。 -";
 		close;
@@ -17305,7 +17305,7 @@ prt_prison,205,139,4	script	Dark Shape#EP161A01	4_GHOST_STAND,{
 	setarray .@npc_num[1],1,2,3,4,5;
 	deletearray .@npc_num[.@num],1;
 	disablenpc();
-	enablenpc "Dark Shape#EP161A0" + .@npc_num[ rand(1,4) ];// enable another npc randomly
+	enablenpc "黑影#EP161A0" + .@npc_num[ rand(1,4) ];// enable another npc randomly
 	close;
 
 OnInit:
@@ -17316,10 +17316,10 @@ OnInit:
 		disablenpc();// disable 4/5 npcs
 	end;
 }
-prt_prison,153,175,4	duplicate(Dark Shape#EP161A01)	Dark Shape#EP161A02	4_GHOST_STAND
-prt_prison,160,224,6	duplicate(Dark Shape#EP161A01)	Dark Shape#EP161A03	4_GHOST_STAND
-prt_prison,169,81,6	duplicate(Dark Shape#EP161A01)	Dark Shape#EP161A04	4_GHOST_STAND
-prt_prison,203,215,4	duplicate(Dark Shape#EP161A01)	Dark Shape#EP161A05	4_GHOST_STAND
+prt_prison,153,175,4	duplicate(黑影#EP161A01)	黑影#EP161A02	4_GHOST_STAND
+prt_prison,160,224,6	duplicate(黑影#EP161A01)	黑影#EP161A03	4_GHOST_STAND
+prt_prison,169,81,6	duplicate(黑影#EP161A01)	黑影#EP161A04	4_GHOST_STAND
+prt_prison,203,215,4	duplicate(黑影#EP161A01)	黑影#EP161A05	4_GHOST_STAND
 
 // Sector B
 prt_prison,267,184,8	script	Prisoner 267BD184#EP161B	4_DRACULA,{
@@ -17671,7 +17671,7 @@ prt_prison,265,154,4	script	Prisoner 265CM154#EP161C	4_MOONLIGHT,{
 }
 
 // Rubbish heap
-prt_prison,118,247,4	script	Rubbish heap#EP161C01	4_ENERGY_BLACK,{
+prt_prison,118,247,4	script	垃圾堆#EP161C01	4_ENERGY_BLACK,{
 	if ((isbegin_quest(5431) == 1 && isbegin_quest(5432) == 0) || (isbegin_quest(5434) == 1 && isbegin_quest(5435) == 0)) {
 		mes "散落在地上的东西被堆到了一起。";
 		next;
@@ -17712,35 +17712,35 @@ OnTimer300000:
 	enablenpc();
 	end;
 }
-prt_prison,171,247,4	duplicate(Rubbish heap#EP161C01)	Rubbish heap#EP161C02	4_ENERGY_BLACK
-prt_prison,181,230,4	duplicate(Rubbish heap#EP161C01)	Rubbish heap#EP161C03	4_ENERGY_BLACK
-prt_prison,238,165,4	duplicate(Rubbish heap#EP161C01)	Rubbish heap#EP161C04	4_ENERGY_BLACK
-prt_prison,252,132,4	duplicate(Rubbish heap#EP161C01)	Rubbish heap#EP161C05	4_ENERGY_BLACK
-prt_prison,232,137,4	duplicate(Rubbish heap#EP161C01)	Rubbish heap#EP161C06	4_ENERGY_BLACK
-prt_prison,200,133,4	duplicate(Rubbish heap#EP161C01)	Rubbish heap#EP161C07	4_ENERGY_BLACK
-prt_prison,212,107,4	duplicate(Rubbish heap#EP161C01)	Rubbish heap#EP161C08	4_ENERGY_BLACK
-prt_prison,235,107,4	duplicate(Rubbish heap#EP161C01)	Rubbish heap#EP161C09	4_ENERGY_BLACK
-prt_prison,198,87,4	duplicate(Rubbish heap#EP161C01)	Rubbish heap#EP161C10	4_ENERGY_BLACK
-prt_prison,218,75,4	duplicate(Rubbish heap#EP161C01)	Rubbish heap#EP161C11	4_ENERGY_BLACK
-prt_prison,232,83,4	duplicate(Rubbish heap#EP161C01)	Rubbish heap#EP161C12	4_ENERGY_BLACK
-prt_prison,207,50,4	duplicate(Rubbish heap#EP161C01)	Rubbish heap#EP161C13	4_ENERGY_BLACK
-prt_prison,231,55,4	duplicate(Rubbish heap#EP161C01)	Rubbish heap#EP161C14	4_ENERGY_BLACK
-prt_prison,220,19,4	duplicate(Rubbish heap#EP161C01)	Rubbish heap#EP161C15	4_ENERGY_BLACK
-prt_prison,168,31,4	duplicate(Rubbish heap#EP161C01)	Rubbish heap#EP161C16	4_ENERGY_BLACK
-prt_prison,160,70,4	duplicate(Rubbish heap#EP161C01)	Rubbish heap#EP161C17	4_ENERGY_BLACK
-prt_prison,156,87,4	duplicate(Rubbish heap#EP161C01)	Rubbish heap#EP161C18	4_ENERGY_BLACK
-prt_prison,140,93,4	duplicate(Rubbish heap#EP161C01)	Rubbish heap#EP161C19	4_ENERGY_BLACK
-prt_prison,113,98,4	duplicate(Rubbish heap#EP161C01)	Rubbish heap#EP161C20	4_ENERGY_BLACK
-prt_prison,91,101,4	duplicate(Rubbish heap#EP161C01)	Rubbish heap#EP161C21	4_ENERGY_BLACK
-prt_prison,112,79,4	duplicate(Rubbish heap#EP161C01)	Rubbish heap#EP161C22	4_ENERGY_BLACK
-prt_prison,122,42,4	duplicate(Rubbish heap#EP161C01)	Rubbish heap#EP161C23	4_ENERGY_BLACK
-prt_prison,135,127,4	duplicate(Rubbish heap#EP161C01)	Rubbish heap#EP161C24	4_ENERGY_BLACK
-prt_prison,67,149,4	duplicate(Rubbish heap#EP161C01)	Rubbish heap#EP161C25	4_ENERGY_BLACK
-prt_prison,251,259,4	duplicate(Rubbish heap#EP161C01)	Rubbish heap#EP161C26	4_ENERGY_BLACK
-prt_prison,220,255,4	duplicate(Rubbish heap#EP161C01)	Rubbish heap#EP161C27	4_ENERGY_BLACK
-prt_prison,243,239,4	duplicate(Rubbish heap#EP161C01)	Rubbish heap#EP161C28	4_ENERGY_BLACK
-prt_prison,276,195,4	duplicate(Rubbish heap#EP161C01)	Rubbish heap#EP161C29	4_ENERGY_BLACK
-prt_prison,188,186,4	duplicate(Rubbish heap#EP161C01)	Rubbish heap#EP161C30	4_ENERGY_BLACK
+prt_prison,171,247,4	duplicate(垃圾堆#EP161C01)	垃圾堆#EP161C02	4_ENERGY_BLACK
+prt_prison,181,230,4	duplicate(垃圾堆#EP161C01)	垃圾堆#EP161C03	4_ENERGY_BLACK
+prt_prison,238,165,4	duplicate(垃圾堆#EP161C01)	垃圾堆#EP161C04	4_ENERGY_BLACK
+prt_prison,252,132,4	duplicate(垃圾堆#EP161C01)	垃圾堆#EP161C05	4_ENERGY_BLACK
+prt_prison,232,137,4	duplicate(垃圾堆#EP161C01)	垃圾堆#EP161C06	4_ENERGY_BLACK
+prt_prison,200,133,4	duplicate(垃圾堆#EP161C01)	垃圾堆#EP161C07	4_ENERGY_BLACK
+prt_prison,212,107,4	duplicate(垃圾堆#EP161C01)	垃圾堆#EP161C08	4_ENERGY_BLACK
+prt_prison,235,107,4	duplicate(垃圾堆#EP161C01)	垃圾堆#EP161C09	4_ENERGY_BLACK
+prt_prison,198,87,4	duplicate(垃圾堆#EP161C01)	垃圾堆#EP161C10	4_ENERGY_BLACK
+prt_prison,218,75,4	duplicate(垃圾堆#EP161C01)	垃圾堆#EP161C11	4_ENERGY_BLACK
+prt_prison,232,83,4	duplicate(垃圾堆#EP161C01)	垃圾堆#EP161C12	4_ENERGY_BLACK
+prt_prison,207,50,4	duplicate(垃圾堆#EP161C01)	垃圾堆#EP161C13	4_ENERGY_BLACK
+prt_prison,231,55,4	duplicate(垃圾堆#EP161C01)	垃圾堆#EP161C14	4_ENERGY_BLACK
+prt_prison,220,19,4	duplicate(垃圾堆#EP161C01)	垃圾堆#EP161C15	4_ENERGY_BLACK
+prt_prison,168,31,4	duplicate(垃圾堆#EP161C01)	垃圾堆#EP161C16	4_ENERGY_BLACK
+prt_prison,160,70,4	duplicate(垃圾堆#EP161C01)	垃圾堆#EP161C17	4_ENERGY_BLACK
+prt_prison,156,87,4	duplicate(垃圾堆#EP161C01)	垃圾堆#EP161C18	4_ENERGY_BLACK
+prt_prison,140,93,4	duplicate(垃圾堆#EP161C01)	垃圾堆#EP161C19	4_ENERGY_BLACK
+prt_prison,113,98,4	duplicate(垃圾堆#EP161C01)	垃圾堆#EP161C20	4_ENERGY_BLACK
+prt_prison,91,101,4	duplicate(垃圾堆#EP161C01)	垃圾堆#EP161C21	4_ENERGY_BLACK
+prt_prison,112,79,4	duplicate(垃圾堆#EP161C01)	垃圾堆#EP161C22	4_ENERGY_BLACK
+prt_prison,122,42,4	duplicate(垃圾堆#EP161C01)	垃圾堆#EP161C23	4_ENERGY_BLACK
+prt_prison,135,127,4	duplicate(垃圾堆#EP161C01)	垃圾堆#EP161C24	4_ENERGY_BLACK
+prt_prison,67,149,4	duplicate(垃圾堆#EP161C01)	垃圾堆#EP161C25	4_ENERGY_BLACK
+prt_prison,251,259,4	duplicate(垃圾堆#EP161C01)	垃圾堆#EP161C26	4_ENERGY_BLACK
+prt_prison,220,255,4	duplicate(垃圾堆#EP161C01)	垃圾堆#EP161C27	4_ENERGY_BLACK
+prt_prison,243,239,4	duplicate(垃圾堆#EP161C01)	垃圾堆#EP161C28	4_ENERGY_BLACK
+prt_prison,276,195,4	duplicate(垃圾堆#EP161C01)	垃圾堆#EP161C29	4_ENERGY_BLACK
+prt_prison,188,186,4	duplicate(垃圾堆#EP161C01)	垃圾堆#EP161C30	4_ENERGY_BLACK
 
 // Sector D
 prt_prison,243,17,4	script	Prisoner 243DV17#EP161D	4_PORING,{
@@ -17845,7 +17845,7 @@ prt_prison,243,17,4	script	Prisoner 243DV17#EP161D	4_PORING,{
 }
 
 // Sector E
-prt_prison,95,72,6	script	Prisoner 95EB72#EP161E	4_BAPHOMET,{
+prt_prison,95,72,6	script	囚犯95EB72#EP161E	4_BAPHOMET,{
 	if (checkweight(1301,1) == 0) {
 		mes "- 由于道具数量过多，无法继续任务。 -";
 		close;
@@ -17992,7 +17992,7 @@ prt_prison,95,72,6	script	Prisoner 95EB72#EP161E	4_BAPHOMET,{
 }
 
 // Torchs
-prt_prison,146,268,4	script	Torch#EP161EB01	CLEAR_NPC,{
+prt_prison,146,268,4	script	火把#EP161EB01	CLEAR_NPC,{
 	if (checkweight(1301,1) == 0) {
 		mes "- 由于道具数量过多，无法继续任务。 -";
 		close;
@@ -18034,24 +18034,24 @@ OnTimer180000:
 	enablenpc();
 	end;
 }
-prt_prison,177,268,4	duplicate(Torch#EP161EB01)	Torch#EP161EB02	CLEAR_NPC
-prt_prison,170,286,4	duplicate(Torch#EP161EB01)	Torch#EP161EB03	CLEAR_NPC
-prt_prison,39,160,4	duplicate(Torch#EP161EB01)	Torch#EP161EB04	CLEAR_NPC
-prt_prison,72,160,4	duplicate(Torch#EP161EB01)	Torch#EP161EB05	CLEAR_NPC
-prt_prison,81,148,4	duplicate(Torch#EP161EB01)	Torch#EP161EB06	CLEAR_NPC
-prt_prison,81,138,4	duplicate(Torch#EP161EB01)	Torch#EP161EB07	CLEAR_NPC
-prt_prison,72,126,4	duplicate(Torch#EP161EB01)	Torch#EP161EB08	CLEAR_NPC
-prt_prison,38,126,4	duplicate(Torch#EP161EB01)	Torch#EP161EB09	CLEAR_NPC
-prt_prison,141,152,4	duplicate(Torch#EP161EB01)	Torch#EP161EB10	CLEAR_NPC
-prt_prison,159,153,4	duplicate(Torch#EP161EB01)	Torch#EP161EB11	CLEAR_NPC
-prt_prison,158,135,4	duplicate(Torch#EP161EB01)	Torch#EP161EB12	CLEAR_NPC
-prt_prison,141,135,4	duplicate(Torch#EP161EB01)	Torch#EP161EB13	CLEAR_NPC
-prt_prison,122,46,4	duplicate(Torch#EP161EB01)	Torch#EP161EB14	CLEAR_NPC
-prt_prison,129,46,4	duplicate(Torch#EP161EB01)	Torch#EP161EB15	CLEAR_NPC
-prt_prison,186,46,4	duplicate(Torch#EP161EB01)	Torch#EP161EB16	CLEAR_NPC
-prt_prison,186,37,4	duplicate(Torch#EP161EB01)	Torch#EP161EB17	CLEAR_NPC
-prt_prison,237,139,4	duplicate(Torch#EP161EB01)	Torch#EP161EB18	CLEAR_NPC
-prt_prison,246,140,4	duplicate(Torch#EP161EB01)	Torch#EP161EB19	CLEAR_NPC
+prt_prison,177,268,4	duplicate(火把#EP161EB01)	火把#EP161EB02	CLEAR_NPC
+prt_prison,170,286,4	duplicate(火把#EP161EB01)	火把#EP161EB03	CLEAR_NPC
+prt_prison,39,160,4	duplicate(火把#EP161EB01)	火把#EP161EB04	CLEAR_NPC
+prt_prison,72,160,4	duplicate(火把#EP161EB01)	火把#EP161EB05	CLEAR_NPC
+prt_prison,81,148,4	duplicate(火把#EP161EB01)	火把#EP161EB06	CLEAR_NPC
+prt_prison,81,138,4	duplicate(火把#EP161EB01)	火把#EP161EB07	CLEAR_NPC
+prt_prison,72,126,4	duplicate(火把#EP161EB01)	火把#EP161EB08	CLEAR_NPC
+prt_prison,38,126,4	duplicate(火把#EP161EB01)	火把#EP161EB09	CLEAR_NPC
+prt_prison,141,152,4	duplicate(火把#EP161EB01)	火把#EP161EB10	CLEAR_NPC
+prt_prison,159,153,4	duplicate(火把#EP161EB01)	火把#EP161EB11	CLEAR_NPC
+prt_prison,158,135,4	duplicate(火把#EP161EB01)	火把#EP161EB12	CLEAR_NPC
+prt_prison,141,135,4	duplicate(火把#EP161EB01)	火把#EP161EB13	CLEAR_NPC
+prt_prison,122,46,4	duplicate(火把#EP161EB01)	火把#EP161EB14	CLEAR_NPC
+prt_prison,129,46,4	duplicate(火把#EP161EB01)	火把#EP161EB15	CLEAR_NPC
+prt_prison,186,46,4	duplicate(火把#EP161EB01)	火把#EP161EB16	CLEAR_NPC
+prt_prison,186,37,4	duplicate(火把#EP161EB01)	火把#EP161EB17	CLEAR_NPC
+prt_prison,237,139,4	duplicate(火把#EP161EB01)	火把#EP161EB18	CLEAR_NPC
+prt_prison,246,140,4	duplicate(火把#EP161EB01)	火把#EP161EB19	CLEAR_NPC
 
 // Sector F
 prt_prison,117,188,4	script	Prisoner 117FM188#EP161F	4_MISTRESS,{
@@ -18580,7 +18580,7 @@ prt_prison,55,115,2	script	Prisoner 55HK115#EP161H	4_STORMKNIGHT,{
 }
 
 // GM NPC
-prt_prison,20,20,4	script	Underground Dungeon Helper#EP161D	4_PORING,{
+prt_prison,20,20,4	script	地下城向导#EP161D	4_PORING,{
 	if (callfunc("F_GM_NPC",1854,0,1,9999) < 1)
 		end;
 	mes "[地下副本向导]";

@@ -10020,7 +10020,7 @@ OnInit:
 	end;
 }
 
-einbech,170,143,3	script	Sleepy Looking Old woman	4_F_BARYO_OLD,{
+einbech,170,143,3	script	困倦老妇	4_F_BARYO_OLD,{
 	switch( isbegin_quest(16057) ) {
 	case 0:
 		mes "[睡眼惺忪的老妇人]";
@@ -14312,7 +14312,7 @@ OnInit:
 rebel_in,70,75,1	duplicate(dummy_cloaked_npc)	伊利亚·列别杰夫#16.2rms	4_M_ILYA
 rebel_in,69,75,1	duplicate(dummy_cloaked_npc)	亚娜·列别杰娃#16.2rms	4_F_ANYA
 
-prt_in,165,89,1	script	Librarian in charge of juveniles 	1_F_LIBRARYGIRL,{
+prt_in,165,89,1	script	儿童图书管理员	1_F_LIBRARYGIRL,{
 	setarray .@quest_id[0], 16021,16022,16023;
 	.@size = getarraysize(.@quest_id);
 	for ( .@i = 0; .@i < .@size && isbegin_quest(.@quest_id[.@i]) == 0; .@i++ )
