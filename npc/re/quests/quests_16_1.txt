@@ -1773,14 +1773,14 @@ prt_lib,91,85,3	script	魔法师尼勒姆#ep16_warp	4_M_JOB_WIZARD,{
 	case 18:
 		mes "[尼勒姆]";
 		mes "Haha, shall I get ready?";
-		mes "Come here! ^4d4dffDimension Warper MkII^000000!!";
+		mes "Come here! ^4d4dff次元传送器MkII^000000!!";
 		next;
 		mes "[尼勒姆]";
 		mes "好了，走吧，亲爱的客人。";
 		mes "I wonder what we are going to see this time!";
 		setquest 7700;// Once More!
 		erasequest 7699;// To the Past
-		cloakoffnpcself( "Dimension Warper MkII#ep16_lib" );
+		cloakoffnpcself( "次元传送器MkII#ep16_lib" );
 		close;
 	case 19:
 	case 20:
@@ -1789,7 +1789,7 @@ prt_lib,91,85,3	script	魔法师尼勒姆#ep16_warp	4_M_JOB_WIZARD,{
 		mes "We haven't solved all the secrets yet!";
 		mes "Well, we have to go back!";
 		next;
-		cloakoffnpcself( "Dimension Warper MkII#ep16_lib" );
+		cloakoffnpcself( "次元传送器MkII#ep16_lib" );
 		mes "[尼勒姆]";
 		mes "Let's finish it off this time!";
 		close;
@@ -1824,7 +1824,7 @@ prt_lib,91,85,3	script	魔法师尼勒姆#ep16_warp	4_M_JOB_WIZARD,{
 		mes "今天会有什么等着我们？";
 		mes "不过大概又会失败。";
 		mes "哈哈哈——";
-		cloakoffnpcself( "Dimension Warper MkII#ep16_lib" );
+		cloakoffnpcself( "次元传送器MkII#ep16_lib" );
 		close;
 	}
 }
@@ -2288,23 +2288,23 @@ prt_lib,85,82,5	script	伊恩·沃尔特#ep16_lib01	1_M_JOBTESTER,{
 		mes "我马上召集会议。";
 		next;
 		mes "[伊恩·沃尔特]";
-		mes "I'll see you later then.";
+		mes "那就回头见。";
 		erasequest 7693;// Surprise Attack
 		ep16_royal = 10;
 		close2;
-		npctalk "Magician! Activate the gate.", "伊恩·沃尔特#ep16_lib01", bc_self;
+		npctalk "魔法师！启动传送门。", "伊恩·沃尔特#ep16_lib01", bc_self;
 		setpcblock PCBLOCK_NPC, true;
 		sleep2 2000;
-		npctalk "Oh, yes. The gate has been activated since others used it earlier.", "魔法师尼勒姆#ep16_warp", bc_self;
+		npctalk "哦，好。之前有人用过，门已经启动了。", "魔法师尼勒姆#ep16_warp", bc_self;
 		sleep2 3000;
-		npctalk "Is that so? Well, then. Please excuse me.", "伊恩·沃尔特#ep16_lib01", bc_self;
+		npctalk "是吗？那好，我先失陪了。", "伊恩·沃尔特#ep16_lib01", bc_self;
 		sleep2 3000;
 		cloakonnpcself( "伊恩·沃尔特#ep16_lib01" );
 		sleep2 500;
 		cloakonnpcself( "勒维耶·维格纳#ep16_lib01" );
 		cloakonnpcself( "马克西米利安·雷根布尔格#ep16_lib01" );
 		sleep2 500;
-		npctalk "Nyhill, come with me.", "克罗内克·G·海涅#ep16_01_lib02", bc_self;
+		npctalk "尼希尔，跟我来。", "克罗内克·G·海涅#ep16_01_lib02", bc_self;
 		sleep2 3000;
 		setpcblock PCBLOCK_NPC, false;
 		cloakonnpcself( "克罗内克·G·海涅#ep16_01_lib02" );
@@ -2312,21 +2312,21 @@ prt_lib,85,82,5	script	伊恩·沃尔特#ep16_lib01	1_M_JOBTESTER,{
 		end;
 	}
 	mes "[伊恩·沃尔特]";
-	mes "Let me fill you in with the details after proceeding with a discussion with my family.";
+	mes "等我和家族讨论完再告诉你细节。";
 	close2;
-	npctalk "Magician! Activate the gate.", "伊恩·沃尔特#ep16_lib01", bc_self;
+	npctalk "魔法师！启动传送门。", "伊恩·沃尔特#ep16_lib01", bc_self;
 	setpcblock PCBLOCK_NPC, true;
 	sleep2 2000;
-	npctalk "Oh, yes. The gate has been activated since others used it earlier.", "魔法师尼勒姆#ep16_warp", bc_self;
+	npctalk "哦，好。之前有人用过，门已经启动了。", "魔法师尼勒姆#ep16_warp", bc_self;
 	sleep2 3000;
-	npctalk "Is that so? Well, then. Please excuse me.", "伊恩·沃尔特#ep16_lib01", bc_self;
+	npctalk "是吗？那好，我先失陪了。", "伊恩·沃尔特#ep16_lib01", bc_self;
 	sleep2 3000;
 	cloakonnpcself( "伊恩·沃尔特#ep16_lib01" );
 	sleep2 500;
 	cloakonnpcself( "勒维耶·维格纳#ep16_lib01" );
 	cloakonnpcself( "马克西米利安·雷根布尔格#ep16_lib01" );
 	sleep2 500;
-	npctalk "Nyhill, come with me.", "克罗内克·G·海涅#ep16_01_lib02", bc_self;
+	npctalk "尼希尔，跟我来。", "克罗内克·G·海涅#ep16_01_lib02", bc_self;
 	sleep2 3000;
 	setpcblock PCBLOCK_NPC, false;
 	cloakonnpcself( "克罗内克·G·海涅#ep16_01_lib02" );
@@ -2337,33 +2337,33 @@ prt_lib,88,83,4	duplicate(伊恩·沃尔特#ep16_lib01)	勒维耶·维格纳#ep16_lib01	4_E
 prt_lib,91,78,2	duplicate(伊恩·沃尔特#ep16_lib01)	马克西米利安·雷根布尔格#ep16_lib01	4_EP16_MAX
 
 
-prt_lib,94,82,3	script	Dimension Warper MkII#ep16_lib	PORTAL,{
+prt_lib,94,82,3	script	次元传送器MkII#ep16_lib	PORTAL,{
 	if (ep16_royal < 18) {
 		mes "[尼勒姆]";
-		mes "Wait, it is not ready yet.";
-		mes "Do not touch that.";
+		mes "等等，还没准备好。";
+		mes "别碰那个。";
 		close;
 	}
 	mes "[尼勒姆]";
-	mes "Let me connect the gap in the dimension by force.";
-	mes "The gap might be invisible, but it still is a crack.";
+	mes "让我强行连接次元缝隙。";
+	mes "缝隙虽然看不见，但仍是裂缝。";
 	next;
 	mes "[尼勒姆]";
-	mes "It will be connected to the time when a big event has taken place.";
-	mes "Are you ready?";
+	mes "会连接到发生重大事件的时间点。";
+	mes "准备好了吗？";
 	next;
-	if (select( "I am ready!", "I am not ready!" ) == 2) {
+	if (select( "准备好了！", "还没准备好！" ) == 2) {
 		mes "[尼勒姆]";
-		mes "Phew, don't be such a drag.";
+		mes "唉，别这么拖后腿。";
 		close;
 	}
 	mes "[尼勒姆]";
-	mes "Then, sweet dreams!";
+	mes "那么，做个好梦！";
 	close2;
 	warp "prt_lib_q",89,43;
 	end;
 OnInit:
-	cloakonnpc "Dimension Warper MkII#ep16_lib";
+	cloakonnpc "次元传送器MkII#ep16_lib";
 	end;
 }
 
@@ -2371,32 +2371,32 @@ OnInit:
 prt_lib_q,91,85,3	script	尼勒姆#ep16_lib_q	4_M_JOB_WIZARD,{
 	if (ep16_royal == 18) {
 		mes "[尼勒姆]";
-		mes "Oh, we did it.";
-		mes "I don't know when, but it is the ^4d4dffPast Memories of the Royal Family^000000!";
+		mes "哦，成功了。";
+		mes "不知道是什么时候，但这里是^4d4dff王家过去的记忆^000000！";
 		next;
-		npctalk "Ha! I am a genius!", bc_self;
+		npctalk "哈！我是天才！", bc_self;
 		mes "[尼勒姆]";
-		mes "However, I have to give it a twist to get to the place we want to go.";
-		next;
-		mes "[尼勒姆]";
-		mes "Can I?";
-		mes "Hahaha, of course I can!";
-		npctalk "I am the only magician of dimension in this place, 尼勒姆 the Marvelous!", bc_self;
+		mes "不过要去目标地点，还得把它扭曲一下。";
 		next;
 		mes "[尼勒姆]";
-		mes "It is the first time for me to do this.";
-		mes "But let me twist the dimension like this.";
-		npctalk "Humph-!", bc_self;
+		mes "我能做到吗？";
+		mes "哈哈哈，当然能！";
+		npctalk "我可是这里唯一的次元魔法师，奇迹的尼勒姆！", bc_self;
+		next;
+		mes "[尼勒姆]";
+		mes "这是我第一次做这种事。";
+		mes "不过就这样扭曲次元吧。";
+		npctalk "哼——！", bc_self;
 		specialeffect EF_BEGINSPELL;
 		next;
 		cloakoffnpcself( "Swaying Space#evt_gate02" );
 		mes "[尼勒姆]";
-		mes "Connect the spaces by force!";
-		mes "Well, let's see what has happened here.";
+		mes "强行连接空间！";
+		mes "来看看这里发生过什么。";
 		next;
 		mes "[尼勒姆]";
-		mes "Are you ready?";
-		mes "Talk to me when you are ready-";
+		mes "准备好了吗？";
+		mes "准备好了就告诉我——";
 		ep16_royal = 19;
 		close;
 	}
@@ -2408,14 +2408,14 @@ prt_lib_q,91,85,3	script	尼勒姆#ep16_lib_q	4_M_JOB_WIZARD,{
 			close;
 		}
 		mes "[尼勒姆]";
-		mes "Then let's go and take a look what has happened in the Room of Consciousness.";
-		mes "Since I am connecting the twisted time and space once more by force,";
-		mes "I may have to use my full power to maintain this!";
+		mes "那去看看意识房间发生过什么。";
+		mes "我要再次强行连接扭曲的时空，";
+		mes "可能得用全力维持！";
 		next;
 		mes "[尼勒姆]";
-		mes "Please, come back alive and well-";
+		mes "请活着回来——";
 		next;
-		if (select( "Connect now.", "Do not go." ) == 2) {
+		if (select( "现在连接。", "不去。" ) == 2) {
 			mes "[尼勒姆]";
 			mes "哈哈，太晚也不太好……";
 			close;
@@ -2600,14 +2600,14 @@ prt_lib_q,91,85,3	script	尼勒姆#ep16_lib_q	4_M_JOB_WIZARD,{
 					close;
 				}
 				mes "[尼勒姆]";
-				mes "Then let's go and take a look what has happened in the Room of Consciousness.";
-				mes "Since I am connecting the twisted time and space once more by force,";
-				mes "I may have to use my full power to maintain this!";
+				mes "那去看看意识房间发生过什么。";
+				mes "我要再次强行连接扭曲的时空，";
+				mes "可能得用全力维持！";
 				next;
 				mes "[尼勒姆]";
-				mes "Please, come back alive and well-";
+				mes "请活着回来——";
 				next;
-				if (select( "Connect now.", "Do not go." ) == 2) {
+				if (select( "现在连接。", "不去。" ) == 2) {
 					mes "[尼勒姆]";
 					mes "哈哈，太晚也不太好……";
 					close;
