@@ -9569,22 +9569,22 @@ OnInit:
 
 
 // Daily Quest - Mason Bender Business
-rebel_in,19,48,5	script	Mason Bender#16.2rm	4_M_KHMAN,{
+rebel_in,19,48,5	script	梅森·班德#16.2rm	4_M_KHMAN,{
 	if (terra_gloria_main < 17) {
-		mes "[Mason Bender]";
-		mes "Welcome. This is a weapon store, 克拉纳·内米耶里.";
+		mes "[梅森·班德]";
+		mes "欢迎。这里是武器店克拉纳·内米耶里。";
 		next;
-		mes "[Mason Bender]";
-		mes "We have various weapons including firearms, gunpowder, cannon, mortar and Molotov cocktails. Please visit us often.";
+		mes "[梅森·班德]";
+		mes "我们经营枪械、火药、火炮、迫击炮和燃烧瓶等各种武器，请常来。";
 		next;
 		mes "[" + strcharinfo(0) + "]";
-		mes "... Oh, you only have firearms!";
+		mes "……哦，你们只有枪械啊！";
 		next;
-		mes "[Mason Bender]";
-		mes "Firearms are the tres... Sorry? 内米? We are closed today?";
+		mes "[梅森·班德]";
+		mes "枪械才是宝……什么？内米？今天关门？";
 		next;
-		mes "[Mason Bender]";
-		mes "Ah.. Yes. We are closed today. Please visit us later.";
+		mes "[梅森·班德]";
+		mes "啊……是，今天关门。请改天再来。";
 		close;
 	}
 
@@ -9592,33 +9592,33 @@ rebel_in,19,48,5	script	Mason Bender#16.2rm	4_M_KHMAN,{
 	if (lebedev_quest_16_2 == 2 || lebedev_quest_16_2 == 3) {
 		if (isbegin_quest(16014) == 1) {
 			emotion ET_FRET;
-			mes "[Mason Bender]";
-			mes "About the twins in our unit? You are an adventurer. Why do you ask me such a thing?";
-			mes "I am not interested in you and the noisy tourist either.";
+			mes "[梅森·班德]";
+			mes "问我们部队那对双胞胎？你是冒险者，为什么问这个？";
+			mes "我对你和那个吵闹的游客都没兴趣。";
 			next;
-			mes "[Mason Bender]";
-			mes "......Phew, a request from commander 沃尔科娃... I have no choice but to answer you. But I can only tell you negative things about those kids.";
+			mes "[梅森·班德]";
+			mes "……唉，沃尔科娃指挥官的请求……只能回答你。但我只会说那些孩子的坏话。";
 			next;
-			mes "[Mason Bender]";
-			mes "There's nothing they can do properly. Plus, they don't even listen to us.";
-			mes "They are the worst kids. I don't know why we have to keep them here.";
+			mes "[梅森·班德]";
+			mes "他们什么都做不好，还不听我们的话。";
+			mes "他们是最差的孩子。不知道为什么要留在这里。";
 			next;
-			mes "[Mason Bender]";
-			mes "Can you see the bandage here? I got this injury by the stray bullet shot by the boy.";
-			mes "They are idiots who cannot even hit an automatic target. They were terrible as if they did not hit it on purpose.";
+			mes "[梅森·班德]";
+			mes "看到这绷带了吗？就是那小子走火打伤的。";
+			mes "他们连固定靶都打不中，差得像是故意打偏。";
 			next;
-			mes "[Mason Bender]";
-			mes "That's why I had to move to here, 克拉纳·内米耶里.";
+			mes "[梅森·班德]";
+			mes "所以我只能调来克拉纳·内米耶里。";
 			next;
-			mes "[Mason Bender]";
-			mes "Well, this job fits in my talents...";
-			mes "The fact I dislike those kids is a different story.";
+			mes "[梅森·班德]";
+			mes "不过这工作倒适合我的才能……";
+			mes "我讨厌那些孩子是另一回事。";
 			next;
-			mes "[Mason Bender]";
-			mes "After being deployed in the actual battle, they made trouble and run away. I don't know why they call them genius. Someone like me can be called genius.";
+			mes "[梅森·班德]";
+			mes "上了实战就闯祸逃跑。不知道他们凭什么被叫天才。像我这样的才叫天才。";
 			next;
-			mes "[Mason Bender]";
-			mes "People were just excited about small kids shooting guns.";
+			mes "[梅森·班德]";
+			mes "大家只是看到小孩开枪就兴奋罢了。";
 			completequest 16014;// Testimony: Sniper's story
 			lebedev_quest_16_2++;
 			questinfo_refresh();
@@ -9627,34 +9627,34 @@ rebel_in,19,48,5	script	Mason Bender#16.2rm	4_M_KHMAN,{
 	}
 	// twin daily quest
 	if (isbegin_quest(16028) == 1) {
-		mes "[Mason Bender]";
-		mes "Cookies? Hmm, let me see. Where did you get these?";
+		mes "[梅森·班德]";
+		mes "饼干？嗯，我看看。你从哪弄来的？";
 		next;
-		mes "[Mason Bender]";
-		mes "......Made by those kids?";
+		mes "[梅森·班德]";
+		mes "……那些孩子做的？";
 		next;
-		mes "[Mason Bender]";
-		mes "No, no. I don't have any prejudice against them any more.";
-		mes "Please give it to me. Let me judge it with my talented taste!";
+		mes "[梅森·班德]";
+		mes "不，不。我现在对他们没偏见了。";
+		mes "给我吧。让我用天才的味觉评判一下！";
 		next;
 		if (countitem(25161) < 1) {
-			mes "[Mason Bender]";
-			mes "Why aren't you giving me the cookie?";
+			mes "[梅森·班德]";
+			mes "怎么不把饼干给我？";
 			next;
-			mes "[Mason Bender]";
-			mes "Please give it to me. I won't be too harsh.";
-			mes "You don't have them?";
+			mes "[梅森·班德]";
+			mes "给我吧，我不会太苛刻。";
+			mes "你没有？";
 			close;
 		}
-		mes "[Mason Bender]";
-		mes "...Hmm... Yum yum...";
-		mes "Well, not bad.";
+		mes "[梅森·班德]";
+		mes "……嗯……好吃好吃……";
+		mes "嗯，不错。";
 		next;
-		mes "[Mason Bender]";
-		mes "It is dry and I feel like it's not fully baked. It's too sweet and the shapes are not consistent. But...";
+		mes "[梅森·班德]";
+		mes "有点干，好像没烤透。太甜，形状也不统一。但是……";
 		next;
-		mes "[Mason Bender]";
-		mes "I can see how much effort they gave to make them. It's delicious.";
+		mes "[梅森·班德]";
+		mes "看得出他们很用心。好吃。";
 		completequest 16028;// Service: Cookies delivery
 		delitem 25161,1;// Handmade_cookie2
 		close;
@@ -9664,66 +9664,66 @@ rebel_in,19,48,5	script	Mason Bender#16.2rm	4_M_KHMAN,{
 	case -1:
 		switch( isbegin_quest(16054) ) {
 		case 0:
-			mes "[Mason Bender]";
-			mes "Welcome. This is a weapon store, 克拉纳·内米耶里.";
+			mes "[梅森·班德]";
+			mes "欢迎。这里是武器店克拉纳·内米耶里。";
 			next;
-			mes "[Mason Bender]";
+			mes "[梅森·班德]";
 			mes "Phew... Oh, sorry.";
 			next;
-			mes "[Mason Bender]";
+			mes "[梅森·班德]";
 			mes "You... Yeah. You're the one who made a fuss in there, aren't you?";
 			mes "It's good. I would like to ask you for a favor. Will you accept it?";
 			next;
-			mes "[Mason Bender]";
+			mes "[梅森·班德]";
 			mes "I will give you an opportunity to be in charge of one wing of my talented work.";
 			next;
 			mes "[" + strcharinfo(0) + "]";
 			mes "... Talented work?";
 			next;
-			mes "[Mason Bender]";
+			mes "[梅森·班德]";
 			mes "Well, it's a figure of speech. Haha...";
 			mes "Can you help me?";
 			next;
 			if (select( "Help him.", "I don't feel good about him. Ignore him." ) == 2) {
-				mes "[Mason Bender]";
+				mes "[梅森·班德]";
 				mes "...";
 				next;
 				emotion ET_DELIGHT;
-				mes "[Mason Bender]";
+				mes "[梅森·班德]";
 				mes "Phew... You have been stimulated by my talented eloquence. That's why you cannot even respond. Of course I understand it...";
 				next;
-				mes "[Mason Bender]";
+				mes "[梅森·班德]";
 				mes "Please calm down and talk to me again. Huhu...";
 				next;
 				mes "[" + strcharinfo(0) + "]";
 				mes "... Not even close!";
 				close;
 			}
-			mes "[Mason Bender]";
+			mes "[梅森·班德]";
 			mes "Great. You've been persuaded by my talented eloquence.";
 			mes "So here's my request.";
 			next;
-			mes "[Mason Bender]";
+			mes "[梅森·班德]";
 			mes "This is the leaflet of our weapon store that I prepared with my talented writing skill.";
 			next;
-			mes "[Mason Bender]";
+			mes "[梅森·班德]";
 			mes "Any who reads this will definitely come to this store and buy 81mm mortar.";
-			npctalk "Mason Bender: Talented business sense and talented marketing skill~ Hoho~", "", bc_self;
+			npctalk "梅森·班德： Talented business sense and talented marketing skill~ Hoho~", "", bc_self;
 			next;
 			mes "[" + strcharinfo(0) + "]";
 			mes "(Who's going to buy such a stuff?!)";
 			next;
-			mes "[Mason Bender]";
+			mes "[梅森·班德]";
 			mes "But I have a slight problem.";
 			mes "Although I bring these to the village bench or plaza, none of the villagers take the leaflet.";
 			next;
-			mes "[Mason Bender]";
+			mes "[梅森·班德]";
 			mes "Therefore! You bring this yourself! And give the leaflets kindly to each person. Make sure you pass it on someone's hand with a kind smlie on your face.";
 			next;
-			mes "[Mason Bender]";
+			mes "[梅森·班德]";
 			mes "内米 has been angry about this malignity stock. If you do that, they will surely be sold well. Huhu...";
 			next;
-			mes "[Mason Bender]";
+			mes "[梅森·班德]";
 			mes "Now! I will give you the leaflets. See you!";
 			setquest 16054;	// Differentiated advertising strategy
 			setquest 16055;	// Advertising: Dou you want a clean city?
@@ -9734,48 +9734,48 @@ rebel_in,19,48,5	script	Mason Bender#16.2rm	4_M_KHMAN,{
 		case 1:
 			if (isbegin_quest(16055) != 2 || isbegin_quest(16056) != 2 || isbegin_quest(16057) != 2) {
 				if (countitem(25163) < 1) {
-					mes "[Mason Bender]";
+					mes "[梅森·班德]";
 					mes "Now, I count on you.";
 					mes "In the meantime, I will get ready to receive customers.";
 					next;
-					mes "[Mason Bender]";
+					mes "[梅森·班德]";
 					mes "Whoops... Have you lost the leaflets?";
 					next;
-					mes "[Mason Bender]";
+					mes "[梅森·班德]";
 					mes "Please don't mistreat the leaflets. This time, I will give them to you again.";
 					.@count = (isbegin_quest(16055) != 2) + (isbegin_quest(16056) != 2) + (isbegin_quest(16057) != 2);
 					getitem 25163,.@count;	// Arms_Shop_AD
 					close;
 				}
-				mes "[Mason Bender]";
+				mes "[梅森·班德]";
 				mes "Now! There you go!";
 				mes "You will be spreading my talented writing in the entire village!";
 				close;
 			}
-			mes "[Mason Bender]";
+			mes "[梅森·班德]";
 			mes "Welcome back! How did they respond?";
 			next;
 			mes "[" + strcharinfo(0) + "]";
 			mes "Well... Just so so...";
 			next;
-			mes "[Mason Bender]";
+			mes "[梅森·班德]";
 			mes "Oh? Really?!";
 			next;
-			mes "[Mason Bender]";
+			mes "[梅森·班德]";
 			mes "... Oh, I see. My pink brain cells finished the deduction!";
 			mes "They haven't read my leaflets yet!";
 			next;
 			emotion ET_SURPRISE;
-			mes "[Mason Bender]";
+			mes "[梅森·班德]";
 			mes "They were fascinated by my talented opening so they forgot to read the rest of the leaflet!";
 			next;
-			mes "[Mason Bender]";
+			mes "[梅森·班德]";
 			mes "Huhu... I can't do anything about it. Let us wait evenly.";
 			next;
-			mes "[Mason Bender]";
+			mes "[梅森·班德]";
 			mes "There will be so many people visiting us tomorrow. So I will ask 艾莉 about how to receive many customers.";
 			next;
-			mes "[Mason Bender]";
+			mes "[梅森·班德]";
 			mes "If you don't mind, could you please come back tomorrow and help me receiving customers? Huhu...";
 			completequest 16054;	// Differentiated advertising strategy
 			erasequest 16055;	// Advertising: Dou you want a clean city?
@@ -9791,7 +9791,7 @@ rebel_in,19,48,5	script	Mason Bender#16.2rm	4_M_KHMAN,{
 		break;
 	case 0:
 	case 1:
-		mes "[Mason Bender]";
+		mes "[梅森·班德]";
 		mes "Welcome! Glad to meet you! Have you come to buy the mortar... Oh?";
 		mes "... It's you, adventurer. Welcome.";
 		next;
@@ -9799,17 +9799,17 @@ rebel_in,19,48,5	script	Mason Bender#16.2rm	4_M_KHMAN,{
 		mes "Wait. Were you disappointed! You were!";
 		mes "Seems like your business is in trouble.";
 		next;
-		mes "[Mason Bender]";
+		mes "[梅森·班德]";
 		mes "No! The buyers are strategically judging the situation. In other words, they are warming up.";
 		next;
-		mes "[Mason Bender]";
+		mes "[梅森·班德]";
 		mes "Soon they will realize that buying this mortar will bring them great profit and rush to 克拉纳·内米耶里! Come on, if you are not buying anything, please leave! Come back later!";
 		next;
 		mes "[" + strcharinfo(0) + "]";
 		mes "How many of them did you sell!";
 		next;
 		emotion ET_SWEAT;
-		mes "[Mason Bender]";
+		mes "[梅森·班德]";
 		mes "^FF0000Please leave!!!^000000";
 		next;
 		mes "[内米]";
@@ -9833,47 +9833,47 @@ rebel_in,19,48,5	script	Mason Bender#16.2rm	4_M_KHMAN,{
 		break;
 	}
 	if (isbegin_quest(16059) == 0) {
-		mes "[Mason Bender]";
+		mes "[梅森·班德]";
 		mes "Welcome! 克拉纳·内米耶里... Oh?";
 		next;
-		mes "[Mason Bender]";
+		mes "[梅森·班德]";
 		mes "...Oh, what is it? " + strcharinfo(0) + ", it was you. I thought it was a customer...";
 		next;
 		mes "[" + strcharinfo(0) + "]";
 		mes "Did you sell your cannons?";
 		next;
-		mes "[Mason Bender]";
+		mes "[梅森·班德]";
 		mes "They are mortars, not cannons. I thought they would be sold today...";
 		next;
 		emotion ET_SWEAT;
-		mes "[Mason Bender]";
+		mes "[梅森·班德]";
 		mes "This is strange. According to my calculation, these mortars should have been sold today... And four days later, we are supposed to reach the break-even point. After that, we will begin the turnaround.";
 		next;
-		mes "[Mason Bender]";
+		mes "[梅森·班德]";
 		mes "I don't know why. Hmm..";
 		mes "While I analyze the phenomenon, " + strcharinfo(0) + " could you please hand out the leaflets to villagers once again?";
 		next;
-		mes "[Mason Bender]";
+		mes "[梅森·班德]";
 		mes "Go to the village and find three people who seem to need the mortar earnestly. And give them these leaflets.";
 		next;
 		if (select( "I will do it.", "Sorry. I won't do it." ) == 2) {
-			mes "[Mason Bender]";
+			mes "[梅森·班德]";
 			mes "Come on... Why aren't you helping me?";
 			next;
 			mes "[" + strcharinfo(0) + "]";
 			mes "Well, nobody needs a mortar here.";
 			next;
-			mes "[Mason Bender]";
+			mes "[梅森·班德]";
 			mes "If you can only sell something to someone who needs it, you are a newbie. I will sell something to some people, and they will need it just because they bought it!";
 			next;
-			mes "[Mason Bender]";
+			mes "[梅森·班德]";
 			mes "I will sell electric heaters to the people of Moroc. And I will sell refrigerators in Manuc!";
 			next;
 			mes "[艾莉]";
 			mes "...I hope he uses that passion elsewhere.";
 			close;
 		}
-		mes "[Mason Bender]";
+		mes "[梅森·班德]";
 		mes "My brain cells already knew that you would accept it.";
 		mes "Three sheets of leaflets. I will count on you.";
 		next;
@@ -9888,35 +9888,35 @@ rebel_in,19,48,5	script	Mason Bender#16.2rm	4_M_KHMAN,{
 	}
 	if (isbegin_quest(16055) != 2 || isbegin_quest(16056) != 2 || isbegin_quest(16057) != 2) {
 		if (countitem(25163) < 1) {
-			mes "[Mason Bender]";
+			mes "[梅森·班德]";
 			mes "Now, I count on you.";
 			mes "In the meantime, I will get ready to receive customers.";
 			next;
-			mes "[Mason Bender]";
+			mes "[梅森·班德]";
 			mes "Whoops... Have you lost the leaflets?";
 			next;
-			mes "[Mason Bender]";
+			mes "[梅森·班德]";
 			mes "Please don't mistreat the leaflets. This time, I will give them to you again.";
 			.@count = (isbegin_quest(16055) != 2) + (isbegin_quest(16056) != 2) + (isbegin_quest(16057) != 2);
 			getitem 25163,.@count;	// Arms_Shop_AD
 			close;
 		}
-		mes "[Mason Bender]";
+		mes "[梅森·班德]";
 		mes "Now, I count on you.";
 		mes "In the meantime, I will get ready to receive customers.";
 		close;
 	}
-	mes "[Mason Bender]";
+	mes "[梅森·班德]";
 	mes "Welcome back! How did they respond?";
 	next;
 	mes "[" + strcharinfo(0) + "]";
 	mes "Well... Just so so...";
 	next;
-	mes "[Mason Bender]";
+	mes "[梅森·班德]";
 	mes "Oh? Really?!";
 	mes "If I were you, I would have read the strong desire and flutter toward mortars in their eyes using my talented intuition.";
 	next;
-	mes "[Mason Bender]";
+	mes "[梅森·班德]";
 	mes "Then I will get ready to receive customers again!";
 	mes "I will be busy tomorrow. If you want to visit us, make a reservation in advance.";
 	erasequest 16055;	// Advertising: Dou you want a clean city?
@@ -10058,83 +10058,83 @@ OnInit:
 }
 
 // Milo Quests
-rebel_in,108,27,3	script	Milo River#16.2rm	4_M_GUNSLINGER2,{
+rebel_in,108,27,3	script	米洛·里弗#16.2rm	4_M_GUNSLINGER2,{
 	if (terra_gloria_main < 17) {
-		mes "[Milo River]";
-		mes "It's not my fault that our meals are terrible.";
-		mes "If they give me more time and budget, I can cook much better food.";
+		mes "[米洛·里弗]";
+		mes "我们伙食差不是我的错。";
+		mes "多给我时间和预算，我能做得更好。";
 		next;
-		mes "[Milo River]";
-		mes "Phew, what should I serve the gluttons today? What would they like...?";
+		mes "[米洛·里弗]";
+		mes "唉，今天给那些大胃王做什么？他们会想吃什么……？";
 		close;
 	}
 
 	// 列别杰夫 twins quest
 	if (lebedev_quest_16_2 == 2 || lebedev_quest_16_2 == 3) {
 		if (isbegin_quest(16013) == 1) {
-			mes "[Milo River]";
-			mes "The reputation of the twins in USU? You're an adventurer. Why do you ask such a thing?";
+			mes "[米洛·里弗]";
+			mes "问双胞胎在USU的风评？你是冒险者，为什么问这个？";
 			next;
-			mes "[Milo River]";
-			mes "You have been requested by that unit... Then I should tell you.";
+			mes "[米洛·里弗]";
+			mes "你是那个部队拜托的……那我该告诉你。";
 			next;
-			mes "[Milo River]";
-			mes "Several years ago, commander Ericsson brought them here.";
-			mes "Sounds like he brought them from an orphanage.";
+			mes "[米洛·里弗]";
+			mes "几年前，埃里克森指挥官把他们带来。";
+			mes "好像是从孤儿院带出来的。";
 			next;
-			mes "[Milo River]";
-			mes "They took the training without any problem and excelled in shooting. They quickly were able to play a role of a 反叛者.";
+			mes "[米洛·里弗]";
+			mes "他们训练顺利，射击出色，很快就成了反叛者的一员。";
 			next;
-			mes "[Milo River]";
-			mes "They have been trainees for a while and several month ago, they went on the real mission for the first time. That's when they stirred up trouble.";
-			mes "Some people said that the younger sister threw a grenade at the civilian zone. But I don't know the exact story.";
+			mes "[米洛·里弗]";
+			mes "当了一段时间训练生后，几个月前第一次出实战，就闯了祸。";
+			mes "有人说妹妹往平民区扔了手榴弹，但具体情况我不知道。";
 			next;
-			mes "[Milo River]";
-			mes "After that, they were moved to USU, became more educated, etc. There was a fuss.";
-			mes "That's when they began to disobey their seniors.";
-			mes "I think I heard that's what they've been doing... ever since.";
+			mes "[米洛·里弗]";
+			mes "之后他们被调到USU、接受更多教育，闹出不少动静。";
+			mes "从那时起他们开始不听长辈的话。";
+			mes "我听说他们一直这样……直到现在。";
 			next;
-			mes "[Milo River]";
-			mes "Before that, they were trainees and had more free time than other squadders. They would visit the mess once in a while, receive some snacks and chat with us.";
+			mes "[米洛·里弗]";
+			mes "以前他们还是训练生，比队员空闲，偶尔来食堂拿点心聊天。";
 			next;
-			mes "[Milo River]";
-			mes "After that incident, they never came. Just by hearing the stories about them, I don't feel like they are the same kids I used to know.";
-			mes "They used to be better than this... I hope you can take cake of them.";
+			mes "[米洛·里弗]";
+			mes "那件事后他们再没来过。只听传闻，感觉他们已不是我认识的孩子。";
+			mes "他们以前没这么糟……希望你能照顾他们。";
 			next;
-			mes "[Milo River]";
+			mes "[米洛·里弗]";
 			mes "我能说的就这些。";
 			completequest 16013;// Testimony: Chef's story
 			lebedev_quest_16_2++;
 			questinfo_refresh();
 			next;
 			mes "[" + strcharinfo(0) + "]";
-			mes "(I heard a similar story from others...";
-			mes "Maybe the keyword is the incident that happened at the real mission.";
-			mes "I should go back to the twins and ask them about it.)";
+			mes "（从别人那里也听到类似的事……";
+			mes "关键也许是那场实战中发生的事件。";
+			mes "该回去问双胞胎了。）";
 			close;
 		}
 	}
 	// twins daily quest
 	if (isbegin_quest(16027) == 1) {
-		mes "[Milo River]";
+		mes "[米洛·里弗]";
 		mes "Cookies? Made by the twins?";
 		mes "Oh... Those kids. They visited the mess and asked me for several things. Is this the outcome?";
 		next;
 		emotion ET_HUK;
-		mes "[Milo River]";
+		mes "[米洛·里弗]";
 		mes "I hope they are not trying to poison me...";
 		next;
-		mes "[Milo River]";
+		mes "[米洛·里弗]";
 		mes "Hey, I'm just kidding. Don't look at me like that.";
 		mes "They seem to have found their former character. That's good. You did a great job.";
 		next;
 		if (countitem(25161) < 1) {
-			mes "[Milo River]";
+			mes "[米洛·里弗]";
 			mes "...By the way, where are the cookies?";
 			mes "You don't have anything for me? What a shame! Well~ I like cookies too~";
 			close;
 		}
-		mes "[Milo River]";
+		mes "[米洛·里弗]";
 		mes "So don't look at me like that!!";
 		mes "Just give me the cookies!";
 		completequest 16027;// Service: Cookies delivery
@@ -10142,7 +10142,7 @@ rebel_in,108,27,3	script	Milo River#16.2rm	4_M_GUNSLINGER2,{
 		close;
 	}
 
-	mes "[Milo River]";
+	mes "[米洛·里弗]";
 	mes "Hey, you! Adventurer?";
 	mes "What's the matter?";
 	next;
@@ -10153,85 +10153,85 @@ rebel_in,108,27,3	script	Milo River#16.2rm	4_M_GUNSLINGER2,{
 			break;
 		case 0:
 		case 1:
-			mes "[Milo River]";
+			mes "[米洛·里弗]";
 			mes "Yo! Thanks to your support, I'm sure our seniors will enjoy the tea time today!";
 			next;
-			mes "[Milo River]";
+			mes "[米洛·里弗]";
 			mes "Oops... Again?";
 			mes "No thanks. Our seniors don't eat tea and snacks for every meal! Once a day is enough.";
 			next;
-			mes "[Milo River]";
+			mes "[米洛·里弗]";
 			mes "But thank you for your kindness. Haha!";
 			close;
 		case 2:
 			erasequest 16034;// Sweet cookies once a day
-			mes "[Milo River]";
+			mes "[米洛·里弗]";
 			mes "Wow! You came again! may I ask you to get the snacks for our seniors?";
 			next;
 			break;
 		}
 		if (isbegin_quest(16032) == 0) {
-			mes "[Milo River]";
+			mes "[米洛·里弗]";
 			mes "How did I know you are an adventurer? It's simple.";
 			next;
-			mes "[Milo River]";
+			mes "[米洛·里弗]";
 			mes "A stranger rarely visits this place. So someone like you draws everybody's attention.";
 			next;
-			mes "[Milo River]";
+			mes "[米洛·里弗]";
 			mes "These people must return quickly in emergency, so they cannot go too far from here.";
 			next;
-			mes "[Milo River]";
+			mes "[米洛·里弗]";
 			mes "Therefore, I would like to ask you for a favor... Actually for several. Because it has to be done outside.";
 			next;
-			mes "[Milo River]";
+			mes "[米洛·里弗]";
 			mes "I am very busy because I have to feed the gluttons~ Well now~ I hope you can do something for me~";
 			next;
 			if (select( "I will do it.", "No. I'm busy." ) == 2) {
 				emotion ET_HUK;
-				mes "[Milo River]";
+				mes "[米洛·里弗]";
 				mes "Oh~ You're so mean. What a shame.";
 				mes "This is why we should never talk to outsiders. Am I right? Charity~";
 				next;
-				mes "[Milo River]";
+				mes "[米洛·里弗]";
 				mes "... Where did my lovely and sweet cat go...?";
 				mes "Oh, I am so gloomy and lonely!! The adventurer rejected my request!!";
 				close;
 			}
 			emotion ET_DELIGHT;
-			mes "[Milo River]";
+			mes "[米洛·里弗]";
 			mes "Oh, Thank you! The adventurer is so cool!";
 			mes "I would like to ask you to get some snacks.";
 			next;
-			mes "[Milo River]";
+			mes "[米洛·里弗]";
 			mes "No, no. Don't look at me like that. They are not for me.";
 			mes "Do you know our seniors who live on the 2nd floor? Have you met them?";
 			next;
-			mes "[Milo River]";
+			mes "[米洛·里弗]";
 			mes "They enjoy tea time every day.";
 			mes "So I try to get prepare the best tea and snacks... But it's hard to find them in this out-of-the-way place.";
 			next;
-			mes "[Milo River]";
+			mes "[米洛·里弗]";
 			mes "Since I have to cook for our gluttons, I cannot go out too far. So I am sorry that I haven't been able to prepare something delicious.";
 			next;
-			mes "[Milo River]";
+			mes "[米洛·里弗]";
 			mes "You are an adventurer who travels around the whole world! Please bring something delicious for our seniors and me!";
 			next;
-			mes "[Milo River]";
+			mes "[米洛·里弗]";
 			mes "If the food is too expensive, it might me troublesome for you to get it. Please bring one of the following list.";
 			next;
-			mes "[Milo River]";
+			mes "[米洛·里弗]";
 			mes "Let's see. ^0000CDGrape Herb Tea^000000, ^0000CDOrchid Black Tea^000000, ^0000CDHoney Herb Tea^000000, ^0000CDChocolate Mousse Cake^000000... or ^0000CDFruits Mix^000000.";
 			next;
-			mes "[Milo River]";
+			mes "[米洛·里弗]";
 			mes "If you bring one of them, our seniors will be happy.";
 			mes "I am not asking you to get all of them. Just one of them will be fine.";
 			next;
-			mes "[Milo River]";
+			mes "[米洛·里弗]";
 			mes "It doesn't matter whether you make it on your own or not. I count on you~";
 			setquest 16032;// Hospitality to senior
 			close;
 		}
-		mes "[Milo River]";
+		mes "[米洛·里弗]";
 		mes "What have you brought? I will read the list.";
 		mes "Tell me what you brought!";
 		next;
@@ -10239,19 +10239,19 @@ rebel_in,108,27,3	script	Milo River#16.2rm	4_M_GUNSLINGER2,{
 		//.@s = select( "Grape Herb Tea", "Autumn Red Tea", "Honey Herb Tea", "Chocolate Mousse Cake", "Fruits Mix", "I don't have any." ) - 1;
 		.@s = select( getitemname(.@item_id[0]), getitemname(.@item_id[1]), getitemname(.@item_id[2]), getitemname(.@item_id[3]), getitemname(.@item_id[4]), "I don't have any." ) - 1;
 		if (.@s == 5) {
-			mes "[Milo River]";
+			mes "[米洛·里弗]";
 			mes "Well, I see. Although you are an adventurer, they are not easy to get. Aren't they?";
 			next;
-			mes "[Milo River]";
+			mes "[米洛·里弗]";
 			mes "All I can get around this place are butter with an unpleasant smell and withered herbs. I can't make anything nice with them.";
 			mes "It's just a lack of my ability, haha!";
 			close;
 		}
 		if (countitem(.@item_id[.@s]) < 1) {
-			mes "[Milo River]";
+			mes "[米洛·里弗]";
 			mes "Well! Haha, thank you for your kindness!";
 			next;
-			mes "[Milo River]";
+			mes "[米洛·里弗]";
 			mes "Give it to me!";
 			mes "... What, you haven't brought any of them?";
 			close;
@@ -10275,7 +10275,7 @@ rebel_in,108,27,3	script	Milo River#16.2rm	4_M_GUNSLINGER2,{
 			break;
 		case 0:
 		case 1:
-			mes "[Milo River]";
+			mes "[米洛·里弗]";
 			mes "Oh, it's been a long time since Charity went out. She ate all the forage!";
 			mes "Maybe she will come back after enjoying her stroll. If she doesn't come back, please find her again!";
 			close;
@@ -10287,48 +10287,48 @@ rebel_in,108,27,3	script	Milo River#16.2rm	4_M_GUNSLINGER2,{
 		case 0:
 			switch( isbegin_quest(16041) ) {
 			case 0:	// first time
-				mes "[Milo River]";
+				mes "[米洛·里弗]";
 				mes "Hey, adventurer. Do you know the idol of our unit?";
 				mes "Aigu? Hehe. Aigu is everyone's idol.";
 				next;
-				mes "[Milo River]";
+				mes "[米洛·里弗]";
 				mes "It is the beautiful cat who stays right here! Inside the basket beneath this stairway.";
 				next;
-				mes "[Milo River]";
+				mes "[米洛·里弗]";
 				mes "It's name is Charity! Some guys say it is Arunafeltz Purebred Laherin Shorthair. Actually she just came to us and started living together. So we don't know her breed or age.";
 				next;
 				emotion ET_THROB;
-				mes "[Milo River]";
+				mes "[米洛·里弗]";
 				mes "The important thing is, Charity is so lovely and cute!";
 				next;
-				mes "[Milo River]";
+				mes "[米洛·里弗]";
 				mes "By the way... Charity loves strolling and she spends about half of the day wandering outside. Look at this. I gave her forage this morning and she hasn't eaten half of it yet.";
 				next;
-				mes "[Milo River]";
+				mes "[米洛·里弗]";
 				mes "Perhaps somebody is feeding her outside... But I want to feed her good forage. If somebody gives her rotten food... It must not happen.";
 				next;
-				mes "[Milo River]";
+				mes "[米洛·里弗]";
 				mes "She shouldn't be fay away. Could you please find Charity in 艾因贝克?";
 				next;
-				mes "[Milo River]";
+				mes "[米洛·里弗]";
 				mes "These Anchovy cookies are Charity's favorite snack. Put the cookies on ^0000CDbenches in various places of the village^000000 and call Charity. If she comes out, please bring her to me.";
 				next;
-				mes "[Milo River]";
+				mes "[米洛·里弗]";
 				mes "If she doesn't come out... You can go somewhere else to find her. Maybe she cannot hear you at once. In that case, put Anchovy cookies on the bench and call Charity again.";
 				next;
-				mes "[Milo River]";
+				mes "[米洛·里弗]";
 				mes "I have to prepare the meal for gluttons... Could you go bring Charity?";
 				next;
 				if (select( "Say yes.", "Reject." ) == 2) {
-					mes "[Milo River]";
+					mes "[米洛·里弗]";
 					mes "Charity... You're getting late. I hope nothing happened to you.";
 					mes "I'm sure people will stop her from rushing to the train of entering the mine. Right?";
 					next;
-					mes "[Milo River]";
+					mes "[米洛·里弗]";
 					mes "Hey! Please say yes. Am I right? People like you will protect her, won't they?";
 					close;
 				}
-				mes "[Milo River]";
+				mes "[米洛·里弗]";
 				mes "Thank you! I will give you enough Anchovy cookies.";
 				mes "They are for cats. Give them to Charity and bring back the rest of them. Make sure you don't eat them.";
 				getitem 25162,1;	// Anchovy_cookie
@@ -10336,55 +10336,55 @@ rebel_in,108,27,3	script	Milo River#16.2rm	4_M_GUNSLINGER2,{
 				close;
 			case 1:
 				if (countitem(25162) < 1) {
-					mes "[Milo River]";
+					mes "[米洛·里弗]";
 					mes "Oops? You've come back in empty hands. Where are your Anchovy cookies? Have you run out of them already?";
 					next;
 					emotion ET_SWEAT;
-					mes "[Milo River]";
+					mes "[米洛·里弗]";
 					mes "...Don't tell me you ate them all.";
 					mes "I never thought that you'd actually eat them. Did you eat them?";
 					next;
-					mes "[Milo River]";
+					mes "[米洛·里弗]";
 					mes "Oh, I'm kidding. Did Charity steal them from you? She's so fast and she can do that.";
 					next;
-					mes "[Milo River]";
+					mes "[米洛·里弗]";
 					mes "Anyway, I'll give you the Anchovy cookies again. Please keep them safe. This time, you return with Charity and Anchovy cookies!";
 					getitem 25162,1;	// Anchovy_cookie
 					close;
 				}
-				mes "[Milo River]";
+				mes "[米洛·里弗]";
 				mes "Have you found Charity? If she doesn't show up, call her several times on the same spot.";
 				mes "Who knows? She might be afraid of you because you are a stranger. Charity is a smart cat. Show her that you are harmless.";
 				close;
 			case 2:	// daily
 				switch( isbegin_quest(16043) ) {
 				case 0:
-					mes "[Milo River]";
+					mes "[米洛·里弗]";
 					mes "Hmm... It's been a while since Charity went out...";
 					mes "But not such a long time for us to worry about her.";
 					next;
 					emotion ET_HUK;
-					mes "[Milo River]";
+					mes "[米洛·里弗]";
 					mes "To tell the truth!! I want to see Charity!! I want to pet her!! I miss her so much!";
 					next;
-					mes "[Milo River]";
+					mes "[米洛·里弗]";
 					mes "...So, let me give you Anchovy cookies again. Please find Charity.";
 					mes "Put them on ^0000CDVillage Bench^000000 in 艾因贝克 and call Charity. Will you help me?";
 					next;
 					if (select( "Help him.", "Don't help him." ) == 2) {
-						mes "[Milo River]";
+						mes "[米洛·里弗]";
 						mes "Charity... Charity...";
 						mes "Arrgh... Charity... I hope they write on my tombstone that I died while missing Charity so much...";
 						next;
-						mes "[Milo River]";
+						mes "[米洛·里弗]";
 						mes "Please, adventurer... Will you write it on it? Please say yes...";
 						close;
 					}
-					mes "[Milo River]";
+					mes "[米洛·里弗]";
 					mes "Thanks! Go and get her please.";
 					mes "Oh... I'm suffering from withdrawal symptoms... Charity... I should pet her as soon as possible to recover...";
 					next;
-					mes "[Milo River]";
+					mes "[米洛·里弗]";
 					mes "Use the Anchovy cookies to find Charity and bring the rest of them!";
 					mes "Make sure you don't eat them. Got it?";
 					getitem 25162,1;// Crispy Anchovy
@@ -10392,23 +10392,23 @@ rebel_in,108,27,3	script	Milo River#16.2rm	4_M_GUNSLINGER2,{
 					close;
 				case 1:
 					if (countitem(25162) < 1) {
-						mes "[Milo River]";
+						mes "[米洛·里弗]";
 						mes "Oops? You've come back in empty hands. Where are your Anchovy cookies? Have you run out of them already?";
 						next;
 						emotion ET_HUK;
-						mes "[Milo River]";
+						mes "[米洛·里弗]";
 						mes "...Don't tell me you ate them all.";
 						mes "I never thought that you'd actually eat them. Did you eat them?";
 						next;
-						mes "[Milo River]";
+						mes "[米洛·里弗]";
 						mes "Oh, I'm kidding. Did Charity steal them from you? Phew, she is too fast...";
 						next;
-						mes "[Milo River]";
+						mes "[米洛·里弗]";
 						mes "Anyway, I'll give you the Anchovy cookies again. Please keep them safe. This time, you return with Charity and Anchovy cookies!";
 						getitem 25162,1;// Crispy Anchovy
 						close;
 					}
-					mes "[Milo River]";
+					mes "[米洛·里弗]";
 					mes "Have you found Charity? If she doesn't show up, call her several times on the same spot.";
 					close;
 				case 2:
@@ -10428,7 +10428,7 @@ rebel_in,108,27,3	script	Milo River#16.2rm	4_M_GUNSLINGER2,{
 				sleep2 1000;
 				npctalk "Miss Charity! I love you!!!", "Morana Rudel#16.2rm", bc_self;
 				next;
-				mes "[Milo River]";
+				mes "[米洛·里弗]";
 				mes "Oh . . . ! !";
 				mes "Charity! I'm so glad you are all right! Look at her soft hairs! Charity!!";
 				next;
@@ -10442,7 +10442,7 @@ rebel_in,108,27,3	script	Milo River#16.2rm	4_M_GUNSLINGER2,{
 				mes "I'm the one who brought her and he doesn't seem to care about me...";
 				next;
 				emotion ET_BIGTHROB;
-				mes "[Milo River]";
+				mes "[米洛·里弗]";
 				mes "Miss Charity! You must have been exhausted after being brought by this dusty adventurer.. Shall I prepare the bathwater? Or your meal first? Or... Can I pet you first?!";
 				npctalk "Stop it! I will pet her!!", "Nice Looking Gun#16.2rm", bc_self;
 				sleep2 1000;
@@ -10464,7 +10464,7 @@ rebel_in,108,27,3	script	Milo River#16.2rm	4_M_GUNSLINGER2,{
 				sleep2 1000;
 				npctalk "Her hairs are like a black pearl! Her eyes are sapphire! She is a jewel by herself!";
 				next;
-				mes "[Milo River]";
+				mes "[米洛·里弗]";
 				mes "Oh . . . ! !";
 				mes "Miss Charity! I'm glad you are all right! You are beautiful as usual, Charity!!";
 				next;
@@ -10481,7 +10481,7 @@ rebel_in,108,27,3	script	Milo River#16.2rm	4_M_GUNSLINGER2,{
 				mes "I'm the one who brought her and he doesn't seem to care about me...";
 				next;
 				emotion ET_BIGTHROB;
-				mes "[Milo River]";
+				mes "[米洛·里弗]";
 				mes "Miss Charity! You must have been exhausted after being brought by this dusty adventurer.. Shall I prepare the bathwater? Or... Can I pet you first?";
 				npctalk "What? I'm going to touch her! It's my turn!";
 				sleep2 1000;
@@ -10510,12 +10510,12 @@ rebel_in,108,27,3	script	Milo River#16.2rm	4_M_GUNSLINGER2,{
 			end;
 		}
 	case 3:
-		mes "[Milo River]";
+		mes "[米洛·里弗]";
 		mes "Hey, she's quite mean.";
 		mes "...... What a cat.";
 		next;
 		emotion ET_SMILE;
-		mes "[Milo River]";
+		mes "[米洛·里弗]";
 		mes "You didn't have a meal? As far as I know, every creature including humans and cats become aggressive when they are hungry~";
 		mes "Do you want a warm meal? Well, I cannot guarantee the taste.";
 		close;
@@ -10523,21 +10523,21 @@ rebel_in,108,27,3	script	Milo River#16.2rm	4_M_GUNSLINGER2,{
 	end;
 
 S_Item:
-	mes "[Milo River]";
+	mes "[米洛·里弗]";
 	mes "You brought it as you promised! A " + getarg(1) + " of " + getitemname(getarg(0)) + ". Will you give it to me now?";
 	next;
 	if (select( "Give it to him.", "Do not give it to him." ) == 2) {
-		mes "[Milo River]";
+		mes "[米洛·里弗]";
 		mes "Well, I see. Although you are an adventurer, they are not easy to get. Aren't they?";
 		mes "All I can get around this place " + getarg(2) + ". I can't make anything nice with them.";
 		mes "It's just a lack of my ability, haha!";
 		close;
 	}
-	mes "[Milo River]";
+	mes "[米洛·里弗]";
 	mes "It looks delicious! Thank you for your kindness!";
 	next;
 	emotion ET_DELIGHT;
-	mes "[Milo River]";
+	mes "[米洛·里弗]";
 	mes "Thank you so much for making our seniors happy!";
 	mes "I have to prepare for the tea time tomorrow as well... If you don't mind, could you bring it again tomorrow?";
 	delitem getarg(0),1;
