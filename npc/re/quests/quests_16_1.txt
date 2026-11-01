@@ -4721,10 +4721,10 @@ alberta,187,147,7	script	守护骑士#ep16wal	4_M_KNIGHT_SILVER,{
 		mes "【我简要说了和王宫里伊森霍诺的对话。】";
 		next;
 		mes "[西蒙]";
-		mes "Oh, sorry about that. I am ^0000cd西蒙·沃尔特·马歇尔^000000.";
+		mes "哦，抱歉。我是^0000cd西蒙·沃尔特·马歇尔^000000。";
 		next;
 		mes "[西蒙]";
-		mes "I don't know the whereabouts of ^0000cd凯恩·沃尔特·沃克^000000 who used to be the Guardian Knight of 伊森纳姆, unfortunately.";
+		mes "很遗憾，我不知道曾任伊森纳姆守护骑士的^0000cd凯恩·沃尔特·沃克^000000下落。";
 		next;
 		mes "[" + .@name$ + "]";
 		mes "你们名字里都有沃尔特，有什么特别原因吗？";
@@ -4736,7 +4736,7 @@ alberta,187,147,7	script	守护骑士#ep16wal	4_M_KNIGHT_SILVER,{
 		mes "这名字给人归属感，也让我们为被认可为优秀骑士而自豪。";
 		next;
 		mes "[" + .@name$ + "]";
-		mes "Right. By the way, did you say that you know nothing about 凯恩·沃尔特·沃克?";
+		mes "原来如此。你说对凯恩·沃尔特·沃克一无所知？";
 		next;
 		mes "[西蒙]";
 		mes "不，我不知道。";
@@ -4761,7 +4761,7 @@ alberta,187,147,7	script	守护骑士#ep16wal	4_M_KNIGHT_SILVER,{
 		mes "地下监狱的扒手？";
 		next;
 		mes "[西蒙]";
-		mes "Yes. I don't know his real name, but he is called ^0000cd大脚^000000 in the underworld.";
+		mes "对。不知道真名，但黑道叫他^0000cd大脚^000000。";
 		next;
 		mes "[西蒙]";
 		mes "扒手这类轻犯通常关在别处。但那家伙是在阿鲁纳佩尔兹扒窃被抓。";
@@ -4796,7 +4796,7 @@ alberta,187,147,7	script	守护骑士#ep16wal	4_M_KNIGHT_SILVER,{
 		mes "去监狱怎么样？";
 		next;
 		mes "[西蒙]";
-		mes "You can go see the convict called ^0000cd大脚^000000 locked in the ^0000cdUnderground prison of the palace^000000.";
+		mes "可以去见关在^0000cd王宫地下监狱^000000、叫^0000cd大脚^000000的囚犯。";
 		next;
 		mes "[西蒙]";
 		mes "伊森霍诺没再说别的？去普隆德拉时请代我问好。";
