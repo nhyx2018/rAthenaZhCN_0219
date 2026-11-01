@@ -8611,7 +8611,7 @@ OnInit:
 }
 
 
-einbech,212,212,6	script	Arivero Yurhik#TFQ04	4_M_GUNSLINGER,{
+einbech,212,212,6	script	阿里韦罗·尤希克#TFQ04	4_M_GUNSLINGER,{
 	if (yurhik_quest == 2) {
 		if (countitem(994) < 1) {
 			mes "[阿里韦罗]";
@@ -8631,8 +8631,8 @@ einbech,212,212,6	script	Arivero Yurhik#TFQ04	4_M_GUNSLINGER,{
 		mes "[阿里韦罗]";
 		mes "Shall I try? Let's see. This seems to be the place the agent told us about. Now we have to break the Flame Heart you brought into pieces..";
 		next;
-		cloakoffnpcself( "Teleport Prohibition equipment#1" );
-		specialeffect EF_FLAMELAUNCHER, AREA, "Teleport Prohibition equipment#1";
+		cloakoffnpcself( "传送禁止设备#1" );
+		specialeffect EF_FLAMELAUNCHER, AREA, "传送禁止设备#1";
 		mes "[阿里韦罗]";
 		mes "Yeah~ Great. It's a success.";
 		mes "The equipment showed up. Yikes! Turn on the device you brought before the equipment disappears..";
@@ -8641,16 +8641,16 @@ einbech,212,212,6	script	Arivero Yurhik#TFQ04	4_M_GUNSLINGER,{
 		mes "It was a vague theory, but it succeeded.";
 		mes "Shall we destroy it, pal?";
 		next;
-		specialeffect EF_SUI_EXPLOSION, AREA, "Teleport Prohibition equipment#1";
-		npctalk "Bang!", "Teleport Prohibition equipment#1", bc_self;
+		specialeffect EF_SUI_EXPLOSION, AREA, "传送禁止设备#1";
+		npctalk "Bang!", "传送禁止设备#1", bc_self;
 		sleep2 2000;
-		specialeffect EF_SUI_EXPLOSION, AREA, "Teleport Prohibition equipment#1";
-		npctalk "Bang!", "Teleport Prohibition equipment#1", bc_self;
+		specialeffect EF_SUI_EXPLOSION, AREA, "传送禁止设备#1";
+		npctalk "Bang!", "传送禁止设备#1", bc_self;
 		sleep2 2000;
-		specialeffect EF_SUI_EXPLOSION, AREA, "Teleport Prohibition equipment#1";
-		npctalk "Bang!", "Teleport Prohibition equipment#1", bc_self;
+		specialeffect EF_SUI_EXPLOSION, AREA, "传送禁止设备#1";
+		npctalk "Bang!", "传送禁止设备#1", bc_self;
 		sleep2 2000;
-		specialeffect EF_SUI_EXPLOSION, AREA, "Teleport Prohibition equipment#1";
+		specialeffect EF_SUI_EXPLOSION, AREA, "传送禁止设备#1";
 		mes "[阿里韦罗]";
 		mes "What? Why is it unscathed?";
 		mes "I thought the attack was strong enough..";
@@ -8698,38 +8698,38 @@ einbech,212,212,6	script	Arivero Yurhik#TFQ04	4_M_GUNSLINGER,{
 		mes "Mystic Frozen? Certainly it's an item that has a strong Water attribute. Right. Mystic Frozen will be the equipment strong enough for our purpose. Let's try it.";
 		next;
 		specialeffect EF_FROSTWEAPON;
-		specialeffect EF_SUI_EXPLOSION, AREA, "Teleport Prohibition equipment#1";
-		npctalk "Bang!", "Teleport Prohibition equipment#1", bc_self;
+		specialeffect EF_SUI_EXPLOSION, AREA, "传送禁止设备#1";
+		npctalk "Bang!", "传送禁止设备#1", bc_self;
 		sleep2 2000;
 		specialeffect EF_FROSTWEAPON;
-		specialeffect EF_SUI_EXPLOSION, AREA, "Teleport Prohibition equipment#1";
-		npctalk "Bang!", "Teleport Prohibition equipment#1", bc_self;
+		specialeffect EF_SUI_EXPLOSION, AREA, "传送禁止设备#1";
+		npctalk "Bang!", "传送禁止设备#1", bc_self;
 		sleep2 2000;
 		specialeffect EF_FROSTWEAPON;
-		specialeffect EF_SUI_EXPLOSION, AREA, "Teleport Prohibition equipment#1";
-		npctalk "Bang!", "Teleport Prohibition equipment#1", bc_self;
+		specialeffect EF_SUI_EXPLOSION, AREA, "传送禁止设备#1";
+		npctalk "Bang!", "传送禁止设备#1", bc_self;
 		sleep2 2000;
-		specialeffect EF_LORD, AREA, "Teleport Prohibition equipment#1";
-		cloakonnpcself( "Teleport Prohibition equipment#1" );
+		specialeffect EF_LORD, AREA, "传送禁止设备#1";
+		cloakonnpcself( "传送禁止设备#1" );
 		sleep2 1000;
 		mes "[阿里韦罗]";
 		mes "Great! We destroyed the equipment.";
 		next;
 		mes "[阿里韦罗]";
-		mes "Good job, pal.";
-		mes "Although we destroyed the equipment, there is some magic power remaining. Therefore, teleporting will not be possible in this area for a while.";
+		mes "干得好，朋友。";
+		mes "虽然破坏了设备，但还残留一些魔力。所以这一带暂时不能传送。";
 		next;
 		mes "[阿里韦罗]";
-		mes "But, eventually, teleporting will become possible.";
+		mes "但最终传送会恢复。";
 		next;
 		delitem 995,3;// Mystic Frozen
 		erasequest 5730;	// // Things that can destroy the device
 		setquest 5731;	// // Clana Namieri
 		yurhik_quest = 4;
 		mes "[阿里韦罗]";
-		mes "We destroyed the prohibition equipment. Now let's go back to 克拉纳·内米耶里.";
+		mes "设备破坏了，回克拉纳·内米耶里吧。";
 		close2;
-		cloakonnpcself( "Arivero Yurhik#TFQ04" );
+		cloakonnpcself( "阿里韦罗·尤希克#TFQ04" );
 		end;
 	}
 	end;
@@ -8742,80 +8742,80 @@ einbech,215,210,0	script	艾因贝克 Prohibition equipment	HIDDEN_WARP_NPC,5,5,{
 	end;
 OnTouch:
 	if (yurhik_quest < 4)
-		cloakoffnpcself( "Arivero Yurhik#TFQ04" );
+		cloakoffnpcself( "阿里韦罗·尤希克#TFQ04" );
 	if (yurhik_quest == 3)
-		cloakoffnpcself( "Teleport Prohibition equipment#1" );
+		cloakoffnpcself( "传送禁止设备#1" );
 	end;
 }
 
-einbech,215,210,4	duplicate(dummy_cloaked_npc)	Teleport Prohibition equipment#1	2_MONEMUS
+einbech,215,210,4	duplicate(dummy_cloaked_npc)	传送禁止设备#1	2_MONEMUS
 
 
-lighthalzen,135,233,6	script	Arivero Yurhik#TFQ07	4_M_GUNSLINGER,{
+lighthalzen,135,233,6	script	阿里韦罗·尤希克#TFQ07	4_M_GUNSLINGER,{
 	if (yurhik_quest == 5) {
 		if (countitem(995) < 1 || countitem(996) < 3) {
 			mes "[阿里韦罗]";
-			mes "Sorry! Sorry! As a matter of fact, I arrived here early. But I had to talk to the agent to get the right location. I should have arrived and called you in advance. Sorry to make you come here alone.";
+			mes "抱歉抱歉！其实我很早就到了，但得先和探员确认位置。应该提前通知你的，抱歉让你一个人过来。";
 			next;
 			mes "[阿里韦罗]";
-			mes "You're so great!";
-			mes "Coming all the way here only with that information! I could not find this, so I had to meet the agent.";
+			mes "你真厉害！";
+			mes "只凭那点信息就一路找到这里！我都找不到，只能去见探员。";
 			next;
 			mes "[阿里韦罗]";
-			mes "The important thing is that we both arrived here safely. Remember I asked you to bring one Mystic Frozen and three Rough Winds. Right?";
+			mes "重要的是我们都平安到了。记得我让你带1个水灵矿石和3个风灵矿石吧？";
 			next;
 			mes "[阿里韦罗]";
-			mes "Where are the items I asked you for?";
-			mes "We must destroy this before they realize that the equipment items are being destroyed one by one. Bring them quickly.";
+			mes "我要的东西呢？";
+			mes "必须趁他们发现设备被逐个破坏前动手。快带来。";
 			next;
 			mes "[阿里韦罗]";
-			mes "Oops! There's someone passing by.";
-			mes "I might look suspicious, so I will hide myself.";
+			mes "哎呀！有人经过。";
+			mes "我看起来可疑，先躲起来。";
 			close2;
-			cloakonnpcself( "Arivero Yurhik#TFQ07" );
+			cloakonnpcself( "阿里韦罗·尤希克#TFQ07" );
 			end;
 		}
 		mes "[阿里韦罗]";
-		mes "Sorry! Sorry! As a matter of fact, I arrived here early. But I had to talk to the agent to get the right location. I should have arrived and called you in advance. Sorry to make you come here alone.";
+		mes "抱歉抱歉！其实我很早就到了，但得先和探员确认位置。应该提前通知你的，抱歉让你一个人过来。";
 		next;
 		mes "[阿里韦罗]";
-		mes "You're so great!";
-		mes "Coming all the way here only with that information! I could not find this, so I had to meet the agent.";
+		mes "你真厉害！";
+		mes "只凭那点信息就一路找到这里！我都找不到，只能去见探员。";
 		next;
 		mes "[阿里韦罗]";
-		mes "The important thing is that we both arrived here safely. Remember I asked you to bring one Mystic Frozen and three Rough Winds. Right?";
+		mes "重要的是我们都平安到了。记得我让你带1个水灵矿石和3个风灵矿石吧？";
 		next;
 		mes "[阿里韦罗]";
-		mes "Mystic Frozen. The location is clear, because I checked it with our agent. If we break the Mystic Frozen you brought into pieces..";
+		mes "水灵矿石。位置已经和探员确认过。把你带来的水灵矿石打碎……";
 		next;
-		specialeffect EF_FROSTWEAPON, AREA, "Teleport Prohibition equipment#2";
+		specialeffect EF_FROSTWEAPON, AREA, "传送禁止设备#2";
 		mes "[阿里韦罗]";
-		mes "Good! The equipment has showed up..";
-		mes "And we installed the device we brought..";
+		mes "好！设备现形了……";
+		mes "然后装上我们带来的装置……";
 		next;
 		mes "[阿里韦罗]";
-		mes "Great. Now we can destroy it. Prepare the Rough Wind.";
+		mes "很好，现在可以破坏了。准备风灵矿石。";
 		next;
 		specialeffect EF_LIGHTNINGLOADER;
 		sleep2 500;
-		specialeffect EF_SUI_EXPLOSION, AREA, "Teleport Prohibition equipment#2";
-		npctalk "Bang!", "Teleport Prohibition equipment#2", bc_self;
+		specialeffect EF_SUI_EXPLOSION, AREA, "传送禁止设备#2";
+		npctalk "Bang!", "传送禁止设备#2", bc_self;
 		sleep2 1000;
 		specialeffect EF_LIGHTNINGLOADER;
 		sleep2 500;
-		specialeffect EF_SUI_EXPLOSION, AREA, "Teleport Prohibition equipment#2";
-		npctalk "Bang!", "Teleport Prohibition equipment#2", bc_self;
+		specialeffect EF_SUI_EXPLOSION, AREA, "传送禁止设备#2";
+		npctalk "Bang!", "传送禁止设备#2", bc_self;
 		sleep2 1000;
 		specialeffect EF_LIGHTNINGLOADER;
 		sleep2 500;
-		specialeffect EF_SUI_EXPLOSION, AREA, "Teleport Prohibition equipment#2";
-		npctalk "Bang!", "Teleport Prohibition equipment#2", bc_self;
+		specialeffect EF_SUI_EXPLOSION, AREA, "传送禁止设备#2";
+		npctalk "Bang!", "传送禁止设备#2", bc_self;
 		sleep2 1000;
-		specialeffect EF_LORD, AREA, "Teleport Prohibition equipment#2";
-		cloakonnpcself( "Teleport Prohibition equipment#2" );
+		specialeffect EF_LORD, AREA, "传送禁止设备#2";
+		cloakonnpcself( "传送禁止设备#2" );
 		sleep2 1000;
 		mes "[阿里韦罗]";
-		mes "Nevertheless, the first one is always tough and it is easier from the second one. Now let us disappear with teleporting..";
+		mes "不过第一次总是最难，第二次就轻松了。现在用传送消失吧……";
 		next;
 		emotion ET_THINK;
 		mes "[阿里韦罗]";
@@ -8823,12 +8823,12 @@ lighthalzen,135,233,6	script	Arivero Yurhik#TFQ07	4_M_GUNSLINGER,{
 		next;
 		emotion ET_SHY;
 		mes "[阿里韦罗]";
-		mes "Yikes! I almost forgot.";
-		mes "We cannot teleport immediately after destroying it. I told you about it and I forgot it myself! What a shame.";
+		mes "哎呀！差点忘了。";
+		mes "破坏后不能立刻传送。我还告诉过你，自己却忘了！真丢脸。";
 		next;
 		mes "[阿里韦罗]";
-		mes "Ha! In the past, due to the magic power of this prohibition equipment.. Oh! It's nothing.";
-		mes "We cannot help walking.";
+		mes "哈！以前因为这禁止设备的魔力……哦！没什么。";
+		mes "只能走回去了。";
 		next;
 		delitem 995,1;// Mystic Frozen
 		delitem 996,3;// Rough Wind
@@ -8836,10 +8836,10 @@ lighthalzen,135,233,6	script	Arivero Yurhik#TFQ07	4_M_GUNSLINGER,{
 		setquest 5733;	// Clana Namieri
 		yurhik_quest = 6;
 		mes "[阿里韦罗]";
-		mes "To avoid getting caught, let's scatter.";
-		mes "See you in 克拉纳·内米耶里.";
+		mes "为了避免被抓，我们分开走。";
+		mes "克拉纳·内米耶里见。";
 		close2;
-		cloakonnpcself( "Arivero Yurhik#TFQ07" );
+		cloakonnpcself( "阿里韦罗·尤希克#TFQ07" );
 		end;
 	}
 	end;
@@ -8848,65 +8848,65 @@ OnInit:
 	end;
 }
 
-lighthalzen,137,231,0	script	Rihrtarzen Prohibition equipment 	HIDDEN_WARP_NPC,5,5,{
+lighthalzen,137,231,0	script	里希塔乐镇 Prohibition equipment 	HIDDEN_WARP_NPC,5,5,{
 	end;
 OnTouch:
 	if (yurhik_quest == 5) {
-		cloakoffnpcself( "Teleport Prohibition equipment#2" );
-		mes "Is this it? The mansion surrounded by water? According to the condition, it seems like it.";
+		cloakoffnpcself( "传送禁止设备#2" );
+		mes "是这里吗？四面环水的宅邸？按条件看应该是。";
 		next;
-		cloakoffnpcself( "Arivero Yurhik#TFQ07" );
-		npctalk "Oops?! My hot friend has already arrived.", "Arivero Yurhik#TFQ07", bc_self;
+		cloakoffnpcself( "阿里韦罗·尤希克#TFQ07" );
+		npctalk "哎呀？！我最红的朋友已经到了。", "阿里韦罗·尤希克#TFQ07", bc_self;
 		mes "[阿里韦罗]";
-		mes "Oops?! My hot friend has already arrived.";
+		mes "哎呀？！我最红的朋友已经到了。";
 		close;
 	}
 	end;
 }
 
-lighthalzen,137,231,0	duplicate(dummy_cloaked_npc)	Teleport Prohibition equipment#2	2_MONEMUS
+lighthalzen,137,231,0	duplicate(dummy_cloaked_npc)	传送禁止设备#2	2_MONEMUS
 
 
-yuno,204,226,6	script	Arivero Yurhik#TFQ10	4_M_GUNSLINGER,{
+yuno,204,226,6	script	阿里韦罗·尤希克#TFQ10	4_M_GUNSLINGER,{
 	if (yurhik_quest == 8) {
 		mes "[阿里韦罗]";
-		mes "Welcome, pal! I have just arrived now. I summoned the equipment and mounted it to prevent from disappearing.";
+		mes "欢迎，朋友！我刚到。我已经召唤并固定设备，防止它消失。";
 		next;
 		mes "[阿里韦罗]";
-		mes "Have you brought Great Nature?";
+		mes "你带地灵矿石了吗？";
 		next;
 		if (countitem(997) < 3) {
 			mes "[阿里韦罗]";
-			mes "Not yet. I will be guarding this here. Please bring it quickly.";
-			mes "According to our agent, Rekenber and the government are serious now.";
+			mes "还没。我在这里守着，快点带来。";
+			mes "据探员说，雷根贝格和政府现在动真格了。";
 			mes "就拜托你了。";
 			close;
 		}
 		mes "[阿里韦罗]";
-		mes "You are a reliable friend of mine.";
-		mes "Since we don't have enough time, let's destroy the equipment quickly and go to 艾因布罗克. According to our agent, Rekenber and the government are serious now.";
+		mes "你真是个可靠的朋友。";
+		mes "时间不多，快破坏设备然后去艾因布罗克。据探员说，雷根贝格和政府动真格了。";
 		next;
 		mes "[阿里韦罗]";
-		mes "I will destroy the equipment right now.";
-		mes "Prepare Great Nature.";
+		mes "我现在就破坏设备。";
+		mes "准备地灵矿石。";
 		next;
 		specialeffect EF_SEISMICWEAPON;
 		sleep2 500;
-		specialeffect EF_SUI_EXPLOSION, AREA, "Teleport Prohibition equipment#3";
-		npctalk "Bang!", "Teleport Prohibition equipment#3", bc_self;
+		specialeffect EF_SUI_EXPLOSION, AREA, "传送禁止设备#3";
+		npctalk "Bang!", "传送禁止设备#3", bc_self;
 		sleep2 1000;
 		specialeffect EF_SEISMICWEAPON;
 		sleep2 500;
-		specialeffect EF_SUI_EXPLOSION, AREA, "Teleport Prohibition equipment#3";
-		npctalk "Bang!", "Teleport Prohibition equipment#3", bc_self;
+		specialeffect EF_SUI_EXPLOSION, AREA, "传送禁止设备#3";
+		npctalk "Bang!", "传送禁止设备#3", bc_self;
 		sleep2 1000;
 		specialeffect EF_SEISMICWEAPON;
 		sleep2 500;
-		specialeffect EF_SUI_EXPLOSION, AREA, "Teleport Prohibition equipment#3";
-		npctalk "Bang!", "Teleport Prohibition equipment#3", bc_self;
+		specialeffect EF_SUI_EXPLOSION, AREA, "传送禁止设备#3";
+		npctalk "Bang!", "传送禁止设备#3", bc_self;
 		sleep2 1000;
-		specialeffect EF_LORD, AREA, "Teleport Prohibition equipment#3";
-		cloakonnpcself( "Teleport Prohibition equipment#3" );
+		specialeffect EF_LORD, AREA, "传送禁止设备#3";
+		cloakonnpcself( "传送禁止设备#3" );
 		mes "[阿里韦罗]";
 		mes "We destroyed the prohibition equipment and there appear to be.. no eyewitnesses. Just in case, let's scatter and move to 艾因布罗克.";
 		next;
@@ -8919,7 +8919,7 @@ yuno,204,226,6	script	Arivero Yurhik#TFQ10	4_M_GUNSLINGER,{
 		mes "Oh! I haven't told you the location.";
 		mes "It is the place where 艾因布罗克 Wind turbine is located. You bring three Flame Hearts and one remaining Great Nature. We will use them to destroy the equipment.";
 		next;
-		cloakonnpcself( "Arivero Yurhik#TFQ10" );
+		cloakonnpcself( "阿里韦罗·尤希克#TFQ10" );
 		mes "Vero disappeared in a hurry, as if he was being chased by something. Take three Flame Hearts and one Great Nature and go to 艾因布罗克.";
 		close;
 	}
@@ -8933,16 +8933,16 @@ yuno,206,224,0	script	Yuno Prohibition equipment	HIDDEN_WARP_NPC,5,5,{
 	end;
 OnTouch:
 	if (yurhik_quest == 8) {
-		cloakoffnpcself( "Arivero Yurhik#TFQ10" );
-		cloakoffnpcself( "Teleport Prohibition equipment#3" );
+		cloakoffnpcself( "阿里韦罗·尤希克#TFQ10" );
+		cloakoffnpcself( "传送禁止设备#3" );
 	}
 	end;
 }
 
-yuno,206,224,0	duplicate(dummy_cloaked_npc)	Teleport Prohibition equipment#3	2_MONEMUS
+yuno,206,224,0	duplicate(dummy_cloaked_npc)	传送禁止设备#3	2_MONEMUS
 
 
-einbroch,262,42,4	script	Arivero Yurhik#TFQ13	4_M_GUNSLINGER,{
+einbroch,262,42,4	script	阿里韦罗·尤希克#TFQ13	4_M_GUNSLINGER,{
 	if (yurhik_quest == 9) {
 		mes "[阿里韦罗]";
 		mes "have you brought three Flame Hearts and one Great Nature?";
@@ -8960,43 +8960,43 @@ einbroch,262,42,4	script	Arivero Yurhik#TFQ13	4_M_GUNSLINGER,{
 		next;
 		mes "His voice betrays his panic. And he also asked me to do the job that he had been doing by himself. Is there something wrong? I was curious. I broke the Great Nature into pieces as he asked.";
 		next;
-		specialeffect EF_SEISMICWEAPON, AREA, "Teleport Prohibition equipment#4";
-		cloakoffnpcself( "Teleport Prohibition equipment#4" );
+		specialeffect EF_SEISMICWEAPON, AREA, "传送禁止设备#4";
+		cloakoffnpcself( "传送禁止设备#4" );
 		emotion ET_BLABLA;
 		mes "[阿里韦罗]";
 		mes "Now! Time to use the Flame Heart!";
 		next;
-		mes "As Vero asked me, I smashed the Teleport Prohibition equipment with the Flame Heart.";
+		mes "As Vero asked me, I smashed the 传送禁止设备 with the Flame Heart.";
 		next;
 		specialeffect2 EF_FLAMELAUNCHER;
 		sleep2 200;
-		npctalk "Bang!", "Teleport Prohibition equipment#4", bc_self;
-		specialeffect EF_SUI_EXPLOSION, AREA, "Teleport Prohibition equipment#4";
+		npctalk "Bang!", "传送禁止设备#4", bc_self;
+		specialeffect EF_SUI_EXPLOSION, AREA, "传送禁止设备#4";
 		specialeffect EF_MAGICCRASHER2;
 		sleep2 2000;
 		specialeffect2 EF_FLAMELAUNCHER;
 		sleep2 200;
-		npctalk "Bang!", "Teleport Prohibition equipment#4", bc_self;
-		specialeffect EF_SUI_EXPLOSION, AREA, "Teleport Prohibition equipment#4";
+		npctalk "Bang!", "传送禁止设备#4", bc_self;
+		specialeffect EF_SUI_EXPLOSION, AREA, "传送禁止设备#4";
 		specialeffect EF_MAGICCRASHER2;
 		sleep2 2000;
 		specialeffect2 EF_FLAMELAUNCHER;
 		sleep2 200;
-		npctalk "Bang!", "Teleport Prohibition equipment#4", bc_self;
-		specialeffect EF_SUI_EXPLOSION, AREA, "Teleport Prohibition equipment#4";
+		npctalk "Bang!", "传送禁止设备#4", bc_self;
+		specialeffect EF_SUI_EXPLOSION, AREA, "传送禁止设备#4";
 		sleep2 200;
 		specialeffect EF_SOULBURN;
 		sleep2 200;
 		npctalk "Arrggh.. I can only go this far......", "", bc_self;
 		sleep2 1000;
-		specialeffect EF_LORD, AREA, "Teleport Prohibition equipment#4";
-		cloakonnpcself( "Teleport Prohibition equipment#4" );
+		specialeffect EF_LORD, AREA, "传送禁止设备#4";
+		cloakonnpcself( "传送禁止设备#4" );
 		sleep2 1000;
 		mes "The equipment was destroyed quickly. Then I realized that Vero looked a bit abnormal. Is he sick or something?";
 		next;
 		emotion ET_SORRY;
 		mes "[阿里韦罗]";
-		mes "Hey, pal! I know I have been naughty. But, thanks to your support, I managed to eliminate every Teleport Prohibition equipment in Schwaltzvalt.";
+		mes "Hey, pal! I know I have been naughty. But, thanks to your support, I managed to eliminate every 传送禁止设备 in Schwaltzvalt.";
 		mes "Thank you for helping me. This was my wish.";
 		next;
 		emotion ET_QUESTION, playerattached();
@@ -9017,8 +9017,8 @@ einbroch,262,42,4	script	Arivero Yurhik#TFQ13	4_M_GUNSLINGER,{
 		next;
 		specialeffect EF_MAPPILLAR;
 		sleep2 4000;
-		npctalk "Oh..", "Arivero Yurhik#TFQ13", bc_self;
-		cloakonnpcself( "Arivero Yurhik#TFQ13" );
+		npctalk "Oh..", "阿里韦罗·尤希克#TFQ13", bc_self;
+		cloakonnpcself( "阿里韦罗·尤希克#TFQ13" );
 		delitem 997,1;// Great Nature
 		delitem 994,3;// Flame Heart
 		erasequest 5736;	// To 艾因布罗克
@@ -9038,13 +9038,13 @@ einbroch,260,40,0	script	艾因布罗克 Prohibition equipment	HIDDEN_WARP_NPC,5,5,{
 	end;
 OnTouch:
 	if (yurhik_quest == 9) {
-		cloakoffnpcself( "Arivero Yurhik#TFQ13" );
-		npctalk "Friend! You've arrived!", "Arivero Yurhik#TFQ13", bc_self;
+		cloakoffnpcself( "阿里韦罗·尤希克#TFQ13" );
+		npctalk "Friend! You've arrived!", "阿里韦罗·尤希克#TFQ13", bc_self;
 	}
 	end;
 }
 
-einbroch,260,40,0	duplicate(dummy_cloaked_npc)	Teleport Prohibition equipment#4	2_MONEMUS
+einbroch,260,40,0	duplicate(dummy_cloaked_npc)	传送禁止设备#4	2_MONEMUS
 
 
 rebel_in,91,67,3	script	Ericsson Adler#16.2rm	4_MAL_CAPTAIN,{
