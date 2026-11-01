@@ -98,7 +98,7 @@ slabw01,236,91,3	script	新兵#ep162_04	4_M_ROOKIE,{
 		next;
 		mes "[新兵]";
 		mes "这是什么样的设施？";
-		mes "Ssss.";
+		mes "嘶……";
 		mes "等适当鉴定之后，我或许会请你做个了结……";
 		mes "我又得去守中枢室的门了。";
 		close;
@@ -290,7 +290,7 @@ OnInstanceInit:
 	next;
 	mes "[艾森·维尔纳]";
 	mes "算了，随便吧。";
-	mes "Welcome.";
+	mes "欢迎。";
 	mes "欢迎来到艾森·维尔纳的世界。";
 	next;
 	cutin "ep16_eisen02.bmp",1;
@@ -478,27 +478,27 @@ OnTouch:
 	getmapxy .@map$,.@x,.@y, BL_NPC;
 	switch( .@num ) {
 	case 1:	// 2 spawn area
-		npctalk ".. Dang, how did you get in here?";
+		npctalk "……可恶，你怎么进来的？";
 		areamonster .@map$, 186,92,190,94, "Special Guard", 3622,3;	// EP16_2_MM_S_GUARDS
 		.@mob_count = 3;
 		break;
 	case 2:	// 3 spawn area
-		npctalk ".. Dang, how did you get in here?";
+		npctalk "……可恶，你怎么进来的？";
 		areamonster .@map$, 186,142,190,143, "Special Guard", 3622,3;	// EP16_2_MM_S_GUARDS
 		areamonster .@map$, 186,160,190,162, "Special Guard", 3622,3;
 		.@mob_count = 3;
 		break;
 	case 5:
-		npctalk ".. Dang, how did you get in here?";
+		npctalk "……可恶，你怎么进来的？";
 		.@mob_count = 3;
 		break;
 	case 3:
-		npctalk ".. Dang, how did you get in here?";
+		npctalk "……可恶，你怎么进来的？";
 		.@mob_count = 1;
 		.@label$ = instance_npcname("#security_device_lab") + "::OnLeft1";
 		break;
 	case 4:
-		npctalk ".. Dang, how did you get in here?";
+		npctalk "……可恶，你怎么进来的？";
 		.@mob_count = 3;
 		.@label$ = instance_npcname("#security_device_lab") + "::OnRight1";
 		break;
@@ -632,7 +632,7 @@ OnRight2:
 	mes "它可不是仿制品能比的。";
 	next;
 	mes "[艾森·维尔纳]";
-	mes "... The fools in the kingdom cannot even utilize the power they already have.";
+	mes "……王国的蠢货连自己拥有的力量都不会用。";
 	mes "真可惜。";
 	mes "所以我决定用它……";
 	next;
@@ -643,7 +643,7 @@ OnRight2:
 	mes "[艾森·维尔纳]";
 	mes "我再告诉你一次。别吃惊。";
 	mes "不，你要是吃惊，我反而高兴。";
-	mes "Huhuhuhuhu....";
+	mes "呵呵呵呵……";
 	next;
 	cutin "ep16_eisen03.bmp",1;
 	mes "[艾森·维尔纳]";
@@ -744,7 +744,7 @@ OnTouch:
 	next;
 	cutin "ep16_eisen03.bmp",1;
 	mes "[艾森·维尔纳]";
-	mes "... Certainly, some of them get killed due to chapped cells. Ha ha!";
+	mes "……确实有些因为细胞干裂而死。哈哈！";
 	next;
 	select("你想说的就这些吗？");
 	unittalk getcharid(3), "" + strcharinfo(0) + "：你想说的就这些吗？";
@@ -756,7 +756,7 @@ OnTouch:
 	next;
 	cutin "ep16_eisen01.bmp",1;
 	mes "[艾森·维尔纳]";
-	mes "Something...";
+	mes "某种东西……";
 	mes "一份会让你吃惊的礼物。";
 	close2;
 	setpcblock PCBLOCK_NPC, true;
@@ -862,8 +862,8 @@ OnTouch:
 	next;
 	cutin "ep16_seiren02.bmp",2;
 	mes "[赛依连]";
-	mes "...... Is it the end of your will?";
-	npctalk "...... Is it the end of your will?", .@seyren$;
+	mes "……你的意志就止于此吗？";
+	npctalk "……你的意志就止于此吗？", .@seyren$;
 	next;
 	cutin "ep16_eisen03.bmp",0;
 	mes "[艾森·维尔纳]";
@@ -877,9 +877,9 @@ OnTouch:
 	next;
 	cutin "ep16_seiren02.bmp",2;
 	mes "[赛依连]";
-	mes "... Eisen Werner.";
+	mes "……艾森·维尔纳。";
 	mes "我再问你一次。你的意志就止于此吗？";
-	npctalk "... Eisen Werner. Let me ask you again. Is it the end of your will?", .@seyren$;
+	npctalk "……艾森·维尔纳。我再问你一次，你的意志就止于此吗？", .@seyren$;
 	next;
 	cutin "ep16_eisen01.bmp",0;
 	mes "[艾森·维尔纳]";
@@ -901,10 +901,10 @@ OnTouch:
 	disablenpc instance_npcname("Eisen Werner#werner05");
 	sleep2 2000;
 	setpcblock PCBLOCK_NPC, false;
-	npctalk "Oh....", .@seyren$;
+	npctalk "哦……", .@seyren$;
 	mes "[赛依连]";
-	mes "... Eisen. You have abandoned everything like this.";
-	npctalk "... Eisen. You have abandoned everything like this.", .@seyren$;
+	mes "……艾森，你就这样放弃了一切。";
+	npctalk "……艾森，你就这样放弃了一切。", .@seyren$;
 	specialeffect2 EF_DEVIL3;
 	cutin "ep16_seiren01.bmp",2;
 	next;
@@ -953,7 +953,7 @@ OnTouch:
 	cutin "ep16_seiren01.bmp",2;
 	mes "[赛依连]";
 	mes "你是来取回这个的吗？";
-	mes "... The land is gone and only the star remains.";
+	mes "……大地已逝，只剩星辰。";
 	next;
 	specialeffect2 EF_DEVIL7;
 	cutin "ep16_seiren02.bmp",2;
@@ -1059,7 +1059,7 @@ OnTouch:
 	sleep2 3000;
 	npctalk ".......", .@npc_name$;
 	sleep2 3000;
-	npctalk ".. Damn Werner. Why did you mix me with a wolf?", .@npc_name$;
+	npctalk "……该死的维尔纳，为什么把我跟狼混在一起？", .@npc_name$;
 	sleep2 3000;
 	npctalk "反……反正，你死定了。", .@npc_name$;
 	sleep2 3000;
