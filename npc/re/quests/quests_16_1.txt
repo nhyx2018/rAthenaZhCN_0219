@@ -1653,7 +1653,7 @@ prt_lib,91,85,3	script	魔法师尼勒姆#ep16_warp	4_M_JOB_WIZARD,{
 			mes "哈哈，太晚也不太好……";
 			close;
 		}
-		if (instance_create("祝福仪式") < 0) {
+		if (instance_create("Ritual of Blessing") < 0) {
 			mes "[尼勒姆]";
 			mes "嗯？不知道怎么回事，现在好像进不去。";
 			mes "这是只有展现魔力才会开启的秘密区域。";
@@ -1846,7 +1846,7 @@ prt_lib,88,90,1	script	Room of Consciousness#evt_gate01	PORTAL,{
 			mes "^4d4dffOnly the party leader can enter MD [祝福仪式].^000000";
 			close;
 		}
-		switch( instance_enter("祝福仪式") ) {
+		switch( instance_enter("Ritual of Blessing") ) {
 		case IE_OTHER:
 			mes "[尼勒姆]";
 			mes "Oh, well, the movement of magic seems uneasy.";
