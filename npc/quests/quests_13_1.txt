@@ -8381,7 +8381,7 @@ OnInit:
 	end;
 }
 
-spl_fild02,314,165,0	script	鱼群#1::Fishinghole	844,{
+spl_fild02,314,165,0	script	鱼群#1::Fishinghole	844,3,3,{
 	if ((checkquest(12060,PLAYTIME) == -1) && (countitem(6039) < 20)) {
 		specialeffect2 EF_BUBBLE;
 		specialeffect2 EF_INVENOM;
@@ -8441,6 +8441,9 @@ spl_fild02,314,165,0	script	鱼群#1::Fishinghole	844,{
 		mes "鱼儿在水中游动。";
 		close;
 	}
+OnInit:
+	questinfo(QTYPE_QUEST, QMARK_YELLOW, "ep13_1_rhea == 13");
+	end;
 }
 
 spl_fild02,321,169,0	duplicate(Fishinghole)	鱼群#2	844
