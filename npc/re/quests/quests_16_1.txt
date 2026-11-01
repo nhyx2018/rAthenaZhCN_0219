@@ -1653,7 +1653,7 @@ prt_lib,91,85,3	script	魔法师尼勒姆#ep16_warp	4_M_JOB_WIZARD,{
 			mes "哈哈，太晚也不太好……";
 			close;
 		}
-		if (instance_create("Ritual of Blessing") < 0) {
+		if (instance_create("祝福仪式") < 0) {
 			mes "[尼勒姆]";
 			mes "嗯？不知道怎么回事，现在好像进不去。";
 			mes "这是只有展现魔力才会开启的秘密区域。";
@@ -1776,7 +1776,7 @@ prt_lib,91,85,3	script	魔法师尼勒姆#ep16_warp	4_M_JOB_WIZARD,{
 		mes "Come here! ^4d4dffDimension Warper MkII^000000!!";
 		next;
 		mes "[尼勒姆]";
-		mes "Well, let's go, dear customer.";
+		mes "好了，走吧，亲爱的客人。";
 		mes "I wonder what we are going to see this time!";
 		setquest 7700;// Once More!
 		erasequest 7699;// To the Past
@@ -1795,35 +1795,35 @@ prt_lib,91,85,3	script	魔法师尼勒姆#ep16_warp	4_M_JOB_WIZARD,{
 		close;
 	case 22:
 		mes "[尼勒姆]";
-		mes "What are you doing?";
+		mes "你在做什么？";
 		mes "Go grill the librarian to dig out the truth!";
 		next;
 		cloakoffnpcself( "克罗内克·G·海涅#ep16_01_lib01" );
 		mes "[尼勒姆]";
-		mes "What did we go through all the trouble for?";
-		mes "Look, there is Archduke Grantz.";
+		mes "我们费这么大劲是为了什么？";
+		mes "看，格兰茨大公在那里。";
 		close;
 	case 23:
 		mes "[尼勒姆]";
-		mes "^4d4dffThe 海尔内 family will get the approval to enter the 'Past Memories of the Royal Family'^000000, right?";
-		mes "We will see each other more often from now on then.";
-		mes "Haha, this must be what others call the destiny-隆?";
+		mes "^4d4dff海尔内家族会获准进入‘王家过去的记忆’^000000，对吧？";
+		mes "那以后我们会常常见面。";
+		mes "哈哈，这大概就是别人说的命运吧？";
 		next;
 		mes "[尼勒姆]";
-		mes "What are you doing?";
-		mes "Let's go see ^4d4dffDuke Friedrich to check if the approval has been issued!^000000";
+		mes "你在做什么？";
+		mes "去看看^4d4dff弗里德里希公爵的批准下来没有^000000！";
 		close;
 	default:
 		mes "[尼勒姆]";
-		mes "Today, we are going on a secret journey together again!";
-		mes "Hahaha. You'd better get excited!";
-		mes "I'll let you travel in the first class!";
+		mes "今天又要一起秘密旅行了！";
+		mes "哈哈哈，你最好兴奋点！";
+		mes "我让你坐头等舱！";
 		next;
 		mes "[尼勒姆]";
-		mes "Well, let's go, dear customer.";
-		mes "What would be waiting for us today?";
-		mes "I guess this would end up a failure again, though.";
-		mes "Hahaha-";
+		mes "好了，走吧，亲爱的客人。";
+		mes "今天会有什么等着我们？";
+		mes "不过大概又会失败。";
+		mes "哈哈哈——";
 		cloakoffnpcself( "Dimension Warper MkII#ep16_lib" );
 		close;
 	}
@@ -1831,7 +1831,7 @@ prt_lib,91,85,3	script	魔法师尼勒姆#ep16_warp	4_M_JOB_WIZARD,{
 
 prt_lib,88,90,1	script	Room of Consciousness#evt_gate01	PORTAL,{
 	if (getcharid(1) == 0 || is_party_leader() == false) {
-		mes "^4d4dffOnly the party leader can enter MD [Ritual of Blessing].^000000";
+		mes "^4d4dffOnly the party leader can enter MD [祝福仪式].^000000";
 		close;
 	}
 	if (ep16_royal == 8) {
@@ -1843,10 +1843,10 @@ prt_lib,88,90,1	script	Room of Consciousness#evt_gate01	PORTAL,{
 			close;
 		}
 		if (getcharid(1) == 0 || is_party_leader() == false) {
-			mes "^4d4dffOnly the party leader can enter MD [Ritual of Blessing].^000000";
+			mes "^4d4dffOnly the party leader can enter MD [祝福仪式].^000000";
 			close;
 		}
-		switch( instance_enter("Ritual of Blessing") ) {
+		switch( instance_enter("祝福仪式") ) {
 		case IE_OTHER:
 			mes "[尼勒姆]";
 			mes "Oh, well, the movement of magic seems uneasy.";
@@ -1862,7 +1862,7 @@ prt_lib,88,90,1	script	Room of Consciousness#evt_gate01	PORTAL,{
 			mes "Only the party leader can enter.^000000";
 			close;
 		case IE_OK:
-			mapannounce "prt_lib", "Party member " + strcharinfo(0) + " of party's " + getpartyname( getcharid(1) ) + " enters Ritual of Blessing.", bc_map,0xFF99,FW_NORMAL,12;
+			mapannounce "prt_lib", "Party member " + strcharinfo(0) + " of party's " + getpartyname( getcharid(1) ) + " enters 祝福仪式.", bc_map,0xFF99,FW_NORMAL,12;
 			//warp "2@mir",101,12;
 			end;
 		}
@@ -1875,25 +1875,25 @@ OnInit:
 	end;
 }
 
-prt_lib,56,61,4	script	Guardian Knight#ep16_roomguard	4_M_CRU,{
+prt_lib,56,61,4	script	守护骑士#ep16_roomguard	4_M_CRU,{
 	if (ep16_royal < 13)
 		npctalk "On duty. No problem.", "", bc_self;
 	else {
-		mes "[Guardian Knight]";
-		mes "Would you go out through the passage?";
-		mes "There is another overwatcher where I am about to send you.";
+		mes "[守护骑士]";
+		mes "你要从通道出去吗？";
+		mes "我要送你去的地方还有另一个监视者。";
 		next;
-		mes "[Guardian Knight]";
-		mes "Don't be surprised and you may go out with his help.";
+		mes "[守护骑士]";
+		mes "别惊讶，在他帮助下可以出去。";
 		next;
-		if (select( "Go out now.", "Go out later." ) == 2) {
-			mes "[Guardian Knight]";
-			mes "I will send you anytime when you need it.";
-			mes "Just don't waste too much time here.";
+		if (select( "现在出去。", "稍后出去。" ) == 2) {
+			mes "[守护骑士]";
+			mes "需要的话随时送你。";
+			mes "只是别在这里浪费太多时间。";
 			close;
 		}
-		mes "[Guardian Knight]";
-		mes "Let's me guide you right away,";
+		mes "[守护骑士]";
+		mes "我马上引导你。";
 		close2;
 		warp "prt_pri00",60,127;
 	}
@@ -1932,46 +1932,46 @@ prt_lib,80,79,3	script	克罗内克·G·海涅#ep16_01_lib01	4_EP16_GRANZ,{
 	if (ep16_royal == 22) {
 		cutin "ep16_kronecker_granz_heine",2;
 		mes "[克罗内克]";
-		mes "Did you find out anything?";
+		mes "查到什么了吗？";
 		next;
-		select("Tell him what you have seen.");
+		select("告诉他你看到的事。");
 		mes "[克罗内克]";
-		mes "...........Did such thing happen?";
-		mes "There has been a record of the disaster in Prontera.";
-		next;
-		mes "[克罗内克]";
-		mes "I didn't know that the 依美乐心脏 in the Room of Consciousness was stolen by the Valkyrie!";
-		mes "Why wasn't such a thing recorded?";
+		mes "……发生过这种事？";
+		mes "普隆德拉的灾难有记录。";
 		next;
 		mes "[克罗内克]";
-		mes "Can you read the document now then?";
-		mes "If what you have seen is true, the seal would be broken.";
+		mes "我不知道意识房间里的依美乐心脏被瓦尔基里抢走了！";
+		mes "为什么这种事没被记录？";
+		next;
+		mes "[克罗内克]";
+		mes "那你能读文件了吗？";
+		mes "如果你看到的是真的，封印应该解除了。";
 		next;
 		cutin "",255;
-		mes "When you touch the blank page of the book Kronecker has given you,";
-		mes "The text shows up with a glow.";
+		mes "你触摸克罗内克给你的空白书页，";
+		mes "文字发着光显现出来。";
 		next;
 		mes "^4d4dff......";
-		mes "Due to the battle of the Valkyrie, the 依美乐心脏 sealed in the Room of Consciousness disappeared.";
+		mes "由于瓦尔基里的战斗，封印在意识房间的依美乐心脏消失了。";
 		next;
-		mes "I was terrified that the symbol of legitimacy held by the royal family had been gone.";
-		mes "I am afraid that we wouldn't be able to see the light of Terra Gloria in the coronation.";
+		mes "我害怕王室所持的正统象征就此消失。";
+		mes "我怕加冕礼上看不到大地荣耀的光辉。";
 		next;
-		mes "The problem would occur from the next coronation.";
+		mes "问题会从下一次加冕礼开始出现。";
 		mes "The people of the kingdom will be disheartened and worried about their future if the blessing of the earth is not given to the crowning of the king.";
 		next;
 		mes "I consulted Varmunt the Great Sage about this.";
 		mes "He told me he could help and installed something in the Room of Consciousness.";
 		next;
-		mes "I was surprised to see what was installed there reacting with Terra Gloria.";
-		mes "It delivered enough magical power to Terra Gloria's Star of Blessing,";
+		mes "I was surprised to see what was installed there reacting with 大地荣耀.";
+		mes "It delivered enough magical power to 大地荣耀's Star of Blessing,";
 		next;
-		mes "And Terra Gloria could give the blessing of the earth as usual.";
+		mes "And 大地荣耀 could give the blessing of the earth as usual.";
 		next;
 		mes "Everything was all right.";
 		mes "Even if it was by the fake 依美乐心脏.";
 		next;
-		mes "Terra Gloria, our beautiful crown.";
+		mes "大地荣耀, our beautiful crown.";
 		mes "In the blessed crown, there remained a piece of 依美乐心脏 which has been guarding Prontera for generations.";
 		next;
 		mes "It is enough.";
@@ -1981,7 +1981,7 @@ prt_lib,80,79,3	script	克罗内克·G·海涅#ep16_01_lib01	4_EP16_GRANZ,{
 		mes "And seal it with a condition which cannot be met.";
 		next;
 		mes "If one of our descendants happen to read this record,";
-		mes "Make sure to guard Terra Gloria.";
+		mes "Make sure to guard 大地荣耀.";
 		mes "It is the last piece of 依美乐心脏 left to us.^000000";
 		next;
 		mes "......";
@@ -2011,7 +2011,7 @@ prt_lib,80,79,3	script	克罗内克·G·海涅#ep16_01_lib01	4_EP16_GRANZ,{
 		mes "The real piece of 依美乐心脏 to replace what has been destroyed.";
 		next;
 		mes "[克罗内克]";
-		mes "The real problem is Terra Gloria...";
+		mes "The real problem is 大地荣耀...";
 		mes "It has been one of a kind to begin with.";
 		mes "Since it was made by crafting a small piece fallen from the heart...";
 		next;
@@ -2100,7 +2100,7 @@ prt_lib,85,82,5	script	Ian Walther#ep16_lib01	1_M_JOBTESTER,{
 		next;
 		npctalk "...Strange, it is blank.", "克罗内克·G·海涅#ep16_01_lib01", bc_self;
 		mes "[Ian Walther]";
-		mes "Only few people know about the Past Memories of the Royal Family and the Ritual of Blessing...";
+		mes "Only few people know about the Past Memories of the Royal Family and the 祝福仪式...";
 		next;
 		mes "[马克西米利安]";
 		mes "You need to make it more clear.";
@@ -2144,8 +2144,8 @@ prt_lib,85,82,5	script	Ian Walther#ep16_lib01	1_M_JOBTESTER,{
 		mes "It has already happened. We need to prepare for the future.";
 		next;
 		mes "[克罗内克]";
-		mes "However, ^4d4dffTerra Gloria^000000 is gone...";
-		npctalk "Is Terra Gloria...?", "Ian Walther#ep16_lib01", bc_self;
+		mes "However, ^4d4dff大地荣耀^000000 is gone...";
+		npctalk "Is 大地荣耀...?", "Ian Walther#ep16_lib01", bc_self;
 		npctalk "Is it gone? What happened...?", "勒维耶·维格纳#ep16_lib01", bc_self;
 		npctalk "!!!!!", "马克西米利安·雷根布尔格#ep16_lib01", bc_self;
 		next;
@@ -2280,7 +2280,7 @@ prt_lib,85,82,5	script	Ian Walther#ep16_lib01	1_M_JOBTESTER,{
 		mes "You shouldn't contact with anyone other than the ones you must see.";
 		next;
 		mes "[克罗内克]";
-		mes "And about disappeared ^4d4dffTerra Gloria^000000";
+		mes "And about disappeared ^4d4dff大地荣耀^000000";
 		mes "And destroyed Star of Blessing, we need to come up with a solution.";
 		next;
 		mes "[Ian Walther]";
@@ -4816,15 +4816,15 @@ alberta,187,147,7	script	Guardian Knight#ep16wal	4_M_KNIGHT_SILVER,{
 		mes "I have a lot of questions for you, but I guess I'd better hear the story from my master. Then dear adventurer, have a safe trip!";
 		close;
 	}
-	mes "[Guardian Knight]";
+	mes "[守护骑士]";
 	mes "What if anything happens to my master while I am gone...";
 	mes "Shall I leave for Prontera now?";
 	next;
-	mes "[Guardian Knight]";
+	mes "[守护骑士]";
 	mes "No, he will be mad at me.";
 	mes "He will call me someday. Let's wait here.";
 	next;
-	mes "[Guardian Knight]";
+	mes "[守护骑士]";
 	mes "Just a little more.";
 	close;
 }
@@ -5378,7 +5378,7 @@ prt_cas_q,21,83,3	script	弗里德里希·S·海涅#ep16_01	4_EP16_STOLZ,{
 		mes "I hope it works this time.";
 		next;
 		mes "[弗里德里希]";
-		mes "Please save the piece of Ymir Heart from Valkyrie.";
+		mes "Please save the piece of Ymir Heart from 瓦尔基里.";
 		setquest 7705;// Hope You Cannot Let Go
 		close3;
 	case 0:
@@ -14210,23 +14210,23 @@ prt_cas,367,123,7	script	Kid#ep16_etc04	4_M_ACROSS,{
 
 // Corridor left
 prt_cas,161,168,5	script	Royal Guardian Knight#02	4_M_CRU,{
-	mes "[Guardian Knight]";
+	mes "[守护骑士]";
 	mes "You are a visitor to the Prontera Palace.";
 	mes "Do you need a guide?";
 	next;
-	switch( select( "Valkyrie Realm", "Royal Villa", "Banquet Hall" ) ) {
+	switch( select( "瓦尔基里 Realm", "Royal Villa", "Banquet Hall" ) ) {
 	case 1:
-		mes "[Guardian Knight]";
+		mes "[守护骑士]";
 		mes "You may move to the northern corridor from here.";
-		mes "There is the entrance to Valkyrie Realm in the middle of the northern corridor.";
+		mes "There is the entrance to 瓦尔基里 Realm in the middle of the northern corridor.";
 		close;
 	case 2:
-		mes "[Guardian Knight]";
+		mes "[守护骑士]";
 		mes "The door on the left is the entrance to the royal villa.";
 		mes "There are the residences for the 海尔内, 内里乌斯 and Walther families and a room reserved for a special guest.";
 		close;
 	case 3:
-		mes "[Guardian Knight]";
+		mes "[守护骑士]";
 		mes "You can enter the Banquet Hall through the big gate which appears when you go to the center by following the corridor on the right from here.";
 		close;
 	}
