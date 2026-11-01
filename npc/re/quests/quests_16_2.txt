@@ -4126,7 +4126,7 @@ rebel_in,70,78,3	script	埃琳娜·沃尔科娃#16.2rm	4_F_ELENA,{
 					next;
 					mes "[USU指挥官埃琳娜]";
 					mes "A coward who's scared at me won't be helpful for the 反叛者 at all.";
-					mes "Get lost.";
+					mes "滚开。";
 					erasequest 16060;	// Fighting is the language of warmonger
 					erasequest 16061;	// Fair and equitable result
 					close3;
@@ -4169,7 +4169,7 @@ rebel_in,70,78,3	script	埃琳娜·沃尔科娃#16.2rm	4_F_ELENA,{
 					next;
 					mes "[USU指挥官埃琳娜]";
 					mes "A coward who's scared at me won't be helpful for the 反叛者 at all.";
-					mes "Get lost.";
+					mes "滚开。";
 					erasequest 16011;// Arena entrance
 					erasequest 16061;	// Fair and equitable result
 					close3;
@@ -6844,7 +6844,7 @@ function	script	F_TerraGloria_Lady	{
 		select("Tell the guard that Rookie sent you.");
 		mes "[反叛者 guard]";
 		mes "Rookie?";
-		npctalk "反叛者 guard : Rookie?", "反叛者 guard#162gmbs1", bc_self;
+		npctalk "反叛者 guard : Rookie?", "反叛者守卫#162gmbs1", bc_self;
 		npctalk "反叛者 guard : Rookie?", "反叛者 guard#162gmbs2", bc_self;
 		next;
 		mes "[反叛者 guard]";
@@ -6860,7 +6860,7 @@ function	script	F_TerraGloria_Lady	{
 		next;
 		mes "[反叛者 guard]";
 		mes "I'm sorry!!!!";
-		npctalk "反叛者 guard : I'm sorry!!!!", "反叛者 guard#162gmbs1", bc_self;
+		npctalk "反叛者 guard : I'm sorry!!!!", "反叛者守卫#162gmbs1", bc_self;
 		npctalk "反叛者 guard : I'm sorry!!!!", "反叛者 guard#162gmbs2", bc_self;
 		next;
 		mes "[反叛者 Guard leader]";
@@ -6937,7 +6937,7 @@ function	script	F_TerraGloria_Lady	{
 		next;
 		select("Say yes.");
 		mes "[???]";
-		mes "Larcis.";
+		mes "拉西斯。";
 		mes "We cannot leave our savior outside. Let the adventurer come in.";
 		mes "Let me give him/her a cup of tea.";
 		next;
@@ -6966,11 +6966,11 @@ function	script	F_TerraGloria_Lady	{
 	return;
 }
 
-rebel_in,125,44,3	script	反叛者 guard#162gmbs1	4_F_REBELLION3,{
+rebel_in,125,44,3	script	反叛者守卫#162gmbs1	4_F_REBELLION3,{
 	callfunc("F_TerraGloria_Lady");
 	end;
 }
-rebel_in,125,39,3	duplicate(反叛者 guard#162gmbs1)	反叛者 guard#162gmbs2	4_M_REBELLION3
+rebel_in,125,39,3	duplicate(反叛者守卫#162gmbs1)	反叛者 guard#162gmbs2	4_M_REBELLION3
 
 rebel_in,126,41,0	script	#162gmroom_2	WARPNPC,1,1,{
 	end;
@@ -7469,7 +7469,7 @@ OnTouch:
 		cutin "ep162_rds02.bmp",0;
 		next;
 		mes "[???]";
-		mes "Hey!";
+		mes "喂！";
 		mes "Get out of here!";
 		cutin "ep162_rds04.bmp",0;
 		next;
@@ -7770,16 +7770,16 @@ OnInit:
 }
 
 // Room Commander
-rebel_in,210,89,5	script	Special Force commander	4_F_ESTLOVELOY,{
+rebel_in,210,89,5	script	特种部队指挥官	4_F_ESTLOVELOY,{
 	if (terra_gloria_lady_part < 4) {
 		cutin "ep162_est01.bmp",2;
-		mes "[反叛者 Special Force commander]";
+		mes "[特种部队指挥官]";
 		mes "你是谁？";
-		npctalk "Special Force commander : Who are you?", "", bc_self;
+		npctalk "特种部队指挥官： Who are you?", "", bc_self;
 		next;
-		mes "[反叛者 Special Force commander]";
-		mes "Get lost.";
-		npctalk "Special Force commander : Get lost.", "", bc_self;
+		mes "[特种部队指挥官]";
+		mes "滚开。";
+		npctalk "特种部队指挥官： Get lost.", "", bc_self;
 		emotion ET_FRET;
 		close2;
 		warp "rebel_in",87,75;
@@ -7787,106 +7787,106 @@ rebel_in,210,89,5	script	Special Force commander	4_F_ESTLOVELOY,{
 	}
 	if (terra_gloria_lady_part == 4) {
 		cutin "ep162_est01.bmp",2;
-		mes "[Special Force commander 埃尔斯特]";
+		mes "[特种部队指挥官埃尔斯特]";
 		mes "什么事？";
 		next;
-		mes "[Special Force commander 埃尔斯特]";
-		mes "And who's the guy beside you?";
+		mes "[特种部队指挥官埃尔斯特]";
+		mes "你旁边这家伙是谁？";
 		mes "我以前没见过你。";
 		emotion ET_FRET;
 		next;
-		cloakoffnpcself( "反叛者 Guard leader#3" );
+		cloakoffnpcself( "近卫队长拉西斯#3" );
 		cutin "",255;
 		mes "[近卫队长拉西斯]";
-		mes "Ah.. that is....";
-		emotion ET_PROFUSELY_SWAT, getnpcid(0, "反叛者 Guard leader#3");
+		mes "啊……那是……";
+		emotion ET_PROFUSELY_SWAT, getnpcid(0, "近卫队长拉西斯#3");
 		next;
-		mes "[Special Force commander 埃尔斯特]";
-		mes "Ssssh!";
+		mes "[特种部队指挥官埃尔斯特]";
+		mes "嘘！";
 		emotion ET_FRET;
-		npctalk "Special Force commander : Ssssh!", "", bc_self;
+		npctalk "特种部队指挥官： Ssssh!", "", bc_self;
 		cutin "ep162_est03.bmp",2;
 		next;
-		mes "[Special Force commander 埃尔斯特]";
-		mes "Stop stalling...";
+		mes "[特种部队指挥官埃尔斯特]";
+		mes "别拖延……";
 		emotion ET_FRET;
-		npctalk "Special Force commander : Answer quickly!", "", bc_self;
+		npctalk "特种部队指挥官： Answer quickly!", "", bc_self;
 		next;
 		cutin "",255;
 		mes "[近卫队长拉西斯]";
-		mes "I am sorry!";
-		mes "Dien sent you a letter!";
-		emotion ET_PROFUSELY_SWAT, getnpcid(0, "反叛者 Guard leader#3");
+		mes "对不起！";
+		mes "狄恩有封信给你！";
+		emotion ET_PROFUSELY_SWAT, getnpcid(0, "近卫队长拉西斯#3");
 		next;
-		mes "[Special Force commander 埃尔斯特]";
+		mes "[特种部队指挥官埃尔斯特]";
 		mes "什么？";
-		mes "What did that grandma send?";
+		mes "那老太婆寄了什么？";
 		cutin "ep162_est01.bmp",2;
 		next;
-		mes "[Special Force commander 埃尔斯特]";
-		mes "Show it to me.";
-		npctalk "Special Force commander : What kind of plot is it?", "", bc_self;
+		mes "[特种部队指挥官埃尔斯特]";
+		mes "给我看。";
+		npctalk "特种部队指挥官： What kind of plot is it?", "", bc_self;
 		next;
 		cutin "",255;
 		mes "[近卫队长拉西斯]";
-		mes "Here..";
+		mes "在这里……";
 		next;
-		mes "[Special Force commander 埃尔斯特]";
-		mes "Let's see..";
+		mes "[特种部队指挥官埃尔斯特]";
+		mes "我看看……";
 		cutin "ep162_est01.bmp",2;
 		next;
-		mes "[Special Force commander 埃尔斯特]";
-		mes "I agree. Do you agree, too?";
-		mes "What the hell is this nonsense?";
+		mes "[特种部队指挥官埃尔斯特]";
+		mes "我同意。你也同意吗？";
+		mes "这到底是什么胡闹？";
 		cutin "ep162_est03.bmp",2;
 		next;
 		cutin "",255;
-		select("Explain him.");
-		mes "[Special Force commander 埃尔斯特]";
+		select("向他解释。");
+		mes "[特种部队指挥官埃尔斯特]";
 		mes "什么？";
-		mes "Are you kidding me?";
+		mes "你在开我玩笑？";
 		cutin "ep162_est03.bmp",2;
 		next;
-		mes "[Special Force commander 埃尔斯特]";
-		mes "Finally, that old woman is out of her mind.";
-		npctalk "Special Force commander : Normally she goes crazy, even after hearing the word '秘密之翼'.", "", bc_self;
+		mes "[特种部队指挥官埃尔斯特]";
+		mes "那老太婆终于疯了。";
+		npctalk "特种部队指挥官：平时她听到‘秘密之翼’都会发疯。", "", bc_self;
 		cutin "ep162_est01.bmp",2;
 		next;
-		mes "[Special Force commander 埃尔斯特]";
-		mes "Hey!";
-		mes "Larcis.";
-		mes "Are you sure she wrote this?";
+		mes "[特种部队指挥官埃尔斯特]";
+		mes "喂！";
+		mes "拉西斯。";
+		mes "你确定这是她写的？";
 		cutin "ep162_est03.bmp",2;
-		emotion ET_HUK, getnpcid(0, "反叛者 Guard leader#3");
+		emotion ET_HUK, getnpcid(0, "近卫队长拉西斯#3");
 		next;
-		mes "[Special Force commander 埃尔斯特]";
-		mes "Regardless of the old women, the vixen will not be quiet.";
+		mes "[特种部队指挥官埃尔斯特]";
+		mes "就算老太婆们不管，那母狐狸也不会安静。";
 		emotion ET_OHNO;
 		next;
 		cutin "",255;
 		mes "[近卫队长拉西斯]";
-		mes "It's clear that Dien wrote this!";
+		mes "这明显是狄恩写的！";
 		next;
-		mes "[Special Force commander 埃尔斯特]";
-		mes "Well, that's why she sent you here.";
+		mes "[特种部队指挥官埃尔斯特]";
+		mes "所以她才派你来。";
 		cutin "ep162_est01.bmp",2;
 		next;
-		mes "[Special Force commander 埃尔斯特]";
+		mes "[特种部队指挥官埃尔斯特]";
 		mes "......";
 		emotion ET_THINK;
 		cutin "ep162_est03.bmp",2;
 		next;
-		mes "[Special Force commander 埃尔斯特]";
-		mes "Alright.";
+		mes "[特种部队指挥官埃尔斯特]";
+		mes "好吧。";
 		cutin "ep162_est02.bmp",2;
 		next;
-		mes "[Special Force commander 埃尔斯特]";
-		mes "This could be the last wish of the old lady.";
+		mes "[特种部队指挥官埃尔斯特]";
+		mes "这也许是老太婆最后的愿望。";
 		next;
-		mes "[Special Force commander 埃尔斯特]";
-		mes "Let's agree with it.";
-		mes "For now.";
-		cloakonnpcself( "反叛者 Guard leader#3" );
+		mes "[特种部队指挥官埃尔斯特]";
+		mes "就同意吧。";
+		mes "暂时。";
+		cloakonnpcself( "近卫队长拉西斯#3" );
 		erasequest 11457;// Doubt
 		setquest 11458;// Doubt
 		completequest 14613;// 埃尔斯特 on second floor
@@ -7895,49 +7895,49 @@ rebel_in,210,89,5	script	Special Force commander	4_F_ESTLOVELOY,{
 	}
 	if (terra_gloria_lady_part == 5) {
 		cutin "ep162_est02.bmp",2;
-		mes "[Special Force commander 埃尔斯特]";
-		mes "Alright.";
+		mes "[特种部队指挥官埃尔斯特]";
+		mes "好吧。";
 		next;
-		mes "[Special Force commander 埃尔斯特]";
-		mes "This could be the last wish of the old lady.";
+		mes "[特种部队指挥官埃尔斯特]";
+		mes "这也许是老太婆最后的愿望。";
 		next;
-		mes "[Special Force commander 埃尔斯特]";
-		mes "Let's agree with it.";
-		mes "For now.";
+		mes "[特种部队指挥官埃尔斯特]";
+		mes "就同意吧。";
+		mes "暂时。";
 		close3;
 	}
-	mes "[Special Force commander 埃尔斯特]";
+	mes "[特种部队指挥官埃尔斯特]";
 	mes "什么事？";
-	mes "Stop wandering around and get lost now.";
+	mes "别到处乱晃，滚吧。";
 	cutin "ep162_est02.bmp",2;
 	close2;
 	warp "rebel_in",87,75;
 	end;
 }
 
-rebel_in,207,84,7	duplicate(dummy_cloaked_npc)	反叛者 Guard leader#3	4_M_REBELLION
+rebel_in,207,84,7	duplicate(dummy_cloaked_npc)	近卫队长拉西斯#3	4_M_REBELLION
 
 rebel_in,213,81,3	script	反叛者#162gmbs2	4_F_REBELLION2,{
 	mes "[反叛者]";
-	mes "Our commander is a great person!";
-	mes "There are no words to describe... how great he is!";
-	npctalk "反叛者 : Hahahaha!!!", "", bc_self;
+	mes "我们的指挥官是个了不起的人！";
+	mes "简直无法形容……他有多伟大！";
+	npctalk "反叛者：哈哈哈哈！！！", "", bc_self;
 	close;
 }
 
 rebel_in,213,83,7	script	反叛者#162gmbs1	4_M_REBELLION2,{
 	mes "[反叛者]";
-	mes "Make sure you properly maintain your weapons.";
-	mes "Although there is dust on your shoes, your gun must always be shiny... That's what they call 'hard-boiled'!";
-	npctalk "反叛者 : Gasp...", "", bc_self;
+	mes "一定要好好保养武器。";
+	mes "鞋上可以有灰，但枪必须永远闪亮……这才叫‘硬派’！";
+	npctalk "反叛者：呼……", "", bc_self;
 	close;
 }
 
 rebel_in,205,89,3	script	反叛者#162gmbs4	4_M_REBELLION3,{
 	mes "[反叛者]";
-	mes "Do you know the meaning of this position?";
-	mes "Huhuhuhuhu";
-	npctalk "反叛者 : Commander! I will always follow you!!!!", "", bc_self;
+	mes "你知道这个位置的意义吗？";
+	mes "呵呵呵呵。";
+	npctalk "反叛者：指挥官！我会永远追随你！！！！", "", bc_self;
 	close;
 }
 
@@ -7945,7 +7945,7 @@ rebel_in,212,90,5	script	反叛者#162gmbs3	4_M_REBELLION2,{
 	mes "[反叛者]";
 	mes "To become strong, you need an opportunity.";
 	mes "If your determination is not strong enough, you will always be in the same place.";
-	npctalk "反叛者 : Commander! I will always follow you!!!!", "", bc_self;
+	npctalk "反叛者：指挥官！我会永远追随你！！！！", "", bc_self;
 	close;
 }
 
