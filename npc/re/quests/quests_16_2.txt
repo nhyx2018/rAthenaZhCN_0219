@@ -286,7 +286,7 @@ prt_cas_q,21,39,3	script	尼希尔·M·海涅#ep162_01	4_EP16_NIHIL,{
 		next;
 		cutin "ep16_spica_nerius01.bmp",1;
 		mes "[斯皮卡]";
-		mes "I see.";
+		mes "原来如此。";
 		mes "Crux must go to Skia immediately.";
 		mes "And I must go to Yuno.";
 		next;
@@ -1798,7 +1798,7 @@ einbech,46,208,3	script	雷兹#16nego01	4_M_LAZY,{
 	if (terra_gloria_main == 9) {
 		cutin "16lei_01.bmp",2;
 		mes "[雷兹]";
-		mes "He told me he'd come here. Maybe he's still in 艾因布罗克 train station? I have to go there again.";
+		mes "他说会来这里。也许他还在艾因布罗克火车站？我得再回去一趟。";
 		close2;
 		cutin "",255;
 		cloakonnpcself( "雷兹#16nego01" );
@@ -1807,12 +1807,12 @@ einbech,46,208,3	script	雷兹#16nego01	4_M_LAZY,{
 	if (terra_gloria_main == 10 || terra_gloria_main == 11) {
 		cutin "16lei_01.bmp",2;
 		mes "[雷兹]";
-		mes "This is 艾因贝克. The last time I came here, I was being chased by 17 pursuers.";
+		mes "这里是艾因贝克。上次我来时，被17个追兵追着跑。";
 		next;
 		cutin "16lei_02.bmp",2;
 		mes "[雷兹]";
-		mes "I'm sorry I can't tell more than that. It's confidential.";
-		npctalk "It's a national secret.", "", bc_self;
+		mes "抱歉，只能说到这里，这是机密。";
+		npctalk "这是国家机密。", "", bc_self;
 		next;
 		emotion ET_SWEAT, playerattached();
 		mes "[" + strcharinfo(0) + "]";
@@ -1820,70 +1820,70 @@ einbech,46,208,3	script	雷兹#16nego01	4_M_LAZY,{
 		next;
 		cutin "16lei_03.bmp",2;
 		mes "[雷兹]";
-		mes "Hey! I just cracked a joke before starting on the mission. You can't even accept?";
-		npctalk "Look at your face now! Don't look at me like that~", "", bc_self;
+		mes "喂！任务开始前开个玩笑而已，这都接受不了？";
+		npctalk "看看你现在的表情！别那样看我~", "", bc_self;
 		next;
 		mes "[" + strcharinfo(0) + "]";
-		mes "I'm a little nervous. A negotiation...";
+		mes "我有点紧张，毕竟是谈判……";
 		next;
 		cutin "16lei_01.bmp",2;
 		mes "[雷兹]";
-		mes "You don't have to be nervous. I'm going to be in charge of talking to them. You just add several words beside me.";
-		npctalk "Being nervous? You are cuter than I thought.", "", bc_self;
+		mes "不用紧张。由我负责和他们谈，你在我旁边补充几句就行。";
+		npctalk "紧张？你比我想的还可爱。", "", bc_self;
 		next;
 		mes "[雷兹]";
-		mes "In this mission, the trust is important. There is a reason why the government assigned you to this mission in addition to me, a professional negotiator.";
-		npctalk "It is extremely hard to build trust again. But what else can we do? They want us to stick the broken parts.", "", bc_self;
+		mes "这次任务中信任很重要。政府除了派我这个专业谈判者，还派你来是有原因的。";
+		npctalk "重新建立信任极难。但还能怎么办？他们想让我们把破碎的部分粘起来。", "", bc_self;
 		next;
 		mes "[雷兹]";
-		mes "You are known as a hero in this Midgard continent and a symbol of trust. If you come with me, the 反叛者 will be less stubborn to us. Once we get trusted by them, everything will work out.";
+		mes "你是米德加尔特大陆知名的英雄，也是信任的象征。有你在，反叛者不会那么顽固。只要取得他们信任，一切就好办。";
 		next;
 		emotion ET_BEST;
 		mes "[" + strcharinfo(0) + "]";
-		mes "Talking like that in that clothes, you don't look very persuasive.";
+		mes "穿成那样说这些话，实在没什么说服力。";
 		next;
 		cutin "16lei_02.bmp",2;
 		mes "[雷兹]";
-		mes "This is my critical costume I prepared for this mission. Who would ever find a tourist suspicious?";
-		npctalk "And these are mt special sunglasses.", "", bc_self;
+		mes "这是我为任务准备的关键服装。谁会怀疑一个游客？";
+		npctalk "还有这副特制太阳镜。", "", bc_self;
 		next;
 		cutin "16lei_01.bmp",2;
 		mes "[雷兹]";
-		mes "As I mentioned before, our greatest challenge is to enter the 反叛者's secret base without any armed conflict. This costume is for that purpose.";
+		mes "如我所说，最大的挑战是不发生武装冲突就进入反叛者秘密基地。这身装扮就是为此准备的。";
 		next;
 		mes "[雷兹]";
-		mes "And Yuno is such a nice place. I have a dream to buy a building there after retirement and spend my golden years comfortably.";
+		mes "尤诺真是好地方。我梦想退休后在那里买栋楼，舒舒服服度过晚年。";
 		next;
 		mes "[" + strcharinfo(0) + "]";
-		mes "Don't they normally choose a resort like Comodo for golden years?";
+		mes "一般人不是会选科莫多那样的度假地养老吗？";
 		next;
 		cutin "16lei_03.bmp",2;
 		mes "[雷兹]";
-		mes "Oh, I don't like a beach. I saw the sea every single day when I was young. Now I'm sick of its salty smell. To leave the sea, I used to have a dream to become a captain of airship.";
+		mes "哦，我不喜欢海滩。小时候天天看海，现在闻腻了那股咸味。为了离开海，我曾梦想当飞空艇船长。";
 		next;
 		mes "[" + strcharinfo(0) + "]";
-		mes "If you wanted to become a pilot, why did you become a secret agent?";
+		mes "既然想当飞行员，为什么做了特工？";
 		next;
 		mes "[雷兹]";
-		mes "I can't tell you. It's confidential.";
+		mes "不能告诉你，这是机密。";
 		next;
 		emotion ET_SWEAT, playerattached();
 		mes "[" + strcharinfo(0) + "]";
-		mes "I see.";
-		unittalk getcharid(3), "" + strcharinfo(0) + " : I never expected.", bc_self;
+		mes "原来如此。";
+		unittalk getcharid(3), "" + strcharinfo(0) + "：真没想到。", bc_self;
 		next;
 		cutin "16lei_02.bmp",2;
 		mes "[雷兹]";
-		mes "Oh, when you get back after the mission, you can purchase a train ticket and show it to the employee in the train station. But it's free for me.";
-		unittalk getcharid(3), "" + strcharinfo(0) + " : I have a favor to ask of you. Please let me hit you once.", bc_self;
+		mes "哦，任务结束后你可以买张火车票，给站员看。不过对我来说是免费的。";
+		unittalk getcharid(3), "" + strcharinfo(0) + "：我想拜托你一件事，让我打你一下。", bc_self;
 		next;
 		mes "[" + strcharinfo(0) + "]";
-		mes "Well, where should we go now?";
+		mes "那么，现在去哪里？";
 		next;
 		cutin "16lei_01.bmp",2;
 		mes "[雷兹]";
-		mes "We have go somewhere deep inside the village. From here on, just trust me and follow me. Since the path is a little complicated, I will leave ^0000cdtraces^000000. Make sure you catch them up.";
-		unittalk getcharid(3), "" + strcharinfo(0) + " : I can smell something from the traces.", bc_self;
+		mes "我们要去村子深处。从这里开始，相信我跟着我。路有点复杂，我会留下^0000cd印记^000000，注意跟上。";
+		unittalk getcharid(3), "" + strcharinfo(0) + "：我能从印记里闻到点什么。", bc_self;
 		erasequest 14595;// To 艾因贝克 train station
 		setquest 14596;// Follow the trails
 		terra_gloria_main = 12;
@@ -1897,7 +1897,7 @@ einbech,46,208,3	script	雷兹#16nego01	4_M_LAZY,{
 	if (terra_gloria_main == 12) {
 		cutin "16lei_01.bmp",2;
 		mes "[雷兹]";
-		mes "What are you doing? I told you to follow me.";
+		mes "你在做什么？我说了跟着我。";
 		close2;
 		cutin "",255;
 		viewpoint 1,74,129,1,0x4D4DFF00;
@@ -1908,8 +1908,8 @@ einbech,46,208,3	script	雷兹#16nego01	4_M_LAZY,{
 	if (terra_gloria_main < 17) {
 		cutin "16lei_01.bmp",2;
 		mes "[雷兹]";
-		mes "We are not supposed to be here now.";
-		mes "We must go to the rebellion.";
+		mes "我们现在不该在这里。";
+		mes "我们得去反叛者那里。";
 		close2;
 		cutin "",255;
 		cloakonnpcself( "雷兹#16nego01" );
@@ -1930,7 +1930,7 @@ einbech,94,127,0	script	#16negobok08	HIDDEN_WARP_NPC,5,5,{
 OnTouch:
 	if (terra_gloria_main == 12) {
 		cloakoffnpcself( "雷兹#16nego02" );
-		cloakoffnpcself( "Enormous stack#16nego01" );
+		cloakoffnpcself( "巨大的土堆#16nego01" );
 	}
 	end;
 }
@@ -1938,8 +1938,8 @@ einbech,92,139,0	duplicate(#16negobok08)	#16negobok07	HIDDEN_WARP_NPC,5,5
 einbech,88,114,0	duplicate(#16negobok08)	#16negobok09	HIDDEN_WARP_NPC,5,5
 einbech,76,111,0	duplicate(#16negobok08)	#16negobok10	HIDDEN_WARP_NPC,5,5
 
-einbech,74,130,5	duplicate(dummy_cloaked_npc)	Enormous stack#16nego01	4_SOIL
-einbech,74,130,5	duplicate(dummy_cloaked_npc)	Collapsed person#16nego	4_M_FALLENGONY
+einbech,74,130,5	duplicate(dummy_cloaked_npc)	巨大的土堆#16nego01	4_SOIL
+einbech,74,130,5	duplicate(dummy_cloaked_npc)	倒下的人#16nego	4_M_FALLENGONY
 
 einbech,76,131,3	script	雷兹#16nego02	4_M_LAZY,{
 	if (terra_gloria_main == 12) {
@@ -1957,8 +1957,8 @@ einbech,76,131,3	script	雷兹#16nego02	4_M_LAZY,{
 		mes "If I get rid of this and that...!";
 		npctalk "Come and help me!", "", bc_self;
 		next;
-		cloakonnpcself( "Enormous stack#16nego01" );
-		cloakoffnpcself( "Collapsed person#16nego" );
+		cloakonnpcself( "巨大的土堆#16nego01" );
+		cloakoffnpcself( "倒下的人#16nego" );
 		cutin "16lei_01.bmp",2;
 		mes "[雷兹]";
 		mes "Wow... I think today is a lucky day. This mission is going to be easier than we thought.";
@@ -2002,11 +2002,11 @@ einbech,76,131,3	script	雷兹#16nego02	4_M_LAZY,{
 		emotion ET_CRY;
 		specialeffect EF_DEVOTION, AREA, "雷兹#16nego02";
 		sleep2 800;
-		specialeffect EF_RESURRECTION, AREA, "Collapsed person#16nego";
+		specialeffect EF_RESURRECTION, AREA, "倒下的人#16nego";
 		sleep2 1000;
-		specialeffect EF_REVIVE, AREA, "Collapsed person#16nego";
+		specialeffect EF_REVIVE, AREA, "倒下的人#16nego";
 		sleep2 1000;
-		specialeffect EF_HO_UP, AREA, "Collapsed person#16nego";
+		specialeffect EF_HO_UP, AREA, "倒下的人#16nego";
 		mes "[" + strcharinfo(0) + "]";
 		mes "Wow... You're a secret agent and you also know how to heal?";
 		unittalk getcharid(3), "" + strcharinfo(0) + " : Now you look different.", bc_self;
@@ -2058,19 +2058,19 @@ einbech,76,131,3	script	雷兹#16nego02	4_M_LAZY,{
 		cutin "",255;
 		navigateto( "einbech",217,82,NAV_NONE,1 );
 		cloakonnpcself( "雷兹#16nego02" );
-		cloakonnpcself( "Collapsed person#16nego" );
+		cloakonnpcself( "倒下的人#16nego" );
 		end;
 	}
 	if (terra_gloria_main == 13) {
 		cutin "16lei_01.bmp",2;
 		mes "[雷兹]";
-		mes "What are you doing? I told you to follow me.";
+		mes "你在做什么？我说了跟着我。";
 		close2;
 		cutin "",255;
 		viewpoint 1,217,82,1,0x4D4DFF00;
 		navigateto( "einbech",217,82,NAV_NONE,1 );
 		cloakonnpcself( "雷兹#16nego02" );
-		cloakonnpcself( "Collapsed person#16nego" );
+		cloakonnpcself( "倒下的人#16nego" );
 		end;
 	}
 	end;
