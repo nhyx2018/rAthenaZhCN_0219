@@ -7949,180 +7949,180 @@ rebel_in,212,90,5	script	反叛者#162gmbs3	4_M_REBELLION2,{
 	close;
 }
 
-rebel_in,82,68,2	script	Arinoa Yurhik#TFQ01	4_F_GUNSLINGER,{
+rebel_in,82,68,2	script	阿里诺娅·尤希克#TFQ01	4_F_GUNSLINGER,{
 	if (checkweight(501,1) == 0 || (MaxWeight - Weight) < 1000) {
-		mes "- Cannot progress, because you have too many items in your possession. -";
+		mes "- 携带道具过多，无法继续。 -";
 		close;
 	}
 	if (terra_gloria_main < 17) {
 		emotion ET_THINK;
-		mes "The poker-faced Gunslinger girl who was fishing around books and documents stole a glance at me. Then she resumed fishing around books and documents again.";
+		mes "那个面无表情、翻找书本文档的枪手少女瞥了我一眼，又继续翻找。";
 		close;
 	}
 	if (yurhik_quest == 0) {
 		emotion ET_THINK;
-		mes "The poker-faced Gunslinger girl who was fishing around books and documents stole a glance at me. Then she resumed fishing around books and documents again.";
+		mes "那个面无表情、翻找书本文档的枪手少女瞥了我一眼，又继续翻找。";
 		next;
 		switch( checkquest(5727,PLAYTIME) ) {
 		case -1:
-			cloakoffnpcself( "Arivero Yurhik#TFQ02" );
-			npctalk "Are you the adventurer who is making a fuss in 克拉纳·内米耶里?", "Arivero Yurhik#TFQ02", bc_self;
-			mes "[Strange man]";
-			mes "Are you the adventurer who is making a fuss in 克拉纳·内米耶里?";
+			cloakoffnpcself( "阿里韦罗·尤希克#TFQ02" );
+			npctalk "你就是在克拉纳·内米耶里闹出动静的冒险者？", "阿里韦罗·尤希克#TFQ02", bc_self;
+			mes "[陌生男子]";
+			mes "你就是在克拉纳·内米耶里闹出动静的冒险者？";
 			next;
 			mes "[" + strcharinfo(0) + "]";
-			mes "???";
+			mes "？？？";
 			next;
-			mes "You heard a voice of the man who showed up all of a sudden. Where on earth did he appear from?";
+			mes "你听到突然出现的男人的声音。他到底从哪冒出来的？";
 			close;
 		case 0:
 		case 1:
-			mes "The man named Vero has not shown up. It seems like they are not ready yet.";
+			mes "那个叫韦罗的男人还没出现，似乎还没准备好。";
 			close;
 		case 2:
-			mes "It is time. Let me talk to them now.";
+			mes "时间到了，去和他们谈谈吧。";
 			next;
-			cloakoffnpcself( "Arivero Yurhik#TFQ02" );
-			npctalk "Oops?! Here are you. Have you arrived already?", "Arivero Yurhik#TFQ02", bc_self;
-			mes "[Arivero Yurhik]";
-			mes "Oops?! Here are you. Have you arrived already?";
+			cloakoffnpcself( "阿里韦罗·尤希克#TFQ02" );
+			npctalk "哎呀？！你在这里，已经到了？", "阿里韦罗·尤希克#TFQ02", bc_self;
+			mes "[阿里韦罗]";
+			mes "哎呀？！你在这里，已经到了？";
 			close;
 		}
 	}
 	if (yurhik_quest == 1) {
 		emotion ET_THINK;
-		mes "The poker-faced Gunslinger girl who was fishing around books and documents stole a glance at me. Then she resumed fishing around books and documents again.";
+		mes "那个面无表情、翻找书本文档的枪手少女瞥了我一眼，又继续翻找。";
 		next;
-		cloakoffnpcself( "Arivero Yurhik#TFQ02" );
-		npctalk "You have to talk to me. Not to the elder sister.", "Arivero Yurhik#TFQ02", bc_self;
-		mes "[Arivero Yurhik]";
-		mes "You have to talk to me. Not to the elder sister.";
+		cloakoffnpcself( "阿里韦罗·尤希克#TFQ02" );
+		npctalk "你要和我谈，不是和姐姐。", "阿里韦罗·尤希克#TFQ02", bc_self;
+		mes "[阿里韦罗]";
+		mes "你要和我谈，不是和姐姐。";
 		close;
 	}
 	if (yurhik_quest == 2) {
-		mes "You are to meet Vero in 艾因贝克. Let's go to 艾因贝克.";
+		mes "要去艾因贝克见韦罗，我们走吧。";
 		close;
 	}
 	if (yurhik_quest == 4 || yurhik_quest == 6) {
 		emotion ET_THINK;
-		mes "The poker-faced Gunslinger girl who was fishing around books and documents stole a glance at me. Then she resumed fishing around books and documents again.";
+		mes "那个面无表情、翻找书本文档的枪手少女瞥了我一眼，又继续翻找。";
 		next;
-		cloakoffnpcself( "Arivero Yurhik#TFQ02" );
-		npctalk "Kahaha. Welcome, pal.", "Arivero Yurhik#TFQ02", bc_self;
-		mes "[Arivero Yurhik]";
-		mes "Kahaha. Welcome, pal.";
+		cloakoffnpcself( "阿里韦罗·尤希克#TFQ02" );
+		npctalk "哈哈哈，欢迎，朋友。", "阿里韦罗·尤希克#TFQ02", bc_self;
+		mes "[阿里韦罗]";
+		mes "哈哈哈，欢迎，朋友。";
 		close;
 	}
 	if (yurhik_quest == 5) {
 		emotion ET_THINK;
-		mes "The poker-faced Gunslinger girl who was fishing around books and documents stole a glance at me. Then she resumed fishing around books and documents again.";
+		mes "那个面无表情、翻找书本文档的枪手少女瞥了我一眼，又继续翻找。";
 		next;
-		mes "I promised to meet Vero at Lighthalzen. Let's go to Lighthalzen.";
+		mes "约好在里希塔乐镇见韦罗，走吧。";
 		close;
 	}
 	if (yurhik_quest == 7) {
 		emotion ET_THINK;
-		mes "The poker-faced Gunslinger girl who was fishing around books and documents stole a glance at me. Then she resumed fishing around books and documents again.";
+		mes "那个面无表情、翻找书本文档的枪手少女瞥了我一眼，又继续翻找。";
 		next;
-		cloakoffnpcself( "Arivero Yurhik#TFQ02" );
-		npctalk "Have you brought the Star Crumb?", "Arivero Yurhik#TFQ02", bc_self;
-		mes "[Arivero Yurhik]";
-		mes "Have you brought the Star Crumb?";
+		cloakoffnpcself( "阿里韦罗·尤希克#TFQ02" );
+		npctalk "你带来星屑了吗？", "阿里韦罗·尤希克#TFQ02", bc_self;
+		mes "[阿里韦罗]";
+		mes "你带来星屑了吗？";
 		close;
 	}
 	if (yurhik_quest == 8) {
 		emotion ET_THINK;
-		mes "The poker-faced Gunslinger girl who was fishing around books and documents stole a glance at me. Then she resumed fishing around books and documents again.";
+		mes "那个面无表情、翻找书本文档的枪手少女瞥了我一眼，又继续翻找。";
 		next;
-		mes "It seems like Vero has already departed.";
-		mes "Let's go to Yuno quickly.";
+		mes "韦罗好像已经出发了。";
+		mes "快点去朱诺吧。";
 		close;
 	}
 	if (yurhik_quest == 10) {
 		emotion ET_THINK;
-		mes "The poker-faced Gunslinger girl is looking at books and documents, as usual.";
+		mes "面无表情的枪手少女像往常一样看着书本文档。";
 		next;
 		cloakoffnpcself( "反叛者 leader#TFQ15" );
-		npctalk "I have seen you talking to that kid lately.";
+		npctalk "最近看到你和那孩子说话。";
 		mes "[鲁柏]";
-		mes "I have seen you talking to that kid lately. Do you care about her?";
+		mes "最近看到你和那孩子说话。你关心她？";
 		close;
 	}
 	if (yurhik_quest == 11) {
 		emotion ET_THINK;
-		mes "The poker-faced Gunslinger girl is looking at books and documents, as usual. Shall I say hello?";
+		mes "面无表情的枪手少女像往常一样看着书本文档。要打个招呼吗？";
 		next;
-		if (select( "Say hello.", "No." ) == 2) {
-			mes "The Gunslinger girl is not interested in what's happening here and goes on with her business.";
+		if (select( "打招呼。", "不。" ) == 2) {
+			mes "枪手少女对周围不感兴趣，继续做自己的事。";
 			close;
 		}
-		mes "What shall I say to the Gunslinger girl?";
+		mes "要对枪手少女说什么？";
 		next;
 		input .@string$;
 		unittalk getcharid(3), "" + strcharinfo(0) + " : " + .@string$, bc_self;
 		mes "[" + strcharinfo(0) + "]";
 		mes "" + .@string$ + "";
 		next;
-		mes "The poker-faced Gunslinger girl stole a glance at me and resumed fishing around books and documents again.";
+		mes "面无表情的枪手少女瞥了我一眼，又继续翻找书本文档。";
 		close;
 	}
 	emotion ET_THINK;
-	mes "The poker-faced Gunslinger girl who was fishing around books and documents stole a glance at me. Then she resumed fishing around books and documents again.";
+	mes "那个面无表情、翻找书本文档的枪手少女瞥了我一眼，又继续翻找。";
 	close;
 }
 
-rebel_in,78,66,6	script	Arivero Yurhik#TFQ02	4_M_GUNSLINGER,{
+rebel_in,78,66,6	script	阿里韦罗·尤希克#TFQ02	4_M_GUNSLINGER,{
 	if (terra_gloria_main < 17)
 		end;
 	if (yurhik_quest == 0) {
 		switch( checkquest(5727,PLAYTIME) ) {
 		case -1:
 			emotion ET_SMILE;
-			mes "[Arivero Yurhik]";
-			mes "Hahaha, I'm here, sister.";
+			mes "[阿里韦罗]";
+			mes "哈哈哈，姐姐，我来了。";
 			next;
 			emotion ET_FRET;
-			mes "[Arivero Yurhik]";
-			mes "So it was you.";
-			mes "The hottest fellow in 克拉纳·内米耶里, right? I hate to admit that you're hotter than me. Being hot has always been my part here.";
+			mes "[阿里韦罗]";
+			mes "原来是你。";
+			mes "你就是克拉纳·内米耶里最红的人吧？不想承认你比我还红。这里最红的本来一直是我。";
 			next;
-			mes "[Strange man]";
-			mes "Oh~! Now I have to introduce myself.";
-			mes "I am Arivero Yurhik.";
+			mes "[陌生男子]";
+			mes "哦~！那我得自我介绍了。";
+			mes "我是阿里韦罗·尤希克。";
 			next;
 			emotion ET_SMILE;
-			mes "[Arivero Yurhik]";
-			mes "We have met today for the first time, but I guess we will be friends from now on. So you can just call me Vero.";
-			mes "Only my close friends call me Vero. Hahaha. So you are honored.";
+			mes "[阿里韦罗]";
+			mes "今天第一次见面，不过以后就是朋友了。叫我韦罗就好。";
+			mes "只有好朋友才叫我韦罗。哈哈哈，你该感到荣幸。";
 			next;
-			mes "[Arivero Yurhik]";
-			mes "And the lady here who is passionately interested in you is my elder sister, Arinoa Yurhik. You can see it from the name. We are siblings!";
+			mes "[阿里韦罗]";
+			mes "这位对你很感兴趣的女士是我姐姐阿里诺娅·尤希克。看名字就知道我们是姐弟！";
 			next;
 			emotion ET_QUESTION, playerattached();
 			mes "[" + strcharinfo(0) + "]";
-			mes "Interested in me?";
+			mes "对我感兴趣？";
 			next;
-			mes "It's strange. The lady has been looking at the documents, without showing any interest in me.";
-			mes "The man who has been speaking loudly became serious all of a sudden. He started talking to himself.";
+			mes "奇怪。这位女士一直看着文件，对我毫无兴趣。";
+			mes "一直大声说话的男人突然严肃起来，开始自言自语。";
 			next;
 			emotion ET_HUK;
-			mes "[Arivero Yurhik]";
-			mes "You are showing such a great interest in him..? Sister, perhaps you are trying to give the mission to this fellow?";
+			mes "[阿里韦罗]";
+			mes "你对他这么感兴趣……？姐姐，你是想把任务交给这家伙吗？";
 			next;
-			mes "Since I was looking at her continuously, I knew that the lady did not speak or act. But the man named Vero seemed to understand what she was thinking and continued speaking.";
+			mes "我一直看着她，她没说话也没动作。但那个叫韦罗的男人似乎明白她在想什么，继续说着。";
 			next;
 			emotion ET_SMILE;
-			mes "[Arivero Yurhik]";
-			mes "Yeah.. Really? Hahaha. I knew we'd become friends.";
-			mes "Hey friend. We have a task to work on together.";
+			mes "[阿里韦罗]";
+			mes "嗯……真的？哈哈哈，我就知道我们会成为朋友。";
+			mes "嘿，朋友，我们有任务要一起做。";
 			next;
-			mes "[Arivero Yurhik]";
-			mes "It's not a hard job. All we need is to go to about four places and destroy several things.";
+			mes "[阿里韦罗]";
+			mes "不难，只要去大约四个地方，毁掉几样东西。";
 			mes "You'll do it. Right?";
 			next;
 			select( "Do it.", "Do it without hesitation.", "Do it at all events.", "Since you are being forced, do it." );
 			emotion ET_OHNO, playerattached();
-			mes "[Arivero Yurhik]";
+			mes "[阿里韦罗]";
 			mes "When I saw you for the first time, I knew you were faithful. Oh! Right.";
 			mes "What is your name?";
 			next;
@@ -8130,53 +8130,53 @@ rebel_in,78,66,6	script	Arivero Yurhik#TFQ02	4_M_GUNSLINGER,{
 			mes "" + strcharinfo(0) + " is my name.";
 			next;
 			emotion ET_SCRATCH;
-			mes "[Arivero Yurhik]";
+			mes "[阿里韦罗]";
 			mes "" + strcharinfo(0) + "?";
 			mes "Hmm, what an arrogant name. But it's the name that deserves to be hot. Now I have to acknowledge you..";
 			next;
-			mes "[Arivero Yurhik]";
+			mes "[阿里韦罗]";
 			mes "I have several things to prepare. I believe you also need some time to get ready before departing, don't you?";
 			next;
 			setquest 5727;	// Suddenly in charge
-			mes "[Arivero Yurhik]";
+			mes "[阿里韦罗]";
 			mes "I will be fully ready after 4:00 am tomorrow. Once you are ready after that time, tell my elder sister. Then I will get here quickly.";
 			close2;
-			cloakonnpcself( "Arivero Yurhik#TFQ02" );
+			cloakonnpcself( "阿里韦罗·尤希克#TFQ02" );
 			end;
 		case 0:
 		case 1:
 			end;
 		case 2:
 			emotion ET_COOL;
-			mes "[Arivero Yurhik]";
+			mes "[阿里韦罗]";
 			mes "You are not only faithful, but diligent as well!";
 			next;
-			mes "[Arivero Yurhik]";
+			mes "[阿里韦罗]";
 			mes "Great! The preparation is finished and you have arrived here. So let me give you a briefing on what we are going to do.";
 			next;
-			mes "[Arivero Yurhik]";
+			mes "[阿里韦罗]";
 			mes "Teleporting is not available in the Schwaltzvalt area. I'm sure you know that.";
 			next;
 			if (select( "I know.", "I didn't know." ) == 1) {
-				mes "[Arivero Yurhik]";
+				mes "[阿里韦罗]";
 				mes "Good. Actually, you don't need to know that.";
 			}
 			else {
-				mes "[Arivero Yurhik]";
+				mes "[阿里韦罗]";
 				mes "I like your honesty. You don't actually need to know that.";
 			}
 			mes "It's not that important.";
 			next;
-			mes "[Arivero Yurhik]";
+			mes "[阿里韦罗]";
 			mes "According to the government of Schwaltzvalt, the use of teleport in the village is prohibited to prevent the overuse of magic. But it's just nonsense.";
 			next;
-			mes "[Arivero Yurhik]";
+			mes "[阿里韦罗]";
 			mes "There was an incident called 'Magic overuse'. Due to this incident, they passed the law to prohibit teleporting. In my opinion, 'Magic overuse' was manipulated by the government of Schwaltzvalt.";
 			next;
-			mes "[Arivero Yurhik]";
+			mes "[阿里韦罗]";
 			mes "We think the Schwaltzvalt government installed the equipment to limit teleporting to protect the secret research of the Rekenber enterprise.";
 			next;
-			mes "[Arivero Yurhik]";
+			mes "[阿里韦罗]";
 			mes "Looking at the series of incidents that happened after the equipment was installed, our conviction has become stronger.";
 			next;
 			emotion ET_QUESTION, playerattached();
@@ -8184,13 +8184,13 @@ rebel_in,78,66,6	script	Arivero Yurhik#TFQ02	4_M_GUNSLINGER,{
 			mes "Series of incidents?";
 			next;
 			emotion ET_QUESTION;
-			mes "[Arivero Yurhik]";
+			mes "[阿里韦罗]";
 			mes "Haven't you heard of the mysterious disappearance in the slum?";
 			next;
-			mes "[Arivero Yurhik]";
+			mes "[阿里韦罗]";
 			mes "Since it's an incident that has already happened and it is not important now, I will skip the explanation. If you are curious about it, you can search it later on.";
 			next;
-			mes "[Arivero Yurhik]";
+			mes "[阿里韦罗]";
 			mes "In any case, we will destroy all the 'Teleport prohibition equipment' installed in Schwaltzvalt.";
 			next;
 			emotion ET_HUM, playerattached();
@@ -8198,31 +8198,31 @@ rebel_in,78,66,6	script	Arivero Yurhik#TFQ02	4_M_GUNSLINGER,{
 			mes "Do you know its location?";
 			next;
 			emotion ET_HUK;
-			mes "[Arivero Yurhik]";
+			mes "[阿里韦罗]";
 			mes "Wow~ That's so sharp..";
 			mes "What a sharp question.";
 			mes "You deserve to be a hot person.";
 			next;
-			mes "[Arivero Yurhik]";
+			mes "[阿里韦罗]";
 			mes "That's the problem we face now. This equipment is being hidden and protected by various technologies, including magic.";
 			next;
-			mes "[Arivero Yurhik]";
+			mes "[阿里韦罗]";
 			mes "Hahahaha. But you don't have to worry.";
 			mes "At least, I know the location of one part of the equipment.";
 			mes "Do you know '艾因贝克, the mining village'?";
 			next;
 			emotion ET_SMILE;
-			mes "[Arivero Yurhik]";
+			mes "[阿里韦罗]";
 			mes "Hahaha. Of course you do, this area, 克拉纳·内米耶里, is also in 艾因贝克.";
 			next;
 			emotion ET_SURPRISE;
-			mes "[Arivero Yurhik]";
+			mes "[阿里韦罗]";
 			mes "Anyway, our agent in 艾因贝克 reported that a suspicious device showed up at the end of a freight train and disappeared quickly. The problem is..";
 			next;
-			mes "[Arivero Yurhik]";
+			mes "[阿里韦罗]";
 			mes "There is no way to reveal the hidden and protected device for us to destroy..";
 			next;
-			mes "[Arivero Yurhik]";
+			mes "[阿里韦罗]";
 			mes "In this case, we can revise the incident step by step from the beginning, right?";
 			mes "Maybe we can find something we missed.";
 			next;
@@ -8234,56 +8234,56 @@ rebel_in,78,66,6	script	Arivero Yurhik#TFQ02	4_M_GUNSLINGER,{
 			setquest 5728;	// Headache
 			yurhik_quest = 1;
 			emotion ET_CONFUSE;
-			mes "[Arivero Yurhik]";
+			mes "[阿里韦罗]";
 			mes "It's been a long time since I used my head for the last time. Let's take a break to clear our minds.";
 			close;
 		}
 	}
 	if (yurhik_quest == 1) {
-		mes "[Arivero Yurhik]";
+		mes "[阿里韦罗]";
 		mes "Great! It's high time to use my head, after a long while.";
 		mes "I will tell you the situation step by step from the moment when the agent found an unusual device. Once you find anything abnormal, tell me.";
 		next;
-		mes "[Arivero Yurhik]";
+		mes "[阿里韦罗]";
 		mes "One day, our agent H in 艾因贝克 came out of the guardroom for the usual night patrol with a torch and club in each hand. H was wearing guard clothes.";
 		next;
-		mes "[Arivero Yurhik]";
+		mes "[阿里韦罗]";
 		mes "H finished the patrol following the usual order. Finally, H went to the end of the freight train where he found an abnormal device.";
 		next;
-		mes "[Arivero Yurhik]";
+		mes "[阿里韦罗]";
 		mes "Normally, there is a strong wind every now and then. But, on that day, the wind was strong enough to turn off the light. Then..";
 		mes "H said that a suspicious device appeared for a moment and disappeared quickly.";
 		next;
-		mes "[Arivero Yurhik]";
+		mes "[阿里韦罗]";
 		mes "That's it..";
 		next;
-		mes "[Arivero Yurhik]";
+		mes "[阿里韦罗]";
 		mes "The only information we have is the statement by the agent.. After listening to this story, did you find anything unusual?";
 		while( true ) {
 			next;
 			switch( select( "Guard clothes", "Club", "The way H patrolled", "Freight train", "A strong wind", "The turned-off torch" ) ) {
 			case 1:
-				mes "[Arivero Yurhik]";
+				mes "[阿里韦罗]";
 				mes "He was wearing neat guard clothes cleaned and ironed by his daughter. But it's not unusual to wear neat guard clothes";
 				continue;
 			case 2:
-				mes "[Arivero Yurhik]";
+				mes "[阿里韦罗]";
 				mes "H says he carries a club every time he patrols, to prepare for some unexpected situations. This is not unusual either.";
 				continue;
 			case 3:
-				mes "[Arivero Yurhik]";
+				mes "[阿里韦罗]";
 				mes "H patrols through the same course every day. He says it's written in the guard manual. I find nothing strange about it. Do you?";
 				continue;
 			case 4:
-				mes "[Arivero Yurhik]";
+				mes "[阿里韦罗]";
 				mes "It was a train that carried coal from the mine. Since it was night, the train stopped. Well, they say the train is not operated a lot these days due to a great deal of monsters in the mine.";
 				continue;
 			case 5:
-				mes "[Arivero Yurhik]";
+				mes "[阿里韦罗]";
 				mes "Since it is a mountainous area, there is occasionally a strong wind, even in normal times.. It happens every day, so I don't find it strange.";
 				continue;
 			case 6:
-				mes "[Arivero Yurhik]";
+				mes "[阿里韦罗]";
 				mes "A strong wind.. The turned-off torch..";
 				mes "Oh?! I think I have found it.";
 				break;
@@ -8292,31 +8292,31 @@ rebel_in,78,66,6	script	Arivero Yurhik#TFQ02	4_M_GUNSLINGER,{
 		}
 		next;
 		emotion ET_SMILE;
-		mes "[Arivero Yurhik]";
+		mes "[阿里韦罗]";
 		mes "Hahahahaha. You are a genius. Thanks to your support, the puzzle is solved. Now we have a reliable theory and let's test it.";
 		next;
 		emotion ET_QUESTION, playerattached();
 		mes "[" + strcharinfo(0) + "]";
 		mes "What kind of theory is it?";
 		next;
-		mes "[Arivero Yurhik]";
+		mes "[阿里韦罗]";
 		mes "Hmm? You haven't noticed yet? I thought you noticed it already and then gave me a hint.";
 		mes "It's not that important.";
 		next;
 		emotion ET_BLABLA;
-		mes "[Arivero Yurhik]";
+		mes "[阿里韦罗]";
 		mes "The Turned-off torch.. Fire!! Yes, it's the fire. Since 艾因贝克 is a mountainous area, there is occasionally a strong wind there, even in normal times. What was different from usual was that the torch was turned off.";
 		next;
 		emotion ET_BLABLA;
-		mes "[Arivero Yurhik]";
+		mes "[阿里韦罗]";
 		mes "Normally they say the fire is the strongest right before being turned off. So my theory focused on the fact that the device appeared for a while and disappeared quickly right before the torch was gone.";
 		next;
 		emotion ET_BLABLA;
-		mes "[Arivero Yurhik]";
+		mes "[阿里韦罗]";
 		mes "The very moment when the fire is strong and disappears!! That is the condition for the device to appear.";
 		next;
 		emotion ET_BLABLA;
-		mes "[Arivero Yurhik]";
+		mes "[阿里韦罗]";
 		mes "What do you think about my theory? Isn't it worth trying?";
 		next;
 		emotion ET_SCRATCH, playerattached();
@@ -8324,77 +8324,77 @@ rebel_in,78,66,6	script	Arivero Yurhik#TFQ02	4_M_GUNSLINGER,{
 		mes "You seem so excited and I really don't get what you are saying. But if you are so positive about it, let's try. Trying won't hurt. Would it?";
 		next;
 		emotion ET_SMILE;
-		mes "[Arivero Yurhik]";
+		mes "[阿里韦罗]";
 		mes "Since you are a hot person, your answer is also hot. Great! Let's go and try it. It's in this village anyway.";
 		next;
-		mes "[Arivero Yurhik]";
+		mes "[阿里韦罗]";
 		mes "You come to the very end of the freight train with the items with full of fire attributes.";
 		next;
 		erasequest 5728;	// Headache
 		setquest 5729;	// To 艾因贝克
 		yurhik_quest = 2;
-		mes "[Arivero Yurhik]";
+		mes "[阿里韦罗]";
 		mes "See you at the end of the freight train.";
 		close2;
-		cloakonnpcself( "Arivero Yurhik#TFQ02" );
+		cloakonnpcself( "阿里韦罗·尤希克#TFQ02" );
 		end;
 	}
 	if (yurhik_quest == 4) {
 		emotion ET_BLABLA;
-		mes "[Arivero Yurhik]";
+		mes "[阿里韦罗]";
 		mes "You were awesome. You deserve to be the hottest fellow in 克拉纳·内米耶里 these days.";
 		next;
 		emotion ET_BLABLA;
-		mes "[Arivero Yurhik]";
+		mes "[阿里韦罗]";
 		mes "Hey look! My elder sister is so glad to hear that the equipment was destroyed.";
 		next;
 		mes "His elder sister was just fishing around books and documents that she was looking at. But Arivero didn't seem to care about it and continued to speak in excitement.";
 		next;
 		emotion ET_SURPRISE;
-		mes "[Arivero Yurhik]";
+		mes "[阿里韦罗]";
 		mes "Oh! I almost forgot.";
 		mes "Since we revealed the secret of teleport prohibition equipment, our agent in Lighthalzen was able to spot the location and attributes of the equipment.";
 		next;
 		emotion ET_SCRATCH;
-		mes "[Arivero Yurhik]";
+		mes "[阿里韦罗]";
 		mes "Hmm..";
 		mes "The location is inside the mansion. The attribute is water. This information is too simple. Can we find it with this?";
 		next;
-		mes "[Arivero Yurhik]";
+		mes "[阿里韦罗]";
 		mes "Water on four sides.. Water attribute..";
 		mes "What kind of relationship is there between its installed location and the attribute of teleport prohibition device?";
 		next;
-		mes "[Arivero Yurhik]";
+		mes "[阿里韦罗]";
 		mes "It gives me a headache. Let me think about it later.";
 		mes "What do we need here? We need one Mystic Frozen to reveal the device.";
 		next;
 		emotion ET_QUESTION;
-		mes "[Arivero Yurhik]";
+		mes "[阿里韦罗]";
 		mes "Is Wind strong against Water? Hey pal. What is the attribute stone for wind attribute? Do you know?";
 		while(true) {
 			next;
 			switch( select( "Flame Heart", "Mystic Frozen", "Rough Wind", "Great Nature" ) ) {
 			case 1:
-				mes "[Arivero Yurhik]";
+				mes "[阿里韦罗]";
 				mes "Not Flame Heart. It's a fire attribute stone that revealed the device in 艾因贝克.";
 				continue;
 			case 2:
-				mes "[Arivero Yurhik]";
+				mes "[阿里韦罗]";
 				mes "And Mystic Frozen is a water attribute stone required to reveal the device in Lighthalzen.";
 				continue;
 			case 3:
-				mes "[Arivero Yurhik]";
+				mes "[阿里韦罗]";
 				mes "Yes, it is! Rough Wind! This is the attribute stone of Wind attribute.";
 				break;
 			case 4:
-				mes "[Arivero Yurhik]";
+				mes "[阿里韦罗]";
 				mes "Great Nature? Isn't it for the Ground attribute? I don't think we need it right now.";
 				continue;
 			}
 			break;
 		}
 		next;
-		mes "[Arivero Yurhik]";
+		mes "[阿里韦罗]";
 		mes "Great! Bring me one Mystic Frozen and three Rough Winds.";
 		mes "See you in Lighthalzen.";
 		next;
@@ -8403,7 +8403,7 @@ rebel_in,78,66,6	script	Arivero Yurhik#TFQ02	4_M_GUNSLINGER,{
 		mes "It's strange. Why are you in such a hurry?";
 		mes "Is there anything urgent?";
 		next;
-		mes "[Arivero Yurhik]";
+		mes "[阿里韦罗]";
 		mes "Oh, did I look like that? We already have the information and I was trying to destroy the equipment quickly before they become aware of it.";
 		next;
 		mes "[" + strcharinfo(0) + "]";
@@ -8413,19 +8413,19 @@ rebel_in,78,66,6	script	Arivero Yurhik#TFQ02	4_M_GUNSLINGER,{
 		erasequest 5731;	// Clana Namieri
 		setquest 5732;	// To Lighthalzen
 		yurhik_quest = 5;
-		mes "[Arivero Yurhik]";
+		mes "[阿里韦罗]";
 		mes "As I told you, I used to be the hottest person in 克拉纳·内米耶里 before you showed up!";
 		next;
-		mes "[Arivero Yurhik]";
+		mes "[阿里韦罗]";
 		mes "Oh!";
 		mes "Hey, let's get down to the business. Bring the materials and see you in Lighthalzen.";
 		close2;
-		cloakonnpcself( "Arivero Yurhik#TFQ02" );
+		cloakonnpcself( "阿里韦罗·尤希克#TFQ02" );
 		end;
 	}
 	if (yurhik_quest == 6) {
 		emotion ET_BLABLA;
-		mes "[Arivero Yurhik]";
+		mes "[阿里韦罗]";
 		mes "You were marvelous in Lighthalzen. No wonder you're such a hot person.";
 		mes "Look at her! My elder sister is even more pleased than before.";
 		next;
@@ -8437,18 +8437,18 @@ rebel_in,78,66,6	script	Arivero Yurhik#TFQ02	4_M_GUNSLINGER,{
 		mes "Look at her. She's not even looking here.";
 		next;
 		emotion ET_QUESTION;
-		mes "[Arivero Yurhik]";
+		mes "[阿里韦罗]";
 		mes "What?! Can't you see her being pleased? Look at her now. She is pretending to ignore us, because she is shy. But the glow around her cheeks shows that she is pleased. Got it?";
 		next;
 		mes "Well, I don't get it. But I will just accept it, as her younger brother says so.";
 		next;
 		emotion ET_OTL;
-		mes "[Arivero Yurhik]";
+		mes "[阿里韦罗]";
 		mes "Hey! Friend!! There's something more important than it.";
 		mes "We have a problem. According to our schedule, we were planning to destroy the equipment in Yuno right after destroying the equipment in Lighthalzen..";
 		next;
 		emotion ET_QUESTION;
-		mes "[Arivero Yurhik]";
+		mes "[阿里韦罗]";
 		mes "Remember the device that prevented the prohibition equipment from disappearance?";
 		mes "You know that stuff? That is out of order now.";
 		mes "So we have to fix it before leaving.";
@@ -8457,37 +8457,37 @@ rebel_in,78,66,6	script	Arivero Yurhik#TFQ02	4_M_GUNSLINGER,{
 		mes "You are dragging on.. You have something to ask me for, don't you?";
 		next;
 		emotion ET_SMILE;
-		mes "[Arivero Yurhik]";
+		mes "[阿里韦罗]";
 		mes "Hahaha. You figured it out? We are lucky to have all the materials to repair it, except for one core material. As usual, core materials are always a problem.";
 		next;
-		mes "[Arivero Yurhik]";
+		mes "[阿里韦罗]";
 		mes "So please bring one Star Crumb, the core material. Once you bring it to me, we can repair it and leave right away. I will be ready for it.";
 		next;
 		erasequest 5733;	// Clana Namieri
 		setquest 5734;	// Core materials are always a problem
 		yurhik_quest = 7;
-		mes "[Arivero Yurhik]";
+		mes "[阿里韦罗]";
 		mes "All we have to do is to insert the Star Crumb. So once you bring it, we can leave right away.";
 		mes "Regarding the location and required attribute stone, I will inform you then. I haven't finished collecting the information yet. I will count on you.";
 		close2;
-		cloakonnpcself( "Arivero Yurhik#TFQ02" );
+		cloakonnpcself( "阿里韦罗·尤希克#TFQ02" );
 		end;
 	}
 	if (yurhik_quest == 7) {
-		mes "[Arivero Yurhik]";
+		mes "[阿里韦罗]";
 		mes "The basic repair is all over.";
 		mes "Now let me insert a Star Crumb, the core material..";
 		next;
 		if (countitem(1000) < 1) {
 			emotion ET_HUM;
-			mes "[Arivero Yurhik]";
+			mes "[阿里韦罗]";
 			mes "The basic repairing is all over. But you haven't brought the Star Crumb yet. Please bring it soon.";
 			mes "Let's complete this operation quickly.";
 			mes "就拜托你了。";
 			close;
 		}
 		emotion ET_CONGRATULATION;
-		mes "[Arivero Yurhik]";
+		mes "[阿里韦罗]";
 		mes "The repairing is nearly over. Oh! You've brought it.";
 		mes "Now let me insert a Star Crumb on the device. It's the end of repairing!!";
 		next;
@@ -8502,32 +8502,32 @@ rebel_in,78,66,6	script	Arivero Yurhik#TFQ02	4_M_GUNSLINGER,{
 			mes "I won't be mad. All you needed was the Star Crumb from the beginning, right?";
 			next;
 			emotion ET_PROFUSELY_SWEAT;
-			mes "[Arivero Yurhik]";
+			mes "[阿里韦罗]";
 			mes "No! What kind of jerk do you take me for? Just look into my eyes!";
 			next;
 			mes "It's very suspicious of him to be mad like it. But I decided to laugh it off.";
 		}
 		next;
 		emotion ET_KIK;
-		mes "[Arivero Yurhik]";
+		mes "[阿里韦罗]";
 		mes "Although there has been a minor incident, now we have two more prohibition equipment devices to destroy.";
 		mes "But since we found the location and attribute of the prohibition equipment installed in Yuno, we can leave right now.";
 		next;
-		mes "[Arivero Yurhik]";
+		mes "[阿里韦罗]";
 		mes "The coordinates of Yuno's prohibition equipments are 206 224";
 		mes "It has a Wind attribute. Our agent will give us a Rough Wind, so we will be able to destroy it once we get there.";
 		next;
-		mes "[Arivero Yurhik]";
+		mes "[阿里韦罗]";
 		mes "Please get four Great Natures and come to Yuno. They have opposite attributes to the Wind attribute.";
 		next;
 		delitem 1000,1;// Star Crumb
 		erasequest 5734;	// Core materials are always a problem
 		setquest 5735;	// To Yuno
 		yurhik_quest = 8;
-		mes "[Arivero Yurhik]";
+		mes "[阿里韦罗]";
 		mes "See you in Yuno.";
 		close2;
-		cloakonnpcself( "Arivero Yurhik#TFQ02" );
+		cloakonnpcself( "阿里韦罗·尤希克#TFQ02" );
 		end;
 	}
 	end;
@@ -8614,30 +8614,30 @@ OnInit:
 einbech,212,212,6	script	Arivero Yurhik#TFQ04	4_M_GUNSLINGER,{
 	if (yurhik_quest == 2) {
 		if (countitem(994) < 1) {
-			mes "[Arivero Yurhik]";
+			mes "[阿里韦罗]";
 			mes "Welcome, pal. Have you brought the item full of fire attributes that I asked you for?";
 			next;
-			mes "[Arivero Yurhik]";
+			mes "[阿里韦罗]";
 			mes "Not yet? Please bring an item full of Fire attributes.";
 			close;
 		}
-		mes "[Arivero Yurhik]";
+		mes "[阿里韦罗]";
 		mes "Welcome, pal. Have you brought the item full of fire attributes that I asked you for?";
 		next;
-		mes "[Arivero Yurhik]";
+		mes "[阿里韦罗]";
 		mes "Flame Heart?";
 		mes "Oh, Flame Heart? I heard it's an item with a strong fire attribute.";
 		next;
-		mes "[Arivero Yurhik]";
+		mes "[阿里韦罗]";
 		mes "Shall I try? Let's see. This seems to be the place the agent told us about. Now we have to break the Flame Heart you brought into pieces..";
 		next;
 		cloakoffnpcself( "Teleport Prohibition equipment#1" );
 		specialeffect EF_FLAMELAUNCHER, AREA, "Teleport Prohibition equipment#1";
-		mes "[Arivero Yurhik]";
+		mes "[阿里韦罗]";
 		mes "Yeah~ Great. It's a success.";
 		mes "The equipment showed up. Yikes! Turn on the device you brought before the equipment disappears..";
 		next;
-		mes "[Arivero Yurhik]";
+		mes "[阿里韦罗]";
 		mes "It was a vague theory, but it succeeded.";
 		mes "Shall we destroy it, pal?";
 		next;
@@ -8651,21 +8651,21 @@ einbech,212,212,6	script	Arivero Yurhik#TFQ04	4_M_GUNSLINGER,{
 		npctalk "Bang!", "Teleport Prohibition equipment#1", bc_self;
 		sleep2 2000;
 		specialeffect EF_SUI_EXPLOSION, AREA, "Teleport Prohibition equipment#1";
-		mes "[Arivero Yurhik]";
+		mes "[阿里韦罗]";
 		mes "What? Why is it unscathed?";
 		mes "I thought the attack was strong enough..";
 		next;
 		emotion ET_THINK;
-		mes "[Arivero Yurhik]";
+		mes "[阿里韦罗]";
 		mes ". . . . . .";
 		next;
-		mes "[Arivero Yurhik]";
+		mes "[阿里韦罗]";
 		mes "Oh! Perhaps..? Hey, pal. This equipment has a Fire attribute. What is the attribute opposite to Fire?";
 		next;
 		mes "[" + strcharinfo(0) + "]";
 		mes "Water.";
 		next;
-		mes "[Arivero Yurhik]";
+		mes "[阿里韦罗]";
 		mes "That's it!! Water!! A water attribute.";
 		mes "If we attack it using a Water attribute, the equipment will be destroyed. Hey, pal. Bring an item with a strong Water attribute.";
 		next;
@@ -8673,28 +8673,28 @@ einbech,212,212,6	script	Arivero Yurhik#TFQ04	4_M_GUNSLINGER,{
 		erasequest 5729;	// To 艾因贝克
 		setquest 5730;	// Things that can destroy the device
 		yurhik_quest = 3;
-		mes "[Arivero Yurhik]";
+		mes "[阿里韦罗]";
 		mes "Obviously we will need more than one. Please bring me several of those. I will be guarding here to prevent the equipment from disappearing.";
 		close;
 	}
 	if (yurhik_quest == 3) {
 		emotion ET_QUESTION;
-		mes "[Arivero Yurhik]";
+		mes "[阿里韦罗]";
 		mes "Welcome, pal. Have you brought the item full of Water attributes that I asked you for?";
 		next;
 		if (countitem(995) < 1) {
-			mes "[Arivero Yurhik]";
+			mes "[阿里韦罗]";
 			mes "Not yet?";
 			mes "We need an item that has a strong Water attribute.";
 			close;
 		}
 		if (countitem(995) < 3) {
-			mes "[Arivero Yurhik]";
+			mes "[阿里韦罗]";
 			mes "Mystic Frozen? Certainly it's an item that has a strong Water attribute. Right. Mystic Frozen will be the equipment strong enough for our purpose. But one or two will not be enough.";
 			mes "I think we need at least three of them.";
 			close;
 		}
-		mes "[Arivero Yurhik]";
+		mes "[阿里韦罗]";
 		mes "Mystic Frozen? Certainly it's an item that has a strong Water attribute. Right. Mystic Frozen will be the equipment strong enough for our purpose. Let's try it.";
 		next;
 		specialeffect EF_FROSTWEAPON;
@@ -8712,21 +8712,21 @@ einbech,212,212,6	script	Arivero Yurhik#TFQ04	4_M_GUNSLINGER,{
 		specialeffect EF_LORD, AREA, "Teleport Prohibition equipment#1";
 		cloakonnpcself( "Teleport Prohibition equipment#1" );
 		sleep2 1000;
-		mes "[Arivero Yurhik]";
+		mes "[阿里韦罗]";
 		mes "Great! We destroyed the equipment.";
 		next;
-		mes "[Arivero Yurhik]";
+		mes "[阿里韦罗]";
 		mes "Good job, pal.";
 		mes "Although we destroyed the equipment, there is some magic power remaining. Therefore, teleporting will not be possible in this area for a while.";
 		next;
-		mes "[Arivero Yurhik]";
+		mes "[阿里韦罗]";
 		mes "But, eventually, teleporting will become possible.";
 		next;
 		delitem 995,3;// Mystic Frozen
 		erasequest 5730;	// // Things that can destroy the device
 		setquest 5731;	// // Clana Namieri
 		yurhik_quest = 4;
-		mes "[Arivero Yurhik]";
+		mes "[阿里韦罗]";
 		mes "We destroyed the prohibition equipment. Now let's go back to 克拉纳·内米耶里.";
 		close2;
 		cloakonnpcself( "Arivero Yurhik#TFQ04" );
@@ -8754,46 +8754,46 @@ einbech,215,210,4	duplicate(dummy_cloaked_npc)	Teleport Prohibition equipment#1	
 lighthalzen,135,233,6	script	Arivero Yurhik#TFQ07	4_M_GUNSLINGER,{
 	if (yurhik_quest == 5) {
 		if (countitem(995) < 1 || countitem(996) < 3) {
-			mes "[Arivero Yurhik]";
+			mes "[阿里韦罗]";
 			mes "Sorry! Sorry! As a matter of fact, I arrived here early. But I had to talk to the agent to get the right location. I should have arrived and called you in advance. Sorry to make you come here alone.";
 			next;
-			mes "[Arivero Yurhik]";
+			mes "[阿里韦罗]";
 			mes "You're so great!";
 			mes "Coming all the way here only with that information! I could not find this, so I had to meet the agent.";
 			next;
-			mes "[Arivero Yurhik]";
+			mes "[阿里韦罗]";
 			mes "The important thing is that we both arrived here safely. Remember I asked you to bring one Mystic Frozen and three Rough Winds. Right?";
 			next;
-			mes "[Arivero Yurhik]";
+			mes "[阿里韦罗]";
 			mes "Where are the items I asked you for?";
 			mes "We must destroy this before they realize that the equipment items are being destroyed one by one. Bring them quickly.";
 			next;
-			mes "[Arivero Yurhik]";
+			mes "[阿里韦罗]";
 			mes "Oops! There's someone passing by.";
 			mes "I might look suspicious, so I will hide myself.";
 			close2;
 			cloakonnpcself( "Arivero Yurhik#TFQ07" );
 			end;
 		}
-		mes "[Arivero Yurhik]";
+		mes "[阿里韦罗]";
 		mes "Sorry! Sorry! As a matter of fact, I arrived here early. But I had to talk to the agent to get the right location. I should have arrived and called you in advance. Sorry to make you come here alone.";
 		next;
-		mes "[Arivero Yurhik]";
+		mes "[阿里韦罗]";
 		mes "You're so great!";
 		mes "Coming all the way here only with that information! I could not find this, so I had to meet the agent.";
 		next;
-		mes "[Arivero Yurhik]";
+		mes "[阿里韦罗]";
 		mes "The important thing is that we both arrived here safely. Remember I asked you to bring one Mystic Frozen and three Rough Winds. Right?";
 		next;
-		mes "[Arivero Yurhik]";
+		mes "[阿里韦罗]";
 		mes "Mystic Frozen. The location is clear, because I checked it with our agent. If we break the Mystic Frozen you brought into pieces..";
 		next;
 		specialeffect EF_FROSTWEAPON, AREA, "Teleport Prohibition equipment#2";
-		mes "[Arivero Yurhik]";
+		mes "[阿里韦罗]";
 		mes "Good! The equipment has showed up..";
 		mes "And we installed the device we brought..";
 		next;
-		mes "[Arivero Yurhik]";
+		mes "[阿里韦罗]";
 		mes "Great. Now we can destroy it. Prepare the Rough Wind.";
 		next;
 		specialeffect EF_LIGHTNINGLOADER;
@@ -8814,19 +8814,19 @@ lighthalzen,135,233,6	script	Arivero Yurhik#TFQ07	4_M_GUNSLINGER,{
 		specialeffect EF_LORD, AREA, "Teleport Prohibition equipment#2";
 		cloakonnpcself( "Teleport Prohibition equipment#2" );
 		sleep2 1000;
-		mes "[Arivero Yurhik]";
+		mes "[阿里韦罗]";
 		mes "Nevertheless, the first one is always tough and it is easier from the second one. Now let us disappear with teleporting..";
 		next;
 		emotion ET_THINK;
-		mes "[Arivero Yurhik]";
+		mes "[阿里韦罗]";
 		mes ". . . . . .";
 		next;
 		emotion ET_SHY;
-		mes "[Arivero Yurhik]";
+		mes "[阿里韦罗]";
 		mes "Yikes! I almost forgot.";
 		mes "We cannot teleport immediately after destroying it. I told you about it and I forgot it myself! What a shame.";
 		next;
-		mes "[Arivero Yurhik]";
+		mes "[阿里韦罗]";
 		mes "Ha! In the past, due to the magic power of this prohibition equipment.. Oh! It's nothing.";
 		mes "We cannot help walking.";
 		next;
@@ -8835,7 +8835,7 @@ lighthalzen,135,233,6	script	Arivero Yurhik#TFQ07	4_M_GUNSLINGER,{
 		erasequest 5732;	// To Lighthalzen
 		setquest 5733;	// Clana Namieri
 		yurhik_quest = 6;
-		mes "[Arivero Yurhik]";
+		mes "[阿里韦罗]";
 		mes "To avoid getting caught, let's scatter.";
 		mes "See you in 克拉纳·内米耶里.";
 		close2;
@@ -8857,7 +8857,7 @@ OnTouch:
 		next;
 		cloakoffnpcself( "Arivero Yurhik#TFQ07" );
 		npctalk "Oops?! My hot friend has already arrived.", "Arivero Yurhik#TFQ07", bc_self;
-		mes "[Arivero Yurhik]";
+		mes "[阿里韦罗]";
 		mes "Oops?! My hot friend has already arrived.";
 		close;
 	}
@@ -8869,24 +8869,24 @@ lighthalzen,137,231,0	duplicate(dummy_cloaked_npc)	Teleport Prohibition equipmen
 
 yuno,204,226,6	script	Arivero Yurhik#TFQ10	4_M_GUNSLINGER,{
 	if (yurhik_quest == 8) {
-		mes "[Arivero Yurhik]";
+		mes "[阿里韦罗]";
 		mes "Welcome, pal! I have just arrived now. I summoned the equipment and mounted it to prevent from disappearing.";
 		next;
-		mes "[Arivero Yurhik]";
+		mes "[阿里韦罗]";
 		mes "Have you brought Great Nature?";
 		next;
 		if (countitem(997) < 3) {
-			mes "[Arivero Yurhik]";
+			mes "[阿里韦罗]";
 			mes "Not yet. I will be guarding this here. Please bring it quickly.";
 			mes "According to our agent, Rekenber and the government are serious now.";
 			mes "就拜托你了。";
 			close;
 		}
-		mes "[Arivero Yurhik]";
+		mes "[阿里韦罗]";
 		mes "You are a reliable friend of mine.";
 		mes "Since we don't have enough time, let's destroy the equipment quickly and go to 艾因布罗克. According to our agent, Rekenber and the government are serious now.";
 		next;
-		mes "[Arivero Yurhik]";
+		mes "[阿里韦罗]";
 		mes "I will destroy the equipment right now.";
 		mes "Prepare Great Nature.";
 		next;
@@ -8907,7 +8907,7 @@ yuno,204,226,6	script	Arivero Yurhik#TFQ10	4_M_GUNSLINGER,{
 		sleep2 1000;
 		specialeffect EF_LORD, AREA, "Teleport Prohibition equipment#3";
 		cloakonnpcself( "Teleport Prohibition equipment#3" );
-		mes "[Arivero Yurhik]";
+		mes "[阿里韦罗]";
 		mes "We destroyed the prohibition equipment and there appear to be.. no eyewitnesses. Just in case, let's scatter and move to 艾因布罗克.";
 		next;
 		delitem 997,3;// Great Nature
@@ -8915,7 +8915,7 @@ yuno,204,226,6	script	Arivero Yurhik#TFQ10	4_M_GUNSLINGER,{
 		setquest 5736;	// To 艾因布罗克
 		yurhik_quest = 9;
 		emotion ET_HUK;
-		mes "[Arivero Yurhik]";
+		mes "[阿里韦罗]";
 		mes "Oh! I haven't told you the location.";
 		mes "It is the place where 艾因布罗克 Wind turbine is located. You bring three Flame Hearts and one remaining Great Nature. We will use them to destroy the equipment.";
 		next;
@@ -8944,18 +8944,18 @@ yuno,206,224,0	duplicate(dummy_cloaked_npc)	Teleport Prohibition equipment#3	2_M
 
 einbroch,262,42,4	script	Arivero Yurhik#TFQ13	4_M_GUNSLINGER,{
 	if (yurhik_quest == 9) {
-		mes "[Arivero Yurhik]";
+		mes "[阿里韦罗]";
 		mes "have you brought three Flame Hearts and one Great Nature?";
 		next;
 		mes "Vero is pressing me, as if he does not have much time left. Something is fish. But I'm not asking him, as I know he won't tell me.";
 		next;
 		if (countitem(994) < 3 || countitem(997) < 1) {
-			mes "[Arivero Yurhik]";
+			mes "[阿里韦罗]";
 			mes "Please. And the last one is...";
 			mes "No! Nothing. Please bring it here as soon as possible.";
 			close;
 		}
-		mes "[Arivero Yurhik]";
+		mes "[阿里韦罗]";
 		mes "Great! Destroy the Great Nature now, so that the equipment will show up!!";
 		next;
 		mes "His voice betrays his panic. And he also asked me to do the job that he had been doing by himself. Is there something wrong? I was curious. I broke the Great Nature into pieces as he asked.";
@@ -8963,7 +8963,7 @@ einbroch,262,42,4	script	Arivero Yurhik#TFQ13	4_M_GUNSLINGER,{
 		specialeffect EF_SEISMICWEAPON, AREA, "Teleport Prohibition equipment#4";
 		cloakoffnpcself( "Teleport Prohibition equipment#4" );
 		emotion ET_BLABLA;
-		mes "[Arivero Yurhik]";
+		mes "[阿里韦罗]";
 		mes "Now! Time to use the Flame Heart!";
 		next;
 		mes "As Vero asked me, I smashed the Teleport Prohibition equipment with the Flame Heart.";
@@ -8995,7 +8995,7 @@ einbroch,262,42,4	script	Arivero Yurhik#TFQ13	4_M_GUNSLINGER,{
 		mes "The equipment was destroyed quickly. Then I realized that Vero looked a bit abnormal. Is he sick or something?";
 		next;
 		emotion ET_SORRY;
-		mes "[Arivero Yurhik]";
+		mes "[阿里韦罗]";
 		mes "Hey, pal! I know I have been naughty. But, thanks to your support, I managed to eliminate every Teleport Prohibition equipment in Schwaltzvalt.";
 		mes "Thank you for helping me. This was my wish.";
 		next;
@@ -9005,14 +9005,14 @@ einbroch,262,42,4	script	Arivero Yurhik#TFQ13	4_M_GUNSLINGER,{
 		mes "As if you were going far away?";
 		next;
 		emotion ET_SMILE;
-		mes "[Arivero Yurhik]";
+		mes "[阿里韦罗]";
 		mes "What's that look? Hahaha. I would like to take a photo of you. Well..";
 		next;
 		specialeffect EF_MAGICCRASHER2;
-		mes "[Arivero Yurhik]";
+		mes "[阿里韦罗]";
 		mes "I must be showing my gratitude now. But I have to ask you for one more favor. Please talk to my elder sister once in a while. She is lonely quite often..";
 		next;
-		mes "[Arivero Yurhik]";
+		mes "[阿里韦罗]";
 		mes "Oh.. It's time.. Bye.. Thanks..";
 		next;
 		specialeffect EF_MAPPILLAR;
