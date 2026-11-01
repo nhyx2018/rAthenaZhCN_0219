@@ -122,7 +122,7 @@ ve_in,237,125,0	script	帝王蟹#job_shu	107,{
 		mes "[帝王蟹 & 污泥虫]";
 		mes "啊啊啊啊啊啊啊啊！！！！";
 		specialeffect EF_FIRESPLASHHIT,AREA,"帝王蟹#job_shu";
-		specialeffect EF_FIRESPLASHHIT,AREA,"Sludge Worm#job_shu";
+		specialeffect EF_FIRESPLASHHIT,AREA,"污泥虫#job_shu";
 		next;
 		mes "- 那是什么惊人的力量？ -";
 		mes "- 我从未见过 -";
@@ -149,15 +149,15 @@ ve_in,237,125,0	script	帝王蟹#job_shu	107,{
 		donpcevent "???#bcmd::OnDisable";
 		next;
 		mes "[女服务员]";
-		mes "Bye...";
+		mes "再见……";
 		mes "...";
 		mes ".....";
-		mes "........(cheeks glowing)";
+		mes "……（脸颊泛红）";
 		set job_shu,1;
 		setquest 11155;
 		close;
 	} else {
-		if (strnpcinfo(0) == "King Crab#job_shu") {
+		if (strnpcinfo(0) == "帝王蟹#job_shu") {
 			mes "[帝王蟹]";
 			mes "一个小菜鸟怎么会把我打倒！我！伟大的帝王蟹……";
 		} else {
@@ -168,7 +168,7 @@ ve_in,237,125,0	script	帝王蟹#job_shu	107,{
 		close;
 	}
 }
-ve_in,241,128,4	duplicate(帝王蟹#job_shu)	Sludge Worm#job_shu	110
+ve_in,241,128,4	duplicate(帝王蟹#job_shu)	污泥虫#job_shu	110
 
 ve_in,244,126,3	script	女服务员#job_shu	69,{
 	mes "[女服务员]";
@@ -282,7 +282,7 @@ OnTouch:
 	end;
 }
 
-ve_in,98,159,0	script	格斗家#job_shu	484,{
+ve_in,98,159,0	script	布鲁诺#job_shu_ve	484,{
 	if (job_shu < 2) {
 		mes "[格斗家]";
 		mes "啊啊~好累。";
@@ -296,7 +296,7 @@ ve_in,98,159,0	script	格斗家#job_shu	484,{
 		mes "...";
 		mes "......";
 		mes ".........";
-		mes "............ A rookie like you doesn't need to know.";
+		mes "…………像你这样的菜鸟没必要知道。";
 		next;
 		mes "["+strcharinfo(0)+"]";
 		mes "菜鸟？！";
@@ -307,7 +307,7 @@ ve_in,98,159,0	script	格斗家#job_shu	484,{
 		mes "那你也能打倒我？";
 		next;
 		mes "["+strcharinfo(0)+"]";
-		mes "No...";
+		mes "不……";
 		mes "我想那太难了吧……";
 		mes "说实话，你让我相当吃惊。";
 		next;
@@ -518,10 +518,10 @@ yuno_fild07,254,176,7	script	博迪#job_shu	753,{
 	end;
 }
 
-sword_1-1,223,243,4	script	Drawing Room	753,{
+sword_1-1,223,243,4	script	客厅	753,{
 	end;
 OnInit:
-	waitingroom "Drawing Room",20,"Drawing Room::OnStartArena",1;
+	waitingroom "客厅",20,"客厅::OnStartArena",1;
 	enablewaitingroomevent;
 	end;
 OnStartArena:
@@ -537,7 +537,7 @@ OnDisable:
 	end;
 }
 
-sword_1-1,223,243,4	script	Buddy#job_shu_Salong	753,{
+sword_1-1,223,243,4	script	博迪#job_shu_Salong	753,{
 	mes "[博迪]";
 	mes "师父不喜欢吵闹，请^f57d7d安静地在客厅等候。^000000";
 	next;
@@ -573,10 +573,10 @@ OnDisable:
 	end;
 OnMyMobDead:
 	if (mobcount("sword_2-1","Buddy#Sura_Salon::OnMyMobDead") < 1) {
-		monster "sword_2-1",219,210,"Hallucination",1479,1,"Buddy#Sura_Salon::OnMyMobDead";
-		monster "sword_2-1",228,209,"Hallucination",1483,1,"Buddy#Sura_Salon::OnMyMobDead";
-		monster "sword_2-1",228,201,"Hallucination",1479,1,"Buddy#Sura_Salon::OnMyMobDead";
-		monster "sword_2-1",219,201,"Hallucination",1483,1,"Buddy#Sura_Salon::OnMyMobDead";
+		monster "sword_2-1",219,210,"幻觉",1479,1,"Buddy#Sura_Salon::OnMyMobDead";
+		monster "sword_2-1",228,209,"幻觉",1483,1,"Buddy#Sura_Salon::OnMyMobDead";
+		monster "sword_2-1",228,201,"幻觉",1479,1,"Buddy#Sura_Salon::OnMyMobDead";
+		monster "sword_2-1",219,201,"幻觉",1483,1,"Buddy#Sura_Salon::OnMyMobDead";
 	}
 	end;
 OnTimer3000:
@@ -589,62 +589,62 @@ OnTimer5000:
 	mapannounce "sword_2-1","这是师父的规矩，请不要介意。",bc_map;
 	end;
 OnTimer33000:
-	monster "sword_2-1",219,210,"Hallucination",1480,1,"Buddy#Sura_Salon::OnMyMobDead";
-	monster "sword_2-1",219,210,"It can't be true",1479,1,"Buddy#Sura_Salon::OnMyMobDead";
-	monster "sword_2-1",228,209,"Hallucination",1446,1,"Buddy#Sura_Salon::OnMyMobDead";
-	monster "sword_2-1",228,209,"Just Imagination",1483,1,"Buddy#Sura_Salon::OnMyMobDead";
-	monster "sword_2-1",228,201,"Hallucination",1480,1,"Buddy#Sura_Salon::OnMyMobDead";
-	monster "sword_2-1",228,201,"Illusion",1479,1,"Buddy#Sura_Salon::OnMyMobDead";
-	monster "sword_2-1",219,201,"Hallucination",1446,1,"Buddy#Sura_Salon::OnMyMobDead";
-	monster "sword_2-1",219,201,"Just Imagination",1483,1,"Buddy#Sura_Salon::OnMyMobDead";
+	monster "sword_2-1",219,210,"幻觉",1480,1,"Buddy#Sura_Salon::OnMyMobDead";
+	monster "sword_2-1",219,210,"不可能",1479,1,"Buddy#Sura_Salon::OnMyMobDead";
+	monster "sword_2-1",228,209,"幻觉",1446,1,"Buddy#Sura_Salon::OnMyMobDead";
+	monster "sword_2-1",228,209,"只是想象",1483,1,"Buddy#Sura_Salon::OnMyMobDead";
+	monster "sword_2-1",228,201,"幻觉",1480,1,"Buddy#Sura_Salon::OnMyMobDead";
+	monster "sword_2-1",228,201,"幻影",1479,1,"Buddy#Sura_Salon::OnMyMobDead";
+	monster "sword_2-1",219,201,"幻觉",1446,1,"Buddy#Sura_Salon::OnMyMobDead";
+	monster "sword_2-1",219,201,"只是想象",1483,1,"Buddy#Sura_Salon::OnMyMobDead";
 	end;
 OnTimer93000:
-	monster "sword_2-1",219,210,"Hallucination",1480,1,"Buddy#Sura_Salon::OnMyMobDead";
-	monster "sword_2-1",219,210,"Just Imagination",1479,1,"Buddy#Sura_Salon::OnMyMobDead";
-	monster "sword_2-1",228,209,"Hallucination",1446,1,"Buddy#Sura_Salon::OnMyMobDead";
-	monster "sword_2-1",228,209,"Hallucination",1483,1,"Buddy#Sura_Salon::OnMyMobDead";
-	monster "sword_2-1",228,201,"Hallucination",1480,1,"Buddy#Sura_Salon::OnMyMobDead";
-	monster "sword_2-1",219,201,"Hallucination",1446,1,"Buddy#Sura_Salon::OnMyMobDead";
+	monster "sword_2-1",219,210,"幻觉",1480,1,"Buddy#Sura_Salon::OnMyMobDead";
+	monster "sword_2-1",219,210,"只是想象",1479,1,"Buddy#Sura_Salon::OnMyMobDead";
+	monster "sword_2-1",228,209,"幻觉",1446,1,"Buddy#Sura_Salon::OnMyMobDead";
+	monster "sword_2-1",228,209,"幻觉",1483,1,"Buddy#Sura_Salon::OnMyMobDead";
+	monster "sword_2-1",228,201,"幻觉",1480,1,"Buddy#Sura_Salon::OnMyMobDead";
+	monster "sword_2-1",219,201,"幻觉",1446,1,"Buddy#Sura_Salon::OnMyMobDead";
 	end;
 OnTimer153000:
 	mapannounce "sword_2-1","如果无聊，我给您拿些杂志来好吗？",bc_map;
-	monster "sword_2-1",219,210,"Magazine",1478,1,"Buddy#Sura_Salon::OnMyMobDead";
-	monster "sword_2-1",219,210,"Magazine",1478,1,"Buddy#Sura_Salon::OnMyMobDead";
-	monster "sword_2-1",228,209,"Magazine",1478,1,"Buddy#Sura_Salon::OnMyMobDead";
-	monster "sword_2-1",228,209,"Magazine",1478,1,"Buddy#Sura_Salon::OnMyMobDead";
-	monster "sword_2-1",228,201,"Magazine",1478,1,"Buddy#Sura_Salon::OnMyMobDead";
-	monster "sword_2-1",228,201,"Magazine",1478,1,"Buddy#Sura_Salon::OnMyMobDead";
-	monster "sword_2-1",219,201,"Magazine",1478,1,"Buddy#Sura_Salon::OnMyMobDead";
-	monster "sword_2-1",219,201,"Magazine",1478,1,"Buddy#Sura_Salon::OnMyMobDead";
+	monster "sword_2-1",219,210,"杂志",1478,1,"Buddy#Sura_Salon::OnMyMobDead";
+	monster "sword_2-1",219,210,"杂志",1478,1,"Buddy#Sura_Salon::OnMyMobDead";
+	monster "sword_2-1",228,209,"杂志",1478,1,"Buddy#Sura_Salon::OnMyMobDead";
+	monster "sword_2-1",228,209,"杂志",1478,1,"Buddy#Sura_Salon::OnMyMobDead";
+	monster "sword_2-1",228,201,"杂志",1478,1,"Buddy#Sura_Salon::OnMyMobDead";
+	monster "sword_2-1",228,201,"杂志",1478,1,"Buddy#Sura_Salon::OnMyMobDead";
+	monster "sword_2-1",219,201,"杂志",1478,1,"Buddy#Sura_Salon::OnMyMobDead";
+	monster "sword_2-1",219,201,"杂志",1478,1,"Buddy#Sura_Salon::OnMyMobDead";
 	end;
 OnTimer213000:
-	monster "sword_2-1",219,210,"Hallucination",1480,1,"Buddy#Sura_Salon::OnMyMobDead";
-	monster "sword_2-1",219,210,"Never mind",1479,1,"Buddy#Sura_Salon::OnMyMobDead";
-	monster "sword_2-1",228,209,"Hallucination",1483,1,"Buddy#Sura_Salon::OnMyMobDead";
-	monster "sword_2-1",228,201,"Hallucination",1480,1,"Buddy#Sura_Salon::OnMyMobDead";
-	monster "sword_2-1",228,201,"Can you see me?",1479,1,"Buddy#Sura_Salon::OnMyMobDead";
-	monster "sword_2-1",219,201,"Hallucination",1483,1,"Buddy#Sura_Salon::OnMyMobDead";
+	monster "sword_2-1",219,210,"幻觉",1480,1,"Buddy#Sura_Salon::OnMyMobDead";
+	monster "sword_2-1",219,210,"算了",1479,1,"Buddy#Sura_Salon::OnMyMobDead";
+	monster "sword_2-1",228,209,"幻觉",1483,1,"Buddy#Sura_Salon::OnMyMobDead";
+	monster "sword_2-1",228,201,"幻觉",1480,1,"Buddy#Sura_Salon::OnMyMobDead";
+	monster "sword_2-1",228,201,"你看得见我吗？",1479,1,"Buddy#Sura_Salon::OnMyMobDead";
+	monster "sword_2-1",219,201,"幻觉",1483,1,"Buddy#Sura_Salon::OnMyMobDead";
 	end;
 OnTimer273000:
 	monster "sword_2-1",219,210,"",1480,1,"Buddy#Sura_Salon::OnMyMobDead";
-	monster "sword_2-1",228,209,"Hallucination",1446,1,"Buddy#Sura_Salon::OnMyMobDead";
-	monster "sword_2-1",228,201,"Hallucination",1480,1,"Buddy#Sura_Salon::OnMyMobDead";
-	monster "sword_2-1",228,201,"Hallucination",1479,1,"Buddy#Sura_Salon::OnMyMobDead";
-	monster "sword_2-1",219,201,"Hallucination",1446,1,"Buddy#Sura_Salon::OnMyMobDead";
-	monster "sword_2-1",219,201,"Hallucination",1483,1,"Buddy#Sura_Salon::OnMyMobDead";
+	monster "sword_2-1",228,209,"幻觉",1446,1,"Buddy#Sura_Salon::OnMyMobDead";
+	monster "sword_2-1",228,201,"幻觉",1480,1,"Buddy#Sura_Salon::OnMyMobDead";
+	monster "sword_2-1",228,201,"幻觉",1479,1,"Buddy#Sura_Salon::OnMyMobDead";
+	monster "sword_2-1",219,201,"幻觉",1446,1,"Buddy#Sura_Salon::OnMyMobDead";
+	monster "sword_2-1",219,201,"幻觉",1483,1,"Buddy#Sura_Salon::OnMyMobDead";
 	end;
 OnTimer300000:
 	mapannounce "sword_2-1","师父到了。我马上带您进师父的房间。",bc_map;
 	end;
 OnTimer303000:
-	donpcevent "Buddy#job_shuaneh::OnEnable";
+	donpcevent "博迪#job_shuaneh::OnEnable";
 	end;
 OnTimer305000:
 	donpcevent "Buddy#Sura_Salon::OnReset";
 	end;
 OnTimer315000:
 	mapannounce "sword_2-1","到这边来。",bc_map;
-	donpcevent "Buddy#job_shuaneh::OnDisable";
+	donpcevent "博迪#job_shuaneh::OnDisable";
 	donpcevent "#Sura_garajjom::OnEnable";
 	end;
 OnTimer320000:
@@ -652,16 +652,16 @@ OnTimer320000:
 	mapwarp "sword_2-1","yuno_fild07",255,178;
 	donpcevent "#Sura_garajjom::OnDisable";
 	donpcevent "Buddy#Sura_Salon::OnDisable";
-	donpcevent "Drawing Room::OnEnable";
+	donpcevent "客厅::OnEnable";
 	end;
 }
 
-sword_2-1,223,205,7	script	Buddy#job_shuaneh	753,{
+sword_2-1,223,205,7	script	博迪#job_shuaneh	753,{
 	if (job_shu > 4) {
 		mes "我来带路。这边请。";
 		close2;
 		warp "sword_1-1",216,168;
-		donpcevent "Buddy#job_shuaneh::OnDisable";
+		donpcevent "博迪#job_shuaneh::OnDisable";
 		end;
 	}
 	mes "你为什么在这里？";
@@ -670,10 +670,10 @@ sword_2-1,223,205,7	script	Buddy#job_shuaneh	753,{
 	end;
 OnInit:
 OnDisable:
-	disablenpc "Buddy#job_shuaneh";
+	disablenpc "博迪#job_shuaneh";
 	end;
 OnEnable:
-	enablenpc "Buddy#job_shuaneh";
+	enablenpc "博迪#job_shuaneh";
 	end;
 }
 
@@ -690,7 +690,7 @@ OnEnable:
 	end;
 }
 
-sword_1-1,222,169,5	script	Bruno#job_shu	484,{
+sword_1-1,222,169,5	script	布鲁诺#job_shu	484,{
 	if (job_shu > 4) {
 		mes "[布鲁诺]";
 		mes "嘿~"+strcharinfo(0)+"，怎么了？";
@@ -755,7 +755,7 @@ sword_1-1,222,169,5	script	Bruno#job_shu	484,{
 	end;
 }
 
-sword_1-1,223,167,2	script	Master#job_shu	483,{
+sword_1-1,223,167,2	script	大师#job_shu	483,{
 	mes "[大师]";
 	if (job_shu == 5) {
 		mes "你眼光不错，终于来到这个房间。";
@@ -841,16 +841,16 @@ sword_1-1,223,167,2	script	Master#job_shu	483,{
 	end;
 }
 
-sword_2-1,1,2,0	script	Button Girl#sura	66,{
+sword_2-1,1,2,0	script	按钮少女#sura	66,{
 	callfunc "F_GM_NPC";
 	switch(select("开启竞技场。:关闭竞技场。:开启客厅。:开启博迪。:开启加拉。:全部关闭。:关闭")) {
 	case 1:
 		mes "开启竞技场。";
-		donpcevent "Drawing Room::OnEnable";
+		donpcevent "客厅::OnEnable";
 		close;
 	case 2:
 		mes "关闭竞技场。";
-		donpcevent "Drawing Room::OnDisable";
+		donpcevent "客厅::OnDisable";
 		close;
 	case 3:
 		mes "开启客厅。";
@@ -858,7 +858,7 @@ sword_2-1,1,2,0	script	Button Girl#sura	66,{
 		close;
 	case 4:
 		mes "开启博迪。";
-		donpcevent "Buddy#job_shuaneh::OnEnable";
+		donpcevent "博迪#job_shuaneh::OnEnable";
 		close;
 	case 5:
 		mes "开启加拉。";
@@ -866,10 +866,10 @@ sword_2-1,1,2,0	script	Button Girl#sura	66,{
 		close;
 	case 6:
 		mes "全部关闭。";
-		donpcevent "Drawing Room::OnDisable";
+		donpcevent "客厅::OnDisable";
 		donpcevent "Buddy#Sura_Salon::OnReset";
 		donpcevent "Buddy#Sura_Salon::OnDisable";
-		donpcevent "Buddy#job_shuaneh::OnDisable";
+		donpcevent "博迪#job_shuaneh::OnDisable";
 		donpcevent "#Sura_garajjom::OnDisable";
 		close;
 	case 7:

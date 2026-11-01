@@ -184,7 +184,7 @@ beach_dun2,119,92,4	script	钓鱼初心者#sp2	567,{
 		next;
 		select("你在说什么啊？！");
 		mes "[诺多尔]";
-		mes "Heh...";
+		mes "嘿……";
 		mes "你还真是有胆量啊？";
 		next;
 		select("... ..... ...");
@@ -252,7 +252,7 @@ beach_dun2,119,92,4	script	钓鱼初心者#sp2	567,{
 		mes "[诺多尔]";
 		mes "你知道这是为了什么吗？";
 		next;
-		setarray .@Monsters$[0],"Poring","Lunatic","Fabre","Picky";
+		setarray .@Monsters$[0],"波利","疯兔","绿棉虫","小鸡";
 		set .@i, rand(4);
 		changequest 5093,5094+.@i;
 		mes "[诺多尔]";
@@ -410,7 +410,7 @@ beach_dun2,119,92,4	script	钓鱼初心者#sp2	567,{
 		select("他好像饿坏了……");
 		mes "[诺多尔]";
 		mes "对了……";
-		mes callfunc("F_InsertComma",.@n)+" Zeny is so little considering my celebrity status, don't you think?";
+		mes callfunc("F_InsertComma",.@n)+" Zeny？以我的名气来说也太少了吧？";
 		next;
 		select("Eh.....");
 		mes "[诺多尔]";
@@ -418,7 +418,7 @@ beach_dun2,119,92,4	script	钓鱼初心者#sp2	567,{
 		mes callfunc("F_InsertComma",.@n)+" Zeny...";
 		mes "你不觉得给得太少了吗？我的名声要受损了。";
 		next;
-		select("Hey...");
+		select("喂……");
 		mes "[诺多尔]";
 		mes "哇，你已经明白我的意思了？";
 		next;
@@ -504,7 +504,7 @@ beach_dun2,119,92,4	script	钓鱼初心者#sp2	567,{
 		next;
 		emotion ET_SCRATCH;
 		mes "[诺多尔]";
-		mes "Sieu Ngu先生——";
+		mes "“笨蛋先生”——";
 		mes "不是想损你，只是";
 		mes "你有点迟钝……";
 		mes "你不觉得现在不一样了吗？";
@@ -563,7 +563,7 @@ beach_dun2,119,92,4	script	钓鱼初心者#sp2	567,{
 		mes "我把自己的东西送你，你怎么能是这种反应？";
 		next;
 		mes "[诺多尔]";
-		mes "I...";
+		mes "我……";
 		mes "送出去的东西我收不回来。";
 		next;
 		mes "[诺多尔]";
@@ -628,7 +628,7 @@ airplane,33,47,5	script	努多尔#sp2	729,{
 				case 3: set .@n,300000; break;
 				case 4: set .@n,1000000; break;
 			}
-			mes "真棒～～他给了你"+callfunc("F_InsertComma",.@n)+" Zeny? That's pretty much!";
+			mes "真棒～～他给了你"+callfunc("F_InsertComma",.@n)+" Zeny？真不少！";
 			next;
 			if (Zeny < .@n) {
 				mes "[努多尔]";
@@ -659,7 +659,7 @@ airplane,33,47,5	script	努多尔#sp2	729,{
 		if (.@i < 5) set EXSUPNOV_Q_, .@i;
 		else {
 			if (.@n > 1000000) set EXSUPNOV_Q_,4;
-			else if (.@n > 300000) set EX_SUPNOV_Q_,3;
+			else if (.@n > 300000) set EXSUPNOV_Q_,3;
 			else set EXSUPNOV_Q_,2;
 		}
 		next;

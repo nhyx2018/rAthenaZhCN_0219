@@ -32,7 +32,7 @@ aldeba_in,223,167,3	script	泽雷罗#sn	709,{
 		mes "我鼓励你去过";
 		mes "基姆-肖恩先生那样的生活……";
 		mes "成为万事通吧……";
-		mes "...and a master of none.";
+		mes "……却样样不精。";
 		close;
 	}
 	if (countitem(938) > 29 && countitem(907) > 29 && SUPNOV_Q == 1) {
@@ -70,7 +70,7 @@ aldeba_in,223,167,3	script	泽雷罗#sn	709,{
 		mes "顺便也澄清一下";
 		mes "像我这样的成年男子";
 		mes "为什么会随身带着";
-		mes "一条内裤。";
+		mes "一条三角裤。";
 		next;
 		mes "[泽雷罗]";
 		mes "重要的是……";
@@ -78,7 +78,7 @@ aldeba_in,223,167,3	script	泽雷罗#sn	709,{
 		mes "超级初心者的光荣行列。";
 		next;
 		mes "[泽雷罗]";
-		mes "就把这条内裤当作礼物吧……";
+		mes "就把这条三角裤当作礼物吧……";
 		mes "据说这件衣物";
 		mes "曾由基姆-肖恩先生穿着，";
 		mes "他是我们传说中的俱乐部创始人，";
@@ -104,13 +104,13 @@ aldeba_in,223,167,3	script	泽雷罗#sn	709,{
 		mes "[泽雷罗]";
 		mes "我要你带来";
 		mes "^FF000030 份黏稠液体^000000 和";
-		mes "^FF000030 份树脂^000000。";
+		mes "^FF000030 份枯木汁^000000。";
 		close;
 	}
 	if (BaseJob == Job_Novice && Upper != 1) {
 		mes "[泽雷罗]";
-		mes "...Hmm?";
-		mes "Stop.";
+		mes "……嗯？";
+		mes "站住。";
 		mes "让我看看你。";
 		next;
 		mes "[泽雷罗]";
@@ -129,7 +129,7 @@ aldeba_in,223,167,3	script	泽雷罗#sn	709,{
 		mes "年轻的初心者？加入";
 		mes "我们，体会那份";
 		mes "身为平凡者的伟大……";
-		mes "mediocre...";
+		mes "平庸……";
 		next;
 		mes "[泽雷罗]";
 		mes "接受我的提议吧……";
@@ -138,7 +138,7 @@ aldeba_in,223,167,3	script	泽雷罗#sn	709,{
 		mes "蜕变成……";
 		next;
 		mes "[泽雷罗]";
-		mes "...a ^CE6300Super Novice^000000.";
+		mes "……^CE6300超级初心者^000000。";
 		next;
 		switch(select("接受他的提议。:拒绝他的提议。:再仔细听听。")) {
 		case 1:
@@ -198,9 +198,9 @@ aldeba_in,223,167,3	script	泽雷罗#sn	709,{
 			mes "毫无特别的魔物掉落的道具。";
 			next;
 			mes "[泽雷罗]";
-			mes "Hmmmm...";
+			mes "嗯……";
 			mes "^FF000030 份黏稠液体^000000";
-			mes "以及 ^FF000030 份树脂";
+			mes "以及 ^FF000030 份枯木汁";
 			mes "^000000就足以测试你";
 			mes "与弱小敌人战斗的能力。";
 			next;
@@ -228,7 +228,7 @@ aldeba_in,223,167,3	script	泽雷罗#sn	709,{
 			mes "但是，如果你哪天看到";
 			mes "那平庸之光，";
 			mes "欢迎来找我";
-			mes "anytime...";
+			mes "随时……";
 			next;
 			mes "[泽雷罗]";
 			mes "随着我们初心者俱乐部";
@@ -249,7 +249,7 @@ aldeba_in,223,167,3	script	泽雷罗#sn	709,{
 			mes "有太多苦难，尤其是在";
 			mes "这片土地上";
 			mes "的平民百姓之间";
-			mes "Midgard...";
+			mes "米德加尔特……";
 			next;
 			mes "[泽雷罗]";
 			mes "他从遇见的";
@@ -407,7 +407,7 @@ aldebaran,54,238,5	script	卡普拉职员#sn	117,{
 		mes "因为这违反我们的";
 		mes "公司规定。但我觉得";
 		mes "超级初心者实在太可怜了";
-		mes "...so here I am.^000000";
+		mes "……于是我就来了。^000000";
 		next;
 		mes "[卡普拉职员]";
 		mes "总之，你要租推车吗？服务费是 1,900 Zeny。";
