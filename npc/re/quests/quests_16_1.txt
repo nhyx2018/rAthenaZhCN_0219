@@ -349,8 +349,8 @@ prt_cas_q,26,30,3	script	贝尔侍从长#ep16_main	4_M_RUSMAN1,{
 		close;
 	case 2:
 		if (isbegin_quest(7682) != 2) {// Socializing Starts from an Eye Contact
-			if (isbegin_quest(7683) < 2) .@string$ = "Heine";
-			if (isbegin_quest(7684) < 2) .@string$ += ( .@string$ != "" ? ", " : "" ) + "Nerius";
+			if (isbegin_quest(7683) < 2) .@string$ = "海尔内";
+			if (isbegin_quest(7684) < 2) .@string$ += ( .@string$ != "" ? ", " : "" ) + "内里乌斯";
 			if (isbegin_quest(5402) < 2) .@string$ += ( .@string$ != "" ? ", " : "" ) + "Richard";
 			if (ep16_wal < 2) .@string$ += ( .@string$ != "" ? ", " : "" ) + "Walther";
 			if (ep16_wig < 2) .@string$ += ( .@string$ != "" ? ", " : "" ) + "Wigner";
@@ -436,7 +436,7 @@ prt_cas_q,26,30,3	script	贝尔侍从长#ep16_main	4_M_RUSMAN1,{
 		mes "The Court Magician will be back soon after visiting other families.";
 		next;
 		cloakoffnpcself( "宫廷魔法师尼勒姆#ep16_wiz01" );
-		npctalk "Yeah! Here comes Nillem the genius mage!", "宫廷魔法师尼勒姆#ep16_wiz01", bc_self;
+		npctalk "Yeah! Here comes 尼勒姆 the genius mage!", "宫廷魔法师尼勒姆#ep16_wiz01", bc_self;
 		sleep2 1000;
 		mes "[贝尔]";
 		mes "There... Is the magician.";
@@ -500,136 +500,136 @@ prt_cas_q,26,30,3	script	贝尔侍从长#ep16_main	4_M_RUSMAN1,{
 		end;
 	case 14:
 		mes "[贝尔]";
-		mes "You are back.";
-		mes "There has been a message for you.";
-		mes "It says 'There will be an important meeting. Please wait until then.";
+		mes "你回来了。";
+		mes "有你的消息。";
+		mes "上面写着：‘即将召开重要会议，请等到那时。";
 		next;
 		mes "[贝尔]";
-		mes "You will be notified as soon as everything is settled.";
-		mes "Please enjoy the banquet until then.'";
+		mes "一切定下来后会立刻通知你。";
+		mes "在那之前请享受宴会。’";
 		next;
 		mes "[贝尔]";
-		mes "This is about it.";
-		mes "Apart from it, well, I am not supposed to be curious about this kind of things...";
+		mes "大概就这些。";
+		mes "除此之外……嗯，我本不该打听这种事……";
 		next;
 		mes "[贝尔]";
-		mes "However, ^4d4dffI saw the court doctors and priests moving fast to the Heine family^000000.";
+		mes "不过，^4d4dff我看到宫廷医生和祭司急匆匆赶往海尔内家族^000000。";
 		next;
 		mes "[贝尔]";
-		mes "They seemed to be in a hurry. Do you know what has happened?";
+		mes "他们看起来很急。你知道发生什么了吗？";
 		next;
-		select("This is a difficult question for me to answer...");
+		select("这个问题很难回答……");
 		mes "[贝尔]";
-		mes "I am sorry that I asked.";
-		mes "Well, there is one more news.";
-		next;
-		mes "[贝尔]";
-		mes "The lady of the ^4d4dffNerius^000000 family has invited you to have a cup of tea with her.";
+		mes "抱歉，我不该问。";
+		mes "嗯，还有一条消息。";
 		next;
 		mes "[贝尔]";
-		mes "She asked me to let her know as soon as you come. Shall I send her a message now?";
+		mes "^4d4dff内里乌斯^000000家族的女士邀请你一起喝茶。";
+		next;
+		mes "[贝尔]";
+		mes "她让我等你一回来就通知她。现在就发消息吗？";
 		erasequest 7696;// What's Next?
 		ep16_royal = 15;
 		next;
-		if (select( "I'll visit her now.", "I'll visit her later." ) == 2) {
+		if (select( "我现在就去拜访。", "我稍后再去。" ) == 2) {
 			mes "[贝尔]";
-			mes "Let me know when you are ready.";
-			mes "I'll send her the message then.";
+			mes "准备好了告诉我。";
+			mes "到时候我再通知她。";
 			close;
 		}
 		mes "[贝尔]";
-		mes "Let me send the message now.";
-		mes "Good bye.";
-		setquest 7697;// Invitation from the Nerius
+		mes "我现在就发消息。";
+		mes "再见。";
+		setquest 7697;// Invitation from the 内里乌斯
 		close;
 	case 15:
 		if (isbegin_quest(7697) == 0) {
 			mes "[贝尔]";
-			mes "Would you accept the invitation from the Nerius family now?";
+			mes "现在接受内里乌斯家族的邀请吗？";
 			next;
-			if (select( "I'll visit her now.", "I'll visit her later." ) == 2) {
+			if (select( "我现在就去拜访。", "我稍后再去。" ) == 2) {
 				mes "[贝尔]";
-				mes "Let me know when you are ready.";
-				mes "I'll send her the message then.";
+				mes "准备好了告诉我。";
+				mes "到时候我再通知她。";
 				close;
 			}
 			mes "[贝尔]";
-			mes "Let me send the message now.";
-			mes "Good bye.";
-			setquest 7697;// Invitation from the Nerius
+			mes "我现在就发消息。";
+			mes "再见。";
+			setquest 7697;// Invitation from the 内里乌斯
 			close;
 		}
 		mes "[贝尔]";
-		mes "The Nerius family stays in the second room from this room.";
-		mes "The room next to the room of the Heine family.";
+		mes "内里乌斯家族住在离这间房第二间。";
+		mes "就在海尔内家族房间隔壁。";
 		next;
 		mes "[贝尔]";
-		mes "I have sent the message that you would visit them soon. You may go there anytime.";
+		mes "我已经通知他们你很快会去。随时可以过去。";
 		close;
 	case 16:
 		mes "[贝尔]";
-		mes "There has been a request from the Heine family to meet you.";
-		mes "They asked you to visit the Heine family as soon as you come back.";
+		mes "海尔内家族请求见你。";
+		mes "他们让你一回来就去海尔内家族。";
 		close;
 	case 17:
 		mes "[贝尔]";
-		mes "Oh, you are back!";
-		mes "Let me call the Mage.";
+		mes "哦，你回来了！";
+		mes "我叫魔法师来。";
 		next;
-		select("What is that about?");
+		select("什么事？");
 		mes "[贝尔]";
-		mes "Court Mage Nillem opened the door and left right away.";
-		mes "Saying, 'Where are you?' " + strcharinfo(0) + " The magician must be looking for you.";
+		mes "宫廷魔法师尼勒姆打开门就立刻走了。";
+		mes "说着‘你在哪？’" + strcharinfo(0) + "。魔法师一定在找你。";
 		close2;
 		cloakoffnpcself( "宫廷魔法师尼勒姆#ep16_wiz01" );
-		npctalk "There you are!", "宫廷魔法师尼勒姆#ep16_wiz01", bc_self;
+		npctalk "你在这儿！", "宫廷魔法师尼勒姆#ep16_wiz01", bc_self;
 		setpcblock PCBLOCK_NPC, true;
 		sleep2 500;
 		setpcblock PCBLOCK_NPC, false;
-		npctalk "What an impeccable timing...", bc_self;
+		npctalk "时机真是完美……", bc_self;
 		end;
 	default:
-		mes "[Chamberlain]";
-		mes "I am at your service.";
+		mes "[贝尔]";
+		mes "随时为您服务。";
 		next;
-		switch( select( "Call Nillem", "What is the next thing on the schedule?", "Please prepare some refreshments.", "Call Convenience Service" ) ) {
+		switch( select( "叫尼勒姆", "下一个行程是什么？", "请准备些茶点。", "叫便利服务" ) ) {
 		case 1:
 			mes "[贝尔]";
-			mes "Shall I call the Court Mage for you?";
-			mes "Wait a second.";
-			mes "I have just sent a message. The magician will arrive here soon.";
+			mes "要我叫宫廷魔法师来吗？";
+			mes "请稍等。";
+			mes "刚发了消息，魔法师很快到。";
 			close2;
 			setpcblock PCBLOCK_NPC, true;
 			sleep2 500;
 			cloakoffnpcself( "宫廷魔法师尼勒姆#ep16_wiz01" );
 			sleep2 500;
 			if (ep16_royal < 24) {
-				npctalk "Thank you for using the million-call ticket today!", "宫廷魔法师尼勒姆#ep16_wiz01", bc_self;
+				npctalk "感谢今天使用百万呼叫券！", "宫廷魔法师尼勒姆#ep16_wiz01", bc_self;
 				sleep2 3000;
-				npctalk "You must have missed me so much-", "宫廷魔法师尼勒姆#ep16_wiz01", bc_self;
+				npctalk "你一定很想我——", "宫廷魔法师尼勒姆#ep16_wiz01", bc_self;
 				sleep2 3000;
-				npctalk "I am almost falling for your merciless calls...", "宫廷魔法师尼勒姆#ep16_wiz01", bc_self;
+				npctalk "你无情的呼叫快让我沦陷了……", "宫廷魔法师尼勒姆#ep16_wiz01", bc_self;
 				sleep2 3000;
-				npctalk "Just kidding.", "宫廷魔法师尼勒姆#ep16_wiz01", bc_self;
+				npctalk "开玩笑的。", "宫廷魔法师尼勒姆#ep16_wiz01", bc_self;
 				sleep2 3000;
-				npctalk "Shall we get going now?", "宫廷魔法师尼勒姆#ep16_wiz01", bc_self;
+				npctalk "现在出发吗？", "宫廷魔法师尼勒姆#ep16_wiz01", bc_self;
 			}
 			else {
 				switch( rand(5) ) {
 				case 0:
-					npctalk "I was wondering when you'd call me! I knew you would-", "宫廷魔法师尼勒姆#ep16_wiz01", bc_self;
+					npctalk "我还在想你什么时候叫我！我就知道你会——", "宫廷魔法师尼勒姆#ep16_wiz01", bc_self;
 					break;
 				case 1:
-					npctalk "I am thrilled that you called me so mercilessly-", "宫廷魔法师尼勒姆#ep16_wiz01", bc_self;
+					npctalk "你这么无情地叫我，我好激动——", "宫廷魔法师尼勒姆#ep16_wiz01", bc_self;
 					break;
 				case 2:
-					npctalk "Haha, we are going again! To the past!", "宫廷魔法师尼勒姆#ep16_wiz01", bc_self;
+					npctalk "哈哈，又要去了！去过去！", "宫廷魔法师尼勒姆#ep16_wiz01", bc_self;
 					break;
 				case 3:
-					npctalk "Thank you for using the million-call ticket today!", "宫廷魔法师尼勒姆#ep16_wiz01", bc_self;
+					npctalk "感谢今天使用百万呼叫券！", "宫廷魔法师尼勒姆#ep16_wiz01", bc_self;
 					break;
 				case 4:
-					npctalk "Here comes Genius Mage Nillem!", "宫廷魔法师尼勒姆#ep16_wiz01", bc_self;
+					npctalk "天才魔法师尼勒姆登场！", "宫廷魔法师尼勒姆#ep16_wiz01", bc_self;
 					break;
 				}
 			}
@@ -637,17 +637,17 @@ prt_cas_q,26,30,3	script	贝尔侍从长#ep16_main	4_M_RUSMAN1,{
 			end;
 		case 2:
 			mes "[贝尔]";
-			mes "There is no special invitation for today.";
+			mes "今天没有特别的邀请。";
 			close;
 		case 3:
 			mes "[贝尔]";
 			.@r = rand(1,5);
 			if (.@r == 1)
-				mes "Here are some chamomile tea and ginger cookies. They will help you take a rest and get recovered from fatigue.";
+				mes "这是洋甘菊茶和姜饼，能帮你休息、缓解疲劳。";
 			else if (.@r == 2)
-				mes "You seemed hungry, so I have prepared some afternoon tea, scones and clotted cream.";
+				mes "你好像饿了，我准备了下午茶、司康和凝脂奶油。";
 			else if (.@r == 3)
-				mes "Here are some chocolate and cinnamon-flavored rooibos tea for refreshment.";
+				mes "这是巧克力和肉桂味的路易波士茶，可以提神。";
 			else if (.@r == 4)
 				mes "Here is some strong mint tea mixed with milk and chocolate chips. A great after-meal treat.";
 			else
@@ -1018,7 +1018,7 @@ function	script	F_banquet_main_4_spica	{
 	cutin "ep16_crux_findel03",2;
 	mes "[克鲁斯]";
 	mes "No! No, please!";
-	mes "...Oh? Isn't that Lord Heine?";
+	mes "...Oh? Isn't that Lord 海尔内?";
 	next;
 	cutin "ep16_skia_nerius01",0;
 	mes "[斯琪亚]";
@@ -1030,13 +1030,13 @@ function	script	F_banquet_main_4_spica	{
 	mes "[尼希尔]";
 	mes "You don't have to scream like that, Skia.";
 	mes "" + .@char_name$ + " is here too.";
-	mes "Indeed, you won't be mistaken when you hang out with the people of the Nerius family.";
+	mes "Indeed, you won't be mistaken when you hang out with the people of the 内里乌斯 family.";
 	mes "Good decision.";
 	npctalk "Skia?", "斯皮卡·内里乌斯#ep16_02", bc_self;
 	next;
 	cutin "ep16_spica_nerius06",0;
 	mes "[斯皮卡]";
-	mes "Skia and Lord of the Heine family.";
+	mes "Skia and Lord of the 海尔内 family.";
 	mes "Since when did you call each other by the first name?";
 	npctalk "Did you know?", "斯皮卡·内里乌斯#ep16_02", bc_self;
 	sleep2 1000;
@@ -1045,7 +1045,7 @@ function	script	F_banquet_main_4_spica	{
 	cutin "ep16_skia_nerius01",0;
 	mes "[斯琪亚]";
 	mes "Hum, we exchanged greetings earlier in the corridor.";
-	mes "The Heine residence is next to that of the Nerius family.";
+	mes "The 海尔内 residence is next to that of the 内里乌斯 family.";
 	next;
 	cutin "ep16_nihi_miseria_heine02",2;
 	mes "[尼希尔]";
@@ -1074,8 +1074,8 @@ function	script	F_banquet_main_4_spica	{
 	next;
 	mes "[Drunk Woman]";
 	mes "Oh, well! Who are these?";
-	mes "Aren't they the Nerius sisters who are from that famous family led by a woman?";
-	mes "Lord, are you even going to ditch your own household for the Nerius family?";
+	mes "Aren't they the 内里乌斯 sisters who are from that famous family led by a woman?";
+	mes "Lord, are you even going to ditch your own household for the 内里乌斯 family?";
 	npctalk "Violeta, watch your manners!", "尼希尔·M·海涅#ep16_02", bc_self;
 	next;
 	mes "[Violeta]";
@@ -1098,18 +1098,18 @@ function	script	F_banquet_main_4_spica	{
 	mes "[斯皮卡]";
 	mes "Hold it, Crux.";
 	mes "You shouldn't regard me on the same level as the coarse thing who doesn't even know what she is talking about.";
-	mes "I don't tend to bear a grudge against the Heine family for this.";
+	mes "I don't tend to bear a grudge against the 海尔内 family for this.";
 	next;
 	cutin "ep16_spica_nerius07",2;
 	mes "[斯皮卡]";
-	mes "Isn't it right? Violeta Collette Heine?";
+	mes "Isn't it right? Violeta Collette 海尔内?";
 	mes "I understand your feelings for the lord, but your behavior will just bring disgrace to your family.";
-	unittalk getcharid(3), "" + .@char_name$ + " : Heine...?", bc_self;
+	unittalk getcharid(3), "" + .@char_name$ + " : 海尔内...?", bc_self;
 	next;
 	npctalk "...Phew... She is a collateral relative of mine...", "尼希尔·M·海涅#ep16_02", bc_self;
 	mes "[斯皮卡]";
 	mes "You do what you please if you want to damage his reputation.";
-	mes "However, you should keep us, the Nerius family, out of the mess.";
+	mes "However, you should keep us, the 内里乌斯 family, out of the mess.";
 	cutin "ep16_spica_nerius02",2;
 	next;
 	cutin "ep16_nihi_miseria_heine03",2;
@@ -1121,7 +1121,7 @@ function	script	F_banquet_main_4_spica	{
 	cutin "",255;
 	mes "[Violeta]";
 	mes "Well, I'll get back.";
-	mes "Since things have turned out this way, you better go to join the Nerius family, then! He!";
+	mes "Since things have turned out this way, you better go to join the 内里乌斯 family, then! He!";
 	next;
 	cloakonnpcself( "Violeta#ep16_02" );
 	cutin "ep16_skia_nerius01",0;
@@ -1145,7 +1145,7 @@ function	script	F_banquet_main_4_spica	{
 	next;
 	cutin "ep16_nihi_miseria_heine01",2;
 	mes "[尼希尔]";
-	mes "She is right. I bear the name of Heine, and I am in the position to take care of every matter which comes with the family.";
+	mes "She is right. I bear the name of 海尔内, and I am in the position to take care of every matter which comes with the family.";
 	mes "Whether willing or not...";
 	next;
 	cutin "",255;
@@ -1174,7 +1174,7 @@ function	script	F_banquet_main_4_spica	{
 	next;
 	cutin "ep16_nihi_miseria_heine02",2;
 	mes "[尼希尔]";
-	mes "How can I turn down the invitation from the next head of the Nerius family?";
+	mes "How can I turn down the invitation from the next head of the 内里乌斯 family?";
 	mes "Now... then.";
 	npctalk "It was fun!", "斯琪亚·内里乌斯#ep16_02", bc_self;
 	npctalk "...Which part of it was fun...?", "克鲁斯·芬德尔#ep16_02", bc_self;
@@ -1338,7 +1338,7 @@ prt_cas,106,240,3	script	斯皮卡·内里乌斯#ep16_02	4_EP16_SPICA,{
 		F_banquet_main_4_spica();
 	if (ep16_royal == 5) {
 		mes "[斯皮卡]";
-		mes "Hum? You are still here. I thought you went after the lord from the Heine family.";
+		mes "Hum? You are still here. I thought you went after the lord from the 海尔内 family.";
 		cutin "ep16_spica_nerius05",2;
 		next;
 		select("Didn't you go back to your room?");
@@ -1805,7 +1805,7 @@ prt_lib,91,85,3	script	魔法师尼勒姆#ep16_warp	4_M_JOB_WIZARD,{
 		close;
 	case 23:
 		mes "[尼勒姆]";
-		mes "^4d4dffThe Heine family will get the approval to enter the 'Past Memories of the Royal Family'^000000, right?";
+		mes "^4d4dffThe 海尔内 family will get the approval to enter the 'Past Memories of the Royal Family'^000000, right?";
 		mes "We will see each other more often from now on then.";
 		mes "Haha, this must be what others call the destiny-隆?";
 		next;
@@ -2027,7 +2027,7 @@ prt_lib,80,79,3	script	克罗内克·G·海涅#ep16_01_lib01	4_EP16_GRANZ,{
 		next;
 		mes "[克罗内克]";
 		mes "May I ask you a favor?";
-		mes "Would you keep on visiting that place with Nillem?";
+		mes "Would you keep on visiting that place with 尼勒姆?";
 		next;
 		mes "[克罗内克]";
 		mes "Although we are going to discuss about it in the official meeting, I don't think the result would be different.";
@@ -2047,7 +2047,7 @@ prt_lib,80,79,3	script	克罗内克·G·海涅#ep16_01_lib01	4_EP16_GRANZ,{
 		erasequest 7703;// Who Knows the Truth
 		getitem 6919,30;// TokenOfHonor
 		getexp 800000,800000;
-		setquest 7706;// Nillem Is Not Almighty
+		setquest 7706;// 尼勒姆 Is Not Almighty
 		ep16_royal = 23;
 		next;
 		cutin "",255;
@@ -2057,7 +2057,7 @@ prt_lib,80,79,3	script	克罗内克·G·海涅#ep16_01_lib01	4_EP16_GRANZ,{
 	if (ep16_royal > 22) {
 		cutin "ep16_kronecker_granz_heine",2;
 		mes "[克罗内克·G·海涅]";
-		mes "Then, I'll entrust the matter regarding this place to you and Nillem.";
+		mes "Then, I'll entrust the matter regarding this place to you and 尼勒姆.";
 		mes "For the sake of the royal family's legitimacy...";
 		next;
 		mes "[克罗内克·G·海涅]";
@@ -2199,7 +2199,7 @@ prt_lib,85,82,5	script	Ian Walther#ep16_lib01	1_M_JOBTESTER,{
 		mes "I am deeply ashamed.";
 		next;
 		mes "[Ian Walther]";
-		mes "Oh my... Was it the lord of the Heine family...";
+		mes "Oh my... Was it the lord of the 海尔内 family...";
 		mes "Although us, the Walther family did not attend the Royal Assembly, we won't sit back and watch this matter!";
 		next;
 		unittalk .@account_id, "" + .@name$ + " : (He must have been drugged then.)", bc_self;
@@ -2226,7 +2226,7 @@ prt_lib,85,82,5	script	Ian Walther#ep16_lib01	1_M_JOBTESTER,{
 		mes "However...";
 		next;
 		mes "[尼希尔]";
-		mes "I am a Heine, one of the seven royal families of Rune-Midgarts.";
+		mes "I am a 海尔内, one of the seven royal families of Rune-Midgarts.";
 		mes "I didn't do such a thing on purpose.";
 		next;
 		mes "[马克西米利安]";
@@ -2248,7 +2248,7 @@ prt_lib,85,82,5	script	Ian Walther#ep16_lib01	1_M_JOBTESTER,{
 		mes "A person who looks like a scientist and drug...";
 		next;
 		mes "[勒维耶]";
-		mes "If it is true, Lord Heine must have not done such a thing on purpose.";
+		mes "If it is true, Lord 海尔内 must have not done such a thing on purpose.";
 		mes "Someone must have taken advantage on him according to a plot...";
 		next;
 		mes "[马克西米利安]";
@@ -2256,9 +2256,9 @@ prt_lib,85,82,5	script	Ian Walther#ep16_lib01	1_M_JOBTESTER,{
 		mes "You didn't just come up with the story to help him out, right?";
 		unittalk .@account_id, "" + .@name$ + " : (Skia will testify for him since we found him together.)", bc_self;
 		next;
-		select("Lady Nerius will testify...");
+		select("Lady 内里乌斯 will testify...");
 		mes "[Ian Walther]";
-		mes "...Hum... The ladies of the Nerius family have seen it too?";
+		mes "...Hum... The ladies of the 内里乌斯 family have seen it too?";
 		mes "We need to call for a meeting.";
 		next;
 		mes "[Ian Walther]";
@@ -2273,7 +2273,7 @@ prt_lib,85,82,5	script	Ian Walther#ep16_lib01	1_M_JOBTESTER,{
 		mes "What a shame. I have nothing to say about it.";
 		next;
 		mes "[克罗内克]";
-		mes "This has brought disgrace to the name of Heine.";
+		mes "This has brought disgrace to the name of 海尔内.";
 		next;
 		mes "[克罗内克]";
 		mes "Nyhill, you sentence you to disciplinary confinement for a while.";
@@ -2381,7 +2381,7 @@ prt_lib_q,91,85,3	script	尼勒姆#ep16_lib_q	4_M_JOB_WIZARD,{
 		mes "[尼勒姆]";
 		mes "Can I?";
 		mes "Hahaha, of course I can!";
-		npctalk "I am the only magician of dimension in this place, Nillem the Marvelous!", bc_self;
+		npctalk "I am the only magician of dimension in this place, 尼勒姆 the Marvelous!", bc_self;
 		next;
 		mes "[尼勒姆]";
 		mes "It is the first time for me to do this.";
@@ -2561,7 +2561,7 @@ prt_lib_q,91,85,3	script	尼勒姆#ep16_lib_q	4_M_JOB_WIZARD,{
 			switch( checkquest(7705,HUNTING) ) {
 			case -1:
 				mes "[尼勒姆]";
-				mes "Did you get the mission from the Heine family?";
+				mes "Did you get the mission from the 海尔内 family?";
 				mes "It doesn't seem like it.";
 				next;
 				mes "[尼勒姆]";
@@ -2649,7 +2649,7 @@ prt_lib_q,91,85,3	script	尼勒姆#ep16_lib_q	4_M_JOB_WIZARD,{
 			mes "Let me do this when the raging magical flow is stabilized-????";
 			close;
 		case 2:
-			erasequest 7706;// Nillem Is Not Almighty
+			erasequest 7706;// 尼勒姆 Is Not Almighty
 			mes "[尼勒姆]";
 			mes "Hum... Shall I clear the surroundings a little?";
 			mes "Wait, I'll get ready.";
@@ -3931,7 +3931,7 @@ OnTouch:
 	end;
 }
 
-// Nerius
+// 内里乌斯
 prt_cas_q,18,136,5	script	斯琪亚·内里乌斯#ep16_room01	4_EP16_SKIA,{
 	cutin "ep16_skia_nerius03",0;
 	mes "[斯琪亚]";
@@ -4043,8 +4043,8 @@ prt_cas_q,20,139,3	script	斯皮卡·内里乌斯#ep16_room01	4_EP16_SPICA,{
 			mes "随时来拜访我们。";
 			npctalk "......", "保镖克鲁斯#ep16_room01", bc_self;
 			next;
-			setquest 7684;// Visit the Nerius
-			completequest 7684;// Visit the Nerius
+			setquest 7684;// Visit the 内里乌斯
+			completequest 7684;// Visit the 内里乌斯
 			if (achievementinfo(130000, ACHIEVEINFO_COUNT2) == 0)
 				achievementupdate(130000, ACHIEVEINFO_COUNT2, 1);
 			break;
@@ -4218,7 +4218,7 @@ prt_cas_q,18,136,3	script	斯皮卡·内里乌斯#ep16_room02	4_EP16_SPICA,{
 		next;
 		cloakoffnpcself( "尼希尔·M·海涅#ep16_nroom01" );
 		mes "[斯皮卡]";
-		mes "There comes lord of the Heine family.";
+		mes "There comes lord of the 海尔内 family.";
 		mes "You seem to move around rather freely considering that you are under confinement.";
 		next;
 		mes "[尼希尔]";
@@ -4260,7 +4260,7 @@ prt_cas_q,18,136,3	script	斯皮卡·内里乌斯#ep16_room02	4_EP16_SPICA,{
 		next;
 		select("Why are you in that outfit?");
 		mes "[斯琪亚]";
-		mes "Hum... It is to protect Spica who will be the head of the Nerius family.";
+		mes "Hum... It is to protect Spica who will be the head of the 内里乌斯 family.";
 		mes "Sometimes, I stand forward instead of Spica.";
 		cutin "ep16_skia_shadow01",0;
 		next;
@@ -4292,7 +4292,7 @@ prt_cas_q,18,136,3	script	斯皮卡·内里乌斯#ep16_room02	4_EP16_SPICA,{
 		next;
 		cutin "ep16_nihi_miseria_heine04",2;
 		mes "[尼希尔]";
-		mes "To be exact, I volunteered since I heard that you were visiting the Nerius family.";
+		mes "To be exact, I volunteered since I heard that you were visiting the 内里乌斯 family.";
 		npctalk "...The room was stuffy.", "尼希尔·M·海涅#ep16_nroom01";
 		next;
 		cutin "ep16_skia_shadow03",0;
@@ -4324,8 +4324,8 @@ prt_cas_q,18,136,3	script	斯皮卡·内里乌斯#ep16_room02	4_EP16_SPICA,{
 		mes "[斯琪亚]";
 		mes "" + strcharinfo(0) + ", please come to see me again later!";
 		ep16_royal = 16;
-		setquest 7698;// Heine Now
-		erasequest 7697;// Invitation from the Nerius
+		setquest 7698;// 海尔内 Now
+		erasequest 7697;// Invitation from the 内里乌斯
 		close3;
 	}
 	if (ep16_royal == 16) {
@@ -5274,7 +5274,7 @@ prt_cas_q,9,90,3	script	彼得·海涅#ep16_02	4_EP16_PETER,{
 	}
 }
 
-// Heine
+// 海尔内
 prt_cas_q,21,83,3	script	弗里德里希·S·海涅#ep16_01	4_EP16_STOLZ,{
 	if (ep16_royal < 2) {
 		cutin "ep16_friedrich_stolz_heine",1;
@@ -5314,7 +5314,7 @@ prt_cas_q,21,83,3	script	弗里德里希·S·海涅#ep16_01	4_EP16_STOLZ,{
 	if (ep16_royal == 17) {
 		cutin "ep16_friedrich_stolz_heine",1;
 		mes "[弗里德里希]";
-		mes "Nillem said he would visit your room after making all preparations. You may wait in your room.";
+		mes "尼勒姆 said he would visit your room after making all preparations. You may wait in your room.";
 		mes "We are counting on you.";
 		close3;
 	}
@@ -5340,7 +5340,7 @@ prt_cas_q,21,83,3	script	弗里德里希·S·海涅#ep16_01	4_EP16_STOLZ,{
 		cutin "ep16_friedrich_stolz_heine",1;
 		mes "[弗里德里希]";
 		mes "Are you going back to that place?";
-		mes "Nillem has told me.";
+		mes "尼勒姆 has told me.";
 		next;
 		mes "[弗里德里希]";
 		mes "That it is difficult for him to connect multiple times since he is just a human after all.";
@@ -5350,7 +5350,7 @@ prt_cas_q,21,83,3	script	弗里德里希·S·海涅#ep16_01	4_EP16_STOLZ,{
 		mes "But don't push yourself too hard.";
 		close3;
 	case 2:
-		erasequest 7706;// Nillem Is Not Almighty
+		erasequest 7706;// 尼勒姆 Is Not Almighty
 		break;
 	}
 	switch( checkquest(7705,HUNTING) ) {
@@ -5399,13 +5399,13 @@ prt_cas_q,21,83,3	script	弗里德里希·S·海涅#ep16_01	4_EP16_STOLZ,{
 		mes "Let's play our parts well.";
 		next;
 		mes "[弗里德里希]";
-		mes "Nillem must be waiting for you.";
+		mes "尼勒姆 must be waiting for you.";
 		mes "Please do your best as always.";
 		close3;
 	case 2:
 		cutin "ep16_friedrich_stolz_heine",1;
 		mes "[弗里德里希]";
-		mes "You are back.";
+		mes "你回来了。";
 		mes "Is it the same this time?";
 		mes "I suppose so.";
 		mes "But, I really don't think all the efforts will go wasted.";
@@ -5422,7 +5422,7 @@ prt_cas_q,21,83,3	script	弗里德里希·S·海涅#ep16_01	4_EP16_STOLZ,{
 		next;
 		mes "[弗里德里希]";
 		mes "See you tomorrow then.";
-		setquest 7706;// Nillem Is Not Almighty
+		setquest 7706;// 尼勒姆 Is Not Almighty
 		erasequest 7705;// Hope You Cannot Let Go
 		getitem 6919,10;// TokenOfHonor
 		getexp 400000,400000;
@@ -5490,7 +5490,7 @@ prt_cas_q,19,85,4	script	克罗内克·G·海涅#ep16_01	4_EP16_GRANZ,{
 				cutin "ep16_friedrich_stolz_heine",1;
 				mes "[弗里德里希]";
 				mes "让我自我介绍。";
-				mes "I am the current head of the Heine family, 弗里德里希·施托尔策·海涅.";
+				mes "I am the current head of the 海尔内 family, 弗里德里希·施托尔策·海涅.";
 				next;
 				mes "[弗里德里希]";
 				mes "这位是前代家主、我的父亲格兰茨大公。";
@@ -5705,16 +5705,16 @@ prt_cas_q,19,85,4	script	克罗内克·G·海涅#ep16_01	4_EP16_GRANZ,{
 		mes "He acts rather imprudently, but he is said to be quite skilled...";
 		mes "And you know him.";
 		next;
-		select("Is he Nillem?");
+		select("Is he 尼勒姆?");
 		mes "[弗里德里希]";
 		mes "You seem to know him too.";
 		mes "You're right.";
-		mes "I want you to pair up with Nillem for this mission.";
+		mes "I want you to pair up with 尼勒姆 for this mission.";
 		next;
 		select("Me? Why?");
 		mes "[弗里德里希]";
 		mes "I'd like know that myself.";
-		mes "That Nillem pestered me to let him work with you.";
+		mes "That 尼勒姆 pestered me to let him work with you.";
 		mes "...I tried my best not to slay him.";
 		next;
 		mes "[弗里德里希]";
@@ -5732,7 +5732,7 @@ prt_cas_q,19,85,4	script	克罗内克·G·海涅#ep16_01	4_EP16_GRANZ,{
 		cutin "ep16_kronecker_granz_heine",2;
 		mes "[克罗内克]";
 		mes "Them, it's settled.";
-		mes "We will send Nillem to your room as soon as he is ready.";
+		mes "We will send 尼勒姆 to your room as soon as he is ready.";
 		mes "You may pair up with him for the mission.";
 		next;
 		mes "[克罗内克]";
@@ -5744,7 +5744,7 @@ prt_cas_q,19,85,4	script	克罗内克·G·海涅#ep16_01	4_EP16_GRANZ,{
 		mes "I hope it helps.";
 		ep16_royal = 17;
 		setquest 7699;// To the Past
-		erasequest 7698;// Heine Now
+		erasequest 7698;// 海尔内 Now
 		getitem 6919,20;// TokenOfHonor
 		getexp 400000,400000;
 		close3;
@@ -5752,7 +5752,7 @@ prt_cas_q,19,85,4	script	克罗内克·G·海涅#ep16_01	4_EP16_GRANZ,{
 	if (ep16_royal == 17) {
 		cutin "ep16_kronecker_granz_heine",2;
 		mes "[克罗内克]";
-		mes "The magician called Nillem will find you.";
+		mes "The magician called 尼勒姆 will find you.";
 		mes "You may wait in your room.";
 		close3;
 	}
@@ -5784,7 +5784,7 @@ OnTouch:
 		sleep2 3000;
 		npctalk "Did you forget the name I received from the family?", "尼希尔·M·海涅#ep16_01", bc_self;
 		sleep2 3000;
-		npctalk "Nyhill Mijeria, I am a miserable Heine who has nothing! You have given me such a name because I am useless!", "尼希尔·M·海涅#ep16_01", bc_self;
+		npctalk "Nyhill Mijeria, I am a miserable 海尔内 who has nothing! You have given me such a name because I am useless!", "尼希尔·M·海涅#ep16_01", bc_self;
 		sleep2 3000;
 		npctalk "Watch your words, Nyhill.", "弗里德里希·S·海涅#ep16_01", bc_self;
 		sleep2 3000;
@@ -5822,7 +5822,7 @@ OnTouch:
 		sleep2 3000;
 		npctalk "It must be difficult for you too. Is it your first time attending the official event?", "Nyhill#ep16_7686", bc_self;
 		sleep2 3000;
-		npctalk "Oh, you must be the lord of the Heine family.", "Skia#ep16_7686", bc_self;
+		npctalk "Oh, you must be the lord of the 海尔内 family.", "Skia#ep16_7686", bc_self;
 		sleep2 3000;
 		npctalk "Well, it is true that I am the shadow. However, I have never found it difficult.", "Skia#ep16_7686", bc_self;
 		sleep2 3000;
@@ -5856,7 +5856,7 @@ OnTouch:
 		sleep2 6000;
 		npctalk "...Is that so.", "Nyhill#ep16_7686", bc_self;
 		sleep2 3000;
-		npctalk "Well, I have not introduced myself to you yet. My name is Nyhill Mijeria Heine.", "Nyhill#ep16_7686", bc_self;
+		npctalk "Well, I have not introduced myself to you yet. My name is Nyhill Mijeria 海尔内.", "Nyhill#ep16_7686", bc_self;
 		sleep2 3000;
 		npctalk "I am 斯琪亚·内里乌斯. You can call me Skia.", "Skia#ep16_7686", bc_self;
 		sleep2 3000;
@@ -5866,7 +5866,7 @@ OnTouch:
 		sleep2 1000;
 		cloakonnpcself( "Skia#ep16_7686" );
 		sleep2 3000;
-		npctalk "...Skia... There is an interesting lady in the Nerius family.", "Nyhill#ep16_7686", bc_self;
+		npctalk "...Skia... There is an interesting lady in the 内里乌斯 family.", "Nyhill#ep16_7686", bc_self;
 		sleep2 3000;
 		setpcblock PCBLOCK_NPC, false;
 		cloakonnpcself( "Nyhill#ep16_7686" );
@@ -6640,7 +6640,7 @@ prt_cas_q,96,184,1	script	阿格妮丝·雷根布尔格#ep16lu	4_EP16_AGNES,{
 		next;
 		mes "[" + strcharinfo(0) + "]";
 		mes "OK, then I will prepare for fight.";
-		mes "Wait a second.";
+		mes "请稍等。";
 		next;
 		mes "[阿格妮丝]";
 		mes "What ?";
@@ -13140,7 +13140,7 @@ OnTouch:
 }
 
 prt_cas,97,216,2	script	Chamberlain#vip_alimi	4_M_RUSMAN2,{
-	mes "[Chamberlain]";
+	mes "[贝尔]";
 	mes "Are you having a good time?";
 	mes "We have put a lot of efforts since it's a big event in the palace in a long while.";
 	mes "I hope you like it.";
@@ -13760,7 +13760,7 @@ prt_cas,343,67,4	script	Uptight Librarian#ep16lug0	1_F_LIBRARYGIRL,{
 		mes "[Uptight Librarian]";
 		mes "I heard that there are royal families ^0000cdwho do not attend the Royal Assembly^000000. Who's that?";
 		next;
-		while( select( "Wigner and Heine.", "Roegenburg and Richard.", "Geoborg and Walther." ) != 3 ) {
+		while( select( "Wigner and 海尔内.", "Roegenburg and Richard.", "Geoborg and Walther." ) != 3 ) {
 			mes "[" + .@name$ + "]";
 			mes "I am sorry, I said wrong as I thought of something else.";
 			mes "I made a mistake. What did you say?";
@@ -13775,7 +13775,7 @@ prt_cas,343,67,4	script	Uptight Librarian#ep16lug0	1_F_LIBRARYGIRL,{
 		mes "[Uptight Librarian]";
 		mes "The family of the previous king ^0000cdbecame so due to the old curse^000000...";
 		next;
-		while( select( "You mean the Nerius?", "You mean the Geoborg?", "You mean the Richard?" ) != 2 ) {
+		while( select( "You mean the 内里乌斯?", "You mean the Geoborg?", "You mean the Richard?" ) != 2 ) {
 			mes "[" + .@name$ + "]";
 			mes "I am sorry, I said wrong as I thought of something else.";
 			mes "I made a mistake. What did you say?";
@@ -13813,7 +13813,7 @@ prt_cas,343,67,4	script	Uptight Librarian#ep16lug0	1_F_LIBRARYGIRL,{
 	close;
 }
 
-prt_cas,321,25,1	script	Erich Nerius#ep16_erihi	4_M_SITDOWN,{
+prt_cas,321,25,1	script	Erich 内里乌斯#ep16_erihi	4_M_SITDOWN,{
 	if (ep16_royal < 2) {
 		mes "[Erich]";
 		mes "There are so many guests attending the banquet.";
@@ -13830,7 +13830,7 @@ prt_cas,321,25,1	script	Erich Nerius#ep16_erihi	4_M_SITDOWN,{
 			mes "Although Shedhar, the current head of the family, is not here, Spica has all the actual power.";
 			next;
 			mes "[Erich]";
-			mes "I am just participating in the Royal Assembly to fill in the place as a Nerius.";
+			mes "I am just participating in the Royal Assembly to fill in the place as a 内里乌斯.";
 			next;
 			mes "[Erich]";
 			mes "I am not interested in the throne at all.";
@@ -13845,7 +13845,7 @@ prt_cas,321,25,1	script	Erich Nerius#ep16_erihi	4_M_SITDOWN,{
 		mes "She is such a cheerful girl, isn't she?";
 		next;
 		mes "[Erich]";
-		mes "She will be the head of the Nerius family.";
+		mes "She will be the head of the 内里乌斯 family.";
 		close;
 	}
 	mes "[Erich]";
@@ -14223,7 +14223,7 @@ prt_cas,161,168,5	script	Royal Guardian Knight#02	4_M_CRU,{
 	case 2:
 		mes "[Guardian Knight]";
 		mes "The door on the left is the entrance to the royal villa.";
-		mes "There are the residences for the Heine, Nerius and Walther families and a room reserved for a special guest.";
+		mes "There are the residences for the 海尔内, 内里乌斯 and Walther families and a room reserved for a special guest.";
 		close;
 	case 3:
 		mes "[Guardian Knight]";
