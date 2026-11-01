@@ -8366,36 +8366,36 @@ rebel_in,78,66,6	script	阿里韦罗·尤希克#TFQ02	4_M_GUNSLINGER,{
 		next;
 		mes "[阿里韦罗]";
 		mes "头疼。以后再想。";
-		mes "这里需要什么？需要1个水灵矿石让设备现形。";
+		mes "这里需要什么？需要1个水灵原石让设备现形。";
 		next;
 		emotion ET_QUESTION;
 		mes "[阿里韦罗]";
 		mes "风克水吗？嘿，朋友，风属性用什么属性石？知道吗？";
 		while(true) {
 			next;
-			switch( select( "火灵矿石", "水灵矿石", "风灵矿石", "地灵矿石" ) ) {
+			switch( select( "火灵原石", "水灵原石", "风灵原石", "土灵原石" ) ) {
 			case 1:
 				mes "[阿里韦罗]";
-				mes "不是火灵矿石。那是艾因贝克让设备现形的火属性石。";
+				mes "不是火灵原石。那是艾因贝克让设备现形的火属性石。";
 				continue;
 			case 2:
 				mes "[阿里韦罗]";
-				mes "水灵矿石是里希塔乐镇让设备现形所需的水属性石。";
+				mes "水灵原石是里希塔乐镇让设备现形所需的水属性石。";
 				continue;
 			case 3:
 				mes "[阿里韦罗]";
-				mes "对！风灵矿石！这就是风属性石。";
+				mes "对！风灵原石！这就是风属性石。";
 				break;
 			case 4:
 				mes "[阿里韦罗]";
-				mes "地灵矿石？那是地属性吧？现在应该不需要。";
+				mes "土灵原石？那是地属性吧？现在应该不需要。";
 				continue;
 			}
 			break;
 		}
 		next;
 		mes "[阿里韦罗]";
-		mes "很好！带1个水灵矿石和3个风灵矿石来。";
+		mes "很好！带1个水灵原石和3个风灵原石来。";
 		mes "里希塔乐镇见。";
 		next;
 		emotion ET_QUESTION, playerattached();
@@ -8515,10 +8515,10 @@ rebel_in,78,66,6	script	阿里韦罗·尤希克#TFQ02	4_M_GUNSLINGER,{
 		next;
 		mes "[阿里韦罗]";
 		mes "朱诺传送禁止设备坐标是206,224。";
-		mes "它是风属性。探员会给我们风灵矿石，到了就能破坏。";
+		mes "它是风属性。探员会给我们风灵原石，到了就能破坏。";
 		next;
 		mes "[阿里韦罗]";
-		mes "请带4个地灵矿石来朱诺，地属性克风。";
+		mes "请带4个土灵原石来朱诺，地属性克风。";
 		next;
 		delitem 1000,1;// Star Crumb
 		erasequest 5734;	// Core materials are always a problem
@@ -8762,7 +8762,7 @@ lighthalzen,135,233,6	script	阿里韦罗·尤希克#TFQ07	4_M_GUNSLINGER,{
 			mes "只凭那点信息就一路找到这里！我都找不到，只能去见探员。";
 			next;
 			mes "[阿里韦罗]";
-			mes "重要的是我们都平安到了。记得我让你带1个水灵矿石和3个风灵矿石吧？";
+			mes "重要的是我们都平安到了。记得我让你带1个水灵原石和3个风灵原石吧？";
 			next;
 			mes "[阿里韦罗]";
 			mes "我要的东西呢？";
@@ -8783,10 +8783,10 @@ lighthalzen,135,233,6	script	阿里韦罗·尤希克#TFQ07	4_M_GUNSLINGER,{
 		mes "只凭那点信息就一路找到这里！我都找不到，只能去见探员。";
 		next;
 		mes "[阿里韦罗]";
-		mes "重要的是我们都平安到了。记得我让你带1个水灵矿石和3个风灵矿石吧？";
+		mes "重要的是我们都平安到了。记得我让你带1个水灵原石和3个风灵原石吧？";
 		next;
 		mes "[阿里韦罗]";
-		mes "水灵矿石。位置已经和探员确认过。把你带来的水灵矿石打碎……";
+		mes "水灵原石。位置已经和探员确认过。把你带来的水灵原石打碎……";
 		next;
 		specialeffect EF_FROSTWEAPON, AREA, "传送禁止设备#2";
 		mes "[阿里韦罗]";
@@ -8794,7 +8794,7 @@ lighthalzen,135,233,6	script	阿里韦罗·尤希克#TFQ07	4_M_GUNSLINGER,{
 		mes "然后装上我们带来的装置……";
 		next;
 		mes "[阿里韦罗]";
-		mes "很好，现在可以破坏了。准备风灵矿石。";
+		mes "很好，现在可以破坏了。准备风灵原石。";
 		next;
 		specialeffect EF_LIGHTNINGLOADER;
 		sleep2 500;
@@ -8873,7 +8873,7 @@ yuno,204,226,6	script	阿里韦罗·尤希克#TFQ10	4_M_GUNSLINGER,{
 		mes "欢迎，朋友！我刚到。我已经召唤并固定设备，防止它消失。";
 		next;
 		mes "[阿里韦罗]";
-		mes "你带地灵矿石了吗？";
+		mes "你带土灵原石了吗？";
 		next;
 		if (countitem(997) < 3) {
 			mes "[阿里韦罗]";
@@ -8888,7 +8888,7 @@ yuno,204,226,6	script	阿里韦罗·尤希克#TFQ10	4_M_GUNSLINGER,{
 		next;
 		mes "[阿里韦罗]";
 		mes "我现在就破坏设备。";
-		mes "准备地灵矿石。";
+		mes "准备土灵原石。";
 		next;
 		specialeffect EF_SEISMICWEAPON;
 		sleep2 500;
@@ -8908,7 +8908,7 @@ yuno,204,226,6	script	阿里韦罗·尤希克#TFQ10	4_M_GUNSLINGER,{
 		specialeffect EF_LORD, AREA, "传送禁止设备#3";
 		cloakonnpcself( "传送禁止设备#3" );
 		mes "[阿里韦罗]";
-		mes "We destroyed the prohibition equipment and there appear to be.. no eyewitnesses. Just in case, let's scatter and move to 艾因布罗克.";
+		mes "设备破坏了，好像没有目击者。保险起见，分开行动去艾因布罗克。";
 		next;
 		delitem 997,3;// Great Nature
 		erasequest 5735;	// To Yuno
@@ -8916,11 +8916,11 @@ yuno,204,226,6	script	阿里韦罗·尤希克#TFQ10	4_M_GUNSLINGER,{
 		yurhik_quest = 9;
 		emotion ET_HUK;
 		mes "[阿里韦罗]";
-		mes "Oh! I haven't told you the location.";
-		mes "It is the place where 艾因布罗克 Wind turbine is located. You bring three Flame Hearts and one remaining Great Nature. We will use them to destroy the equipment.";
+		mes "哦！还没告诉你地点。";
+		mes "在艾因布罗克风力发电机那里。带3个火灵原石和剩下的1个土灵原石，用来破坏设备。";
 		next;
 		cloakonnpcself( "阿里韦罗·尤希克#TFQ10" );
-		mes "Vero disappeared in a hurry, as if he was being chased by something. Take three Flame Hearts and one Great Nature and go to 艾因布罗克.";
+		mes "韦罗急匆匆消失了，像被什么追赶。带3个火灵原石和1个土灵原石去艾因布罗克。";
 		close;
 	}
 	end;
@@ -8929,7 +8929,7 @@ OnInit:
 	end;
 }
 
-yuno,206,224,0	script	Yuno Prohibition equipment	HIDDEN_WARP_NPC,5,5,{
+yuno,206,224,0	script	尤诺传送禁止设备	HIDDEN_WARP_NPC,5,5,{
 	end;
 OnTouch:
 	if (yurhik_quest == 8) {
@@ -8945,28 +8945,28 @@ yuno,206,224,0	duplicate(dummy_cloaked_npc)	传送禁止设备#3	2_MONEMUS
 einbroch,262,42,4	script	阿里韦罗·尤希克#TFQ13	4_M_GUNSLINGER,{
 	if (yurhik_quest == 9) {
 		mes "[阿里韦罗]";
-		mes "have you brought three Flame Hearts and one Great Nature?";
+		mes "你带来3个火灵原石和1个土灵原石了吗？";
 		next;
-		mes "Vero is pressing me, as if he does not have much time left. Something is fish. But I'm not asking him, as I know he won't tell me.";
+		mes "韦罗催得很急，像没多少时间了。有点可疑，但我知道问他也不会说。";
 		next;
 		if (countitem(994) < 3 || countitem(997) < 1) {
 			mes "[阿里韦罗]";
-			mes "Please. And the last one is...";
-			mes "No! Nothing. Please bring it here as soon as possible.";
+			mes "拜托。最后一个是……";
+			mes "不！没什么。请尽快带来。";
 			close;
 		}
 		mes "[阿里韦罗]";
-		mes "Great! Destroy the Great Nature now, so that the equipment will show up!!";
+		mes "很好！现在打碎土灵原石，让设备现形！！";
 		next;
-		mes "His voice betrays his panic. And he also asked me to do the job that he had been doing by himself. Is there something wrong? I was curious. I broke the Great Nature into pieces as he asked.";
+		mes "他的声音暴露了慌乱，还让我做他本来自己做的工作。有什么不对？我很好奇，还是照他说的打碎了土灵原石。";
 		next;
 		specialeffect EF_SEISMICWEAPON, AREA, "传送禁止设备#4";
 		cloakoffnpcself( "传送禁止设备#4" );
 		emotion ET_BLABLA;
 		mes "[阿里韦罗]";
-		mes "Now! Time to use the Flame Heart!";
+		mes "现在！用火灵原石！";
 		next;
-		mes "As Vero asked me, I smashed the 传送禁止设备 with the Flame Heart.";
+		mes "我照韦罗说的，用火灵原石砸向传送禁止设备。";
 		next;
 		specialeffect2 EF_FLAMELAUNCHER;
 		sleep2 200;
@@ -8987,45 +8987,45 @@ einbroch,262,42,4	script	阿里韦罗·尤希克#TFQ13	4_M_GUNSLINGER,{
 		sleep2 200;
 		specialeffect EF_SOULBURN;
 		sleep2 200;
-		npctalk "Arrggh.. I can only go this far......", "", bc_self;
+		npctalk "啊啊……我只能到这里了……", "", bc_self;
 		sleep2 1000;
 		specialeffect EF_LORD, AREA, "传送禁止设备#4";
 		cloakonnpcself( "传送禁止设备#4" );
 		sleep2 1000;
-		mes "The equipment was destroyed quickly. Then I realized that Vero looked a bit abnormal. Is he sick or something?";
+		mes "设备很快被破坏。然后我发现韦罗有点不对劲，是生病了吗？";
 		next;
 		emotion ET_SORRY;
 		mes "[阿里韦罗]";
-		mes "Hey, pal! I know I have been naughty. But, thanks to your support, I managed to eliminate every 传送禁止设备 in Schwaltzvalt.";
-		mes "Thank you for helping me. This was my wish.";
+		mes "嘿，朋友！我知道我一直很胡闹。但多亏你，我才能清除秀发兹所有传送禁止设备。";
+		mes "谢谢你帮我。这是我的愿望。";
 		next;
 		emotion ET_QUESTION, playerattached();
 		mes "[" + strcharinfo(0) + "]";
-		mes "What.. Why are you saying that?";
-		mes "As if you were going far away?";
+		mes "什么……为什么这么说？";
+		mes "像是在远行一样？";
 		next;
 		emotion ET_SMILE;
 		mes "[阿里韦罗]";
-		mes "What's that look? Hahaha. I would like to take a photo of you. Well..";
+		mes "那是什么表情？哈哈哈。真想给你拍张照。好了……";
 		next;
 		specialeffect EF_MAGICCRASHER2;
 		mes "[阿里韦罗]";
-		mes "I must be showing my gratitude now. But I have to ask you for one more favor. Please talk to my elder sister once in a while. She is lonely quite often..";
+		mes "我该表达感谢。但还想再拜托你一件事，偶尔和我姐姐说说话。她经常很孤独……";
 		next;
 		mes "[阿里韦罗]";
-		mes "Oh.. It's time.. Bye.. Thanks..";
+		mes "哦……时间到了……再见……谢谢……";
 		next;
 		specialeffect EF_MAPPILLAR;
 		sleep2 4000;
-		npctalk "Oh..", "阿里韦罗·尤希克#TFQ13", bc_self;
+		npctalk "哦……", "阿里韦罗·尤希克#TFQ13", bc_self;
 		cloakonnpcself( "阿里韦罗·尤希克#TFQ13" );
 		delitem 997,1;// Great Nature
 		delitem 994,3;// Flame Heart
 		erasequest 5736;	// To 艾因布罗克
 		setquest 5737;	// Clana Namieri
 		yurhik_quest = 10;
-		mes "Vero disappeared all of a sudden after saying goodbye. What's going on here? Has he been summoned for an urgent mission?";
-		mes "Vero's gone. Shall I go back to 克拉纳·内米耶里?";
+		mes "韦罗道别后突然消失了。怎么回事？被紧急任务叫走了吗？";
+		mes "韦罗走了。要回克拉纳·内米耶里吗？";
 		close;
 	}
 	end;
@@ -9034,7 +9034,7 @@ OnInit:
 	end;
 }
 
-einbroch,260,40,0	script	艾因布罗克 Prohibition equipment	HIDDEN_WARP_NPC,5,5,{
+einbroch,260,40,0	script	艾因布罗克传送禁止设备	HIDDEN_WARP_NPC,5,5,{
 	end;
 OnTouch:
 	if (yurhik_quest == 9) {
