@@ -683,22 +683,22 @@ prt_cas_q,26,30,3	script	贝尔侍从长#ep16_main	4_M_RUSMAN1,{
 				setpcblock PCBLOCK_NPC, true;
 				sleep2 500;
 				setpcblock PCBLOCK_NPC, false;
-				cloakoffnpcself( "Giant Beast Manager#ep16_s02" );
-				npctalk "为您服务。", "Giant Beast Manager#ep16_s02", bc_self;
+				cloakoffnpcself( "巨兽管理者#ep16_s02" );
+				npctalk "为您服务。", "巨兽管理者#ep16_s02", bc_self;
 				end;
 			case 3:
 				mes "[贝尔]";
 				mes "原来如此。";
 				close2;
 				cloakonnpcself( "卡普拉职员#ep16_s01" );
-				cloakonnpcself( "Giant Beast Manager#ep16_s02" );
+				cloakonnpcself( "巨兽管理者#ep16_s02" );
 				end;
 			}
 		}
 	}
 }
 
-prt_cas_q,29,30,3	script	Giant Beast Manager#ep16_s02	8W_SOLDIER,{
+prt_cas_q,29,30,3	script	巨兽管理者#ep16_s02	8W_SOLDIER,{
 	.@thirdmask = eaclass() & EAJ_THIRDMASK;
 	if (.@thirdmask != EAJ_RUNE_KNIGHT && .@thirdmask != EAJ_ROYAL_GUARD) {
 		mes "我正在为卢恩骑士团和皇家守卫管理龙和狮鹫。";
@@ -715,7 +715,7 @@ prt_cas_q,29,30,3	script	Giant Beast Manager#ep16_s02	8W_SOLDIER,{
 		mes "[巨兽管理员]";
 		mes "我明白了。那么，再见。";
 		close2;
-		cloakonnpcself( "Giant Beast Manager#ep16_s02" );
+		cloakonnpcself( "巨兽管理者#ep16_s02" );
 		end;
 	}
 	if (getskilllv("KN_RIDING") < 1) {
@@ -913,7 +913,7 @@ prt_cas_q,28,28,3	script	宫廷魔法师尼勒姆#ep16_wiz01	4_M_JOB_WIZARD,{
 OnInit:
 	cloakonnpc "宫廷魔法师尼勒姆#ep16_wiz01";
 	cloakonnpc "卡普拉职员#ep16_s01";
-	cloakonnpc "Giant Beast Manager#ep16_s02";
+	cloakonnpc "巨兽管理者#ep16_s02";
 	end;
 }
 
@@ -923,29 +923,29 @@ OnTouch:
 	if (ep16_royal == 3) {
 		mes "从哪里传来了说话声。";
 		sleep2 2000;
-		cloakoffnpcself( "Mysterious Guest#ep16_01" );
-		cloakoffnpcself( "Chamberlain#ep16_01" );
-		npctalk "你刚才说的故事一定是真的吧？", "Mysterious Guest#ep16_01", bc_self;
+		cloakoffnpcself( "神秘客人#ep16_01" );
+		cloakoffnpcself( "侍从长#ep16_01" );
+		npctalk "你刚才说的故事一定是真的吧？", "神秘客人#ep16_01", bc_self;
 		sleep2 3000;
-		npctalk "当然。他正好符合你找的条件。", "Chamberlain#ep16_01", bc_self;
+		npctalk "当然。他正好符合你找的条件。", "侍从长#ep16_01", bc_self;
 		sleep2 3000;
-		npctalk "嗯……", "Mysterious Guest#ep16_01", bc_self;
+		npctalk "嗯……", "神秘客人#ep16_01", bc_self;
 		sleep2 3000;
-		npctalk "他也是王位继承人。你想知道的情报应该能拿到。", "Chamberlain#ep16_01", bc_self;
+		npctalk "他也是王位继承人。你想知道的情报应该能拿到。", "侍从长#ep16_01", bc_self;
 		sleep2 3000;
-		npctalk "安排上绝不能出错。无论如何都要把他叫到这里来。", "Mysterious Guest#ep16_01", bc_self;
+		npctalk "安排上绝不能出错。无论如何都要把他叫到这里来。", "神秘客人#ep16_01", bc_self;
 		sleep2 3000;
-		npctalk "都已经准备好了……细节我之后再告诉你。", "Chamberlain#ep16_01", bc_self;
+		npctalk "都已经准备好了……细节我之后再告诉你。", "侍从长#ep16_01", bc_self;
 		sleep2 3000;
-		npctalk "你该去参加宴会了。", "Chamberlain#ep16_01", bc_self;
+		npctalk "你该去参加宴会了。", "侍从长#ep16_01", bc_self;
 		sleep2 3000;
-		npctalk "好。回头见。可别让我失望。", "Mysterious Guest#ep16_01", bc_self;
+		npctalk "好。回头见。可别让我失望。", "神秘客人#ep16_01", bc_self;
 		sleep2 3000;
-		cloakonnpcself( "Mysterious Guest#ep16_01" );
+		cloakonnpcself( "神秘客人#ep16_01" );
 		sleep2 1000;
-		npctalk "真是个爱指使人的家伙……", "Chamberlain#ep16_01", bc_self;
+		npctalk "真是个爱指使人的家伙……", "侍从长#ep16_01", bc_self;
 		sleep2 1000;
-		cloakonnpcself( "Chamberlain#ep16_01" );
+		cloakonnpcself( "侍从长#ep16_01" );
 		next;
 		mes "我碰巧听到了可疑的对话。";
 		ep16_royal = 4;
@@ -954,14 +954,14 @@ OnTouch:
 	}
 	end;
 OnInit:
-	cloakonnpc "Mysterious Guest#ep16_01";
-	cloakonnpc "Chamberlain#ep16_01";
+	cloakonnpc "神秘客人#ep16_01";
+	cloakonnpc "侍从长#ep16_01";
 
 	questinfo( QTYPE_QUEST, QMARK_NONE, "isbegin_quest(7687) == 1" );
 	end;
 }
-prt_cas,179,155,6	script	Mysterious Guest#ep16_01	4_LGTSCIENCE,{ end; }
-prt_cas,181,154,2	script	Chamberlain#ep16_01	1_M_01,{ end; }
+prt_cas,179,155,6	script	神秘客人#ep16_01	4_LGTSCIENCE,{ end; }
+prt_cas,181,154,2	script	侍从长#ep16_01	1_M_01,{ end; }
 
 // Hall
 function	script	F_banquet_main_4_spica	{
@@ -1665,7 +1665,7 @@ prt_lib,91,85,3	script	魔法师尼勒姆#ep16_warp	4_M_JOB_WIZARD,{
 		mes "[尼勒姆]";
 		mes "哇！通往下一个区域的门启动了！";
 		mes "好，我们进去吧！";
-		cloakoffnpcself( "Room of Consciousness#evt_gate01" );
+		cloakoffnpcself( "意识房间#evt_gate01" );
 		close;
 	case 9:
 		mes "[尼勒姆]";
@@ -1829,7 +1829,7 @@ prt_lib,91,85,3	script	魔法师尼勒姆#ep16_warp	4_M_JOB_WIZARD,{
 	}
 }
 
-prt_lib,88,90,1	script	Room of Consciousness#evt_gate01	PORTAL,{
+prt_lib,88,90,1	script	意识房间#evt_gate01	PORTAL,{
 	if (getcharid(1) == 0 || is_party_leader() == false) {
 		mes "^4d4dff只有队长才能进入副本[祝福仪式]。^000000";
 		close;
@@ -1871,7 +1871,7 @@ prt_lib,88,90,1	script	Room of Consciousness#evt_gate01	PORTAL,{
 	npctalk "现在还不能使用！", "魔法师尼勒姆#ep16_warp", bc_self;
 	end;
 OnInit:
-	cloakonnpc "Room of Consciousness#evt_gate01";
+	cloakonnpc "意识房间#evt_gate01";
 	end;
 }
 
@@ -2389,7 +2389,7 @@ prt_lib_q,91,85,3	script	尼勒姆#ep16_lib_q	4_M_JOB_WIZARD,{
 		npctalk "哼——！", bc_self;
 		specialeffect EF_BEGINSPELL;
 		next;
-		cloakoffnpcself( "Swaying Space#evt_gate02" );
+		cloakoffnpcself( "摇曳空间#evt_gate02" );
 		mes "[尼勒姆]";
 		mes "强行连接空间！";
 		mes "来看看这里发生过什么。";
@@ -2401,7 +2401,7 @@ prt_lib_q,91,85,3	script	尼勒姆#ep16_lib_q	4_M_JOB_WIZARD,{
 		close;
 	}
 	if (ep16_royal == 19) {
-		cloakoffnpcself( "Swaying Space#evt_gate02" );
+		cloakoffnpcself( "摇曳空间#evt_gate02" );
 		if (getcharid(1) == 0 || is_party_leader() == false) {
 			mes "^4d4dff这是作为纪念举行的活动。";
 			mes "只有队长才能开始纪念活动。请组队后再来。^000000";
@@ -2432,7 +2432,7 @@ prt_lib_q,91,85,3	script	尼勒姆#ep16_lib_q	4_M_JOB_WIZARD,{
 		mes "[尼勒姆]";
 		mes "哇！通往下一个区域的门启动了！";
 		mes "好，我们进去吧！";
-		cloakoffnpcself( "Swaying Space#evt_gate02" );
+		cloakoffnpcself( "摇曳空间#evt_gate02" );
 		close;
 	}
 	if (ep16_royal == 20) {
@@ -2624,7 +2624,7 @@ prt_lib_q,91,85,3	script	尼勒姆#ep16_lib_q	4_M_JOB_WIZARD,{
 				mes "[尼勒姆]";
 				mes "哇！通往下一个区域的门启动了！";
 				mes "好，我们进去吧！";
-				cloakoffnpcself( "Swaying Space#evt_gate02" );
+				cloakoffnpcself( "摇曳空间#evt_gate02" );
 				close;
 			case 2:
 				mes "[尼勒姆]";
@@ -2661,11 +2661,11 @@ prt_lib_q,91,85,3	script	尼勒姆#ep16_lib_q	4_M_JOB_WIZARD,{
 	}
 }
 
-prt_lib_q,88,90,1	script	Swaying Space#evt_gate02	4_ENERGY_RED,{
+prt_lib_q,88,90,1	script	摇曳空间#evt_gate02	4_ENERGY_RED,{
 	if (checkquest(7706,PLAYTIME) > 0 || checkquest(7705,HUNTING) > 1) {
 		mes "扭曲空间附近能感觉到不安定的魔力流。";
 		mes "强行连接的缝隙完成使命后消失了。";
-		cloakonnpcself( "Swaying Space#evt_gate02" );
+		cloakonnpcself( "摇曳空间#evt_gate02" );
 		close;
 	}
 	if (getcharid(1) == 0 || is_party_leader() == false) {// solo instance
@@ -2712,7 +2712,7 @@ OnInit:
 	end;
 }
 
-prt_lib_q,110,58,4	script	Document#EP161DBOOK	CLEAR_NPC,{
+prt_lib_q,110,58,4	script	文件#EP161DBOOK	CLEAR_NPC,{
 	mes "这份文件有一大半被涂黑。";
 	next;
 	select("继续读。");
@@ -2786,7 +2786,7 @@ prt_lib_q,110,58,4	script	Document#EP161DBOOK	CLEAR_NPC,{
 
 
 // Left side
-prt_cas,213,177,5	script	Royal Chef#ep16_1	1_ETC_01,4,4,{
+prt_cas,213,177,5	script	王室厨师#ep16_1	1_ETC_01,4,4,{
 	if (ep16_royal >= 2) {
 		if (ep16_cookbs == 0)
 			callsub S_Text;
@@ -2833,7 +2833,7 @@ OnTouch:
 }
 
 // Kitchen
-prt_cas,309,200,5	script	Royal Head Chef#ep16_1	4_EP16_COOK,{
+prt_cas,309,200,5	script	王室主厨#ep16_1	4_EP16_COOK,{
 	if (ep16_royal < 2 || ep16_cookbs == 0) {
 		mes "[主厨]";
 		mes "呃啊！";
@@ -3088,28 +3088,28 @@ S_Dish:
 	mes "[主厨]";
 	mes "嘿！";
 	for ( .@i = 1; .@i <= 6; .@i++ )
-		npctalk "嘿！", "Chef#ep16_" + .@i;
+		npctalk "嘿！", "厨师#ep16_" + .@i;
 	next;
 	mes "[主厨]";
 	mes "哼！";
 	for ( .@i = 1; .@i <= 6; .@i++ )
-		npctalk "哼！", "Chef#ep16_" + .@i;
+		npctalk "哼！", "厨师#ep16_" + .@i;
 	next;
 	mes "[主厨]";
 	mes "哦！";
 	for ( .@i = 1; .@i <= 6; .@i++ )
-		npctalk "哦！", "Chef#ep16_" + .@i;
+		npctalk "哦！", "厨师#ep16_" + .@i;
 	next;
 	mes "[主厨]";
 	mes "砰！";
 	for ( .@i = 1; .@i <= 6; .@i++ )
-		npctalk "砰！", "Chef#ep16_" + .@i;
+		npctalk "砰！", "厨师#ep16_" + .@i;
 	next;
 	mes "[主厨]";
 	mes "哈哈哈！";
 	mes "极上烤狮鹫DX完成了！";
 	for ( .@i = 1; .@i <= 6; .@i++ )
-		npctalk "谢谢！", "Chef#ep16_" + .@i;
+		npctalk "谢谢！", "厨师#ep16_" + .@i;
 	next;
 	mes "[主厨]";
 	mes "现在把这道菜送到厨房去就行了。剩下就只差这一步！";
@@ -3123,7 +3123,7 @@ S_Dish:
 	return;
 }
 
-prt_cas,319,211,3	script	Royal Sauce Master#ep16	4_M_ALCHE_B,{
+prt_cas,319,211,3	script	王室调酱师#ep16	4_M_ALCHE_B,{
 	if (ep16_royal < 2) {
 		mes "[东方牡蛎]";
 		mes "嗯……多么鲜美！";
@@ -3291,7 +3291,7 @@ function	script	check_sauce	{
 			mes "[东方牡蛎]";
 			mes "对！就是这个！";
 			mes "拿来给我！";
-			emotion ET_SURPRISE, getnpcid(0, "Royal Sauce Master#ep16");
+			emotion ET_SURPRISE, getnpcid(0, "王室调酱师#ep16");
 			ep16_cookbs++;
 			erasequest .@quest_id;
 			close;
@@ -3320,35 +3320,35 @@ function	script	check_sauce	{
 	return;
 }
 
-prt_cas,303,216,5	script	Muka Juice#ep16_1	4_ENERGY_BLUE,{
+prt_cas,303,216,5	script	穆卡果汁#ep16_1	4_ENERGY_BLUE,{
 	check_sauce(11428);
 	mes "用新鲜穆卡榨出的汁";
 	mes "味道清爽。";
 	close;
 }
 
-prt_cas,307,196,5	script	Poring Jelly#ep16_1	4_ENERGY_RED,{
+prt_cas,307,196,5	script	波利果冻#ep16_1	4_ENERGY_RED,{
 	check_sauce(11429);
 	mes "用弹牙的波利做成的果冻";
 	mes "能突出弹牙的口感……";
 	close;
 }
 
-prt_cas,338,206,5	script	Shining Plant#ep16_1	4_ENERGY_WHITE,{
+prt_cas,338,206,5	script	闪光植物#ep16_1	4_ENERGY_WHITE,{
 	check_sauce(11430);
 	mes "用闪光植物磨成的粉";
 	mes "能为菜肴增添光泽。";
 	close;
 }
 
-prt_cas,330,211,5	script	Giantaurus Butter#ep16_	4_ENERGY_YELLOW,{
+prt_cas,330,211,5	script	巨兽龙黄油#ep16_	4_ENERGY_YELLOW,{
 	check_sauce(11431);
 	mes "巨兽龙奶黄油";
 	mes "味道出奇地柔和。";
 	close;
 }
 
-prt_cas,302,205,5	script	Dishwasher#ep16_1	4_M_ALCHE_D,{
+prt_cas,302,205,5	script	洗碗工#ep16_1	4_M_ALCHE_D,{
 	if (ep16_cookbs == 21) {
 		if (countitem(6935) < 15) {
 			mes "[洗碗工]";
@@ -3457,66 +3457,66 @@ prt_cas,302,205,5	script	Dishwasher#ep16_1	4_M_ALCHE_D,{
 	}
 	mes "[洗碗工]";
 	mes "呃！";
-	npctalk "呃！", "Dishwasher#ep16_1", bc_self;
+	npctalk "呃！", "洗碗工#ep16_1", bc_self;
 	next;
 	mes "[洗碗工]";
 	mes "主妇湿疹又在我右手上发作了！";
-	npctalk "主妇湿疹又在我右手上发作了！", "Dishwasher#ep16_1", bc_self;
+	npctalk "主妇湿疹又在我右手上发作了！", "洗碗工#ep16_1", bc_self;
 	next;
 	mes "[洗碗工]";
 	mes "霍德霜！";
 	mes "请给我霍德霜！";
 	mes "呃啊啊啊！";
-	npctalk "请给我霍德霜！", "Dishwasher#ep16_1", bc_self;
+	npctalk "请给我霍德霜！", "洗碗工#ep16_1", bc_self;
 	close;
 }
 
-prt_cas,315,204,1	script	Chef#ep16_1	4_COOK,{
+prt_cas,315,204,1	script	厨师#ep16_1	4_COOK,{
 	mes "[厨师]";
 	mes "我的厨艺完美无缺！";
 	close;
 }
 
-prt_cas,313,204,3	script	Chef#ep16_2	4_COOK,{
+prt_cas,313,204,3	script	厨师#ep16_2	4_COOK,{
 	mes "[厨师]";
 	mes "真不敢相信我能和主厨一起做菜！";
 	mes "感觉像在做梦！";
 	close;
 }
 
-prt_cas,313,202,3	script	Chef#ep16_3	4_COOK,{
+prt_cas,313,202,3	script	厨师#ep16_3	4_COOK,{
 	mes "[厨师]";
 	mes "好吃！";
 	close;
 }
 
-prt_cas,313,200,3	script	Chef#ep16_4	4_COOK,{
+prt_cas,313,200,3	script	厨师#ep16_4	4_COOK,{
 	mes "[厨师]";
 	mes "比起加糖，我更喜欢加盐！";
 	close;
 }
 
-prt_cas,313,196,3	script	Chef#ep16_5	4_COOK,{
+prt_cas,313,196,3	script	厨师#ep16_5	4_COOK,{
 	mes "[厨师]";
 	mes "最好吃的方法就是原汁原味地吃！最棒的味道就是食材本身的味道！";
 	close;
 }
 
-prt_cas,313,194,3	script	Chef#ep16_6	4_COOK,{
+prt_cas,313,194,3	script	厨师#ep16_6	4_COOK,{
 	mes "[厨师]";
 	mes "主厨大人！请和我结婚吧！";
-	npctalk "主厨大人！请和我结婚吧！", "Chef#ep16_6", bc_self;
+	npctalk "主厨大人！请和我结婚吧！", "厨师#ep16_6", bc_self;
 	close;
 }
 
 // Hall
-prt_cas,82,268,5	script	Mark Ishar#ep16_1	4_EP16_MARK,{
+prt_cas,82,268,5	script	马克·伊沙尔#ep16_1	4_EP16_MARK,{
 	if (ep16_cookbs == 18) {
 		mes "[马克]";
 		mes "您好，" + strcharinfo(0) + "。";
 		mes "玩得开心吗？";
 		mes "有什么需要我帮忙的吗？";
-		npctalk "您好。", "Mark Ishar#ep16_1", bc_self;
+		npctalk "您好。", "马克·伊沙尔#ep16_1", bc_self;
 		emotion ET_DELIGHT;
 		cutin "mark_wt_4",0;
 		next;
@@ -3569,13 +3569,13 @@ prt_cas,82,268,5	script	Mark Ishar#ep16_1	4_EP16_MARK,{
 	mes "您好，" + strcharinfo(0) + "。";
 	mes "玩得开心吗？";
 	mes "有什么需要我帮忙的吗？";
-	npctalk "您好。", "Mark Ishar#ep16_1", bc_self;
+	npctalk "您好。", "马克·伊沙尔#ep16_1", bc_self;
 	emotion ET_DELIGHT;
 	cutin "mark_wt_4",0;
 	close3;
 }
 
-prt_cas,83,270,3	script	Alice Ishar#ep16_1	4_F_ACOLYTE,{
+prt_cas,83,270,3	script	爱丽丝·伊沙尔#ep16_1	4_F_ACOLYTE,{
 	if (ep16_cookbs < 19) {
 		mes "[爱丽丝]";
 		mes "马克！那个不该放在那里。放这边……";
@@ -3612,7 +3612,7 @@ prt_cas,83,270,3	script	Alice Ishar#ep16_1	4_F_ACOLYTE,{
 	close3;
 }
 
-prt_cas,111,234,3	script	Magi Steen#ep16_1	4_F_PINKWOMAN,{
+prt_cas,111,234,3	script	玛吉·斯汀#ep16_1	4_F_PINKWOMAN,{
 	if (ep16_cookbs < 17) {
 		mes "[玛吉]";
 		mes "那、那个……您好……";
@@ -3658,7 +3658,7 @@ prt_cas,111,234,3	script	Magi Steen#ep16_1	4_F_PINKWOMAN,{
 	close3;
 }
 
-prt_cas,111,235,3	script	Dyu Rianne#ep16_1	4_M_REDMAN,{
+prt_cas,111,235,3	script	迪尤·里安#ep16_1	4_M_REDMAN,{
 	if (ep16_cookbs < 16) {
 		mes "[迪尤]";
 		mes "哟！这不是……";
@@ -3753,13 +3753,13 @@ prt_cas,111,235,3	script	Dyu Rianne#ep16_1	4_M_REDMAN,{
 }
 
 // Dinner room
-prt_cas,361,142,5	script	Tamarin#ep16_1	4_EP16_TAMARIN,{
+prt_cas,361,142,5	script	塔玛琳#ep16_1	4_EP16_TAMARIN,{
 	if (ep16_cookbs < 15) {
 		mes "[塔玛林]";
 		mes "啊啊啊啊啊！";
 		mes "这到底是怎么回事……";
 		emotion ET_HNG;
-		npctalk "啊啊啊啊啊！", "Tamarin#ep16_1", bc_self;
+		npctalk "啊啊啊啊啊！", "塔玛琳#ep16_1", bc_self;
 		cutin "tama_cook_4",2;
 		close3;
 	}
@@ -3768,7 +3768,7 @@ prt_cas,361,142,5	script	Tamarin#ep16_1	4_EP16_TAMARIN,{
 		mes "啊啊啊啊啊！";
 		mes "这到底是怎么回事……";
 		emotion ET_HNG;
-		npctalk "啊啊啊啊啊！", "Tamarin#ep16_1", bc_self;
+		npctalk "啊啊啊啊啊！", "塔玛琳#ep16_1", bc_self;
 		cutin "tama_cook_4",2;
 		next;
 		mes "[塔玛林]";
@@ -3879,7 +3879,7 @@ prt_cas,361,142,5	script	Tamarin#ep16_1	4_EP16_TAMARIN,{
 	close3;
 }
 
-prt_cas,358,124,0	script	Grilled Griffon#ep16_1	4_EP16_FOOD,{
+prt_cas,358,124,0	script	烤狮鹫#ep16_1	4_EP16_FOOD,{
 	if (ep16_royal < 2) {
 		mes "看起来很好吃的烤狮鹫。";
 		close;
@@ -3890,7 +3890,7 @@ prt_cas,358,124,0	script	Grilled Griffon#ep16_1	4_EP16_FOOD,{
 		mes "[塔玛林]";
 		mes "啊啊啊啊啊！";
 		mes "这到底是怎么回事……";
-		npctalk "啊啊啊啊啊！", "Tamarin#ep16_1", bc_self;
+		npctalk "啊啊啊啊啊！", "塔玛琳#ep16_1", bc_self;
 		cutin "tama_cook_4",2;
 		erasequest 11399;// Why Should I Prepare for the Banquets?
 		setquest 11413;// Why Should I Prepare for the Banquets?
@@ -4829,7 +4829,7 @@ alberta,187,147,7	script	守护骑士#ep16wal	4_M_KNIGHT_SILVER,{
 	close;
 }
 
-alberta,48,30,7	script	Butler for the Walthers#ep16wal	4_M_MANAGER,{
+alberta,48,30,7	script	沃尔特家管家#ep16wal	4_M_MANAGER,{
 	if (ep16_wal == 2) {
 		mes "[沃尔特家的管家]";
 		mes "今天天气真好。不过，这房子显得太空荡、太孤单了。";
@@ -5807,69 +5807,69 @@ OnInit:
 	end;
 }
 
-prt_cas_q,144,38,3	script	Nyhill#ep16_7686	4_EP16_NIHIL,{ end; }
-prt_cas_q,141,39,5	script	Skia#ep16_7686	4_EP16_SKIA,{ end; }
+prt_cas_q,144,38,3	script	尼希尔#ep16_7686	4_EP16_NIHIL,{ end; }
+prt_cas_q,141,39,5	script	斯琪亚#ep16_7686	4_EP16_SKIA,{ end; }
 
 prt_cas_q,141,36,0	script	#ep16_evt_7686	HIDDEN_WARP_NPC,3,1,{
 	end;
 OnTouch:
 	if (isbegin_quest(7683) == 2 && isbegin_quest(7686) == 0) {
-		cloakoffnpcself( "Skia#ep16_7686" );
-		cloakoffnpcself( "Nyhill#ep16_7686" );
+		cloakoffnpcself( "斯琪亚#ep16_7686" );
+		cloakoffnpcself( "尼希尔#ep16_7686" );
 		setpcblock PCBLOCK_NPC, true;
 		sleep2 2000;
-		npctalk "你就是人们说的影子公主吗？", "Nyhill#ep16_7686", bc_self;
+		npctalk "你就是人们说的影子公主吗？", "尼希尔#ep16_7686", bc_self;
 		sleep2 3000;
-		npctalk "你一定也不容易吧。这是你第一次参加正式活动吗？", "Nyhill#ep16_7686", bc_self;
+		npctalk "你一定也不容易吧。这是你第一次参加正式活动吗？", "尼希尔#ep16_7686", bc_self;
 		sleep2 3000;
-		npctalk "哦，你一定是海尔内家族的家主。", "Skia#ep16_7686", bc_self;
+		npctalk "哦，你一定是海尔内家族的家主。", "斯琪亚#ep16_7686", bc_self;
 		sleep2 3000;
-		npctalk "嗯，我确实是影子。不过，我从不觉得辛苦。", "Skia#ep16_7686", bc_self;
+		npctalk "嗯，我确实是影子。不过，我从不觉得辛苦。", "斯琪亚#ep16_7686", bc_self;
 		sleep2 3000;
-		npctalk "我只做我能做的事。", "Skia#ep16_7686", bc_self;
+		npctalk "我只做我能做的事。", "斯琪亚#ep16_7686", bc_self;
 		sleep2 3000;
-		npctalk "可你并不是自愿生成那样的，不是吗？", "Nyhill#ep16_7686", bc_self;
+		npctalk "可你并不是自愿生成那样的，不是吗？", "尼希尔#ep16_7686", bc_self;
 		sleep2 3000;
-		npctalk "我从小就被当作影子养大，但这从未让我难过。", "Skia#ep16_7686", bc_self;
+		npctalk "我从小就被当作影子养大，但这从未让我难过。", "斯琪亚#ep16_7686", bc_self;
 		sleep2 3000;
-		npctalk "我以前也质疑过……", "Skia#ep16_7686", bc_self;
+		npctalk "我以前也质疑过……", "斯琪亚#ep16_7686", bc_self;
 		sleep2 3000;
-		npctalk "但我选择成为现在的我。这就是我的路。", "Skia#ep16_7686", bc_self;
+		npctalk "但我选择成为现在的我。这就是我的路。", "斯琪亚#ep16_7686", bc_self;
 		sleep2 3000;
-		npctalk "是吗。我很羡慕你能这样想。", "Nyhill#ep16_7686", bc_self;
+		npctalk "是吗。我很羡慕你能这样想。", "尼希尔#ep16_7686", bc_self;
 		sleep2 3000;
-		npctalk "我一直想摆脱米杰利亚这个名字。", "Nyhill#ep16_7686", bc_self;
+		npctalk "我一直想摆脱米杰利亚这个名字。", "尼希尔#ep16_7686", bc_self;
 		sleep2 3000;
-		npctalk "你知道一个人从小就不断听人说他一无所有，会怎样吗？", "Nyhill#ep16_7686", bc_self;
+		npctalk "你知道一个人从小就不断听人说他一无所有，会怎样吗？", "尼希尔#ep16_7686", bc_self;
 		sleep2 3000;
-		npctalk "他会迷失自己，仿佛内心空空如也。", "Nyhill#ep16_7686", bc_self;
+		npctalk "他会迷失自己，仿佛内心空空如也。", "尼希尔#ep16_7686", bc_self;
 		sleep2 3000;
-		npctalk ".......", "Nyhill#ep16_7686", bc_self;
+		npctalk ".......", "尼希尔#ep16_7686", bc_self;
 		sleep2 3000;
-		npctalk "我在说什么……失礼了。", "Nyhill#ep16_7686", bc_self;
+		npctalk "我在说什么……失礼了。", "尼希尔#ep16_7686", bc_self;
 		sleep2 2000;
-		npctalk "你知道，当你一无所有时……", "Skia#ep16_7686", bc_self;
+		npctalk "你知道，当你一无所有时……", "斯琪亚#ep16_7686", bc_self;
 		sleep2 2000;
-		npctalk ".......", "Nyhill#ep16_7686", bc_self;
+		npctalk ".......", "尼希尔#ep16_7686", bc_self;
 		sleep2 2000;
-		npctalk "你可以用任何东西把它填满。人没有注定的未来。", "Skia#ep16_7686", bc_self;
+		npctalk "你可以用任何东西把它填满。人没有注定的未来。", "斯琪亚#ep16_7686", bc_self;
 		sleep2 6000;
-		npctalk "……是这样吗。", "Nyhill#ep16_7686", bc_self;
+		npctalk "……是这样吗。", "尼希尔#ep16_7686", bc_self;
 		sleep2 3000;
-		npctalk "对了，我还没有自我介绍。我叫尼希尔·米杰利亚·海尔内。", "Nyhill#ep16_7686", bc_self;
+		npctalk "对了，我还没有自我介绍。我叫尼希尔·米杰利亚·海尔内。", "尼希尔#ep16_7686", bc_self;
 		sleep2 3000;
-		npctalk "我是斯琪亚·内里乌斯。你可以叫我斯琪亚。", "Skia#ep16_7686", bc_self;
+		npctalk "我是斯琪亚·内里乌斯。你可以叫我斯琪亚。", "斯琪亚#ep16_7686", bc_self;
 		sleep2 3000;
-		npctalk "哦，对了。我正要去见英雄！", "Skia#ep16_7686", bc_self;
+		npctalk "哦，对了。我正要去见英雄！", "斯琪亚#ep16_7686", bc_self;
 		sleep2 3000;
-		npctalk "恕我失陪了。", "Skia#ep16_7686", bc_self;
+		npctalk "恕我失陪了。", "斯琪亚#ep16_7686", bc_self;
 		sleep2 1000;
-		cloakonnpcself( "Skia#ep16_7686" );
+		cloakonnpcself( "斯琪亚#ep16_7686" );
 		sleep2 3000;
-		npctalk "……斯琪亚……内里乌斯家有位有趣的女士。", "Nyhill#ep16_7686", bc_self;
+		npctalk "……斯琪亚……内里乌斯家有位有趣的女士。", "尼希尔#ep16_7686", bc_self;
 		sleep2 3000;
 		setpcblock PCBLOCK_NPC, false;
-		cloakonnpcself( "Nyhill#ep16_7686" );
+		cloakonnpcself( "尼希尔#ep16_7686" );
 		if (isbegin_quest(7686) == 0) {
 			setquest 7686;// Nyhill and Skia
 			completequest 7686;// Nyhill and Skia
@@ -5877,8 +5877,8 @@ OnTouch:
 	}
 	end;
 OnInit:
-	cloakonnpc "Skia#ep16_7686";
-	cloakonnpc "Nyhill#ep16_7686";
+	cloakonnpc "斯琪亚#ep16_7686";
+	cloakonnpc "尼希尔#ep16_7686";
 	end;
 }
 
@@ -7005,7 +7005,7 @@ prt_cas_q,90,184,7	script	赫尔穆特·雷根布尔格#ep16lug	4_EP16_HELMUT,{
 	}
 }
 
-prt_cas_q,86,180,7	script	Kalbern#ep16lug	4_M_RUSCHILD,{
+prt_cas_q,86,180,7	script	卡尔伯恩#ep16lug	4_M_RUSCHILD,{
 	if (ep16_lug <= 6) {
 		mes "[卡尔伯恩]";
 		mes "亲爱的冒险者，你好。";
@@ -7579,7 +7579,7 @@ prt_cas_q,96,186,3	script	沃尔夫·雷根布尔格#ep16lug	4_EP16_WOLF,{
 		mes "[卡尔伯恩]";
 		mes "赫尔穆特大人！您要去哪？";
 		next;
-		cloakonnpcself( "Kalbern#ep16lug" );
+		cloakonnpcself( "卡尔伯恩#ep16lug" );
 		cutin "16wol_nor",2;
 		mes "[沃尔夫]";
 		mes "......";
@@ -7818,7 +7818,7 @@ OnTouch:
 	else if (ep16_lug > 6) {
 		cloakonnpcself( "赫尔穆特·雷根布尔格#ep16lug" );
 		cloakonnpcself( "迈耶·雷根布尔格#ep16lug" );
-		cloakonnpcself( "Kalbern#ep16lug" );
+		cloakonnpcself( "卡尔伯恩#ep16lug" );
 	}
 	end;
 }
@@ -7858,7 +7858,7 @@ OnTouch:
 	else if (ep16_lug > 6) {
 		cloakonnpcself( "赫尔穆特·雷根布尔格#ep16lug" );
 		cloakonnpcself( "迈耶·雷根布尔格#ep16lug" );
-		cloakonnpcself( "Kalbern#ep16lug" );
+		cloakonnpcself( "卡尔伯恩#ep16lug" );
 	}
 	end;
 }
@@ -7867,7 +7867,7 @@ function	script	F_kids_roegenburg_quest	{
 	switch( ep16_lug ) {
 	case 4:
 		next;
-		emotion ET_FRET, getnpcid(0, "Kiddo#ep16lug03");
+		emotion ET_FRET, getnpcid(0, "小鬼#ep16lug03");
 		mes "[哈丽特]";
 		mes "住口！你们两个。听你们说话我头都晕了。";
 		next;
@@ -7937,15 +7937,15 @@ function	script	F_kids_roegenburg_quest	{
 		mes "[" + strcharinfo(0) + "]";
 		mes "那我该怎么做？告诉我。你想要什么？";
 		next;
-		emotion ET_SMILE, getnpcid(0, "Kiddo#ep16lug02");
+		emotion ET_SMILE, getnpcid(0, "小鬼#ep16lug02");
 		mes "[金]";
 		mes "终于到谈生意的时候了！太好了！我喜欢！";
 		next;
-		emotion ET_SMILE, getnpcid(0, "Kiddo#ep16lug03");
+		emotion ET_SMILE, getnpcid(0, "小鬼#ep16lug03");
 		mes "[哈丽特]";
 		mes "我喜欢一切漂亮的东西！";
 		next;
-		emotion ET_SURPRISE, getnpcid(0, "Kiddo#ep16lug01");
+		emotion ET_SURPRISE, getnpcid(0, "小鬼#ep16lug01");
 		mes "[艾伦]";
 		mes "验证资格！就这个！";
 		next;
@@ -7959,8 +7959,8 @@ function	script	F_kids_roegenburg_quest	{
 		mes "[" + strcharinfo(0) + "]";
 		mes "我明白了。这样够吗？我很快回来。";
 		next;
-		emotion ET_HUK, getnpcid(0, "Kiddo#ep16lug02");
-		emotion ET_HUK, getnpcid(0, "Kiddo#ep16lug03");
+		emotion ET_HUK, getnpcid(0, "小鬼#ep16lug02");
+		emotion ET_HUK, getnpcid(0, "小鬼#ep16lug03");
 		mes "[金]";
 		mes "等一下。你不听我们说话吗？你说过会给报酬。";
 		next;
@@ -8016,21 +8016,21 @@ function	script	F_kids_roegenburg_quest	{
 		mes "[" + strcharinfo(0) + "]";
 		mes "嗨，我回来了。这些是你们要的吗？";
 		next;
-		emotion ET_BIGTHROB, getnpcid(0, "Kiddo#ep16lug03");
+		emotion ET_BIGTHROB, getnpcid(0, "小鬼#ep16lug03");
 		mes "[哈丽特]";
 		mes "让我看看。对！就是这些。好漂亮。好柔软！真的可以给我吗？";
 		next;
 		mes "[" + strcharinfo(0) + "]";
 		mes "当然，因为你们想要，我才带来的。那你之前说的话是空话吗？";
 		next;
-		emotion ET_CHUPCHUP, getnpcid(0, "Kiddo#ep16lug03");
+		emotion ET_CHUPCHUP, getnpcid(0, "小鬼#ep16lug03");
 		mes "[哈丽特]";
 		mes "不！不！我真的很想要！谢谢你！";
 		next;
 		mes "[" + strcharinfo(0) + "]";
 		mes "还有你的书。它又重又大。我只借了一卷。其他卷已经被人借走了。";
 		next;
-		emotion ET_SMILE, getnpcid(0, "Kiddo#ep16lug02");
+		emotion ET_SMILE, getnpcid(0, "小鬼#ep16lug02");
 		mes "[金]";
 		mes "谢谢。我终于能读了。";
 		next;
@@ -8092,15 +8092,15 @@ function	script	F_kids_roegenburg_quest	{
 		mes "我父母很担心。他们怕赫尔穆特当上国王后发动战争。";
 		mes "其实大家都很不安。他们不喜欢战争。";
 		next;
-		emotion ET_SURPRISE, getnpcid(0, "Kiddo#ep16lug01");
+		emotion ET_SURPRISE, getnpcid(0, "小鬼#ep16lug01");
 		mes "[艾伦]";
 		mes "战场的血在召唤我！";
 		next;
-		emotion ET_OHNO, getnpcid(0, "Kiddo#ep16lug02");
+		emotion ET_OHNO, getnpcid(0, "小鬼#ep16lug02");
 		mes "[金]";
 		mes "除了他。";
 		next;
-		emotion ET_CRY, getnpcid(0, "Kiddo#ep16lug03");
+		emotion ET_CRY, getnpcid(0, "小鬼#ep16lug03");
 		mes "[哈丽特]";
 		mes "我也讨厌战争。";
 		next;
@@ -8167,7 +8167,7 @@ function	script	F_kids_roegenburg_quest	{
 		mes "[哈丽特]";
 		mes "啊，他来了！乔纳森！我们有客人。";
 		next;
-		cloakoffnpcself( "Ordinary Man#ep16lug02" );
+		cloakoffnpcself( "普通男子#ep16lug02" );
 		mes "[迈耶]";
 		mes "亲爱的冒险者。是什么风把你吹来了？";
 		next;
@@ -8180,15 +8180,15 @@ function	script	F_kids_roegenburg_quest	{
 		mes "[" + strcharinfo(0) + "]";
 		mes "是的。你的家人让我给你带个口信。";
 		next;
-		emotion ET_QUESTION, getnpcid(0, "Kiddo#ep16lug01");
+		emotion ET_QUESTION, getnpcid(0, "小鬼#ep16lug01");
 		mes "[艾伦]";
 		mes "迈耶？";
 		next;
-		emotion ET_QUESTION, getnpcid(0, "Kiddo#ep16lug02");
+		emotion ET_QUESTION, getnpcid(0, "小鬼#ep16lug02");
 		mes "[金]";
 		mes "迈耶？";
 		next;
-		emotion ET_QUESTION, getnpcid(0, "Kiddo#ep16lug03");
+		emotion ET_QUESTION, getnpcid(0, "小鬼#ep16lug03");
 		mes "[哈丽特]";
 		mes "谁是迈耶？^0000cd你叫迈耶吗^000000？乔纳森·迈耶？迈耶·乔纳森？你让我只叫你乔纳森。";
 		next;
@@ -8276,7 +8276,7 @@ function	script	F_kids_roegenburg_quest	{
 	return;
 }
 
-prontera,271,70,3	script	Kiddo#ep16lug01	4_M_MIKID,{
+prontera,271,70,3	script	小鬼#ep16lug01	4_M_MIKID,{
 	if (ep16_lug < 4) {
 		mes "[艾伦]";
 		mes "你想和我们做生意？可我们不见任何人。";
@@ -8290,7 +8290,7 @@ prontera,271,70,3	script	Kiddo#ep16lug01	4_M_MIKID,{
 		mes "[艾伦]";
 		mes "今天风很冷，还带着腐烂的气味。我感觉出事了。";
 		next;
-		emotion ET_SHY, getnpcid(0, "Kiddo#ep16lug02");
+		emotion ET_SHY, getnpcid(0, "小鬼#ep16lug02");
 		mes "[金]";
 		mes "啊，抱歉，我几天没能洗澡。";
 		next;
@@ -8348,7 +8348,7 @@ prontera,271,70,3	script	Kiddo#ep16lug01	4_M_MIKID,{
 	close;
 }
 
-prontera,271,68,1	script	Kiddo#ep16lug02	4_M_KID1,5,5,{
+prontera,271,68,1	script	小鬼#ep16lug02	4_M_KID1,5,5,{
 	if (ep16_lug < 4) {
 		mes "[金]";
 		mes "今天天气真好。";
@@ -8420,11 +8420,11 @@ prontera,271,68,1	script	Kiddo#ep16lug02	4_M_KID1,5,5,{
 
 OnTouch:
 	if (ep16_lug >= 12)
-		cloakoffnpcself( "Ordinary Man#ep16lug02" );
+		cloakoffnpcself( "普通男子#ep16lug02" );
 	end;
 }
 
-prontera,269,69,5	script	Kiddo#ep16lug03	4_F_KID2,{
+prontera,269,69,5	script	小鬼#ep16lug03	4_F_KID2,{
 	if (ep16_lug < 4) {
 		mes "[哈丽特]";
 		mes "公主们的裙子该有多美丽闪亮啊！我希望能穿尽可能多的漂亮裙子。";
@@ -8436,7 +8436,7 @@ prontera,269,69,5	script	Kiddo#ep16lug03	4_F_KID2,{
 		mes "你好，唱歌的小鸟和漂亮的花。";
 		mes "你今天也过得美好吗？";
 		next;
-		emotion ET_OHNO, getnpcid(0, "Kiddo#ep16lug02");
+		emotion ET_OHNO, getnpcid(0, "小鬼#ep16lug02");
 		mes "[金]";
 		mes "他又开始了。";
 		mes "为什么我身边没有正常人？";
@@ -8490,14 +8490,14 @@ prontera,269,69,5	script	Kiddo#ep16lug03	4_F_KID2,{
 	close;
 }
 
-yuno_fild01,239,173,7	script	Border Guards#ep16lug01	4_M_JOB_KNIGHT2,{ end; }
-yuno_fild01,241,173,7	duplicate(Border Guards#ep16lug01)	Border Guards#ep16lug02	4_M_KNIGHT_GOLD
-yuno_fild01,243,173,1	duplicate(Border Guards#ep16lug01)	Border Guards#ep16lug03	4_M_KNIGHT_GOLD
-yuno_fild01,245,173,1	duplicate(Border Guards#ep16lug01)	Border Guards#ep16lug04	4_M_JOB_KNIGHT2
-yuno_fild01,239,171,7	duplicate(Border Guards#ep16lug01)	Border Guards#ep16lug05	4_M_PECOKNIGHT
-yuno_fild01,241,171,7	duplicate(Border Guards#ep16lug01)	Border Guards#ep16lug06	4_M_JOB_WIZARD
-yuno_fild01,243,171,1	duplicate(Border Guards#ep16lug01)	Border Guards#ep16lug07	4_M_JOB_WIZARD
-yuno_fild01,245,171,1	duplicate(Border Guards#ep16lug01)	Border Guards#ep16lug08	4_M_PECOKNIGHT
+yuno_fild01,239,173,7	script	边境守卫#ep16lug01	4_M_JOB_KNIGHT2,{ end; }
+yuno_fild01,241,173,7	duplicate(边境守卫#ep16lug01)	边境守卫#ep16lug02	4_M_KNIGHT_GOLD
+yuno_fild01,243,173,1	duplicate(边境守卫#ep16lug01)	边境守卫#ep16lug03	4_M_KNIGHT_GOLD
+yuno_fild01,245,173,1	duplicate(边境守卫#ep16lug01)	边境守卫#ep16lug04	4_M_JOB_KNIGHT2
+yuno_fild01,239,171,7	duplicate(边境守卫#ep16lug01)	边境守卫#ep16lug05	4_M_PECOKNIGHT
+yuno_fild01,241,171,7	duplicate(边境守卫#ep16lug01)	边境守卫#ep16lug06	4_M_JOB_WIZARD
+yuno_fild01,243,171,1	duplicate(边境守卫#ep16lug01)	边境守卫#ep16lug07	4_M_JOB_WIZARD
+yuno_fild01,245,171,1	duplicate(边境守卫#ep16lug01)	边境守卫#ep16lug08	4_M_PECOKNIGHT
 
 yuno_fild01,242,175,5	script	赫尔穆特·雷根布尔格#ep16lug02	4_EP16_HELMUT,5,5,{
 	if (ep16_lug == 9) {
@@ -8582,24 +8582,24 @@ OnTouch:
 		mes "[赫尔穆特]";
 		mes "集中精神，喊出来！！！";
 		for ( .@i = 1; .@i < 9; ++.@i )
-			npctalk "哈！", "Border Guards#ep16lug0" + .@i, bc_area;
+			npctalk "哈！", "边境守卫#ep16lug0" + .@i, bc_area;
 		next;
 		mes "[赫尔穆特]";
 		mes "再大声点！！！！";
 		for ( .@i = 1; .@i < 9; ++.@i )
-			npctalk "哈！", "Border Guards#ep16lug0" + .@i, bc_area;
+			npctalk "哈！", "边境守卫#ep16lug0" + .@i, bc_area;
 		next;
 		mes "[赫尔穆特]";
 		mes "我们！！！！！！";
 		next;
 		for ( .@i = 1; .@i < 9; ++.@i )
-			npctalk "保护我们的家人和我们的国家！！！", "Border Guards#ep16lug0" + .@i, bc_area;
+			npctalk "保护我们的家人和我们的国家！！！", "边境守卫#ep16lug0" + .@i, bc_area;
 		close;
 	}
 	end;
 }
 
-yuno_fild01,244,176,3	script	Kalbern#ep16lug02	4_M_RUSCHILD,{
+yuno_fild01,244,176,3	script	卡尔伯恩#ep16lug02	4_M_RUSCHILD,{
 	if (ep16_lug == 9 || ep16_lug == 10) {
 		mes "[卡尔伯恩]";
 		mes "我很高兴回到这里。";
@@ -8619,8 +8619,8 @@ yuno_fild01,244,176,3	script	Kalbern#ep16lug02	4_M_RUSCHILD,{
 	close;
 }
 
-//prontera,269,73,5	script	Ordinary Man#ep16lug02	4_M_04,5,5,{	// no OnTouch
-prontera,269,73,5	script	Ordinary Man#ep16lug02	4_M_04,{
+//prontera,269,73,5	script	普通男子#ep16lug02	4_M_04,5,5,{	// no OnTouch
+prontera,269,73,5	script	普通男子#ep16lug02	4_M_04,{
 	if (ep16_lug >= 12) {
 		mes "[迈耶]";
 		mes "谢谢你来到这里传话。没有你，我不会听到今天这样的话。";
@@ -9817,7 +9817,7 @@ OnInit:
 }
 
 // At room entrance
-prt_cas_q,146,121,4	script	Bachelor#ep16wig	1_M_ORIENT01,{
+prt_cas_q,146,121,4	script	单身男子#ep16wig	1_M_ORIENT01,{
 	emotion ET_CRY;
 	mes "[单身汉]";
 	mes "这里排队的女人太可怕了。";
@@ -9841,25 +9841,25 @@ prt_cas_q,146,121,4	script	Bachelor#ep16wig	1_M_ORIENT01,{
 	end;
 }
 
-prt_cas_q,148,117,7	script	Miss#ep16wig	4_F_02,{
+prt_cas_q,148,117,7	script	小姐#ep16wig	4_F_02,{
 	mes "[小姐]";
 	if (rand(2) == 0) {
 		mes "尤尔根对我们一视同仁，我们也该讲点公平。";
 		mes "不管是谁，自己站出来！";
-		npctalk "她会出来吗？要是会自首，她当初就不会混进去了。", "Womenfolk#ep16wig", bc_area;
+		npctalk "她会出来吗？要是会自首，她当初就不会混进去了。", "妇女#ep16wig", bc_area;
 		sleep2 1000;
-		npctalk "为什么只有一个尤尔根……", "Gyusoo#ep16wig", bc_area;
+		npctalk "为什么只有一个尤尔根……", "圭秀#ep16wig", bc_area;
 		sleep2 1000;
-		npctalk "尤尔根怎么还不从房间里出来……", "Bachelorette#ep16wig", bc_area;
+		npctalk "尤尔根怎么还不从房间里出来……", "单身女子#ep16wig", bc_area;
 	}
 	else {
 		emotion ET_ANGER;
 		mes "是谁？是谁假装跟卡特琳亲近、跟着她混进去的？站出来！我们明明约好不抢先的！";
-		npctalk "不是我。别那样看着我。", "Womenfolk#ep16wig", bc_area;
+		npctalk "不是我。别那样看着我。", "妇女#ep16wig", bc_area;
 		sleep2 1000;
-		npctalk "天哪！是谁干了这种事？", "Gyusoo#ep16wig", bc_area;
+		npctalk "天哪！是谁干了这种事？", "圭秀#ep16wig", bc_area;
 		sleep2 1000;
-		npctalk "卡特琳人太好了。", "Bachelorette#ep16wig", bc_area;
+		npctalk "卡特琳人太好了。", "单身女子#ep16wig", bc_area;
 	}
 	close2;
 	if (achievementinfo(110001, ACHIEVEINFO_COUNT3) == 0)
@@ -9867,24 +9867,24 @@ prt_cas_q,148,117,7	script	Miss#ep16wig	4_F_02,{
 	end;
 }
 
-prt_cas_q,148,122,4	script	Womenfolk#ep16wig	1_F_03,{
+prt_cas_q,148,122,4	script	妇女#ep16wig	1_F_03,{
 	mes "[妇女]";
 	if (rand(2) == 0) {
 		emotion ET_FRET;
 		mes "尤尔根是我们大家的！谁也不能独占他！我绝不允许！";
-		npctalk "对！他属于我们所有人！", "Miss#ep16wig", bc_area;
+		npctalk "对！他属于我们所有人！", "小姐#ep16wig", bc_area;
 		sleep2 1000;
-		npctalk "我也不允许！", "Gyusoo#ep16wig", bc_area;
+		npctalk "我也不允许！", "圭秀#ep16wig", bc_area;
 		sleep2 1000;
-		npctalk "哎，我可不同意你们。我很大方的。", "Bachelorette#ep16wig", bc_area;
+		npctalk "哎，我可不同意你们。我很大方的。", "单身女子#ep16wig", bc_area;
 	}
 	else {
 		mes "我绝不让任何人独占尤尔根！上天或许会原谅，但我不会！";
-		npctalk "我也不会！", "Miss#ep16wig", bc_area;
+		npctalk "我也不会！", "小姐#ep16wig", bc_area;
 		sleep2 1000;
-		npctalk "要是那个独占他的人是我，那我就允许。", "Gyusoo#ep16wig", bc_area;
+		npctalk "要是那个独占他的人是我，那我就允许。", "圭秀#ep16wig", bc_area;
 		sleep2 1000;
-		npctalk "至少上天会原谅，这倒让人安心。", "Bachelorette#ep16wig", bc_area;
+		npctalk "至少上天会原谅，这倒让人安心。", "单身女子#ep16wig", bc_area;
 	}
 	close2;
 	if (achievementinfo(110001, ACHIEVEINFO_COUNT2) == 0)
@@ -9892,25 +9892,25 @@ prt_cas_q,148,122,4	script	Womenfolk#ep16wig	1_F_03,{
 	end;
 }
 
-prt_cas_q,150,122,4	script	Gyusoo#ep16wig	1_F_LIBRARYGIRL,{
+prt_cas_q,150,122,4	script	圭秀#ep16wig	1_F_LIBRARYGIRL,{
 	mes "[圭秀]";
 	if (rand(2) == 0) {
 		mes "拿号码牌也没用……等轮到我实在太难了。";
-		npctalk "我们在这儿喝杯茶吧。", "Miss#ep16wig", bc_area;
+		npctalk "我们在这儿喝杯茶吧。", "小姐#ep16wig", bc_area;
 		sleep2 1000;
-		npctalk "在他出来之前，我先小睡一会儿。", "Womenfolk#ep16wig", bc_area;
+		npctalk "在他出来之前，我先小睡一会儿。", "妇女#ep16wig", bc_area;
 		sleep2 1000;
-		npctalk "等等，你听到里面有什么动静吗？", "Bachelorette#ep16wig", bc_area;
+		npctalk "等等，你听到里面有什么动静吗？", "单身女子#ep16wig", bc_area;
 	}
 	else {
 		emotion ET_BIGTHROB;
 		mes "尤尔根什么时候出来？";
 		mes "什么时候才轮到我见他？";
-		npctalk "我前面还有22个人。", "Miss#ep16wig", bc_area;
+		npctalk "我前面还有22个人。", "小姐#ep16wig", bc_area;
 		sleep2 1000;
-		npctalk "他今天会出来吗？", "Womenfolk#ep16wig", bc_area;
+		npctalk "他今天会出来吗？", "妇女#ep16wig", bc_area;
 		sleep2 1000;
-		npctalk "如果你是第23位，今天可能见不到他了。", "Bachelorette#ep16wig", bc_area;
+		npctalk "如果你是第23位，今天可能见不到他了。", "单身女子#ep16wig", bc_area;
 	}
 	close2;
 	if (achievementinfo(110001, ACHIEVEINFO_COUNT1) == 0)
@@ -9918,23 +9918,23 @@ prt_cas_q,150,122,4	script	Gyusoo#ep16wig	1_F_LIBRARYGIRL,{
 	end;
 }
 
-prt_cas_q,150,117,7	script	Bachelorette#ep16wig	4_F_01,{
+prt_cas_q,150,117,7	script	单身女子#ep16wig	4_F_01,{
 	mes "[单身女郎]";
 	if (rand(2) == 0) {
 		mes "喂！新手就别这么天真，还想往这里挤！";
-		npctalk "对！脑子慢就安静点！", "Miss#ep16wig", bc_area;
+		npctalk "对！脑子慢就安静点！", "小姐#ep16wig", bc_area;
 		sleep2 1000;
-		npctalk "你至少得花三个月摸清状况。", "Gyusoo#ep16wig", bc_area;
+		npctalk "你至少得花三个月摸清状况。", "圭秀#ep16wig", bc_area;
 		sleep2 1000;
-		npctalk "大家都太好心了，才会放过这种事。", "Womenfolk#ep16wig", bc_area;
+		npctalk "大家都太好心了，才会放过这种事。", "妇女#ep16wig", bc_area;
 	}
 	else {
 		emotion ET_ANGER;
 		mes "[单身女郎]";
 		mes "喂，别推我！排队去。你不是第一次来见尤尔根吧？";
-		npctalk "新手就得先过入门这一关！", "Miss#ep16wig", bc_area;
+		npctalk "新手就得先过入门这一关！", "小姐#ep16wig", bc_area;
 		sleep2 1000;
-		npctalk "排队不是常识吗？", "Gyusoo#ep16wig", bc_area;
+		npctalk "排队不是常识吗？", "圭秀#ep16wig", bc_area;
 		sleep2 1000;
 		npctalk "维持队伍的人跑哪去了？";
 	}
@@ -9944,7 +9944,7 @@ prt_cas_q,150,117,7	script	Bachelorette#ep16wig	4_F_01,{
 	end;
 }
 
-prt_cas_q,153,123,3	script	Strong Guards#ep16wig01	8W_SOLDIER,{
+prt_cas_q,153,123,3	script	强壮守卫#ep16wig01	8W_SOLDIER,{
 	switch( rand(1,3) ) {
 	case 1:
 		emotion 25;
@@ -9974,7 +9974,7 @@ prt_cas_q,153,123,3	script	Strong Guards#ep16wig01	8W_SOLDIER,{
 	}
 }
 
-prt_cas_q,153,116,1	script	Strong Guards#ep16wig02	8W_SOLDIER,{
+prt_cas_q,153,116,1	script	强壮守卫#ep16wig02	8W_SOLDIER,{
 	switch( rand(1,3) ) {
 	case 1:
 		emotion 36;
@@ -11097,12 +11097,12 @@ prt_cas_q,95,9,5	script	尤尔根·维格纳#ep16wig	4_M_4THPRIN1,{
 			mes "多亏你的帮助，我们从来没像现在这么好过。";
 			mes "我和姐姐说的话比以前多多了，而且……";
 			next;
-			cloakoffnpcself( "Maid#ep16wig01" );
+			cloakoffnpcself( "女仆#ep16wig01" );
 			cutin "",255;
 			mes "[女仆]";
 			mes "打扰了。";
 			next;
-			emotion ET_HUK, getnpcid(0, "Maid#ep16wig01");
+			emotion ET_HUK, getnpcid(0, "女仆#ep16wig01");
 			mes "[女仆]";
 			mes "抱歉。我以为没人在。我只是想打扫房间，真的很抱歉。我稍后再来。";
 			next;
@@ -11148,7 +11148,7 @@ prt_cas_q,95,9,5	script	尤尔根·维格纳#ep16wig	4_M_4THPRIN1,{
 			mes "那么，我该走了。";
 			mes "反正我本来就该在没人的时候打扫房间。请见谅。";
 			next;
-			cloakonnpcself( "Maid#ep16wig01" );
+			cloakonnpcself( "女仆#ep16wig01" );
 			cutin "16jur_sim",0;
 			mes "[尤尔根]";
 			mes "你不必……唉，她走了……";
@@ -11909,9 +11909,9 @@ OnInit:
 	cloakonnpc();
 	end;
 }
-prt_cas_q,93,10,4	duplicate(尤尔根·维格纳#ep16wig00)	Maid#ep16wig01	1_F_04
+prt_cas_q,93,10,4	duplicate(尤尔根·维格纳#ep16wig00)	女仆#ep16wig01	1_F_04
 
-prt_cas_q,95,11,4	script	Womenfolk#ep16wig01	1_F_03,{
+prt_cas_q,95,11,4	script	妇女#ep16wig01	1_F_03,{
 	mes "[妇女]";
 	mes "尤尔根，你是我的！";
 	close2;
@@ -11920,43 +11920,43 @@ prt_cas_q,95,11,4	script	Womenfolk#ep16wig01	1_F_03,{
 	end;
 
 OnTimer600000:
-	enablenpc "Womenfolk#ep16wig01";
-	npctalk "天哪！尤尔根！我的王子！我爱你！请看这边！", "Womenfolk#ep16wig01";
-	emotion ET_CHUP, getnpcid(0, "Womenfolk#ep16wig01");
+	enablenpc "妇女#ep16wig01";
+	npctalk "天哪！尤尔根！我的王子！我爱你！请看这边！", "妇女#ep16wig01";
+	emotion ET_CHUP, getnpcid(0, "妇女#ep16wig01");
 	sleep 2000;
 	npctalk "你是……我好像见过你……嗯……你是来找我的吗？", "尤尔根·维格纳#ep16wig";
 	sleep 2000;
-	npctalk "亲爱的尤尔根！请和我在一起！永远！", "Womenfolk#ep16wig01";
-	specialeffect EF_HEARTCASTING,AREA,"Womenfolk#ep16wig01";
+	npctalk "亲爱的尤尔根！请和我在一起！永远！", "妇女#ep16wig01";
+	specialeffect EF_HEARTCASTING,AREA,"妇女#ep16wig01";
 	sleep 2000;
 	npctalk "这有点困难……", "尤尔根·维格纳#ep16wig";
 	sleep 2000;
-	enablenpc "Strong Guards#ep16wig03";
-	enablenpc "Strong Guards#ep16wig04";
-	npctalk "天哪！你怎么又进来了？", "Strong Guards#ep16wig03";
+	enablenpc "强壮守卫#ep16wig03";
+	enablenpc "强壮守卫#ep16wig04";
+	npctalk "天哪！你怎么又进来了？", "强壮守卫#ep16wig03";
 	sleep 2000;
-	npctalk "她们总是从守卫那里溜进来。加强警戒也没用！", "Strong Guards#ep16wig04";
+	npctalk "她们总是从守卫那里溜进来。加强警戒也没用！", "强壮守卫#ep16wig04";
 	sleep 2000;
-	npctalk "把她赶出去！", "Strong Guards#ep16wig03";
+	npctalk "把她赶出去！", "强壮守卫#ep16wig03";
 	sleep 2000;
-	npctalk "天哪！尤尔根！我爱你！", "Womenfolk#ep16wig01";
-	disablenpc "Womenfolk#ep16wig01";
-	disablenpc "Strong Guards#ep16wig03";
-	disablenpc "Strong Guards#ep16wig04";
+	npctalk "天哪！尤尔根！我爱你！", "妇女#ep16wig01";
+	disablenpc "妇女#ep16wig01";
+	disablenpc "强壮守卫#ep16wig03";
+	disablenpc "强壮守卫#ep16wig04";
 	initnpctimer;
 	end;
 OnInit:
 	initnpctimer;
-	disablenpc "Womenfolk#ep16wig01";
-	disablenpc "Strong Guards#ep16wig03";
-	disablenpc "Strong Guards#ep16wig04";
+	disablenpc "妇女#ep16wig01";
+	disablenpc "强壮守卫#ep16wig03";
+	disablenpc "强壮守卫#ep16wig04";
 	end;
 }
 
-prt_cas_q,94,12,4	script	Strong Guards#ep16wig03	8W_SOLDIER,{ end; }
-prt_cas_q,95,12,4	script	Strong Guards#ep16wig04	8W_SOLDIER,{ end; }
+prt_cas_q,94,12,4	script	强壮守卫#ep16wig03	8W_SOLDIER,{ end; }
+prt_cas_q,95,12,4	script	强壮守卫#ep16wig04	8W_SOLDIER,{ end; }
 
-prt_cas_q,98,23,1	script	Bachelor#ep16wig01	1_M_ORIENT01,{
+prt_cas_q,98,23,1	script	单身男子#ep16wig01	1_M_ORIENT01,{
 	mes "[单身汉]";
 	mes "我还没和尤尔根握手！哦，太热了！";
 	close2;
@@ -11965,44 +11965,44 @@ prt_cas_q,98,23,1	script	Bachelor#ep16wig01	1_M_ORIENT01,{
 	end;
 
 OnTimer480000:
-	enablenpc "Bachelor#ep16wig01";
-	npctalk "尤尔根，啊啊！好热！", "Bachelor#ep16wig01";
+	enablenpc "单身男子#ep16wig01";
+	npctalk "尤尔根，啊啊！好热！", "单身男子#ep16wig01";
 	sleep 2000;
-	npctalk "我为什么会掉在这种地方？", "Bachelor#ep16wig01";
+	npctalk "我为什么会掉在这种地方？", "单身男子#ep16wig01";
 	sleep 2000;
-	npctalk "那个女人一定给了我错误的坐标！", "Bachelor#ep16wig01";
+	npctalk "那个女人一定给了我错误的坐标！", "单身男子#ep16wig01";
 	sleep 2000;
-	npctalk "哦，好热！", "Bachelor#ep16wig01";
+	npctalk "哦，好热！", "单身男子#ep16wig01";
 	npctalk "唉，你也不必用整个身体向我展示炽热的爱吧。", "尤尔根·维格纳#ep16wig";
 	sleep 2000;
-	npctalk "哦，好热！尤尔根，救救我……啊啊！", "Bachelor#ep16wig01";
+	npctalk "哦，好热！尤尔根，救救我……啊啊！", "单身男子#ep16wig01";
 	sleep 3000;
-	enablenpc "Strong Guards#ep16wig05";
-	enablenpc "Strong Guards#ep16wig06";
-	npctalk "守卫为您效劳！", "Strong Guards#ep16wig05";
+	enablenpc "强壮守卫#ep16wig05";
+	enablenpc "强壮守卫#ep16wig06";
+	npctalk "守卫为您效劳！", "强壮守卫#ep16wig05";
 	sleep 2000;
-	npctalk "这个人为什么在这里？", "Strong Guards#ep16wig06";
+	npctalk "这个人为什么在这里？", "强壮守卫#ep16wig06";
 	sleep 2000;
-	npctalk "世上真是无奇不有。", "Strong Guards#ep16wig05";
+	npctalk "世上真是无奇不有。", "强壮守卫#ep16wig05";
 	sleep 2000;
-	npctalk "把她赶出去！", "Strong Guards#ep16wig06";
+	npctalk "把她赶出去！", "强壮守卫#ep16wig06";
 	sleep 2000;
-	npctalk "啊啊！尤尔根，我的王子！", "Bachelor#ep16wig01";
-	disablenpc "Bachelor#ep16wig01";
-	disablenpc "Strong Guards#ep16wig05";
-	disablenpc "Strong Guards#ep16wig06";
+	npctalk "啊啊！尤尔根，我的王子！", "单身男子#ep16wig01";
+	disablenpc "单身男子#ep16wig01";
+	disablenpc "强壮守卫#ep16wig05";
+	disablenpc "强壮守卫#ep16wig06";
 	initnpctimer;
 	end;
 OnInit:
 	initnpctimer;
-	disablenpc "Bachelor#ep16wig01";
-	disablenpc "Strong Guards#ep16wig05";
-	disablenpc "Strong Guards#ep16wig06";
+	disablenpc "单身男子#ep16wig01";
+	disablenpc "强壮守卫#ep16wig05";
+	disablenpc "强壮守卫#ep16wig06";
 	end;
 }
 
-prt_cas_q,98,20,7	script	Strong Guards#ep16wig05	8W_SOLDIER,{ end; }
-prt_cas_q,96,22,7	script	Strong Guards#ep16wig06	8W_SOLDIER,{ end; }
+prt_cas_q,98,20,7	script	强壮守卫#ep16wig05	8W_SOLDIER,{ end; }
+prt_cas_q,96,22,7	script	强壮守卫#ep16wig06	8W_SOLDIER,{ end; }
 
 
 prt_cas_q,74,21,5	script	#ep16wig003	HIDDEN_NPC,5,5,{
@@ -12061,7 +12061,7 @@ OnTouch:
 	end;
 }
 
-prt_cas,322,216,5	script	Maid#ep16wig02	1_F_04,{
+prt_cas,322,216,5	script	女仆#ep16wig02	1_F_04,{
 	if (checkweight(1304,3) == 0) {
 		mes "[女仆]";
 		mes "哦，你不该带这么多东西进来。";
@@ -12575,7 +12575,7 @@ prt_cas,322,216,5	script	Maid#ep16wig02	1_F_04,{
 	close;
 }
 
-prt_cas,339,212,5	script	Dark and Damp Wall#ep16wig	HIDDEN_NPC,5,5,{
+prt_cas,339,212,5	script	阴暗潮湿的墙#ep16wig	HIDDEN_NPC,5,5,{
 	callsub S_Talk;
 
 S_Talk:
@@ -12673,7 +12673,7 @@ OnTouch:
 	end;
 }
 
-prt_cas,339,198,5	script	Sticky Wall#ep16wig	HIDDEN_NPC,5,5,{
+prt_cas,339,198,5	script	黏糊糊的墙#ep16wig	HIDDEN_NPC,5,5,{
 	callsub S_Talk;
 
 S_Talk:
@@ -12778,7 +12778,7 @@ OnTouch:
 	end;
 }
 
-prt_cas,309,215,5	script	Pitch-black Floor#ep16wig	HIDDEN_NPC,5,5,{
+prt_cas,309,215,5	script	漆黑的地板#ep16wig	HIDDEN_NPC,5,5,{
 	callsub S_Talk;
 
 S_Talk:
@@ -12894,7 +12894,7 @@ OnTouch:
 	end;
 }
 
-prontera,68,68,5	script	Furniture Deliveryman#ep16wig	1_M_HOF,{
+prontera,68,68,5	script	家具送货员#ep16wig	1_M_HOF,{
 	if (ep16_wig == 12) {
 		.@name$ = strcharinfo(0);
 		mes "[家具送货员]";
@@ -13093,7 +13093,7 @@ prontera,68,68,5	script	Furniture Deliveryman#ep16wig	1_M_HOF,{
 
 // Others npcs
 // Banquet upper right
-prt_cas,165,245,0	script	Investigator Ryosun#ep16	4_M_ALCHE_A,{
+prt_cas,165,245,0	script	调查员廖森#ep16	4_M_ALCHE_A,{
 	emotion ET_CRY;
 	mes "[廖森]";
 	mes "我终于拿到没人碰过的草莓蛋糕了。";
@@ -13110,36 +13110,36 @@ prt_cas,93,212,0	script	#vip_alimi	HIDDEN_WARP_NPC,1,1,{
 OnTouch:
 	switch( BaseClass ) {
 	case JOB_SWORDMAN:
-		npctalk "守护之坚剑，" + strcharinfo(0) + "。", "Chamberlain#vip_alimi", bc_area;
+		npctalk "守护之坚剑，" + strcharinfo(0) + "。", "侍从长#vip_alimi", bc_area;
 		end;
 	case JOB_MAGE:
-		npctalk "真理探寻者，" + strcharinfo(0) + "。", "Chamberlain#vip_alimi", bc_area;
+		npctalk "真理探寻者，" + strcharinfo(0) + "。", "侍从长#vip_alimi", bc_area;
 		end;
 	case JOB_ARCHER:
 		if (BaseJob == Job_Hunter)
-			npctalk "穿风之箭，" + strcharinfo(0) + "。", "Chamberlain#vip_alimi", bc_area;
+			npctalk "穿风之箭，" + strcharinfo(0) + "。", "侍从长#vip_alimi", bc_area;
 		else
-			npctalk "快乐传道士，" + strcharinfo(0) + "。", "Chamberlain#vip_alimi", bc_area;
+			npctalk "快乐传道士，" + strcharinfo(0) + "。", "侍从长#vip_alimi", bc_area;
 		end;
 	case JOB_ACOLYTE:
-		npctalk "神之完美代理人，" + strcharinfo(0) + "。", "Chamberlain#vip_alimi", bc_area;
+		npctalk "神之完美代理人，" + strcharinfo(0) + "。", "侍从长#vip_alimi", bc_area;
 		end;
 	case JOB_MERCHANT:
-		npctalk "黄金无形之手，" + strcharinfo(0) + "。", "Chamberlain#vip_alimi", bc_area;
+		npctalk "黄金无形之手，" + strcharinfo(0) + "。", "侍从长#vip_alimi", bc_area;
 		end;
 	case JOB_THIEF:
-		npctalk "黑暗的静谧统治者，" + strcharinfo(0) + "。", "Chamberlain#vip_alimi", bc_area;
+		npctalk "黑暗的静谧统治者，" + strcharinfo(0) + "。", "侍从长#vip_alimi", bc_area;
 		end;
 	case JOB_NOVICE:
-		npctalk "铭记第一步者，" + strcharinfo(0) + "。", "Chamberlain#vip_alimi", bc_area;
+		npctalk "铭记第一步者，" + strcharinfo(0) + "。", "侍从长#vip_alimi", bc_area;
 		break;
 	default:
-		npctalk "不朽信仰的誓约者，" + strcharinfo(0) + "。", "Chamberlain#vip_alimi", bc_area;
+		npctalk "不朽信仰的誓约者，" + strcharinfo(0) + "。", "侍从长#vip_alimi", bc_area;
 		end;
 	}
 }
 
-prt_cas,97,216,2	script	Chamberlain#vip_alimi	4_M_RUSMAN2,{
+prt_cas,97,216,2	script	侍从长#vip_alimi	4_M_RUSMAN2,{
 	mes "[贝尔]";
 	mes "玩得开心吗？";
 	mes "这是王宫久违的大型活动，我们投入了很多心力。";
@@ -13147,67 +13147,67 @@ prt_cas,97,216,2	script	Chamberlain#vip_alimi	4_M_RUSMAN2,{
 	close;
 }
 
-prt_cas,104,231,3	script	Banquet Hall Guest#ep16wig01	4_F_CHNDRESS3,{
+prt_cas,104,231,3	script	宴会厅客人#ep16wig01	4_F_CHNDRESS3,{
 	mes "[宴会厅宾客]";
 	mes "参加宴会总是令人愉快。旅行和了解不同文化总是很有趣。再加上美妙的音乐和美食，就更好了。";
 	close;
 }
 
-prt_cas,103,232,3	script	Banquet Hall Guest#ep16wig02	4_M_CHNOLD,{
+prt_cas,103,232,3	script	宴会厅客人#ep16wig02	4_M_CHNOLD,{
 	mes "[宴会厅宾客]";
 	mes "参加宴会总是很累。我旅途劳顿还没恢复，和人应酬实在太痛苦了……唉……";
 	close;
 }
 
-prt_cas,81,235,3	script	Banquet Hall Guest#ep16wig03	4_F_BRZ_WOMAN,{
+prt_cas,81,235,3	script	宴会厅客人#ep16wig03	4_F_BRZ_WOMAN,{
 	mes "[宴会厅宾客]";
 	mes "卢恩-米德加尔特王宫真是又大又华丽，还带着几分异国风情。一路走来不容易，但我很高兴能来到这里。";
 	close;
 }
 
-prt_cas,79,219,7	script	Banquet Hall Guest#ep16wig04	4_F_MALAYA,{
+prt_cas,79,219,7	script	宴会厅客人#ep16wig04	4_F_MALAYA,{
 	mes "[宴会厅宾客]";
 	mes "哦，你不就是那位拯救了世界的冒险者吗？请哪天来马拉亚港看看吧。大家都会欢迎你的！你的故事连这里这么远的地方都传开了！";
 	close;
 }
 
-prt_cas,88,246,7	script	Banquet Hall Guest#ep16wig05	4_F_THAIGIRL,{
+prt_cas,88,246,7	script	宴会厅客人#ep16wig05	4_F_THAIGIRL,{
 	mes "[宴会厅宾客]";
 	mes "乐队演奏的音乐让我好感动。光是来听这音乐就值了。";
 	close;
 }
 
-prt_cas,114,226,5	script	Banquet Hall Guest#ep16wig06	4_M_DEWWOMAN,{
+prt_cas,114,226,5	script	宴会厅客人#ep16wig06	4_M_DEWWOMAN,{
 	mes "[宴会厅宾客]";
 	mes "等等，我一直在看这里的花。它们在眨眼吗？好神奇！";
 	close;
 }
 
-prt_cas,87,231,5	script	Banquet Hall Guest#ep16wig07	4_M_TWTEAMAN,{
+prt_cas,87,231,5	script	宴会厅客人#ep16wig07	4_M_TWTEAMAN,{
 	mes "[宴会厅宾客]";
 	mes "我很久以前来过卢恩-米德加尔特王宫。从那以后变化很大。它变得更加华丽宏伟，我真的很喜欢在这里参观。";
 	close;
 }
 
-prt_cas,86,251,5	script	Banquet Hall Guest#ep16wig08	4_M_RUSMAN1,{
+prt_cas,86,251,5	script	宴会厅客人#ep16wig08	4_M_RUSMAN1,{
 	mes "[宴会厅宾客]";
 	mes "这里人真多，我头都晕了。不过，我还是喜欢这种热闹的气氛。";
 	close;
 }
 
-prt_cas,72,227,5	script	Banquet Hall Guest#1	4_M_JPNOJI,{
+prt_cas,72,227,5	script	宴会厅客人#1	4_M_JPNOJI,{
 	mes "[宴会厅宾客]";
 	mes "我从天津町来普隆德拉参加宴会。这里和天津町的感觉完全不同。哈哈哈。";
 	close;
 }
 
-prt_cas,71,227,5	script	Banquet Hall Guest#2	4_M_JPN,{
+prt_cas,71,227,5	script	宴会厅客人#2	4_M_JPN,{
 	mes "[宴会厅宾客]";
 	mes "爷爷，别太勉强自己。";
 	close;
 }
 
-prt_cas,100,100,3	script	Banquet Hall Guest#3	4_M_BOSSCAT,{
+prt_cas,100,100,3	script	宴会厅客人#3	4_M_BOSSCAT,{
 	mes "[宴会厅宾客]";
 	mes "卢恩-米德加尔特所有掌管市场的贵族都在这里。我们猫手服务公司可不能错过这个机会。";
 	next;
@@ -13216,7 +13216,7 @@ prt_cas,100,100,3	script	Banquet Hall Guest#3	4_M_BOSSCAT,{
 	close;
 }
 
-prt_cas,89,250,5	script	Banquet Hall Guest#5	4_F_KHELLY,{
+prt_cas,89,250,5	script	宴会厅客人#5	4_F_KHELLY,{
 	mes "[宴会厅宾客]";
 	mes "我是乐队奥林特的老粉丝了。";
 	mes "为了不错过他的任何一场演出，我花了很多钱和时间。";
@@ -13227,14 +13227,14 @@ prt_cas,89,250,5	script	Banquet Hall Guest#5	4_F_KHELLY,{
 	close;
 }
 
-prt_cas,89,244,7	script	Banquet Hall Guest#6	4_M_NOV_HUNT,{
+prt_cas,89,244,7	script	宴会厅客人#6	4_M_NOV_HUNT,{
 	mes "[宴会厅宾客]";
 	mes "乐队的双胞胎姐妹性格完全不同，却很擅长互相模仿。";
 	mes "当她们假扮成同一个人时，真的像伪装者一样。";
 	close;
 }
 
-prt_cas,91,237,3	script	Ekinasia#ep16_etc01	1_F_SIGNZISK,{
+prt_cas,91,237,3	script	艾奇娜西亚#ep16_etc01	1_F_SIGNZISK,{
 	if (mao_morocc2 > 99) {
 		mes "[艾奇娜西亚]";
 		mes "你也被邀请来参加宴会了。";
@@ -13255,25 +13255,25 @@ prt_cas,91,237,3	script	Ekinasia#ep16_etc01	1_F_SIGNZISK,{
 		mes "[艾奇娜西亚]";
 		mes "好久没办宴会了，我们好好享受吧。";
 		close2;
-		npctalk "好，好！", "Lin#ep16_etc02", bc_self;
+		npctalk "好，好！", "琳#ep16_etc02", bc_self;
 		end;
 	}
-	npctalk "好久没举办这样的王室宴会了。", "Ekinasia#ep16_etc01", bc_self;
+	npctalk "好久没举办这样的王室宴会了。", "艾奇娜西亚#ep16_etc01", bc_self;
 	setpcblock PCBLOCK_NPC, true;
 	sleep2 3000;
 	setpcblock PCBLOCK_NPC, false;
-	npctalk "我们偶尔也需要这样放松一下。", "Ekinasia#ep16_etc01", bc_self;
+	npctalk "我们偶尔也需要这样放松一下。", "艾奇娜西亚#ep16_etc01", bc_self;
 	end;
 }
 
-prt_cas,89,238,5	script	Lin#ep16_etc02	4_F_ACROSS,{
+prt_cas,89,238,5	script	琳#ep16_etc02	4_F_ACROSS,{
 	mes "[琳]";
 	mes "哼，贵族们就是这样消磨时间的！";
 	mes "哈哈，看看哪位女士的礼服最漂亮。";
 	close;
 }
 
-prt_cas,78,255,3	script	Mayssel#ep16_etc05	4_F_MAYSEL,{
+prt_cas,78,255,3	script	梅塞尔#ep16_etc05	4_F_MAYSEL,{
 	if ((eaclass()&EAJ_THIRDMASK) == EAJ_GUILLOTINE_CROSS) {
 		setpcblock PCBLOCK_NPC, true;
 		cutin "gc_mayssel01.bmp",1;
@@ -13316,7 +13316,7 @@ prt_cas,78,255,3	script	Mayssel#ep16_etc05	4_F_MAYSEL,{
 	close3;
 }
 
-prt_cas,78,252,2	script	Verkhasel#ep_etc06	4_M_GUILLOTINE,{
+prt_cas,78,252,2	script	维尔卡塞尔#ep_etc06	4_M_GUILLOTINE,{
 	if ((eaclass()&EAJ_THIRDMASK) == EAJ_GUILLOTINE_CROSS) {
 		cutin "gc_verkhasel01.bmp",2;
 		mes "[维尔卡塞尔]";
@@ -13335,17 +13335,17 @@ prt_cas,78,252,2	script	Verkhasel#ep_etc06	4_M_GUILLOTINE,{
 		close2;
 		cutin "",255;
 	}
-	npctalk "我想回去了。", "Verkhasel#ep_etc06", bc_self;
+	npctalk "我想回去了。", "维尔卡塞尔#ep_etc06", bc_self;
 	setpcblock PCBLOCK_NPC, true;
 	sleep2 3000;
-	npctalk "……不行。", "Mayssel#ep16_etc05", bc_self;
+	npctalk "……不行。", "梅塞尔#ep16_etc05", bc_self;
 	sleep2 3000;
 	setpcblock PCBLOCK_NPC, false;
-	npctalk "你说得很清楚，哈哈哈哈！", "Vicente#ep16_etc07", bc_self;
+	npctalk "你说得很清楚，哈哈哈哈！", "比森特#ep16_etc07", bc_self;
 	end;
 }
 
-prt_cas,76,254,5	script	Vicente#ep16_etc07	4_M_HUMAN_02,{
+prt_cas,76,254,5	script	比森特#ep16_etc07	4_M_HUMAN_02,{
 	if ((eaclass()&EAJ_THIRDMASK) == EAJ_SHADOW_CHASER) {
 		cutin "sc_vicente01.bmp",2;
 		mes "[维森特]";
@@ -13374,54 +13374,54 @@ prt_cas,76,254,5	script	Vicente#ep16_etc07	4_M_HUMAN_02,{
 	close3;
 }
 
-prt_cas,113,243,3	script	Banquet Hall Aristocrat#1	4_F_01,{
+prt_cas,113,243,3	script	宴会厅贵族#1	4_F_01,{
 	mes "[宴会厅贵族]";
 	mes "我很喜欢宴会。";
 	mes "昏昏欲睡的音乐、低声交谈的人们、端着茶点的侍从。我觉得我天生就是来享受这些的。";
 	close;
 }
 
-prt_cas,70,239,5	script	Banquet Hall Aristocrat#2	4_M_04,{
+prt_cas,70,239,5	script	宴会厅贵族#2	4_M_04,{
 	mes "[宴会厅贵族]";
 	mes "我知道这场宴会是为别人办的。不过，这仍是我结识能共度一生之人的好机会。";
 	close;
 }
 
-prt_cas,73,232,5	script	Banquet Hall Aristocrat#3	4_M_RUSMAN1,{
+prt_cas,73,232,5	script	宴会厅贵族#3	4_M_RUSMAN1,{
 	mes "[宴会厅贵族]";
 	mes "别人好像都很喜欢宴会，我却不喜欢。我是被父母逼来的。我现在真想回家休息。";
 	close;
 }
 
-prt_cas,99,247,3	script	Banquet Hall Aristocrat#4	4_M_MAYOR,{
+prt_cas,99,247,3	script	宴会厅贵族#4	4_M_MAYOR,{
 	mes "[宴会厅贵族]";
 	mes "这支乐队相当不错。";
 	mes "我想请他们到王室别墅为我的派对演奏。";
 	close;
 }
 
-prt_cas,93,248,5	script	Court Musician#3	4_F_WANDERER,{
+prt_cas,93,248,5	script	宫廷乐师#3	4_F_WANDERER,{
 	emotion ET_SMILE;
 	mes "[宫廷乐师艾莉]";
 	mes "德维特！你看那边那些贵族，是不是很美？";
 	next;
-	emotion ET_OK, getnpcid(0, "Court Musician#4");
+	emotion ET_OK, getnpcid(0, "宫廷乐师#4");
 	emotion ET_SHY;
 	mes "[宫廷乐师德维特]";
 	mes "嗯，是啊。不过我觉得你站在那儿会更合适。";
 	mes "总有一天，我会在你身边弹吉他，你穿着蓝色礼服唱歌跳舞。";
 	next;
-	emotion ET_DELIGHT, getnpcid(0, "Court Musician#occi");
+	emotion ET_DELIGHT, getnpcid(0, "宫廷乐师#occi");
 	mes "[宫廷乐师奥琪]";
 	mes "哈哈，那个穿蓝色礼服的女人，说不定就是我！";
 	next;
 	mes "[宫廷乐师德维特]";
 	mes "奥琪，你要是以为我分不清你们双胞胎姐妹，那就错了。我从你们的脚步和呼吸声就能分辨出不同。";
-	emotion ET_HNG, getnpcid(0, "Court Musician#4");
+	emotion ET_HNG, getnpcid(0, "宫廷乐师#4");
 	close;
 }
 
-prt_cas,91,248,5	script	Court Musician#4	4_M_MINSTREL,{
+prt_cas,91,248,5	script	宫廷乐师#4	4_M_MINSTREL,{
 	mes "[宫廷乐师德维特]";
 	mes "我第一次见到奥林特时，觉得他冷漠又难以接近。后来才发现，他是个异常专注、占有欲极强的人。";
 	next;
@@ -13437,12 +13437,12 @@ prt_cas,91,248,5	script	Court Musician#4	4_M_MINSTREL,{
 	close;
 }
 
-prt_cas,95,248,5	script	Court Musician#occi	4_F_WANDERER,{
+prt_cas,95,248,5	script	宫廷乐师#occi	4_F_WANDERER,{
 	emotion ET_DELIGHT;
 	mes "[宫廷乐师奥琪]";
 	mes "我们一直梦想着在这样的地方合奏。对吧，奥林特？";
 	next;
-	emotion ET_THINK, getnpcid(0, "Court Musician#orint");
+	emotion ET_THINK, getnpcid(0, "宫廷乐师#orint");
 	mes "[宫廷乐师奥林特]";
 	mes "工作时禁止闲聊。";
 	next;
@@ -13452,12 +13452,12 @@ prt_cas,95,248,5	script	Court Musician#occi	4_F_WANDERER,{
 	close;
 }
 
-prt_cas,98,248,5	script	Cat#ep16bgm	4_CAT,{
+prt_cas,98,248,5	script	猫#ep16bgm	4_CAT,{
 	mes "- 那只看起来很懒的猫坐在乐师脚边。它对你毫无兴趣。 -";
 	close;
 }
 
-prt_cas,98,231,5	script	Hiba Ajif#ep16	4_M_REDSWORD,{
+prt_cas,98,231,5	script	希巴·阿吉夫#ep16	4_M_REDSWORD,{
 	mes "[希巴·阿吉夫]";
 	mes "既然阿什巴库姆的事已经解决了，我只想回家睡一觉。可他们把我留在这里。";
 	next;
@@ -13473,20 +13473,20 @@ prt_cas,98,231,5	script	Hiba Ajif#ep16	4_M_REDSWORD,{
 	close;
 }
 
-prt_cas,100,231,3	script	Avidal the Advisor#ep16	4_M_SAGE_C,{
+prt_cas,100,231,3	script	顾问阿维达尔#ep16	4_M_SAGE_C,{
 	mes "[顾问阿维达尔]";
 	mes "我在两个种族之间的紧张关系中耗费了太多时间。能待在这样快乐轻松的地方，简直像做梦一样。这一定就是所谓的和平吧？";
 	close;
 }
 
-prt_cas,97,229,7	script	Instructor Igrid#ep16	4_M_CRU,{
+prt_cas,97,229,7	script	教官伊格丽德#ep16	4_M_CRU,{
 	mes "[教官伊格丽德]";
 	mes "如果他们真想为我们做点什么，就该让我们休息。";
 	mes "只有不用在外工作的人才会喜欢这种活动。确实如此。";
 	close;
 }
 
-prt_cas,106,258,5	script	Bruno#ep16_1	4_F_SURA,{
+prt_cas,106,258,5	script	布鲁诺#ep16_1	4_F_SURA,{
 	mes "[布鲁诺]";
 	mes "唉……我从没来过这种地方……";
 	mes "我好紧张……我不该来的……";
@@ -13500,7 +13500,7 @@ prt_cas,106,258,5	script	Bruno#ep16_1	4_F_SURA,{
 	close3;
 }
 
-prt_cas,89,257,3	script	Karian#ep16_1	4_M_MINSTREL1,{
+prt_cas,89,257,3	script	卡里安#ep16_1	4_M_MINSTREL1,{
 	mes "[卡里安]";
 	mes "宴会真好玩！";
 	mes "好吃的食物！美妙的音乐！人们互相交谈！";
@@ -13541,7 +13541,7 @@ prt_cas,84,225,4	script	勒维耶·维格纳#ep16wig01	4_EP16_LOUVIERE,{
 	close;
 }
 
-prt_cas,76,236,3	script	Bagette Teeblack#ep16_1	4_M_ALCHE_D,{
+prt_cas,76,236,3	script	巴盖特·蒂布拉克#ep16_1	4_M_ALCHE_D,{
 	mes "[巴杰特·蒂布莱克]";
 	mes "我还有很多功课要做……被拉来参加这种宴会，真是太难受了。";
 	next;
@@ -13550,13 +13550,13 @@ prt_cas,76,236,3	script	Bagette Teeblack#ep16_1	4_M_ALCHE_D,{
 	close;
 }
 
-prt_cas,105,221,1	script	Isabella#ep16wig	4_F_01,{
+prt_cas,105,221,1	script	伊莎贝拉#ep16wig	4_F_01,{
 	mes "[伊莎贝拉]";
 	mes "我真的很喜欢宴会。尤其是王宫举办的！一切都那么华丽闪耀！";
 	close;
 }
 
-prt_cas,105,224,4	script	Beatrice#ep16wig	4_F_02,{
+prt_cas,105,224,4	script	贝阿特丽丝#ep16wig	4_F_02,{
 	mes "[贝亚特丽斯]";
 	mes "在这样的宴会上，我们女人会观察其他女人。谁穿了什么礼服，戴了什么首饰……";
 	next;
@@ -13599,7 +13599,7 @@ prt_cas,107,225,5	script	艾萨克·维格纳#ep16wig01	4_EP16_ISAAC,{
 	close;
 }
 
-prt_cas,108,223,3	script	Bryan#ep16wig	4_M_CASMAN1,{
+prt_cas,108,223,3	script	布莱恩#ep16wig	4_M_CASMAN1,{
 	mes "[布莱恩]";
 	mes "今天别丢下我一个人。你不在我身边，我会紧张。";
 	next;
@@ -13617,7 +13617,7 @@ prt_cas,108,223,3	script	Bryan#ep16wig	4_M_CASMAN1,{
 	close;
 }
 
-prt_cas,107,222,1	script	Sophia#ep16wig	1_F_LIBRARYGIRL,{
+prt_cas,107,222,1	script	索菲亚#ep16wig	1_F_LIBRARYGIRL,{
 	mes "[索菲亚]";
 	mes "哦，亲爱的，好久没来王宫了，我真喜欢这里。周围有这么多友善的面孔。";
 	mes "但是……";
@@ -13634,7 +13634,7 @@ prt_cas,107,222,1	script	Sophia#ep16wig	1_F_LIBRARYGIRL,{
 }
 
 // Library
-prt_cas,343,67,4	script	Uptight Librarian#ep16lug0	1_F_LIBRARYGIRL,{
+prt_cas,343,67,4	script	严肃的图书管理员#ep16lug0	1_F_LIBRARYGIRL,{
 	if (checkweight(1304,3) == 0) {
 		mes "[古板的图书管理员]";
 		mes "如果你要借书，最好先减少行李。看起来已经没有放书的空间了。";
@@ -13864,11 +13864,11 @@ prt_cas,321,25,1	script	Erich 内里乌斯#ep16_erihi	4_M_SITDOWN,{
 	mes "我可以做任何我想做的事。";
 	close;
 }
-prt_cas,373,57,8	script	Oliver#ep16_1	4_M_OLIVER,{
+prt_cas,373,57,8	script	奥利弗#ep16_1	4_M_OLIVER,{
 	mes "[奥利弗]";
 	mes "哦！这个！那个！这个！";
 	mes "还有那个！";
-	npctalk "哦，王宫！", "Oliver#ep16_1", bc_self;
+	npctalk "哦，王宫！", "奥利弗#ep16_1", bc_self;
 	cutin "bu_oliver4",0;
 	next;
 	mes "[奥利弗]";
@@ -13878,11 +13878,11 @@ prt_cas,373,57,8	script	Oliver#ep16_1	4_M_OLIVER,{
 	mes "能在王宫真是太好了！什么都有！";
 	close3;
 }
-prt_cas,341,79,2	script	Alf Ocat#ep16_1	4_M_BLACKMAN,{
+prt_cas,341,79,2	script	阿尔夫·奥卡特#ep16_1	4_M_BLACKMAN,{
 	mes "[阿尔夫]";
 	mes "哦！这本书一定是传说中那本……";
 	cutin "bu_alp4",2;
-	npctalk "哦！太棒了！", "Alf Ocat#ep16_1", bc_self;
+	npctalk "哦！太棒了！", "阿尔夫·奥卡特#ep16_1", bc_self;
 	next;
 	mes "[阿尔夫]";
 	mes "我本来对参加王室宴会没兴趣……";
@@ -13890,8 +13890,8 @@ prt_cas,341,79,2	script	Alf Ocat#ep16_1	4_M_BLACKMAN,{
 	close3;
 }
 
-// prt_cas,364,69,3	script	Nervous Man#ep16lug01	4_M_ALCHE_A,5,5,{
-prt_cas,364,69,3	script	Nervous Man#ep16lug01	4_M_ALCHE_A,{
+// prt_cas,364,69,3	script	紧张男子#ep16lug01	4_M_ALCHE_A,5,5,{
+prt_cas,364,69,3	script	紧张男子#ep16lug01	4_M_ALCHE_A,{
 	if (ep16_lug > 12) {
 		mes "[紧张的男人]";
 		mes "这里也没有……";
@@ -13904,30 +13904,30 @@ prt_cas,364,69,3	script	Nervous Man#ep16lug01	4_M_ALCHE_A,{
 		next;
 		mes "[紧张的男人]";
 		mes "“早上好，先生。鄙人住在普隆德拉……”不行，不行。对比我年轻的人不能这么说。";
-		npctalk "那就好！！", "Taunting Man#ep16lug01";
+		npctalk "那就好！！", "嘲讽男子#ep16lug01";
 		next;
 		mes "[紧张的男人]";
 		mes "嗨？你哥哥叫我来参加宴会。不对，不对，也不是这个。“我的搭档是公主！”";
-		npctalk "恶心～", "Taunting Man#ep16lug01";
+		npctalk "恶心～", "嘲讽男子#ep16lug01";
 		next;
 		mes "[紧张的男人]";
 		mes "为什么没有《王室礼仪——初次拜见公主》这种书？这里可是王室图书馆。";
-		npctalk "因为这里是王宫。", "Taunting Man#ep16lug01";
+		npctalk "因为这里是王宫。", "嘲讽男子#ep16lug01";
 		next;
 		mes "[紧张的男人]";
 		mes "他借口忙把我打发了。乔纳森，我跟你没完。";
-		npctalk "你要是伤害乔纳森，会被逮捕的。", "Taunting Man#ep16lug01";
+		npctalk "你要是伤害乔纳森，会被逮捕的。", "嘲讽男子#ep16lug01";
 		close;
 	}
 	mes "[紧张的男人]";
 	mes "这里也没有。我该怎么找啊。这里的书太多了。";
 	close;
 }
-prt_cas,365,68,3	script	Taunting Man#ep16lug01	4_M_HUMAN_01,{ end; }
+prt_cas,365,68,3	script	嘲讽男子#ep16lug01	4_M_HUMAN_01,{ end; }
 
 
 
-prt_cas,218,182,3	script	Royal Guardian Knight#01	4_M_CRU,{
+prt_cas,218,182,3	script	王室守护骑士#01	4_M_CRU,{
 	mes "[守护骑士]";
 	npctalk "你要参加宴会吗？", "", bc_self;
 	mes "你要进入宴会厅吗？";
@@ -13944,12 +13944,12 @@ prt_cas,218,182,3	script	Royal Guardian Knight#01	4_M_CRU,{
 	end;
 }
 
-prt_cas,97,248,5	script	Court Musician#orint	2_M_BARD_ORIENT,{
+prt_cas,97,248,5	script	宫廷乐师#orint	2_M_BARD_ORIENT,{
 	mes "[宫廷乐师奥林特]";
 	mes "工作时禁止闲聊。";
 	next;
 	if (select( "演奏一首曲子", "结束对话" ) == 1) {
-		specialeffect EF_CHEMICAL_ALLRANGE,AREA, "Court Musician#3";
+		specialeffect EF_CHEMICAL_ALLRANGE,AREA, "宫廷乐师#3";
 		mes "[宫廷乐师奥林特]";
 		.@r = rand(1,100);
 		if (.@r < 12) {
@@ -14027,12 +14027,12 @@ prt_cas,97,248,5	script	Court Musician#orint	2_M_BARD_ORIENT,{
 }
 
 // Dinner Room
-prt_cas,375,124,7	script	Woman with Glasses#nir	4_F_MADAME,{
+prt_cas,375,124,7	script	戴眼镜的女人#nir	4_F_MADAME,{
 	mes "- 她的目光警惕地扫视四周，盯着餐桌，可吃起东西来的速度却快得惊人，几乎堪称艺术。 -";
 	close;
 }
 
-prt_cas,379,124,3	script	Glamorous Girl#pop	4_F_ARUNA_POP,{
+prt_cas,379,124,3	script	华丽女孩#pop	4_F_ARUNA_POP,{
 	if (rachel_ma1 < 4) {
 		cutin "ra_bishop.bmp",2;
 		mes "- 一个面无表情的少女盯着餐桌。她的打扮在普隆德拉显得很不寻常。她可能是来参加宴会的客人。 -";
@@ -14120,7 +14120,7 @@ prt_cas,379,124,3	script	Glamorous Girl#pop	4_F_ARUNA_POP,{
 	close;
 }
 
-prt_cas,368,125,3	script	Dumk#ep16_etc03	4_M_SHADOWCHASER,{
+prt_cas,368,125,3	script	杜姆克#ep16_etc03	4_M_SHADOWCHASER,{
 	if ((eaclass()&EAJ_THIRDMASK) == EAJ_SHADOW_CHASER) {
 		mes "[邓克]";
 		mes "哦，这是谁啊。";
@@ -14152,20 +14152,20 @@ prt_cas,368,125,3	script	Dumk#ep16_etc03	4_M_SHADOWCHASER,{
 		npctalk "我干什么了？", "", bc_self;
 		end;
 	}
-	npctalk "他在哪？", "Dumk#ep16_etc03", bc_self;
+	npctalk "他在哪？", "杜姆克#ep16_etc03", bc_self;
 	setpcblock PCBLOCK_NPC, true;
 	sleep2 3000;
-	npctalk "我不知道。", "Kid#ep16_etc04", bc_self;
+	npctalk "我不知道。", "小孩#ep16_etc04", bc_self;
 	sleep2 3000;
-	npctalk "去找他！那是你的专长！", "Dumk#ep16_etc03", bc_self;
+	npctalk "去找他！那是你的专长！", "杜姆克#ep16_etc03", bc_self;
 	sleep2 3000;
-	npctalk "我为什么要去？你真是烦人。", "Kid#ep16_etc04", bc_self;
+	npctalk "我为什么要去？你真是烦人。", "小孩#ep16_etc04", bc_self;
 	sleep2 3000;
-	npctalk "喂，我级别比你高。维森特在哪！", "Dumk#ep16_etc03", bc_self;
+	npctalk "喂，我级别比你高。维森特在哪！", "杜姆克#ep16_etc03", bc_self;
 	sleep2 3000;
-	npctalk "……回你自己家找保姆去吧！", "Kid#ep16_etc04", bc_self;
+	npctalk "……回你自己家找保姆去吧！", "小孩#ep16_etc04", bc_self;
 	sleep2 3000;
-	npctalk "看看你在跟谁说话！！！你想跟我找茬吗！", "Dumk#ep16_etc03", bc_self;
+	npctalk "看看你在跟谁说话！！！你想跟我找茬吗！", "杜姆克#ep16_etc03", bc_self;
 	sleep2 1000;
 	setpcblock PCBLOCK_NPC, false;
 	unittalk getcharid(3), "" + strcharinfo(0) + "：（左右摇头）", bc_self;
@@ -14173,7 +14173,7 @@ prt_cas,368,125,3	script	Dumk#ep16_etc03	4_M_SHADOWCHASER,{
 	end;
 }
 
-prt_cas,367,123,7	script	Kid#ep16_etc04	4_M_ACROSS,{
+prt_cas,367,123,7	script	小孩#ep16_etc04	4_M_ACROSS,{
 	if (mao_morocc2 > 99) {
 		mes "[基德]";
 		mes "好久不见。你和琳、艾奇娜西亚聊过了吗？";
@@ -14187,20 +14187,20 @@ prt_cas,367,123,7	script	Kid#ep16_etc04	4_M_ACROSS,{
 		cutin "",255;
 		sleep2 500;
 	}
-	npctalk "他在哪？", "Dumk#ep16_etc03", bc_self;
+	npctalk "他在哪？", "杜姆克#ep16_etc03", bc_self;
 	setpcblock PCBLOCK_NPC, true;
 	sleep2 3000;
-	npctalk "我不知道。", "Kid#ep16_etc04", bc_self;
+	npctalk "我不知道。", "小孩#ep16_etc04", bc_self;
 	sleep2 3000;
-	npctalk "去找他！那是你的专长！", "Dumk#ep16_etc03", bc_self;
+	npctalk "去找他！那是你的专长！", "杜姆克#ep16_etc03", bc_self;
 	sleep2 3000;
-	npctalk "我为什么要去？你真是烦人。", "Kid#ep16_etc04", bc_self;
+	npctalk "我为什么要去？你真是烦人。", "小孩#ep16_etc04", bc_self;
 	sleep2 3000;
-	npctalk "喂，我级别比你高。维森特在哪！", "Dumk#ep16_etc03", bc_self;
+	npctalk "喂，我级别比你高。维森特在哪！", "杜姆克#ep16_etc03", bc_self;
 	sleep2 3000;
-	npctalk "……回你自己家找保姆去吧！", "Kid#ep16_etc04", bc_self;
+	npctalk "……回你自己家找保姆去吧！", "小孩#ep16_etc04", bc_self;
 	sleep2 3000;
-	npctalk "看看你在跟谁说话！！！你想跟我找茬吗！", "Dumk#ep16_etc03", bc_self;
+	npctalk "看看你在跟谁说话！！！你想跟我找茬吗！", "杜姆克#ep16_etc03", bc_self;
 	sleep2 1000;
 	setpcblock PCBLOCK_NPC, false;
 	unittalk getcharid(3), "" + strcharinfo(0) + "：（左右摇头）", bc_self;
@@ -14209,7 +14209,7 @@ prt_cas,367,123,7	script	Kid#ep16_etc04	4_M_ACROSS,{
 }
 
 // Corridor left
-prt_cas,161,168,5	script	Royal Guardian Knight#02	4_M_CRU,{
+prt_cas,161,168,5	script	王室守护骑士#02	4_M_CRU,{
 	mes "[守护骑士]";
 	mes "你是普隆德拉王宫的访客。";
 	mes "需要向导吗？";
@@ -14233,10 +14233,10 @@ prt_cas,161,168,5	script	Royal Guardian Knight#02	4_M_CRU,{
 }
 
 // Corridor right
-prt_cas,270,168,3	duplicate(Royal Guardian Knight#02)	Royal Guardian Knight#03	4_M_CRU
+prt_cas,270,168,3	duplicate(王室守护骑士#02)	王室守护骑士#03	4_M_CRU
 
 // Exchanges and enchants npc
-prt_cas,165,260,6	script	Noblesse Operator#ext161	4_F_CRU,{
+prt_cas,165,260,6	script	贵族操作员#ext161	4_F_CRU,{
 	mes "[贵族装备兑换员]";
 	mes "你好。";
 	mes "我们提供^4d4dff贵族^000000装备，可兑换物品为：" + mesitemlink( 6919 ) + "。";
@@ -14326,7 +14326,7 @@ prt_cas,165,260,6	script	Noblesse Operator#ext161	4_F_CRU,{
 	end;
 }
 
-prt_cas,165,255,7	script	Commissary#ep16	4_M_JOB_KNIGHT2,{
+prt_cas,165,255,7	script	军需官#ep16	4_M_JOB_KNIGHT2,{
 	mes "[军需官阿纳]";
 	mes "你可以用卢恩-米德加尔特贵族们作为信任象征赠予的荣誉证明，兑换普隆德拉的一些贵重物品。";
 	next;
@@ -14387,7 +14387,7 @@ prt_cas,165,255,7	script	Commissary#ep16	4_M_JOB_KNIGHT2,{
 	close;
 }
 
-prt_cas,180,275,5	script	Logistics Manager#sin	4_M_JOB_KNIGHT1,{
+prt_cas,180,275,5	script	后勤主管#sin	4_M_JOB_KNIGHT1,{
 	mes "[后勤管理员辛]";
 	mes "你就是大家谈论的那位受邀参加宴会的冒险者？";
 	mes "你有〈荣誉证明〉吗？能给我一些吗？";
@@ -14430,17 +14430,17 @@ prt_cas,180,275,5	script	Logistics Manager#sin	4_M_JOB_KNIGHT1,{
 	close;
 }
 
-prt_cas,180,264,3	script	Guardian Knight#ep16_prigate01	4_M_CRU,{
-	npctalk "十字军办公室在走廊尽头。", "Guardian Knight#ep16_prigate01", bc_self;
+prt_cas,180,264,3	script	守护骑士#ep16_prigate01	4_M_CRU,{
+	npctalk "十字军办公室在走廊尽头。", "守护骑士#ep16_prigate01", bc_self;
 	end;
 }
 
-prt_cas,180,251,3	script	Guardian Knight#ep16_prigate02	4_M_CRU,{
-	npctalk "……正在执勤。一切正常……", "Guardian Knight#ep16_prigate02", bc_self;
+prt_cas,180,251,3	script	守护骑士#ep16_prigate02	4_M_CRU,{
+	npctalk "……正在执勤。一切正常……", "守护骑士#ep16_prigate02", bc_self;
 	setpcblock PCBLOCK_NPC, true;
 	sleep2 2000;
 	setpcblock PCBLOCK_NPC, false;
-	npctalk "我现在想回家。", "Guardian Knight#ep16_prigate02", bc_self;
+	npctalk "我现在想回家。", "守护骑士#ep16_prigate02", bc_self;
 	end;
 }
 
@@ -14577,21 +14577,21 @@ prt_q,157,334,3	script	尼勒姆#ep16_pprt01	4_M_JOB_WIZARD,{
 	end;
 }
 
-prt_q,159,328,6	script	Medic#EP162PS18	4_F_ACOLYTE,{
-	specialeffect EF_HEAL3,AREA,"Wounded Soldier#EP161PS";
+prt_q,159,328,6	script	医疗兵#EP162PS18	4_F_ACOLYTE,{
+	specialeffect EF_HEAL3,AREA,"受伤士兵#EP161PS";
 	mes "[士兵]";
 	mes "喂，你得先接受治疗。";
 	close;
 }
 
-prt_q,160,327,5	script	Wounded Soldier#EP161PS17	8W_SOLDIER,{
+prt_q,160,327,5	script	受伤士兵#EP161PS17	8W_SOLDIER,{
 	emotion ET_STARE;
 	mes "[士兵]";
 	mes "呃啊……那些不死族混蛋……我要把他们全杀了……";
 	close;
 }
 
-prt_q,165,326,6	script	Soldier#EP162PS01	8W_SOLDIER,1,1,{
+prt_q,165,326,6	script	士兵#EP162PS01	8W_SOLDIER,1,1,{
 	mes "[士兵]";
 	sscanf( strnpcinfo(2), "EP162PS%d", .@num );
 	switch(.@num) {
@@ -14682,23 +14682,23 @@ OnTouchNPC:
 	unitwarp 0,"prt_q",100,100;
 	end;
 }
-prt_q,167,324,6	duplicate(Soldier#EP162PS01)	Soldier#EP162PS02	8W_SOLDIER,1,1
-prt_q,165,322,6	duplicate(Soldier#EP162PS01)	Soldier#EP162PS03	8W_SOLDIER,1,1
-prt_q,167,320,6	duplicate(Soldier#EP162PS01)	Soldier#EP162PS04	8W_SOLDIER,1,1
-prt_q,165,318,6	duplicate(Soldier#EP162PS01)	Soldier#EP162PS05	8W_SOLDIER,1,1
-prt_q,146,326,2	duplicate(Soldier#EP162PS01)	Soldier#EP162PS06	8W_SOLDIER,1,1
-prt_q,144,324,2	duplicate(Soldier#EP162PS01)	Soldier#EP162PS07	8W_SOLDIER,1,1
-prt_q,146,322,2	duplicate(Soldier#EP162PS01)	Soldier#EP162PS08	8W_SOLDIER,1,1
-prt_q,144,320,2	duplicate(Soldier#EP162PS01)	Soldier#EP162PS09	8W_SOLDIER,1,1
-prt_q,146,318,2	duplicate(Soldier#EP162PS01)	Soldier#EP162PS10	8W_SOLDIER,1,1
-prt_q,149,316,4	duplicate(Soldier#EP162PS01)	Soldier#EP162PS11	8W_SOLDIER,1,1
-prt_q,151,314,4	duplicate(Soldier#EP162PS01)	Soldier#EP162PS12	8W_SOLDIER,1,1
-prt_q,153,316,4	duplicate(Soldier#EP162PS01)	Soldier#EP162PS13	8W_SOLDIER,1,1
-prt_q,158,316,4	duplicate(Soldier#EP162PS01)	Soldier#EP162PS14	8W_SOLDIER,1,1
-prt_q,160,314,4	duplicate(Soldier#EP162PS01)	Soldier#EP162PS15	8W_SOLDIER,1,1
-prt_q,162,316,4	duplicate(Soldier#EP162PS01)	Soldier#EP162PS16	8W_SOLDIER,1,1
+prt_q,167,324,6	duplicate(士兵#EP162PS01)	士兵#EP162PS02	8W_SOLDIER,1,1
+prt_q,165,322,6	duplicate(士兵#EP162PS01)	士兵#EP162PS03	8W_SOLDIER,1,1
+prt_q,167,320,6	duplicate(士兵#EP162PS01)	士兵#EP162PS04	8W_SOLDIER,1,1
+prt_q,165,318,6	duplicate(士兵#EP162PS01)	士兵#EP162PS05	8W_SOLDIER,1,1
+prt_q,146,326,2	duplicate(士兵#EP162PS01)	士兵#EP162PS06	8W_SOLDIER,1,1
+prt_q,144,324,2	duplicate(士兵#EP162PS01)	士兵#EP162PS07	8W_SOLDIER,1,1
+prt_q,146,322,2	duplicate(士兵#EP162PS01)	士兵#EP162PS08	8W_SOLDIER,1,1
+prt_q,144,320,2	duplicate(士兵#EP162PS01)	士兵#EP162PS09	8W_SOLDIER,1,1
+prt_q,146,318,2	duplicate(士兵#EP162PS01)	士兵#EP162PS10	8W_SOLDIER,1,1
+prt_q,149,316,4	duplicate(士兵#EP162PS01)	士兵#EP162PS11	8W_SOLDIER,1,1
+prt_q,151,314,4	duplicate(士兵#EP162PS01)	士兵#EP162PS12	8W_SOLDIER,1,1
+prt_q,153,316,4	duplicate(士兵#EP162PS01)	士兵#EP162PS13	8W_SOLDIER,1,1
+prt_q,158,316,4	duplicate(士兵#EP162PS01)	士兵#EP162PS14	8W_SOLDIER,1,1
+prt_q,160,314,4	duplicate(士兵#EP162PS01)	士兵#EP162PS15	8W_SOLDIER,1,1
+prt_q,162,316,4	duplicate(士兵#EP162PS01)	士兵#EP162PS16	8W_SOLDIER,1,1
 
-prt_q,156,324,6	script	Chief Guard#EP161PG	4_EP16_SPIEGEL,{
+prt_q,156,324,6	script	守卫队长#EP161PG	4_EP16_SPIEGEL,{
 	if (checkweight(1301,1) == 0) {
 		mes "- 由于道具数量过多，无法继续任务。 -";
 		close;
@@ -14907,17 +14907,17 @@ prt_q,156,324,6	script	Chief Guard#EP161PG	4_EP16_SPIEGEL,{
 
 
 // Request 1
-prt_q,221,193,0	script	Lad Quest_START#EP161QU01	HIDDEN_WARP_NPC,6,6,{
+prt_q,221,193,0	script	少年#EP161QU01	HIDDEN_WARP_NPC,6,6,{
 	end;
 OnTouch:
 	if (isbegin_quest(5448) == 1) {
-		cloakoffnpcself( "Village Lad#EP161HO01" );
-		npctalk "村里的少年：啊啊啊啊啊！", "Village Lad#EP161HO01", bc_self;
+		cloakoffnpcself( "村中少年#EP161HO01" );
+		npctalk "村里的少年：啊啊啊啊啊！", "村中少年#EP161HO01", bc_self;
 	}
 	end;
 }
 
-prt_q,221,193,4	script	Village Lad#EP161HO01	4_M_03,{
+prt_q,221,193,4	script	村中少年#EP161HO01	4_M_03,{
 	if (checkweight(1301,3) == 0) {
 		mes "- 由于道具数量过多，无法继续任务。 -";
 		close;
@@ -14945,7 +14945,7 @@ prt_q,221,193,4	script	Village Lad#EP161HO01	4_M_03,{
 		mes "你能看见我？真奇怪。我本不该被看见的。";
 		close2;
 	}
-	cloakonnpcself( "Village Lad#EP161HO01" );
+	cloakonnpcself( "村中少年#EP161HO01" );
 	end;
 
 OnInit:
@@ -14954,7 +14954,7 @@ OnInit:
 }
 
 // Office
-prt_q,79,96,7	script	Soldier#EP161HO02	8W_SOLDIER,5,5,{
+prt_q,79,96,7	script	士兵#EP161HO02	8W_SOLDIER,5,5,{
 	if (checkweight(1301,1) == 0) {
 		mes "- 由于道具数量过多，无法继续任务。 -";
 		close;
@@ -14985,13 +14985,13 @@ prt_q,79,96,7	script	Soldier#EP161HO02	8W_SOLDIER,5,5,{
 
 OnTouch:
 	if (isbegin_quest(5453) == 1 || isbegin_quest(5455) == 1)
-		cloakoffnpcself( "Village Lad#EP161HO03" );
+		cloakoffnpcself( "村中少年#EP161HO03" );
 	if (isbegin_quest(5461) == 1)
-		cloakoffnpcself( "Soldier#EP161HU03" );
+		cloakoffnpcself( "士兵#EP161HU03" );
 	end;
 }
 
-prt_q,77,98,8	script	Village Lad#EP161HO03	4_M_03,{
+prt_q,77,98,8	script	村中少年#EP161HO03	4_M_03,{
 	if (checkweight(1301,1) == 0) {
 		mes "- 由于道具数量过多，无法继续任务。 -";
 		close;
@@ -15025,7 +15025,7 @@ prt_q,77,98,8	script	Village Lad#EP161HO03	4_M_03,{
 		mes "[村里的少年]";
 		mes "哦！算了，就拜托你了。";
 		close2;
-		cloakonnpcself( "Village Lad#EP161HO03" );
+		cloakonnpcself( "村中少年#EP161HO03" );
 		end;
 	}
 	if (isbegin_quest(5455) == 1) {
@@ -15046,13 +15046,13 @@ prt_q,77,98,8	script	Village Lad#EP161HO03	4_M_03,{
 		mes "[村里的少年]";
 		mes "谢谢，后会有期。";
 		close2;
-		cloakonnpcself( "Village Lad#EP161HO03" );
+		cloakonnpcself( "村中少年#EP161HO03" );
 		end;
 	}
 	mes "[村里的少年]";
 	mes "你能看见我？真奇怪。我本不该被看见的。";
 	close2;
-	cloakonnpcself( "Village Lad#EP161HO03" );
+	cloakonnpcself( "村中少年#EP161HO03" );
 	end;
 
 OnInit:
@@ -15060,7 +15060,7 @@ OnInit:
 	end;
 }
 
-prt_q,178,185,0	script	Tool Bag#EP161HO04	HIDDEN_WARP_NPC,2,2,{
+prt_q,178,185,0	script	工具袋#EP161HO04	HIDDEN_WARP_NPC,2,2,{
 	end;
 OnTouch:
 	if (checkweight(1301,1) == 0) {
@@ -15081,7 +15081,7 @@ OnTouch:
 	end;
 }
 
-prt_q,85,90,7	script	Giant Beast Manager#EP161ETC06	8W_SOLDIER,{
+prt_q,85,90,7	script	巨兽管理者#EP161ETC06	8W_SOLDIER,{
 	.@thirdmask = eaclass() & EAJ_THIRDMASK;
 	if ((.@thirdmask != EAJ_RUNE_KNIGHT && .@thirdmask != EAJ_ROYAL_GUARD) || countitem(6939) < 1) {
 		emotion 19;
@@ -15133,7 +15133,7 @@ prt_q,85,90,7	script	Giant Beast Manager#EP161ETC06	8W_SOLDIER,{
 	close;
 }
 
-prt_q,74,101,7	script	Magical Gear Mechanic#EP161ETC05	8W_SOLDIER,{
+prt_q,74,101,7	script	魔法装备技师#EP161ETC05	8W_SOLDIER,{
 	.@thirdmask = eaclass() & EAJ_THIRDMASK;
 	if (.@thirdmask != EAJ_MECHANIC || countitem(6939) < 1) {
 		emotion 19;
@@ -15185,17 +15185,17 @@ prt_q,74,101,7	script	Magical Gear Mechanic#EP161ETC05	8W_SOLDIER,{
 }
 
 // Request 2
-prt_q,276,242,0	script	Girl Quest_START#EP161QU02	HIDDEN_WARP_NPC,6,6,{
+prt_q,276,242,0	script	少女#EP161QU02	HIDDEN_WARP_NPC,6,6,{
 	end;
 OnTouch:
 	if (isbegin_quest(5449) == 1 && isbegin_quest(5457) == 0) {
-		cloakoffnpcself( "Girl#EP161GU01" );
-		npctalk "少女：呜哇……", "Girl#EP161GU01", bc_self;
+		cloakoffnpcself( "少女#EP161GU01" );
+		npctalk "少女：呜哇……", "少女#EP161GU01", bc_self;
 	}
 	end;
 }
 
-prt_q,276,242,4	script	Girl#EP161GU01	4_F_RUSCHILD,{
+prt_q,276,242,4	script	少女#EP161GU01	4_F_RUSCHILD,{
 	if (checkweight(1301,1) == 0) {
 		mes "- 由于道具数量过多，无法继续任务。 -";
 		close;
@@ -15220,13 +15220,13 @@ prt_q,276,242,4	script	Girl#EP161GU01	4_F_RUSCHILD,{
 		mes "[洛文]";
 		mes "我们约好了走散就在大教堂碰头。我相信她一定在教堂里。";
 		close2;
-		cloakonnpcself( "Girl#EP161GU01" );
+		cloakonnpcself( "少女#EP161GU01" );
 		end;
 	}
 	mes "[洛文]";
 	mes "咦？你能看见我？真奇怪。我本不该被看见的。";
 	close2;
-	cloakonnpcself( "Girl#EP161GU01" );
+	cloakonnpcself( "少女#EP161GU01" );
 	end;
 
 OnInit:
@@ -15235,7 +15235,7 @@ OnInit:
 }
 
 // Cathedral
-prt_q,235,315,4	script	Cathedral Knight#EP161GU04	4_F_CRU,5,5,{
+prt_q,235,315,4	script	大教堂骑士#EP161GU04	4_F_CRU,5,5,{
 	if (checkweight(1301,1) == 0) {
 		mes "- 由于道具数量过多，无法继续任务。 -";
 		close;
@@ -15293,7 +15293,7 @@ prt_q,235,315,4	script	Cathedral Knight#EP161GU04	4_F_CRU,5,5,{
 
 OnTouch:
 	if (isbegin_quest(5457) == 1)
-		cloakoffnpcself( "Girl#EP161GU03" );
+		cloakoffnpcself( "少女#EP161GU03" );
 	if (isbegin_quest(5463) == 1 || isbegin_quest(5467) == 1)
 		cloakoffnpcself( "Eryus#EP161BU02" );
 	else if (isbegin_quest(5465) == 1) {
@@ -15303,12 +15303,12 @@ OnTouch:
 	end;
 }
 
-prt_q,232,318,3	script	PecoPeco Mechanic#EP161GU02	8W_SOLDIER,{
+prt_q,232,318,3	script	大嘴鸟技师#EP161GU02	8W_SOLDIER,{
 	if (checkweight(1301,1) == 0) {
 		mes "- 由于道具数量过多，无法继续任务。 -";
 		close;
 	}
-	if (strnpcinfo(0) == "PecoPeco Mechanic#EP161GU02")
+	if (strnpcinfo(0) == "大嘴鸟技师#EP161GU02")
 		.@check = (Class == JOB_CRUSADER || Class == JOB_PALADIN);
 	else
 		.@check = (Class == JOB_KNIGHT || Class == JOB_LORD_KNIGHT);
@@ -15373,7 +15373,7 @@ prt_q,232,318,3	script	PecoPeco Mechanic#EP161GU02	8W_SOLDIER,{
 	close;
 }
 
-prt_q,229,317,6	script	Girl#EP161GU03	4_F_RUSCHILD,{
+prt_q,229,317,6	script	少女#EP161GU03	4_F_RUSCHILD,{
 	if (checkweight(1301,1) == 0) {
 		mes "- 由于道具数量过多，无法继续任务。 -";
 		close;
@@ -15382,7 +15382,7 @@ prt_q,229,317,6	script	Girl#EP161GU03	4_F_RUSCHILD,{
 		mes "[洛文]";
 		mes "哇，真是太感谢你了！";
 		next;
-		npctalk "少女：罗莎！罗莎！", "Girl#EP161GU03", bc_self;
+		npctalk "少女：罗莎！罗莎！", "少女#EP161GU03", bc_self;
 		emotion ET_BLABLA;
 		mes "[洛文]";
 		mes "罗莎！罗莎！";
@@ -15392,7 +15392,7 @@ prt_q,229,317,6	script	Girl#EP161GU03	4_F_RUSCHILD,{
 		mes "[洛文]";
 		mes "哦，佩可叔叔，你在这里见过我妹妹吗？";
 		next;
-		emotion ET_HUK, getnpcid(0, "PecoPeco Mechanic#EP161GU02");
+		emotion ET_HUK, getnpcid(0, "大嘴鸟技师#EP161GU02");
 		mes "[陆行鸟管理员]";
 		mes "咳……叔叔……";
 		next;
@@ -15408,7 +15408,7 @@ prt_q,229,317,6	script	Girl#EP161GU03	4_F_RUSCHILD,{
 		mes "[陆行鸟管理员]";
 		mes "她可能是去骑士团大楼了。你们姐妹不是约好去那里的避难所吗？";
 		next;
-		emotion ET_HUK, getnpcid(0, "PecoPeco Mechanic#EP161GU02");
+		emotion ET_HUK, getnpcid(0, "大嘴鸟技师#EP161GU02");
 		mes "[洛文]";
 		mes "咦？那看来不是大教堂……啊？我该怎么办？";
 		next;
@@ -15418,21 +15418,21 @@ prt_q,229,317,6	script	Girl#EP161GU03	4_F_RUSCHILD,{
 		mes "[陆行鸟管理员]";
 		mes "洛文的妹妹是个细心的姑娘，跟洛文不一样。她肯定是逃到骑士团大楼去了。";
 		next;
-		npctalk "少女：呼……叔叔！", "Girl#EP161GU03", bc_self;
+		npctalk "少女：呼……叔叔！", "少女#EP161GU03", bc_self;
 		select("既然我都到这儿了，就继续帮她吧。");
 		erasequest 5457;// Find My Sister(1)
 		setquest 5458;// Find My Sister(2)
-		emotion ET_THANKS, getnpcid(0, "PecoPeco Mechanic#EP161GU02");
+		emotion ET_THANKS, getnpcid(0, "大嘴鸟技师#EP161GU02");
 		mes "[陆行鸟管理员]";
 		mes "谢谢，请照顾好她。";
 		close2;
-		cloakonnpcself( "Girl#EP161GU03" );
+		cloakonnpcself( "少女#EP161GU03" );
 		end;
 	}
 	mes "[洛文]";
 	mes "咦？你能看见我？真奇怪。我本不该被看见的。";
 	close2;
-	cloakonnpcself( "Girl#EP161GU03" );
+	cloakonnpcself( "少女#EP161GU03" );
 	end;
 
 OnInit:
@@ -15440,15 +15440,15 @@ OnInit:
 	end;
 }
 
-prt_q,55,350,5	duplicate(PecoPeco Mechanic#EP161GU02)	PecoPeco Mechanic#EP161ETC04	8W_SOLDIER
+prt_q,55,350,5	duplicate(大嘴鸟技师#EP161GU02)	大嘴鸟技师#EP161ETC04	8W_SOLDIER
 
-prt_q,47,339,5	script	Soldier#EP161ETC01	8W_SOLDIER,{
+prt_q,47,339,5	script	士兵#EP161ETC01	8W_SOLDIER,{
 	emotion ET_PROFUSELY_SWEAT;
 	mes "[士兵]";
 	mes "这里是骑士团大楼，普隆德拉的第二处避难所。";
 	close;
 }
-prt_q,52,344,5	duplicate(Soldier#EP161ETC01)	Soldier#EP161ETC02	8W_SOLDIER
+prt_q,52,344,5	duplicate(士兵#EP161ETC01)	士兵#EP161ETC02	8W_SOLDIER
 
 prt_q,52,340,6	script	Knight Gray#EP161GU05	2_M_SWORDMASTER,7,7,{
 	if (checkweight(1301,1) == 0) {
@@ -15466,12 +15466,12 @@ prt_q,52,340,6	script	Knight Gray#EP161GU05	2_M_SWORDMASTER,7,7,{
 
 OnTouch:
 	if (isbegin_quest(5458) == 1) {
-		cloakoffnpcself( "Girl#EP161GU06" );
+		cloakoffnpcself( "少女#EP161GU06" );
 		cloakoffnpcself( "Rosa Erinin#EP161GU07" );
 	}
 	if (isbegin_quest(5460) == 1) {
-		cloakoffnpcself( "Soldier#EP161HU02" );
-		npctalk "士兵：喂！这边！往这边走……", "Soldier#EP161HU02", bc_self;
+		cloakoffnpcself( "士兵#EP161HU02" );
+		npctalk "士兵：喂！这边！往这边走……", "士兵#EP161HU02", bc_self;
 	}
 	end;
 }
@@ -15495,7 +15495,7 @@ prt_q,55,347,6	script	Rosa Erinin#EP161GU07	4W_F_01,{
 		mes "[罗莎·艾莉宁]";
 		mes "洛文，你这次又跑哪去了？";
 		next;
-		emotion ET_THANKS, getnpcid(0, "Girl#EP161GU06");
+		emotion ET_THANKS, getnpcid(0, "少女#EP161GU06");
 		mes "[洛文]";
 		mes "嘿嘿……谢谢你，亲爱的冒险者。";
 		next;
@@ -15511,19 +15511,19 @@ prt_q,55,347,6	script	Rosa Erinin#EP161GU07	4W_F_01,{
 		next;
 		erasequest 5458;// Find My Sister(2)
 		setquest 5459;// Find My Sister(3)
-		emotion ET_WRAP, getnpcid(0, "Girl#EP161GU06");
+		emotion ET_WRAP, getnpcid(0, "少女#EP161GU06");
 		mes "[洛文]";
 		mes "谢谢你，再见！";
 		close2;
 		cloakonnpcself( "Rosa Erinin#EP161GU07" );
-		cloakonnpcself( "Girl#EP161GU06" );
+		cloakonnpcself( "少女#EP161GU06" );
 		end;
 	}
 	if (strnpcinfo(1) == "Girl") {
 		mes "[洛文]";
 		mes "咦？你能看见我？真奇怪。我本不该被看见的。";
 		close2;
-		cloakonnpcself( "Girl#EP161GU06" );
+		cloakonnpcself( "少女#EP161GU06" );
 		end;
 	}
 	mes "[罗莎·艾莉宁]";
@@ -15536,19 +15536,19 @@ OnInit:
 	cloakonnpc();
 	end;
 }
-prt_q,57,346,4	duplicate(Rosa Erinin#EP161GU07)	Girl#EP161GU06	4_F_RUSCHILD
+prt_q,57,346,4	duplicate(Rosa Erinin#EP161GU07)	少女#EP161GU06	4_F_RUSCHILD
 
 // Request 3
 prt_q,140,304,0	script	Soldier Quest_START#EP161QU03	HIDDEN_WARP_NPC,7,7,{
 	end;
 OnTouch:
 	if (isbegin_quest(5450) == 1) {
-		cloakoffnpcself( "Soldier#EP161HU01" );
-		npctalk "士兵：呃啊！别往这边来！", "Soldier#EP161HU01", bc_self;
+		cloakoffnpcself( "士兵#EP161HU01" );
+		npctalk "士兵：呃啊！别往这边来！", "士兵#EP161HU01", bc_self;
 	}
 }
 
-prt_q,140,304,6	script	Soldier#EP161HU01	4_M_GEF_SOLDIER,{
+prt_q,140,304,6	script	士兵#EP161HU01	4_M_GEF_SOLDIER,{
 	if (checkweight(1301,1) == 0) {
 		mes "- 由于道具数量过多，无法继续任务。 -";
 		close;
@@ -15590,17 +15590,17 @@ prt_q,140,304,6	script	Soldier#EP161HU01	4_M_GEF_SOLDIER,{
 		mes "[士兵]";
 		mes "好。我上一场战斗已经很累了，请护送我去骑士团大楼。";
 		close2;
-		cloakonnpcself( "Soldier#EP161HU01" );
+		cloakonnpcself( "士兵#EP161HU01" );
 		end;
 	}
 	mes "[士兵]";
 	mes "哈哈，你能看见我吗？真奇怪。我本不该被看见的。";
 	close2;
-	cloakonnpcself( "Soldier#EP161HU01" );
+	cloakonnpcself( "士兵#EP161HU01" );
 	end;
 }
 
-prt_q,68,336,4	script	Soldier#EP161HU02	4_M_GEF_SOLDIER,{
+prt_q,68,336,4	script	士兵#EP161HU02	4_M_GEF_SOLDIER,{
 	if (checkweight(1301,1) == 0) {
 		mes "- 由于道具数量过多，无法继续任务。 -";
 		close;
@@ -15626,13 +15626,13 @@ prt_q,68,336,4	script	Soldier#EP161HU02	4_M_GEF_SOLDIER,{
 		mes "[士兵]";
 		mes "我想把体力留到战斗时，请护送我去村公所。";
 		close2;
-		cloakonnpcself( "Soldier#EP161HU02" );
+		cloakonnpcself( "士兵#EP161HU02" );
 		end;
 	}
 	mes "[士兵]";
 	mes "哈哈，你能看见我吗？真奇怪。我本不该被看见的。";
 	close2;
-	cloakonnpcself( "Soldier#EP161HU02" );
+	cloakonnpcself( "士兵#EP161HU02" );
 	end;
 
 OnInit:
@@ -15640,7 +15640,7 @@ OnInit:
 	end;
 }
 
-prt_q,79,102,8	script	Soldier#EP161HU03	4_M_GEF_SOLDIER,{
+prt_q,79,102,8	script	士兵#EP161HU03	4_M_GEF_SOLDIER,{
 	if (checkweight(1301,1) == 0) {
 		mes "- 由于道具数量过多，无法继续任务。 -";
 		close;
@@ -15690,13 +15690,13 @@ prt_q,79,102,8	script	Soldier#EP161HU03	4_M_GEF_SOLDIER,{
 		mes "[士兵]";
 		mes "祝你好运。";
 		close2;
-		cloakonnpcself( "Soldier#EP161HU03" );
+		cloakonnpcself( "士兵#EP161HU03" );
 		end;
 	}
 	mes "[士兵]";
 	mes "哈哈，你能看见我吗？真奇怪。我本不该被看见的。";
 	close2;
-	cloakonnpcself( "Soldier#EP161HU03" );
+	cloakonnpcself( "士兵#EP161HU03" );
 	end;
 
 OnInit:
