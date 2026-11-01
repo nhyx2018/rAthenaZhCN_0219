@@ -3561,8 +3561,8 @@ mid_camp,267,263,0	script	木桩#ep13bs1	111,{
 				else {
 					mes "——你修好了断裂的柱子——";
 					mes "——用藤蔓。——";
-					mes "——看来你……";
-					mes "——还需要更多树枝。——";
+					mes "——看来这次没修好……";
+					mes "——再试一次吧。——";
 					next;
 				}
 				break;
@@ -3590,11 +3590,16 @@ mid_camp,267,258,0	script	木桩#ep13bs2	111,{
 		mes "柱子断了。——";
 		close;
 	}
-	else if (ep13_newbs == 6 || ep13_newbs == 7) {
+	else if (ep13_newbs == 6) {
 		mes "——兵营的";
 		mes "柱子断了。——";
 		mes "——你最好出去";
 		mes "找些材料来修好它。——";
+		close;
+	}
+	else if (ep13_newbs == 7) {
+		mes "——这根柱子先等等。——";
+		mes "——先去修好另一根柱子。——<NAVI>[木桩]<INFO>mid_camp,267,263,0,101,0</INFO></NAVI>";
 		close;
 	}
 	else if (ep13_newbs == 8) {
@@ -3645,8 +3650,8 @@ mid_camp,267,258,0	script	木桩#ep13bs2	111,{
 				else {
 					mes "——你修好了断裂的柱子——";
 					mes "——用藤蔓。——";
-					mes "——看来你……";
-					mes "——还需要更多树枝。——";
+					mes "——看来这次没修好……";
+					mes "——再试一次吧。——";
 					next;
 				}
 				break;
