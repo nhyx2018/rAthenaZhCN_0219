@@ -1450,26 +1450,26 @@ OnTouch:
 		sleep2 1000;
 		unittalk getcharid(3), "" + .@name$ + " : (Lord?)", bc_self;
 		sleep2 3000;
-		npctalk "What should we do now?", "#ep16_7689_02", bc_self;
+		npctalk "现在怎么办？", "#ep16_7689_02", bc_self;
 		sleep2 3000;
-		npctalk "Just leave him there. They will think that he is just drunk a little.", "#ep16_7689_01", bc_self;
+		npctalk "就把他留在那里。大家只会以为他有点醉。", "#ep16_7689_01", bc_self;
 		sleep2 3000;
-		npctalk "Then, let's get prepared for the big event.", "#ep16_7689_01", bc_self;
+		npctalk "那么，为大事件做准备吧。", "#ep16_7689_01", bc_self;
 		sleep2 1000;
 		cloakonnpcself( "#ep16_7689_01" );
 		cloakonnpcself( "#ep16_7689_02" );
 		cloakoffnpcself( "斯琪亚·内里乌斯#ep16_7689" );
-		npctalk "Did you find Nyhill?", "斯琪亚·内里乌斯#ep16_7689", bc_self;
+		npctalk "找到尼希尔了吗？", "斯琪亚·内里乌斯#ep16_7689", bc_self;
 		sleep2 1000;
-		unittalk getcharid(3), "" + .@name$ + " : What the!", bc_self;
+		unittalk getcharid(3), "" + .@name$ + "：什么鬼！", bc_self;
 		sleep2 2000;
-		npctalk "Why are you so surprised? What are you looking at?", "斯琪亚·内里乌斯#ep16_7689", bc_self;
+		npctalk "你惊讶什么？在看什么？", "斯琪亚·内里乌斯#ep16_7689", bc_self;
 		sleep2 3000;
-		npctalk "By the way, it is about to start. Where has Nyhill gone?", "斯琪亚·内里乌斯#ep16_7689", bc_self;
+		npctalk "对了，快开始了。尼希尔去哪了？", "斯琪亚·内里乌斯#ep16_7689", bc_self;
 		sleep2 3000;
-		npctalk "Would Nyhill be in that room? He told me that he didn't like to stay in the Royal Villa because of grandpa archduke.", "斯琪亚·内里乌斯#ep16_7689", bc_self;
+		npctalk "尼希尔会在那房间吗？他说过因为大公祖父，不喜欢待在王宫别馆。", "斯琪亚·内里乌斯#ep16_7689", bc_self;
 		sleep2 3000;
-		npctalk "Let's get into that room!", "斯琪亚·内里乌斯#ep16_7689", bc_self;
+		npctalk "进那房间看看！", "斯琪亚·内里乌斯#ep16_7689", bc_self;
 		if (ep16_royal == 5) {
 			setquest 7690;// Where Is Nyhill?
 			erasequest 7689;// Find Nyhill
@@ -1496,66 +1496,66 @@ prt_cas,25,35,5	script	斯琪亚·内里乌斯#ep16_7690	4_EP16_SKIA,{
 	if (ep16_royal == 6) {
 		cutin "ep16_nihi_miseria_heine01",2;
 		mes "[尼希尔]";
-		mes "...Who's there?";
-		mes "" + strcharinfo(0) + "...?";
-		mes "What are you doing here?";
+		mes "……谁在那里？";
+		mes "" + strcharinfo(0) + "……？";
+		mes "你在这里做什么？";
 		next;
-		npctalk "...Ha...", "Unstable Nyhill#ep16_7690", bc_self;
+		npctalk "……哈……", "状态异常的尼希尔#ep16_7690", bc_self;
 		cutin "ep16_nihi_miseria_heine04",2;
 		mes "[尼希尔]";
-		mes "...Am I drunk?";
-		mes "My head hurts.";
-		mes "...I feel dizzy...";
+		mes "……我醉了吗？";
+		mes "头好痛。";
+		mes "……头好晕……";
 		next;
 		cutin "ep16_skia_nerius01",0;
 		mes "[斯琪亚]";
-		mes "Why are you here?";
+		mes "你为什么在这里？";
 		next;
 		cutin "ep16_nihi_miseria_heine01",2;
 		mes "[尼希尔]";
-		mes "...Oh... I felt tipsy and asked a chamberlain to guide me to somewhere I can take a rest.";
-		mes "......Umm...";
+		mes "……哦……我有点醉，让侍从带我去能休息的地方。";
+		mes "……嗯……";
 		next;
 		cutin "ep16_nihi_miseria_heine04",2;
 		mes "[尼希尔]";
-		mes "He told me it was light champagne...";
+		mes "他说是淡香槟……";
 		mes "……";
 		next;
-		select("Has anything happened to you?");
+		select("发生什么事了吗？");
 		cutin "ep16_nihi_miseria_heine01",2;
 		mes "[尼希尔]";
-		mes "I don't remember.";
-		mes "I believe there was a guest here...";
-		mes "By the way, what brought you here?";
+		mes "我不记得。";
+		mes "好像有客人来过……";
+		mes "对了，你们怎么来了？";
 		next;
 		cutin "ep16_skia_nerius01",0;
 		mes "[斯琪亚]";
-		mes "Well, it is almost the time, so...";
-		unittalk getcharid(3), "" + strcharinfo(0) + " : Time?", bc_self;
+		mes "嗯，时间快到了，所以……";
+		unittalk getcharid(3), "" + strcharinfo(0) + "：时间？", bc_self;
 		next;
 		cutin "ep16_nihi_miseria_heine01",2;
 		mes "[尼希尔]";
-		mes "I see. I guess all the preparation must have been made by now.";
-		mes "I will be damned if I waste more time here.";
+		mes "原来如此。现在应该都准备好了。";
+		mes "再在这里浪费时间可不行。";
 		next;
 		mes "[尼希尔]";
-		mes "I should get back now.";
-		mes "Phew... Fortunately, my head is clearing up.";
+		mes "我该回去了。";
+		mes "呼……幸好脑子清醒了。";
 		next;
 		mes "[尼希尔]";
-		mes "Well, then. Please excuse me.";
+		mes "那么，我先失陪了。";
 		next;
-		cloakonnpcself( "Unstable Nyhill#ep16_7690" );
+		cloakonnpcself( "状态异常的尼希尔#ep16_7690" );
 		cutin "ep16_skia_nerius03",0;
 		mes "[斯琪亚]";
-		mes "Whoa! He is fast.";
-		mes "Well, hero. Shall we get back too?";
-		mes "I'll see you again soon though.";
+		mes "哇！他真快。";
+		mes "那么，英雄，我们也回去吧？";
+		mes "不过很快又会见面。";
 		next;
 		cutin "ep16_skia_nerius01",0;
 		mes "[斯琪亚]";
-		mes "The Court Mage must have arrived by now.";
-		mes "You should go back to your room.";
+		mes "宫廷魔法师现在应该到了。";
+		mes "你该回房间了。";
 		erasequest 7690;// Where Is Nyhill?
 		setquest 7691;// Waiting for the Ritual
 		ep16_royal = 7;
@@ -1567,68 +1567,68 @@ prt_cas,25,35,5	script	斯琪亚·内里乌斯#ep16_7690	4_EP16_SKIA,{
 		end;
 	}
 }
-prt_cas,27,34,3	duplicate(斯琪亚·内里乌斯#ep16_7690)	Unstable Nyhill#ep16_7690	4_EP16_NIHIL
+prt_cas,27,34,3	duplicate(斯琪亚·内里乌斯#ep16_7690)	状态异常的尼希尔#ep16_7690	4_EP16_NIHIL
 
 prt_cas,27,43,0	script	#ep16_evt_7690	HIDDEN_WARP_NPC,1,1,{
 	end;
 OnTouch:
 	if (ep16_royal == 6) {
-		cloakoffnpcself( "Unstable Nyhill#ep16_7690" );
+		cloakoffnpcself( "状态异常的尼希尔#ep16_7690" );
 		cloakoffnpcself( "斯琪亚·内里乌斯#ep16_7690" );
 		setpcblock PCBLOCK_NPC, true;
 		sleep2 1000;
 		setpcblock PCBLOCK_NPC, false;
-		npctalk "Are you OK?", "斯琪亚·内里乌斯#ep16_7690", bc_self;
+		npctalk "你没事吧？", "斯琪亚·内里乌斯#ep16_7690", bc_self;
 	}
 	end;
 OnInit:
 	cloakonnpc "斯琪亚·内里乌斯#ep16_7690";
-	cloakonnpc "Unstable Nyhill#ep16_7690";
+	cloakonnpc "状态异常的尼希尔#ep16_7690";
 	end;
 }
 
 // prt_lib
-prt_lib,76,80,3	script	Lindt the Librarian#ep16_lindt	1_M_01,{
+prt_lib,76,80,3	script	图书管理员林德#ep16_lindt	1_M_01,{
 	if (ep16_royal == 11) {
-		mes "[Librarian]";
-		mes "Do you want to take a look at the material?";
-		mes "It is still here since I haven't taken it away.";
+		mes "[图书管理员]";
+		mes "要看看资料吗？";
+		mes "我还没收走，所以还在这里。";
 		next;
-		mes "The document is the royal record about the Room of Consciousness.";
-		npctalk "It would be no use though...", "", bc_self;
+		mes "这是关于意识房间的王室记录。";
+		npctalk "不过大概没用……", "", bc_self;
 		next;
-		mes "There are several blank pages in-between.";
-		unittalk getcharid(3), "" + strcharinfo(0) + " : Why are these blank pages here?", bc_self;
+		mes "中间有几页空白。";
+		unittalk getcharid(3), "" + strcharinfo(0) + "：为什么有空白页？", bc_self;
 		next;
-		mes "[Librarian]";
-		mes "Read the text written above.";
-		mes "Yes, it's here.";
+		mes "[图书管理员]";
+		mes "读读上面写的字。";
+		mes "对，在这里。";
 		next;
-		mes "[Librarian]";
-		mes "^4d4dffOnly the ones who know the truth can read this.^000000";
-		mes "See?";
+		mes "[图书管理员]";
+		mes "^4d4dff只有知道真相的人才能读到这里。^000000";
+		mes "明白了吗？";
 		next;
-		mes "[Librarian]";
-		mes "Considering the time which has passed, there must be no one who knows this truth left now.";
-		mes "In other words, this part will remain a mystery forever.";
+		mes "[图书管理员]";
+		mes "过了这么久，现在应该没人知道这个真相了。";
+		mes "也就是说，这部分会永远成谜。";
 		next;
-		mes "[Librarian]";
-		mes "That's why Archduke Stoltze gave up and left.";
-		mes "Since you have seen this, let me put this back in place.";
+		mes "[图书管理员]";
+		mes "所以施托尔策大公放弃离开了。";
+		mes "既然你看到了，我把它放回去。";
 		ep16_royal = 12;
 		close;
 	}
 	if (ep16_royal == 22) {
-		mes "[Librarian]";
+		mes "[图书管理员]";
 		mes "Oh, you are here.";
 		mes "Archduke Grantz has been waiting for you for a while.";
 		close;
 	}
-	mes "[Librarian]";
+	mes "[图书管理员]";
 	mes "My family has been managing the Past Memories of the Royal Family for generations.";
 	mes "No wonder since it is the exclusive scriptorium for the royal family.";
 	next;
-	mes "[Librarian]";
+	mes "[图书管理员]";
 	mes "It has not been long since I took over this position so I am not really that used to this.";
 	mes "I never expected to be visited by these many archdukes...";
 	close;
@@ -1998,7 +1998,7 @@ prt_lib,80,79,3	script	克罗内克·G·海涅#ep16_01_lib01	4_EP16_GRANZ,{
 		mes "但不是现在。";
 		next;
 		npctalk "哇……", "魔法师尼勒姆#ep16_warp", bc_self;
-		mes "[Librarian]";
+		mes "[图书管理员]";
 		mes "那我……怎么办？";
 		next;
 		mes "[克罗内克]";
@@ -2816,7 +2816,7 @@ prt_cas,213,177,5	script	Royal Chef#ep16_1	1_ETC_01,4,4,{
 S_Text:
 	mes "[Royal Chef]";
 	mes "Hey, you! I have been looking for you!";
-	mes "What are you doing here?";
+	mes "你在这里做什么？";
 	emotion ET_SURPRISE;
 	next;
 	mes "[Royal Chef]";
