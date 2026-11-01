@@ -435,8 +435,8 @@ prt_cas_q,26,30,3	script	贝尔侍从长#ep16_main	4_M_RUSMAN1,{
 		mes "By the way, the Court Mage has visited just before.";
 		mes "The Court Magician will be back soon after visiting other families.";
 		next;
-		cloakoffnpcself( "Court Mage Nillem#ep16_wiz01" );
-		npctalk "Yeah! Here comes Nillem the genius mage!", "Court Mage Nillem#ep16_wiz01", bc_self;
+		cloakoffnpcself( "宫廷魔法师尼勒姆#ep16_wiz01" );
+		npctalk "Yeah! Here comes Nillem the genius mage!", "宫廷魔法师尼勒姆#ep16_wiz01", bc_self;
 		sleep2 1000;
 		mes "[贝尔]";
 		mes "There... Is the magician.";
@@ -445,23 +445,23 @@ prt_cas_q,26,30,3	script	贝尔侍从长#ep16_main	4_M_RUSMAN1,{
 		setquest 7692;// Attend the Ritual
 		ep16_royal = 8;
 		sleep2 3000;
-		npctalk "You must be the famous " + strcharinfo(0) + "!", "Court Mage Nillem#ep16_wiz01", bc_self;
+		npctalk "You must be the famous " + strcharinfo(0) + "!", "宫廷魔法师尼勒姆#ep16_wiz01", bc_self;
 		sleep2 3000;
-		npctalk "Oh, nice to meet you.", "Court Mage Nillem#ep16_wiz01", bc_self;
+		npctalk "Oh, nice to meet you.", "宫廷魔法师尼勒姆#ep16_wiz01", bc_self;
 		sleep2 3000;
-		npctalk "There are a lot of things that I would like to talk about with you...", "Court Mage Nillem#ep16_wiz01", bc_self;
+		npctalk "There are a lot of things that I would like to talk about with you...", "宫廷魔法师尼勒姆#ep16_wiz01", bc_self;
 		sleep2 3000;
-		npctalk "But I guess we don't have enough time for that.", "Court Mage Nillem#ep16_wiz01", bc_self;
+		npctalk "But I guess we don't have enough time for that.", "宫廷魔法师尼勒姆#ep16_wiz01", bc_self;
 		sleep2 3000;
-		npctalk "Let's move to the Room of Consciousness now.", "Court Mage Nillem#ep16_wiz01", bc_self;
+		npctalk "Let's move to the Room of Consciousness now.", "宫廷魔法师尼勒姆#ep16_wiz01", bc_self;
 		sleep2 3000;
-		npctalk "Don't be surprised by the sudden disappearance!", "Court Mage Nillem#ep16_wiz01", bc_self;
+		npctalk "Don't be surprised by the sudden disappearance!", "宫廷魔法师尼勒姆#ep16_wiz01", bc_self;
 		sleep2 3000;
-		npctalk "Three!", "Court Mage Nillem#ep16_wiz01", bc_self;
+		npctalk "Three!", "宫廷魔法师尼勒姆#ep16_wiz01", bc_self;
 		sleep2 1000;
-		npctalk "Two!", "Court Mage Nillem#ep16_wiz01", bc_self;
+		npctalk "Two!", "宫廷魔法师尼勒姆#ep16_wiz01", bc_self;
 		sleep2 1000;
-		npctalk "One!", "Court Mage Nillem#ep16_wiz01", bc_self;
+		npctalk "One!", "宫廷魔法师尼勒姆#ep16_wiz01", bc_self;
 		sleep2 500;
 		warp "prt_lib",89,44;
 		end;
@@ -474,26 +474,26 @@ prt_cas_q,26,30,3	script	贝尔侍从长#ep16_main	4_M_RUSMAN1,{
 		npctalk "You are back already?", "", bc_self;
 		setpcblock PCBLOCK_NPC, true;
 		sleep2 1000;
-		cloakoffnpcself( "Court Mage Nillem#ep16_wiz01" );
-		npctalk "Oh! Here you are!", "Court Mage Nillem#ep16_wiz01", bc_self;
+		cloakoffnpcself( "宫廷魔法师尼勒姆#ep16_wiz01" );
+		npctalk "Oh! Here you are!", "宫廷魔法师尼勒姆#ep16_wiz01", bc_self;
 		sleep2 500;
 		npctalk "Eh?", "", bc_self;
 		sleep2 3000;
-		npctalk "Oh, there must have been a mistake!", "Court Mage Nillem#ep16_wiz01", bc_self;
+		npctalk "Oh, there must have been a mistake!", "宫廷魔法师尼勒姆#ep16_wiz01", bc_self;
 		sleep2 3000;
-		npctalk "Well, let's go back! You shouldn't be here now!", "Court Mage Nillem#ep16_wiz01", bc_self;
+		npctalk "Well, let's go back! You shouldn't be here now!", "宫廷魔法师尼勒姆#ep16_wiz01", bc_self;
 		sleep2 3000;
-		npctalk "Let's count it as my mistake this time-", "Court Mage Nillem#ep16_wiz01", bc_self;
+		npctalk "Let's count it as my mistake this time-", "宫廷魔法师尼勒姆#ep16_wiz01", bc_self;
 		sleep2 3000;
-		npctalk "Let's move to the Room of Consciousness now.", "Court Mage Nillem#ep16_wiz01", bc_self;
+		npctalk "Let's move to the Room of Consciousness now.", "宫廷魔法师尼勒姆#ep16_wiz01", bc_self;
 		sleep2 3000;
-		npctalk "Are you ready?", "Court Mage Nillem#ep16_wiz01", bc_self;
+		npctalk "Are you ready?", "宫廷魔法师尼勒姆#ep16_wiz01", bc_self;
 		sleep2 3000;
-		npctalk "Three!", "Court Mage Nillem#ep16_wiz01", bc_self;
+		npctalk "Three!", "宫廷魔法师尼勒姆#ep16_wiz01", bc_self;
 		sleep2 1000;
-		npctalk "Two!", "Court Mage Nillem#ep16_wiz01", bc_self;
+		npctalk "Two!", "宫廷魔法师尼勒姆#ep16_wiz01", bc_self;
 		sleep2 1000;
-		npctalk "One!", "Court Mage Nillem#ep16_wiz01", bc_self;
+		npctalk "One!", "宫廷魔法师尼勒姆#ep16_wiz01", bc_self;
 		sleep2 500;
 		setpcblock PCBLOCK_NPC, false;
 		warp "prt_lib",89,44;
@@ -581,8 +581,8 @@ prt_cas_q,26,30,3	script	贝尔侍从长#ep16_main	4_M_RUSMAN1,{
 		mes "Court Mage Nillem opened the door and left right away.";
 		mes "Saying, 'Where are you?' " + strcharinfo(0) + " The magician must be looking for you.";
 		close2;
-		cloakoffnpcself( "Court Mage Nillem#ep16_wiz01" );
-		npctalk "There you are!", "Court Mage Nillem#ep16_wiz01", bc_self;
+		cloakoffnpcself( "宫廷魔法师尼勒姆#ep16_wiz01" );
+		npctalk "There you are!", "宫廷魔法师尼勒姆#ep16_wiz01", bc_self;
 		setpcblock PCBLOCK_NPC, true;
 		sleep2 500;
 		setpcblock PCBLOCK_NPC, false;
@@ -601,35 +601,35 @@ prt_cas_q,26,30,3	script	贝尔侍从长#ep16_main	4_M_RUSMAN1,{
 			close2;
 			setpcblock PCBLOCK_NPC, true;
 			sleep2 500;
-			cloakoffnpcself( "Court Mage Nillem#ep16_wiz01" );
+			cloakoffnpcself( "宫廷魔法师尼勒姆#ep16_wiz01" );
 			sleep2 500;
 			if (ep16_royal < 24) {
-				npctalk "Thank you for using the million-call ticket today!", "Court Mage Nillem#ep16_wiz01", bc_self;
+				npctalk "Thank you for using the million-call ticket today!", "宫廷魔法师尼勒姆#ep16_wiz01", bc_self;
 				sleep2 3000;
-				npctalk "You must have missed me so much-", "Court Mage Nillem#ep16_wiz01", bc_self;
+				npctalk "You must have missed me so much-", "宫廷魔法师尼勒姆#ep16_wiz01", bc_self;
 				sleep2 3000;
-				npctalk "I am almost falling for your merciless calls...", "Court Mage Nillem#ep16_wiz01", bc_self;
+				npctalk "I am almost falling for your merciless calls...", "宫廷魔法师尼勒姆#ep16_wiz01", bc_self;
 				sleep2 3000;
-				npctalk "Just kidding.", "Court Mage Nillem#ep16_wiz01", bc_self;
+				npctalk "Just kidding.", "宫廷魔法师尼勒姆#ep16_wiz01", bc_self;
 				sleep2 3000;
-				npctalk "Shall we get going now?", "Court Mage Nillem#ep16_wiz01", bc_self;
+				npctalk "Shall we get going now?", "宫廷魔法师尼勒姆#ep16_wiz01", bc_self;
 			}
 			else {
 				switch( rand(5) ) {
 				case 0:
-					npctalk "I was wondering when you'd call me! I knew you would-", "Court Mage Nillem#ep16_wiz01", bc_self;
+					npctalk "I was wondering when you'd call me! I knew you would-", "宫廷魔法师尼勒姆#ep16_wiz01", bc_self;
 					break;
 				case 1:
-					npctalk "I am thrilled that you called me so mercilessly-", "Court Mage Nillem#ep16_wiz01", bc_self;
+					npctalk "I am thrilled that you called me so mercilessly-", "宫廷魔法师尼勒姆#ep16_wiz01", bc_self;
 					break;
 				case 2:
-					npctalk "Haha, we are going again! To the past!", "Court Mage Nillem#ep16_wiz01", bc_self;
+					npctalk "Haha, we are going again! To the past!", "宫廷魔法师尼勒姆#ep16_wiz01", bc_self;
 					break;
 				case 3:
-					npctalk "Thank you for using the million-call ticket today!", "Court Mage Nillem#ep16_wiz01", bc_self;
+					npctalk "Thank you for using the million-call ticket today!", "宫廷魔法师尼勒姆#ep16_wiz01", bc_self;
 					break;
 				case 4:
-					npctalk "Here comes Genius Mage Nillem!", "Court Mage Nillem#ep16_wiz01", bc_self;
+					npctalk "Here comes Genius Mage Nillem!", "宫廷魔法师尼勒姆#ep16_wiz01", bc_self;
 					break;
 				}
 			}
@@ -821,97 +821,97 @@ prt_cas_q,28,30,3	script	卡普拉职员#ep16_s01	4_F_KAFRA2,{
 	end;
 }
 
-prt_cas_q,28,28,3	script	Court Mage Nillem#ep16_wiz01	4_M_JOB_WIZARD,{
+prt_cas_q,28,28,3	script	宫廷魔法师尼勒姆#ep16_wiz01	4_M_JOB_WIZARD,{
 	if (ep16_royal == 17) {
-		mes "[Nillem]";
-		mes "Oh, it's you, darling! I've been waiting for you!";
+		mes "[尼勒姆]";
+		mes "哦，是你啊，亲爱的！我一直在等你！";
 		next;
-		select("Darling...");
-		mes "[Nillem]";
-		mes "Oh, I am sorry that I was overly excited.";
-		mes "Exploring through the fissure of dimensions to uncover the secret of the palace...!";
+		select("亲爱的……");
+		mes "[尼勒姆]";
+		mes "哦，抱歉我太兴奋了。";
+		mes "穿过次元裂缝探索王宫的秘密……！";
 		next;
-		mes "[Nillem]";
-		mes "No mage would say no to that! No wonder I am excited!";
+		mes "[尼勒姆]";
+		mes "没有魔法师会拒绝这种事！难怪我这么兴奋！";
 		next;
-		select("By the way, why did you choose me?");
-		mes "[Nillem]";
-		mes "Well, because a royalty is picky and useless...";
+		select("不过，为什么选我？");
+		mes "[尼勒姆]";
+		mes "因为王族又挑剔又没用……";
 		next;
-		mes "[Nillem]";
-		mes "See, the current head of the family and the heir are not supposed to do anything dangerous.";
-		mes "So are the heirs to the throne.";
+		mes "[尼勒姆]";
+		mes "你看，现任家主和继承人不能做危险的事。";
+		mes "王位继承人也是如此。";
 		next;
-		mes "[Nillem]";
-		mes "Did you see Peter in bed?";
-		mes "......No harm should be done to him, you know.";
+		mes "[尼勒姆]";
+		mes "你看到躺在床上的彼得了吗？";
+		mes "……不能让他受到伤害。";
 		next;
-		mes "[Nillem]";
-		mes "Not this, not that... After removing all those things, there aren't many left for the aristocrats other than paper work and socializing.";
-		mes "What can they do?";
+		mes "[尼勒姆]";
+		mes "这也不行，那也不行……排除这些之后，贵族能做的就只剩文书和社交了。";
+		mes "他们还能做什么？";
 		next;
-		mes "[Nillem]";
-		mes "Moreover, it doesn't suit me to take care of them. Hahahahahaha!";
+		mes "[尼勒姆]";
+		mes "而且我也不适合照顾他们。哈哈哈哈！";
 		next;
-		select("And, why are you working as a Court Mage.");
-		mes "[Nillem]";
-		mes "For the stability and high income-";
-		mes "The palace has paid the tuition during my study in Eclage as well! How generous!";
+		select("那你为什么当宫廷魔法师？");
+		mes "[尼勒姆]";
+		mes "为了稳定和高收入——";
+		mes "我在埃克拉珠留学时的学费也是王宫出的！多大方！";
 		next;
-		mes "[Nillem]";
-		mes "Ahem. Anyways, it has all been prepared.";
-		mes "Since the distortion appeared in the Past Memories of the Royal Family, I installed the gate there.";
+		mes "[尼勒姆]";
+		mes "咳。总之，都准备好了。";
+		mes "王家过去的记忆中出现了扭曲，所以我在那里设置了传送门。";
 		next;
-		mes "[Nillem]";
-		mes "From now on, you can ^4d4dffcome to the Past Memories of the Royal Family right away^000000, or...";
-		mes "Right. Let me give you the ^4d4dffmillion Nillem call ticket^000000.";
-		mes "My treat!";
+		mes "[尼勒姆]";
+		mes "从现在起，你可以^4d4dff直接前往王家过去的记忆^000000，或者……";
+		mes "对了，给你这张^4d4dff百万尼勒姆呼叫券^000000。";
+		mes "我请客！";
 		next;
-		select("The... Million Nillem call ticket?");
-		mes "[Nillem]";
-		mes "Yes. You can call me anytime via this Chamberlain here if you wan to see me!";
+		select("百万尼勒姆呼叫券？");
+		mes "[尼勒姆]";
+		mes "对，想见我的话，可以随时通过这里的侍从长叫我！";
 		next;
-		mes "[Nillem]";
-		mes "I'll be here immediately like a flash of lightning-";
-		mes "Well, then, shall we get going?";
+		mes "[尼勒姆]";
+		mes "我会像闪电一样立刻出现——";
+		mes "那么，我们出发吧？";
 		ep16_royal = 18;
 		next;
-		if (select( "Let's go now!", "I need to make some preparations." ) == 2) {
-			mes "[Nillem]";
-			mes "Then, let me know when you are ready.";
-			mes "If I don't show up, come to the ^4d4dffPast Memories of the Royal Family^000000 right away.";
+		if (select( "现在就走！", "我还需要准备一下。" ) == 2) {
+			mes "[尼勒姆]";
+			mes "那你准备好了就告诉我。";
+			mes "如果我没出现，就直接去^4d4dff王家过去的记忆^000000。";
 			next;
-			mes "[Nillem]";
-			mes "You know how to get there.";
+			mes "[尼勒姆]";
+			mes "你知道怎么去。";
 			close;
 		}
-		mes "[Nillem]";
-		mes "Then, close your eyes...";
-		mes "One!";
+		mes "[尼勒姆]";
+		mes "那么，闭上眼睛……";
+		mes "一！";
 		close2;
 		warp "prt_lib",89,44;
 		end;
 	}
 	if (ep16_royal > 17) {
-		mes "[Nillem]";
-		mes "Haha, then, let's go to the Past Memories of the Royal Family!";
+		mes "[尼勒姆]";
+		mes "哈哈，那我们去王家过去的记忆吧！";
 		next;
-		if (select( "Move to the Past Memories of the Royal Family", "I don't need it!" ) == 2) {
-			mes "[Nillem]";
-			mes "I like how you refuse so flatly";
-			mes "May I hang out here for a while since I am already here?";
+		if (select( "前往王家过去的记忆", "不需要！" ) == 2) {
+			mes "[尼勒姆]";
+			mes "我就喜欢你拒绝得这么干脆。";
+			mes "既然都来了，我能在这里待一会儿吗？";
 			close;
 		}
-		mes "[Nillem]";
-		mes "Then, close your eyes...";
-		mes "One!";
+		mes "[尼勒姆]";
+		mes "那么，闭上眼睛……";
+		mes "一！";
 		close2;
 		warp "prt_lib",89,44;
 		end;
 	}
 	end;
 OnInit:
-	cloakonnpc "Court Mage Nillem#ep16_wiz01";
+	cloakonnpc "宫廷魔法师尼勒姆#ep16_wiz01";
 	cloakonnpc "卡普拉职员#ep16_s01";
 	cloakonnpc "Giant Beast Manager#ep16_s02";
 	end;
@@ -1634,7 +1634,7 @@ prt_lib,76,80,3	script	Lindt the Librarian#ep16_lindt	1_M_01,{
 	close;
 }
 
-prt_lib,91,85,3	script	Mage Nillem#ep16_warp	4_M_JOB_WIZARD,{
+prt_lib,91,85,3	script	魔法师尼勒姆#ep16_warp	4_M_JOB_WIZARD,{
 	if (ep16_royal < 8)
 		end;
 	switch( ep16_royal ) {
@@ -1644,112 +1644,112 @@ prt_lib,91,85,3	script	Mage Nillem#ep16_warp	4_M_JOB_WIZARD,{
 			mes "Only the party leader can proceed with a memorial event. Try again after forming a party.^000000";
 			close;
 		}
-		mes "[Nillem]";
+		mes "[尼勒姆]";
 		mes "Phew, did you see? We are the last ones entering.";
 		mes "Others must have entered already.";
 		next;
 		if (select( "Enter now.", "Do not enter." ) == 2) {
-			mes "[Nillem]";
+			mes "[尼勒姆]";
 			mes "Haha, it is not good either when it is too late...";
 			close;
 		}
 		if (instance_create("Ritual of Blessing") < 0) {
-			mes "[Nillem]";
+			mes "[尼勒姆]";
 			mes "Hum? I don't know what is going on. We don't seem to be able to enter now.";
 			mes "It is a secret area which is made to open upon showing magical power.";
 			next;
-			mes "[Nillem]";
+			mes "[尼勒姆]";
 			mes "Let's wait until it stabilizes.";
 			close;
 		}
-		mes "[Nillem]";
+		mes "[尼勒姆]";
 		mes "Whoa! The gate to the next area has been activated!";
 		mes "Well, let's get in there!";
 		cloakoffnpcself( "Room of Consciousness#evt_gate01" );
 		close;
 	case 9:
-		mes "[Nillem]";
+		mes "[尼勒姆]";
 		mes "Has anything happened in there?";
 		mes "What on earth...";
 		next;
-		mes "[Nillem]";
+		mes "[尼勒姆]";
 		mes "It is nothing that I should know and nowhere I should be part of. But still, I am curious about it.";
 		next;
-		mes "[Nillem]";
+		mes "[尼勒姆]";
 		mes "The movement of magical flow seems peculiar.";
 		mes "...I wonder if it is my imagination that the gate looks unstable.";
 		close;
 	case 10:
-		mes "[Nillem]";
+		mes "[尼勒姆]";
 		mes "Oh, this is troublesome.";
 		mes "There seems to be a problem with the gate now.";
 		next;
-		mes "[Nillem]";
+		mes "[尼勒姆]";
 		mes "Use of magic is restricted in this area. All I can do is to activate the gate here...";
 		next;
 		select("Where you are going with this...");
-		mes "[Nillem]";
+		mes "[尼勒姆]";
 		mes "Oh, I mean...";
 		mes "You should get out here on foot.";
 		mes "Well, since things have turned out this way.";
 		next;
-		mes "[Nillem]";
+		mes "[尼勒姆]";
 		mes "^4d4dffHere is the material what the archduke has seen earlier.^000000";
 		mes "" + strcharinfo(0) + ", why don't you take a look too?";
 		next;
-		mes "[Nillem]";
+		mes "[尼勒姆]";
 		mes "Well, not that I am curious about it.";
 		npctalk "(I really am...!)", "", bc_self;
 		next;
-		mes "[Nillem]";
+		mes "[尼勒姆]";
 		mes "Just out of curiosity.... No, I mean ardor for study. Haha...";
 		mes "...Yes? Let's take a look... Make sure to share what is in there with me-";
 		next;
-		mes "[Nillem]";
+		mes "[尼勒姆]";
 		mes "Aren't you curious?";
 		mes "Since you are out here with the archduke, the librarian would show it to you with no doubt, you know.";
 		next;
-		mes "[Nillem]";
+		mes "[尼勒姆]";
 		mes "I'll try to find a way to reactivate the gate.";
 		ep16_royal = 11;
 		setquest 7694;// I'd Like to See that Too
 		close;
 	case 11:
-		mes "[Nillem]";
+		mes "[尼勒姆]";
 		mes "Aren't you curious?";
 		mes "Since you are out here with the archduke, the librarian would show it to you with no doubt, you know.";
 		next;
-		mes "[Nillem]";
+		mes "[尼勒姆]";
 		mes "I'll try to find a way to reactivate the gate.";
 		close;
 	case 12:
-		mes "[Nillem]";
+		mes "[尼勒姆]";
 		mes "...Oh well. ^4d4dffOnly open to the ones who know the truth^000000...";
 		mes "Argh, what a waste.";
 		next;
-		mes "[Nillem]";
+		mes "[尼勒姆]";
 		mes "Well, it is no use to stick around here.";
 		mes "I could cut the air with a knife earlier. Let's get out now.";
 		next;
-		mes "[Nillem]";
+		mes "[尼勒姆]";
 		mes "I took a look at the gate.";
 		mes "Has there been a big explosion of magic inside before?";
 		next;
-		mes "[Nillem]";
+		mes "[尼勒姆]";
 		mes "I sense some sort of magical distortion, which is similar to...";
 		mes "The ^4d4dffCrack of Dimension^000000!";
 		next;
-		mes "[Nillem]";
+		mes "[尼勒姆]";
 		mes "Can we make a gate of dimension here?";
 		mes "That would be fun too.";
 		unittalk getcharid(3), "" + strcharinfo(0) + " : So how can we get out?", bc_self;
 		next;
-		mes "[Nillem]";
+		mes "[尼勒姆]";
 		mes "Right.";
 		mes "Since the gate has become useless...";
 		mes "Let's walk out of here.";
 		next;
-		mes "[Nillem]";
+		mes "[尼勒姆]";
 		mes "Do you see the crusader there?";
 		mes "He manages the entrance.";
 		mes "He will guide you.";
@@ -1762,20 +1762,20 @@ prt_lib,91,85,3	script	Mage Nillem#ep16_warp	4_M_JOB_WIZARD,{
 	case 15:
 	case 16:
 	case 17:
-		mes "[Nillem]";
+		mes "[尼勒姆]";
 		mes "Although there are direct gates installed in the palace for convenience,";
 		mes "There are passages you can walk directly in.";
 		next;
-		mes "[Nillem]";
+		mes "[尼勒姆]";
 		mes "This is one of the rare chances to use the secret passage.";
 		mes "Hahahaha...";
 		close;
 	case 18:
-		mes "[Nillem]";
+		mes "[尼勒姆]";
 		mes "Haha, shall I get ready?";
 		mes "Come here! ^4d4dffDimension Warper MkII^000000!!";
 		next;
-		mes "[Nillem]";
+		mes "[尼勒姆]";
 		mes "Well, let's go, dear customer.";
 		mes "I wonder what we are going to see this time!";
 		setquest 7700;// Once More!
@@ -1785,41 +1785,41 @@ prt_lib,91,85,3	script	Mage Nillem#ep16_warp	4_M_JOB_WIZARD,{
 	case 19:
 	case 20:
 	case 21:
-		mes "[Nillem]";
+		mes "[尼勒姆]";
 		mes "We haven't solved all the secrets yet!";
 		mes "Well, we have to go back!";
 		next;
 		cloakoffnpcself( "Dimension Warper MkII#ep16_lib" );
-		mes "[Nillem]";
+		mes "[尼勒姆]";
 		mes "Let's finish it off this time!";
 		close;
 	case 22:
-		mes "[Nillem]";
+		mes "[尼勒姆]";
 		mes "What are you doing?";
 		mes "Go grill the librarian to dig out the truth!";
 		next;
 		cloakoffnpcself( "克罗内克·G·海涅#ep16_01_lib01" );
-		mes "[Nillem]";
+		mes "[尼勒姆]";
 		mes "What did we go through all the trouble for?";
 		mes "Look, there is Archduke Grantz.";
 		close;
 	case 23:
-		mes "[Nillem]";
+		mes "[尼勒姆]";
 		mes "^4d4dffThe Heine family will get the approval to enter the 'Past Memories of the Royal Family'^000000, right?";
 		mes "We will see each other more often from now on then.";
 		mes "Haha, this must be what others call the destiny-隆?";
 		next;
-		mes "[Nillem]";
+		mes "[尼勒姆]";
 		mes "What are you doing?";
 		mes "Let's go see ^4d4dffDuke Friedrich to check if the approval has been issued!^000000";
 		close;
 	default:
-		mes "[Nillem]";
+		mes "[尼勒姆]";
 		mes "Today, we are going on a secret journey together again!";
 		mes "Hahaha. You'd better get excited!";
 		mes "I'll let you travel in the first class!";
 		next;
-		mes "[Nillem]";
+		mes "[尼勒姆]";
 		mes "Well, let's go, dear customer.";
 		mes "What would be waiting for us today?";
 		mes "I guess this would end up a failure again, though.";
@@ -1838,7 +1838,7 @@ prt_lib,88,90,1	script	Room of Consciousness#evt_gate01	PORTAL,{
 		mes "You can move to where the ritual of blessing is held.";
 		next;
 		if (select( "Enter.", "Do not enter." ) == 2) {
-			mes "[Nillem]";
+			mes "[尼勒姆]";
 			mes "Hum... This gate is only activated temporarily so that it doesn't last long.";
 			close;
 		}
@@ -1848,12 +1848,12 @@ prt_lib,88,90,1	script	Room of Consciousness#evt_gate01	PORTAL,{
 		}
 		switch( instance_enter("Ritual of Blessing") ) {
 		case IE_OTHER:
-			mes "[Nillem]";
+			mes "[尼勒姆]";
 			mes "Oh, well, the movement of magic seems uneasy.";
 			mes "Hum, shall we try again later?";
 			close;
 		case IE_NOINSTANCE:
-			mes "[Nillem]";
+			mes "[尼勒姆]";
 			mes "The gate to the place where the ritual is held is not activated officially.";
 			mes "Wait a minute.";
 			close;
@@ -1868,7 +1868,7 @@ prt_lib,88,90,1	script	Room of Consciousness#evt_gate01	PORTAL,{
 		}
 		end;
 	}
-	npctalk "It cannot be used now!", "Mage Nillem#ep16_warp", bc_self;
+	npctalk "It cannot be used now!", "魔法师尼勒姆#ep16_warp", bc_self;
 	end;
 OnInit:
 	cloakonnpc "Room of Consciousness#evt_gate01";
@@ -1987,7 +1987,7 @@ prt_lib,80,79,3	script	克罗内克·G·海涅#ep16_01_lib01	4_EP16_GRANZ,{
 		mes "......";
 		next;
 		select("That's it...");
-		mes "[Nillem]";
+		mes "[尼勒姆]";
 		mes "Am I going to be killed now?";
 		mes "I think I have just found out all the secrets of the royal family.";
 		mes "Aren't you going to execute me?";
@@ -1997,7 +1997,7 @@ prt_lib,80,79,3	script	克罗内克·G·海涅#ep16_01_lib01	4_EP16_GRANZ,{
 		mes "If you want, I will fulfill your wish.";
 		mes "But not now.";
 		next;
-		npctalk "Wow...", "Mage Nillem#ep16_warp", bc_self;
+		npctalk "Wow...", "魔法师尼勒姆#ep16_warp", bc_self;
 		mes "[Librarian]";
 		mes "Then... How about me?";
 		next;
@@ -2295,7 +2295,7 @@ prt_lib,85,82,5	script	Ian Walther#ep16_lib01	1_M_JOBTESTER,{
 		npctalk "Magician! Activate the gate.", "Ian Walther#ep16_lib01", bc_self;
 		setpcblock PCBLOCK_NPC, true;
 		sleep2 2000;
-		npctalk "Oh, yes. The gate has been activated since others used it earlier.", "Mage Nillem#ep16_warp", bc_self;
+		npctalk "Oh, yes. The gate has been activated since others used it earlier.", "魔法师尼勒姆#ep16_warp", bc_self;
 		sleep2 3000;
 		npctalk "Is that so? Well, then. Please excuse me.", "Ian Walther#ep16_lib01", bc_self;
 		sleep2 3000;
@@ -2317,7 +2317,7 @@ prt_lib,85,82,5	script	Ian Walther#ep16_lib01	1_M_JOBTESTER,{
 	npctalk "Magician! Activate the gate.", "Ian Walther#ep16_lib01", bc_self;
 	setpcblock PCBLOCK_NPC, true;
 	sleep2 2000;
-	npctalk "Oh, yes. The gate has been activated since others used it earlier.", "Mage Nillem#ep16_warp", bc_self;
+	npctalk "Oh, yes. The gate has been activated since others used it earlier.", "魔法师尼勒姆#ep16_warp", bc_self;
 	sleep2 3000;
 	npctalk "Is that so? Well, then. Please excuse me.", "Ian Walther#ep16_lib01", bc_self;
 	sleep2 3000;
@@ -2339,25 +2339,25 @@ prt_lib,91,78,2	duplicate(Ian Walther#ep16_lib01)	马克西米利安·雷根布尔格#ep16_
 
 prt_lib,94,82,3	script	Dimension Warper MkII#ep16_lib	PORTAL,{
 	if (ep16_royal < 18) {
-		mes "[Nillem]";
+		mes "[尼勒姆]";
 		mes "Wait, it is not ready yet.";
 		mes "Do not touch that.";
 		close;
 	}
-	mes "[Nillem]";
+	mes "[尼勒姆]";
 	mes "Let me connect the gap in the dimension by force.";
 	mes "The gap might be invisible, but it still is a crack.";
 	next;
-	mes "[Nillem]";
+	mes "[尼勒姆]";
 	mes "It will be connected to the time when a big event has taken place.";
 	mes "Are you ready?";
 	next;
 	if (select( "I am ready!", "I am not ready!" ) == 2) {
-		mes "[Nillem]";
+		mes "[尼勒姆]";
 		mes "Phew, don't be such a drag.";
 		close;
 	}
-	mes "[Nillem]";
+	mes "[尼勒姆]";
 	mes "Then, sweet dreams!";
 	close2;
 	warp "prt_lib_q",89,43;
@@ -2368,33 +2368,33 @@ OnInit:
 }
 
 // Instance Room of conciousness, daily quest
-prt_lib_q,91,85,3	script	Nillem#ep16_lib_q	4_M_JOB_WIZARD,{
+prt_lib_q,91,85,3	script	尼勒姆#ep16_lib_q	4_M_JOB_WIZARD,{
 	if (ep16_royal == 18) {
-		mes "[Nillem]";
+		mes "[尼勒姆]";
 		mes "Oh, we did it.";
 		mes "I don't know when, but it is the ^4d4dffPast Memories of the Royal Family^000000!";
 		next;
 		npctalk "Ha! I am a genius!", bc_self;
-		mes "[Nillem]";
+		mes "[尼勒姆]";
 		mes "However, I have to give it a twist to get to the place we want to go.";
 		next;
-		mes "[Nillem]";
+		mes "[尼勒姆]";
 		mes "Can I?";
 		mes "Hahaha, of course I can!";
 		npctalk "I am the only magician of dimension in this place, Nillem the Marvelous!", bc_self;
 		next;
-		mes "[Nillem]";
+		mes "[尼勒姆]";
 		mes "It is the first time for me to do this.";
 		mes "But let me twist the dimension like this.";
 		npctalk "Humph-!", bc_self;
 		specialeffect EF_BEGINSPELL;
 		next;
 		cloakoffnpcself( "Swaying Space#evt_gate02" );
-		mes "[Nillem]";
+		mes "[尼勒姆]";
 		mes "Connect the spaces by force!";
 		mes "Well, let's see what has happened here.";
 		next;
-		mes "[Nillem]";
+		mes "[尼勒姆]";
 		mes "Are you ready?";
 		mes "Talk to me when you are ready-";
 		ep16_royal = 19;
@@ -2407,64 +2407,64 @@ prt_lib_q,91,85,3	script	Nillem#ep16_lib_q	4_M_JOB_WIZARD,{
 			mes "Only the party leader can proceed with a memorial event. Try again after forming a party.^000000";
 			close;
 		}
-		mes "[Nillem]";
+		mes "[尼勒姆]";
 		mes "Then let's go and take a look what has happened in the Room of Consciousness.";
 		mes "Since I am connecting the twisted time and space once more by force,";
 		mes "I may have to use my full power to maintain this!";
 		next;
-		mes "[Nillem]";
+		mes "[尼勒姆]";
 		mes "Please, come back alive and well-";
 		next;
 		if (select( "Connect now.", "Do not go." ) == 2) {
-			mes "[Nillem]";
+			mes "[尼勒姆]";
 			mes "Haha, it is not good either when it is too late...";
 			close;
 		}
 		if (instance_create("Room of Consciousness") < 0) {
-			mes "[Nillem]";
+			mes "[尼勒姆]";
 			mes "Oh... It doesn't work well.";
 			mes "Wait, phew... Let me collect my strength again...";
 			next;
-			mes "[Nillem]";
+			mes "[尼勒姆]";
 			mes "... I'll make it work, wait a minute.";
 			close;
 		}
-		mes "[Nillem]";
+		mes "[尼勒姆]";
 		mes "Whoa! The gate to the next area has been activated!";
 		mes "Well, let's get in there!";
 		cloakoffnpcself( "Swaying Space#evt_gate02" );
 		close;
 	}
 	if (ep16_royal == 20) {
-		mes "[Nillem]";
+		mes "[尼勒姆]";
 		mes "You are here now!";
 		mes "This place has been chaotic since you were gone.";
 		next;
-		mes "[Nillem]";
+		mes "[尼勒姆]";
 		mes "Do you see the exit over there?";
 		mes "Haha, that gate leads to Prontera.";
 		next;
-		mes "[Nillem]";
+		mes "[尼勒姆]";
 		mes "And...";
 		next;
 		select("Then?");
-		mes "[Nillem]";
+		mes "[尼勒姆]";
 		mes "Prontera is being destroyed by the undead army-!";
 		mes "Right now! It is just a hot mess out there!";
 		next;
-		mes "[Nillem]";
+		mes "[尼勒姆]";
 		mes "I mean, why don't we go to watch the unknown past of Prontera,";
 		mes "Since we are already here?";
 		next;
-		mes "[Nillem]";
+		mes "[尼勒姆]";
 		mes "I have been digging around a little, and I guess we can come here anytime when we want...";
 		next;
-		mes "[Nillem]";
+		mes "[尼勒姆]";
 		mes "Well, this could be one of the parallel worlds, but we have nothing to lose anyway.";
 		mes "Why don't we go take a look?";
 		next;
 		select("If you insist.");
-		mes "[Nillem]";
+		mes "[尼勒姆]";
 		mes "I knew you would! I have been right about you!";
 		mes "What are you waiting for! Let's go out there!";
 		erasequest 7701;// Lost Imir Heart
@@ -2473,84 +2473,84 @@ prt_lib_q,91,85,3	script	Nillem#ep16_lib_q	4_M_JOB_WIZARD,{
 		close;
 	}
 	if (ep16_royal == 21) {
-		mes "[Nillem]";
+		mes "[尼勒姆]";
 		mes "Aren't we heading out?";
 		mes "Let's go!";
 		close;
 	}
 	if (ep16_royal == 22) {
-		mes "[Nillem]";
+		mes "[尼勒姆]";
 		mes "Whoa, shall we organize the thoughts now?";
 		next;
-		mes "[Nillem]";
+		mes "[尼勒姆]";
 		mes "^4d4dffWhat was in the Room of Consciousness^000000 must have been...";
 		mes "Well, this must have something to do with ^4d4dffthe undead army attacking Prontera^000000 now.";
 		mes "Well, it must have been ^4d4dfftaken away by them^000000, am I right?";
 		next;
 		select("Right.");
-		mes "[Nillem]";
+		mes "[尼勒姆]";
 		mes "Can we stop this?";
 		mes "Or, can we take it with us?";
 		next;
-		mes "[Nillem]";
+		mes "[尼勒姆]";
 		mes "I believe our superiors will order us to do so.";
 		mes "Try whatever it takes to make it work.";
 		next;
 		select("I guess so.");
-		mes "[Nillem]";
+		mes "[尼勒姆]";
 		mes "Perhaps, well it is just my imagination though.";
 		mes "Whatever was in the Room of Consciousness was taken, right?";
 		mes "However, the royal families have been performing the ritual without knowing that somehow.";
 		next;
-		mes "[Nillem]";
+		mes "[尼勒姆]";
 		mes "They must have done something or it must have returned...";
 		mes "This could meet the condition to see the sealed part of the ^4d4dffPast Memories of the Royal Family^000000...";
 		next;
 		select("You mean, the ones who know the truth?");
-		mes "[Nillem]";
+		mes "[尼勒姆]";
 		mes "Yes, I mean that. If this is the truth which is the key to open the seal,";
 		mes "We are bringing an important piece of information back with us.";
 		next;
-		mes "[Nillem]";
+		mes "[尼勒姆]";
 		mes "We didn't protect or take the thing...";
 		mes "But we know the truth now. It will break the seal of the document...";
 		next;
-		mes "[Nillem]";
+		mes "[尼勒姆]";
 		mes "As the secret of the royal family is revealed, we will get the missing pieces of the puzzle.";
 		mes "Hahahaha, and you are the one who would be the center of all that, my darling!";
 		next;
 		select("Don't call me that!");
-		mes "[Nillem]";
+		mes "[尼勒姆]";
 		mes "What about it?";
 		mes "We will see each other everyday from now on, won't we?";
 		unittalk getcharid(3), "" + strcharinfo(0) + " : ......Phew..", bc_self;
 		next;
-		mes "[Nillem]";
+		mes "[尼勒姆]";
 		mes "Well, shall we go back then?";
 		mes "Our mission here is done for now!";
 		next;
-		mes "[Nillem]";
+		mes "[尼勒姆]";
 		mes "Let's go back!";
 		mes "Nothing good can be done staying in a place which is not of our time too long";
 		next;
-		mes "[Nillem]";
+		mes "[尼勒姆]";
 		mes "Well, then get ready!";
 		mes "Three!";
 		sleep2 2000;
 		mes "Two!";
 		sleep2 1000;
-		mes "One!";
+		mes "一！";
 		close2;
 		warp "prt_lib",88,80;
 		end;
 	}
 	if (ep16_royal > 23) {
-		mes "[Nillem]";
+		mes "[尼勒姆]";
 		mes "Hahaha, I like this place now.";
 		mes "My darling, what do you want me to do now?";
 		next;
 		if (select( "Connect to the Room of Consciousness", "Return" ) == 2) {
-			mes "[Nillem]";
+			mes "[尼勒姆]";
 			mes "As you wish!";
 			close2;
 			warp "prt_lib_q",89,43;
@@ -2560,35 +2560,35 @@ prt_lib_q,91,85,3	script	Nillem#ep16_lib_q	4_M_JOB_WIZARD,{
 		case -1:
 			switch( checkquest(7705,HUNTING) ) {
 			case -1:
-				mes "[Nillem]";
+				mes "[尼勒姆]";
 				mes "Did you get the mission from the Heine family?";
 				mes "It doesn't seem like it.";
 				next;
-				mes "[Nillem]";
+				mes "[尼勒姆]";
 				mes "Hey, this really is hard work!";
 				mes "Let's go there when we are on a mission, OK?";
 				next;
-				mes "[Nillem]";
+				mes "[尼勒姆]";
 				mes "Do you see the dark circles under my eyes?";
 				mes "I'll do whatever you like to do, but!";
 				next;
-				mes "[Nillem]";
+				mes "[尼勒姆]";
 				mes "This is too much.";
 				mes "We cannot change the past event too much.";
 				mes "Those people must have learned it by now.";
 				next;
-				mes "[Nillem]";
+				mes "[尼勒姆]";
 				mes "Well, I guess it would be no use explaining it...";
 				next;
-				mes "[Nillem]";
+				mes "[尼勒姆]";
 				mes "It would have been better if they didn't know about it at all.";
 				mes "This may end up another torture for them, tut tut...";
 				next;
-				mes "[Nillem]";
+				mes "[尼勒姆]";
 				mes "Therefore, since I am a dedicated public official!";
 				mes "I open the gate when there is a mission.";
 				next;
-				mes "[Nillem]";
+				mes "[尼勒姆]";
 				mes "Why?";
 				mes "Because I am tired-";
 				close;
@@ -2599,62 +2599,62 @@ prt_lib_q,91,85,3	script	Nillem#ep16_lib_q	4_M_JOB_WIZARD,{
 					mes "Only the party leader can proceed with a memorial event. Try again after forming a party.^000000";
 					close;
 				}
-				mes "[Nillem]";
+				mes "[尼勒姆]";
 				mes "Then let's go and take a look what has happened in the Room of Consciousness.";
 				mes "Since I am connecting the twisted time and space once more by force,";
 				mes "I may have to use my full power to maintain this!";
 				next;
-				mes "[Nillem]";
+				mes "[尼勒姆]";
 				mes "Please, come back alive and well-";
 				next;
 				if (select( "Connect now.", "Do not go." ) == 2) {
-					mes "[Nillem]";
+					mes "[尼勒姆]";
 					mes "Haha, it is not good either when it is too late...";
 					close;
 				}
 				if (instance_create("Room of Consciousness") < 0) {
-					mes "[Nillem]";
+					mes "[尼勒姆]";
 					mes "Oh... It doesn't work well.";
 					mes "Wait, phew... Let me collect my strength again...";
 					next;
-					mes "[Nillem]";
+					mes "[尼勒姆]";
 					mes "... I'll make it work, wait a minute.";
 					close;
 				}
-				mes "[Nillem]";
+				mes "[尼勒姆]";
 				mes "Whoa! The gate to the next area has been activated!";
 				mes "Well, let's get in there!";
 				cloakoffnpcself( "Swaying Space#evt_gate02" );
 				close;
 			case 2:
-				mes "[Nillem]";
+				mes "[尼勒姆]";
 				mes "Ha, since our work here is done, you shall go and report to Archduke Stoltze, right?";
 				mes "Ha, ha, this it for today-";
 				next;
-				mes "[Nillem]";
+				mes "[尼勒姆]";
 				mes "Phew, it was difficult to maintain it. It was very difficult.";
 				close;
 			}
 		case 0:
 		case 1:
-			mes "[Nillem]";
+			mes "[尼勒姆]";
 			mes "Hum... I am afraid it would be difficult.";
 			mes "Even for a genius magician like yours truly, there is a certain limit. I am a human after all.";
 			next;
-			mes "[Nillem]";
+			mes "[尼勒姆]";
 			mes "Connecting multiple dimensions is not as easy as it sounds.";
 			mes "Please cut me some slack!";
 			next;
-			mes "[Nillem]";
+			mes "[尼勒姆]";
 			mes "Let me do this when the raging magical flow is stabilized-????";
 			close;
 		case 2:
 			erasequest 7706;// Nillem Is Not Almighty
-			mes "[Nillem]";
+			mes "[尼勒姆]";
 			mes "Hum... Shall I clear the surroundings a little?";
 			mes "Wait, I'll get ready.";
 			next;
-			mes "[Nillem]";
+			mes "[尼勒姆]";
 			mes "It won't take long. Please wait.";
 			close;
 		}
@@ -2676,7 +2676,7 @@ prt_lib_q,88,90,1	script	Swaying Space#evt_gate02	4_ENERGY_RED,{
 		mes "You can move to the place where the piece of Ymir Heart was in the past.";
 		next;
 		if (select( "Enter.", "Do not enter." ) == 2) {
-			mes "[Nillem]";
+			mes "[尼勒姆]";
 			mes "Hum, I have just torn and connected these spaces by force.";
 			mes "Such thing is possible since I am a genius!";
 			close;
@@ -2687,12 +2687,12 @@ prt_lib_q,88,90,1	script	Swaying Space#evt_gate02	4_ENERGY_RED,{
 		}
 		switch( instance_enter("Room of Consciousness") ) {
 		case IE_OTHER:
-			mes "[Nillem]";
+			mes "[尼勒姆]";
 			mes "Oh, well, the movement of magic seems uneasy.";
 			mes "Hum, shall we try again later?";
 			close;
 		case IE_NOINSTANCE:
-			mes "[Nillem]";
+			mes "[尼勒姆]";
 			mes "Hum, is it too difficult to connect it by force?";
 			mes "Wait a minute.";
 			close;
@@ -14445,131 +14445,131 @@ prt_cas,180,251,3	script	Guardian Knight#ep16_prigate02	4_M_CRU,{
 }
 
 // Prontera of the past
-prt_q,157,334,3	script	Nillem#ep16_pprt01	4_M_JOB_WIZARD,{
+prt_q,157,334,3	script	尼勒姆#ep16_pprt01	4_M_JOB_WIZARD,{
 	if (ep16_royal == 21) {
-		mes "[Nillem]";
+		mes "[尼勒姆]";
 		mes "How terrifying.";
 		mes "This must be Prontera in the past?";
 		mes "I guess we have picked the right time to be here-";
 		next;
-		mes "[Nillem]";
+		mes "[尼勒姆]";
 		mes "Shall we look around more?";
 		mes "Or go back?";
 		next;
 		select("It that possible?");
-		mes "[Nillem]";
+		mes "[尼勒姆]";
 		mes "Whoa, don't you underestimate me.";
 		mes "I am a Court Mage.";
 		mes "I studied in Eclage.";
 		next;
-		mes "[Nillem]";
+		mes "[尼勒姆]";
 		mes "I have also learned a lot of things at the Cat Paw Services!";
 		mes "I believe that I have the most thorough knowledge when it comes to the crack of dimension!";
 		next;
-		mes "[Nillem]";
+		mes "[尼勒姆]";
 		mes "As long as it is from a place on the crack of dimension,";
 		mes "It is a piece of care to go back!";
 		next;
-		mes "[Nillem]";
+		mes "[尼勒姆]";
 		mes "Since we don't belong to this time, it is much easier to get out than to enter.";
 		next;
-		mes "[Nillem]";
+		mes "[尼勒姆]";
 		mes "So, what are you going to do?";
 		setquest 7703;// Who Knows the Truth
 		erasequest 7702;// Prontera at the Time
 		ep16_royal = 22;
 		next;
 		if (select( "Let's get in.", "Let's go back to our time." ) == 1) {
-			mes "[Nillem]";
+			mes "[尼勒姆]";
 			mes "Do you remember the gate we got out?";
 			mes "It is supposed to be connected to the inside of the palace.";
 			next;
-			mes "[Nillem]";
+			mes "[尼勒姆]";
 			mes "However, we arrived here. I guess the spaces are twisted a little so that they are connected.";
 			next;
-			mes "[Nillem]";
+			mes "[尼勒姆]";
 			mes "I have already experimented this. If you enter the entrance to the palace,";
 			mes "It is connected to the ^4d4dffPast Memories of the Royal Family^000000 which we have just been to.";
 			next;
-			mes "[Nillem]";
+			mes "[尼勒姆]";
 			mes "Then, shall we march in?";
 			close;
 		}
-		mes "[Nillem]";
+		mes "[尼勒姆]";
 		mes "Whoa, shall we organize the thoughts now?";
 		next;
-		mes "[Nillem]";
+		mes "[尼勒姆]";
 		mes "^4d4dffWhat was in the Room of Consciousness^000000 must have been...";
 		mes "Well, this must have something to do with ^4d4dffthe undead army attacking Prontera^000000 now.";
 		mes "Well, it must have been ^4d4dfftaken away by them^000000, am I right?";
 		next;
 		select("Right.");
-		mes "[Nillem]";
+		mes "[尼勒姆]";
 		mes "Can we stop this?";
 		mes "Or, can we take it with us?";
 		next;
-		mes "[Nillem]";
+		mes "[尼勒姆]";
 		mes "I believe our superiors will order us to do so.";
 		mes "Try whatever it takes to make it work.";
 		next;
 		select("I guess so.");
-		mes "[Nillem]";
+		mes "[尼勒姆]";
 		mes "Perhaps, well it is just my imagination though.";
 		mes "Whatever was in the Room of Consciousness was taken, right?";
 		mes "However, the royal families have been performing the ritual without knowing that somehow.";
 		next;
-		mes "[Nillem]";
+		mes "[尼勒姆]";
 		mes "They must have done something or it must have returned...";
 		mes "This could meet the condition to see the sealed part of the ^4d4dffPast Memories of the Royal Family^000000...";
 		next;
 		select("You mean, the ones who know the truth?");
-		mes "[Nillem]";
+		mes "[尼勒姆]";
 		mes "Yes, I mean that. If this is the truth which is the key to open the seal,";
 		mes "We are bringing an important piece of information back with us.";
 		next;
-		mes "[Nillem]";
+		mes "[尼勒姆]";
 		mes "We didn't protect or take the thing...";
 		mes "But we know the truth now. It will break the seal of the document...";
 		next;
-		mes "[Nillem]";
+		mes "[尼勒姆]";
 		mes "As the secret of the royal family is revealed, we will get the missing pieces of the puzzle.";
 		mes "Hahahaha, and you are the one who would be the center of all that, my darling!";
 		next;
 		select("Don't call me that!");
-		mes "[Nillem]";
+		mes "[尼勒姆]";
 		mes "What about it?";
 		mes "We will see each other everyday from now on, won't we?";
 		unittalk getcharid(3), "" + strcharinfo(0) + " : ......Phew..", bc_self;
 		next;
-		mes "[Nillem]";
+		mes "[尼勒姆]";
 		mes "Well, shall we go back then?";
 		mes "Our mission here is done for now!";
 		next;
-		mes "[Nillem]";
+		mes "[尼勒姆]";
 		mes "Let's go back!";
 		mes "Nothing good can be done staying in a place which is not of our time too long";
 		next;
-		mes "[Nillem]";
+		mes "[尼勒姆]";
 		mes "Well, then get ready!";
 		mes "Three!";
 		sleep2 2000;
 		mes "Two!";
 		sleep2 1000;
-		mes "One!";
+		mes "一！";
 		close2;
 		warp "prt_lib",88,80;
 		end;
 	}
-	mes "[Nillem]";
+	mes "[尼勒姆]";
 	mes "Haha! This place is exciting...";
 	mes "...As always.";
 	next;
 	if (select( "Let's get out of here!", "I'll look around." ) == 2) {
-		mes "[Nillem]";
+		mes "[尼勒姆]";
 		mes "Have a safe trip!";
 		close;
 	}
-	mes "[Nillem]";
+	mes "[尼勒姆]";
 	mes "Let's go it!";
 	mes "Forget everything and let's get out-";
 	close2;
