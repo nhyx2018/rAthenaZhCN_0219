@@ -1306,7 +1306,7 @@ prt_cas,104,240,5	script	斯琪亚·内里乌斯#ep16_02	4_EP16_SKIA,{
 	if (ep16_royal >= 6) {
 		cutin "ep16_skia_nerius02",0;
 		mes "[斯琪亚]";
-		mes "Bad things seem to keep happening.";
+		mes "坏事好像接连不断。";
 		close3;
 	}
 }
@@ -1314,51 +1314,51 @@ prt_cas,104,240,5	script	斯琪亚·内里乌斯#ep16_02	4_EP16_SKIA,{
 prt_cas,106,240,3	script	斯皮卡·内里乌斯#ep16_02	4_EP16_SPICA,{
 	if (ep16_royal < 4) {
 		if (isbegin_quest(7684) == 0) {
-			npctalk "...Pardon me.", "斯皮卡·内里乌斯#ep16_02", bc_self;
+			npctalk "……失礼了。", "斯皮卡·内里乌斯#ep16_02", bc_self;
 			end;
 		}
 		mes "[斯皮卡]";
-		mes "You are here to enjoy the banquet, right?";
-		mes "Have you visit all other families?";
+		mes "你是来享受宴会的吧？";
+		mes "拜访过其他家族了吗？";
 		cutin "ep16_spica_nerius01",2;
 		next;
 		mes "[斯皮卡]";
-		mes "It is almost impossible to meet them usually. What a great chance you have to be able to visit them officially.";
-		mes "They are even waiting for you...";
+		mes "平时几乎见不到他们。能正式拜访真是好机会。";
+		mes "他们还在等你……";
 		next;
 		mes "[斯皮卡]";
-		mes "What a successful debut to the society!";
-		mes "Do not miss the chance when you have it.";
+		mes "多么成功的社交亮相！";
+		mes "有机会就别错过。";
 		next;
 		mes "[斯皮卡]";
-		mes "You never know what would happen!";
+		mes "你永远不知道会发生什么！";
 		close3;
 	}
 	if (ep16_royal == 4)
 		F_banquet_main_4_spica();
 	if (ep16_royal == 5) {
 		mes "[斯皮卡]";
-		mes "Hum? You are still here. I thought you went after the lord from the 海尔内 family.";
+		mes "嗯？你还在这里。我以为你去找海尔内少主了。";
 		cutin "ep16_spica_nerius05",2;
 		next;
-		select("Didn't you go back to your room?");
+		select("你不是回房间了吗？");
 		mes "[斯皮卡]";
-		mes "I was just giving my sister a push in the back.";
-		mes "I was curious how Skia would react.";
-		mes "...Aren't you following him?";
+		mes "我只是推了妹妹一把。";
+		mes "我好奇斯琪亚会怎么做。";
+		mes "……你不跟上去吗？";
 		next;
 		cutin "ep16_spica_nerius02",2;
 		mes "[斯皮卡]";
-		mes "I have a hunch that something big is about to happen.";
-		mes "You better go after the lord to make sure he is OK.";
-		mes "I have advised you as so, remember.";
+		mes "我有预感要出大事。";
+		mes "你最好跟去确认少主没事。";
+		mes "记住，我这么劝过你。";
 		close3;
 	}
 	if (ep16_royal >= 6) {
 		cutin "ep16_spica_nerius02",2;
 		mes "[斯皮卡]";
-		mes "I don't like how things have been going these days.";
-		mes "...I guess I am about to stop holding it down.";
+		mes "我不喜欢最近事态的发展。";
+		mes "……我大概快压不住了。";
 		close3;
 	}
 }
@@ -1371,52 +1371,52 @@ prt_cas,108,240,3	script	克鲁斯·芬德尔#ep16_02	4_EP16_CRUX,{
 		}
 		cutin "ep16_crux_findel01.bmp",2;
 		mes "[克鲁斯]";
-		mes "Don't mind me.";
-		mes "I am just a bodyguard.";
+		mes "别管我。";
+		mes "我只是个护卫。";
 		close3;
 	}
 	if (ep16_royal == 4) {
 		cutin "ep16_crux_findel01",2;
 		mes "[克鲁斯]";
-		mes "I get to see you again.";
-		mes "The lady has been waiting for you.";
+		mes "又见到你了。";
+		mes "小姐一直在等你。";
 		close3;
 	}
 	if (ep16_royal == 5) {
 		cutin "ep16_crux_findel01",2;
 		mes "[克鲁斯]";
-		mes "I am thinking about the order given by the lady.";
-		mes "I need to be apart from her to look into it...";
+		mes "我在想小姐下的命令。";
+		mes "得离开她才能调查……";
 		next;
 		mes "[克鲁斯]";
-		mes "Frankly, it makes me feel uneasy leaving her alone.";
+		mes "老实说，留她一个人我不放心。";
 		next;
 		cutin "ep16_spica_nerius03",0;
 		mes "[斯皮卡]";
-		mes "I am not a child, you know.";
-		mes "Or do I remind you of your daughter running along the river bank?";
+		mes "我又不是小孩。";
+		mes "还是我让你想起河边奔跑的女儿了？";
 		next;
 		cutin "ep16_crux_findel02",2;
 		mes "[克鲁斯]";
-		mes "Daughter?";
-		mes "Hahaha. That is funny.";
-		mes "But you don't look your age to be honest.";
+		mes "女儿？";
+		mes "哈哈哈，真有趣。";
+		mes "不过老实说，你看不出年龄。";
 		next;
 		mes "[克鲁斯]";
-		mes "You can be attacked by the kids again.";
+		mes "你说不定又会被小孩袭击。";
 		next;
 		cutin "ep16_spica_nerius04",0;
 		mes "[斯皮卡]";
-		mes "He! Who can top you?";
-		mes "You shouldn't worry about me.";
+		mes "哼！谁比得上你？";
+		mes "别担心我。";
 		close3;
 	}
 	if (ep16_royal >= 6) {
 		cutin "ep16_crux_findel01",2;
 		mes "[克鲁斯]";
-		mes "I guess we won't be able to return to the head house anytime soon.";
-		mes "Well, this actually could be a good thing.";
-		npctalk "...Oh, good. It is a good thing.", bc_self;
+		mes "看来一时半会儿回不了本家了。";
+		mes "不过这也可能是好事。";
+		npctalk "……哦，好，是好事。", bc_self;
 		close3;
 	}
 	end;
@@ -1433,20 +1433,20 @@ OnTouch:
 	if (ep16_royal == 5) {
 		.@name$ = strcharinfo(0);
 		.@char_id = getcharid(0);
-		unittalk getcharid(3), "" + .@name$ + " : ...Hum? Who's coming?", bc_self;
+		unittalk getcharid(3), "" + .@name$ + "：……嗯？谁来了？", bc_self;
 		setpcblock PCBLOCK_NPC, true;
 		sleep2 2000;
 		cloakoffnpcself( "#ep16_7689_01" );
 		cloakoffnpcself( "#ep16_7689_02" );
-		npctalk "How did it go?", "#ep16_7689_02", bc_self;
+		npctalk "办得怎么样？", "#ep16_7689_02", bc_self;
 		sleep2 2000;
-		npctalk "Hum... Not as much as I have wanted, but I seem to have a clue now.", "#ep16_7689_01", bc_self;
+		npctalk "嗯……没达到预期，但似乎有线索了。", "#ep16_7689_01", bc_self;
 		sleep2 3000;
-		npctalk "Not bad.", "#ep16_7689_01", bc_self;
+		npctalk "不错。", "#ep16_7689_01", bc_self;
 		sleep2 3000;
-		npctalk "It has been only a while...", "#ep16_7689_02", bc_self;
+		npctalk "才过了一小会儿……", "#ep16_7689_02", bc_self;
 		sleep2 3000;
-		npctalk "The drug worked wonders. Hahah... That lord had no tolerance to it as I was told.", "#ep16_7689_01", bc_self;
+		npctalk "药效惊人。哈哈……听说那位少主毫无耐受力。", "#ep16_7689_01", bc_self;
 		sleep2 1000;
 		unittalk getcharid(3), "" + .@name$ + " : (Lord?)", bc_self;
 		sleep2 3000;
@@ -4192,7 +4192,7 @@ prt_cas_q,20,139,3	script	斯皮卡·内里乌斯#ep16_room01	4_EP16_SPICA,{
 prt_cas_q,21,140,3	script	保镖克鲁斯#ep16_room01	4_EP16_CRUX,{
 	cutin "ep16_crux_findel01",1;
 	mes "[克鲁斯]";
-	mes "Don't mind me.";
+	mes "别管我。";
 	close3;
 }
 
