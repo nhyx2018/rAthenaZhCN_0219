@@ -1565,95 +1565,95 @@ einbroch,239,269,3	script	可疑人物#16nego01	4_M_LAZY,{
 		mes "所以反叛者把公会设在艾因布罗克，其余人藏在艾因布罗克别处。所以我才建议在艾因贝克见面……";
 		next;
 		mes "[雷兹]";
-		mes "Anyway, the government was overlooking the remnants for various reasons. I'm sure the government is still uncomfortable about it.";
+		mes "总之，政府出于各种原因一直忽视这些残党。我相信政府对此仍感到不安。";
 		next;
 		cutin "16lei_02.bmp",2;
 		mes "[雷兹]";
-		mes "That's why this negotiation is so important. We are going to asking for help to the guy who's angry at me. It won't be easy.";
+		mes "所以这次谈判很重要。我们要向那个生我气的人求助，不会容易。";
 		next;
 		cutin "16lei_03.bmp",2;
 		mes "[雷兹]";
-		mes "We should them a sense of apology and a promise of hope in the future. At the same time, ^0000cdwe have to relax their mind and promise with them to cooperate in future affairs^000000...";
-		npctalk "We have to do it alone.", "", bc_self;
+		mes "我们既要表达歉意，也要给他们未来的希望。同时^0000cd要让他们放松警惕，并约定今后合作^000000……";
+		npctalk "这件事只能我们来做。", "", bc_self;
 		next;
 		mes "[" + strcharinfo(0) + "]";
-		mes "Just by listening to it, it sounds really difficult.";
+		mes "光听就觉得很难。";
 		next;
 		cutin "16lei_02.bmp",2;
 		mes "[雷兹]";
-		mes "The most difficult thing is how to enter the ^0000cdsecret base^000000 rather than talking to them.";
+		mes "最难的不是和他们谈，而是怎么进入^0000cd秘密基地^000000。";
 		next;
 		cutin "16lei_01.bmp",2;
 		mes "[雷兹]";
-		mes "Anyway, we will think about the method on our way there. You Just trust me and follow me. Nothing is impossible as long as you trust me. You can trust me in any situation.";
+		mes "总之，路上再想办法。你只要相信我，跟着我就行。只要相信我，没有什么不可能。任何情况下都可以相信我。";
 		next;
 		mes "[" + strcharinfo(0) + "]";
-		mes "I don't have much faith in you.";
+		mes "我对你没多少信心。";
 		next;
 		cutin "16lei_02.bmp",2;
 		mes "[雷兹]";
-		mes "It's okay, because I trust myself. Out of all these people in this large world, I am the only one whom I trust. So you just follow me.";
+		mes "没关系，我相信自己。这偌大世界里，我只信自己。所以你跟着我就行。";
 		emotion ET_BEST;
 		next;
 		mes "[" + strcharinfo(0) + "]";
-		mes "You have great faith in yourself.";
+		mes "你对自己真有信心。";
 		next;
 		cutin "16lei_01.bmp",2;
 		mes "[雷兹]";
-		mes "Of course. If I don't feel confident about myself, I can't do this job.";
+		mes "当然。如果对自己没信心，就做不了这行。";
 		next;
 		mes "[雷兹]";
-		mes "Sometimes I have to face some unpleasant situation, and do things that are not sometimes moral. But for my task and survival, I must not hesitate to make momentary decisions and execute my actions.";
+		mes "有时我必须面对不愉快的局面，做些不太道德的事。但为了任务和生存，我必须果断做出瞬间判断并行动。";
 		next;
 		mes "[雷兹]";
-		mes "And let's say you begin to doubt it. Once your mind starts to shake, the task will be in danger. Unwavering confidence is more important than anything else.";
+		mes "如果你开始怀疑，一旦心生动摇，任务就会陷入危险。坚定不移的信心比什么都重要。";
 		emotion ET_OK;
 		next;
 		cutin "16lei_02.bmp",2;
 		mes "[雷兹]";
-		mes "Of course, you need the capability to support your confidence. You can't trust anything without evidence.";
+		mes "当然，你也需要能力来支撑信心。没有依据就不能相信任何东西。";
 		emotion ET_BEST;
 		next;
 		mes "[" + strcharinfo(0) + "]";
-		mes "After listening to what you said, I don't fully trust you. But I feel like having to trust you.";
+		mes "听你这么说，我并没有完全相信你。但感觉又不得不信你。";
 		next;
 		cutin "16lei_01.bmp",2;
 		mes "[雷兹]";
-		mes "It's quite natural. Very good. Good luck in our mission. My goal is to build a reputation of a fantastic duo with you.";
+		mes "这很自然。很好。祝我们任务顺利。我的目标是和你组成一对有名的搭档。";
 		emotion ET_BEST;
 		next;
 		mes "[雷兹]";
-		mes "Let's get going. This way.";
+		mes "我们走吧，这边。";
 		next;
 		mes "[" + strcharinfo(0) + "]";
-		mes "The ticket gate is over there! We have to pay for the train. Are you saying we will walk there?";
+		mes "检票口在那边！坐火车要买票。你是说我们走过去？";
 		next;
 		cutin "16lei_03.bmp",2;
 		mes "[雷兹]";
-		mes "Yikes! Pipe down!! Of course we are taking a train. In a special place and in a special way.";
+		mes "嘘！小声点！！当然是坐火车，只是用特别的地方和特别的方式。";
 		emotion ET_FRET;
 		next;
 		mes "[" + strcharinfo(0) + "]";
-		mes "A free ride? Why?";
-		npctalk "Please don't brand it as a free ride.", "", bc_self;
+		mes "逃票？为什么？";
+		npctalk "请不要说成逃票。", "", bc_self;
 		next;
 		mes "[雷兹]";
-		mes "If you want to call it a free ride, go ahead. But do you really want to discount your action as a 'free ride'? You can used the elegant expression 'occupation after closed infiltration'.";
-		unittalk getcharid(3), "" + strcharinfo(0) + " : Yes. Yes. It sounds great.", bc_self;
+		mes "你要叫逃票也行。但你真想把行动贬低成‘逃票’吗？可以用更优雅的说法：‘闭站潜入后的占用’。";
+		unittalk getcharid(3), "" + strcharinfo(0) + "：是，是，听起来很棒。", bc_self;
 		next;
 		cutin "16lei_03.bmp",2;
 		mes "[雷兹]";
-		mes "Usually, we can feel buy tickets, say hello to the station staff eat delicious snacks, and enjoy our trip.";
+		mes "平时我们可以买票、和站员打招呼、吃零食、享受旅程。";
 		next;
 		mes "[雷兹]";
-		mes "But we are in the middle of a mission. It's already begun. It's kind of an emergency. So we have to be tense.";
+		mes "但现在任务已经开始，算是紧急情况，所以必须紧张起来。";
 		next;
 		mes "[" + strcharinfo(0) + "]";
-		mes "I really don't understand the relationship between being tense and free riding.";
+		mes "我真不明白紧张和逃票有什么关系。";
 		next;
 		cutin "16lei_03.bmp",2;
 		mes "[雷兹]";
-		mes "Do you really thing I'm just trying to save 200 Zeny? I know what I'm doing. You just follow me without nagging. We are in a hurry.";
+		mes "你真以为我只是想省200 Zeny？我知道自己在做什么。别啰嗦，跟着我。我们赶时间。";
 		setquest 14595;// To 艾因贝克 train station
 		terra_gloria_main = 10;
 		close2;
@@ -1666,7 +1666,7 @@ einbroch,239,269,3	script	可疑人物#16nego01	4_M_LAZY,{
 	if (terra_gloria_main == 10) {
 		cutin "16lei_01.bmp",2;
 		mes "[雷兹]";
-		mes "Why aren't you following me? We might miss the train!";
+		mes "你怎么不跟上来？要错过火车了！";
 		close2;
 		navigateto( "einbroch",267,268,NAV_NONE,1 );
 		cutin "",255;
@@ -1677,7 +1677,7 @@ einbroch,239,269,3	script	可疑人物#16nego01	4_M_LAZY,{
 	if (terra_gloria_main == 11) {
 		cutin "16lei_01.bmp",2;
 		mes "[雷兹]";
-		mes "Long time no see! I'm going to another mission spot. Got it? See you later!";
+		mes "好久不见！我要去另一个任务地点。明白了吗？回头见！";
 		close2;
 		cutin "",255;
 		cloakonnpcself( "可疑人物#16nego01" );
@@ -1686,7 +1686,7 @@ einbroch,239,269,3	script	可疑人物#16nego01	4_M_LAZY,{
 	if (terra_gloria_main < 17) {
 		cutin "16lei_01.bmp",2;
 		mes "[雷兹]";
-		mes "Are you okay to be here now?";
+		mes "你现在来这里没问题吗？";
 		close2;
 		cutin "",255;
 		cloakonnpcself( "可疑人物#16nego01" );
@@ -1694,7 +1694,7 @@ einbroch,239,269,3	script	可疑人物#16nego01	4_M_LAZY,{
 	}
 	cutin "16lei_01.bmp",2;
 	mes "[雷兹]";
-	mes "Long time no see! I'm going to another mission spot. Got it? See you later!";
+	mes "好久不见！我要去另一个任务地点。明白了吗？回头见！";
 	close2;
 	cutin "",255;
 	cloakonnpcself( "可疑人物#16nego01" );
@@ -1705,24 +1705,24 @@ OnInit:
 	end;
 }
 
-einbroch,270,267,5	script	Very small hole#16nego0	4_CRACK,5,5,{
+einbroch,270,267,5	script	小洞#16nego0	4_CRACK,5,5,{
 	if (terra_gloria_main != 10 && terra_gloria_main != 11) {
-		cloakonnpcself( "Very small hole#16nego0" );
+		cloakonnpcself( "小洞#16nego0" );
 		cloakonnpcself( "雷兹#16nego06" );
 		end;
 	}
 	if (terra_gloria_main == 10) {
-		mes "It is a small hole where one person can barely pass through.";
+		mes "这是一个只能勉强容一人通过的小洞。";
 		close;
 	}
-	mes "You passed through the hole where one person can barely enter.";
+	mes "你从只能勉强容一人进入的小洞穿了过去。";
 	close2;
 	warp "einbech",44,207;
 	end;
 
 OnTouch:
 	if (terra_gloria_main == 10 || terra_gloria_main == 11)
-		cloakoffnpcself( "Very small hole#16nego0" );
+		cloakoffnpcself( "小洞#16nego0" );
 	end;
 }
 
@@ -1917,7 +1917,7 @@ einbech,46,208,3	script	雷兹#16nego01	4_M_LAZY,{
 	}
 	cutin "16lei_01.bmp",2;
 	mes "[雷兹]";
-	mes "Long time no see! I'm going to another mission spot. Got it? See you later!";
+	mes "好久不见！我要去另一个任务地点。明白了吗？回头见！";
 	close2;
 	cutin "",255;
 	cloakonnpcself( "雷兹#16nego01" );
