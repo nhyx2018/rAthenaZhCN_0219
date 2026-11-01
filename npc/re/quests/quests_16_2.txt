@@ -822,111 +822,111 @@ OnInit:
 // Lighthalzen
 lighthalzen,202,167,5	script	斯琪亚#ep162_n	4_EP16_SKIA,{
 	if (terra_gloria_main < 4) {
-		npctalk "Hmm~ Where on earth is he ...", "", bc_self;
+		npctalk "嗯~他到底在哪里……", "", bc_self;
 		end;
 	}
 	if (terra_gloria_main == 4) {
 		cutin "ep16_skia_nerius01.bmp",0;
 		mes "[斯琪亚]";
-		mes "So far, I haven't seen anyone suspicious!";
-		mes "But I will find him soon.";
-		mes "I don't know why, but I have a strong belief about it.";
-		mes "The belief that he must be here!";
+		mes "到目前为止，我还没看到可疑的人！";
+		mes "但我很快会找到他。";
+		mes "不知道为什么，我对此有很强的直觉。";
+		mes "他一定在这里！";
 		close3;
 	}
 	if (terra_gloria_main == 5) {
 		cutin "ep16_skia_nerius01.bmp",0;
-		mes "He must have gone to the slum!";
-		mes "We have to find a way to get there.";
+		mes "他一定去了贫民窟！";
+		mes "我们得想办法过去。";
 		next;
 		mes "[斯琪亚]";
-		mes "I will tell Crux. You go after that guy first, please.";
+		mes "我去告诉克鲁斯。请你先追上那个人。";
 		close3;
 	}
 	if (terra_gloria_main == 6) {
 		cutin "ep16_skia_nerius01.bmp",0;
 		mes "[斯琪亚]";
-		mes "Let's go back to the palace now.";
-		mes "Crux took that Bruno guy.";
+		mes "现在回王宫吧。";
+		mes "克鲁斯抓住了那个布鲁诺。";
 		close3;
 	}
 	cutin "ep16_skia_nerius01.bmp",0;
 	mes "[斯琪亚]";
-	mes "I always wanted to visit this place as a tourist. I never imagined to come here this way.";
-	mes "Wonderful city.";
+	mes "我一直想作为游客来这里，没想到会以这种方式来。";
+	mes "真是座了不起的城市。";
 	close3;
 }
 
 // Event Top Side
-lighthalzen,177,294,5	duplicate(dummy_cloaked_npc)	Man#ep162_01	1_M_01
-lighthalzen,179,293,1	duplicate(dummy_cloaked_npc)	Scientist#ep162_01	4_LGTSCIENCE
+lighthalzen,177,294,5	duplicate(dummy_cloaked_npc)	男子#ep162_01	1_M_01
+lighthalzen,179,293,1	duplicate(dummy_cloaked_npc)	研究员#ep162_01	4_LGTSCIENCE
 
 lighthalzen,186,293,0	script	#ep162_evt01	HIDDEN_WARP_NPC,2,2,{
 	end;
 OnTouch:
 	if (terra_gloria_main == 4) {
 		setpcblock PCBLOCK_NPC, true;
-		unittalk getcharid(3), "" + strcharinfo(0) + " : .....! Those people?!", bc_self;
+		unittalk getcharid(3), "" + strcharinfo(0) + "：……！那些人？！", bc_self;
 		sleep2 1000;
-		cloakoffnpcself( "Man#ep162_01" );
-		cloakoffnpcself( "Scientist#ep162_01" );
-		npctalk "Haven't we completed our business already?", "Scientist#ep162_01", bc_self;
+		cloakoffnpcself( "男子#ep162_01" );
+		cloakoffnpcself( "研究员#ep162_01" );
+		npctalk "我们不是已经完成交易了吗？", "研究员#ep162_01", bc_self;
 		sleep2 3000;
-		npctalk "Why did you come all the way here and call me out?", "Scientist#ep162_01", bc_self;
+		npctalk "你为什么大老远跑来叫我出来？", "研究员#ep162_01", bc_self;
 		sleep2 3000;
-		npctalk "... I just did it for money, but I faced an unexpected situation.", "Man#ep162_01", bc_self;
+		npctalk "……我只是为了钱，但遇到了意外情况。", "男子#ep162_01", bc_self;
 		sleep2 3000;
-		npctalk "I am struggling now. You don't want me to get captured. Do you?", "Man#ep162_01", bc_self;
+		npctalk "我现在很为难。你不想我被抓吧？", "男子#ep162_01", bc_self;
 		sleep2 3000;
-		npctalk "... Let me give you more money. If money is what you want.", "Scientist#ep162_01", bc_self;
+		npctalk "……我再给你更多钱。如果你要的是钱的话。", "研究员#ep162_01", bc_self;
 		sleep2 3000;
-		npctalk "That's it. From now on, I cannot live in Schwaltzvalt or Rune Midgarts.", "Man#ep162_01", bc_self;
+		npctalk "就是这样。从现在起，我无法在施瓦茨瓦尔德或卢恩-米德加尔特生活了。", "男子#ep162_01", bc_self;
 		sleep2 3000;
-		npctalk "... So I need to take some more money. Thank you for understanding.", "Man#ep162_01", bc_self;
+		npctalk "……所以我需要再拿一些钱。谢谢理解。", "男子#ep162_01", bc_self;
 		sleep2 3000;
-		npctalk "Since there are too many eyes here, wait in the southern slum. I will send someone soon.", "Scientist#ep162_01", bc_self;
+		npctalk "这里眼线太多，去南部贫民窟等着。我很快会派人过去。", "研究员#ep162_01", bc_self;
 		sleep2 3000;
-		npctalk "You have to come yourself.", "Man#ep162_01", bc_self;
+		npctalk "你必须亲自来。", "男子#ep162_01", bc_self;
 		sleep2 3000;
-		npctalk "I see. Go now, before other people see you.", "Scientist#ep162_01", bc_self;
+		npctalk "知道了。趁别人没看见，快走。", "研究员#ep162_01", bc_self;
 		sleep2 3000;
-		npctalk "I will wait.", "Man#ep162_01", bc_self;
+		npctalk "我会等着。", "男子#ep162_01", bc_self;
 		sleep2 1000;
-		cloakonnpcself( "Man#ep162_01" );
+		cloakonnpcself( "男子#ep162_01" );
 		sleep2 1000;
-		npctalk "Hey, get rid of him.", "Scientist#ep162_01", bc_self;
+		npctalk "喂，把他处理掉。", "研究员#ep162_01", bc_self;
 		sleep2 2000;
-		npctalk "Yes", "Man#ep162_01", bc_self;
+		npctalk "是。", "男子#ep162_01", bc_self;
 		sleep2 1000;
-		unittalk getcharid(3), "" + strcharinfo(0) + " : (Who was that person? I only heard a voice.)", bc_self;
+		unittalk getcharid(3), "" + strcharinfo(0) + "：（那个人是谁？我只听到声音。）", bc_self;
 		sleep2 2000;
-		npctalk "... He should have stayed in line. Too much is as bad as too little.", "Scientist#ep162_01", bc_self;
+		npctalk "……他本该守规矩。过犹不及。", "研究员#ep162_01", bc_self;
 		erasequest 7732;// Searching the suspect
 		setquest 7733;// Pursuit!
 		terra_gloria_main = 5;
 		sleep2 3000;
 		setpcblock PCBLOCK_NPC, false;
-		cloakonnpcself( "Scientist#ep162_01" );
-		unittalk getcharid(3), "" + strcharinfo(0) + " : I must tell Skia about this and head to the slum right away!", bc_self;
+		cloakonnpcself( "研究员#ep162_01" );
+		unittalk getcharid(3), "" + strcharinfo(0) + "：我必须把这件事告诉斯琪亚，然后马上去贫民窟！", bc_self;
 		end;
 	}
 }
 
 // Event Right Side
-lighthalzen,307,265,5	duplicate(dummy_cloaked_npc)	Suspicious mercenary#ep	3454
+lighthalzen,307,265,5	duplicate(dummy_cloaked_npc)	可疑佣兵#ep	3454
 lighthalzen,305,264,6	duplicate(dummy_cloaked_npc)	克鲁斯#ep162_02	4_EP16_CRUX
 
 lighthalzen,306,267,5	script	斯琪亚#ep162_04	4_EP16_SKIA,{
 	if (terra_gloria_main == 6) {
 		cutin "ep16_skia_nerius01.bmp",0;
 		mes "[斯琪亚]";
-		mes "Let's go back to the palace.";
-		mes "Crux will take care of Bruno.";
-		mes "Then we will get ready for the investigation, right?";
+		mes "回王宫吧。";
+		mes "克鲁斯会处理布鲁诺。";
+		mes "然后我们准备调查，对吧？";
 		next;
 		mes "[斯琪亚]";
-		mes "I have to tell Nihil about this.";
-		mes "Let's go back.";
+		mes "我得把这件事告诉尼希尔。";
+		mes "我们回去吧。";
 		close3;
 	}
 	end;
@@ -936,7 +936,7 @@ OnInit:
 	end;
 }
 
-lighthalzen,309,263,3	script	Man#ep162_02	1_M_01,{
+lighthalzen,309,263,3	script	男子#ep162_02	1_M_01,{
 	if (terra_gloria_main != 5)
 		npctalk "Hey, what are you looking at? Go away!", "", bc_self;
 	else {
@@ -945,25 +945,25 @@ lighthalzen,309,263,3	script	Man#ep162_02	1_M_01,{
 		sleep2 1000;
 		npctalk "Who are you? Why do you call me?", "", bc_self;
 		sleep2 1000;
-		cloakoffnpcself( "Suspicious mercenary#ep" );
-		npctalk "We are in trouble.", "Suspicious mercenary#ep", bc_self;
+		cloakoffnpcself( "可疑佣兵#ep" );
+		npctalk "We are in trouble.", "可疑佣兵#ep", bc_self;
 		sleep2 2000;
 		npctalk ".... Heart ... Heart Hunter! What is a Heart Hunter doing here?!", "", bc_self;
 		sleep2 2000;
-		npctalk ".....", "Suspicious mercenary#ep", bc_self;
+		npctalk ".....", "可疑佣兵#ep", bc_self;
 		sleep2 2000;
 		npctalk "Damn! He swindled me! Hey you, save me! I will give you all the money you want.", "", bc_self;
 		sleep2 2000;
-		npctalk "......", "Suspicious mercenary#ep", bc_self;
+		npctalk "......", "可疑佣兵#ep", bc_self;
 		sleep2 2000;
-		npctalk "Now, die.", "Suspicious mercenary#ep", bc_self;
+		npctalk "Now, die.", "可疑佣兵#ep", bc_self;
 		sleep2 500;
 		cloakoffnpcself( "斯琪亚#ep162_04" );
 		cloakoffnpcself( "克鲁斯#ep162_02" );
-		specialeffect EF_NPC_STOP, AREA, "Suspicious mercenary#ep";
-		specialeffect EF_HIT3, AREA, "Suspicious mercenary#ep";
+		specialeffect EF_NPC_STOP, AREA, "可疑佣兵#ep";
+		specialeffect EF_HIT3, AREA, "可疑佣兵#ep";
 		sleep2 300;
-		npctalk "No ... What a shame ...", "Suspicious mercenary#ep", bc_self;
+		npctalk "No ... What a shame ...", "可疑佣兵#ep", bc_self;
 		npctalk "No!!", "", bc_self;
 		sleep2 300;
 		npctalk "Are you all right?", "斯琪亚#ep162_04", bc_self;
@@ -972,21 +972,21 @@ lighthalzen,309,263,3	script	Man#ep162_02	1_M_01,{
 		unittalk getcharid(3), "" + strcharinfo(0) + " : I am all right.", bc_self;
 		sleep2 4000;
 		npctalk "This mercenary is same as the last time! If we capture this guy and investigate ...", "斯琪亚#ep162_04", bc_self;
-		npctalk "... Damn, not much I can do.", "Suspicious mercenary#ep", bc_self;
+		npctalk "... Damn, not much I can do.", "可疑佣兵#ep", bc_self;
 		sleep2 2000;
-		specialeffect EF_BEGINSPELL, AREA, "Suspicious mercenary#ep";
+		specialeffect EF_BEGINSPELL, AREA, "可疑佣兵#ep";
 		sleep2 500;
 		specialeffect EF_BEGINSPELL, AREA, "克鲁斯#ep162_02";
 		sleep2 500;
-		specialeffect EF_MAGNUMBREAK, AREA, "Suspicious mercenary#ep";
+		specialeffect EF_MAGNUMBREAK, AREA, "可疑佣兵#ep";
 		specialeffect2 EF_GUARD;
 		specialeffect EF_GUARD, AREA, "克鲁斯#ep162_02";
 		specialeffect EF_GUARD, AREA, "斯琪亚#ep162_04";
 		specialeffect EF_GUARD;
 		sleep2 1000;
-		cloakonnpcself( "Suspicious mercenary#ep" );
-		monster "lighthalzen",307,265, "Suspicious mercenary", 3454,1, "Man#ep162_02::OnMobDead";
-		killmonster "lighthalzen", "Man#ep162_02::OnMobDead";
+		cloakonnpcself( "可疑佣兵#ep" );
+		monster "lighthalzen",307,265, "Suspicious mercenary", 3454,1, "男子#ep162_02::OnMobDead";
+		killmonster "lighthalzen", "男子#ep162_02::OnMobDead";
 		sleep2 2000;
 		npctalk "What!", "克鲁斯#ep162_02", bc_self;
 		npctalk "What is it? He killed himself?", "斯琪亚#ep162_04", bc_self;
@@ -1013,7 +1013,7 @@ lighthalzen,309,263,3	script	Man#ep162_02	1_M_01,{
 		sleep2 2000;
 		setpcblock PCBLOCK_NPC, false;
 		cloakonnpcself( "克鲁斯#ep162_02" );
-		cloakonnpcself( "Man#ep162_02" );
+		cloakonnpcself( "男子#ep162_02" );
 		erasequest 7733;// Pursuit!
 		setquest 7734;// Arrest
 		terra_gloria_main = 6;
