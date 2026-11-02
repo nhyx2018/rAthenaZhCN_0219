@@ -28,57 +28,57 @@
 	mes "不知道。总之先进去调查一下吧。";
 	close2;
 	cutin "",255;
-	disablenpc instance_npcname("Iris#1mir");
-	disablenpc instance_npcname("Fenrir#1mir");
+	disablenpc instance_npcname("艾丽斯#1mir");
+	disablenpc instance_npcname("芬里尔#1mir");
 	end;
 
 OnInstanceInit:
 	'map_name$ = instance_mapname("1@mir");
 	'step = 0;
 
-	// On official server the instance can be repeated if the player log out after the death of Bijou (main quest)
+	// On official server the instance can be repeated if the player log out after the death of 毕尤 (main quest)
 	// true: prevent the exploit
 	// false: like on official - exploitable
 	'exploit_disabled = false;
 
-	disablenpc instance_npcname("Bijou#2mir");
+	disablenpc instance_npcname("毕尤#2mir");
 
-	disablenpc instance_npcname("Fenrir#3mir");
-	disablenpc instance_npcname("Iris#3mir");
-	disablenpc instance_npcname("Bijou#3mir");
+	disablenpc instance_npcname("芬里尔#3mir");
+	disablenpc instance_npcname("艾丽斯#3mir");
+	disablenpc instance_npcname("毕尤#3mir");
 	disablenpc instance_npcname("改造阿姆达莱斯#3mir");
 
-	disablenpc instance_npcname("Fenrir#4mir");
-	disablenpc instance_npcname("Iris#4mir");
-	disablenpc instance_npcname("Bijou#4mir");
+	disablenpc instance_npcname("芬里尔#4mir");
+	disablenpc instance_npcname("艾丽斯#4mir");
+	disablenpc instance_npcname("毕尤#4mir");
 
-	disablenpc instance_npcname("Fenrir#5mir");
-	disablenpc instance_npcname("Iris#5mir");
-	disablenpc instance_npcname("Bijou#5mir");
+	disablenpc instance_npcname("芬里尔#5mir");
+	disablenpc instance_npcname("艾丽斯#5mir");
+	disablenpc instance_npcname("毕尤#5mir");
 	disablenpc instance_npcname("Sarah#5mir");
 
-	disablenpc instance_npcname("Fenrir#6mir");
-	disablenpc instance_npcname("Iris#6mir");
-	disablenpc instance_npcname("Bijou#6mir");
+	disablenpc instance_npcname("芬里尔#6mir");
+	disablenpc instance_npcname("艾丽斯#6mir");
+	disablenpc instance_npcname("毕尤#6mir");
 	disablenpc instance_npcname("Sarah#6mir");
 
-	disablenpc instance_npcname("Fenrir#boss1a");
-	disablenpc instance_npcname("Fenrir#boss1b");
-	disablenpc instance_npcname("Fenrir#boss1c");
-	disablenpc instance_npcname("Fenrir#boss1d");
-	disablenpc instance_npcname("Iris#boss1a");
-	disablenpc instance_npcname("Iris#boss1b");
-	disablenpc instance_npcname("Iris#boss1c");
-	disablenpc instance_npcname("Iris#boss1d");
+	disablenpc instance_npcname("芬里尔#boss1a");
+	disablenpc instance_npcname("芬里尔#boss1b");
+	disablenpc instance_npcname("芬里尔#boss1c");
+	disablenpc instance_npcname("芬里尔#boss1d");
+	disablenpc instance_npcname("艾丽斯#boss1a");
+	disablenpc instance_npcname("艾丽斯#boss1b");
+	disablenpc instance_npcname("艾丽斯#boss1c");
+	disablenpc instance_npcname("艾丽斯#boss1d");
 
-	disablenpc instance_npcname("Fenrir#boss2a");
-	disablenpc instance_npcname("Fenrir#boss2b");
-	disablenpc instance_npcname("Fenrir#boss2c");
-	disablenpc instance_npcname("Fenrir#boss2d");
-	disablenpc instance_npcname("Iris#boss2a");
-	disablenpc instance_npcname("Iris#boss2b");
-	disablenpc instance_npcname("Iris#boss2c");
-	disablenpc instance_npcname("Iris#boss2d");
+	disablenpc instance_npcname("芬里尔#boss2a");
+	disablenpc instance_npcname("芬里尔#boss2b");
+	disablenpc instance_npcname("芬里尔#boss2c");
+	disablenpc instance_npcname("芬里尔#boss2d");
+	disablenpc instance_npcname("艾丽斯#boss2a");
+	disablenpc instance_npcname("艾丽斯#boss2b");
+	disablenpc instance_npcname("艾丽斯#boss2c");
+	disablenpc instance_npcname("艾丽斯#boss2d");
 
 	disablenpc instance_npcname("eq#mir2");
 	disablenpc instance_npcname("eq#mir3");
@@ -105,7 +105,7 @@ OnInstanceInit:
 	cutin "hero_iris_01",255;
 	mes "～轰隆～";
 	next;
-	specialeffect EF_SCREEN_QUAKE,AREA, instance_npcname("Iris#2mir");
+	specialeffect EF_SCREEN_QUAKE,AREA, instance_npcname("艾丽斯#2mir");
 	cutin "hero_iris_01",2;
 	mes "[艾丽斯]";
 	mes "这里为什么在震动？！";
@@ -114,7 +114,7 @@ OnInstanceInit:
 	mes "[芬里尔]";
 	mes "～哼～ 看来他们也开始进攻这里了。";
 	next;
-	enablenpc instance_npcname("Bijou#2mir");
+	enablenpc instance_npcname("毕尤#2mir");
 	cutin "bijou_01",2;
 	mes "[毕尤]";
 	mes "～咧嘴一笑～ 很高兴见到各位。";
@@ -129,7 +129,7 @@ OnInstanceInit:
 	mes "从此刻起，由瓦尔基里希梅尔梅兹大人率领的不死军团";
 	mes "将接管此处。";
 	next;
-	specialeffect EF_SCREEN_QUAKE,AREA, instance_npcname("Iris#2mir");
+	specialeffect EF_SCREEN_QUAKE,AREA, instance_npcname("艾丽斯#2mir");
 	cutin "hero_iris_01",2;
 	mes "[艾丽斯]";
 	mes "什么？你们竟敢！";
@@ -148,7 +148,7 @@ OnInstanceInit:
 	if ('step == 0) {
 		'step = 1;
 		donpcevent instance_npcname("eq#mir1") + "::OnEvent";
-		disablenpc instance_npcname("Iris#2mir");
+		disablenpc instance_npcname("艾丽斯#2mir");
 	}
 	end;
 }
@@ -159,10 +159,10 @@ OnEvent:
 	initnpctimer;
 	end;
 OnTimer200:
-	disablenpc instance_npcname("Iris#1mir");
-	disablenpc instance_npcname("Fenrir#1mir");
-	disablenpc instance_npcname("Fenrir#2mir");
-	disablenpc instance_npcname("Bijou#2mir");
+	disablenpc instance_npcname("艾丽斯#1mir");
+	disablenpc instance_npcname("芬里尔#1mir");
+	disablenpc instance_npcname("芬里尔#2mir");
+	disablenpc instance_npcname("毕尤#2mir");
 	mapannounce 'map_name$, "芬里尔：敌人马上就要出现了！做好准备！", bc_map,0xFFFF00,FW_NORMAL,12;
 	end;
 OnTimer2200:
@@ -207,9 +207,9 @@ OnMobDead2:
 	if ('skeleton_wave[1] == 0 && 'step == 1) {
 		'step = 2;
 		mapannounce 'map_name$, "芬里尔：呼！这里应该解决了。", bc_map,0xFFFF00,FW_NORMAL,12;
-		enablenpc instance_npcname("Fenrir#3mir");
-		enablenpc instance_npcname("Iris#3mir");
-		enablenpc instance_npcname("Bijou#2mir");
+		enablenpc instance_npcname("芬里尔#3mir");
+		enablenpc instance_npcname("艾丽斯#3mir");
+		enablenpc instance_npcname("毕尤#2mir");
 		disablenpc instance_npcname("eq#mir1");
 	}
 	end;
@@ -271,9 +271,9 @@ OnMobDead2:
 OnEvent:
 	enablenpc instance_npcname("eq#mir2");
 	enablenpc instance_npcname("eq#mir3");
-	disablenpc instance_npcname("Bijou#2mir");
-	disablenpc instance_npcname("Fenrir#3mir");
-	disablenpc instance_npcname("Iris#3mir");
+	disablenpc instance_npcname("毕尤#2mir");
+	disablenpc instance_npcname("芬里尔#3mir");
+	disablenpc instance_npcname("艾丽斯#3mir");
 	disablenpc instance_npcname("改造阿姆达莱斯#3mir");
 
 	monster 'map_name$,101,95,"Renovated Amdarais",3448,1, instance_npcname("eq#mir2") + "::OnMobDead";// P_AMDARAIS
@@ -309,11 +309,11 @@ OnMobDead:
 	stopnpctimer;
 	donpcevent instance_npcname("eq#mir3") + "::OnStop";
 	if ('random_letter$ != "")
-		donpcevent instance_npcname( "Fenrir#boss1" + 'random_letter$ ) + "::OnStop";
+		donpcevent instance_npcname( "芬里尔#boss1" + 'random_letter$ ) + "::OnStop";
 	disablenpc instance_npcname("eq#mir2");
 
-	enablenpc instance_npcname("Fenrir#4mir");
-	enablenpc instance_npcname("Iris#4mir");
+	enablenpc instance_npcname("芬里尔#4mir");
+	enablenpc instance_npcname("艾丽斯#4mir");
 	end;
 }
 
@@ -326,7 +326,7 @@ OnEvent2:
 S_Announce:
 	setarray .@list$[0],"a","b","c","d";
 	'random_letter$ = .@list$[ rand(4) ];
-	donpcevent instance_npcname( "Fenrir#boss" + 'target_event + "" + 'random_letter$ ) + "::OnEvent";	// 1: P_AMDARAIS / 2: BIJOU
+	donpcevent instance_npcname( "芬里尔#boss" + 'target_event + "" + 'random_letter$ ) + "::OnEvent";	// 1: P_AMDARAIS / 2: BIJOU
 	if (getarg(0) == true)
 		mapannounce 'map_name$, "芬里尔：把它引到我这里来！", bc_map,0xFFFF00,FW_NORMAL,12;
 	end;
@@ -347,7 +347,7 @@ OnStop:
 	end;
 OnEvent:
 	'fenrir_name$ = instance_npcname( strnpcinfo(0) );
-	'iris_name$ = instance_npcname( "Iris#" + strnpcinfo(2) );
+	'iris_name$ = instance_npcname( "艾丽斯#" + strnpcinfo(2) );
 	enablenpc 'fenrir_name$;
 	enablenpc 'iris_name$;
 	end;
@@ -409,7 +409,7 @@ OnTimer16500:
 OnStop:
 	stopnpctimer;
 	disablenpc();
-	disablenpc instance_npcname( "Iris#" + strnpcinfo(2) );
+	disablenpc instance_npcname( "艾丽斯#" + strnpcinfo(2) );
 	'touch_mob = 0;
 	'random_letter$ = "";
 	end;
@@ -424,7 +424,7 @@ OnStop:
 	mes "就这样……？它已经消失了吗？";
 	mes "那么现在剩下的就是……";
 	next;
-	enablenpc instance_npcname("Bijou#4mir");
+	enablenpc instance_npcname("毕尤#4mir");
 	cutin "bijou_01",2;
 	mes "[毕尤]";
 	mes "我……只剩下我一个了……";
@@ -434,7 +434,7 @@ OnStop:
 	mes "什么？！";
 	next;
 	mes "～砰！～";
-	specialeffect EF_SUI_EXPLOSION,AREA, instance_npcname("Iris#4mir");
+	specialeffect EF_SUI_EXPLOSION,AREA, instance_npcname("艾丽斯#4mir");
 	next;
 	cutin "hero_iris_01",2;
 	mes "[艾丽斯]";
@@ -464,10 +464,10 @@ OnStop:
 	end;
 OnEvent:
 	enablenpc instance_npcname("eq#mir4");
-	disablenpc instance_npcname("Fenrir#4mir");
-	disablenpc instance_npcname("Iris#4mir");
-	disablenpc instance_npcname("Bijou#4mir");
-	monster 'map_name$,102,95,"Bijou",3450,1, instance_npcname("eq#mir4") + "::OnMobDead";// BIJOU
+	disablenpc instance_npcname("芬里尔#4mir");
+	disablenpc instance_npcname("艾丽斯#4mir");
+	disablenpc instance_npcname("毕尤#4mir");
+	monster 'map_name$,102,95,"毕尤",3450,1, instance_npcname("eq#mir4") + "::OnMobDead";// BIJOU
 	'boss_id = $@mobid[0];
 	initnpctimer;
 	end;
@@ -485,9 +485,9 @@ OnMobDead:
 	'step = 6;
 	killmonster 'map_name$, instance_npcname("eq#mir4") + "::OnMobDead";
 	stopnpctimer;
-	enablenpc instance_npcname("Fenrir#5mir");
-	enablenpc instance_npcname("Iris#5mir");
-	enablenpc instance_npcname("Bijou#5mir");
+	enablenpc instance_npcname("芬里尔#5mir");
+	enablenpc instance_npcname("艾丽斯#5mir");
+	enablenpc instance_npcname("毕尤#5mir");
 	disablenpc instance_npcname("eq#mir4");
 	end;
 }
@@ -508,9 +508,9 @@ OnMobDead:
 	cutin "bijou_02",2;
 	mes "[毕尤]";
 	mes "冰冻术！";
-	specialeffect EF_LOCKON,AREA, instance_npcname("Fenrir#5mir");
+	specialeffect EF_LOCKON,AREA, instance_npcname("芬里尔#5mir");
 	sleep2 3000;
-	specialeffect EF_FREEZE,AREA, instance_npcname("Fenrir#5mir");
+	specialeffect EF_FREEZE,AREA, instance_npcname("芬里尔#5mir");
 	next;
 	cutin "fenrir_b",2;
 	mes "[芬里尔]";
@@ -613,7 +613,7 @@ OnMobDead:
 	mes "[芬里尔]";
 	mes "时机到了！";
 	mes "冰冻术！";
-	specialeffect EF_FREEZE,AREA, instance_npcname("Bijou#5mir");
+	specialeffect EF_FREEZE,AREA, instance_npcname("毕尤#5mir");
 	next;
 	cutin "bijou_03",2;
 	mes "[毕尤]";
@@ -638,13 +638,13 @@ OnMobDead:
 	mes "喝下去就会恢复意识。";
 	next;
 	sleep2 500;
-	specialeffect EF_POTION1,AREA, instance_npcname("Iris#5mir");
+	specialeffect EF_POTION1,AREA, instance_npcname("艾丽斯#5mir");
 	cutin "hero_iris_01",2;
 	mes "[艾丽斯]";
 	mes "～闷响～";
 	next;
 	sleep2 500;
-	specialeffect EF_POTION1,AREA, instance_npcname("Iris#5mir");
+	specialeffect EF_POTION1,AREA, instance_npcname("艾丽斯#5mir");
 	cutin "fenrir_a",2;
 	mes "[芬里尔]";
 	mes "哦，你醒了吗？";
@@ -701,11 +701,11 @@ OnMobDead:
 OnEvent:
 	enablenpc instance_npcname("eq#mir3");
 	enablenpc instance_npcname("eq#mir5");
-	disablenpc instance_npcname("Bijou#5mir");
-	disablenpc instance_npcname("Fenrir#5mir");
-	disablenpc instance_npcname("Iris#5mir");
+	disablenpc instance_npcname("毕尤#5mir");
+	disablenpc instance_npcname("芬里尔#5mir");
+	disablenpc instance_npcname("艾丽斯#5mir");
 
-	monster 'map_name$,102,95,"Bijou",3450,1, instance_npcname("eq#mir5") + "::OnMobDead";// BIJOU
+	monster 'map_name$,102,95,"毕尤",3450,1, instance_npcname("eq#mir5") + "::OnMobDead";// BIJOU
 	'boss_id = $@mobid[0];
 	'target_event = 2;
 	initnpctimer;
@@ -737,12 +737,12 @@ OnMobDead:
 	donpcevent instance_npcname("eq#mir3") + "::OnStop";
 	donpcevent instance_npcname("eq#mir6") + "::OnStop";
 	if ('random_letter$ != "")
-		donpcevent instance_npcname( "Fenrir#boss2" + 'random_letter$ ) + "::OnStop";
+		donpcevent instance_npcname( "芬里尔#boss2" + 'random_letter$ ) + "::OnStop";
 	disablenpc instance_npcname("eq#mir5");
 
-	enablenpc instance_npcname("Fenrir#6mir");
-	enablenpc instance_npcname("Iris#6mir");
-	enablenpc instance_npcname("Bijou#6mir");
+	enablenpc instance_npcname("芬里尔#6mir");
+	enablenpc instance_npcname("艾丽斯#6mir");
+	enablenpc instance_npcname("毕尤#6mir");
 
 	if (playerattached() && 'exploit_disabled && ep16_royal == 19) {
 		erasequest 7700;// Once More!
@@ -785,25 +785,25 @@ OnStop:
 	mes "[毕尤]";
 	mes "～邪恶地大笑～ 去死吧！";
 	mes "牧师都该死！";
-	specialeffect EF_TETRACASTING,AREA, instance_npcname("Iris#6mir");
+	specialeffect EF_TETRACASTING,AREA, instance_npcname("艾丽斯#6mir");
 	next;
 	cutin "fenrir_b",2;
 	mes "[芬里尔]";
 	mes "艾丽斯！！";
 	mes "不！住手！！";
-	specialeffect EF_TETRACASTING,AREA, instance_npcname("Iris#6mir");
+	specialeffect EF_TETRACASTING,AREA, instance_npcname("艾丽斯#6mir");
 	next;
 	cutin "bijou_01",2;
 	mes "[毕尤]";
 	mes "～轻笑～";
 	mes "原来你在找同伴啊？";
 	mes "好主意，不过……我想已经太迟了。";
-	specialeffect EF_TETRACASTING,AREA, instance_npcname("Iris#6mir");
+	specialeffect EF_TETRACASTING,AREA, instance_npcname("艾丽斯#6mir");
 	next;
 	mes "[毕尤]";
 	mes "因为……";
 	mes "这将是给你们的最后一击，致命的一击。哇哈哈哈！";
-	specialeffect EF_TETRACASTING,AREA, instance_npcname("Iris#6mir");
+	specialeffect EF_TETRACASTING,AREA, instance_npcname("艾丽斯#6mir");
 	next;
 	sleep2 300;
 	enablenpc instance_npcname("Sarah#6mir");
@@ -813,7 +813,7 @@ OnStop:
 	mes "咦……？在我的肚子里……";
 	mes "这把刀……";
 	mes "莎……莎拉……？怎么会？";
-	specialeffect EF_HFLIMOON1,AREA, instance_npcname("Bijou#6mir");
+	specialeffect EF_HFLIMOON1,AREA, instance_npcname("毕尤#6mir");
 	next;
 	cutin "bijou_death",4;
 	mes "[莎拉]";
@@ -826,8 +826,8 @@ OnStop:
 	next;
 	mes "[毕尤]";
 	mes "～呻吟～";
-	specialeffect EF_HFLIMOON1,AREA, instance_npcname("Bijou#6mir");
-	disablenpc instance_npcname("Bijou#6mir");
+	specialeffect EF_HFLIMOON1,AREA, instance_npcname("毕尤#6mir");
+	disablenpc instance_npcname("毕尤#6mir");
 	next;
 	mes "[莎拉]";
 	mes "......";
@@ -874,7 +874,7 @@ OnStop:
 	mes "那么今天就先告辞了。";
 	disablenpc instance_npcname("Sarah#6mir");
 	next;
-	specialeffect EF_SCREEN_QUAKE,AREA, instance_npcname("Iris#6mir");
+	specialeffect EF_SCREEN_QUAKE,AREA, instance_npcname("艾丽斯#6mir");
 	cutin "fenrir_b",2;
 	mes "[芬里尔]";
 	mes "～哼～ 那个瓦尔基里取走依美乐心脏时把天花板都弄塌了！";
@@ -892,26 +892,26 @@ OnStop:
 }
 
 1@mir,100,40,5	duplicate(dummy_npc)	艾丽斯#1mir	4_F_IRIS
-1@mir,103,94,1	duplicate(dummy_npc)	潘利尔#2mir	4_F_FENRIR
+1@mir,103,94,1	duplicate(dummy_npc)	芬里尔#2mir	4_F_FENRIR
 1@mir,102,98,3	duplicate(dummy_npc)	毕尤#2mir	4_F_BIJOU
 
-1@mir,100,85,7	duplicate(dummy_npc)	潘利尔#3mir	4_F_FENRIR
+1@mir,100,85,7	duplicate(dummy_npc)	芬里尔#3mir	4_F_FENRIR
 1@mir,102,88,3	duplicate(dummy_npc)	毕尤#3mir	4_F_BIJOU
 1@mir,101,95,1	duplicate(dummy_npc)	改造阿姆达莱斯#3mir	3448
 
-1@mir,94,73,3	duplicate(芬里尔#boss1a)	潘利尔#boss1b	4_F_FENRIR,2,2
-1@mir,112,73,3	duplicate(芬里尔#boss1a)	潘利尔#boss1c	4_F_FENRIR,2,2
-1@mir,103,60,3	duplicate(芬里尔#boss1a)	潘利尔#boss1d	4_F_FENRIR,2,2
+1@mir,94,73,3	duplicate(芬里尔#boss1a)	芬里尔#boss1b	4_F_FENRIR,2,2
+1@mir,112,73,3	duplicate(芬里尔#boss1a)	芬里尔#boss1c	4_F_FENRIR,2,2
+1@mir,103,60,3	duplicate(芬里尔#boss1a)	芬里尔#boss1d	4_F_FENRIR,2,2
 
 1@mir,100,80,5	duplicate(dummy_npc)	艾丽斯#boss1a	4_F_IRIS
 1@mir,91,73,5	duplicate(dummy_npc)	艾丽斯#boss1b	4_F_IRIS
 1@mir,109,73,5	duplicate(dummy_npc)	艾丽斯#boss1c	4_F_IRIS
 1@mir,100,60,5	duplicate(dummy_npc)	艾丽斯#boss1d	4_F_IRIS
 
-1@mir,103,76,3	duplicate(芬里尔#boss1a)	潘利尔#boss2a	4_F_FENRIR,2,2
-1@mir,94,70,3	duplicate(芬里尔#boss1a)	潘利尔#boss2b	4_F_FENRIR,2,2
-1@mir,112,70,3	duplicate(芬里尔#boss1a)	潘利尔#boss2c	4_F_FENRIR,2,2
-1@mir,103,63,3	duplicate(芬里尔#boss1a)	潘利尔#boss2d	4_F_FENRIR,2,2
+1@mir,103,76,3	duplicate(芬里尔#boss1a)	芬里尔#boss2a	4_F_FENRIR,2,2
+1@mir,94,70,3	duplicate(芬里尔#boss1a)	芬里尔#boss2b	4_F_FENRIR,2,2
+1@mir,112,70,3	duplicate(芬里尔#boss1a)	芬里尔#boss2c	4_F_FENRIR,2,2
+1@mir,103,63,3	duplicate(芬里尔#boss1a)	芬里尔#boss2d	4_F_FENRIR,2,2
 
 1@mir,100,76,5	duplicate(dummy_npc)	艾丽斯#boss2a	4_F_IRIS
 1@mir,91,70,5	duplicate(dummy_npc)	艾丽斯#boss2b	4_F_IRIS
@@ -919,7 +919,7 @@ OnStop:
 1@mir,100,63,5	duplicate(dummy_npc)	艾丽斯#boss2d	4_F_IRIS
 
 1@mir,102,95,3	duplicate(dummy_npc)	毕尤#4mir	4_F_BIJOU
-1@mir,103,90,1	duplicate(dummy_npc)	潘利尔#4mir	4_F_FENRIR
+1@mir,103,90,1	duplicate(dummy_npc)	芬里尔#4mir	4_F_FENRIR
 
 1@mir,102,95,3	duplicate(dummy_npc)	毕尤#5mir	4_F_BIJOU
 1@mir,99,95,5	duplicate(dummy_npc)	Sarah#5mir	4_F_SARAH
@@ -927,4 +927,4 @@ OnStop:
 
 1@mir,102,95,3	duplicate(dummy_npc)	毕尤#6mir	4_F_BIJOU
 1@mir,104,95,3	duplicate(dummy_npc)	Sarah#6mir	4_F_SARAH
-1@mir,103,90,1	duplicate(dummy_npc)	潘利尔#6mir	4_F_FENRIR
+1@mir,103,90,1	duplicate(dummy_npc)	芬里尔#6mir	4_F_FENRIR

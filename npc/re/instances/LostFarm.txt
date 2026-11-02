@@ -298,8 +298,8 @@ OnTouch:
 		end;
 	disablenpc();
 	'lost_farm = 0;
-	enablenpc instance_npcname("Wooden Box#01");
-	npctalk "哦！客人！这边！！", instance_npcname("Wooden Box#01");
+	enablenpc instance_npcname("大喵喵#01");
+	npctalk "哦！客人！这边！！", instance_npcname("大喵喵#01");
 	end;
 }
 
@@ -321,7 +321,7 @@ OnTouch:
 		close2;
 		if ('lost_farm == 0) {
 			'lost_farm = 1;
-			donpcevent instance_npcname("Wooden Box#01") + "::OnStart";
+			donpcevent instance_npcname("大喵喵#01") + "::OnStart";
 		}
 		end;
 	}
@@ -330,7 +330,7 @@ OnTouch:
 
 OnStart:
 	sleep 1000;
-	.@event$ = instance_npcname("Wooden Box#01") + "::OnMobDead";
+	.@event$ = instance_npcname("大喵喵#01") + "::OnMobDead";
 	monster 'map_lost$,155,43,"King Eyes",20660,1, .@event$;
 	monster 'map_lost$,154,50,"Happy",20664,1, .@event$;
 	monster 'map_lost$,158,49,"Toto",20661,1, .@event$;
@@ -340,12 +340,12 @@ OnStart:
 	monster 'map_lost$,165,42,"Rusk",20664,1, .@event$;
 	end;
 OnMobDead:
-	if (mobcount('map_lost$, instance_npcname("Wooden Box#01") + "::OnMobDead") == 0) {
+	if (mobcount('map_lost$, instance_npcname("大喵喵#01") + "::OnMobDead") == 0) {
 		'lost_farm = 2;
 		disablenpc();
-		enablenpc instance_npcname("Silk#01");
+		enablenpc instance_npcname("大喵喵#01");
 		sleep 1000;
-		npctalk "席克：！！", instance_npcname("Silk#01");
+		npctalk "席克：！！", instance_npcname("大喵喵#01");
 	}
 	end;
 }
@@ -403,7 +403,7 @@ OnMobDead:
 	if ('lost_farm == 2) {
 		'lost_farm = 3;
 		disablenpc();
-		enablenpc instance_npcname("Silk#02");
+		enablenpc instance_npcname("大喵喵#02");
 		instance_warpall 'map_lost$,218,149,instance_id();
 	}
 	end;
@@ -442,7 +442,7 @@ OnMobDead:
 			'lost_farm = 4;
 			npctalk "席克：食物已经撒好了，它们很快就会出来！";
 			disablenpc();
-			donpcevent instance_npcname("Wooden Box#02") + "::OnStart";
+			donpcevent instance_npcname("大喵喵#02") + "::OnStart";
 		}
 		end;
 	}
@@ -484,7 +484,7 @@ OnMobDead:
 OnStart:
 	enablenpc();
 	sleep 1000;
-	.@event$ = instance_npcname("Wooden Box#02") + "::OnMobDead";
+	.@event$ = instance_npcname("大喵喵#02") + "::OnMobDead";
 	monster 'map_lost$,210,148,"Lucy",20662,1, .@event$;
 	monster 'map_lost$,208,153,"Elizabeth",20660,1, .@event$;
 	monster 'map_lost$,215,151,"Dorothy",20664,1, .@event$;
@@ -498,12 +498,12 @@ OnStart:
 	npctalk "席克：救救机器人~~~~~";
 	end;
 OnMobDead:
-	.@count = mobcount('map_lost$, instance_npcname("Wooden Box#02") + "::OnMobDead");
+	.@count = mobcount('map_lost$, instance_npcname("大喵喵#02") + "::OnMobDead");
 	if (.@count == 0) {
 		'lost_farm = 4;
 		disablenpc();
-		enablenpc instance_npcname("Silk#02");
-		npctalk "席克：……结束了吗？", instance_npcname("Silk#02");
+		enablenpc instance_npcname("大喵喵#02");
+		npctalk "席克：……结束了吗？", instance_npcname("大喵喵#02");
 		end;
 	}
 	npctalk "席克：剩下" + (.@count == 1 ? "的" : "的") + " " + .@count + "只！";
@@ -1013,8 +1013,8 @@ OnMobDead:
 OnTouch:
 	if ('lost_farm == 17) {
 		'lost_farm = 18;
-		npctalk "大喵喵：咕噜噜噜噜。", instance_npcname("Big Meow#01");
-		disablenpc instance_npcname("Big Meow#01");
+		npctalk "大喵喵：咕噜噜噜噜。", instance_npcname("大喵喵#01");
+		disablenpc instance_npcname("大喵喵#01");
 		disablenpc instance_npcname("#cat01warp");
 		disablenpc instance_npcname("#compass01");
 		disablenpc instance_npcname("Silk#06");
@@ -1118,8 +1118,8 @@ OnTouch_:
 OnTouch:
 	if ('lost_farm == 17) {
 		'lost_farm = 18;
-		npctalk "大喵喵：咕噜噜噜噜。", instance_npcname("Big Meow#02");
-		disablenpc instance_npcname("Big Meow#02");
+		npctalk "大喵喵：咕噜噜噜噜。", instance_npcname("大喵喵#02");
+		disablenpc instance_npcname("大喵喵#02");
 		disablenpc instance_npcname("#cat02warp");
 		disablenpc instance_npcname("#compass01");
 		disablenpc instance_npcname("Silk#06");

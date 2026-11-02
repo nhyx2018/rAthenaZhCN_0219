@@ -201,12 +201,12 @@ OnTouch:
 		end;
 	disablenpc instance_npcname("#sl_evt01");
 	if (instance_live_info(ILI_NAME) == "Werner Laboratory central room#1")	// terra_gloria_main == 21
-		enablenpc instance_npcname("Eisen Werner#werner01");
+		enablenpc instance_npcname("艾森·维尔纳#werner01");
 	else {
-		enablenpc instance_npcname("Guard#gard01");
-		enablenpc instance_npcname("Guard#gard02");
-		enablenpc instance_npcname("Guard#gard03");
-		enablenpc instance_npcname("Guard#gard04");
+		enablenpc instance_npcname("守卫#gard01");
+		enablenpc instance_npcname("守卫#gard02");
+		enablenpc instance_npcname("守卫#gard03");
+		enablenpc instance_npcname("守卫#gard04");
 	}
 	end;
 
@@ -218,27 +218,27 @@ OnInstanceInit:
 
 	disablenpc instance_npcname("#slwwarp01");
 	disablenpc instance_npcname("#slwwarp02");
-	disablenpc instance_npcname("Central Entrance#door");
-	disablenpc instance_npcname("Emergency exit#exit_war");
+	disablenpc instance_npcname("中央入口#door");
+	disablenpc instance_npcname("紧急出口#exit_war");
 
-	disablenpc instance_npcname("Eisen Werner#werner01");
-	disablenpc instance_npcname("Eisen Werner#werner02");
-	disablenpc instance_npcname("Eisen Werner#werner03");
-	disablenpc instance_npcname("Eisen Werner#werner04");
-	disablenpc instance_npcname("Eisen Werner#werner05");
+	disablenpc instance_npcname("艾森·维尔纳#werner01");
+	disablenpc instance_npcname("艾森·维尔纳#werner02");
+	disablenpc instance_npcname("艾森·维尔纳#werner03");
+	disablenpc instance_npcname("艾森·维尔纳#werner04");
+	disablenpc instance_npcname("艾森·维尔纳#werner05");
 
-	disablenpc instance_npcname("Security device#switch01");
-	disablenpc instance_npcname("Security device#switch02");
-	disablenpc instance_npcname("Security device#switch11");
-	disablenpc instance_npcname("Security device#switch12");
+	disablenpc instance_npcname("安保装置#switch01");
+	disablenpc instance_npcname("安保装置#switch02");
+	disablenpc instance_npcname("安保装置#switch11");
+	disablenpc instance_npcname("安保装置#switch12");
 
-	disablenpc instance_npcname("Guard#gard01");
-	disablenpc instance_npcname("Guard#gard02");
-	disablenpc instance_npcname("Guard#gard03");
-	disablenpc instance_npcname("Guard#gard04");
-	disablenpc instance_npcname("Guard#gard05");
-	disablenpc instance_npcname("Guard#gard06");
-	disablenpc instance_npcname("Guard#gard07");
+	disablenpc instance_npcname("守卫#gard01");
+	disablenpc instance_npcname("守卫#gard02");
+	disablenpc instance_npcname("守卫#gard03");
+	disablenpc instance_npcname("守卫#gard04");
+	disablenpc instance_npcname("守卫#gard05");
+	disablenpc instance_npcname("守卫#gard06");
+	disablenpc instance_npcname("守卫#gard07");
 
 	disablenpc instance_npcname("Seyren Windsor#seiren");
 	disablenpc instance_npcname("小可爱#boss_master");
@@ -340,8 +340,8 @@ OnInstanceInit:
 	close2;
 	cutin "",255;
 	if (is_party_leader() == true) {
-		disablenpc instance_npcname("Eisen Werner#werner01");
-		enablenpc instance_npcname("Eisen Werner#werner02");
+		disablenpc instance_npcname("艾森·维尔纳#werner01");
+		enablenpc instance_npcname("艾森·维尔纳#werner02");
 	}
 	end;
 }
@@ -388,9 +388,9 @@ OnInstanceInit:
 	close2;
 	cutin "",255;
 	if (is_party_leader() == true) {
-		disablenpc instance_npcname("Eisen Werner#werner02");
-		enablenpc instance_npcname("Security device#switch01");
-		enablenpc instance_npcname("Security device#switch02");
+		disablenpc instance_npcname("艾森·维尔纳#werner02");
+		enablenpc instance_npcname("安保装置#switch01");
+		enablenpc instance_npcname("安保装置#switch02");
 	}
 	end;
 }
@@ -429,18 +429,18 @@ OnInstanceInit:
 	case 0:
 		enablenpc instance_npcname("#slwwarp01");
 		if (instance_live_info(ILI_NAME) == "Werner Laboratory central room#1")	// terra_gloria_main == 21
-			enablenpc instance_npcname("Eisen Werner#werner03");
+			enablenpc instance_npcname("艾森·维尔纳#werner03");
 		else {
-			enablenpc instance_npcname("Guard#gard05");
-			enablenpc instance_npcname("Guard#gard06");
-			enablenpc instance_npcname("Guard#gard07");
+			enablenpc instance_npcname("守卫#gard05");
+			enablenpc instance_npcname("守卫#gard06");
+			enablenpc instance_npcname("守卫#gard07");
 		}
 		break;
 	case 1:
 		if (instance_live_info(ILI_NAME) == "Werner Laboratory central room#1")
-			enablenpc instance_npcname("Eisen Werner#werner04");
+			enablenpc instance_npcname("艾森·维尔纳#werner04");
 		else
-			enablenpc instance_npcname("Central Entrance#door");
+			enablenpc instance_npcname("中央入口#door");
 		enablenpc instance_npcname("#slwwarp02");
 		break;
 	}
@@ -529,25 +529,25 @@ OnTouch:
 OnLeft1:
 	if (mobcount( 'map_slw$, instance_npcname("#security_device_lab") + "::OnLeft1" ) < 1) {
 		mapannounce 'map_slw$, "安全装置 L-01 已启动。", bc_map,0xFF99;
-		enablenpc instance_npcname("Security device#switch01");
+		enablenpc instance_npcname("安保装置#switch01");
 	}
 	end;
 OnRight1:
 	if (mobcount( 'map_slw$, instance_npcname("#security_device_lab") + "::OnRight1" ) < 1) {
 		mapannounce 'map_slw$, "安全装置 R-01 已启动。", bc_map,0xFF99;
-		enablenpc instance_npcname("Security device#switch02");
+		enablenpc instance_npcname("安保装置#switch02");
 	}
 	end;
 OnLeft2:
 	if (mobcount( 'map_slw$, instance_npcname("#security_device_lab") + "::OnLeft2" ) < 1) {
 		mapannounce 'map_slw$, "安全装置 L-02 已启动。", bc_map,0xFF99;
-		enablenpc instance_npcname("Security device#switch11");
+		enablenpc instance_npcname("安保装置#switch11");
 	}
 	end;
 OnRight2:
 	if (mobcount( 'map_slw$, instance_npcname("#security_device_lab") + "::OnRight2" ) < 1) {
 		mapannounce 'map_slw$, "安全装置 R-02 已启动。", bc_map,0xFF99;
-		enablenpc instance_npcname("Security device#switch12");
+		enablenpc instance_npcname("安保装置#switch12");
 	}
 	end;
 }
@@ -606,9 +606,9 @@ OnRight2:
 	close2;
 	cutin "",255;
 	if (is_party_leader() == true) {
-		disablenpc instance_npcname("Eisen Werner#werner03");
-		enablenpc instance_npcname("Security device#switch11");
-		enablenpc instance_npcname("Security device#switch12");
+		disablenpc instance_npcname("艾森·维尔纳#werner03");
+		enablenpc instance_npcname("安保装置#switch11");
+		enablenpc instance_npcname("安保装置#switch12");
 	}
 	end;
 }
@@ -651,8 +651,8 @@ OnRight2:
 	close2;
 	cutin "",255;
 	if (is_party_leader() == true) {
-		disablenpc instance_npcname("Eisen Werner#werner04");
-		enablenpc instance_npcname("Central Entrance#door");
+		disablenpc instance_npcname("艾森·维尔纳#werner04");
+		enablenpc instance_npcname("中央入口#door");
 	}
 	end;
 }
@@ -667,7 +667,7 @@ OnTouch:
 	if (instance_live_info(ILI_NAME) == "Werner Laboratory central room#1") {
 		if ('event_final == 0) {
 			'event_final = 1;
-			enablenpc instance_npcname("Eisen Werner#werner05");
+			enablenpc instance_npcname("艾森·维尔纳#werner05");
 		}
 		warp 'map_slw$,55,153;
 		end;
@@ -690,7 +690,7 @@ OnTouch:
 		close2;
 		if ('event_final == 0) {
 			'event_final = 1;
-			enablenpc instance_npcname("Eisen Werner#werner05");
+			enablenpc instance_npcname("艾森·维尔纳#werner05");
 		}
 		warp 'map_slw$,55,153;
 		end;
@@ -898,7 +898,7 @@ OnTouch:
 	specialeffect EF_SCREEN_QUAKE;
 	sleep2 1000;
 	specialeffect EF_LORD;
-	disablenpc instance_npcname("Eisen Werner#werner05");
+	disablenpc instance_npcname("艾森·维尔纳#werner05");
 	sleep2 2000;
 	setpcblock PCBLOCK_NPC, false;
 	npctalk "哦……", .@seyren$;
@@ -1084,7 +1084,7 @@ OnStart:
 OnMobDead:
 	if (mobcount( 'map_slw$, instance_npcname("#boss_master_lab") + "::OnMobDead" ) < 1) {
 		mapannounce 'map_slw$, "魔法领域已消除。入口已生成。", bc_map,0xFF99;
-		enablenpc instance_npcname("Emergency exit#exit_war");
+		enablenpc instance_npcname("紧急出口#exit_war");
 		disablenpc instance_npcname("#boss_master_lab");
 	}
 	end;

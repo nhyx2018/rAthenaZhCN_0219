@@ -16,15 +16,15 @@ OnInstanceInit:
 	'map$ = instance_mapname("1@os_a");
 	for (.@i = 1; .@i < 26; .@i++)
 		disablenpc instance_npcname("#ocp_rebel_" + .@i);
-	hideonnpc instance_npcname("Est#171_ocp_0");
+	hideonnpc instance_npcname("艾丝特#171_ocp_0");
 	disablenpc instance_npcname("#171_ocp_dev_0");
 	disablenpc instance_npcname("#171_ocp_dev_1");
 	disablenpc instance_npcname("#171_ocp_wrp_0");
 	disablenpc instance_npcname("#171_ocp_wrp_1");
 	disablenpc instance_npcname("#171_ocp_wrp_2");
 	disablenpc instance_npcname("#171_ocp_miguel");
-	disablenpc instance_npcname("Est#171_ocp_1");
-	disablenpc instance_npcname("Operation Officer#171_osd");
+	disablenpc instance_npcname("艾丝特#171_ocp_1");
+	disablenpc instance_npcname("作战军官#171_osd");
 	end;
 
 OnStory01:
@@ -33,14 +33,14 @@ OnStory01:
 		enablenpc instance_npcname("#ocp_rebel_" + .@i);
 	enablenpc instance_npcname("#171_ocp_dev_0");
 	sleep2 1000;
-	hideoffnpc instance_npcname("Est#171_ocp_0");
-	doevent instance_npcname("Est#171_ocp_0") + "::OnEvent";
+	hideoffnpc instance_npcname("艾丝特#171_ocp_0");
+	doevent instance_npcname("艾丝特#171_ocp_0") + "::OnEvent";
 	end;
 
 OnStory02:
 	for (.@i = 1; .@i < 26; .@i++)
 		hideonnpc instance_npcname("#ocp_rebel_" + .@i);
-	disablenpc instance_npcname("Est#171_ocp_0");
+	disablenpc instance_npcname("艾丝特#171_ocp_0");
 	sleep2 3000;
 	donpcevent instance_npcname("#171_ocp_mob") + "::OnSummonStory01";
 	doevent instance_npcname("#171_ocp_dev_0") + "::OnEvent01";
@@ -80,7 +80,7 @@ OnTouch:
 	disablenpc();
 	disablenpc instance_npcname("#os_occupation_ev_0");
 	doevent instance_npcname("#os_occupation_control") + "::OnDaily01";
-	disablenpc instance_npcname("Est#171_ocp_0");
+	disablenpc instance_npcname("艾丝特#171_ocp_0");
 	end;
 }
 
@@ -608,14 +608,14 @@ OnSummonBoss:
 
 OnBossKillStory:
 	enablenpc instance_npcname("#171_ocp_miguel");
-	enablenpc instance_npcname("Est#171_ocp_1");
+	enablenpc instance_npcname("艾丝特#171_ocp_1");
 	end;
 
 OnBossKill:
 	.@event$ = instance_npcname(strnpcinfo(0)) + "::OnSummonKill";
 	killmonster 'map$,.@event$;
 	mapannounce 'map$,"作战军官：看来我来晚了一点！",bc_map,0x00EEEE;
-	enablenpc instance_npcname("Operation Officer#171_osd");
+	enablenpc instance_npcname("作战军官#171_osd");
 	end;
 
 OnBossSkill:

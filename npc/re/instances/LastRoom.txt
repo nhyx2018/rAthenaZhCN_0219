@@ -150,7 +150,7 @@ un_myst,163,38,5	script	马克	4_M_BLUEMAN,{
 		mes "[杜]";
 		mes "姐姐！你没事吧？！";
 		cutin "bu_du5.bmp",2;
-		npctalk "杜：姐姐！你没事吧？！", instance_npcname("Du#room1");
+		npctalk "杜：姐姐！你没事吧？！", instance_npcname("杜#room1");
 		next;
 		mes "[薇瑞蒂]";
 		mes "……必须回去……";
@@ -161,7 +161,7 @@ un_myst,163,38,5	script	马克	4_M_BLUEMAN,{
 		mes "薇瑞蒂，你没事吧？";
 		mes "你能走吗？";
 		cutin "ep143_tahuk.bmp",2;
-		npctalk "塔玛琳：薇瑞蒂，你没事吧？你能走吗？", instance_npcname("Tamarin#room1");
+		npctalk "塔玛琳：薇瑞蒂，你没事吧？你能走吗？", instance_npcname("塔玛琳#room1");
 		next;
 		mes "[薇瑞蒂]";
 		mes "呃……";
@@ -171,7 +171,7 @@ un_myst,163,38,5	script	马克	4_M_BLUEMAN,{
 		mes "[杜]";
 		mes "" + strcharinfo(0) + "！我想你最好还是回去。";
 		cutin "bu_du5.bmp",2;
-		npctalk "杜：" + strcharinfo(0) + "！我想你最好还是回去。", instance_npcname("Du#room1");
+		npctalk "杜：" + strcharinfo(0) + "！我想你最好还是回去。", instance_npcname("杜#room1");
 		next;
 		mes "[薇瑞蒂]";
 		mes "不……不。我很快就会赶上来，你先走吧。";
@@ -206,12 +206,12 @@ OnTouch:
 	if ('protocole == 1) {
 		'protocole = 2;
 		disablenpc instance_npcname("#lrdoor2");
-		// disablenpc instance_npcname("Mark#room1");
-		disablenpc instance_npcname("Du#room1");
-		disablenpc instance_npcname("Tamarin#room1");
-		disablenpc instance_npcname("Verity#room1");
-		// disablenpc instance_npcname("Maggi#room1");
-		// disablenpc instance_npcname("Alph#room1");
+		// disablenpc instance_npcname("马克#room1");
+		disablenpc instance_npcname("杜#room1");
+		disablenpc instance_npcname("塔玛琳#room1");
+		disablenpc instance_npcname("薇瑞蒂#room1");
+		// disablenpc instance_npcname("玛姬#room1");
+		// disablenpc instance_npcname("阿尔弗#room1");
 		mapannounce 'map_name$, "-----------------吱呀---------------------",bc_map,"0xFF0000";
 		donpcevent instance_npcname("#lrdoor3") + "::OnStart";
 	}
@@ -263,7 +263,7 @@ OnMyMobDead:
 	if (.@count < 1) {
 		mapannounce 'map_name$, "系统消息：第一协议失败。开始执行下一协议。",bc_map,"0xFF0000";
 		stopnpctimer;
-		enablenpc instance_npcname("Tamarin#room2");
+		enablenpc instance_npcname("塔玛琳#room2");
 		disablenpc instance_npcname("#lrdoor3");
 	}
 	end;
@@ -304,8 +304,8 @@ OnMyMobDead:
 		enablenpc instance_npcname("#lrdoor4");
 		for ( .@i = 1; .@i < 16; ++.@i )
 			enablenpc instance_npcname( "#lrboom" + .@i );
-		enablenpc instance_npcname("Verity#room2");
-		enablenpc instance_npcname("Verity#room3");
+		enablenpc instance_npcname("薇瑞蒂#room2");
+		enablenpc instance_npcname("薇瑞蒂#room3");
 	}
 	close3;
 }
@@ -369,7 +369,7 @@ OnTouch:
 	cutin "EP15_2_brt_7.bmp",2;
 	if ('protocole == 3) {
 		'protocole = 4;
-		disablenpc instance_npcname("Verity#room3");
+		disablenpc instance_npcname("薇瑞蒂#room3");
 		donpcevent instance_npcname("#bosslr") + "::OnStart";
 	}
 	close3;
@@ -432,12 +432,12 @@ OnMyMobDead:
 		killmonster 'map_name$, instance_npcname("#bosslr") + "::OnMyMobDead";
 		killmonster 'map_name$, instance_npcname("#bosslr") + "::OnMyMobDead2";
 		mapannounce 'map_name$, "系统消息：所有协议均失败。正在封锁除威胁对象以外的区域。",bc_map,"0xFF0000";
-		// enablenpc instance_npcname("Alph#room4");
-		// enablenpc instance_npcname("Tamarin#room4");
-		// enablenpc instance_npcname("Maggi#room4");
-		// enablenpc instance_npcname("Du#room4");
-		// enablenpc instance_npcname("Mark#room4");
-		enablenpc instance_npcname("Verity#room4");
+		// enablenpc instance_npcname("阿尔弗#room4");
+		// enablenpc instance_npcname("塔玛琳#room4");
+		// enablenpc instance_npcname("玛姬#room4");
+		// enablenpc instance_npcname("杜#room4");
+		// enablenpc instance_npcname("马克#room4");
+		enablenpc instance_npcname("薇瑞蒂#room4");
 		disablenpc instance_npcname("#bosslr");
 	}
 	end;
@@ -460,23 +460,23 @@ OnInstanceInit:
 
 	// 1st step
 	disablenpc instance_npcname("#lrdoor3");
-	disablenpc instance_npcname("Tamarin#room2");
+	disablenpc instance_npcname("塔玛琳#room2");
 	disablenpc instance_npcname("#lrdoor4");
 
 	// 2nd step
-	disablenpc instance_npcname("Verity#room2");
+	disablenpc instance_npcname("薇瑞蒂#room2");
 	for ( .@i = 1; .@i < 16; ++.@i )
 		disablenpc instance_npcname( "#lrboom" + .@i );
 
 	// Last step
-	disablenpc instance_npcname("Verity#room3");
+	disablenpc instance_npcname("薇瑞蒂#room3");
 	disablenpc instance_npcname("#bosslr");
-	// disablenpc instance_npcname("Alph#room4");
-	// disablenpc instance_npcname("Tamarin#room4");
-	// disablenpc instance_npcname("Maggi#room4");
-	// disablenpc instance_npcname("Du#room4");
-	// disablenpc instance_npcname("Mark#room4");
-	disablenpc instance_npcname("Verity#room4");
+	// disablenpc instance_npcname("阿尔弗#room4");
+	// disablenpc instance_npcname("塔玛琳#room4");
+	// disablenpc instance_npcname("玛姬#room4");
+	// disablenpc instance_npcname("杜#room4");
+	// disablenpc instance_npcname("马克#room4");
+	disablenpc instance_npcname("薇瑞蒂#room4");
 	end;
 }
 
@@ -504,7 +504,7 @@ OnInstanceInit:
 }
 
 1@uns,244,254,3	script	杜#room4	4_M_REDMAN,{
-	mes "[Du]";
+	mes "[杜]";
 	mes "姐姐！";
 	mes "发生什么了？！";
 	mes "你没事吧？";
@@ -521,24 +521,24 @@ OnInstanceInit:
 }
 
 1@uns,242,253,3	script	薇瑞蒂#room4	4_F_BERRYTEA,{
-	mes "[Du]";
+	mes "[杜]";
 	mes "姐姐！";
 	mes "发生什么了？！";
 	mes "你没事吧？";
 	cutin "bu_du5.bmp",2;
-	npctalk "杜：姐姐！发生什么了？！你没事吧？", instance_npcname("Du#room4");
+	npctalk "杜：姐姐！发生什么了？！你没事吧？", instance_npcname("杜#room4");
 	next;
 	mes "[塔玛琳]";
 	mes "维瑞蒂！！！";
 	mes "振作点！";
 	cutin "ep143_tahuk.bmp",2;
-	npctalk "塔玛琳：维瑞蒂！！！振作点！", instance_npcname("Tamarin#room4");
+	npctalk "塔玛琳：维瑞蒂！！！振作点！", instance_npcname("塔玛琳#room4");
 	next;
 	mes "[马克]";
 	mes "大家让开！";
 	mes "我要施放治愈术！！！";
 	cutin "bu_mark4.bmp",0;
-	npctalk "马克：大家让开！我要施放治愈术！！！", instance_npcname("Mark#room4");
+	npctalk "马克：大家让开！我要施放治愈术！！！", instance_npcname("马克#room4");
 	next;
 	mes "[维瑞蒂]";
 	mes "呃……嗯……";
@@ -552,11 +552,11 @@ OnInstanceInit:
 	cutin "EP15_2_brt_5.bmp",2;
 	npctalk "维瑞蒂：哦……发生什么了，大家都一脸严肃。";
 	next;
-	mes "[Du]";
+	mes "[杜]";
 	mes "你说呢！";
 	mes "你不记得了？";
 	cutin "bu_du4.bmp",2;
-	npctalk "杜：你说呢！你不记得了？", instance_npcname("Du#room4");
+	npctalk "杜：你说呢！你不记得了？", instance_npcname("杜#room4");
 	next;
 	mes "[维瑞蒂]";
 	mes "记得？";
@@ -572,7 +572,7 @@ OnInstanceInit:
 	mes "维瑞蒂，你真的什么都不记得？";
 	mes "之前……";
 	cutin "ep143_tahuk.bmp",2;
-	npctalk "塔玛琳：维瑞蒂，你真的什么都不记得？之前……", instance_npcname("Tamarin#room4");
+	npctalk "塔玛琳：维瑞蒂，你真的什么都不记得？之前……", instance_npcname("塔玛琳#room4");
 	next;
 	mes "[维瑞蒂]";
 	mes "嗯……";
@@ -585,48 +585,48 @@ OnInstanceInit:
 	npctalk "维瑞蒂：之后什么都不记得了。";
 	cutin "EP15_2_brt_5.bmp",2;
 	next;
-	mes "[Du]";
+	mes "[杜]";
 	mes "刚才有巨大的东西……";
 	cutin "bu_du4.bmp",2;
-	npctalk "杜：刚才有巨大的东西……", instance_npcname("Du#room4");
+	npctalk "杜：刚才有巨大的东西……", instance_npcname("杜#room4");
 	next;
 	mes "[阿尔夫]";
 	mes "喂……现在不是聊天的时候吧。";
 	cutin "bu_alp3.bmp",2;
-	npctalk "阿尔夫：喂……现在不是聊天的时候吧。", instance_npcname("Alph#room4");
+	npctalk "阿尔夫：喂……现在不是聊天的时候吧。", instance_npcname("阿尔弗#room4");
 	next;
-	mes "[Du]";
+	mes "[杜]";
 	mes "这叫聊天？";
 	mes "刚才那东西很巨大好吗？";
 	cutin "bu_du4.bmp",2;
-	npctalk "杜：这叫聊天？刚才那东西很巨大好吗？", instance_npcname("Du#room4");
+	npctalk "杜：这叫聊天？刚才那东西很巨大好吗？", instance_npcname("杜#room4");
 	next;
 	mes "[阿尔夫]";
 	mes "听到了吗？";
 	mes "有东西过来了……";
 	cutin "bu_alp1.bmp",2;
-	npctalk "阿尔夫：听到了吗？有东西过来了……", instance_npcname("Alph#room4");
+	npctalk "阿尔夫：听到了吗？有东西过来了……", instance_npcname("阿尔弗#room4");
 	next;
 	mes "[塔玛琳]";
 	mes "现在……仔细看，地面在轻微震动吧？";
 	cutin "ep143_tahuk.bmp",2;
-	npctalk "塔玛琳：现在……仔细看，地面在轻微震动吧？", instance_npcname("Tamarin#room4");
+	npctalk "塔玛琳：现在……仔细看，地面在轻微震动吧？", instance_npcname("塔玛琳#room4");
 	next;
-	mes "[Du]";
+	mes "[杜]";
 	mes "什……什么？";
 	cutin "bu_du4.bmp",2;
-	npctalk "杜：什……什么？", instance_npcname("Du#room4");
+	npctalk "杜：什……什么？", instance_npcname("杜#room4");
 	next;
 	mes "[阿尔夫]";
 	mes "这……很危险。";
 	mes "这不是我们能应付的级别……";
 	cutin "bu_alp2.bmp",2;
-	npctalk "阿尔夫：这……很危险。这不是我们能应付的级别……", instance_npcname("Alph#room4");
+	npctalk "阿尔夫：这……很危险。这不是我们能应付的级别……", instance_npcname("阿尔弗#room4");
 	next;
 	mes "[马克]";
 	mes "快……快出去！！！";
 	cutin "bu_mark4.bmp",0;
-	npctalk "马克：快……快出去！！！", instance_npcname("Mark#room4");
+	npctalk "马克：快……快出去！！！", instance_npcname("马克#room4");
 	close2;
 	warp "un_bunker",299,162;
 	end;
