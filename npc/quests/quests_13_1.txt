@@ -14144,19 +14144,17 @@ que_dan02,102,42,3	script	面目全非的尸体#moc2	457,{
 
 // Ash-Vacuum Warper :: gogoash
 //============================================================ 
-/*
-// Event NPC, now disabled on official servers.
-prontera,161,192,5	script	灰烬真空传送员	707,{
-	mes "[传送士兵]";
+prontera,161,192,5	script	灰暗的尘世传送员	707,{
+	mes "[传送员]";
 	mes "限时期间。";
-	mes "我可以免费送你去灰烬真空。";
+	mes "我可以免费送你去灰暗的尘世。";
 	next;
-	mes "[传送士兵]";
-	mes "你想现在去灰烬真空吗？";
+	mes "[传送员]";
+	mes "你想现在去灰暗的尘世吗？";
 	next;
 	switch(select("是的，拜托:还没有")) {
 	case 1:
-		mes "[传送士兵]";
+		mes "[传送员]";
 		mes "好的。希望你";
 		mes "旅途愉快。";
 		close2;
@@ -14164,14 +14162,13 @@ prontera,161,192,5	script	灰烬真空传送员	707,{
 		warp "mid_camp",210,291;
 		end;
 	case 2:
-		mes "[传送士兵]";
+		mes "[传送员]";
 		mes "没问题。我明白。";
 		mes "改变主意了就告诉我。";
 		mes "再见。";
 		close;
 	}
 }
-*/
 
 //============================================================ 
 // Old changelog
