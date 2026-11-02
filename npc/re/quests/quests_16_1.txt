@@ -6767,7 +6767,7 @@ prt_cas_q,96,184,1	script	阿格妮丝·雷根贝格#ep16lu	4_EP16_AGNES,{
 		mes "[阿格妮丝]";
 		mes "我想用珍珠做项链和手镯。你可以从怪物身上得到珍珠。能帮我弄到吗？";
 		next;
-		if (select( "Of course.", "It will be difficult." ) == 2) {
+		if (select( "当然。", "恐怕很难。" ) == 2) {
 			mes "[" + strcharinfo(0) + "]";
 			mes "我想弄到珍珠会很难。真的很难。超出我的能力。对不起。";
 			next;
@@ -8726,7 +8726,7 @@ prt_cas_q,80,80,4	script	理查德家管家#EP161GAM	1_M_LIBRARYMASTER,{
 		5411,	// [Repeat]Warrior Discipline-Immortal
 		5412,	// [Repeat]Warrior Discipline-Intangible
 		5413;	// [Repeat]Warrior Discipline-Dragon
-	setarray .@training_list$[0], "human","animal","insect","fish","plant","demon","angel","Immortal","nothing","dragon";
+	setarray .@training_list$[0], "人类","动物","昆虫","鱼类","植物","恶魔","天使","不死","无形","龙族";
 	.@size = getarraysize( .@quest_list );
 	while( isbegin_quest(.@quest_list[.@i]) == 0 && .@i < .@size ) .@i++;
 
@@ -8771,14 +8771,14 @@ prt_cas_q,80,80,4	script	理查德家管家#EP161GAM	1_M_LIBRARYMASTER,{
 			mes "[管家]";
 			mes "请选择要尝试的训练项目。";
 			next;
-			.@s = select( "Warrior Discipline-Human", "Warrior Discipline-Animal", "Warrior Discipline-Insect", "Warrior Discipline-Fish", "Warrior Discipline-Plant", "Warrior Discipline-Devil", "Warrior Discipline-Angel", "Warrior Discipline-Immortal", "Warrior Discipline-Intangible", "Warrior Discipline-Dragon" ) - 1;
+			.@s = select( "战士训练-人类", "战士训练-动物", "战士训练-昆虫", "战士训练-鱼类", "战士训练-植物", "战士训练-恶魔", "战士训练-天使", "战士训练-不死", "战士训练-无形", "战士训练-龙族" ) - 1;
 			mes "[管家]";
 			mes "这项训练需要猎杀50只" + .@training_list$[.@s] + " 等级140以上的怪物。";
 			next;
 			mes "[管家]";
 			mes "要尝试这项训练吗？";
 			next;
-			if (select( "Try.", "Do not try." ) == 2) {
+			if (select( "尝试。", "不尝试。" ) == 2) {
 				mes "[管家]";
 				mes "嗯……你不喜欢训练内容？好吧，没关系。何不选另一个训练？";
 				continue;
@@ -8814,7 +8814,7 @@ prt_cas_q,80,80,4	script	理查德家管家#EP161GAM	1_M_LIBRARYMASTER,{
 	mes "[管家]";
 	mes "你正在参加训练。需要什么吗？";
 	next;
-	switch( select( "No.", "About the way of training", "About the goal of training", "Give up the training." ) ) {
+	switch( select( "没有了。", "关于训练方式", "关于训练目标", "放弃训练。" ) ) {
 	case 1:
 		mes "[管家]";
 		mes "要把训练当作实战！训练中也不要放松警惕。";
@@ -8852,7 +8852,7 @@ prt_cas_q,80,80,4	script	理查德家管家#EP161GAM	1_M_LIBRARYMASTER,{
 		mes "[管家]";
 		mes "我不会阻止你放弃。但你该知道，到目前为止的训练进度不会反映在下一次训练中。";
 		next;
-		if (select( "Do not give up.", "Give up." ) == 1) {
+		if (select( "不放弃。", "放弃。" ) == 1) {
 			mes "[管家]";
 			mes "好决定。要把训练当作实战！训练中也不要放松警惕。";
 			close;
@@ -8913,7 +8913,7 @@ prt_cas_q,93,74,4	script	波·理查德#EP161GAM	4_M_6THPRIN1,{
 		mes "[波·理查德]";
 		mes "我们也培养了许多优秀战士。嗯！我突然好奇，你听说过理查德家族的战士吗？";
 		next;
-		switch( select( "Yes, I have.", "No, I haven't." ) ) {
+		switch( select( "听说过。", "没听说过。" ) ) {
 		case 1:
 			mes "[波·理查德]";
 			mes "哈哈哈，看来理查德之名连冒险者也知道。";
@@ -8967,7 +8967,7 @@ prt_cas_q,93,74,4	script	波·理查德#EP161GAM	4_M_6THPRIN1,{
 		mes "[波·理查德]";
 		mes "我觉得这是很有吸引力的提议。你要挑战理查德家族的战士训练体系吗？";
 		next;
-		if (select( "I'll try.", "I decline." ) == 2) {
+		if (select( "我试试。", "我拒绝。" ) == 2) {
 			emotion ET_OTL;
 			mes "[波·理查德]";
 			mes "我想这提议对你没什么吸引力。抱歉，如果你改变主意，请再来。";
@@ -9064,7 +9064,7 @@ prt_cas_q,120,100,4	script	理查德王室助手#EP161DY	4_M_6THPRIN2,{
 	mes "[王室理查德家的助手]";
 	mes "请选择要使用的服务。";
 	next;
-	switch( select( "Quest Start Setting", "Reset cooldown.", "Reset Quest", "Check current status" ) ) {
+	switch( select( "开始任务设置", "重置冷却", "重置任务", "查看当前状态" ) ) {
 	case 1:
 		mes "[王室理查德家的助手]";
 		mes "设置为进行理查德家族任务。";
