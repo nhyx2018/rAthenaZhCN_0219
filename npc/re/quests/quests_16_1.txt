@@ -16270,7 +16270,7 @@ prt_pri00,61,136,3	script	迪伦#pa0829	4_CAT_SAILOR5,{
 			close;
 		}
 		mes "[迪伦]";
-		mes "荣誉标记是王国发行的，禁止个人之间买卖。我收下它，帮人强化装备。";
+		mes "<ITEM>荣誉徽章<INFO>6919</INFO></ITEM>是王国发行的，禁止个人之间买卖。我收下它，帮人强化装备。";
 		next;
 		mes "[迪伦]";
 		mes "你也看得出来，这是违法的。所以我以前只通过熟人介绍接活。可有个家伙在重置强化时装备坏了，就把我告发了。";
@@ -16291,7 +16291,7 @@ prt_pri00,61,136,3	script	迪伦#pa0829	4_CAT_SAILOR5,{
 		mes "你真是个很好打交道的家伙。我想攒够钱把自己保释出去。这里来者不拒。";
 		next;
 		mes "[迪伦]";
-		mes "我用荣誉标记强化Flattery Robe、Invective Robe和Prontera Badge这三件物品。";
+		mes "我用<ITEM>荣誉徽章<INFO>6919</INFO></ITEM>强化<ITEM>恭维法袍<INFO>15146</INFO></ITEM>、<ITEM>谴责法袍<INFO>15147</INFO></ITEM>和<ITEM>普隆德拉徽章<INFO>28356</INFO></ITEM>这三件物品。";
 		next;
 		mes "[迪伦]";
 		mes "我想我已经不用再解释了。把你想要强化的装备带来就行。";
@@ -16309,10 +16309,10 @@ prt_pri00,61,136,3	script	迪伦#pa0829	4_CAT_SAILOR5,{
 		mes "仔细听好，我只说一次。";
 		next;
 		mes "[迪伦]";
-		mes "我会用20个荣誉标记强化Flattery Robe或Invective Robe的一个栏位。最多可强化2个栏位。重置需要10个荣誉标记。听到这里懂了吗？";
+		mes "我会用20个<ITEM>荣誉徽章<INFO>6919</INFO></ITEM>强化<ITEM>恭维法袍<INFO>15146</INFO></ITEM>或<ITEM>谴责法袍<INFO>15147</INFO></ITEM>的一个栏位。最多可强化2个栏位。重置需要10个<ITEM>荣誉徽章<INFO>6919</INFO></ITEM>。听到这里懂了吗？";
 		next;
 		mes "[迪伦]";
-		mes "接下来是Prontera Badge。强化1个栏位需要5个荣誉标记。最多可强化2个栏位。重置需要10个荣誉标记。";
+		mes "接下来是<ITEM>普隆德拉徽章<INFO>28356</INFO></ITEM>。强化1个栏位需要5个<ITEM>荣誉徽章<INFO>6919</INFO></ITEM>。最多可强化2个栏位。重置需要10个<ITEM>荣誉徽章<INFO>6919</INFO></ITEM>。";
 		next;
 		mes "[迪伦]";
 		mes "重置不是随时都能做的。只有在2个栏位都强化完毕、再也无法强化时我才会做。然后……";
@@ -16325,19 +16325,19 @@ prt_pri00,61,136,3	script	迪伦#pa0829	4_CAT_SAILOR5,{
 		close;
 	case 2:
 		mes "[迪伦]";
-		mes "Flattery Robe或Invective Robe每个栏位需要20个荣誉标记。要强化吗？";
+		mes "<ITEM>恭维法袍<INFO>15146</INFO></ITEM>或<ITEM>谴责法袍<INFO>15147</INFO></ITEM>每个栏位需要20个<ITEM>荣誉徽章<INFO>6919</INFO></ITEM>。要强化吗？";
 		break;
 	case 3:
 		mes "[迪伦]";
-		mes "要提升你装备在身体左栏位的Prontera Badge的一个栏位，需要5个荣誉标记。要强化吗？";
+		mes "要提升你装备在身体左栏位的<ITEM>普隆德拉徽章<INFO>28356</INFO></ITEM>的一个栏位，需要5个<ITEM>荣誉徽章<INFO>6919</INFO></ITEM>。要强化吗？";
 		break;
 	case 4:
 		mes "[迪伦]";
-		mes "重置Invective Robe或Flattery Robe需要10个荣誉标记。装备不会被破坏，附着的卡片和精炼等级也会保持不变。";
+		mes "重置<ITEM>谴责法袍<INFO>15147</INFO></ITEM>或<ITEM>恭维法袍<INFO>15146</INFO></ITEM>需要10个<ITEM>荣誉徽章<INFO>6919</INFO></ITEM>。装备不会被破坏，附着的卡片和精炼等级也会保持不变。";
 		break;
 	case 5:
 		mes "[迪伦]";
-		mes "重置你装备在身体左栏位的Prontera Badge需要10个荣誉标记。";
+		mes "重置你装备在身体左栏位的<ITEM>普隆德拉徽章<INFO>28356</INFO></ITEM>需要10个<ITEM>荣誉徽章<INFO>6919</INFO></ITEM>。";
 		next;
 		mes "[迪伦]";
 		mes "就像我说过的，重置徽章很难，^ff0000成功率为80%。^000000一旦失败，一切都会消失。要重置吗？";
@@ -16375,7 +16375,7 @@ prt_pri00,61,136,3	script	迪伦#pa0829	4_CAT_SAILOR5,{
 		}
 		if (countitem(6919) < 20) {
 			mes "[迪伦]";
-			mes "喂，伙计。没有荣誉标记的话，我可没法和你交易。";
+			mes "喂，伙计。没有<ITEM>荣誉徽章<INFO>6919</INFO></ITEM>的话，我可没法和你交易。";
 			close;
 		}
 		.@r = rand(1,961);
@@ -16416,7 +16416,7 @@ prt_pri00,61,136,3	script	迪伦#pa0829	4_CAT_SAILOR5,{
 		}
 		if (getequipid(EQI_ACC_L) != 28356) {
 			mes "[迪伦]";
-			mes "别胡闹了。想强化的话，就戴上Prontera Badge来找我。";
+			mes "别胡闹了。想强化的话，就戴上<ITEM>普隆德拉徽章<INFO>28356</INFO></ITEM>来找我。";
 			close;
 		}
 		.@card[2] = getequipcardid(EQI_ACC_L,2);
@@ -16428,7 +16428,7 @@ prt_pri00,61,136,3	script	迪伦#pa0829	4_CAT_SAILOR5,{
 		}
 		if (countitem(6919) < 5) {
 			mes "[迪伦]";
-			mes "喂，伙计。没有荣誉标记的话，我可没法和你交易。";
+			mes "喂，伙计。没有<ITEM>荣誉徽章<INFO>6919</INFO></ITEM>的话，我可没法和你交易。";
 			close;
 		}
 		.@r = rand(1,22231);
@@ -16497,7 +16497,7 @@ prt_pri00,61,136,3	script	迪伦#pa0829	4_CAT_SAILOR5,{
 		}
 		if (countitem(6919) < 10) {
 			mes "[迪伦]";
-			mes "喂，伙计。没有荣誉标记的话，我可没法和你交易。";
+			mes "喂，伙计。没有<ITEM>荣誉徽章<INFO>6919</INFO></ITEM>的话，我可没法和你交易。";
 			close;
 		}
 		delitem 6919,10;
@@ -16519,12 +16519,12 @@ prt_pri00,61,136,3	script	迪伦#pa0829	4_CAT_SAILOR5,{
 		}
 		if (getequipid(EQI_ACC_L) != 28356) {
 			mes "[迪伦]";
-			mes "别胡闹了。想强化的话，就戴上Prontera Badge来找我。";
+			mes "别胡闹了。想强化的话，就戴上<ITEM>普隆德拉徽章<INFO>28356</INFO></ITEM>来找我。";
 			close;
 		}
 		if (countitem(6919) < 10) {
 			mes "[迪伦]";
-			mes "喂，伙计。没有荣誉标记的话，我可没法和你交易。";
+			mes "喂，伙计。没有<ITEM>荣誉徽章<INFO>6919</INFO></ITEM>的话，我可没法和你交易。";
 			close;
 		}
 		delequip EQI_ACC_L;

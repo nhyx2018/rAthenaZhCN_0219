@@ -23332,7 +23332,7 @@ Body:
       NoAuction: true
   - Id: 6919
     AegisName: TokenOfHonor
-    Name: ÈÙÓşµÄ »ÕÕÂ
+    Name: ÈÙÓş»ÕÕÂ
     Type: Etc
     Buy: 10
     Trade:
@@ -23345,7 +23345,7 @@ Body:
       NoAuction: true
   - Id: 6920
     AegisName: RuneMagicPowder
-    Name: Â¬¶÷ Ä§·¨ ·ÛÄ©
+    Name: Â¬¶÷Ä§·¨·ÛÄ©
     Type: Etc
     Buy: 10
     Weight: 10

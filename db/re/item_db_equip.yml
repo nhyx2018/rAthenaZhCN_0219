@@ -71592,7 +71592,7 @@ Body:
       }
   - Id: 15146
     AegisName: Robe_Of_Flattery
-    Name: 铠甲
+    Name: 恭维法袍
     Type: Armor
     Buy: 20
     Weight: 100
@@ -71608,7 +71608,7 @@ Body:
       bonus bMatk,(.@i>=140)?(150):((.@i>=120)?(100):(50));
   - Id: 15147
     AegisName: Robe_Of_Vituperation
-    Name: 铠甲
+    Name: 谴责法袍
     Type: Armor
     Buy: 20
     Weight: 100
@@ -144832,7 +144832,7 @@ Body:
       bonus2 bSubRace2,RC2_Ep16_def,20;
   - Id: 28356
     AegisName: BadgeOfProntera_
-    Name: 饰品
+    Name: 普隆德拉徽章
     Type: Armor
     Weight: 100
     Locations:
