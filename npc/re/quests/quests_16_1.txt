@@ -336,10 +336,10 @@ prt_cas_q,26,30,3	script	贝尔侍从长#ep16_main	4_M_RUSMAN1,{
 		next;
 		mes "[贝尔]";
 		mes "西侧别馆，也就是我们现在所在的地方，";
-		mes "有海尔内、内里乌斯和博尔特家族的住处。";
+		mes "有海尔内、内里乌斯和沃尔特家族的住处。";
 		next;
 		mes "[贝尔]";
-		mes "穿过走廊到东侧，是维格纳、理查德、吉尔伯格和雷根贝格家族的住处。";
+		mes "穿过走廊到东侧，是维格纳、理查德、格奥伯格和雷根贝格家族的住处。";
 		next;
 		mes "[贝尔]";
 		mes "你需要和各家族成员问候，所以请务必都去拜访。";
@@ -349,14 +349,14 @@ prt_cas_q,26,30,3	script	贝尔侍从长#ep16_main	4_M_RUSMAN1,{
 		close;
 	case 2:
 		if (isbegin_quest(7682) != 2) {// Socializing Starts from an Eye Contact
+			.@string$ = "";
 			if (isbegin_quest(7683) < 2) .@string$ = "海尔内";
 			if (isbegin_quest(7684) < 2) .@string$ += ( .@string$ != "" ? ", " : "" ) + "内里乌斯";
-			if (isbegin_quest(5402) < 2) .@string$ += ( .@string$ != "理查德" ? ", " : "" ) + "Richard";
-			if (ep16_wal < 2) .@string$ += ( .@string$ != "沃尔特" ? ", " : "" ) + "Walther";
-			if (ep16_wig < 2) .@string$ += ( .@string$ != "维格纳" ? ", " : "" ) + "Wigner";
-			if (ep16_lug < 2) .@string$ += ( .@string$ != "雷根贝格" ? ", " : "" ) + "Roegenburg";
-			if (ep16_gaobs < 2) .@string$ += ( .@string$ != "格奥伯格" ? ", " : "" ) + "Geoborg";
-
+			if (isbegin_quest(5402) < 2) .@string$ += ( .@string$ != "" ? ", " : "" ) + "理查德";
+			if (ep16_wal < 2) .@string$ += ( .@string$ != "" ? ", " : "" ) + "沃尔特";
+			if (ep16_wig < 2) .@string$ += ( .@string$ != "" ? ", " : "" ) + "维格纳";
+			if (ep16_lug < 2) .@string$ += ( .@string$ != "" ? ", " : "" ) + "雷根贝格";
+			if (ep16_gaobs < 2) .@string$ += ( .@string$ != "" ? ", " : "" ) + "格奥伯格";
 			if (.@string$ == "") {	// it shouldn't happen
 				completequest 7682;// Socializing Starts from an Eye Contact
 				setquest 7685;// What Is the Next Thing on the Schedule ?
@@ -4394,7 +4394,7 @@ prt_cas_q,20,184,3	script	伊恩·沃尔特#ep16wal	1_M_JOBTESTER,5,5,{
 		mes "不知道你是否知道，^0000cd我们家族的候选人曾在上一届王室会议中卷入不幸事件^000000。";
 		next;
 		mes "[伊恩]";
-		mes "^0000cd王位候选人伊森纳姆^000000突然暴走，^0000cd最后被吉尔伯格家族的继承人杀死^000000。";
+		mes "^0000cd王位候选人伊森纳姆^000000突然暴走，^0000cd最后被格奥伯格家族的继承人杀死^000000。";
 		next;
 		mes "[伊恩]";
 		mes "经过商议，我们家族决定这次不参加^0000cd王室会议^000000。";
@@ -5568,7 +5568,7 @@ prt_cas_q,19,85,4	script	克罗内克·G·海尔内#ep16_01	4_EP16_GRANZ,{
 				cutin "ep16_friedrich_stolz_heine",1;
 				mes "[弗里德里希]";
 				mes "当时最强的候选人、沃尔特家族的伊森纳姆突然威胁其他候选人。";
-				mes "吉尔伯格家族的恩斯特不得不处决他。";
+				mes "格奥伯格家族的恩斯特不得不处决他。";
 				next;
 				mes "[弗里德里希]";
 				mes "看起来恩斯特将被任命为下一任国王，但他突然辞职了。";
@@ -9308,48 +9308,48 @@ prt_cas_q,93,129,3	script	女王#ep16_1	4_EP16_EGEO,{
 	if (ep16_royal == 2 && ep16_gaobs == 0)
 		callfunc("F_geoborg_text");
 	if (ep16_gaobs == 1) {
-		mes "[凯瑟琳·D·吉尔伯格女王]";
+		mes "[凯瑟琳·D·格奥伯格女王]";
 		mes "欢迎。";
-		mes "我是凯瑟琳·D·吉尔伯格女王。";
+		mes "我是凯瑟琳·D·格奥伯格女王。";
 		cutin "ep16gao_2",2;
 		next;
-		mes "[凯瑟琳·D·吉尔伯格女王]";
+		mes "[凯瑟琳·D·格奥伯格女王]";
 		mes "如果我的骑士给你添了麻烦，我很抱歉。";
 		mes "他们这些天有些敏感，请理解。";
 		emotion ET_SORRY;
 		cutin "ep16gao_1",2;
 		next;
 		cutin "",255;
-		if (select( "询问吉尔伯格家族。", "离开房间。" ) == 2) {
-			mes "[凯瑟琳·D·吉尔伯格女王]";
+		if (select( "询问格奥伯格家族。", "离开房间。" ) == 2) {
+			mes "[凯瑟琳·D·格奥伯格女王]";
 			mes "原来如此。";
 			mes "如果还有其他问题，随时再来。";
 			cutin "ep16gao_1",2;
 			next;
-			mes "[凯瑟琳·D·吉尔伯格女王]";
+			mes "[凯瑟琳·D·格奥伯格女王]";
 			mes "献给英雄们的宴会正在宴会厅举行，请尽情享受。";
 			cutin "ep16gao_2",2;
 			close3;
 		}
-		mes "[凯瑟琳·D·吉尔伯格女王]";
-		mes "我们吉尔伯格家族是开创这个世界的特里斯坦一世的后裔。家族世代出过许多国王和骑士。";
+		mes "[凯瑟琳·D·格奥伯格女王]";
+		mes "我们格奥伯格家族是开创这个世界的特里斯坦一世的后裔。家族世代出过许多国王和骑士。";
 		cutin "ep16gao_1",2;
 		next;
-		mes "[凯瑟琳·D·吉尔伯格女王]";
+		mes "[凯瑟琳·D·格奥伯格女王]";
 		mes "在第一次王室会议上，第四王子恩斯特被选为候选人。但这次由于几起事件，他放弃了王室会议中的位置。";
 		next;
 		select("几起事件是什么意思？");
-		mes "[凯瑟琳·D·吉尔伯格女王]";
+		mes "[凯瑟琳·D·格奥伯格女王]";
 		mes "哦……我说漏嘴了。";
 		mes "那些事件不太方便告诉你。";
 		mes "希望你就当我没说过。";
 		cutin "ep16gao_3",2;
 		next;
-		mes "[凯瑟琳·D·吉尔伯格女王]";
+		mes "[凯瑟琳·D·格奥伯格女王]";
 		mes "你虽然来了，但我能告诉你的不多。";
 		cutin "ep16gao_1",2;
 		next;
-		mes "[凯瑟琳·D·吉尔伯格女王]";
+		mes "[凯瑟琳·D·格奥伯格女王]";
 		mes "如果还有问题，可以问这里的杰拉德和马丁。";
 		mes "因为有紧急公务，恕我不能多陪。";
 		completequest 11400;// The Geoborgs
@@ -9364,68 +9364,68 @@ prt_cas_q,93,129,3	script	女王#ep16_1	4_EP16_EGEO,{
 		close3;
 	}
 	if (ep16_gaobs == 2) {
-		mes "[凯瑟琳·D·吉尔伯格女王]";
+		mes "[凯瑟琳·D·格奥伯格女王]";
 		mes "你虽然来了，但我能告诉你的不多。";
 		cutin "ep16gao_1",2;
 		next;
-		mes "[凯瑟琳·D·吉尔伯格女王]";
+		mes "[凯瑟琳·D·格奥伯格女王]";
 		mes "如果还有问题，可以问这里的杰拉德和马丁。";
 		mes "因为有紧急公务，恕我不能多陪。";
 		close3;
 	}
 	if (ep16_gaobs > 5 && ep16_gaobs < 14) {
-		mes "[凯瑟琳·D·吉尔伯格女王]";
+		mes "[凯瑟琳·D·格奥伯格女王]";
 		mes "你是说恩斯特王子？";
 		mes "怎么？";
 		cutin "ep16gao_1",2;
 		next;
-		mes "[凯瑟琳·D·吉尔伯格女王]";
+		mes "[凯瑟琳·D·格奥伯格女王]";
 		mes "他每天来问安，然后帮我处理工作或做别的事。";
 		cutin "ep16gao_2",2;
 		next;
-		mes "[凯瑟琳·D·吉尔伯格女王]";
+		mes "[凯瑟琳·D·格奥伯格女王]";
 		mes "宴会开始后，他就把工作带到别处去了。";
 		next;
-		mes "[凯瑟琳·D·吉尔伯格女王]";
+		mes "[凯瑟琳·D·格奥伯格女王]";
 		mes "可能在宴会厅某处。";
 		close3;
 	}
 	if (ep16_gaobs == 14) {
-		mes "[凯瑟琳·D·吉尔伯格女王]";
+		mes "[凯瑟琳·D·格奥伯格女王]";
 		mes "还没见到恩斯特王子？";
 		mes "他刚来了一下又出去了……";
 		cutin "ep16gao_1",2;
 		next;
-		mes "[凯瑟琳·D·吉尔伯格女王]";
+		mes "[凯瑟琳·D·格奥伯格女王]";
 		mes "我们家族的代表这样到处晃，我很担心。";
 		next;
 		select("告诉她你听到的事。");
-		mes "[凯瑟琳·D·吉尔伯格女王]";
+		mes "[凯瑟琳·D·格奥伯格女王]";
 		mes "哦……";
 		mes "亲爱的英雄，请别太在意那些话。";
 		cutin "ep16gao_3",2;
 		next;
-		mes "[凯瑟琳·D·吉尔伯格女王]";
+		mes "[凯瑟琳·D·格奥伯格女王]";
 		mes "那是我们格奥伯格家族自己该克服的问题。";
 		close3;
 	}
 	switch( rand(1,3) ) {
 	case 1:
-		mes "[凯瑟琳·D·吉尔伯格女王]";
+		mes "[凯瑟琳·D·格奥伯格女王]";
 		mes "王室议事厅要用最高级的印泥？";
 		mes "记录的是书记官，为什么买没人会用的奢侈品……";
 		emotion ET_FRET;
 		cutin "ep16gao_3",2;
 		close3;
 	case 2:
-		mes "[凯瑟琳·D·吉尔伯格女王]";
+		mes "[凯瑟琳·D·格奥伯格女王]";
 		mes "我的礼服一辈子都穿不完，为什么还一直做……";
 		mes "削减预算！";
 		emotion ET_FRET;
 		cutin "ep16gao_1.bmp",2;
 		close3;
 	case 3:
-		mes "[凯瑟琳·D·吉尔伯格女王]";
+		mes "[凯瑟琳·D·格奥伯格女王]";
 		mes "嗯……马罗尔王国的贸易请求……";
 		mes "得尽快派使者处理……";
 		cutin "ep16gao_2.bmp",2;
