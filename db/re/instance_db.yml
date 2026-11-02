@@ -264,7 +264,7 @@ Body:
       X: 101
       Y: 12
   - Id: 32
-    Name: 意识房间
+    Name: Room of Consciousness
     Enter:
       Map: 1@mir
       X: 101
