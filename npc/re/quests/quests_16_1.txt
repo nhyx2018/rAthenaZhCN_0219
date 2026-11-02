@@ -2420,7 +2420,15 @@ prt_lib_q,91,85,3	script	尼勒姆#ep16_lib_q	4_M_JOB_WIZARD,{
 			mes "哈哈，太晚也不太好……";
 			close;
 		}
-		if (instance_create("意识房间") < 0) {
+		.@instance_id = instance_create("意识房间");
+		if (.@instance_id < 0) {
+			// 测试用：清理残留的意识房间实例后重试，避免“实例已存在”卡住
+			.@instance_size = instance_list("1@mir", IM_PARTY);
+			for (.@i = 0; .@i < .@instance_size; ++.@i)
+				instance_destroy .@instance_list[.@i];
+			.@instance_id = instance_create("意识房间");
+		}
+		if (.@instance_id < 0) {
 			mes "[尼勒姆]";
 			mes "哦……不太顺利。";
 			mes "等等，呼……让我再聚一下力……";
