@@ -2420,7 +2420,7 @@ prt_lib_q,91,85,3	script	尼勒姆#ep16_lib_q	4_M_JOB_WIZARD,{
 			mes "哈哈，太晚也不太好……";
 			close;
 		}
-		if (instance_create("Room of Consciousness") < 0) {
+		if (instance_create("意识房间") < 0) {
 			mes "[尼勒姆]";
 			mes "哦……不太顺利。";
 			mes "等等，呼……让我再聚一下力……";
@@ -2612,7 +2612,7 @@ prt_lib_q,91,85,3	script	尼勒姆#ep16_lib_q	4_M_JOB_WIZARD,{
 					mes "哈哈，太晚也不太好……";
 					close;
 				}
-				if (instance_create("Room of Consciousness") < 0) {
+				if (instance_create("意识房间") < 0) {
 					mes "[尼勒姆]";
 					mes "哦……不太顺利。";
 					mes "等等，呼……让我再聚一下力……";
@@ -2685,7 +2685,7 @@ prt_lib_q,88,90,1	script	摇曳空间#evt_gate02	4_ENERGY_RED,{
 			mes "^4d4dff只有队长才能进入副本[意识房间]。^000000";
 			close;
 		}
-		switch( instance_enter("Room of Consciousness") ) {
+		switch( instance_enter("意识房间") ) {
 		case IE_OTHER:
 			mes "[尼勒姆]";
 			mes "哦，魔力流动好像不太稳定。";
