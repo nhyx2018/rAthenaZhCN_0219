@@ -124,8 +124,8 @@ sp_cor,108,130,5	script	反叛者#rm171_7	4_F_REBELLION3,{
 		mes "[反叛者]";
 		mes "看来你收到消息了。队长们正在里面开会。应该是艾莲娜·沃尔科娃队长叫你来的。";
 		mes "... I was going to call her, but she's already here.";
-		cloakoffnpcself( "Elena Volkova#rm171_0" );
-		npctalk "艾莲娜·沃尔科娃：啊，我一直在找你，冒险家。", "Elena Volkova#rm171_0", bc_self;
+		cloakoffnpcself( "埃琳娜·沃尔科娃#rm171_0" );
+		npctalk "艾莲娜·沃尔科娃：啊，我一直在找你，冒险家。", "埃琳娜·沃尔科娃#rm171_0", bc_self;
 		if (isbegin_quest(16352) == 0)
 			setquest 16352;
 		close;
