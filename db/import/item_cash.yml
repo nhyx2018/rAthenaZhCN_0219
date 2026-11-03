@@ -103,3 +103,6 @@ Body:
         Price: 1
       - Item: BRO_TF_Package
         Price: 1
+      # 成长武器兑换券
+      - Item: Booster_W_Ticket
+        Price: 100

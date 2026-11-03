@@ -5,11 +5,6 @@ Header:
 
 Body:
   - Name: Booster Weapon Exchange
-    Map: prt_in
-    X: 36
-    Y: 95
-    Direction: South
-    Sprite: 4_M_JOB_KNIGHT2
     Items:
       - Index: 0
         Item: PG_B_Sword
