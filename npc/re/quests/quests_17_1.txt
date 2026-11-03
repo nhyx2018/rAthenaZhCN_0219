@@ -4281,31 +4281,6 @@ sp_rudus,130,200,4	script	晨光#171_rudus	4_EP17_MORNING,{
 		unittalk getcharid(3),strcharinfo(0) + ": 那孩子笑着，灿烂的笑容与这地方格格不入。",bc_self;
 		end;
 	}
-	// 第一次见面的剧情（读完欧克的信之后触发）
-	if (isbegin_quest(5856) == 2 && ep17_morning_intro == 0) {
-		ep17_morning_intro = 1;
-		setpcblock PCBLOCK_ALL,true;
-		cutin "ep171_morning03",2;
-		unittalk getcharid(3),strcharinfo(0) + ": 你就是晨光吗？",bc_self;
-		sleep2 2000;
-		npctalk "晨光：……？","",bc_self;
-		sleep2 2000;
-		unittalk getcharid(3),strcharinfo(0) + ": 我看到了欧克留下的信。他让我照顾你。",bc_self;
-		sleep2 2000;
-		npctalk "晨光：欧克……走了。","",bc_self;
-		sleep2 2000;
-		unittalk getcharid(3),strcharinfo(0) + ": 别怕，我会给你带吃的。",bc_self;
-		sleep2 2000;
-		npctalk "晨光：吃的……？","",bc_self;
-		sleep2 2000;
-		unittalk getcharid(3),strcharinfo(0) + ": 对。今天就先认识一下，我叫" + strcharinfo(0) + "。",bc_self;
-		sleep2 2000;
-		npctalk "晨光：晨光……我的名字。","",bc_self;
-		sleep2 2000;
-		cutin "",255;
-		setpcblock PCBLOCK_ALL,false;
-		end;
-	}
 	switch (checkquest(5861,PLAYTIME)) {
 	case -1:
 		break;
