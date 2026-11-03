@@ -6,7 +6,7 @@ Header:
 Body:
   - Name: Booster Weapon Exchange
     Map: prt_in
-    X: 37
+    X: 36
     Y: 95
     Direction: South
     Sprite: 4_M_JOB_KNIGHT2
