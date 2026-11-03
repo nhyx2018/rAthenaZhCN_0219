@@ -1,0 +1,148 @@
+//===== rAthena Script =======================================
+//= Episode Clear Ticket NPC - Bahiri (official location)
+//= prt_cas 373,77
+//============================================================
+prt_cas,373,77,5	script	巴希里	4_F_AGENT,{
+	mes "[巴希里]";
+	mes "我是负责章节通关券的巴希里。";
+	mes "你可以使用对应的跳过礼券，直接完成章节主线。";
+	next;
+	mes "[巴希里]";
+	mes "使用后不会获得该章节的任务奖励。";
+	mes "请选择要跳过的章节。";
+	next;
+	switch(select("EP14","EP16","EP17","取消")) {
+	case 1:
+		mes "[巴希里]";
+		mes "EP14 跳过礼券。";
+		mes "本服目前仅实装 EP14.3 主线，EP14.1/14.2 尚无对应任务脚本。";
+		next;
+		if (select("跳过 EP14.3","返回") == 2) close;
+		if (countitem(1000285) < 1) {
+			mes "[巴希里]";
+			mes "你没有 Ep.14跳过礼券。";
+			close;
+		}
+		delitem 1000285,1;
+		ep14_2_mylord = 34;
+		ep14_3_newerabs = 24;
+		ep14_3_fall_bless = 13;
+		mes "[巴希里]";
+		mes "已为你完成 EP14.3 主线。";
+		close2;
+		warp "moro_vol",91,105;
+		end;
+	case 2:
+		mes "[巴希里]";
+		mes "EP16 跳过礼券可以完成 EP16.1 或 EP16.2。";
+		next;
+		switch(select("EP16.1","EP16.2","返回")) {
+		case 1:
+			if (ep13_ryu != 100) {
+				mes "[巴希里]";
+				mes "请先完成 EP13 主线。";
+				close;
+			}
+			if (PRT_1QUE >= 25) {
+				mes "[巴希里]";
+				mes "你已经完成 EP16.1 主线，无需重复使用。";
+				close;
+			}
+			if (countitem(1000282) < 1) {
+				mes "[巴希里]";
+				mes "你没有 Ep.16跳过礼券。";
+				close;
+			}
+			delitem 1000282,1;
+			PRT_1QUE = 24;
+			mes "[巴希里]";
+			mes "已为你完成 EP16.1 主线。";
+			mes "请前往普隆德拉皇宫领取后续指示。";
+			close2;
+			warp "prt_cas_q",22,83;
+			end;
+		case 2:
+			if (PRT_1QUE != 25) {
+				mes "[巴希里]";
+				mes "请先完成 EP16.1 主线。";
+				close;
+			}
+			if (PRT_2QUE >= 27) {
+				mes "[巴希里]";
+				mes "你已经完成 EP16.2 主线，无需重复使用。";
+				close;
+			}
+			if (countitem(1000282) < 1) {
+				mes "[巴希里]";
+				mes "你没有 Ep.16跳过礼券。";
+				close;
+			}
+			delitem 1000282,1;
+			PRT_2QUE = 26;
+			mes "[巴希里]";
+			mes "已为你完成 EP16.2 主线。";
+			mes "请前往邪心猎人军事基地领取后续指示。";
+			close2;
+			warp "que_swat",146,57;
+			end;
+		default:
+			close;
+		}
+	case 3:
+		mes "[巴希里]";
+		mes "EP17 跳过礼券可以完成 EP17.1 或 EP17.2。";
+		next;
+		switch(select("EP17.1","EP17.2","返回")) {
+		case 1:
+			if (PRT_2QUE != 27) {
+				mes "[巴希里]";
+				mes "请先完成 EP16.2 主线。";
+				close;
+			}
+			if (ep_illusion >= 47) {
+				mes "[巴希里]";
+				mes "你已经完成 EP17.1 主线，无需重复使用。";
+				close;
+			}
+			if (countitem(1000287) < 1) {
+				mes "[巴希里]";
+				mes "你没有 Ep.17跳过礼券。";
+				close;
+			}
+			delitem 1000287,1;
+			ep_illusion = 47;
+			mes "[巴希里]";
+			mes "已为你完成 EP17.1 主线。";
+			close2;
+			warp "sp_cor",107,129;
+			end;
+		case 2:
+			if (ep_illusion != 47) {
+				mes "[巴希里]";
+				mes "请先完成 EP17.1 主线。";
+				close;
+			}
+			if (ep17_2_main >= 200) {
+				mes "[巴希里]";
+				mes "你已经完成 EP17.2 主线，无需重复使用。";
+				close;
+			}
+			if (countitem(1000287) < 1) {
+				mes "[巴希里]";
+				mes "你没有 Ep.17跳过礼券。";
+				close;
+			}
+			delitem 1000287,1;
+			ep17_2_main = 200;
+			mes "[巴希里]";
+			mes "已为你完成 EP17.2 主线。";
+			close2;
+			warp "ba_maison",75,146;
+			end;
+		default:
+			close;
+		}
+	default:
+		close;
+	}
+}
