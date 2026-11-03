@@ -250,18 +250,18 @@ OnInstanceInit:
 // * Samples and devices
 1@slw,174,145,3	script	’π æ—˘±æ#01	CLEAR_NPC,{
 	setarray .@sample$[0],
-		"^ff0000Purity^000000", "MT-Wxx0s57b",
-		"^4d4dffRose^000000", "MT-Wxx00b21",
-		"^4d4dffContradiction^000000", "MT-Wxx023-f1",
-		"^4d4dffJoy^000000", "OT-Wxx01-c",
-		"^4d4dffSea^000000", "MT-Wxc1c1b",
-		"^ff0000Eternity^000000", "MT-Wx267b",
-		"^4d4dffWay back home^000000", "OTM-Wxff01",
-		"^4d4dffLoneliness^000000", "MT-Wxx00c46",
-		"^4d4dffGlow^000000", "OT-Wxx4d4dff",
-		"^ff0000Dawn^000000", "MT-Wff_01v",
-		"^4d4dffTwilight^000000", "OT-Wxx00c3b",
-		"^4d4dffGirl^000000's ^ff0000dream^000000", "MT-Wxx0ax2-1";
+		"^ff0000¥ø’Ê^000000", "MT-Wxx0s57b",
+		"^4d4dff√µπÂ^000000", "MT-Wxx00b21",
+		"^4d4dff√¨∂‹^000000", "MT-Wxx023-f1",
+		"^4d4dffœ≤‘√^000000", "OT-Wxx01-c",
+		"^4d4dff∫£^000000", "MT-Wxc1c1b",
+		"^ff0000”¿∫„^000000", "MT-Wx267b",
+		"^4d4dffπÈÕæ^000000", "OTM-Wxff01",
+		"^4d4dffπ¬∂¿^000000", "MT-Wxx00c46",
+		"^4d4dffπ‚ª‘^000000", "OT-Wxx4d4dff",
+		"^ff0000¿Ë√˜^000000", "MT-Wff_01v",
+		"^4d4dffª∆ªË^000000", "OT-Wxx00c3b",
+		"^4d4dff…Ÿ≈Æ^000000µƒ^ff0000√Œ^000000", "MT-Wxx0ax2-1";
 	.@num = (atoi(strnpcinfo(2)) - 1) * 2;
 	mes "[" + .@sample$[.@num] + "]";
 	mes " µ—ÈÃÂ±‡∫≈£∫" + .@sample$[.@num+1] + "";
@@ -448,17 +448,17 @@ OnInstanceInit:
 
 S_Code:
 	setarray .@sample$[0],
-		"Purity", 2,
-		"Eternity", 2,
-		"Dawn", 2,
-		"Rose", 1,
-		"Contradiction", 1,
-		"Joy", 1,
-		"Sea", 1,
-		"Way back home", 1,
-		"Loneliness", 1,
-		"Glow", 1,
-		"Twilight", 1;
+		"¥ø’Ê", 2,
+		"”¿∫„", 2,
+		"¿Ë√˜", 2,
+		"√µπÂ", 1,
+		"√¨∂‹", 1,
+		"œ≤‘√", 1,
+		"∫£", 1,
+		"πÈÕæ", 1,
+		"π¬∂¿", 1,
+		"π‚ª‘", 1,
+		"ª∆ªË", 1;
 	.@size = getarraysize(.@sample$) / 2;
 	.@r = rand(.@size) * 2;
 	set getarg(0), .@sample$[.@r];
