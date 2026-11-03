@@ -458,7 +458,8 @@ S_Code:
 		"归途", 1,
 		"孤独", 1,
 		"光辉", 1,
-		"黄昏", 1;
+		"黄昏", 1,
+		"少女的梦", 2;
 	.@size = getarraysize(.@sample$) / 2;
 	.@r = rand(.@size) * 2;
 	set getarg(0), .@sample$[.@r];
