@@ -67667,7 +67667,7 @@ Body:
       getgroupitem(IG_SET_OF_TAIMING_ITEM2);
   - Id: 100158
     AegisName: Mado_Box02
-    Name: Mado Strengthening Suit
+    Name: 魔导战甲应急箱(强化装甲)
     Type: Usable
     Buy: 10000
     Weight: 300

@@ -2121,7 +2121,7 @@ Body:
       BuyingStore: true
   - Id: 1750
     AegisName: Arrow
-    Name: 弓箭
+    Name: 箭矢
     Type: Ammo
     SubType: Arrow
     Buy: 1
@@ -20233,7 +20233,7 @@ Body:
       BuyingStore: true
   - Id: 6515
     AegisName: Charm_Earth
-    Name: 地符
+    Name: 土符
     Type: Etc
     Buy: 50
     Sell: 0
@@ -28084,7 +28084,7 @@ Body:
       BuyingStore: true
   - Id: 7524
     AegisName: Shadow_Orb
-    Name: 丸球
+    Name: 环球
     Type: Etc
     Buy: 200
     Sell: 0
@@ -92928,12 +92928,12 @@ Body:
       BuyingStore: true
   - Id: 1000563
     AegisName: Soa_Charm
-    Name: Soa Charm
+    Name: 灵魂符咒
     Type: Etc
     Weight: 1
   - Id: 1000564
     AegisName: Nw_Grenade
-    Name: 投射型手榴弹
+    Name: 投掷型手榴弹
     Buy: 30
     Type: Etc
     Weight: 1

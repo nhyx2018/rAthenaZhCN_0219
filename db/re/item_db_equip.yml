@@ -37395,7 +37395,7 @@ Body:
       bonus3 bAutoSpellWhenHit,"AL_ANGELUS",10,5;
   - Id: 2800
     AegisName: Accelerator
-    Name: 装饰品
+    Name: 涡轮增压装置
     Type: Armor
     Buy: 100000
     Weight: 100
@@ -37413,7 +37413,7 @@ Body:
       bonus bAgi,2;
   - Id: 2801
     AegisName: Hovering_Booster
-    Name: 装饰品
+    Name: 悬浮助推器
     Type: Armor
     Buy: 100000
     Weight: 2000
@@ -37433,7 +37433,7 @@ Body:
       sc_end SC_HOVERING;
   - Id: 2802
     AegisName: Suicidal_Device
-    Name: 装饰品
+    Name: 自爆装置
     Type: Armor
     Buy: 500000
     Weight: 1000
@@ -37449,7 +37449,7 @@ Body:
     EquipLevelMin: 99
   - Id: 2803
     AegisName: Shape_Shifter
-    Name: 装饰品
+    Name: 装甲变更装置
     Type: Armor
     Buy: 100000
     Weight: 500
@@ -37467,7 +37467,7 @@ Body:
       bonus bInt,3;
   - Id: 2804
     AegisName: Cooling_Device
-    Name: 装饰品
+    Name: 冷却装置
     Type: Armor
     Buy: 100000
     Weight: 2500
@@ -37485,7 +37485,7 @@ Body:
       bonus bDex,1;
   - Id: 2805
     AegisName: Mag_Field_Generator
-    Name: 装饰品
+    Name: 磁场生成器
     Type: Armor
     Buy: 100000
     Weight: 6000
@@ -37503,7 +37503,7 @@ Body:
       bonus bDex,1;
   - Id: 2806
     AegisName: Barrier_Builder
-    Name: 装饰品
+    Name: 屏障生成器
     Type: Armor
     Buy: 150000
     Weight: 8000
@@ -37522,7 +37522,7 @@ Body:
       bonus bDex,1;
   - Id: 2807
     AegisName: Repair_Kit
-    Name: 装饰品
+    Name: 维修工具箱
     Type: Armor
     Buy: 200000
     Weight: 400
@@ -62956,7 +62956,7 @@ Body:
       bonus2 bAddEff,Eff_Burning,200;
   - Id: 13122
     AegisName: ALTAIR_ARES
-    Name: 手枪
+    Name: 战神手枪
     Type: Weapon
     SubType: Revolver
     Buy: 1450000
@@ -64504,7 +64504,7 @@ Body:
       bonus2 bAddEff,Eff_Blind,1000;
   - Id: 13189
     AegisName: COLORSCOPE
-    Name: 来复枪
+    Name: 缤纷突击步枪
     Type: Weapon
     SubType: Rifle
     Buy: 1350000
@@ -64547,7 +64547,7 @@ Body:
       bonus4 bAutoSpell,"AL_DECAGI",1,30,1;
   - Id: 13192
     AegisName: DEATHFIRE
-    Name: 散弹枪
+    Name: 烈火散弹枪
     Type: Weapon
     SubType: Shotgun
     Buy: 1250000
@@ -64570,7 +64570,7 @@ Body:
       bonus bAspdRate,-10;
   - Id: 13193
     AegisName: R_THUNDER
-    Name: 散弹枪
+    Name: 雷霆散弹枪
     Type: Weapon
     SubType: Shotgun
     Buy: 1350000
@@ -64593,7 +64593,7 @@ Body:
       bonus3 bAutoSpell,"MG_THUNDERSTORM",5,30;
   - Id: 13194
     AegisName: P_BREAKER
-    Name: 散弹枪
+    Name: 破坏者散弹枪
     Type: Weapon
     SubType: Shotgun
     Buy: 1950000
@@ -64614,7 +64614,7 @@ Body:
       bonus bAspdRate,25;
   - Id: 13195
     AegisName: RAG203
-    Name: 来复枪
+    Name: RAG203
     Type: Weapon
     SubType: Rifle
     Buy: 1800000
@@ -64657,7 +64657,7 @@ Body:
       bonus bAspdRate,25;
   - Id: 13197
     AegisName: MINIMAY
-    Name: 格特林机枪
+    Name: 小而美格特林机枪
     Type: Weapon
     SubType: Gatling
     Buy: 1600000
@@ -64678,7 +64678,7 @@ Body:
       bonus bHit,-5;
   - Id: 13198
     AegisName: TEMPEST
-    Name: 格特林机枪
+    Name: 暴雪格特林机枪
     Type: Weapon
     SubType: Gatling
     Buy: 2200000
@@ -142907,7 +142907,7 @@ Body:
       }
   - Id: 28200
     AegisName: END_OF_HORIZON
-    Name: 榴弹发射器
+    Name: 生死一瞬间榴弹器
     Type: Weapon
     SubType: Grenade
     Buy: 2700000
@@ -142928,7 +142928,7 @@ Body:
       bonus3 bAddEff,Eff_Blind,500,ATF_LONG;
   - Id: 28201
     AegisName: Southern_Cross_R
-    Name: 榴弹发射器
+    Name: 南方十字星榴弹器
     Type: Weapon
     SubType: Grenade
     Buy: 2800000
