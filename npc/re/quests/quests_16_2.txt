@@ -836,7 +836,13 @@ lighthalzen,202,167,5	script	斯琪亚#ep162_n	4_EP16_SKIA,{
 	}
 	if (terra_gloria_main == 5) {
 		cutin "ep16_skia_nerius01.bmp",0;
-		mes "他一定去了贫民窟！";
+		mes "[" + strcharinfo(0) + "]";
+		mes "我听到了布鲁诺和那个研究员的对话。";
+		mes "研究员让他去南部贫民窟等着，还说会派人过去。";
+		next;
+		cutin "ep16_skia_nerius01.bmp",0;
+		mes "[斯琪亚]";
+		mes "南部贫民窟……他一定去了贫民窟！";
 		mes "我们得想办法过去。";
 		next;
 		mes "[斯琪亚]";
