@@ -71863,7 +71863,7 @@ Body:
       }
   - Id: 15163
     AegisName: Agenda_Robe
-    Name: 铠甲
+    Name: 议程外袍
     Type: Armor
     Buy: 20
     Weight: 100
@@ -71886,7 +71886,7 @@ Body:
       bonus bMatkRate,.@val;
   - Id: 15164
     AegisName: Consultation_Robe
-    Name: 铠甲
+    Name: 商事外袍
     Type: Armor
     Buy: 20
     Weight: 100
@@ -94342,7 +94342,7 @@ Body:
       }
   - Id: 19115
     AegisName: Republic_Hat
-    Name: 帽子
+    Name: 秀发兹共和国帽子
     Type: Armor
     Weight: 400
     Defense: 3
@@ -109517,7 +109517,7 @@ Body:
     View: 1458
   - Id: 20456
     AegisName: C_Combat_Vestige
-    Name: 帽子
+    Name: (时装)血战之痕
     Type: Armor
     Locations:
       Costume_Head_Top: true
@@ -145522,7 +145522,7 @@ Body:
       bonus2 bSkillAtk,"SU_PICKYPECK",(readparam(bDex)/6)*getskilllv("SU_PICKYPECK");
   - Id: 28425
     AegisName: Mercenary_Ring_A
-    Name: 饰品
+    Name: 佣兵之戒A型
     Type: Armor
     Buy: 20
     Weight: 200
@@ -145538,7 +145538,7 @@ Body:
       }
   - Id: 28426
     AegisName: Mercenary_Ring_B
-    Name: 饰品
+    Name: 佣兵之戒B型
     Type: Armor
     Buy: 20
     Weight: 200

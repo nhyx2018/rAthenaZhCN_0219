@@ -11513,6 +11513,15 @@ rebel_in,74,67,5	script	斯特拉塞#rebel_in	4_M_TATIO,{
 	mes "对于带来一定数量勋章的合作者，我们会赠送礼物。请选择你需要的物品。";
 	next;
 	mes "[斯特拉塞]";
+	mes "可兑换的物品如下。";
+	mes "<ITEM>议程外袍<INFO>15163</INFO></ITEM> — 1000枚";
+	mes "<ITEM>商事外袍<INFO>15164</INFO></ITEM> — 1000枚";
+	mes "<ITEM>(时装)血战之痕<INFO>20456</INFO></ITEM> — 1500枚";
+	mes "<ITEM>秀发兹共和国帽子<INFO>19115</INFO></ITEM> — 2500枚";
+	mes "<ITEM>佣兵之戒A型<INFO>28425</INFO></ITEM> — 1500枚";
+	mes "<ITEM>佣兵之戒B型<INFO>28426</INFO></ITEM> — 1500枚";
+	next;
+	mes "[斯特拉塞]";
 	mes "你想选哪一个？";
 	next;
 
@@ -11524,7 +11533,7 @@ rebel_in,74,67,5	script	斯特拉塞#rebel_in	4_M_TATIO,{
 		28425, 1500,	// Mercenary_Ring_A
 		28426, 1500;	// Mercenary_Ring_B
 
-	.@s = (select( "议事长袍", "顾问长袍", "(时装)血战之痕帽", "共和国帽", "A类雇佣兵戒指", "B类雇佣兵戒指" ) - 1) * 2;
+	.@s = (select( "议程外袍", "商事外袍", "(时装)血战之痕", "秀发兹共和国帽子", "佣兵之戒A型", "佣兵之戒B型" ) - 1) * 2;
 	mes "[斯特拉塞]";
 	mes mesitemlink( .@item[.@s], false ) + "？我明白了。";
 	mes "你需要 " + .@item[.@s+1] + " 枚施瓦茨荣誉勋章。";
