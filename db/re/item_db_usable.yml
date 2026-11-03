@@ -68543,7 +68543,7 @@ Body:
       laphine_upgrade();
   - Id: 100340
     AegisName: Booster_W_Up_3
-    Name: Booster Weapon Upgrade Package
+    Name: 仙境游玩进阶武器精练+13箱
     Type: DelayConsume
     EquipLevelMin: 100
     Trade:

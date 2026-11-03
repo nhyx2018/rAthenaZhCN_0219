@@ -106,3 +106,6 @@ Body:
       # 成长武器兑换券
       - Item: Booster_W_Ticket
         Price: 100
+      # 成长武器强化券 III
+      - Item: Booster_W_Up_3
+        Price: 100
