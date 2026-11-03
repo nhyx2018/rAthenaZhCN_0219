@@ -1646,7 +1646,7 @@ lhz_in01,107,137,5	script	职员#171_lhzin	4_F_01,{
 		sleep2 2000;
 		npctalk "我真的被录用了吧？","帕特#171_lhzin",bc_self;
 		sleep2 2000;
-		npctalk "当然。你在新员工名单上。你可以直接上二楼，到培训室听讲。","职员#rek",bc_self;
+		npctalk "当然。你在新员工名单上。你可以直接上二楼，到培训室听讲。","",bc_self;
 		sleep2 2000;
 		npctalk "谢谢你，谢谢你！","帕特#171_lhzin",bc_self;
 		sleep2 2000;
@@ -1807,7 +1807,7 @@ lhz_in01,163,258,5	script	职员#171_lhzin2	4_M_EINMAN,{
 		cutin "16lei_01",2;
 		mes "[雷基]";
 		mes "你知道为什么这么多人被征调吗？";
-		npctalk "你知道为什么这么多人被征调吗？","雷基#171_lhzin2,",bc_self;
+		npctalk "你知道为什么这么多人被征调吗？","雷基#171_lhzin2",bc_self;
 		next;
 		cutin "",255;
 		mes "[职员]";
@@ -5487,7 +5487,7 @@ sp_cor,122,141,5	script	泰斯#171_cor_0	4_M_PHILOFONTES,{
 		mes "[雷基]";
 		mes "不，真的，就一点点而已，我是不是来晚了？这到底是怎么回事，是药吗？";
 		mes "我真的来晚了这么多吗？这到底是怎么回事，为什么大家都受伤了？";
-		npctalk "一团糟，简直是一团糟。没有我你们可活不下去。","雷基#sp_cor",bc_self;
+		npctalk "一团糟，简直是一团糟。没有我你们可活不下去。","雷基#171_cor",bc_self;
 		next;
 		cutin "ep16_tes01",0;
 		mes "[泰斯]";
@@ -5600,7 +5600,7 @@ sp_cor,122,141,5	script	泰斯#171_cor_0	4_M_PHILOFONTES,{
 		cutin "16lei_03",2;
 		mes "[雷基]";
 		mes "失踪人员名单。我需要和这里的人逐一核对。";
-		npctalk "希望他们能一个接一个地出来。","雷基#sp_cor",bc_self;
+		npctalk "希望他们能一个接一个地出来。","雷基#171_cor",bc_self;
 		next;
 		cutin "16lei_02",2;
 		mes "[雷基]";
@@ -8568,7 +8568,7 @@ sp_cor,234,113,3	script	工人#171_rvs_28	4_COOK,{
 sp_cor,117,268,1	script	侦察兵#171_rvs_29	4_F_GUNSLINGER2,{
 	npctalk "你在这里做什么？","",bc_self;
 	sleep2 1500;
-	npctalk "别靠太近。","侦察兵#cor_01",bc_self;
+	npctalk "别靠太近。","",bc_self;
 	end;
 }
 
