@@ -13,7 +13,7 @@
 //============================================================
 
 slabw01,232,91,5	duplicate(dummy_cloaked_npc)	斯琪亚#ep162_06	4_EP16_SKIA
-slabw01,233,92,3	duplicate(dummy_cloaked_npc)	Scared researcher#ep162	4_M_ALCHE_A
+slabw01,233,92,3	duplicate(dummy_cloaked_npc)	害怕的研究员#ep162	4_M_ALCHE_A
 
 // Werner Laboratory central room (solo instance)
 slabw01,236,91,3	script	新兵#ep162_04	4_M_ROOKIE,{
@@ -26,8 +26,8 @@ slabw01,236,91,3	script	新兵#ep162_04	4_M_ROOKIE,{
 		mes "难怪看起来他们有所依仗。";
 		mes "要不要用炸药把它炸开？";
 		next;
-		cloakoffnpc( "Skia#ep162_06", getcharid(0) );
-		cloakoffnpc( "Scared researcher#ep162", getcharid(0) );
+		cloakoffnpc( "斯琪亚#ep162_06", getcharid(0) );
+		cloakoffnpc( "害怕的研究员#ep162", getcharid(0) );
 		npctalk "等等！", "斯琪亚#ep162_06", bc_self;
 		mes "[斯琪亚]";
 		mes "别用这么粗鲁的办法！";
@@ -51,8 +51,8 @@ slabw01,236,91,3	script	新兵#ep162_04	4_M_ROOKIE,{
 		mes "真的吗？那我就把这位研究员带到外面的部队去。";
 		mes "关于中枢室，" + strcharinfo(0) + "就拜托你了！";
 		next;
-		cloakonnpc( "Skia#ep162_06", getcharid(0) );
-		cloakonnpc( "Scared researcher#ep162", getcharid(0) );
+		cloakonnpc( "斯琪亚#ep162_06", getcharid(0) );
+		cloakonnpc( "害怕的研究员#ep162", getcharid(0) );
 		mes "[新兵]";
 		mes "哈哈，他们让我们打开中枢室的门！";
 		mes "准备好进去之后，请再来跟我说一声。";
@@ -81,7 +81,7 @@ slabw01,236,91,3	script	新兵#ep162_04	4_M_ROOKIE,{
 		mes "[新兵]";
 		mes "哇！就是这样！我学东西一向很快！";
 		mes "好，现在就请进去吧！";
-		cloakoffnpc( "Central_room#evt_gate01", getcharid(0) );
+		cloakoffnpc( "中枢室#evt_gate01", getcharid(0) );
 		instance_create("Werner Laboratory central room#1");	// officially there is only one 'Werner Laboratory central room' instance
 		close;
 	}
@@ -129,7 +129,7 @@ slabw01,236,91,3	script	新兵#ep162_04	4_M_ROOKIE,{
 		mes "[新兵]";
 		mes "哇！就是这样！我学东西一向很快！";
 		mes "好，现在就请进去吧！";
-		cloakoffnpc( "Central_room#evt_gate01", getcharid(0) );
+		cloakoffnpc( "中枢室#evt_gate01", getcharid(0) );
 		instance_create("Werner Laboratory central room#2");
 		close;
 	case 2:
