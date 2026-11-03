@@ -91550,7 +91550,7 @@ Body:
       DropEffect: CLIENT
   - Id: 1000253
     AegisName: Booster_W_Ticket
-    Name: Booster Weapon Voucher
+    Name: ³É³¤ÎäÆ÷¶Ò»»È¯
     Type: Etc
     Trade:
       NoDrop: true

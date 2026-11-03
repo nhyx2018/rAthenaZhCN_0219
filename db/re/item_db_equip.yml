@@ -230235,7 +230235,7 @@ Body:
       }
   - Id: 500015
     AegisName: PG_B_Sword
-    Name: Pressure Genesis Booster Sword
+    Name: 皇家禁卫队威压创世之剑
     Type: Weapon
     SubType: 1hSword
     Attack: 150
@@ -230282,7 +230282,7 @@ Body:
       }
   - Id: 500016
     AegisName: HS_T_Sword
-    Name: Hell Tornado Booster Sword
+    Name: 基因学者地狱植物龙卷风长剑
     Type: Weapon
     SubType: 1hSword
     Attack: 190
@@ -233082,7 +233082,7 @@ Body:
       }
   - Id: 510018
     AegisName: MF_B_Dagger
-    Name: 短剑
+    Name: 魅影追踪者暗咏致命威胁短剑
     Type: Weapon
     SubType: Dagger
     Attack: 190
@@ -234523,7 +234523,7 @@ Body:
     Refineable: true
   - Id: 510069
     AegisName: SN_B_Dagger
-    Name: 短剑
+    Name: 超级初学者运气长剑
     Type: Weapon
     SubType: Dagger
     Attack: 210
@@ -237037,7 +237037,7 @@ Body:
       }
   - Id: 530005
     AegisName: BC_B_Spear
-    Name: Vanishing Cannon Booster Spear
+    Name: 皇家禁卫队放逐加农炮单手矛
     Type: Weapon
     SubType: 1hSpear
     Attack: 200
@@ -238530,7 +238530,7 @@ Body:
       }
   - Id: 540009
     AegisName: SB_B_Book
-    Name: Spell Bolt Booster Book
+    Name: 妖术师元素箭魔法书
     Type: Weapon
     SubType: Book
     Attack: 150
@@ -239578,7 +239578,7 @@ Body:
       }
   - Id: 540039
     AegisName: ML_B_Book
-    Name: Moon Starlight Booster Book
+    Name: 拳皇流星月光神录
     Type: Weapon
     SubType: Book
     Attack: 230
@@ -239627,7 +239627,7 @@ Body:
       }
   - Id: 540040
     AegisName: SS_B_Book
-    Name: Sunshine Booster Book
+    Name: 拳皇太阳红焰太极录
     Type: Weapon
     SubType: Book
     Attack: 230
@@ -242161,7 +242161,7 @@ Body:
       }
   - Id: 550010
     AegisName: ES_B_Stick
-    Name: 手杖
+    Name: 妖术师四大魔法权杖
     Type: Weapon
     SubType: Staff
     Attack: 150
@@ -242223,7 +242223,7 @@ Body:
       }
   - Id: 550011
     AegisName: AN_B_Wand
-    Name: 手杖
+    Name: 大主教十字驱魔讴歌权杖
     Type: Weapon
     SubType: Staff
     Attack: 150
@@ -243780,7 +243780,7 @@ Body:
       }
   - Id: 550052
     AegisName: ES_B_Staff
-    Name: 手杖
+    Name: 猎灵士艾斯灵魂手杖
     Type: Weapon
     SubType: Staff
     Attack: 110
@@ -243827,7 +243827,7 @@ Body:
       }
   - Id: 550053
     AegisName: EC_B_Staff
-    Name: 手杖
+    Name: 猎灵士邪灵爆炸手杖
     Type: Weapon
     SubType: Staff
     Attack: 110
@@ -244713,7 +244713,7 @@ Body:
       }
   - Id: 550079
     AegisName: SN_B_Wand
-    Name: Super Novice Booster Wand
+    Name: 超级初学者运气手杖
     Type: Weapon
     SubType: Staff
     Attack: 130
@@ -247496,7 +247496,7 @@ Body:
       }
   - Id: 560006
     AegisName: PS_B_Knuckle
-    Name: 拳套
+    Name: 修罗爆气散弹身弹指虎
     Type: Weapon
     SubType: Knuckle
     Attack: 190
@@ -247541,7 +247541,7 @@ Body:
       }
   - Id: 560007
     AegisName: CP_B_Knuckle
-    Name: 拳套
+    Name: 修罗天罗地网虎炮拳套
     Type: Weapon
     SubType: Knuckle
     Attack: 190
@@ -249434,7 +249434,7 @@ Body:
       }
   - Id: 570010
     AegisName: MV_B_Violin
-    Name: 乐器
+    Name: 宫廷乐师重金属音乐残响小提琴
     Type: Weapon
     SubType: Musical
     Attack: 150
@@ -249892,7 +249892,7 @@ Body:
       }
   - Id: 570024
     AegisName: RS_B_Violin
-    Name: 乐器
+    Name: 宫廷乐师大暴雨提琴
     Type: Weapon
     SubType: Musical
     Attack: 150
@@ -251245,7 +251245,7 @@ Body:
       }
   - Id: 580010
     AegisName: MV_B_Whip
-    Name: 鞭子
+    Name: 浪姬舞者重金属音乐残响舞蹈鞭
     Type: Weapon
     SubType: Whip
     Attack: 150
@@ -251703,7 +251703,7 @@ Body:
       }
   - Id: 580024
     AegisName: RS_B_Whip
-    Name: 鞭子
+    Name: 浪姬舞者大暴雨锐鞭
     Type: Weapon
     SubType: Whip
     Attack: 150
@@ -252986,7 +252986,7 @@ Body:
       }
   - Id: 590008
     AegisName: AK_B_Mace
-    Name: 钝器
+    Name: 机械工匠飞拳加农炮铁锤
     Type: Weapon
     SubType: Mace
     Attack: 400
@@ -253034,7 +253034,7 @@ Body:
       }
   - Id: 590009
     AegisName: AC_B_Club
-    Name: 钝器
+    Name: 基因学者强酸火烟加农炮木锤
     Type: Weapon
     SubType: Mace
     Attack: 190
@@ -253080,7 +253080,7 @@ Body:
       }
   - Id: 590010
     AegisName: DD_B_Mace
-    Name: 钝器
+    Name: 大主教二道圣光审判锤
     Type: Weapon
     SubType: Mace
     Attack: 190
@@ -255325,7 +255325,7 @@ Body:
       }
   - Id: 600012
     AegisName: IW_B_T_Sword
-    Name: Ignition Wave Booster Two-handed Sword
+    Name: 卢恩骑士爆裂冲击波双手剑
     Type: Weapon
     SubType: 2hSword
     Attack: 250
@@ -256578,7 +256578,7 @@ Body:
       }
   - Id: 610013
     AegisName: RC_B_Katar
-    Name: 拳刃
+    Name: 十字斩首者回旋十字刀刃拳刃
     Type: Weapon
     SubType: Katar
     Attack: 200
@@ -257048,7 +257048,7 @@ Body:
       }
   - Id: 610028
     AegisName: CA_B_Katar
-    Name: 拳刃
+    Name: 十字斩首者反击斩黑暗瞬间拳刃
     Type: Weapon
     SubType: Katar
     Attack: 240
@@ -258198,7 +258198,7 @@ Body:
          autobonus3 "{ bonus bBreakWeaponRate,10000; }",10+(.@r-10),20000,"BS_OVERTHRUST";
   - Id: 620003
     AegisName: PT_B_Axe
-    Name: Power Swing Booster Axe
+    Name: 机械工匠挥斧重击飓风斧
     Type: Weapon
     SubType: 2hAxe
     Attack: 300
@@ -259297,7 +259297,7 @@ Body:
       }
   - Id: 630008
     AegisName: HB_B_T_Spear
-    Name: Hundred Breath Booster Spear
+    Name: 卢恩骑士百矛龙息双手矛
     Type: Weapon
     SubType: 2hSpear
     Attack: 250
@@ -260338,7 +260338,7 @@ Body:
       }
   - Id: 640009
     AegisName: CS_B_Staff
-    Name: 手杖
+    Name: 咒术士碧血地牛双手杖
     Type: Weapon
     SubType: 2hStaff
     Attack: 150
@@ -260391,7 +260391,7 @@ Body:
       }
   - Id: 640010
     AegisName: CJ_B_Staff
-    Name: 手杖
+    Name: 咒术士冻僵连锁闪电双手杖
     Type: Weapon
     SubType: 2hStaff
     Attack: 150
@@ -262628,7 +262628,7 @@ Body:
       }
   - Id: 650017
     AegisName: FCH_B_Huuma
-    Name: 风魔飞镖
+    Name: 日/月影忍者忍之三术飞镖
     Type: Weapon
     SubType: Huuma
     Attack: 150
@@ -262677,7 +262677,7 @@ Body:
       }
   - Id: 650018
     AegisName: SN_B_Huuma
-    Name: 风魔飞镖
+    Name: 日/月影忍者幽冥风魔飞舞飞镖
     Type: Weapon
     SubType: Huuma
     Attack: 250
@@ -263927,7 +263927,7 @@ Body:
       }
   - Id: 700014
     AegisName: TB_B_Bow
-    Name: Triangle Bomb Booster Bow
+    Name: 魅影追踪者三角虚击炸弹弩弓
     Type: Weapon
     SubType: Bow
     Attack: 210
@@ -263972,7 +263972,7 @@ Body:
       }
   - Id: 700015
     AegisName: AS_B_Bow
-    Name: Arrow Booster Bow
+    Name: 游侠箭雨风暴神弓
     Type: Weapon
     SubType: Bow
     Attack: 205
@@ -264015,7 +264015,7 @@ Body:
       }
   - Id: 700016
     AegisName: SB_B_Bow
-    Name: Sharpbolt Booster Bow
+    Name: 游侠锐利射击瞄准标靶穿心弓
     Type: Weapon
     SubType: Bow
     Attack: 200
@@ -266613,7 +266613,7 @@ Body:
       }
   - Id: 800008
     AegisName: DF_B_Revolver
-    Name: 左轮手枪
+    Name: 叛乱者亡命杀戮左轮手枪
     Type: Weapon
     SubType: Revolver
     Attack: 220
@@ -269158,7 +269158,7 @@ Body:
       }
   - Id: 830007
     AegisName: FR_B_Gatling
-    Name: Fire Round Booster Gatling Gun
+    Name: 叛乱者原桌舞蹈暴雨格林机枪
     Type: Weapon
     SubType: Gatling
     Attack: 220
