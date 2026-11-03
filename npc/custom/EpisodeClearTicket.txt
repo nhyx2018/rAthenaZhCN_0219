@@ -43,10 +43,20 @@ prt_cas,373,77,5	script	巴希里	4_F_VALKYRIE2,{
 				mes "请先完成 EP13 主线。";
 				close;
 			}
-			if (PRT_1QUE >= 25) {
+			if (PRT_1QUE >= 25 || ep16_royal >= 17) {
 				mes "[巴希里]";
 				mes "你已经完成 EP16.1 主线，无需重复使用。";
 				close;
+			}
+			// 修复旧版跳过券只设置 PRT_1QUE、没有设置 ep16_royal 的存档
+			if (PRT_1QUE == 24 && ep16_royal < 16) {
+				ep16_royal = 16;
+				mes "[巴希里]";
+				mes "检测到你之前使用过 EP16 跳过券。";
+				mes "已补发 EP16.1 主线进度，请去找克罗内克领取奖励。";
+				close2;
+				warp "prt_cas_q",19,85;
+				end;
 			}
 			if (countitem(1000282) < 1) {
 				mes "[巴希里]";
@@ -55,22 +65,33 @@ prt_cas,373,77,5	script	巴希里	4_F_VALKYRIE2,{
 			}
 			delitem 1000282,1;
 			PRT_1QUE = 24;
+			ep16_royal = 16;
 			mes "[巴希里]";
 			mes "已为你完成 EP16.1 主线。";
-			mes "请前往普隆德拉皇宫领取后续指示。";
+			mes "请去找克罗内克领取奖励。";
 			close2;
-			warp "prt_cas_q",22,83;
+			warp "prt_cas_q",19,85;
 			end;
 		case 2:
-			if (PRT_1QUE != 25) {
+			if (ep16_royal < 17) {
 				mes "[巴希里]";
 				mes "请先完成 EP16.1 主线。";
 				close;
 			}
-			if (PRT_2QUE >= 27) {
+			if (terra_gloria_main >= 25) {
 				mes "[巴希里]";
 				mes "你已经完成 EP16.2 主线，无需重复使用。";
 				close;
+			}
+			// 修复旧版跳过券只设置 PRT_2QUE 的存档
+			if (PRT_2QUE == 26 && terra_gloria_main < 24) {
+				terra_gloria_main = 24;
+				mes "[巴希里]";
+				mes "检测到你之前使用过 EP16 跳过券。";
+				mes "已补发 EP16.2 主线进度，请去找菲洛彭特斯领取奖励。";
+				close2;
+				warp "que_swat",145,57;
+				end;
 			}
 			if (countitem(1000282) < 1) {
 				mes "[巴希里]";
@@ -79,11 +100,12 @@ prt_cas,373,77,5	script	巴希里	4_F_VALKYRIE2,{
 			}
 			delitem 1000282,1;
 			PRT_2QUE = 26;
+			terra_gloria_main = 24;
 			mes "[巴希里]";
 			mes "已为你完成 EP16.2 主线。";
-			mes "请前往邪心猎人军事基地领取后续指示。";
+			mes "请去找菲洛彭特斯领取奖励。";
 			close2;
-			warp "que_swat",146,57;
+			warp "que_swat",145,57;
 			end;
 		default:
 			close;
