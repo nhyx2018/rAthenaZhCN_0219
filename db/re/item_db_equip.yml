@@ -107609,7 +107609,7 @@ Body:
     View: 447
   - Id: 20246
     AegisName: C_Time_Accessory
-    Name: 头盔
+    Name: (时装)时间的装饰
     Type: Armor
     Locations:
       Costume_Head_Mid: true
@@ -107622,7 +107622,7 @@ Body:
       sc_end SC_TIME_ACCESSORY;
   - Id: 20247
     AegisName: C_Blackhand_Of_Fate
-    Name: 头盔
+    Name: (时装)命运的黑手
     Type: Armor
     Locations:
       Costume_Head_Top: true
@@ -144806,7 +144806,7 @@ Body:
       bonus2 bAddClass,Class_All,5;
   - Id: 28354
     AegisName: DowntownMap_
-    Name: 饰品
+    Name: 城市地图
     Type: Armor
     Weight: 100
     Slots: 1
@@ -144818,7 +144818,7 @@ Body:
       skill "AL_INCAGI",3;
   - Id: 28355
     AegisName: ShiningHolyWater_
-    Name: 饰品
+    Name: 明亮的圣水
     Type: Armor
     Weight: 150
     Slots: 1
@@ -151166,7 +151166,7 @@ Body:
       }
   - Id: 28900
     AegisName: ShieldOfGuardsman
-    Name: 盾牌
+    Name: 近卫兵的盾牌
     Type: Armor
     Buy: 20
     Weight: 3000

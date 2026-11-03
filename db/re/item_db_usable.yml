@@ -3991,7 +3991,7 @@ Body:
     Weight: 10
   - Id: 11600
     AegisName: ShiningHolyWater
-    Name: 明亮的 圣水
+    Name: 明亮的圣水
     Type: Healing
     Buy: 10
     Weight: 15
@@ -59009,7 +59009,7 @@ Body:
       warp "prontera",159,192;
   - Id: 22848
     AegisName: KeysPrison
-    Name: 监狱 钥匙
+    Name: 监狱钥匙
     Type: Usable
     Buy: 10
     Weight: 10
