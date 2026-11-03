@@ -36913,7 +36913,7 @@ Body:
       NoAuction: true
   - Id: 25665
     AegisName: Dienes_Envelope
-    Name: Dien's Precious Envelope
+    Name: 狄恩的珍藏信封
     Type: Etc
     Trade:
       NoDrop: true
@@ -36925,7 +36925,7 @@ Body:
       NoAuction: true
   - Id: 25666
     AegisName: Id_Card
-    Name: Identification Bracelet
+    Name: 实验体识别手环
     Type: Etc
     Trade:
       NoDrop: true
@@ -90881,7 +90881,7 @@ Body:
       NoAuction: true
   - Id: 1000101
     AegisName: AUTODOLL_PARTS
-    Name: Autodoll Parts
+    Name: 机器人零件
     Type: Etc
     Weight: 10
     Trade:
