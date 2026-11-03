@@ -140,7 +140,7 @@ OnTouch:
 		next;
 		mes "[埃琳娜·沃尔科娃]";
 		mes "我来开始说明这次作战。首先……";
-		mes "...... now you can run wild.";
+		mes "……现在，你们可以尽情大闹一场了。";
 		next;
 		cutin "",255;
 		mes "[反叛者]";
@@ -205,7 +205,7 @@ OnTouch:
 		next;
 		cutin "ep171_elyumina01",0;
 		mes "[爱鲁梅纳]";
-		mes "... Okay, it's almost time.";
+		mes "……好，时间快到了。";
 		mes "我的孩子们会在<TIPBOX>[四个地方]<INFO>8086</INFO></TIPBOX>开始设置陷阱。";
 		npctalk "爱鲁梅纳 : ……好，时间快到了。我的孩子们会在四个地方开始设置陷阱。",.@elyumina$;
 		next;
@@ -237,7 +237,7 @@ OnTouch:
 		next;
 		cutin "162elena_01",2;
 		mes "[埃琳娜·沃尔科娃]";
-		mes "...I'll have a conversation with this criminal in a bit... Anyways. I'm counting on you, adventurers!";
+		mes "……我稍后要和这个犯人谈谈……总之，就拜托你们了，冒险者！";
 		npctalk "埃琳娜·沃尔科娃 : ……我稍后要和这个犯人谈谈……总之，就拜托你们了，冒险者！";
 		close2;
 		cutin "",255;
@@ -264,7 +264,7 @@ OnTouch:
 	next;
 	cutin "ep171_elyumina01",0;
 	mes "[爱鲁梅纳]";
-	mes "... are you going straight for my EL1-A17T?";
+	mes "……你们打算直奔我的EL1_A17T？";
 	mapannounce 'map$,"埃琳娜·沃尔科娃 : 好啊，该死的犯人！你为什么还不赶紧打开传送门？",bc_map,0xFFFF99;
 	npctalk "爱鲁梅纳 : ……你们打算直奔我的EL1_A17T？";
 	next;
@@ -729,7 +729,7 @@ OnTimer10000:
 	if (isbegin_quest(16354) == 1 && checkquest(16376,HUNTING) == 2) {
 		cutin "162elena_02",2;
 		mes "[埃琳娜·沃尔科娃]";
-		mes "干得好，" +strcharinfo(0)+ ". The operation was a success!";
+		mes "干得好，" +strcharinfo(0)+ "。作战成功了！";
 		mes "我也逃走了，你打倒了那么巨大的废铁，真让我丢脸。我还抓到了一个有趣的东西。";
 		next;
 		cutin "ep171_elyumina02",0;
@@ -964,9 +964,9 @@ OnTouch:
 	.@id = atoi(replacestr(strnpcinfo(2),"171_box_d",""));
 	.@var = getd("'box_" + .@id);
 	switch (.@var) {
-		case 0: .@talk$ = "Here, here! Then please, touch the box and it will activate."; break;
-		case 1: .@talk$ = "Chatting during a battle, quite relaxed aren't you? Hm, that's a bit annoying."; break;
-		case 2: .@talk$ = "That's a very good combat data... Well, go ahead now!";
+		case 0: .@talk$ = "这边这边！那就请你碰一下箱子，它就会启动了。"; break;
+		case 1: .@talk$ = "战斗中还有闲心聊天，挺悠哉的嘛？哼，有点烦人。"; break;
+		case 2: .@talk$ = "这是非常好的战斗数据……好了，继续吧！";
 	}
 	npctalk "爱鲁梅纳 :" + .@talk$;
 	end;

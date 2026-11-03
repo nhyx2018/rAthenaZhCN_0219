@@ -57,7 +57,7 @@ ba_maison,120,321,5	script(CLOAKED)	#he_admin1	MD_ASSISTANT,{
 		close;
 	case 2:
 		if (instance_create(.@md_name$) == -3)
-			dispbottom "The reservation of the instance '" + .@md_name$ + "' has failed due to an active instance.";
+			dispbottom "副本“" + .@md_name$ + "”预约失败：已有其他副本正在进行。";
 		end;
 	case 3:
 		if (!is_party_leader()) {	// shouldn't happen
@@ -70,7 +70,7 @@ ba_maison,120,321,5	script(CLOAKED)	#he_admin1	MD_ASSISTANT,{
 			mes "只有在队长完成全部许可后，您才能移动至该处。请重新确认您被授予的通行区域。";
 			close;
 		}
-		mapannounce "ba_maison", "" + strcharinfo(0) + "，所属队伍：" + .@party_name$ + ", is entering the " + .@md_name$ + ".", bc_map, "0x00FF99";
+		mapannounce "ba_maison", "" + strcharinfo(0) + "，所属队伍：" + .@party_name$ + "，正在进入" + .@md_name$ + "。", bc_map, "0x00FF99";
 		end;
 	}
 	end;
@@ -105,13 +105,13 @@ ba_maison,120,321,5	script(CLOAKED)	#he_admin2	MD_ASSISTANT,{
 	switch( select( "退后。", "身份验证", "进入区域" ) ) {
 	case 1:
 		mes "[花园管理员]";
-		mes "Alright.";
+		mes "好的。";
 		close;
 	case 2:
 		switch( select( "退后。", .@menu$[0], .@menu$[1] ) ) {
 		case 1:
 			mes "[花园管理员]";
-			mes "Alright.";
+			mes "好的。";
 			close;
 		case 2:
 			.@md_name$ = "Security Area 1";
@@ -126,7 +126,7 @@ ba_maison,120,321,5	script(CLOAKED)	#he_admin2	MD_ASSISTANT,{
 			close;
 		}
 		if (instance_create(.@md_name$) == -3)
-			dispbottom "The reservation of the instance '" + .@md_name$ + "' has failed due to an active instance.";
+			dispbottom "副本“" + .@md_name$ + "”预约失败：已有其他副本正在进行。";
 		end;
 	case 3:
 		switch( select( .@menu$[0], .@menu$[1] ) ) {
@@ -152,7 +152,7 @@ ba_maison,120,321,5	script(CLOAKED)	#he_admin2	MD_ASSISTANT,{
 		if (isbegin_quest(.@qid2) > 0)
 			erasequest .@qid2;
 		setquest .@qid;
-		mapannounce "ba_maison", "" + strcharinfo(0) + "，所属队伍：" + getpartyname( getcharid(1) ) + ", is entering the " + .@md_name$ + ".", bc_map, "0x00FF99";
+		mapannounce "ba_maison", "" + strcharinfo(0) + "，所属队伍：" + getpartyname( getcharid(1) ) + "，正在进入" + .@md_name$ + "。", bc_map, "0x00FF99";
 		end;
 	}
 	end;
@@ -200,7 +200,7 @@ OnInstanceInit:
 		}
 		specialeffect EF_GUARD4;
 		mes "^0000FF图案已识别。^000000";
-		mes "正在执行睡眠模式解除协议。图案输入者 ^0000CD" + strcharinfo(0) + "^000000 has been recognized.";
+		mes "正在执行睡眠模式解除协议。图案输入者 ^0000CD" + strcharinfo(0) + "^000000 已被识别。";
 		close2;
 		'admin$ = strcharinfo(0);
 		donpcevent instance_npcname("#BMD000001") + "::OnTalk01";
@@ -227,7 +227,7 @@ OnInstanceInit:
 			sleep2 5000;
 		}
 		while(1) {
-			npctalk "好的。从现在起，我将把[" + 'admin$ + "] as our temporary administrator and take action accordingly. Do you agree?";
+			npctalk "好的。从现在起，我将把[" + 'admin$ + "] 担任临时管理员并据此行动。您同意吗？";
 			sleep2 5000;
 			setpcblock PCBLOCK_NPC, false;
 			switch( select( "我是临时管理员？凭什么？", "拒绝！", "好的" ) ) {
@@ -257,11 +257,11 @@ OnInstanceInit:
 		}
 		setpcblock PCBLOCK_NPC, true;
 		sleep2 1000;
-		npctalk "感谢您的许可。从现在起，我将把[" + 'admin$ + "] as a temporary administrator.";
+		npctalk "感谢您的许可。从现在起，我将把[" + 'admin$ + "] 担任临时管理员。";
 		sleep2 5000;
 		npctalk "首先请选择用于控制这台自动人偶的代号。系统已随机列出过去较受欢迎的若干名称。";
 
-		setarray .@names$[0],"Lisa","Barbara","Jennifer","Dorothy","Jun","Yeongchun","Susan","Martha","Hannah","Helen","Chunja","Karen","How do I stop this?";
+		setarray .@names$[0],"Lisa","Barbara","Jennifer","Dorothy","Jun","Yeongchun","Susan","Martha","Hannah","Helen","Chunja","Karen","怎么才能停下来？";
 		.@size = getarraysize(.@names$);
 		.@menu$[0] = "退出";	// note: script continues regardless of the selection
 		for ( .@i = 1; .@i < 4; ++.@i ) {
@@ -337,7 +337,7 @@ OnTalk01:
 	specialeffect EF_FLOWERCAST;
 	npctalk "睡眠模式解除协议已完成。除已识别对象外，我还将确认主人巴尔蒙德是否在附近。";
 	sleep 5000;
-	npctalk "Searching......";
+	npctalk "搜索中……";
 	progressbar_npc "3131FF",3;
 	sleep 1000;
 	npctalk "网络内未检测到巴尔蒙德大人。";
@@ -677,7 +677,7 @@ OnTouch:
 	if ('hidden_garden == 9) {
 		removespecialeffect EF_MARKING_USE_CHANGEMONSTER;
 		while (true) {
-			switch( select( "Cancel.", "你照料这个地方多久了？", "它们都在这里种地吗？" ) ) {
+			switch( select( "取消。", "你照料这个地方多久了？", "它们都在这里种地吗？" ) ) {
 			case 1:
 				end;
 			case 2:
@@ -788,7 +788,7 @@ OnTouch:
 		mes "[" + 'guide_name$ + "]";
 		mes "本区域由三台自动人偶管理。要继续导览吗？";
 		next;
-		if (select( "Cancel.", "继续吧。" ) == 1) {
+		if (select( "取消。", "继续吧。" ) == 1) {
 			mes "[" + 'guide_name$ + "]";
 			mes "在得到进一步指示之前，我会等待。";
 			close;
@@ -807,7 +807,7 @@ OnTouch:
 		mes "[" + 'guide_name$ + "]";
 		mes "有什么我能帮您的吗？";
 		next;
-		if (select( "Cancel.", "那些自动人偶是什么？" ) == 1) {
+		if (select( "取消。", "那些自动人偶是什么？" ) == 1) {
 			mes "[" + 'guide_name$ + "]";
 			mes "进入待机模式。";
 			close;
@@ -827,7 +827,7 @@ OnTouch:
 		close2;
 		while(true) {
 			if (.@talk && .@talk2)
-				.@question$ = "^FF0000Is the security area near here?^000000";
+				.@question$ = "^FF0000安保区域就在这附近吗？^000000";
 			switch( select( "花园是安保区域吗？", "花园的真正目的是什么", .@question$, .@teleport$ ) ) {
 			case 1:
 				setpcblock PCBLOCK_NPC, true;
@@ -856,7 +856,7 @@ OnTouch:
 				sleep2 5000;
 				npctalk "安保区域与当前坐标非常接近。";
 				sleep2 3000;
-				.@teleport$ = "^FF11FFGuide me to the security area.^000000";
+				.@teleport$ = "^FF11FF带我去安保区域。^000000";
 				break;
 			case 4:
 				setpcblock PCBLOCK_NPC, true;
@@ -864,12 +864,12 @@ OnTouch:
 				progressbar_npc "3131FF",3;
 				npctalk "[警告] 该请求已超出我的权限等级。";
 				sleep2 5000;
-				npctalk "您的请求已被驳回，因为管理员[" + 'admin$ + "].";
+				npctalk "您的请求已被驳回，因为管理员[" + 'admin$ + "]。";
 				setpcblock PCBLOCK_NPC, false;
 				sleep 5000;
 				mapannounce 'map_herbs$, "？？？：自动人偶对你的反应十分新奇。奇怪的访客。", bc_map, 0xF6D6B6;
 				sleep 5000;
-				mapannounce 'map_herbs$, "？？？：你能护送他到安保区域吗？BMD000001。不，我是说自动人偶，[" + 'guide_name$ + "].", bc_map, 0xF6D6B6;
+				mapannounce 'map_herbs$, "？？？：你能护送他到安保区域吗？BMD000001。不，我是说自动人偶，[" + 'guide_name$ + "]。", bc_map, 0xF6D6B6;
 				sleep 5000;
 				npctalk "这个声音的生物波长……";
 				sleep 3000;
@@ -1043,7 +1043,7 @@ OnSummon2:
 		case 3: .@x = 191; .@y = 276; break;
 	}
 	disablenpc();
-	monster 'map_herbs$,.@x,.@y,"Surveillance Doll",1739,1, instance_npcname("#BMD000004") + "::OnGuardKill";
+	monster 'map_herbs$,.@x,.@y,"监视人偶",1739,1, instance_npcname("#BMD000004") + "::OnGuardKill";
 	end;
 }
 1@herbs,194,270,7	duplicate(#swat_1)	#swat_2	CLEAR_NPC
@@ -1622,294 +1622,294 @@ OnSummon:
 	case 0:
 		if ('mode == 0) {
 			'total_mobs = 16;
-			monster 'map_herbs$,77,197,"Flower Garden Watcher",20622,1, .@event$;
-			monster 'map_herbs$,51,196,"Flower Garden Watcher",20622,1, .@event$;
+			monster 'map_herbs$,77,197,"花园监视者",20622,1, .@event$;
+			monster 'map_herbs$,51,196,"花园监视者",20622,1, .@event$;
 			sleep 100;
-			monster 'map_herbs$,63,217,"Flower Garden Watcher",20622,1, .@event$;
+			monster 'map_herbs$,63,217,"花园监视者",20622,1, .@event$;
 			sleep 100;
-			monster 'map_herbs$,81,195,"Flower Garden Watcher",20624,1, .@event$;
-			monster 'map_herbs$,61,217,"Flower Garden Watcher",20622,1, .@event$;
+			monster 'map_herbs$,81,195,"花园监视者",20624,1, .@event$;
+			monster 'map_herbs$,61,217,"花园监视者",20622,1, .@event$;
 			sleep 100;
-			monster 'map_herbs$,57,193,"Flower Garden Watcher",20622,1, .@event$;
+			monster 'map_herbs$,57,193,"花园监视者",20622,1, .@event$;
 			sleep 100;
-			monster 'map_herbs$,56,191,"Flower Garden Watcher",20626,1, .@event$;
+			monster 'map_herbs$,56,191,"花园监视者",20626,1, .@event$;
 			sleep 100;
-			monster 'map_herbs$,59,193,"Flower Garden Watcher",20626,1, .@event$;
+			monster 'map_herbs$,59,193,"花园监视者",20626,1, .@event$;
 			sleep 100;
-			monster 'map_herbs$,59,192,"Flower Garden Watcher",20622,1, .@event$;
-			monster 'map_herbs$,60,222,"Flower Garden Watcher",20622,1, .@event$;
-			monster 'map_herbs$,58,191,"Flower Garden Watcher",20622,1, .@event$;
+			monster 'map_herbs$,59,192,"花园监视者",20622,1, .@event$;
+			monster 'map_herbs$,60,222,"花园监视者",20622,1, .@event$;
+			monster 'map_herbs$,58,191,"花园监视者",20622,1, .@event$;
 			sleep 100;
-			monster 'map_herbs$,78,199,"Flower Garden Watcher",20622,1, .@event$;
+			monster 'map_herbs$,78,199,"花园监视者",20622,1, .@event$;
 			sleep 100;
-			monster 'map_herbs$,54,192,"Flower Garden Watcher",20626,1, .@event$;
-			monster 'map_herbs$,79,195,"Flower Garden Watcher",20622,1, .@event$;
+			monster 'map_herbs$,54,192,"花园监视者",20626,1, .@event$;
+			monster 'map_herbs$,79,195,"花园监视者",20622,1, .@event$;
 			sleep 100;
-			monster 'map_herbs$,76,192,"Flower Garden Watcher",20626,1, .@event$;
-			monster 'map_herbs$,51,196,"Flower Garden Watcher",20624,1, .@event$;
+			monster 'map_herbs$,76,192,"花园监视者",20626,1, .@event$;
+			monster 'map_herbs$,51,196,"花园监视者",20624,1, .@event$;
 		}
 		else {
 			'total_mobs = 16;
-			monster 'map_herbs$,53,197,"Flower Garden Watcher",20623,1, .@event$;
+			monster 'map_herbs$,53,197,"花园监视者",20623,1, .@event$;
 			sleep 100;
-			monster 'map_herbs$,62,217,"Flower Garden Watcher",20623,1, .@event$;
+			monster 'map_herbs$,62,217,"花园监视者",20623,1, .@event$;
 			sleep 100;
-			monster 'map_herbs$,57,219,"Flower Garden Watcher",20627,1, .@event$;
-			monster 'map_herbs$,62,222,"Flower Garden Watcher",20623,1, .@event$;
-			monster 'map_herbs$,79,200,"Flower Garden Watcher",20623,1, .@event$;
-			monster 'map_herbs$,80,195,"Flower Garden Watcher",20623,1, .@event$;
-			monster 'map_herbs$,80,199,"Flower Garden Watcher",20623,1, .@event$;
-			monster 'map_herbs$,58,193,"Flower Garden Watcher",20623,1, .@event$;
-			monster 'map_herbs$,56,192,"Flower Garden Watcher",20625,1, .@event$;
+			monster 'map_herbs$,57,219,"花园监视者",20627,1, .@event$;
+			monster 'map_herbs$,62,222,"花园监视者",20623,1, .@event$;
+			monster 'map_herbs$,79,200,"花园监视者",20623,1, .@event$;
+			monster 'map_herbs$,80,195,"花园监视者",20623,1, .@event$;
+			monster 'map_herbs$,80,199,"花园监视者",20623,1, .@event$;
+			monster 'map_herbs$,58,193,"花园监视者",20623,1, .@event$;
+			monster 'map_herbs$,56,192,"花园监视者",20625,1, .@event$;
 			sleep 100;
-			monster 'map_herbs$,51,191,"Flower Garden Watcher",20623,1, .@event$;
-			monster 'map_herbs$,51,192,"Flower Garden Watcher",20623,1, .@event$;
-			monster 'map_herbs$,83,199,"Flower Garden Watcher",20625,1, .@event$;
-			monster 'map_herbs$,83,191,"Flower Garden Watcher",20623,1, .@event$;
+			monster 'map_herbs$,51,191,"花园监视者",20623,1, .@event$;
+			monster 'map_herbs$,51,192,"花园监视者",20623,1, .@event$;
+			monster 'map_herbs$,83,199,"花园监视者",20625,1, .@event$;
+			monster 'map_herbs$,83,191,"花园监视者",20623,1, .@event$;
 			sleep 100;
-			monster 'map_herbs$,83,196,"Flower Garden Watcher",20623,1, .@event$;
+			monster 'map_herbs$,83,196,"花园监视者",20623,1, .@event$;
 			sleep 100;
-			monster 'map_herbs$,57,193,"Flower Garden Watcher",20623,1, .@event$;
-			monster 'map_herbs$,62,222,"Flower Garden Watcher",20623,1, .@event$;
+			monster 'map_herbs$,57,193,"花园监视者",20623,1, .@event$;
+			monster 'map_herbs$,62,222,"花园监视者",20623,1, .@event$;
 		}
 		break;
 	case 1:
 		if ('mode == 0) {
 			'total_mobs = 21;
-			monster 'map_herbs$,114,226,"Flower Garden Watcher",20622,1, .@event$;
-			monster 'map_herbs$,114,227,"Flower Garden Watcher",20622,1, .@event$;
-			monster 'map_herbs$,119,217,"Flower Garden Watcher",20624,1, .@event$;
+			monster 'map_herbs$,114,226,"花园监视者",20622,1, .@event$;
+			monster 'map_herbs$,114,227,"花园监视者",20622,1, .@event$;
+			monster 'map_herbs$,119,217,"花园监视者",20624,1, .@event$;
 			sleep 100;
-			monster 'map_herbs$,118,227,"Flower Garden Watcher",20622,1, .@event$;
+			monster 'map_herbs$,118,227,"花园监视者",20622,1, .@event$;
 			sleep 100;
-			monster 'map_herbs$,116,216,"Flower Garden Watcher",20626,1, .@event$;
+			monster 'map_herbs$,116,216,"花园监视者",20626,1, .@event$;
 			sleep 100;
-			monster 'map_herbs$,114,215,"Flower Garden Watcher",20626,1, .@event$;
+			monster 'map_herbs$,114,215,"花园监视者",20626,1, .@event$;
 			sleep 100;
-			monster 'map_herbs$,114,225,"Flower Garden Watcher",20622,1, .@event$;
+			monster 'map_herbs$,114,225,"花园监视者",20622,1, .@event$;
 			sleep 100;
-			monster 'map_herbs$,114,224,"Flower Garden Watcher",20622,1, .@event$;
-			monster 'map_herbs$,139,205,"Flower Garden Watcher",20622,1, .@event$;
-			monster 'map_herbs$,140,202,"Flower Garden Watcher",20622,1, .@event$;
-			monster 'map_herbs$,145,202,"Flower Garden Watcher",20626,1, .@event$;
-			monster 'map_herbs$,136,202,"Flower Garden Watcher",20624,1, .@event$;
-			monster 'map_herbs$,142,208,"Flower Garden Watcher",20624,1, .@event$;
-			monster 'map_herbs$,144,203,"Flower Garden Watcher",20624,1, .@event$;
-			monster 'map_herbs$,170,223,"Flower Garden Watcher",20624,1, .@event$;
-			monster 'map_herbs$,174,220,"Flower Garden Watcher",20624,1, .@event$;
-			monster 'map_herbs$,168,221,"Flower Garden Watcher",20622,1, .@event$;
-			monster 'map_herbs$,169,221,"Flower Garden Watcher",20622,1, .@event$;
-			monster 'map_herbs$,169,217,"Flower Garden Watcher",20622,1, .@event$;
-			monster 'map_herbs$,118,216,"Flower Garden Watcher",20622,1, .@event$;
-			monster 'map_herbs$,117,233,"Flower Garden Watcher",20622,1, .@event$;
+			monster 'map_herbs$,114,224,"花园监视者",20622,1, .@event$;
+			monster 'map_herbs$,139,205,"花园监视者",20622,1, .@event$;
+			monster 'map_herbs$,140,202,"花园监视者",20622,1, .@event$;
+			monster 'map_herbs$,145,202,"花园监视者",20626,1, .@event$;
+			monster 'map_herbs$,136,202,"花园监视者",20624,1, .@event$;
+			monster 'map_herbs$,142,208,"花园监视者",20624,1, .@event$;
+			monster 'map_herbs$,144,203,"花园监视者",20624,1, .@event$;
+			monster 'map_herbs$,170,223,"花园监视者",20624,1, .@event$;
+			monster 'map_herbs$,174,220,"花园监视者",20624,1, .@event$;
+			monster 'map_herbs$,168,221,"花园监视者",20622,1, .@event$;
+			monster 'map_herbs$,169,221,"花园监视者",20622,1, .@event$;
+			monster 'map_herbs$,169,217,"花园监视者",20622,1, .@event$;
+			monster 'map_herbs$,118,216,"花园监视者",20622,1, .@event$;
+			monster 'map_herbs$,117,233,"花园监视者",20622,1, .@event$;
 		}
 		else {
 			'total_mobs = 21;
-			monster 'map_herbs$,137,204,"Flower Garden Watcher",20623,1, .@event$;
-			monster 'map_herbs$,142,205,"Flower Garden Watcher",20627,1, .@event$;
-			monster 'map_herbs$,145,200,"Flower Garden Watcher",20623,1, .@event$;
-			monster 'map_herbs$,146,201,"Flower Garden Watcher",20625,1, .@event$;
+			monster 'map_herbs$,137,204,"花园监视者",20623,1, .@event$;
+			monster 'map_herbs$,142,205,"花园监视者",20627,1, .@event$;
+			monster 'map_herbs$,145,200,"花园监视者",20623,1, .@event$;
+			monster 'map_herbs$,146,201,"花园监视者",20625,1, .@event$;
 			sleep 100;
-			monster 'map_herbs$,147,201,"Flower Garden Watcher",20623,1, .@event$;
+			monster 'map_herbs$,147,201,"花园监视者",20623,1, .@event$;
 			sleep 100;
-			monster 'map_herbs$,141,208,"Flower Garden Watcher",20627,1, .@event$;
-			monster 'map_herbs$,166,224,"Flower Garden Watcher",20625,1, .@event$;
+			monster 'map_herbs$,141,208,"花园监视者",20627,1, .@event$;
+			monster 'map_herbs$,166,224,"花园监视者",20625,1, .@event$;
 			sleep 100;
-			monster 'map_herbs$,171,217,"Flower Garden Watcher",20627,1, .@event$;
+			monster 'map_herbs$,171,217,"花园监视者",20627,1, .@event$;
 			sleep 100;
-			monster 'map_herbs$,172,225,"Flower Garden Watcher",20627,1, .@event$;
-			monster 'map_herbs$,173,214,"Flower Garden Watcher",20623,1, .@event$;
-			monster 'map_herbs$,174,225,"Flower Garden Watcher",20627,1, .@event$;
-			monster 'map_herbs$,174,223,"Flower Garden Watcher",20627,1, .@event$;
+			monster 'map_herbs$,172,225,"花园监视者",20627,1, .@event$;
+			monster 'map_herbs$,173,214,"花园监视者",20623,1, .@event$;
+			monster 'map_herbs$,174,225,"花园监视者",20627,1, .@event$;
+			monster 'map_herbs$,174,223,"花园监视者",20627,1, .@event$;
 			sleep 100;
-			monster 'map_herbs$,170,213,"Flower Garden Watcher",20623,1, .@event$;
+			monster 'map_herbs$,170,213,"花园监视者",20623,1, .@event$;
 			sleep 100;
-			monster 'map_herbs$,169,219,"Flower Garden Watcher",20623,1, .@event$;
+			monster 'map_herbs$,169,219,"花园监视者",20623,1, .@event$;
 			sleep 100;
-			monster 'map_herbs$,136,205,"Flower Garden Watcher",20623,1, .@event$;
-			monster 'map_herbs$,136,210,"Flower Garden Watcher",20623,1, .@event$;
-			monster 'map_herbs$,120,224,"Flower Garden Watcher",20623,1, .@event$;
-			monster 'map_herbs$,118,223,"Flower Garden Watcher",20623,1, .@event$;
-			monster 'map_herbs$,117,219,"Flower Garden Watcher",20623,1, .@event$;
-			monster 'map_herbs$,115,214,"Flower Garden Watcher",20623,1, .@event$;
+			monster 'map_herbs$,136,205,"花园监视者",20623,1, .@event$;
+			monster 'map_herbs$,136,210,"花园监视者",20623,1, .@event$;
+			monster 'map_herbs$,120,224,"花园监视者",20623,1, .@event$;
+			monster 'map_herbs$,118,223,"花园监视者",20623,1, .@event$;
+			monster 'map_herbs$,117,219,"花园监视者",20623,1, .@event$;
+			monster 'map_herbs$,115,214,"花园监视者",20623,1, .@event$;
 			sleep 100;
-			monster 'map_herbs$,115,233,"Flower Garden Watcher",20623,1, .@event$;
+			monster 'map_herbs$,115,233,"花园监视者",20623,1, .@event$;
 		}
 		break;
 	case 2:
 		if ('mode == 0) {
 			'total_mobs = 28;
-			monster 'map_herbs$,213,205,"Flower Garden Watcher",20622,1, .@event$;
-			monster 'map_herbs$,202,214,"Flower Garden Watcher",20626,1, .@event$;
+			monster 'map_herbs$,213,205,"花园监视者",20622,1, .@event$;
+			monster 'map_herbs$,202,214,"花园监视者",20626,1, .@event$;
 			sleep 100;
-			monster 'map_herbs$,202,213,"Flower Garden Watcher",20626,1, .@event$;
+			monster 'map_herbs$,202,213,"花园监视者",20626,1, .@event$;
 			sleep 100;
-			monster 'map_herbs$,210,212,"Flower Garden Watcher",20626,1, .@event$;
+			monster 'map_herbs$,210,212,"花园监视者",20626,1, .@event$;
 			sleep 100;
-			monster 'map_herbs$,211,207,"Flower Garden Watcher",20624,1, .@event$;
+			monster 'map_herbs$,211,207,"花园监视者",20624,1, .@event$;
 			sleep 100;
-			monster 'map_herbs$,209,214,"Flower Garden Watcher",20624,1, .@event$;
+			monster 'map_herbs$,209,214,"花园监视者",20624,1, .@event$;
 			sleep 100;
-			monster 'map_herbs$,203,212,"Flower Garden Watcher",20622,1, .@event$;
-			monster 'map_herbs$,218,194,"Flower Garden Watcher",20622,1, .@event$;
+			monster 'map_herbs$,203,212,"花园监视者",20622,1, .@event$;
+			monster 'map_herbs$,218,194,"花园监视者",20622,1, .@event$;
 			sleep 100;
-			monster 'map_herbs$,203,196,"Flower Garden Watcher",20622,1, .@event$;
+			monster 'map_herbs$,203,196,"花园监视者",20622,1, .@event$;
 			sleep 100;
-			monster 'map_herbs$,204,193,"Flower Garden Watcher",20626,1, .@event$;
+			monster 'map_herbs$,204,193,"花园监视者",20626,1, .@event$;
 			sleep 100;
-			monster 'map_herbs$,215,201,"Flower Garden Watcher",20624,1, .@event$;
-			monster 'map_herbs$,204,193,"Flower Garden Watcher",20626,1, .@event$;
+			monster 'map_herbs$,215,201,"花园监视者",20624,1, .@event$;
+			monster 'map_herbs$,204,193,"花园监视者",20626,1, .@event$;
 			sleep 100;
-			monster 'map_herbs$,205,213,"Flower Garden Watcher",20626,1, .@event$;
+			monster 'map_herbs$,205,213,"花园监视者",20626,1, .@event$;
 			sleep 100;
-			monster 'map_herbs$,218,208,"Flower Garden Watcher",20622,1, .@event$;
+			monster 'map_herbs$,218,208,"花园监视者",20622,1, .@event$;
 			sleep 100;
-			monster 'map_herbs$,210,210,"Flower Garden Watcher",20622,1, .@event$;
-			monster 'map_herbs$,245,214,"Flower Garden Watcher",20626,1, .@event$;
+			monster 'map_herbs$,210,210,"花园监视者",20622,1, .@event$;
+			monster 'map_herbs$,245,214,"花园监视者",20626,1, .@event$;
 			sleep 100;
-			monster 'map_herbs$,220,192,"Flower Garden Watcher",20622,1, .@event$;
-			monster 'map_herbs$,248,208,"Flower Garden Watcher",20622,1, .@event$;
-			monster 'map_herbs$,253,208,"Flower Garden Watcher",20622,1, .@event$;
-			monster 'map_herbs$,253,208,"Flower Garden Watcher",20626,1, .@event$;
+			monster 'map_herbs$,220,192,"花园监视者",20622,1, .@event$;
+			monster 'map_herbs$,248,208,"花园监视者",20622,1, .@event$;
+			monster 'map_herbs$,253,208,"花园监视者",20622,1, .@event$;
+			monster 'map_herbs$,253,208,"花园监视者",20626,1, .@event$;
 			sleep 100;
-			monster 'map_herbs$,246,212,"Flower Garden Watcher",20624,1, .@event$;
+			monster 'map_herbs$,246,212,"花园监视者",20624,1, .@event$;
 			sleep 100;
-			monster 'map_herbs$,251,210,"Flower Garden Watcher",20622,1, .@event$;
+			monster 'map_herbs$,251,210,"花园监视者",20622,1, .@event$;
 			sleep 100;
-			monster 'map_herbs$,245,209,"Flower Garden Watcher",20626,1, .@event$;
-			monster 'map_herbs$,222,195,"Flower Garden Watcher",20624,1, .@event$;
-			monster 'map_herbs$,203,212,"Flower Garden Watcher",20624,1, .@event$;
+			monster 'map_herbs$,245,209,"花园监视者",20626,1, .@event$;
+			monster 'map_herbs$,222,195,"花园监视者",20624,1, .@event$;
+			monster 'map_herbs$,203,212,"花园监视者",20624,1, .@event$;
 			sleep 100;
-			monster 'map_herbs$,208,213,"Flower Garden Watcher",20622,1, .@event$;
-			monster 'map_herbs$,219,192,"Flower Garden Watcher",20622,1, .@event$;
-			monster 'map_herbs$,245,209,"Flower Garden Watcher",20626,1, .@event$;
+			monster 'map_herbs$,208,213,"花园监视者",20622,1, .@event$;
+			monster 'map_herbs$,219,192,"花园监视者",20622,1, .@event$;
+			monster 'map_herbs$,245,209,"花园监视者",20626,1, .@event$;
 		}
 		else {
 			'total_mobs = 27;
-			monster 'map_herbs$,207,194,"Flower Garden Watcher",20625,1, .@event$;
-			monster 'map_herbs$,217,204,"Flower Garden Watcher",20623,1, .@event$;
+			monster 'map_herbs$,207,194,"花园监视者",20625,1, .@event$;
+			monster 'map_herbs$,217,204,"花园监视者",20623,1, .@event$;
 			sleep 100;
-			monster 'map_herbs$,210,210,"Flower Garden Watcher",20627,1, .@event$;
+			monster 'map_herbs$,210,210,"花园监视者",20627,1, .@event$;
 			sleep 100;
-			monster 'map_herbs$,218,195,"Flower Garden Watcher",20623,1, .@event$;
+			monster 'map_herbs$,218,195,"花园监视者",20623,1, .@event$;
 			sleep 100;
-			monster 'map_herbs$,211,209,"Flower Garden Watcher",20627,1, .@event$;
+			monster 'map_herbs$,211,209,"花园监视者",20627,1, .@event$;
 			sleep 100;
-			monster 'map_herbs$,210,211,"Flower Garden Watcher",20625,1, .@event$;
+			monster 'map_herbs$,210,211,"花园监视者",20625,1, .@event$;
 			sleep 100;
-			monster 'map_herbs$,207,194,"Flower Garden Watcher",20625,1, .@event$;
+			monster 'map_herbs$,207,194,"花园监视者",20625,1, .@event$;
 			sleep 100;
-			monster 'map_herbs$,209,214,"Flower Garden Watcher",20623,1, .@event$;
+			monster 'map_herbs$,209,214,"花园监视者",20623,1, .@event$;
 			sleep 100;
-			monster 'map_herbs$,216,192,"Flower Garden Watcher",20623,1, .@event$;
+			monster 'map_herbs$,216,192,"花园监视者",20623,1, .@event$;
 			sleep 100;
-			monster 'map_herbs$,208,211,"Flower Garden Watcher",20623,1, .@event$;
+			monster 'map_herbs$,208,211,"花园监视者",20623,1, .@event$;
 			sleep 100;
-			monster 'map_herbs$,214,208,"Flower Garden Watcher",20623,1, .@event$;
+			monster 'map_herbs$,214,208,"花园监视者",20623,1, .@event$;
 			sleep 100;
-			monster 'map_herbs$,209,214,"Flower Garden Watcher",20623,1, .@event$;
-			monster 'map_herbs$,215,201,"Flower Garden Watcher",20627,1, .@event$;
-			monster 'map_herbs$,205,214,"Flower Garden Watcher",20623,1, .@event$;
-			monster 'map_herbs$,205,214,"Flower Garden Watcher",20625,1, .@event$;
+			monster 'map_herbs$,209,214,"花园监视者",20623,1, .@event$;
+			monster 'map_herbs$,215,201,"花园监视者",20627,1, .@event$;
+			monster 'map_herbs$,205,214,"花园监视者",20623,1, .@event$;
+			monster 'map_herbs$,205,214,"花园监视者",20625,1, .@event$;
 			sleep 100;
-			monster 'map_herbs$,220,207,"Flower Garden Watcher",20625,1, .@event$;
+			monster 'map_herbs$,220,207,"花园监视者",20625,1, .@event$;
 			sleep 100;
-			monster 'map_herbs$,208,213,"Flower Garden Watcher",20623,1, .@event$;
-			monster 'map_herbs$,202,212,"Flower Garden Watcher",20623,1, .@event$;
+			monster 'map_herbs$,208,213,"花园监视者",20623,1, .@event$;
+			monster 'map_herbs$,202,212,"花园监视者",20623,1, .@event$;
 			sleep 100;
-			monster 'map_herbs$,202,193,"Flower Garden Watcher",20623,1, .@event$;
-			monster 'map_herbs$,206,214,"Flower Garden Watcher",20623,1, .@event$;
-			monster 'map_herbs$,245,212,"Flower Garden Watcher",20627,1, .@event$;
-			monster 'map_herbs$,247,209,"Flower Garden Watcher",20623,1, .@event$;
-			monster 'map_herbs$,249,210,"Flower Garden Watcher",20623,1, .@event$;
-			monster 'map_herbs$,249,214,"Flower Garden Watcher",20627,1, .@event$;
-			monster 'map_herbs$,249,214,"Flower Garden Watcher",20627,1, .@event$;
-			monster 'map_herbs$,250,210,"Flower Garden Watcher",20623,1, .@event$;
-			monster 'map_herbs$,252,208,"Flower Garden Watcher",20627,1, .@event$;
+			monster 'map_herbs$,202,193,"花园监视者",20623,1, .@event$;
+			monster 'map_herbs$,206,214,"花园监视者",20623,1, .@event$;
+			monster 'map_herbs$,245,212,"花园监视者",20627,1, .@event$;
+			monster 'map_herbs$,247,209,"花园监视者",20623,1, .@event$;
+			monster 'map_herbs$,249,210,"花园监视者",20623,1, .@event$;
+			monster 'map_herbs$,249,214,"花园监视者",20627,1, .@event$;
+			monster 'map_herbs$,249,214,"花园监视者",20627,1, .@event$;
+			monster 'map_herbs$,250,210,"花园监视者",20623,1, .@event$;
+			monster 'map_herbs$,252,208,"花园监视者",20627,1, .@event$;
 		}
 		break;
 	case 3:
 		if ('mode == 0) {
 			'total_mobs = 31;
-			monster 'map_herbs$,291,210,"Flower Garden Watcher",20626,1, .@event$;
-			monster 'map_herbs$,306,215,"Flower Garden Watcher",20626,1, .@event$;
-			monster 'map_herbs$,284,234,"Flower Garden Watcher",20626,1, .@event$;
-			monster 'map_herbs$,307,232,"Flower Garden Watcher",20626,1, .@event$;
-			monster 'map_herbs$,283,238,"Flower Garden Watcher",20626,1, .@event$;
-			monster 'map_herbs$,298,237,"Flower Garden Watcher",20626,1, .@event$;
-			monster 'map_herbs$,282,233,"Flower Garden Watcher",20626,1, .@event$;
-			monster 'map_herbs$,303,240,"Flower Garden Watcher",20626,1, .@event$;
-			monster 'map_herbs$,296,249,"Flower Garden Watcher",20622,1, .@event$;
-			monster 'map_herbs$,302,239,"Flower Garden Watcher",20622,1, .@event$;
-			monster 'map_herbs$,292,217,"Flower Garden Watcher",20622,1, .@event$;
-			monster 'map_herbs$,298,262,"Flower Garden Watcher",20622,1, .@event$;
-			monster 'map_herbs$,297,212,"Flower Garden Watcher",20624,1, .@event$;
-			monster 'map_herbs$,299,262,"Flower Garden Watcher",20624,1, .@event$;
-			monster 'map_herbs$,308,216,"Flower Garden Watcher",20624,1, .@event$;
-			monster 'map_herbs$,301,238,"Flower Garden Watcher",20624,1, .@event$;
-			monster 'map_herbs$,285,210,"Flower Garden Watcher",20624,1, .@event$;
-			monster 'map_herbs$,283,228,"Flower Garden Watcher",20624,1, .@event$;
-			monster 'map_herbs$,294,252,"Flower Garden Watcher",20624,1, .@event$;
+			monster 'map_herbs$,291,210,"花园监视者",20626,1, .@event$;
+			monster 'map_herbs$,306,215,"花园监视者",20626,1, .@event$;
+			monster 'map_herbs$,284,234,"花园监视者",20626,1, .@event$;
+			monster 'map_herbs$,307,232,"花园监视者",20626,1, .@event$;
+			monster 'map_herbs$,283,238,"花园监视者",20626,1, .@event$;
+			monster 'map_herbs$,298,237,"花园监视者",20626,1, .@event$;
+			monster 'map_herbs$,282,233,"花园监视者",20626,1, .@event$;
+			monster 'map_herbs$,303,240,"花园监视者",20626,1, .@event$;
+			monster 'map_herbs$,296,249,"花园监视者",20622,1, .@event$;
+			monster 'map_herbs$,302,239,"花园监视者",20622,1, .@event$;
+			monster 'map_herbs$,292,217,"花园监视者",20622,1, .@event$;
+			monster 'map_herbs$,298,262,"花园监视者",20622,1, .@event$;
+			monster 'map_herbs$,297,212,"花园监视者",20624,1, .@event$;
+			monster 'map_herbs$,299,262,"花园监视者",20624,1, .@event$;
+			monster 'map_herbs$,308,216,"花园监视者",20624,1, .@event$;
+			monster 'map_herbs$,301,238,"花园监视者",20624,1, .@event$;
+			monster 'map_herbs$,285,210,"花园监视者",20624,1, .@event$;
+			monster 'map_herbs$,283,228,"花园监视者",20624,1, .@event$;
+			monster 'map_herbs$,294,252,"花园监视者",20624,1, .@event$;
 			sleep 100;
-			monster 'map_herbs$,295,247,"Flower Garden Watcher",20626,1, .@event$;
+			monster 'map_herbs$,295,247,"花园监视者",20626,1, .@event$;
 			sleep 100;
-			monster 'map_herbs$,294,245,"Flower Garden Watcher",20624,1, .@event$;
+			monster 'map_herbs$,294,245,"花园监视者",20624,1, .@event$;
 			sleep 100;
-			monster 'map_herbs$,281,232,"Flower Garden Watcher",20622,1, .@event$;
-			monster 'map_herbs$,287,219,"Flower Garden Watcher",20626,1, .@event$;
-			monster 'map_herbs$,302,239,"Flower Garden Watcher",20626,1, .@event$;
+			monster 'map_herbs$,281,232,"花园监视者",20622,1, .@event$;
+			monster 'map_herbs$,287,219,"花园监视者",20626,1, .@event$;
+			monster 'map_herbs$,302,239,"花园监视者",20626,1, .@event$;
 			sleep 100;
-			monster 'map_herbs$,307,217,"Flower Garden Watcher",20622,1, .@event$;
-			monster 'map_herbs$,300,235,"Flower Garden Watcher",20624,1, .@event$;
-			monster 'map_herbs$,295,249,"Flower Garden Watcher",20624,1, .@event$;
-			monster 'map_herbs$,284,231,"Flower Garden Watcher",20626,1, .@event$;
-			monster 'map_herbs$,297,259,"Flower Garden Watcher",20622,1, .@event$;
-			monster 'map_herbs$,306,238,"Flower Garden Watcher",20626,1, .@event$;
-			monster 'map_herbs$,310,215,"Flower Garden Watcher",20624,1, .@event$;
+			monster 'map_herbs$,307,217,"花园监视者",20622,1, .@event$;
+			monster 'map_herbs$,300,235,"花园监视者",20624,1, .@event$;
+			monster 'map_herbs$,295,249,"花园监视者",20624,1, .@event$;
+			monster 'map_herbs$,284,231,"花园监视者",20626,1, .@event$;
+			monster 'map_herbs$,297,259,"花园监视者",20622,1, .@event$;
+			monster 'map_herbs$,306,238,"花园监视者",20626,1, .@event$;
+			monster 'map_herbs$,310,215,"花园监视者",20624,1, .@event$;
 		}
 		else {
 			'total_mobs = 33;
-			monster 'map_herbs$,307,239,"Flower Garden Watcher",20623,1, .@event$;
-			monster 'map_herbs$,297,257,"Flower Garden Watcher",20627,1, .@event$;
-			monster 'map_herbs$,284,236,"Flower Garden Watcher",20625,1, .@event$;
-			monster 'map_herbs$,283,235,"Flower Garden Watcher",20625,1, .@event$;
-			monster 'map_herbs$,304,240,"Flower Garden Watcher",20627,1, .@event$;
+			monster 'map_herbs$,307,239,"花园监视者",20623,1, .@event$;
+			monster 'map_herbs$,297,257,"花园监视者",20627,1, .@event$;
+			monster 'map_herbs$,284,236,"花园监视者",20625,1, .@event$;
+			monster 'map_herbs$,283,235,"花园监视者",20625,1, .@event$;
+			monster 'map_herbs$,304,240,"花园监视者",20627,1, .@event$;
 			sleep 100;
-			monster 'map_herbs$,298,246,"Flower Garden Watcher",20625,1, .@event$;
-			monster 'map_herbs$,305,224,"Flower Garden Watcher",20627,1, .@event$;
-			monster 'map_herbs$,310,225,"Flower Garden Watcher",20627,1, .@event$;
+			monster 'map_herbs$,298,246,"花园监视者",20625,1, .@event$;
+			monster 'map_herbs$,305,224,"花园监视者",20627,1, .@event$;
+			monster 'map_herbs$,310,225,"花园监视者",20627,1, .@event$;
 			sleep 100;
-			monster 'map_herbs$,284,218,"Flower Garden Watcher",20623,1, .@event$;
-			monster 'map_herbs$,298,213,"Flower Garden Watcher",20625,1, .@event$;
+			monster 'map_herbs$,284,218,"花园监视者",20623,1, .@event$;
+			monster 'map_herbs$,298,213,"花园监视者",20625,1, .@event$;
 			sleep 100;
-			monster 'map_herbs$,308,224,"Flower Garden Watcher",20625,1, .@event$;
-			monster 'map_herbs$,290,210,"Flower Garden Watcher",20625,1, .@event$;
-			monster 'map_herbs$,310,224,"Flower Garden Watcher",20627,1, .@event$;
+			monster 'map_herbs$,308,224,"花园监视者",20625,1, .@event$;
+			monster 'map_herbs$,290,210,"花园监视者",20625,1, .@event$;
+			monster 'map_herbs$,310,224,"花园监视者",20627,1, .@event$;
 			sleep 100;
-			monster 'map_herbs$,308,220,"Flower Garden Watcher",20627,1, .@event$;
-			monster 'map_herbs$,284,211,"Flower Garden Watcher",20625,1, .@event$;
-			monster 'map_herbs$,284,218,"Flower Garden Watcher",20623,1, .@event$;
-			monster 'map_herbs$,282,231,"Flower Garden Watcher",20627,1, .@event$;
-			monster 'map_herbs$,281,231,"Flower Garden Watcher",20625,1, .@event$;
-			monster 'map_herbs$,280,226,"Flower Garden Watcher",20625,1, .@event$;
-			monster 'map_herbs$,285,210,"Flower Garden Watcher",20625,1, .@event$;
+			monster 'map_herbs$,308,220,"花园监视者",20627,1, .@event$;
+			monster 'map_herbs$,284,211,"花园监视者",20625,1, .@event$;
+			monster 'map_herbs$,284,218,"花园监视者",20623,1, .@event$;
+			monster 'map_herbs$,282,231,"花园监视者",20627,1, .@event$;
+			monster 'map_herbs$,281,231,"花园监视者",20625,1, .@event$;
+			monster 'map_herbs$,280,226,"花园监视者",20625,1, .@event$;
+			monster 'map_herbs$,285,210,"花园监视者",20625,1, .@event$;
 			sleep 100;
-			monster 'map_herbs$,280,227,"Flower Garden Watcher",20623,1, .@event$;
-			monster 'map_herbs$,285,234,"Flower Garden Watcher",20627,1, .@event$;
-			monster 'map_herbs$,283,236,"Flower Garden Watcher",20627,1, .@event$;
-			monster 'map_herbs$,284,233,"Flower Garden Watcher",20625,1, .@event$;
+			monster 'map_herbs$,280,227,"花园监视者",20623,1, .@event$;
+			monster 'map_herbs$,285,234,"花园监视者",20627,1, .@event$;
+			monster 'map_herbs$,283,236,"花园监视者",20627,1, .@event$;
+			monster 'map_herbs$,284,233,"花园监视者",20625,1, .@event$;
 			sleep 100;
-			monster 'map_herbs$,284,237,"Flower Garden Watcher",20625,1, .@event$;
-			monster 'map_herbs$,284,239,"Flower Garden Watcher",20627,1, .@event$;
-			monster 'map_herbs$,293,246,"Flower Garden Watcher",20627,1, .@event$;
-			monster 'map_herbs$,300,247,"Flower Garden Watcher",20627,1, .@event$;
+			monster 'map_herbs$,284,237,"花园监视者",20625,1, .@event$;
+			monster 'map_herbs$,284,239,"花园监视者",20627,1, .@event$;
+			monster 'map_herbs$,293,246,"花园监视者",20627,1, .@event$;
+			monster 'map_herbs$,300,247,"花园监视者",20627,1, .@event$;
 			sleep 100;
-			monster 'map_herbs$,294,253,"Flower Garden Watcher",20627,1, .@event$;
-			monster 'map_herbs$,302,240,"Flower Garden Watcher",20625,1, .@event$;
-			monster 'map_herbs$,299,255,"Flower Garden Watcher",20625,1, .@event$;
-			monster 'map_herbs$,295,256,"Flower Garden Watcher",20625,1, .@event$;
+			monster 'map_herbs$,294,253,"花园监视者",20627,1, .@event$;
+			monster 'map_herbs$,302,240,"花园监视者",20625,1, .@event$;
+			monster 'map_herbs$,299,255,"花园监视者",20625,1, .@event$;
+			monster 'map_herbs$,295,256,"花园监视者",20625,1, .@event$;
 			sleep 100;
-			monster 'map_herbs$,310,218,"Flower Garden Watcher",20623,1, .@event$;
+			monster 'map_herbs$,310,218,"花园监视者",20623,1, .@event$;
 		}
 		break;
 	default:
@@ -2075,7 +2075,7 @@ OnTouch:	// unknown effect
 		mes "他们过一段时间就会恢复，所以在霸肋门德大人回来之前，你恐怕得继续与他们战斗。";
 		next;
 		mes "[西格玛]";
-		mes "Oh.";
+		mes "哦。";
 		mes "我从过去带来了一些旧物品。或许对你有帮助，拿去吧。";
 		close2;
 		erasequest .@qid;
@@ -2100,12 +2100,12 @@ OnTouch:	// unknown effect
 1@herbs,1,1,0	script	#172_sec_boss	HIDDEN_WARP_NPC,{
 	end;
 OnSummon:
-	monster 'map_herbs$,169,79,"Kappa",20620,1, instance_npcname("#172_sec_boss") + "::OnBossKill";
+	monster 'map_herbs$,169,79,"卡帕",20620,1, instance_npcname("#172_sec_boss") + "::OnBossKill";
 	'boss_gid = $@mobid[0];
 	donpcevent instance_npcname("#172_sec_boss") + "::OnShield";
 	end;
 OnSummonHard:
-	monster 'map_herbs$,275,80,"Lambda",20621,1, instance_npcname("#172_sec_boss") + "::OnBossKill";
+	monster 'map_herbs$,275,80,"兰布达",20621,1, instance_npcname("#172_sec_boss") + "::OnBossKill";
 	'boss_gid = $@mobid[0];
 	donpcevent instance_npcname("#172_sec_boss") + "::OnShield";
 	end;
@@ -2132,7 +2132,7 @@ OnShield:
 		setarray .@xy[0],171,94,171,65,200,65,200,94;
 
 	for ( .@i = 0; .@i < 8; .@i += 2 )
-		monster 'map_herbs$,.@xy[.@i],.@xy[.@i+1],"Guardian Part",20679,1, .@event$;
+		monster 'map_herbs$,.@xy[.@i],.@xy[.@i+1],"守护者零件",20679,1, .@event$;
 	unitskilluseid 'boss_gid,"NPC_RELIEVE_OFF",1;
 	unitskilluseid 'boss_gid,"NPC_RELIEVE_ON",10;
 	mapannounce 'map_herbs$, "系统：管理者已召唤守护者零件，并将它们回收，作为其能量护盾的材料。", bc_map, 0xFFFF00;

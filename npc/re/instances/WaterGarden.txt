@@ -100,11 +100,11 @@ ba_maison,238,44,5	script	哈拉德#jh_ba1	4_EP17_BASIC_B,{
 			end;
 		}
 		setquest 16439;
-		mapannounce "ba_maison", "" + strcharinfo(0) + "，所属队伍" + getpartyname( getcharid(1) ) + ", is entering the " + .@md_name$ + ".", bc_map, "0x00FF99";
+		mapannounce "ba_maison", "" + strcharinfo(0) + "，所属队伍" + getpartyname( getcharid(1) ) + "，正在进入" + .@md_name$ + "。", bc_map, "0x00FF99";
 		end;
 	}
 	if (instance_create(.@md_name$) == -3)
-		dispbottom "The reservation of the instance '" + .@md_name$ + "' has failed due to an active instance.";
+		dispbottom "副本“" + .@md_name$ + "”预约失败：已有其他副本正在进行。";
 	if (isbegin_quest(.@quest_given) > 0)
 		erasequest .@quest_given;
 	if (isbegin_quest(.@other_quest) > 0)
@@ -478,9 +478,9 @@ OnStart:
 	for ( .@i = 0; .@i < 3; ++.@i ) {
 		.@r = rand( .@size ) * 2;
 		if (rand(2))	// (red) Cross Pattern
-			monster 'map_ghg$,.@xy[.@r],.@xy[.@r+1],"Papilla",20673,1, .@event$;
+			monster 'map_ghg$,.@xy[.@r],.@xy[.@r+1],"帕皮拉",20673,1, .@event$;
 		else	// (blue) Diagonal Pattern
-			monster 'map_ghg$,.@xy[.@r],.@xy[.@r+1],"Papilla",20676,1, .@event$;
+			monster 'map_ghg$,.@xy[.@r],.@xy[.@r+1],"帕皮拉",20676,1, .@event$;
 		'gid_area_2[.@i] = $@mobid[0];
 		deletearray .@xy[.@r],2;
 		.@size -= 2;
@@ -917,8 +917,8 @@ OnSlave:
 	'red = rand(1,3);
 	'blue = rand(1,3);
 	.@event$ = instance_npcname("#172_wg_boss") + "::OnMobDead";
-	monster 'map_ghg$,182,286,"Papilla Ruba",(20671+'mode),1, .@event$;
-	monster 'map_ghg$,182,286,"Papilla Cae",(20674+'mode),1, .@event$;
+	monster 'map_ghg$,182,286,"帕皮拉·鲁巴",(20671+'mode),1, .@event$;
+	monster 'map_ghg$,182,286,"帕皮拉·凯",(20674+'mode),1, .@event$;
 	enablenpc instance_npcname("#blue" + 'blue + "ghg");
 	enablenpc instance_npcname("#red" + 'red + "ghg");
 	sleep 15000;
