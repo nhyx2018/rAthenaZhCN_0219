@@ -92928,12 +92928,12 @@ Body:
       BuyingStore: true
   - Id: 1000563
     AegisName: Soa_Charm
-    Name: 灵魂符咒
+    Name: 渡灵符
     Type: Etc
     Weight: 1
   - Id: 1000564
     AegisName: Nw_Grenade
-    Name: 投掷型手榴弹
+    Name: 投射型手榴弹
     Buy: 30
     Type: Etc
     Weight: 1

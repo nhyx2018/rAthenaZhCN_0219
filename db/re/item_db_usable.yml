@@ -61035,7 +61035,7 @@ Body:
       getgroupitem(IG_CRYSTAL_OF_GRUDGE);
   - Id: 23081
     AegisName: Kunai_Scroll_Of_Flame
-    Name: 热浪飞刀召唤卷轴
+    Name: 火焰飞刀召唤书
     Type: Usable
     Weight: 250
     Flags:
@@ -61044,7 +61044,7 @@ Body:
       getgroupitem(IG_KUNAI_SCROLL_OF_FLAME);
   - Id: 23082
     AegisName: Kunai_Scroll_Of_Icicle
-    Name: 冰柱飞刀召唤卷轴
+    Name: 垂冰飞刀召唤书
     Type: Usable
     Weight: 250
     Flags:
@@ -61053,7 +61053,7 @@ Body:
       getgroupitem(IG_KUNAI_SCROLL_OF_ICICLE);
   - Id: 23083
     AegisName: Kunai_Scroll_Of_Wind
-    Name: 强风飞刀召唤卷轴
+    Name: 强风飞刀召唤书
     Type: Usable
     Weight: 250
     Flags:
@@ -61062,7 +61062,7 @@ Body:
       getgroupitem(IG_KUNAI_SCROLL_OF_WIND);
   - Id: 23084
     AegisName: Kunai_Scroll_Of_Soil
-    Name: 黑土飞刀召唤卷轴
+    Name: 黑土飞刀召唤书
     Type: Usable
     Weight: 250
     Flags:
@@ -61071,7 +61071,7 @@ Body:
       getgroupitem(IG_KUNAI_SCROLL_OF_SOIL);
   - Id: 23085
     AegisName: Kunai_Scroll_Of_Poison
-    Name: 剧毒飞刀召唤卷轴
+    Name: 剧毒飞刀召唤书
     Type: Usable
     Weight: 250
     Flags:
@@ -67667,7 +67667,7 @@ Body:
       getgroupitem(IG_SET_OF_TAIMING_ITEM2);
   - Id: 100158
     AegisName: Mado_Box02
-    Name: 魔导战甲应急箱(强化装甲)
+    Name: 应急用魔导机甲(强化服)
     Type: Usable
     Buy: 10000
     Weight: 300
@@ -67805,7 +67805,7 @@ Body:
       getgroupitem(IG_GOLDPCBANG_MILEAGEBOX);
   - Id: 100171
     AegisName: Cannon_Ball_Box
-    Name: 加农炮弹弹药箱
+    Name: 炮弹弹药箱
     Type: Usable
     Weight: 250
     Flags:
@@ -67823,7 +67823,7 @@ Body:
       getgroupitem(IG_IRON_CANNON_BALL_BOX);
   - Id: 100173
     AegisName: Soul_Cannon_Ball_Box
-    Name: 念加农炮弹弹药箱
+    Name: 灵魂炮弹弹药箱
     Type: Usable
     Weight: 250
     Flags:
@@ -67841,7 +67841,7 @@ Body:
       getitem "Poison_Arrow",500;
   - Id: 100176
     AegisName: Dark_Cannon_Ball_Box
-    Name: 暗加农炮弹弹药箱
+    Name: 黑暗炮弹弹药箱
     Type: Usable
     Weight: 250
     Flags:
@@ -67850,7 +67850,7 @@ Body:
       getgroupitem(IG_DARK_CANNON_BALL_BOX);
   - Id: 100177
     AegisName: Holy_Cannon_Ball_Box
-    Name: 圣加农炮弹弹药箱
+    Name: 神圣炮弹弹药箱
     Type: Usable
     Weight: 250
     Flags:
@@ -72892,7 +72892,7 @@ Body:
       getgroupitem(IG_Enchant_Stone_Box25);
   - Id: 101107
     AegisName: Cannon_Box_Ice
-    Name: 冰爆加农炮弹箱
+    Name: 冰爆加农炮弹盒
     Type: Usable
     Weight: 250
     Flags:
@@ -72901,7 +72901,7 @@ Body:
       getgroupitem(IG_CANNON_BOX_ICE);
   - Id: 101108
     AegisName: Cannon_Box_Lightning
-    Name: 雷电加农炮弹箱
+    Name: 雷电加农炮弹盒
     Type: Usable
     Weight: 250
     Flags:
@@ -72910,7 +72910,7 @@ Body:
       getgroupitem(IG_CANNON_BOX_LIGHTNING);
   - Id: 101109
     AegisName: Cannon_Box_Stone
-    Name: 巨石加农炮弹箱
+    Name: 巨石加农炮弹盒
     Type: Usable
     Weight: 250
     Flags:
@@ -72919,7 +72919,7 @@ Body:
       getgroupitem(IG_CANNON_BOX_STONE);
   - Id: 101110
     AegisName: Cannon_Box_Flare
-    Name: 火焰加农炮弹箱
+    Name: 火焰加农炮弹盒
     Type: Usable
     Weight: 250
     Flags:
@@ -72928,7 +72928,7 @@ Body:
       getgroupitem(IG_CANNON_BOX_FLARE);
   - Id: 101111
     AegisName: Cannon_Box_Poisoning
-    Name: 毒加农炮弹箱
+    Name: 剧毒加农炮弹盒
     Type: Usable
     Weight: 250
     Flags:
@@ -72937,7 +72937,7 @@ Body:
       getgroupitem(IG_CANNON_BOX_POISONING);
   - Id: 101112
     AegisName: Kunai_Scroll
-    Name: 飞刀召唤卷轴
+    Name: 飞刀召唤书
     Type: Usable
     Weight: 250
     Flags:
@@ -72946,7 +72946,7 @@ Body:
       getgroupitem(IG_KUNAI_SCROLL);
   - Id: 101113
     AegisName: Kunai_Scroll_Nothing
-    Name: 无形飞刀召唤卷轴
+    Name: 无形飞刀召唤书
     Type: Usable
     Weight: 250
     Flags:
@@ -72955,7 +72955,7 @@ Body:
       getgroupitem(IG_KUNAI_SCROLL_NOTHING);
   - Id: 101114
     AegisName: Kunai_Scroll_Shadow
-    Name: 影子飞刀召唤卷轴
+    Name: 影子飞刀召唤书
     Type: Usable
     Weight: 250
     Flags:
@@ -72964,7 +72964,7 @@ Body:
       getgroupitem(IG_KUNAI_SCROLL_SHADOW);
   - Id: 101115
     AegisName: Kunai_Scroll_Hamaya
-    Name: 破魔飞刀召唤卷轴
+    Name: 破魔飞刀召唤书
     Type: Usable
     Weight: 250
     Flags:
@@ -72973,7 +72973,7 @@ Body:
       getgroupitem(IG_KUNAI_SCROLL_HAMAYA);
   - Id: 101116
     AegisName: Nw_Grenade_Box
-    Name: 投掷型手榴弹箱
+    Name: 投射型手榴弹箱
     Type: Usable
     Weight: 250
     Flags:
@@ -72982,7 +72982,7 @@ Body:
       getgroupitem(IG_NW_GRENADE_BOX);
   - Id: 101117
     AegisName: Soa_Charm_Bundle
-    Name: 灵魂符咒束
+    Name: 渡灵符集装
     Type: Usable
     Weight: 250
     Flags:
@@ -72991,7 +72991,7 @@ Body:
       getgroupitem(IG_SOA_CHARM_BUNDLE);
   - Id: 101118
     AegisName: SS_Charm_Box
-    Name: 漆黑雾影箱
+    Name: 漆黑雾影召唤卷轴
     Type: Usable
     Weight: 250
     Flags:
@@ -73000,7 +73000,7 @@ Body:
       getgroupitem(IG_SS_CHARM_BOX);
   - Id: 101119
     AegisName: SS_Charm_F_Box
-    Name: 红焰雾影箱
+    Name: 红焰雾影召唤卷轴
     Type: Usable
     Weight: 250
     Flags:
@@ -73009,7 +73009,7 @@ Body:
       getgroupitem(IG_SS_CHARM_F_BOX);
   - Id: 101120
     AegisName: SS_Charm_W_Box
-    Name: 冰雪雾影箱
+    Name: 冰雪雾影召唤卷轴
     Type: Usable
     Weight: 250
     Flags:
@@ -73018,7 +73018,7 @@ Body:
       getgroupitem(IG_SS_CHARM_W_BOX);
   - Id: 101121
     AegisName: SS_Charm_G_Box
-    Name: 大地雾影箱
+    Name: 大地雾影召唤卷轴
     Type: Usable
     Weight: 250
     Flags:
@@ -73027,7 +73027,7 @@ Body:
       getgroupitem(IG_SS_CHARM_G_BOX);
   - Id: 101122
     AegisName: SS_Charm_L_Box
-    Name: 朔风雾影箱
+    Name: 朔风雾影召唤卷轴
     Type: Usable
     Weight: 250
     Flags:
