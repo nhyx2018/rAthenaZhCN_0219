@@ -2,7 +2,7 @@
 //= Episode Clear Ticket NPC - Bahiri (official location)
 //= prt_cas 373,77
 //============================================================
-prt_cas,373,77,5	script	巴希里	4_F_AGENT,{
+prt_cas,373,77,5	script	巴希里	4_F_VALKYRIE2,{
 	mes "[巴希里]";
 	mes "我是负责章节通关券的巴希里。";
 	mes "你可以使用对应的跳过礼券，直接完成章节主线。";
