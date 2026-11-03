@@ -89,7 +89,7 @@ einbech,219,80,3	script	反抗军#171_einb	4_M_REBELLION2,{
 		next;
 		mes "[反抗军]";
 		mes "让我把新基地的位置告诉你。";
-		mes "离艾音布罗克火车站不远……有一家叫 <NAVI>[枪弹上的猫]<INFO>einbroch,302,329,0,101,0</INFO></NAVI> 的小酒吧，下一次行动就在那里进行。";
+		mes "离艾音布罗克火车站不远……有一家叫 <NAVI>[喵星人子弹酒吧]<INFO>einbroch,302,329,0,101,0</INFO></NAVI> 的小酒吧，下一次行动就在那里进行。";
 		next;
 		mes "[反抗军]";
 		mes "情报已经送到了！";
@@ -98,7 +98,7 @@ einbech,219,80,3	script	反抗军#171_einb	4_M_REBELLION2,{
 	}
 	mes "[反抗军]";
 	mes "那是艾音布罗克火车站旁的一家小酒吧。";
-	mes "<NAVI>[枪弹上的猫]<INFO>einbroch,302,329,0,101,0</INFO></NAVI>。你不觉得这名字当酒吧名很可爱吗？";
+	mes "<NAVI>[喵星人子弹酒吧]<INFO>einbroch,302,329,0,101,0</INFO></NAVI>。你不觉得这名字当酒吧名很可爱吗？";
 	close;
 
 OnInit:
@@ -117,7 +117,7 @@ rebel_in,68,41,4	script	反抗军#171_rebelin		CLEAR_NPC,{
 		mes "[反抗军]";
 		mes "原来如此……原来那里有个入口……";
 		mes "抱歉，麻烦你了。";
-		mes "我要回枪弹上的猫，稍微休息一下。";
+		mes "我要回喵星人子弹酒吧，稍微休息一下。";
 		next;
 		select("关于迪恩。");
 		mes "[反抗军]";
@@ -583,7 +583,7 @@ ein_fild01,95,146,5	script	卡亚·托斯#171_einf	4_EP17_KAYA,{
 		next;
 		mes "[雷基]";
 		mes "那么，我要去汇报关于帕特经历的调查结果了。";
-		mes "各位，我们回 <NAVI>[枪弹上的猫]<INFO>pub_cat,93,105,0,000,0</INFO></NAVI> 去吧～";
+		mes "各位，我们回 <NAVI>[喵星人子弹酒吧]<INFO>pub_cat,93,105,0,000,0</INFO></NAVI> 去吧～";
 		getexp 600000,600000;
 		completequest 17013;
 		setquest 17014;
@@ -592,7 +592,7 @@ ein_fild01,95,146,5	script	卡亚·托斯#171_einf	4_EP17_KAYA,{
 	}
 	cutin "ep171_kaya01",0;
 	mes "[卡亚]";
-	mes "你去了 <NAVI>[枪弹上的猫]<INFO>pub_cat,93,105,0,000,0</INFO></NAVI> 吗？";
+	mes "你去了 <NAVI>[喵星人子弹酒吧]<INFO>pub_cat,93,105,0,000,0</INFO></NAVI> 吗？";
 	mes "快走吧。还有很多事要做。";
 	close3;
 
@@ -605,7 +605,7 @@ OnInit:
 ein_fild01,94,145,5	script	亚斯#171_einf	4_EP17_AS,{
 	cutin "ep171_as03",2;
 	mes "[亚斯]";
-	mes "我们回 <NAVI>[枪弹上的猫]<INFO>pub_cat,93,105,0,000,0</INFO></NAVI> 吧。";
+	mes "我们回 <NAVI>[喵星人子弹酒吧]<INFO>pub_cat,93,105,0,000,0</INFO></NAVI> 吧。";
 	mes "我觉得我们该快点。";
 	close3;
 
@@ -617,7 +617,7 @@ OnInit:
 ein_fild01,97,144,1	script	雷基#171_einf	4_M_LAZY,{
 	cutin "16lei_03",2;
 	mes "[雷基]";
-	mes "我们去 <NAVI>[枪弹上的猫]<INFO>pub_cat,93,105,0,000,0</INFO></NAVI> 吧。";
+	mes "我们去 <NAVI>[喵星人子弹酒吧]<INFO>pub_cat,93,105,0,000,0</INFO></NAVI> 吧。";
 	mes "我已经饿了。";
 	close3;
 
@@ -3946,7 +3946,7 @@ sp_rudus,184,360,5	script	埃琳娜·沃尔科娃#171_rudus	4_F_ELENA,{
 		cutin "162elena_01",2;
 		mes "[埃琳娜·沃尔科娃]";
 		mes "现在，终于轮到埃琳娜·沃尔科娃大显身手了！";
-		mes "冒险者，回到枪弹上的猫，把这里发生的事告诉泰斯。";
+		mes "冒险者，回到喵星人子弹酒吧，把这里发生的事告诉泰斯。";
 		next;
 		mes "[埃琳娜·沃尔科娃]";
 		mes "无论是你去报告还是别人去，都没有区别。";
@@ -4083,7 +4083,7 @@ sp_rudus,193,284,0	script	小虫#171_rudus	4_M_ROOKIE,{
 		select("怪物出来了。");
 		mes "[小虫]";
 		mes "怪物！？";
-		mes "去向埃琳娜报告吧！然后回到枪弹上的猫，向泰斯报告！";
+		mes "去向埃琳娜报告吧！然后回到喵星人子弹酒吧，向泰斯报告！";
 		next;
 		mes "[小虫]";
 		mes "你觉得怪物能从那个小缝隙里出来吗？";
