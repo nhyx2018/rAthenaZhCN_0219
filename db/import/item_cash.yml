@@ -109,3 +109,16 @@ Body:
       # 成长武器强化券 III
       - Item: Booster_W_Up_3
         Price: 100
+
+  # 跳过券 / 其他
+  - Tab: Other
+    Items:
+      # EP14 跳过礼券
+      - Item: EpisodClear14
+        Price: 100
+      # EP16 跳过礼券
+      - Item: EpisodClear16
+        Price: 100
+      # EP17 跳过礼券
+      - Item: EpisodClear17
+        Price: 100
