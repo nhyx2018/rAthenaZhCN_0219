@@ -56440,7 +56440,7 @@ Body:
       bonus bMatk,BaseLevel/7;
   - Id: 5864
     AegisName: Shadow_Booster
-    Name: Shadow Booster
+    Name: Ó°×ÓÍÆÖúÆ÷
     Type: Armor
     Buy: 10
     Weight: 300
@@ -56462,7 +56462,7 @@ Body:
       bonus bDelayrate,-1;
   - Id: 5865
     AegisName: Filir_Wing_Ears
-    Name: Filir's Wing Ears
+    Name: ·ÉÀïÀÖÖ®ÓðÒí
     Type: Armor
     Weight: 200
     Defense: 1
@@ -56476,7 +56476,7 @@ Body:
       bonus2 bSubRace,RC_Insect,5;
   - Id: 5866
     AegisName: Red_Cherry_Blossom
-    Name: Red Cherry Blossom
+    Name: Ó£»¨Ê÷Ö¦
     Type: Armor
     Weight: 300
     Locations:
@@ -56490,7 +56490,7 @@ Body:
       bonus bUseSPrate,5;
   - Id: 5867
     AegisName: Hat_Of_Drowsy_Cat
-    Name: Sleeping Cat
+    Name: Ë¯Ã¨
     Type: Armor
     Weight: 300
     Defense: 3
@@ -56507,7 +56507,7 @@ Body:
          bonus2 bSubRace,RC_Insect,5;
   - Id: 5868
     AegisName: Bushy_Moustache
-    Name: Bushy Moustache
+    Name: Å¨ÃÜºúÐë
     Type: Armor
     Buy: 20
     Weight: 100

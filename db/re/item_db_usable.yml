@@ -70845,7 +70845,7 @@ Body:
       warp "wolfvill",164,141;
   - Id: 100902
     AegisName: Teleport_Ep17_02
-    Name: 霸肋门德大宅蝴蝶翅膀
+    Name: 巴尔蒙德大宅蝴蝶翅膀
     Type: Usable
     Trade:
       NoDrop: true

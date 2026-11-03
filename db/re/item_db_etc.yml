@@ -90854,7 +90854,7 @@ Body:
       NoAuction: true
   - Id: 1000099
     AegisName: GARDENERS_COOKIE
-    Name: Gardener's Cookie
+    Name: 园丁的饼干
     Type: Etc
     Weight: 10
     Trade:
@@ -90909,7 +90909,7 @@ Body:
       NoAuction: true
   - Id: 1000103
     AegisName: BarMealTicket
-    Name: 霸肋门德餐券
+    Name: 巴尔蒙德餐券
     Type: Etc
     Flags:
       BuyingStore: true
@@ -91477,12 +91477,12 @@ Body:
     Weight: 100
   - Id: 1000225
     AegisName: GAMJammingChip
-    Name: 土豆晶片
+    Name: 洋芋芯片
     Type: Etc
     Weight: 10
   - Id: 1000226
     AegisName: Broken_Dollcore
-    Name: Core of a Broken Doll
+    Name: 破损的玩偶核心
     Type: Etc
     Trade:
       NoDrop: true
@@ -91511,7 +91511,7 @@ Body:
       NoAuction: true
   - Id: 1000232
     AegisName: Autodoll_Communicator
-    Name: 机器人通讯晶片
+    Name: 机器人通讯芯片
     Type: Etc
     Trade:
       NoDrop: true
@@ -96649,7 +96649,7 @@ Body:
       NoAuction: true
   - Id: 1001376
     AegisName: Varmundt_Cotton_Doll
-    Name: 霸肋门德玩偶
+    Name: 巴尔蒙德玩偶
     Type: Etc
     Weight: 10
   - Id: 1001377
