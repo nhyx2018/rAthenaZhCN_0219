@@ -7998,7 +7998,7 @@ sp_cor,246,97,3	script	农场工人#rm171_1	1_M_03,{
 		mes "谢谢你！我们农场种葡萄、四季豆和南瓜，它们各自的需求都不同。";
 		next;
 		setarray .@r[0], rand(3), rand(3), rand(3);
-		setarray .@string$[0],"catch aphids","spread fertilizer","pull weeds";
+		setarray .@string$[0],"捉蚜虫","施肥","除草";
 		setquest 16367+.@r[0];
 		setquest 16370+.@r[1];
 		setquest 16373+.@r[2];
@@ -8048,7 +8048,7 @@ sp_cor,246,97,3	script	农场工人#rm171_1	1_M_03,{
 			setquest 16365;
 			close;
 		}
-		setarray .@string$[0],"catch aphids","spread fertilizer","pull weeds","You took good care of them.";
+		setarray .@string$[0],"捉蚜虫","施肥","除草","你好好照料了它们。";
 		for ( .@i = 0; .@i < 3; .@i++ ) {
 			.@base = 16367 + (.@i * 3);
 			for ( .@r[.@i] = 0; .@r[.@i] < 3; .@r[.@i]++ ) {
@@ -8100,7 +8100,7 @@ sp_cor,246,97,3	script	农场工人#rm171_1	1_M_03,{
 		mes "谢谢你。我们种了葡萄、四季豆和南瓜，我记得告诉过你，它们各自的需求都不同。";
 		next;
 		setarray .@r[0], rand(3), rand(3), rand(3);
-		setarray .@string$[0],"catch aphids","spread fertilizer","pull weeds";
+		setarray .@string$[0],"捉蚜虫","施肥","除草";
 		setquest 16367+.@r[0];
 		setquest 16370+.@r[1];
 		setquest 16373+.@r[2];
