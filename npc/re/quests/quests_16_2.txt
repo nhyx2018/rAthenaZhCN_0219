@@ -7153,6 +7153,30 @@ OnInit:
 
 
 // Old Lady Room - Inside
+rebel_in,156,84,0	script	#dien_room_visibility	HIDDEN_WARP_NPC,{
+	end;
+
+OnInit:
+	cloakonnpc "科特尼斯#162gmbs";
+	cloakonnpc "里德什#162gmbs";
+	cloakonnpc "狄恩#162gmbs";
+	cloakonnpc "近卫队长拉西斯#2";
+	end;
+
+OnTouch:
+	if (terra_gloria_main >= 25) {
+		cloakonnpc "科特尼斯#162gmbs";
+		cloakonnpc "里德什#162gmbs";
+		cloakonnpc "狄恩#162gmbs";
+		cloakonnpc "近卫队长拉西斯#2";
+	} else {
+		cloakoffnpc "科特尼斯#162gmbs";
+		cloakoffnpc "里德什#162gmbs";
+		cloakoffnpc "狄恩#162gmbs";
+		cloakoffnpc "近卫队长拉西斯#2";
+	}
+	end;
+}
 rebel_in,166,88,3	script	科特尼斯#162gmbs	4_F_COATNEIS,{
 	if (terra_gloria_lady_part < 3) {
 		cutin "ep162_ctn01.bmp",2;
