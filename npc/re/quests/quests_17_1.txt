@@ -895,7 +895,7 @@ lighthalzen,55,278,3	script	雷肯贝尔守卫奥斯卡#171_light	4_M_LGTGUARD,{
 		mes "先拿下'雷根修芦'，再查清楚吧。";
 		mes "准备好了吗？";
 		next;
-		.@md_name$ = "雷根修芦研究所";
+		.@md_name$ = "Regenschirm";
 		.@party_id = getcharid(1);
 		.@party_name$ = getpartyname(.@party_id);
 		if (!.@party_id) {

@@ -311,7 +311,7 @@ Body:
       X: 30
       Y: 10
   - Id: 39
-    Name: 雷根修芦研究所
+    Name: Regenschirm
     TimeLimit: 7200
     Enter:
       Map: 1@rgsr
