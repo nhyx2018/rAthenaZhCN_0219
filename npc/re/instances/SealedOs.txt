@@ -58,6 +58,11 @@ OnEvent02:
 	disablenpc instance_npcname("莉德希#171_os_1");
 	disablenpc instance_npcname("柯特内斯#171_os_1");
 	disablenpc instance_npcname("#171_os_warp_0");
+	if ('lock >= 3) {
+		'seal_os = 3;
+		donpcevent instance_npcname("#171_sealedos_control") + "::OnEvent03";
+		end;
+	}
 	enablenpc instance_npcname("粗电线#171_os_0");
 	enablenpc instance_npcname("粗电线#171_os_1");
 	enablenpc instance_npcname("粗电线#171_os_2");
@@ -251,7 +256,7 @@ OnTouch:
 		mapannounce 'map$,"莉德希：装置还没关掉。请你上去帮我看看。",bc_map,0xFF0000;
 	else {
 		mapannounce 'map$,"莉德希：太好了！路通了。我们沿着铁轨前进吧！",bc_map,0xFF0000;
-		if ('seal_os < 3) {
+		if ('seal_os == 2) {
 			'seal_os = 3;
 			donpcevent instance_npcname("#171_sealedos_control") + "::OnEvent03";
 		}
