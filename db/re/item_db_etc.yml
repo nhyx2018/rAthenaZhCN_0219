@@ -36947,182 +36947,182 @@ Body:
     Weight: 10
   - Id: 25670
     AegisName: EP17_1_EVT03
-    Name: Modification Module (Defense)
+    Name: 改造模组(DEF)
     Type: Etc
     Weight: 10
   - Id: 25671
     AegisName: EP17_1_EVT04
-    Name: Modification Module (Magic Defense)
+    Name: 改造模组(MDEF)
     Type: Etc
     Weight: 10
   - Id: 25672
     AegisName: EP17_1_EVT05
-    Name: Modification Module (Vit)
+    Name: 改造模组(VIT)
     Type: Etc
     Weight: 10
   - Id: 25673
     AegisName: EP17_1_EVT06
-    Name: Modification Module (Luk)
+    Name: 改造模组(LUK)
     Type: Etc
     Weight: 10
   - Id: 25674
     AegisName: EP17_1_EVT07
-    Name: Modification Module (Str)
+    Name: 改造模组(STR)
     Type: Etc
     Weight: 10
   - Id: 25675
     AegisName: EP17_1_EVT08
-    Name: Modification Module (Agi)
+    Name: 改造模组(AGI)
     Type: Etc
     Weight: 10
   - Id: 25676
     AegisName: EP17_1_EVT09
-    Name: Modification Module (Int)
+    Name: 改造模组(INT)
     Type: Etc
     Weight: 10
   - Id: 25677
     AegisName: EP17_1_EVT10
-    Name: Modification Module (Dex)
+    Name: 改造模组(DEX)
     Type: Etc
     Weight: 10
   - Id: 25678
     AegisName: EP17_1_EVT11
-    Name: Modification Module (HP recovery)
+    Name: 改造模组(HealHP)
     Type: Etc
     Weight: 10
   - Id: 25679
     AegisName: EP17_1_EVT12
-    Name: Modification Module (SP recovery)
+    Name: 改造模组(HealSP)
     Type: Etc
     Weight: 10
   - Id: 25680
     AegisName: EP17_1_EVT13
-    Name: Modification Module (Spell)
+    Name: 改造模组(魔力)
     Type: Etc
     Weight: 10
   - Id: 25681
     AegisName: EP17_1_EVT14
-    Name: Modification Module (Attack Speed)
+    Name: 改造模组(攻击后延迟)
     Type: Etc
     Weight: 10
   - Id: 25682
     AegisName: EP17_1_EVT15
-    Name: Modification Module (Fatal)
+    Name: 改造模组(致命)
     Type: Etc
     Weight: 10
   - Id: 25683
     AegisName: EP17_1_EVT16
-    Name: Modification Module (Expert Archer)
+    Name: 改造模组(名弓)
     Type: Etc
     Weight: 10
   - Id: 25684
     AegisName: EP17_1_EVT17
-    Name: Modification Module (Vital)
+    Name: 改造模组(MHP)
     Type: Etc
     Weight: 10
   - Id: 25685
     AegisName: EP17_1_EVT18
-    Name: Modification Module (Mental)
+    Name: 改造模组(MSP)
     Type: Etc
     Weight: 10
   - Id: 25686
     AegisName: EP17_1_EVT19
-    Name: Modification Module (Heal)
+    Name: 改造模组(Heal)
     Type: Etc
     Weight: 10
   - Id: 25687
     AegisName: EP17_1_EVT20
-    Name: Modification Module (Power)
+    Name: 改造模组(ATK)
     Type: Etc
     Weight: 10
   - Id: 25688
     AegisName: EP17_1_EVT21
-    Name: Modification Module (Magic)
+    Name: 改造模组(MATK)
     Type: Etc
     Weight: 10
   - Id: 25689
     AegisName: EP17_1_EVT22
-    Name: Modification Module (Shooter)
+    Name: 改造模组(Archer)
     Type: Etc
     Weight: 10
   - Id: 25690
     AegisName: EP17_1_EVT23
-    Name: Modification Module (Fast)
+    Name: 改造模组(ASPD)
     Type: Etc
     Weight: 10
   - Id: 25691
     AegisName: EP17_1_EVT24
-    Name: Modification Module (Caster)
+    Name: 改造模组(Cast)
     Type: Etc
     Weight: 10
   - Id: 25692
     AegisName: EP17_1_EVT25
-    Name: Modification Module (Critical)
+    Name: 改造模组(CRI)
     Type: Etc
     Weight: 10
   - Id: 25693
     AegisName: EP17_1_EVT26
-    Name: Modification Module (Delay after skill)
+    Name: 改造模组(Delay)
     Type: Etc
     Weight: 10
   - Id: 25694
     AegisName: EP17_1_EVT27
-    Name: Modification Module (Fixed Casting)
+    Name: 改造模组(Fix)
     Type: Etc
     Weight: 10
   - Id: 25695
     AegisName: EP17_1_EVT28
-    Name: Modification Module (Above All)
+    Name: 改造模组(Above)
     Type: Etc
     Weight: 10
   - Id: 25696
     AegisName: EP17_1_EVT29
-    Name: Modification Module (Drain Life)
+    Name: 改造模组(Life)
     Type: Etc
     Weight: 10
   - Id: 25697
     AegisName: EP17_1_EVT30
-    Name: Modification Module (Drain Soul)
+    Name: 改造模组(Soul)
     Type: Etc
     Weight: 10
   - Id: 25698
     AegisName: EP17_1_EVT31
-    Name: Modification Module (Magic Healing)
+    Name: 改造模组(M Heal)
     Type: Etc
     Weight: 10
   - Id: 25699
     AegisName: EP17_1_EVT32
-    Name: Modification Module (Magic Soul)
+    Name: 改造模组(M Soul)
     Type: Etc
     Weight: 10
   - Id: 25700
     AegisName: EP17_1_EVT33
-    Name: Modification Module (Unlimited Vital)
+    Name: 特殊改造模组(L VIT)
     Type: Etc
     Weight: 10
   - Id: 25701
     AegisName: EP17_1_EVT34
-    Name: Modification Module (Spell Buster)
+    Name: 特殊改造模组(L INT)
     Type: Etc
     Weight: 10
   - Id: 25702
     AegisName: EP17_1_EVT35
-    Name: Modification Module (Firing Shot)
+    Name: 特殊改造模组(L DEX)
     Type: Etc
     Weight: 10
   - Id: 25703
     AegisName: EP17_1_EVT36
-    Name: Modification Module (Overpower)
+    Name: 特殊改造模组(L STR)
     Type: Etc
     Weight: 10
   - Id: 25704
     AegisName: EP17_1_EVT37
-    Name: Modification Module (Fatal Flash)
+    Name: 特殊改造模组(L AGI)
     Type: Etc
     Weight: 10
   - Id: 25705
     AegisName: EP17_1_EVT38
-    Name: Modification Module (Lucky Strike)
+    Name: 特殊改造模组(L LUK)
     Type: Etc
     Weight: 10
   - Id: 25706

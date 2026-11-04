@@ -18310,7 +18310,7 @@ Body:
       }
   - Id: 1862
     AegisName: Burning_Knuckle_OS
-    Name: 指环
+    Name: 燃烧指虎-OS
     Type: Weapon
     SubType: Knuckle
     Buy: 20
@@ -68382,7 +68382,7 @@ Body:
       }
   - Id: 13493
     AegisName: Cannon_Rapier_OS
-    Name: Cannon Rapier-OS
+    Name: 加农刺剑-OS
     Type: Weapon
     SubType: 1hSword
     Buy: 20
@@ -74814,7 +74814,7 @@ Body:
          bonus bFixedCastrate,-50;
   - Id: 15376
     AegisName: Illusion_Armor_A
-    Name: 铠甲
+    Name: 幻象机甲A型
     Type: Armor
     Weight: 1000
     Defense: 105
@@ -74832,7 +74832,7 @@ Body:
       }
   - Id: 15377
     AegisName: Illusion_Armor_B
-    Name: 铠甲
+    Name: 幻象机甲B型
     Type: Armor
     Weight: 1000
     Defense: 105
@@ -81642,7 +81642,7 @@ Body:
       }
   - Id: 16088
     AegisName: Saphir_Hall_OS
-    Name: 钝器
+    Name: 蓝宝石之锤-OS
     Type: Weapon
     SubType: Mace
     Buy: 20
@@ -81675,7 +81675,7 @@ Body:
       }
   - Id: 16089
     AegisName: Ultio_Spes_OS
-    Name: 钝器
+    Name: 乌尔帝奥流星锤-OS
     Type: Weapon
     SubType: Mace
     Buy: 20
@@ -83642,7 +83642,7 @@ Body:
       }
   - Id: 18178
     AegisName: Virtual_Bow_OS
-    Name: Virtual Bow-OS
+    Name: 虚幻天弓-OS
     Type: Weapon
     SubType: Bow
     Buy: 20
@@ -115209,7 +115209,7 @@ Body:
          bonus bFlee2,25;
   - Id: 20933
     AegisName: Illusion_Engine_A
-    Name: 披肩
+    Name: 幻象推进翼A型
     Type: Armor
     Weight: 900
     Defense: 50
@@ -115227,7 +115227,7 @@ Body:
       }
   - Id: 20934
     AegisName: Illusion_Engine_B
-    Name: 披肩
+    Name: 幻象推进翼B型
     Type: Armor
     Weight: 900
     Defense: 50
@@ -117308,7 +117308,7 @@ Body:
       }
   - Id: 21047
     AegisName: Beam_Claymore_OS
-    Name: Beam Claymor-OS
+    Name: 绿光巨剑-OS
     Type: Weapon
     SubType: 2hSword
     Buy: 20
@@ -121630,7 +121630,7 @@ Body:
       }
   - Id: 22196
     AegisName: Illusion_Leg_A
-    Name: 鞋子
+    Name: 幻象战靴A型
     Type: Armor
     Buy: 20
     Weight: 500
@@ -121649,7 +121649,7 @@ Body:
       }
   - Id: 22197
     AegisName: Illusion_Leg_B
-    Name: 鞋子
+    Name: 幻象战靴B型
     Type: Armor
     Buy: 20
     Weight: 500
@@ -139669,7 +139669,7 @@ Body:
       }
   - Id: 26151
     AegisName: Rutilus_Stick_OS
-    Name: Rutilus Stick-OS
+    Name: 红魔鬼法杖-OS
     Type: Weapon
     SubType: Staff
     Buy: 20
@@ -141579,7 +141579,7 @@ Body:
       }
   - Id: 28038
     AegisName: Meuchler_OS
-    Name: 拳刃
+    Name: 绿光拳刃-OS
     Type: Weapon
     SubType: Katar
     Buy: 20
@@ -142642,7 +142642,7 @@ Body:
       }
   - Id: 28136
     AegisName: Blasti_OS
-    Name: 斧头
+    Name: 光明战斧-OS
     Type: Weapon
     SubType: 2hAxe
     Buy: 20
@@ -148742,7 +148742,7 @@ Body:
       }
   - Id: 28629
     AegisName: Circuit_Board_OS
-    Name: Circuit Board-OS
+    Name: 杀人电路板-OS
     Type: Weapon
     SubType: Book
     Buy: 20
@@ -150420,7 +150420,7 @@ Body:
          bonus2 bSkillAtk,"NJ_KIRIKAGE",10;
   - Id: 28755
     AegisName: Kuroiro_OS
-    Name: 短剑
+    Name: 暗黑白珠短剑-OS
     Type: Weapon
     SubType: Dagger
     Buy: 20
@@ -161697,7 +161697,7 @@ Body:
       }
   - Id: 32019
     AegisName: Boost_Lance_OS
-    Name: Boost Lance-OS
+    Name: 推进器长枪-OS
     Type: Weapon
     SubType: 1hSpear
     Buy: 20
@@ -162533,7 +162533,7 @@ Body:
       bonus2 bSubEle,Ele_Fire,5;
   - Id: 32207
     AegisName: Illusion_B_R
-    Name: 饰品
+    Name: 幻象助推器R
     Type: Armor
     Buy: 20
     Weight: 100
@@ -162546,7 +162546,7 @@ Body:
       bonus bAtkRate,5;
   - Id: 32208
     AegisName: Illusion_B_L
-    Name: 饰品
+    Name: 幻象助推器L
     Type: Armor
     Buy: 20
     Weight: 100
@@ -162559,7 +162559,7 @@ Body:
       bonus bAtkRate,5;
   - Id: 32209
     AegisName: Illusion_BC_R
-    Name: 饰品
+    Name: 幻象战斗晶片R
     Type: Armor
     Buy: 20
     Weight: 100
@@ -162572,7 +162572,7 @@ Body:
       bonus bMatkRate,5;
   - Id: 32210
     AegisName: Illusion_BC_L
-    Name: 饰品
+    Name: 幻象战斗晶片L
     Type: Armor
     Buy: 20
     Weight: 100
