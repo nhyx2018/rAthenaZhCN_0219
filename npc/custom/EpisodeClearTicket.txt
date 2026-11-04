@@ -11,6 +11,14 @@ prt_cas,373,77,5	script	巴希里	4_F_VALKYRIE2,{
 	mes "使用后不会获得该章节的任务奖励。";
 	mes "请选择要跳过的章节。";
 	next;
+	// 修复旧版EP16跳过券未设置EP16.2支线状态的角色
+	if (terra_gloria_main >= 25 && terra_gloria_lady_part == 0) {
+		terra_gloria_lady_part = 13;
+		mes "[巴希里]";
+		mes "检测到 EP16.2 支线状态缺失，已为你补齐。";
+		close;
+	}
+
 	switch(select("EP14","EP16","EP17","取消")) {
 	case 1:
 		mes "[巴希里]";
@@ -86,6 +94,7 @@ prt_cas,373,77,5	script	巴希里	4_F_VALKYRIE2,{
 			// 修复旧版跳过券只设置 PRT_2QUE 的存档
 			if (PRT_2QUE == 26 && terra_gloria_main < 24) {
 				terra_gloria_main = 24;
+			terra_gloria_lady_part = 13;
 				mes "[巴希里]";
 				mes "检测到你之前使用过 EP16 跳过券。";
 				mes "已补发 EP16.2 主线进度，请去找菲洛彭特斯领取奖励。";
@@ -101,6 +110,7 @@ prt_cas,373,77,5	script	巴希里	4_F_VALKYRIE2,{
 			delitem 1000282,1;
 			PRT_2QUE = 26;
 			terra_gloria_main = 24;
+			terra_gloria_lady_part = 13;
 			mes "[巴希里]";
 			mes "已为你完成 EP16.2 主线。";
 			mes "请去找菲洛彭特斯领取奖励。";

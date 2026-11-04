@@ -5003,13 +5003,7 @@ rebel_in,122,71,3	script	反叛者首领鲁柏#162gmb	4_M_RUPERT,{
 		mes "他们会告诉你怎么离开。";
 		close;
 	}
-	if (terra_gloria_main >= 25) {
-		mes "[鲁柏]";
-		mes "现在不是谈这件事的时候。";
-		mes "你先去忙自己的事吧。";
-		close;
-	}
-	if (terra_gloria_lady_part == 0 && terra_gloria_main < 25) {
+	if (terra_gloria_lady_part == 0) {
 		mes "[鲁柏]";
 		mes "你是谁？";
 		next;
@@ -5503,7 +5497,7 @@ rebel_in,122,71,3	script	反叛者首领鲁柏#162gmb	4_M_RUPERT,{
 	close;
 
 OnInit:
-	questinfo( QTYPE_QUEST, QMARK_NONE, "terra_gloria_main >= 16 && terra_gloria_main < 25 && terra_gloria_lady_part == 0" );
+	questinfo( QTYPE_QUEST, QMARK_NONE, "terra_gloria_main >= 16 && terra_gloria_lady_part == 0" );
 	end;
 }
 
@@ -7153,30 +7147,6 @@ OnInit:
 
 
 // Old Lady Room - Inside
-rebel_in,156,84,0	script	#dien_room_visibility	HIDDEN_WARP_NPC,{
-	end;
-
-OnInit:
-	cloakonnpc "科特尼斯#162gmbs";
-	cloakonnpc "里德什#162gmbs";
-	cloakonnpc "狄恩#162gmbs";
-	cloakonnpc "近卫队长拉西斯#2";
-	end;
-
-OnTouch:
-	if (terra_gloria_main >= 25) {
-		cloakonnpc "科特尼斯#162gmbs";
-		cloakonnpc "里德什#162gmbs";
-		cloakonnpc "狄恩#162gmbs";
-		cloakonnpc "近卫队长拉西斯#2";
-	} else {
-		cloakoffnpc "科特尼斯#162gmbs";
-		cloakoffnpc "里德什#162gmbs";
-		cloakoffnpc "狄恩#162gmbs";
-		cloakoffnpc "近卫队长拉西斯#2";
-	}
-	end;
-}
 rebel_in,166,88,3	script	科特尼斯#162gmbs	4_F_COATNEIS,{
 	if (terra_gloria_lady_part < 3) {
 		cutin "ep162_ctn01.bmp",2;
