@@ -18820,7 +18820,7 @@ void clif_instance_create( int32 instance_id, size_t num ){
 		return;
 
 	WBUFW(buf,0) = 0x2cb;
-	safestrncpy(WBUFCP(buf,2), db->name.c_str(), INSTANCE_NAME_LENGTH);
+	{ std::string display = instance_get_display_name(db); safestrncpy(WBUFCP(buf,2), display.c_str(), INSTANCE_NAME_LENGTH); }
 	WBUFW( buf, 63 ) = static_cast<int16>( num );
 
 	clif_send(buf,packet_len(0x2cb),sd,target);
@@ -18869,7 +18869,7 @@ void clif_instance_status(int32 instance_id, uint32 limit1, uint32 limit2)
 		return;
 
 	WBUFW(buf,0) = 0x2cd;
-	safestrncpy(WBUFCP(buf,2), db->name.c_str(), INSTANCE_NAME_LENGTH);
+	{ std::string display = instance_get_display_name(db); safestrncpy(WBUFCP(buf,2), display.c_str(), INSTANCE_NAME_LENGTH); }
 	WBUFL(buf,63) = limit1;
 	WBUFL(buf,67) = limit2;
 	clif_send(buf,packet_len(0x2cd),sd,target);
