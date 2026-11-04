@@ -240,6 +240,7 @@ S_NoParty:
 
 S_Enter:
 	.@md_name$ = "Bangungot Hospital 2F";
+	.@md_display$ = instance_getdisplayname(.@md_name$);
 	if (getarg(1,1) == true) {
 		if (is_party_leader() == true)
 			.@menu$ = "准备进入二楼。";
@@ -307,7 +308,7 @@ S_Enter:
 			mes "一起过来。";
 			break;
 		case IE_OK:
-			mapannounce "ma_dun01", getpartyname(getcharid(1)) + "队伍的" + strcharinfo(0) + "成员进入了" + .@md_name$ + ".",bc_map,"0x00ff99";
+			mapannounce "ma_dun01", getpartyname(getcharid(1)) + "队伍的" + strcharinfo(0) + "成员进入了" + .@md_display$ + ".",bc_map,"0x00ff99";
 			if (getarg(0) == true) {
 				if (checkquest(9223) > -1) {
 					completequest 9223;

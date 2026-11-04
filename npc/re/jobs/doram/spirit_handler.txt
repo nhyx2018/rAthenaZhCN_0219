@@ -1099,6 +1099,7 @@ pay_fild09,108,346,3	script	可疑的光#JQ_SH	4_ENERGY_WHITE,{
 	}
 	if (isbegin_quest(11782) == 1) {
 		.@md_name$ = "Deep Forest";
+		.@md_display$ = instance_getdisplayname(.@md_name$);
 
 		mes "- 铁虎消失的地方出现了可疑的涟漪。 -";
 		next;
@@ -1124,7 +1125,7 @@ pay_fild09,108,346,3	script	可疑的光#JQ_SH	4_ENERGY_WHITE,{
 				case IE_NOMEMBER:
 					end;
 				case IE_OK:
-					mapannounce "pay_fild09", "" + strcharinfo(0) + "所属队伍" + getpartyname( getcharid(1) ) + "正在进入" + .@md_name$ + ".", bc_map, 0xFF99;
+					mapannounce "pay_fild09", "" + strcharinfo(0) + "所属队伍" + getpartyname( getcharid(1) ) + "正在进入" + .@md_display$ + ".", bc_map, 0xFF99;
 					// warp "1@exsh",90,35;
 					end;
 				}

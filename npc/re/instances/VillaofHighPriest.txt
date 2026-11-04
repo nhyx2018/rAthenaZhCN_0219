@@ -11,6 +11,7 @@
 oz_dun01,219,117,5	script(CLOAKED)	Ira#c12_01	4_M_BRZ_JACI,{
 	if (ep18_main == 54) {
 		.@md_name$ = "High Priest's Villa";
+		.@md_display$ = instance_getdisplayname(.@md_name$);
 
 		mes "[艾拉]";
 		mes "别墅的入口吗？钥匙就在入口处。";
@@ -21,7 +22,7 @@ oz_dun01,219,117,5	script(CLOAKED)	Ira#c12_01	4_M_BRZ_JACI,{
 		mes "还有……我们不知道里面会发生什么。";
 		mes "如果有同伴，建议结伴同行。";
 		next;
-		switch( select( "申请'" + .@md_name$ + "'.", "Enter '" + .@md_name$ + "'." ) ) {
+		switch( select( "申请'" + .@md_display$ + "'.", "Enter '" + .@md_display$ + "'." ) ) {
 		case 1:
 			if (getcharid(1) == 0 || is_party_leader() == false) {
 				mes "^4d4dff 这是追悼活动。";
@@ -33,7 +34,7 @@ oz_dun01,219,117,5	script(CLOAKED)	Ira#c12_01	4_M_BRZ_JACI,{
 			if (instance_create(.@md_name$) < 0) {
 				mes "队伍：" + getpartyname(getcharid(1)) + "";
 				mes "队长：" + strcharinfo(0) + "";
-				mes "^0000ff" + .@md_name$ + "^000000- 未知错误";
+				mes "^0000ff" + .@md_display$ + "^000000- 未知错误";
 				close;
 			}
 			close;
@@ -52,7 +53,7 @@ oz_dun01,219,117,5	script(CLOAKED)	Ira#c12_01	4_M_BRZ_JACI,{
 				mes "^ff0000只有队伍成员才能进入记忆副本。^000000";
 				close;
 			case IE_OK:
-				mapannounce "oz_dun01", "" + strcharinfo(0) + "来自" + getpartyname( getcharid(1) ) + "的队伍进入了" + .@md_name$ + ".", bc_map, 0xFF99;
+				mapannounce "oz_dun01", "" + strcharinfo(0) + "来自" + getpartyname( getcharid(1) ) + "的队伍进入了" + .@md_display$ + ".", bc_map, 0xFF99;
 				// warp "1@adv",123,17;
 				end;
 			}

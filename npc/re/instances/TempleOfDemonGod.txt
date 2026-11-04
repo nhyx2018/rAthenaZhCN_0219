@@ -63,7 +63,7 @@ moro_cav,41,73,4	script	守护者尼德霍格#epeom01	4_F_NYDHOG,{
 		if (instance_create("Temple of the Demon God") < 1) {	// todo, custom text
 			mes "队伍名称：" + getpartyname(.@party_id);
 			mes "队长：" + strcharinfo(0);
-			mes "^0000ff" + .@md_name$ + "^000000 - 预约失败。";
+			mes "^0000ff" + .@md_display$ + "^000000 - 预约失败。";
 			close;
 		}
 		if (isbegin_quest(7596) == 1)

@@ -42,17 +42,19 @@ ein_fild04,275,342,5	script	突击队指挥官#	4_M_REBELLION3,{
 	mes "[突击队指挥官]";
 	mes "等作战准备完毕，你就和我一起进去。";
 	next;
-	if (terra_gloria_main == 19)
+	if (terra_gloria_main == 19) {
 		.@md_name$ = "Heart Hunter War Base 1";
-	else
+	} else {
 		.@md_name$ = "Heart Hunter War Base 2";
+	}
+	.@md_display$ = instance_getdisplayname(.@md_name$);
 	switch( instance_enter(.@md_name$) ) {
 	case IE_NOMEMBER:
 		mes "^0000ff看来没有所属部队（队伍）的冒险者无法进入。^000000";
 		close;
 	case IE_NOINSTANCE:
 		mes "[突击队指挥官]";
-		mes "作战区域是" + .@md_name$ + "请确认作战是否已正确应用。";
+		mes "作战区域是" + .@md_display$ + "请确认作战是否已正确应用。";
 		next;
 		mes "^ff0000未通关心猎者战争基地时，禁止前往心猎者战争基地外围。此外，已经通关的心猎者战争基地也无法进入。请确认你的作战进度^000000";
 		next;
@@ -64,7 +66,7 @@ ein_fild04,275,342,5	script	突击队指挥官#	4_M_REBELLION3,{
 		mes "发生了未知错误。";
 		close;
 	case IE_OK:
-		mapannounce "ein_fild04", "" + strcharinfo(0) + "的队伍，" + getpartyname( getcharid(1) ) + "，正在进入" + .@md_name$ + "。", bc_map, 0xFF99;
+		mapannounce "ein_fild04", "" + strcharinfo(0) + "的队伍，" + getpartyname( getcharid(1) ) + "，正在进入" + .@md_display$ + "。", bc_map, 0xFF99;
 		setquest 12375;// Base maintenance
 		// if (terra_gloria_main == 20)
 		// 	warp "1@swat",35,65;

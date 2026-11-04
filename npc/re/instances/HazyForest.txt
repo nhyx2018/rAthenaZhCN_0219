@@ -21,6 +21,7 @@ bif_fild01,158,340,5	script	拉皮内士兵#mist	447,{
 
 	set .@party_id,getcharid(1);
 	set .@md_name$,"Mistwood Maze";
+	.@md_display$ = instance_getdisplayname(.@md_name$);
 
 	mes "[拉皮内士兵]";
 	mes "你要进入森林吗？";

@@ -67,6 +67,7 @@ ba_maison,238,44,5	script	哈拉德#jh_ba1	4_EP17_BASIC_B,{
 			close3;
 		}
 		.@md_name$ = "Water Garden Hard";
+		.@md_display$ = instance_getdisplayname(.@md_name$);
 		.@quest_given = 16438;
 		.@other_quest = 16437;
 		break;
@@ -85,10 +86,12 @@ ba_maison,238,44,5	script	哈拉德#jh_ba1	4_EP17_BASIC_B,{
 			mes "进入 ^CC0000" + .@instance_name$ + "^000000。";
 			next;
 			cutin "",255;
-			if (select( "^0000CD进入水之花园", "进入水之花园（困难）^000000" ) == 1)
-				.@md_name$ = "水之花园";
-			else
+			if (select( "^0000CD进入水之花园", "进入水之花园（困难）^000000" ) == 1) {
+				.@md_name$ = "Water Garden";
+			} else {
 				.@md_name$ = "Water Garden Hard";
+			}
+			.@md_display$ = instance_getdisplayname(.@md_name$);
 		}
 		if (instance_enter(.@md_name$) != IE_OK) {
 			cutin "ep172_beta",2;
@@ -100,18 +103,18 @@ ba_maison,238,44,5	script	哈拉德#jh_ba1	4_EP17_BASIC_B,{
 			end;
 		}
 		setquest 16439;
-		mapannounce "ba_maison", "" + strcharinfo(0) + "，所属队伍" + getpartyname( getcharid(1) ) + "，正在进入" + .@md_name$ + "。", bc_map, "0x00FF99";
+		mapannounce "ba_maison", "" + strcharinfo(0) + "，所属队伍" + getpartyname( getcharid(1) ) + "，正在进入" + .@md_display$ + "。", bc_map, "0x00FF99";
 		end;
 	}
 	if (instance_create(.@md_name$) == -3)
-		dispbottom "副本“" + .@md_name$ + "”预约失败：已有其他副本正在进行。";
+		dispbottom "副本“" + .@md_display$ + "”预约失败：已有其他副本正在进行。";
 	if (isbegin_quest(.@quest_given) > 0)
 		erasequest .@quest_given;
 	if (isbegin_quest(.@other_quest) > 0)
 		erasequest .@other_quest;
 	setquest .@quest_given;
 	mes "[哈拉德]";
-	mes "当" + .@md_name$ + "MD 开放后，请再次与我对话，并选择 ^0000CD进入" + .@md_name$ + "^000000。";
+	mes "当" + .@md_display$ + "MD 开放后，请再次与我对话，并选择 ^0000CD进入" + .@md_display$ + "^000000。";
 	close;
 }
 

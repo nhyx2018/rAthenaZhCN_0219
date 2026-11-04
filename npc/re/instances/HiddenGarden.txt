@@ -46,6 +46,7 @@ ba_maison,120,321,5	script(CLOAKED)	#he_admin1	MD_ASSISTANT,{
 	mes "若您是遗失权限的管理员，可通过身份验证程序重新签发权限。";
 	next;
 	.@md_name$ = "Hidden Flower Garden";
+	.@md_display$ = instance_getdisplayname(.@md_name$);
 
 	if (instance_live_info(ILI_NAME,instance_id(IM_PARTY)) == .@md_name$)
 		.@menu$ = "^FF0000进入^000000";
@@ -57,7 +58,7 @@ ba_maison,120,321,5	script(CLOAKED)	#he_admin1	MD_ASSISTANT,{
 		close;
 	case 2:
 		if (instance_create(.@md_name$) == -3)
-			dispbottom "副本“" + .@md_name$ + "”预约失败：已有其他副本正在进行。";
+			dispbottom "副本“" + .@md_display$ + "”预约失败：已有其他副本正在进行。";
 		end;
 	case 3:
 		if (!is_party_leader()) {	// shouldn't happen
@@ -70,7 +71,7 @@ ba_maison,120,321,5	script(CLOAKED)	#he_admin1	MD_ASSISTANT,{
 			mes "只有在队长完成全部许可后，您才能移动至该处。请重新确认您被授予的通行区域。";
 			close;
 		}
-		mapannounce "ba_maison", "" + strcharinfo(0) + "，所属队伍：" + .@party_name$ + "，正在进入" + .@md_name$ + "。", bc_map, "0x00FF99";
+		mapannounce "ba_maison", "" + strcharinfo(0) + "，所属队伍：" + .@party_name$ + "，正在进入" + .@md_display$ + "。", bc_map, "0x00FF99";
 		end;
 	}
 	end;
@@ -115,9 +116,11 @@ ba_maison,120,321,5	script(CLOAKED)	#he_admin2	MD_ASSISTANT,{
 			close;
 		case 2:
 			.@md_name$ = "Security Area 1";
+			.@md_display$ = instance_getdisplayname(.@md_name$);
 			break;
 		case 3:
 			.@md_name$ = "Security Area 2";
+			.@md_display$ = instance_getdisplayname(.@md_name$);
 			break;
 		}
 		if (!is_party_leader()) {
@@ -126,17 +129,19 @@ ba_maison,120,321,5	script(CLOAKED)	#he_admin2	MD_ASSISTANT,{
 			close;
 		}
 		if (instance_create(.@md_name$) == -3)
-			dispbottom "副本“" + .@md_name$ + "”预约失败：已有其他副本正在进行。";
+			dispbottom "副本“" + .@md_display$ + "”预约失败：已有其他副本正在进行。";
 		end;
 	case 3:
 		switch( select( .@menu$[0], .@menu$[1] ) ) {
 		case 1:
 			.@md_name$ = "Security Area 1";
+			.@md_display$ = instance_getdisplayname(.@md_name$);
 			.@qid = 12499;
 			.@qid2 = 12500;
 			break;
 		case 2:
 			.@md_name$ = "Security Area 2";
+			.@md_display$ = instance_getdisplayname(.@md_name$);
 			.@qid = 12500;
 			.@qid2 = 12499;
 			break;
@@ -152,7 +157,7 @@ ba_maison,120,321,5	script(CLOAKED)	#he_admin2	MD_ASSISTANT,{
 		if (isbegin_quest(.@qid2) > 0)
 			erasequest .@qid2;
 		setquest .@qid;
-		mapannounce "ba_maison", "" + strcharinfo(0) + "，所属队伍：" + getpartyname( getcharid(1) ) + "，正在进入" + .@md_name$ + "。", bc_map, "0x00FF99";
+		mapannounce "ba_maison", "" + strcharinfo(0) + "，所属队伍：" + getpartyname( getcharid(1) ) + "，正在进入" + .@md_display$ + "。", bc_map, "0x00FF99";
 		end;
 	}
 	end;
