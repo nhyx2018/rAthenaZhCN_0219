@@ -20,8 +20,11 @@ prt_cas,373,77,5	script	巴希里	4_F_VALKYRIE2,{
 	}
 
 	// 修复旧版EP16.1跳过券未完成邀请任务
-	if (ep16_royal >= 16 && isbegin_quest(7681) == 1) {
-		completequest 7681;
+	if (terra_gloria_main >= 25) {
+		if (isbegin_quest(7681) == 1)
+			completequest 7681;
+		if (ep16_royal < 17)
+			ep16_royal = 17;
 	}
 
 	switch(select("EP14","EP16","EP17","取消")) {
