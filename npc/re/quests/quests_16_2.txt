@@ -5003,7 +5003,7 @@ rebel_in,122,71,3	script	反叛者首领鲁柏#162gmb	4_M_RUPERT,{
 		mes "他们会告诉你怎么离开。";
 		close;
 	}
-	if (terra_gloria_lady_part == 0) {
+	if (terra_gloria_lady_part == 0 && terra_gloria_main < 25) {
 		mes "[鲁柏]";
 		mes "你是谁？";
 		next;
@@ -5497,7 +5497,7 @@ rebel_in,122,71,3	script	反叛者首领鲁柏#162gmb	4_M_RUPERT,{
 	close;
 
 OnInit:
-	questinfo( QTYPE_QUEST, QMARK_NONE, "terra_gloria_main >= 16 && terra_gloria_lady_part == 0" );
+	questinfo( QTYPE_QUEST, QMARK_NONE, "terra_gloria_main >= 16 && terra_gloria_main < 25 && terra_gloria_lady_part == 0" );
 	end;
 }
 
