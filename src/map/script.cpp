@@ -21705,12 +21705,12 @@ BUILDIN_FUNC(instance_getdisplayname)
 	std::shared_ptr<s_instance_db> db = instance_search_db_name(script_getstr(st, 2));
 
 	if (!db) {
-		script_pushconststr(st, script_getstr(st, 2));
+		script_pushstrcopy(st, script_getstr(st, 2));
 		return SCRIPT_CMD_SUCCESS;
 	}
 
 	std::string display = instance_get_display_name(db);
-	script_pushconststr(st, display.c_str());
+	script_pushstrcopy(st, display.c_str());
 	return SCRIPT_CMD_SUCCESS;
 }
 
