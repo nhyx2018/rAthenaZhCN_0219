@@ -5003,6 +5003,12 @@ rebel_in,122,71,3	script	反叛者首领鲁柏#162gmb	4_M_RUPERT,{
 		mes "他们会告诉你怎么离开。";
 		close;
 	}
+	if (terra_gloria_main >= 25) {
+		mes "[鲁柏]";
+		mes "现在不是谈这件事的时候。";
+		mes "你先去忙自己的事吧。";
+		close;
+	}
 	if (terra_gloria_lady_part == 0 && terra_gloria_main < 25) {
 		mes "[鲁柏]";
 		mes "你是谁？";
