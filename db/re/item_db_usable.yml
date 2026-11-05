@@ -68173,7 +68173,7 @@ Body:
       sc_start SC_ADD_MATK_DAMAGE,500000,15;
   - Id: 100251
     AegisName: Illu_Enhance_Cube
-    Name: Illusion Reinforcement Cube
+    Name: ª√œÛ«øªØœ‰
     Type: DelayConsume
     Trade:
       NoDrop: true

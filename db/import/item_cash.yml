@@ -36,6 +36,10 @@ Body:
   # 新品 / 第一页
   - Tab: New
     Items:
+      # 蹦级币
+      - Item: Booster_Coin
+        Price: 1
+
       # 练功宝盒
       - Item: 1LVUP
         Price: 1
