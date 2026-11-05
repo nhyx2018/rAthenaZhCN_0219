@@ -756,6 +756,8 @@ Body:
         Item: Auto_M_Ring_TW
         RequiredItems:
           - Index: 0
+            Item: Illusion_Ring_TW
+          - Index: 1
             Item: Booster_Coin
             Amount: 1
       - Index: 11
