@@ -221182,6 +221182,41 @@ Body:
          bonus bMdef,15;
          bonus bFixedCast,-300;
       }
+  - Id: 490169
+    AegisName: Auto_M_Ring_TW
+    Name: 全自动战戒
+    Type: Armor
+    Weight: 100
+    Slots: 1
+    Jobs:
+      All: true
+    Locations:
+      Both_Accessory: true
+    ArmorLevel: 1
+    EquipLevelMin: 100
+    Script: |
+      bonus bAllStats,1;
+      bonus bAtkRate,5;
+      bonus bMatkRate,5;
+      bonus bDelayrate,-5;
+      bonus bMaxHPrate,5;
+      bonus bMaxSPrate,5;
+      if (isequipped(490024)) {
+         bonus2 bSPDrainRate,1,1;
+         bonus2 bAddRace,RC_Boss,15;
+      }
+      if (isequipped(490025)) {
+         bonus bShortAtkRate,4;
+         bonus bLongAtkRate,4;
+      }
+      if (isequipped(490026)) {
+         bonus bDelayrate,-5;
+         bonus2 bMagicAddRace,RC_Boss,15;
+      }
+      if (isequipped(490027)) {
+         bonus2 bMagicAddEle,Ele_All,6;
+         bonus bFixedCast,-300;
+      }
   - Id: 490083
     AegisName: Themis_Balance
     Name: Themis Balance

@@ -67684,7 +67684,7 @@ Body:
       setmadogear true,MADO_SUIT;
   - Id: 100160
     AegisName: Auto_M_Box
-    Name: Automatic Module Box
+    Name: 全自动模组箱
     Type: Usable
     Flags:
       Container: true
