@@ -652,7 +652,7 @@ ba_maison,66,145,5	duplicate(dummy_cloaked_npc)	马克·伊沙尔#ep172_bamaison-00	4
 ba_maison,68,146,5	duplicate(dummy_cloaked_npc)	玛吉·斯汀#ep172_bamaison-00	4_F_PINKWOMAN
 
 // Daily quest : Supply the spare parts
-ba_maison,74,150,3	script	宅邸管理员#172nw01	4_EP17_MASTER_A,{
+ba_maison,74,150,3	script	宅邸管理员α#172nw01	4_EP17_MASTER_A,{
 	if (checkweight(1000103,15) == 0) {
 		mes "您携带的道具数量过多，无法继续对话。";
 		mes "请整理好背包后再试。";
@@ -660,40 +660,40 @@ ba_maison,74,150,3	script	宅邸管理员#172nw01	4_EP17_MASTER_A,{
 	}
 	if (ep17_2_main < 8) {
 		cutin "ep172_alpha",2;
-		mes "[宅邸管理员]";
+		mes "[宅邸管理员α]";
 		mes "如果您是宅邸的访客，请先完成访客登记。若因被误认为入侵者而发生意外，我们概不负责，敬请谅解。";
 		close3;
 	}
 	if (ep17_2_main == 8) {
 		cutin "ep172_alpha",2;
-		mes "[宅邸管理员]";
+		mes "[宅邸管理员α]";
 		mes "欢迎。很高兴见到您。我还担心您在宅邸里迷路了。";
 		next;
-		mes "[宅邸管理员]";
+		mes "[宅邸管理员α]";
 		mes "我们已为您签发访客证。与霸肋门德的正式邀请不同，这张卡只是临时的。";
 		next;
-		mes "[宅邸管理员]";
+		mes "[宅邸管理员α]";
 		mes "与其他入侵者不同，您没有做出破坏或盗窃等损害财产的行为。因此我们为您发放了调查用的临时许可证。";
 		next;
-		mes "[宅邸管理员]";
+		mes "[宅邸管理员α]";
 		mes "这是为了防止在调查前于宅邸内走动时发生不愉快事件而采取的措施。";
 		next;
-		mes "[宅邸管理员]";
+		mes "[宅邸管理员α]";
 		mes "敬请谅解。在确认您的目的、方式和身份后，我们将允许您在宅邸内进行调查。";
 		next;
-		mes "[宅邸管理员]";
+		mes "[宅邸管理员α]";
 		mes "首先，请告诉我您的名字。";
 		next;
 		cutin "",255;
 		select( "我是" + strcharinfo(0) + "." );
 		cutin "ep172_alpha",2;
-		mes "[宅邸管理员]";
+		mes "[宅邸管理员α]";
 		mes "" + strcharinfo(0) + "。请问你来这座宅邸的目的是什么？";
 		next;
 		cutin "",255;
 		select( "我叫……" );
 		cutin "ep172_alpha",2;
-		mes "[宅邸管理员]";
+		mes "[宅邸管理员α]";
 		mes ".....";
 		mes "请稍等……";
 		npctalk "目的……是……为了……", "", bc_self;
@@ -707,7 +707,7 @@ ba_maison,74,150,3	script	宅邸管理员#172nw01	4_EP17_MASTER_A,{
 		mes ".............";
 		mes "...................";
 		next;
-		mes "[宅邸管理员]";
+		mes "[宅邸管理员α]";
 		mes "……你身边有队伍吗？";
 		next;
 		cutin "",255;
@@ -722,49 +722,49 @@ ba_maison,74,150,3	script	宅邸管理员#172nw01	4_EP17_MASTER_A,{
 		mes "...................";
 		next;
 		cutin "ep172_alpha",2;
-		mes "[宅邸管理员]";
+		mes "[宅邸管理员α]";
 		mes "失礼了。" + strcharinfo(0) + "，我马上为您签发正式访客证。";
 		next;
 		cutin "",255;
 		select( "什么？这么突然？" );
 		cutin "ep172_alpha",2;
-		mes "[宅邸管理员]";
+		mes "[宅邸管理员α]";
 		mes "我已确认了从宅邸其他地方一同前来的其他队员的身份和来访目的，并完成了登记。";
 		next;
-		mes "[宅邸管理员]";
+		mes "[宅邸管理员α]";
 		mes "您的^0000CD队伍^000000已自动获得正式资格，因为他们是前几天造访本宅邸的^0000CD同一支队伍^000000。";
 		next;
-		mes "[宅邸管理员]";
+		mes "[宅邸管理员α]";
 		mes "此外，他们还表示，您是来^0000CD抓捕^000000在宅邸内捣乱的^0000CD入侵者^000000的。";
 		next;
-		mes "[宅邸管理员]";
+		mes "[宅邸管理员α]";
 		mes "因此，我们也将为您的队伍签发本宅邸的正式访客证，" + strcharinfo(0);
 		next;
-		mes "[宅邸管理员]";
+		mes "[宅邸管理员α]";
 		mes "请稍等。";
 		next;
 		cutin "",255;
 		progressbar_npc "00FF00",2;
 		specialeffect EF_VALLENTINE;
 		cutin "ep172_alpha",2;
-		mes "[宅邸管理员]";
+		mes "[宅邸管理员α]";
 		mes "" + strcharinfo(0) + "。欢迎来到霸肋门德宅邸。很高兴见到你。我是这座宅邸的管理员。";
 		next;
-		mes "[宅邸管理员]";
+		mes "[宅邸管理员α]";
 		mes "从现在起，" + strcharinfo(0) + "，作为贵宾，您可以自由使用本宅邸的设施。如有任何问题，请随时联系最近的自动人偶。";
 		next;
-		mes "[宅邸管理员]";
+		mes "[宅邸管理员α]";
 		mes "此外，如果您需要清理方面的帮助以及宅邸内入侵者的情报，我们会全力配合。";
 		mes "为此，我们已将宅邸外部向公众开放。";
 		next;
 		cutin "",255;
 		select( "谢谢。" );
 		cutin "ep172_alpha",2;
-		mes "[宅邸管理员]";
+		mes "[宅邸管理员α]";
 		mes "我会把新登记的访客名单分享给" + strcharinfo(0) + "，并转达给其他自动人偶。";
 		next;
 		progressbar_npc "00FF00",2;
-		mes "[宅邸管理员]";
+		mes "[宅邸管理员α]";
 		mes "" + strcharinfo(0) + "，宅邸里的自动人偶全都……哎呀……哦……";
 		next;
 		mes ".....";
@@ -777,7 +777,7 @@ ba_maison,74,150,3	script	宅邸管理员#172nw01	4_EP17_MASTER_A,{
 		mes "...................";
 		next;
 		cutin "ep172_alpha",2;
-		mes "[宅邸管理员]";
+		mes "[宅邸管理员α]";
 		mes "抱歉，请稍等。";
 		ep17_2_main = 9;
 		setquest 17333;
@@ -785,48 +785,48 @@ ba_maison,74,150,3	script	宅邸管理员#172nw01	4_EP17_MASTER_A,{
 	}
 	if (ep17_2_main == 9) {
 		cutin "ep172_alpha",2;
-		mes "[宅邸管理员]";
+		mes "[宅邸管理员α]";
 		mes "又……出问题了……";
 		next;
 		cutin "",255;
 		select( "有什么问题吗？" );
 		cutin "ep172_alpha",2;
-		mes "[宅邸管理员]";
+		mes "[宅邸管理员α]";
 		mes "部分区域的^0000CD中继器^000000出了问题。信号无法发送，也无法接收。";
 		next;
 		close2;
 		select( "中继器？" );
 		cutin "ep172_alpha",2;
-		mes "[宅邸管理员]";
+		mes "[宅邸管理员α]";
 		mes "宅邸里的所有自动人偶都连接着一个无线网络。";
 		mes "我们通过那个网络，瞬间把信息共享给宅邸里的每个自动人偶。";
 		next;
-		mes "[宅邸管理员]";
+		mes "[宅邸管理员α]";
 		mes "这对访客登记和日程共享之类的事很重要。";
 		next;
-		mes "[宅邸管理员]";
+		mes "[宅邸管理员α]";
 		mes "如果您想把信息传达到宅邸的任何地方，就用中继器把信息转发给所有自动人偶。";
 		next;
-		mes "[宅邸管理员]";
+		mes "[宅邸管理员α]";
 		mes "我已经发送了更新后的访客名单信息。但我还没收到部分自动人偶的确认。";
 		next;
-		mes "[宅邸管理员]";
+		mes "[宅邸管理员α]";
 		mes "信号无法发送的区域内，中继器发生了故障。";
 		next;
 		close2;
 		select( "经常坏吗？" );
 		cutin "ep172_alpha",2;
-		mes "[宅邸管理员]";
+		mes "[宅邸管理员α]";
 		mes "因为我们维护得很仔细，故障并不常见。";
 		mes "但是前几天^0000CD入侵者^000000进入宅邸时，拆解并抢走了宅邸内的设施。";
 		next;
-		mes "[宅邸管理员]";
+		mes "[宅邸管理员α]";
 		mes "有些自动人偶被入侵者破坏了。";
 		next;
-		mes "[宅邸管理员]";
+		mes "[宅邸管理员α]";
 		mes "我得查一下是哪个区域的中继器运作不正常。";
 		next;
-		mes "[宅邸管理员]";
+		mes "[宅邸管理员α]";
 		mes "抱歉，能再稍等一下吗？我得确认是哪个区域出了问题，然后手动转发更新后的访客名单。";
 		next;
 		cutin "",255;
@@ -847,7 +847,7 @@ ba_maison,74,150,3	script	宅邸管理员#172nw01	4_EP17_MASTER_A,{
 		sleep2 2000;
 		npctalk "花园……信号失败……", "", bc_self;
 		cutin "ep172_alpha",2;
-		mes "[宅邸管理员]";
+		mes "[宅邸管理员α]";
 		mes "20个中继器中，只有三个没有回应。数量不多，真是太好了。我们去信号无法到达的地方，手动传递更新后的客人名单。还得检查一下中继器。";
 		next;
 		cutin "",255;
@@ -863,7 +863,7 @@ ba_maison,74,150,3	script	宅邸管理员#172nw01	4_EP17_MASTER_A,{
 		npctalk "哦，冒险者，你来了。", "美美#172nw01", bc_self;
 		next;
 		cutin "ep172_alpha",2;
-		mes "[宅邸管理员]";
+		mes "[宅邸管理员α]";
 		mes "又一个人。他是你队伍里的吗？";
 		next;
 		cutin "",255;
@@ -877,46 +877,46 @@ ba_maison,74,150,3	script	宅邸管理员#172nw01	4_EP17_MASTER_A,{
 		next;
 		select( "我等着。" );
 		cutin "ep172_alpha",2;
-		mes "[宅邸管理员]";
+		mes "[宅邸管理员α]";
 		mes "如果是新来的客人，请往这边走。我会正式为你登记为宅邸的客人。";
 		next;
-		mes "[宅邸管理员]";
+		mes "[宅邸管理员α]";
 		mes "哦，在那之前……" + strcharinfo(0) + "，你有参观过宅邸吗？";
 		next;
 		cutin "",255;
 		select( "还没有。" );
 		cutin "ep172_alpha",2;
-		mes "[宅邸管理员]";
+		mes "[宅邸管理员α]";
 		mes "那么，能冒昧地拜托你一件事吗？我不是有意偷听，不过你刚才说需要摸清宅邸的结构。";
 		next;
-		mes "[宅邸管理员]";
+		mes "[宅邸管理员α]";
 		mes "你能去告诉损坏中继器附近的自动人偶，让它检查一下损坏的中继器吗？";
 		next;
-		mes "[宅邸管理员]";
+		mes "[宅邸管理员α]";
 		mes "顺便参观一下宅邸，也是个不错的路线。";
 		next;
-		mes "[宅邸管理员]";
+		mes "[宅邸管理员α]";
 		mes "这本是我的工作，可客人还在不断到来，我实在没有足够的时间手动登记、更新并共享信息。";
 		next;
 		cutin "",255;
 		if (select( "我来吧。", "我得先办点事。" ) == 2) {
-			mes "[宅邸管理员]";
+			mes "[宅邸管理员α]";
 			mes "是这样啊，抱歉在你百忙之中提出这么过分的请求。";
 			mes "请随意参观宅邸。";
 			close3;
 		}
 		cutin "ep172_alpha",2;
-		mes "[宅邸管理员]";
+		mes "[宅邸管理员α]";
 		mes "谢谢你接受我这麻烦的请求。";
 		mes "还有些自动人偶尚未收到更新后的客人名单，不过我们已经正式授予" + strcharinfo(0) + "客人身份。你靠近人偶时，它们就会认出你。";
 		next;
-		mes "[宅邸管理员]";
+		mes "[宅邸管理员α]";
 		mes "其他人偶都已收到名单，所以使用宅邸不会太不方便。如果需要帮助，随时联系最近的自动人偶。";
 		next;
-		mes "[宅邸管理员]";
+		mes "[宅邸管理员α]";
 		mes "首先，最近的是<NAVI>[餐厅]<INFO>ba_maison,146,109,0,101,0</INFO></NAVI>。你先去那里吧。只要把问题告诉中继器附近的自动人偶，它就会替你处理。";
 		next;
-		mes "[宅邸管理员]";
+		mes "[宅邸管理员α]";
 		mes "那么，拜托了。";
 		ep17_2_main = 10;
 		erasequest 17333;
@@ -928,30 +928,30 @@ ba_maison,74,150,3	script	宅邸管理员#172nw01	4_EP17_MASTER_A,{
 	}
 	if (ep17_2_main == 10 || ep17_2_main == 11) {
 		cutin "ep172_alpha",2;
-		mes "[宅邸管理员]";
+		mes "[宅邸管理员α]";
 		mes "首先，最近的是<NAVI>[餐厅]<INFO>ba_maison,146,109,0,101,0</INFO></NAVI>。你先去那里吧。只要把问题告诉中继器附近的自动人偶，它就会替你处理。";
 		close3;
 	}
 	if (ep17_2_main == 12) {
 		cutin "ep172_alpha",2;
-		mes "[宅邸管理员]";
+		mes "[宅邸管理员α]";
 		mes "<NAVI>[凉亭]<INFO>ba_maison,334,143,0,101,0</INFO></NAVI>在这边。把损坏的中继器交给那边的自动人偶，它就会处理。";
 		close3;
 	}
 	if (ep17_2_main == 13) {
 		cutin "ep172_alpha",2;
-		mes "[宅邸管理员]";
+		mes "[宅邸管理员α]";
 		mes "把问题告诉<NAVI>[中央庭院]<INFO>ba_maison,245,206,0,0,0</INFO></NAVI>一带损坏中继器旁的自动人偶，它就会处理。";
 		close3;
 	}
 	if (ep17_2_main == 14) {
 		cutin "ep172_alpha",2;
-		mes "[宅邸管理员]";
+		mes "[宅邸管理员α]";
 		mes "" + strcharinfo(0) + "，欢迎回来。你参观过宅邸了吗？另外，你把消息传达给损坏中继器附近的自动人偶了吗？";
 		next;
 		cutin "",255;
 		select( "都传达过了。" );
-		mes "[宅邸管理员]";
+		mes "[宅邸管理员α]";
 		mes "辛苦你了，非常感谢。让我先确认一下网络状态。";
 		progressbar_npc "00FF00",2;
 		next;
@@ -972,47 +972,47 @@ ba_maison,74,150,3	script	宅邸管理员#172nw01	4_EP17_MASTER_A,{
 		sleep2 2000;
 		npctalk "庭院……信号已接收……", "", bc_self;
 		cutin "ep172_alpha",2;
-		mes "[宅邸管理员]";
+		mes "[宅邸管理员α]";
 		mes "宅邸的网络已恢复，各区域的信号收发都很清晰。";
 		mes "现在，作为正式的客人，你可以使用宅邸的所有设施了。";
 		next;
-		mes "[宅邸管理员]";
+		mes "[宅邸管理员α]";
 		mes "" + strcharinfo(0) + "，非常感谢。";
 		mes "你把那些麻烦的入侵者处理得很好。这让我觉得，你是一位非常老练、能出色应对这类状况的冒险者。";
 		next;
-		mes "[宅邸管理员]";
+		mes "[宅邸管理员α]";
 		mes "你很快就摸清了宅邸的地形，也很快和自动人偶们熟络起来，真令人佩服。";
 		next;
-		mes "[宅邸管理员]";
+		mes "[宅邸管理员α]";
 		mes "请在宅邸里四处看看，如果发现任何问题，我希望你能帮帮忙。";
 		next;
-		mes "[宅邸管理员]";
+		mes "[宅邸管理员α]";
 		mes "我们自动人偶就像侍奉宅邸主人那样侍奉人类客人，这早已习以为常。但对于陌生的问题，我们的信息和应对能力都不足。";
 		next;
-		mes "[宅邸管理员]";
+		mes "[宅邸管理员α]";
 		mes "我们仍未解决入侵者的问题。从非人类的角度来看，因为许多部分的信息不足，似乎很难解决。";
 		next;
-		mes "[宅邸管理员]";
+		mes "[宅邸管理员α]";
 		mes "我们想通过" + strcharinfo(0) + "来收集解决入侵者问题的相关数据，这会对今后的事例大有帮助。";
 		next;
 		cutin "",255;
 		select( "好的。" );
 		cutin "ep172_alpha",2;
-		mes "[宅邸管理员]";
+		mes "[宅邸管理员α]";
 		mes "不成敬意，作为谢礼，这个就送给你吧。";
 		mes "这是^0000CD霸肋门德餐券^000000，可以在宅邸的餐厅使用。";
 		mes "用它可以在餐厅随意享用，随时都可以使用。";
 		next;
-		mes "[宅邸管理员]";
+		mes "[宅邸管理员α]";
 		mes "宅邸的<NAVI>[餐厅]<INFO>ba_maison,146,109,0,101,0</INFO></NAVI>就在下面，正如我之前告诉你的。";
 		next;
 		cutin "",255;
 		select( "你见过我的队伍吗？" );
 		cutin "ep172_alpha",2;
-		mes "[宅邸管理员]";
+		mes "[宅邸管理员α]";
 		mes "比你先到的人现在都在<NAVI>[茶屋]<INFO>ba_in01,206,106,0,101,0</INFO></NAVI>休息，去看看吧，和他们聊聊。";
 		next;
-		mes "[宅邸管理员]";
+		mes "[宅邸管理员α]";
 		mes "如果在宅邸里有什么不便，请随时告诉任何一位自动人偶。这张霸肋门德餐券就请收下，作为你辛苦的谢礼。";
 		ep17_2_main = 15;
 		erasequest 17338;
@@ -1022,11 +1022,11 @@ ba_maison,74,150,3	script	宅邸管理员#172nw01	4_EP17_MASTER_A,{
 		close3;
 	}
 	cutin "ep172_alpha",2;
-	mes "[宅邸管理员]";
+	mes "[宅邸管理员α]";
 	mes "欢迎你，" + strcharinfo(0) + ".";
 	next;
 	if (ep17_2_main == 15) {
-		mes "[宅邸管理员]";
+		mes "[宅邸管理员α]";
 		mes "比你先到的人现在都在<NAVI>[茶屋]<INFO>ba_in01,206,106,0,101,0</INFO></NAVI>休息，去看看吧，和他们聊聊。";
 		next;
 	}
@@ -1035,34 +1035,34 @@ ba_maison,74,150,3	script	宅邸管理员#172nw01	4_EP17_MASTER_A,{
 		break;
 	case 0:
 	case 1:
-		mes "[宅邸管理员]";
+		mes "[宅邸管理员α]";
 		mes "你有什么需要，或是哪里觉得不方便吗？";
 		mes "哦，你该不会是给我送中继器的备用通讯芯片来的吧？";
 		next;
-		mes "[宅邸管理员]";
+		mes "[宅邸管理员α]";
 		mes "中继器的通讯芯片储备还很充足。";
 		mes "中继器的事不用担心。今天请好好休息，^0000CD天亮之后^000000再来吧。";
 		close3;
 	case 2:
-		mes "[宅邸管理员]";
+		mes "[宅邸管理员α]";
 		mes "你今天来，是帮我弄中继器的备用通讯芯片吗？";
 		next;
 		if (select( "是的。", "不是。" ) == 2) {
-			mes "[宅邸管理员]";
+			mes "[宅邸管理员α]";
 			mes "那么，你是因为使用宅邸设施时有什么不便才来的吗？";
 			mes "只要告诉最近的自动人偶，我们就会立刻处理。";
 			close3;
 		}
-		mes "[宅邸管理员]";
+		mes "[宅邸管理员α]";
 		mes "今天非常感谢你的帮助。";
 		next;
-		mes "[宅邸管理员]";
+		mes "[宅邸管理员α]";
 		mes "请帮我带来^0000CD10个机器人通讯芯片^000000，用于中继器。我想这足够供应一天了。";
 		next;
-		mes "[宅邸管理员]";
+		mes "[宅邸管理员α]";
 		mes "这也能帮我们应对在宅邸里游荡的损坏自动人偶。请处理掉在宅邸里游荡的损坏贝塔，并把它的通讯芯片带回来。";
 		next;
-		mes "[宅邸管理员]";
+		mes "[宅邸管理员α]";
 		mes "那么，拜托你了，冒险者。";
 		erasequest 17341;
 		setquest 17340;
@@ -1070,62 +1070,62 @@ ba_maison,74,150,3	script	宅邸管理员#172nw01	4_EP17_MASTER_A,{
 	}
 	switch( isbegin_quest(17340) ) {
 	case 0:
-		mes "[宅邸管理员]";
+		mes "[宅邸管理员α]";
 		mes "你有什么需要，或是哪里觉得不方便吗？";
 		next;
 		cutin "",255;
 		select( "网络运行正常吗？" );
 		cutin "ep172_alpha",2;
-		mes "[宅邸管理员]";
+		mes "[宅邸管理员α]";
 		mes "你是为这件事来的吗？非常感谢你的关心。";
 		next;
-		mes "[宅邸管理员]";
+		mes "[宅邸管理员α]";
 		mes "和之前的情况一样，宅邸部分区域的网络正在失去连接。";
 		next;
-		mes "[宅邸管理员]";
+		mes "[宅邸管理员α]";
 		mes "虽然一发现就会修好，但问题总是接连发生。所需的通讯芯片很难足量供应。";
 		next;
-		mes "[宅邸管理员]";
+		mes "[宅邸管理员α]";
 		mes "而且，损坏的自动人偶四处游荡，不断破坏中继器，使所需供应量翻了一倍。";
 		next;
 		cutin "",255;
 		if (select( "我能帮忙吗？", "哦，那一定很辛苦吧。" ) == 2) {
-			mes "[宅邸管理员]";
+			mes "[宅邸管理员α]";
 			mes "谢谢你体谅我们的难处。我们会尽快处理中继器，以免使用时出现不便。";
 			close;
 		}
 		cutin "ep172_alpha",2;
-		mes "[宅邸管理员]";
+		mes "[宅邸管理员α]";
 		mes "非常感谢。不过我怕占用你太多时间，" + strcharinfo(0) + "……如果你不介意，我想请你帮个忙。";
 		next;
-		mes "[宅邸管理员]";
+		mes "[宅邸管理员α]";
 		mes "请帮我带来^0000CD10个机器人通讯芯片^000000，用于中继器。我想这足够供应一天了。";
 		next;
-		mes "[宅邸管理员]";
+		mes "[宅邸管理员α]";
 		mes "这也能帮我们应对在宅邸里游荡的损坏自动人偶。请处理掉在宅邸里游荡的损坏贝塔，并把它的通讯芯片带回来。";
 		next;
-		mes "[宅邸管理员]";
+		mes "[宅邸管理员α]";
 		mes "那么，拜托你了，冒险者。";
 		setquest 17340;
 		close3;
 	case 1:
 		cutin "ep172_alpha",2;
-		mes "[宅邸管理员]";
+		mes "[宅邸管理员α]";
 		mes "我拜托你的机器人通讯芯片带来了吗？";
 		next;
 		if (countitem(1000232) < 10) {
-			mes "[宅邸管理员]";
+			mes "[宅邸管理员α]";
 			mes "请帮我带来^0000CD10个机器人通讯芯片^000000，用于中继器。我想这足够供应一天了。";
 			next;
-			mes "[宅邸管理员]";
+			mes "[宅邸管理员α]";
 			mes "这也能帮我们应对在宅邸里游荡的损坏自动人偶。请处理掉在宅邸里游荡的损坏贝塔，并把它的通讯芯片带回来。";
 			close3;
 		}
-		mes "[宅邸管理员]";
+		mes "[宅邸管理员α]";
 		mes "今天这些就够了，辛苦你了。";
 		mes "如果你有时间，我想在^0000CD天亮之后^000000再请你帮忙。若不介意，明天请再来一趟。";
 		next;
-		mes "[宅邸管理员]";
+		mes "[宅邸管理员α]";
 		mes "非常感谢，这个请收下。";
 		erasequest 17340;
 		setquest 17341;
@@ -8047,9 +8047,9 @@ ba_maison,85,111,3	script	喷泉#ba	4_ENERGY_BLUE,{
 		mes "你在喷泉里干什么！！！";
 		mes "马上给我出来！！！";
 		next;
-		cloakoffnpcself( "宅邸管理员#ep172_fountain" );
+		cloakoffnpcself( "宅邸管理员α#ep172_fountain" );
 		cutin "ep172_beta",2;
-		mes "[宅邸管理员]";
+		mes "[宅邸管理员α]";
 		mes "警告。";
 		mes "此设施并非用于清洗。禁止进入。";
 		next;
@@ -8059,21 +8059,21 @@ ba_maison,85,111,3	script	喷泉#ba	4_ENERGY_BLUE,{
 		mes "那是谁！！！";
 		next;
 		cutin "ep172_beta",2;
-		mes "[宅邸管理员]";
-		mes "我是[大贤者霸肋门德宅邸]的宅邸管理员。";
+		mes "[宅邸管理员α]";
+		mes "我是[大贤者霸肋门德宅邸]的宅邸管理员α。";
 		mes "宅邸内的设施是公共的，供每位客人使用。";
 		mes "使用设施时请遵照指示。";
 		next;
-		mes "[宅邸管理员]";
+		mes "[宅邸管理员α]";
 		mes "异常使用设施时会被记录警告，若警告累积，你将被逐出宅邸。";
 		next;
-		mes "[宅邸管理员]";
+		mes "[宅邸管理员α]";
 		mes "此外，宅邸地下设有清洗身体的设施。我们建议来访宅邸的客人们前往大浴场「梅迪塔提奥」。";
 		next;
-		mes "[宅邸管理员]";
+		mes "[宅邸管理员α]";
 		mes "那么，祝你度过舒适的时光。谢谢。";
 		next;
-		cloakonnpcself( "宅邸管理员#ep172_fountain" );
+		cloakonnpcself( "宅邸管理员α#ep172_fountain" );
 		cutin "bu_du4",2;
 		mes "[迪尤]";
 		mes "禁止在喷泉里清洗，是不是太过分了？";
@@ -8214,7 +8214,7 @@ OnInit:
 	end;
 }
 
-ba_maison,82,110,5	duplicate(dummy_cloaked_npc)	宅邸管理员#ep172_fountain	4_EP17_BASIC_B
+ba_maison,82,110,5	duplicate(dummy_cloaked_npc)	宅邸管理员α#ep172_fountain	4_EP17_BASIC_B
 ba_maison,89,109,3	duplicate(dummy_cloaked_npc)	迪尤·里安#ep172_fountain	4_M_REDMAN
 ba_maison,88,113,5	duplicate(dummy_cloaked_npc)	马克·伊沙尔#ep172_fountain	4_M_BLUEMAN
 ba_maison,87,114,5	duplicate(dummy_cloaked_npc)	玛吉·斯汀#ep172_fountain	4_F_PINKWOMAN
@@ -8261,7 +8261,7 @@ OnTouch:
 		mes "这是怎么回事？";
 		next;
 		mes "咔嚓";
-		cloakoffnpcself( "宅邸管理员#ep172_libent" );
+		cloakoffnpcself( "宅邸管理员α#ep172_libent" );
 		next;
 		cloakoffnpcself( "#fire1" );
 		cloakoffnpcself( "#fire2" );
@@ -8272,10 +8272,10 @@ OnTouch:
 		cloakonnpcself( "#fire3_0" );
 		cloakonnpcself( "#fire4_0" );
 		cutin "ep172_alpha",2;
-		mes "[宅邸管理员]";
+		mes "[宅邸管理员α]";
 		mes "这种材料是由主人亲自安装的，未经主人许可无法拆除。";
 		next;
-		mes "[宅邸管理员]";
+		mes "[宅邸管理员α]";
 		mes "因此，我们恳请您不要进入。若您强行进入，可能会被逐出宅邸，若因此受伤或死亡，我们概不负责。";
 		next;
 		cutin "bu_du5",2;
@@ -8300,10 +8300,10 @@ OnTouch:
 		mes "......";
 		next;
 		cutin "ep172_alpha",2;
-		mes "[宅邸管理员]";
+		mes "[宅邸管理员α]";
 		mes "祝您平安，过得舒适。";
 		next;
-		cloakonnpcself( "宅邸管理员#ep172_libent" );
+		cloakonnpcself( "宅邸管理员α#ep172_libent" );
 		cutin "bu_alp1",2;
 		mes "[阿尔夫]";
 		mes "...";
@@ -8368,7 +8368,7 @@ ba_in01,209,181,5	duplicate(dummy_cloaked_npc)	马克·伊沙尔#ep172_libent	4_M_BLU
 ba_in01,209,179,5	duplicate(dummy_cloaked_npc)	玛吉·斯汀#ep172_libent	4_F_PINKWOMAN
 ba_in01,213,181,3	duplicate(dummy_cloaked_npc)	奥利弗#ep172_libent	4_M_OLIVER
 ba_in01,210,184,5	duplicate(dummy_cloaked_npc)	阿尔夫·奥卡特#ep172_libent	4_M_BLACKMAN
-ba_in01,209,186,5	duplicate(dummy_cloaked_npc)	宅邸管理员#ep172_libent	4_EP17_MASTER_A
+ba_in01,209,186,5	duplicate(dummy_cloaked_npc)	宅邸管理员α#ep172_libent	4_EP17_MASTER_A
 ba_in01,210,186,3	duplicate(dummy_npc)	#fire1	4_BONFIRE
 ba_in01,211,186,3	duplicate(dummy_npc)	#fire2	4_BONFIRE
 ba_in01,212,186,3	duplicate(dummy_npc)	#fire3	4_BONFIRE
@@ -8381,7 +8381,7 @@ ba_in01,213,186,3	duplicate(dummy_cloaked_npc)	#fire4_0	4_TRACE
 // Sidequest quest : Be quiet in the Library! - Step 4, 6
 // Daily quest : Hunting Bookworm
 // Daily quest : Hunting Roaming Spellbook
-ba_lib,157,19,5	script	宅邸管理员#ep172_balib	4_EP17_BASIC_B,{
+ba_lib,157,19,5	script	宅邸管理员α#ep172_balib	4_EP17_BASIC_B,{
 	if (checkweight(1000103,5) == 0) {
 		mes "——你携带的物品太多了。";
 		mes "请整理好背包后再试。——";
@@ -8392,11 +8392,11 @@ ba_lib,157,19,5	script	宅邸管理员#ep172_balib	4_EP17_BASIC_B,{
 		end;
 	if (ep17_2_library == 3) {
 		cutin "ep172_beta",2;
-		mes "[宅邸管理员]";
+		mes "[宅邸管理员α]";
 		mes "馆内请保持安静。另外，使用图书馆需要登记。如果没有登记，就无法阅读馆内的任何书籍。";
 		next;
 		select( "登记。" );
-		mes "[宅邸管理员]";
+		mes "[宅邸管理员α]";
 		mes "登记已完成。";
 		mes "要确认你队伍的登记吗？";
 		next;
@@ -8427,10 +8427,10 @@ ba_lib,157,19,5	script	宅邸管理员#ep172_balib	4_EP17_BASIC_B,{
 	if (ep17_2_library == 4) {
 		if (F_queststatus(HAVEQUEST, 11629,11630,11631,11632,11633) != 1) {
 			cutin "ep172_beta",2;
-			mes "[宅邸管理员]";
+			mes "[宅邸管理员α]";
 			mes "馆内请保持安静。另外，使用图书馆需要登记。如果没有登记，就无法阅读馆内的任何书籍。";
 			next;
-			mes "[宅邸管理员]";
+			mes "[宅邸管理员α]";
 			mes "要确认你队伍的登记吗？";
 			next;
 			cutin "bu_du3",2;
@@ -8451,7 +8451,7 @@ ba_lib,157,19,5	script	宅邸管理员#ep172_balib	4_EP17_BASIC_B,{
 			close3;
 		}
 		cutin "ep172_beta",2;
-		mes "[宅邸管理员]";
+		mes "[宅邸管理员α]";
 		mes "感谢你确认队伍登记。";
 		mes "" + strcharinfo(0) + "已有 4……5……4……6……7……4……3…… 人完成登记。";
 		mes "感谢您的配合。";
@@ -8467,7 +8467,7 @@ ba_lib,157,19,5	script	宅邸管理员#ep172_balib	4_EP17_BASIC_B,{
 	}
 	// Daily quests
 	cutin "ep172_beta",2;
-	mes "[宅邸管理员]";
+	mes "[宅邸管理员α]";
 	mes "你好，" + strcharinfo(0) + ".";
 	mes "以下委托仅面向图书馆使用者，希望您能协助。";
 	next;
@@ -8486,7 +8486,7 @@ ba_lib,157,19,5	script	宅邸管理员#ep172_balib	4_EP17_BASIC_B,{
 		setarray .@exp[0],934000,653800;
 		break;
 	case 3:
-		mes "[宅邸管理员]";
+		mes "[宅邸管理员α]";
 		mes "祝您平安，过得舒适。";
 		close3;
 	}
@@ -8495,7 +8495,7 @@ ba_lib,157,19,5	script	宅邸管理员#ep172_balib	4_EP17_BASIC_B,{
 		break;
 	case 0:
 	case 1:
-		mes "[宅邸管理员]";
+		mes "[宅邸管理员α]";
 		mes "今天的工作已经完成了。";
 		mes "谢谢。";
 		close3;
@@ -8506,32 +8506,32 @@ ba_lib,157,19,5	script	宅邸管理员#ep172_balib	4_EP17_BASIC_B,{
 	switch( checkquest(.@hunt,HUNTING) ) {
 	case -1:
 		if (.@hunt == 11634) {
-			mes "[宅邸管理员]";
+			mes "[宅邸管理员α]";
 			mes "最近我们接到反映，以魔法书为食的书虫数量急剧增加，给图书馆的使用带来了不便。";
 			mes "请处理 20 只书虫，以改善图书馆的环境。";
 		}
 		else {
-			mes "[宅邸管理员]";
+			mes "[宅邸管理员α]";
 			mes "最近我们接到反映，由于魔法书擅自离开指定区域四处游荡，馆内的书架变得一团乱。";
 			mes "请在馆内收集 20 本游荡的魔法书，以改善图书馆的环境。";
 		}
 		next;
 		if (select( "接受", "拒绝" ) == 2) {
-			mes "[宅邸管理员]";
+			mes "[宅邸管理员α]";
 			mes "祝您平安，过得舒适。";
 			close3;
 		}
-		mes "[宅邸管理员]";
+		mes "[宅邸管理员α]";
 		mes "非常感谢。";
 		setquest .@hunt;
 		close3;
 	case 0:
 	case 1:
-		mes "[宅邸管理员]";
+		mes "[宅邸管理员α]";
 		mes "该任务已经进行中。";
 		close3;
 	case 2:
-		mes "[宅邸管理员]";
+		mes "[宅邸管理员α]";
 		mes "已确认委托完成。";
 		mes "谢谢。";
 		setquest .@cooldown;
