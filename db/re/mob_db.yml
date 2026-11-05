@@ -104974,7 +104974,7 @@ Body:
         Rate: 500
   - Id: 20630
     AegisName: EP17_2_BETA_BASIC_NG
-    Name: ÆÆËð±´Ëþ
+    Name: ¹ÊÕÏµÄ¦Â
     Level: 145
     Hp: 261170
     BaseExp: 23743
@@ -105396,7 +105396,7 @@ Body:
       Detector: true
   - Id: 20639
     AegisName: EP17_2_BETA_GUARDS_NG
-    Name: ÆÆËð±´ËþÊØÎÀ
+    Name: ¹ÊÕÏµÄ¾¯ÎÀÐÍ¦Â
     Level: 186
     Hp: 1909523
     Sp: 0
