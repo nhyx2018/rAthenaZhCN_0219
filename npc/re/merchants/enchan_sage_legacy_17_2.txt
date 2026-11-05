@@ -18,7 +18,7 @@ ba_in01,87,370,3	script	莉莎#ep172_merchant	20698,{
 	mes "[莉莎]";
 	mes "欢迎光临~";
 	next;
-	switch( select( "探索装置", "全自动推进翼机翼强化", "全自动机甲强化", "全自动战靴强化", "全自动饰品（右）强化", "全自动饰品（左）强化" ) ) {
+	switch( select( "探索装置", "全自动推进翼强化", "全自动机甲强化", "全自动战靴强化", "全自动饰品（右）强化", "全自动饰品（左）强化" ) ) {
 	case 1:
 		mes "[莉莎]";
 		mes "如果你带来全自动装备和强化模块，我们可以把对应的模块附魔到装备上。";
@@ -486,5 +486,11 @@ ba_in01,87,389,2	script	蝴蝶商人#ba_in01	4_EP17_MASTER_A,{
 	mes "你需要翅膀前往霸肋门德宅邸吗？";
 	close2;
 	callshop "barter_Teleport_Ep17_02";
+	end;
+}
+
+//= Booster Module Shop
+ba_maison,136,103,3	script	斯皮拉β	MD_ASSISTANT,{
+	callshop "barter_speela_beta";
 	end;
 }

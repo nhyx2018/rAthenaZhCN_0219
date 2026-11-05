@@ -346,11 +346,7 @@ Body:
           - Index: 0
             Item: Booster_Coin
             Amount: 1
-  - Name: Ë¹Æ¤À­¦Â
-    Map: ba_maison
-    X: 136
-    Y: 103
-    Sprite: 4_EP17_BASIC_B
+  - Name: barter_speela_beta
     Items:
       - Index: 0
         Item: Auto_M_Box
