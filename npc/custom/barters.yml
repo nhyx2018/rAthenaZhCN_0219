@@ -335,7 +335,7 @@ Body:
             Item: Booster_Coin
             Amount: 1
       - Index: 10
-        Item: Ring_IL
+        Item: Illusion_Ring_TW
         RequiredItems:
           - Index: 0
             Item: Booster_Coin
