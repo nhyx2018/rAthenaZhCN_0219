@@ -45,3 +45,304 @@
 Header:
   Type: BARTER_DB
   Version: 2
+Body:
+  - Name: RS26-1
+    Map: sp_cor
+    X: 98
+    Y: 136
+    Sprite: 4_SYS_MSG
+    Items:
+      - Index: 0
+        Item: EP17_1_EVT03
+        RequiredItems:
+          - Index: 0
+            Item: Booster_Coin
+            Amount: 1
+      - Index: 1
+        Item: EP17_1_EVT04
+        RequiredItems:
+          - Index: 0
+            Item: Booster_Coin
+            Amount: 1
+      - Index: 2
+        Item: EP17_1_EVT05
+        RequiredItems:
+          - Index: 0
+            Item: Booster_Coin
+            Amount: 1
+      - Index: 3
+        Item: EP17_1_EVT06
+        RequiredItems:
+          - Index: 0
+            Item: Booster_Coin
+            Amount: 1
+      - Index: 4
+        Item: EP17_1_EVT07
+        RequiredItems:
+          - Index: 0
+            Item: Booster_Coin
+            Amount: 1
+      - Index: 5
+        Item: EP17_1_EVT08
+        RequiredItems:
+          - Index: 0
+            Item: Booster_Coin
+            Amount: 1
+      - Index: 6
+        Item: EP17_1_EVT09
+        RequiredItems:
+          - Index: 0
+            Item: Booster_Coin
+            Amount: 1
+      - Index: 7
+        Item: EP17_1_EVT10
+        RequiredItems:
+          - Index: 0
+            Item: Booster_Coin
+            Amount: 1
+      - Index: 8
+        Item: EP17_1_EVT11
+        RequiredItems:
+          - Index: 0
+            Item: Booster_Coin
+            Amount: 1
+      - Index: 9
+        Item: EP17_1_EVT12
+        RequiredItems:
+          - Index: 0
+            Item: Booster_Coin
+            Amount: 1
+      - Index: 10
+        Item: EP17_1_EVT13
+        RequiredItems:
+          - Index: 0
+            Item: Booster_Coin
+            Amount: 1
+      - Index: 11
+        Item: EP17_1_EVT14
+        RequiredItems:
+          - Index: 0
+            Item: Booster_Coin
+            Amount: 1
+      - Index: 12
+        Item: EP17_1_EVT15
+        RequiredItems:
+          - Index: 0
+            Item: Booster_Coin
+            Amount: 1
+      - Index: 13
+        Item: EP17_1_EVT16
+        RequiredItems:
+          - Index: 0
+            Item: Booster_Coin
+            Amount: 1
+      - Index: 14
+        Item: EP17_1_EVT17
+        RequiredItems:
+          - Index: 0
+            Item: Booster_Coin
+            Amount: 1
+      - Index: 15
+        Item: EP17_1_EVT18
+        RequiredItems:
+          - Index: 0
+            Item: Booster_Coin
+            Amount: 1
+      - Index: 16
+        Item: EP17_1_EVT19
+        RequiredItems:
+          - Index: 0
+            Item: Booster_Coin
+            Amount: 1
+      - Index: 17
+        Item: EP17_1_EVT20
+        RequiredItems:
+          - Index: 0
+            Item: Booster_Coin
+            Amount: 1
+      - Index: 18
+        Item: EP17_1_EVT21
+        RequiredItems:
+          - Index: 0
+            Item: Booster_Coin
+            Amount: 1
+      - Index: 19
+        Item: EP17_1_EVT22
+        RequiredItems:
+          - Index: 0
+            Item: Booster_Coin
+            Amount: 1
+      - Index: 20
+        Item: EP17_1_EVT23
+        RequiredItems:
+          - Index: 0
+            Item: Booster_Coin
+            Amount: 1
+      - Index: 21
+        Item: EP17_1_EVT24
+        RequiredItems:
+          - Index: 0
+            Item: Booster_Coin
+            Amount: 1
+      - Index: 22
+        Item: EP17_1_EVT25
+        RequiredItems:
+          - Index: 0
+            Item: Booster_Coin
+            Amount: 1
+      - Index: 23
+        Item: EP17_1_EVT26
+        RequiredItems:
+          - Index: 0
+            Item: Booster_Coin
+            Amount: 1
+      - Index: 24
+        Item: EP17_1_EVT27
+        RequiredItems:
+          - Index: 0
+            Item: Booster_Coin
+            Amount: 1
+      - Index: 25
+        Item: EP17_1_EVT28
+        RequiredItems:
+          - Index: 0
+            Item: Booster_Coin
+            Amount: 1
+      - Index: 26
+        Item: EP17_1_EVT29
+        RequiredItems:
+          - Index: 0
+            Item: Booster_Coin
+            Amount: 1
+      - Index: 27
+        Item: EP17_1_EVT30
+        RequiredItems:
+          - Index: 0
+            Item: Booster_Coin
+            Amount: 1
+      - Index: 28
+        Item: EP17_1_EVT31
+        RequiredItems:
+          - Index: 0
+            Item: Booster_Coin
+            Amount: 1
+      - Index: 29
+        Item: EP17_1_EVT32
+        RequiredItems:
+          - Index: 0
+            Item: Booster_Coin
+            Amount: 1
+      - Index: 30
+        Item: EP17_1_EVT33
+        RequiredItems:
+          - Index: 0
+            Item: Booster_Coin
+            Amount: 1
+      - Index: 31
+        Item: EP17_1_EVT34
+        RequiredItems:
+          - Index: 0
+            Item: Booster_Coin
+            Amount: 1
+      - Index: 32
+        Item: EP17_1_EVT35
+        RequiredItems:
+          - Index: 0
+            Item: Booster_Coin
+            Amount: 1
+      - Index: 33
+        Item: EP17_1_EVT36
+        RequiredItems:
+          - Index: 0
+            Item: Booster_Coin
+            Amount: 1
+      - Index: 34
+        Item: EP17_1_EVT37
+        RequiredItems:
+          - Index: 0
+            Item: Booster_Coin
+            Amount: 1
+      - Index: 35
+        Item: EP17_1_EVT38
+        RequiredItems:
+          - Index: 0
+            Item: Booster_Coin
+            Amount: 1
+  - Name: 爱鲁梅纳
+    Map: sp_cor
+    X: 98
+    Y: 142
+    Sprite: 4_EP17_ELYUMINA
+    Items:
+      - Index: 0
+        Item: Illusion_Armor_A
+        RequiredItems:
+          - Index: 0
+            Item: Booster_Coin
+            Amount: 1
+      - Index: 1
+        Item: Illusion_Armor_B
+        RequiredItems:
+          - Index: 0
+            Item: Booster_Coin
+            Amount: 1
+      - Index: 2
+        Item: Illusion_Engine_A
+        RequiredItems:
+          - Index: 0
+            Item: Booster_Coin
+            Amount: 1
+      - Index: 3
+        Item: Illusion_Engine_B
+        RequiredItems:
+          - Index: 0
+            Item: Booster_Coin
+            Amount: 1
+      - Index: 4
+        Item: Illusion_Leg_A
+        RequiredItems:
+          - Index: 0
+            Item: Booster_Coin
+            Amount: 1
+      - Index: 5
+        Item: Illusion_Leg_B
+        RequiredItems:
+          - Index: 0
+            Item: Booster_Coin
+            Amount: 1
+      - Index: 6
+        Item: Illusion_BC_R
+        RequiredItems:
+          - Index: 0
+            Item: Booster_Coin
+            Amount: 1
+      - Index: 7
+        Item: Illusion_BC_L
+        RequiredItems:
+          - Index: 0
+            Item: Booster_Coin
+            Amount: 1
+      - Index: 8
+        Item: Illusion_B_R
+        RequiredItems:
+          - Index: 0
+            Item: Booster_Coin
+            Amount: 1
+      - Index: 9
+        Item: Illusion_B_L
+        RequiredItems:
+          - Index: 0
+            Item: Booster_Coin
+            Amount: 1
+      - Index: 10
+        Item: Ring_IL
+        RequiredItems:
+          - Index: 0
+            Item: Booster_Coin
+            Amount: 1
+      - Index: 11
+        Item: Illu_Enhance_Cube
+        RequiredItems:
+          - Index: 0
+            Item: Booster_Coin
+            Amount: 1
