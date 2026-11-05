@@ -146864,40 +146864,6 @@ Body:
       if (readparam(bStr) >= 100) {
          bonus bBaseAtk,30;
       }
-  - Id: 490082
-    AegisName: Illusion_Ring_TW
-    Name: 幻象战戒
-    Type: Armor
-    Weight: 300
-    Slots: 1
-    Jobs:
-      All: true
-    Locations:
-      Both_Accessory: true
-    ArmorLevel: 1
-    EquipLevelMin: 100
-    Script: |
-      bonus bAllStats,1;
-      bonus bAtkRate,5;
-      bonus bMatkRate,5;
-      bonus bDelayrate,-5;
-      if (isequipped(32207)) {
-         bonus2 bSPDrainRate,1,1;
-         bonus2 bAddRace,RC_Boss,10;
-      }
-      if (isequipped(32208)) {
-         bonus bMaxHPrate,10;
-         bonus bMaxSPrate,10;
-      }
-      if (isequipped(32209)) {
-         bonus bInt,5;
-         bonus bDex,5;
-         bonus2 bMagicAddRace,RC_Boss,10;
-      }
-      if (isequipped(32210)) {
-         bonus bMdef,15;
-         bonus bFixedCast,-300;
-      }
   - Id: 28510
     AegisName: Vampire's_Servant
     Name: 饰品
@@ -221182,6 +221148,40 @@ Body:
          bonus bDelayrate,-30;
     UnEquipScript: |
       sc_end SC_TELEKINESIS_INTENSE;
+  - Id: 490082
+    AegisName: Illusion_Ring_TW
+    Name: 幻象战戒
+    Type: Armor
+    Weight: 300
+    Slots: 1
+    Jobs:
+      All: true
+    Locations:
+      Both_Accessory: true
+    ArmorLevel: 1
+    EquipLevelMin: 100
+    Script: |
+      bonus bAllStats,1;
+      bonus bAtkRate,5;
+      bonus bMatkRate,5;
+      bonus bDelayrate,-5;
+      if (isequipped(32207)) {
+         bonus2 bSPDrainRate,1,1;
+         bonus2 bAddRace,RC_Boss,10;
+      }
+      if (isequipped(32208)) {
+         bonus bMaxHPrate,10;
+         bonus bMaxSPrate,10;
+      }
+      if (isequipped(32209)) {
+         bonus bInt,5;
+         bonus bDex,5;
+         bonus2 bMagicAddRace,RC_Boss,10;
+      }
+      if (isequipped(32210)) {
+         bonus bMdef,15;
+         bonus bFixedCast,-300;
+      }
   - Id: 490083
     AegisName: Themis_Balance
     Name: Themis Balance
