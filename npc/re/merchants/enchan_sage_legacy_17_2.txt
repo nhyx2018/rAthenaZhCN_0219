@@ -95,14 +95,14 @@ ba_in01,87,370,3	script	莉莎#ep172_merchant	20698,{
 
 	// Build the menu according to all the modules with the given grade in inventory
 	for ( .@i = 0; .@i < .@size; ++.@i ) {
+		.@item_name$ = getitemname(.@module_etc[.@i]);
+		.@item_name$ = replacestr(.@item_name$, "全自动改造模组(", "");
+		.@item_name$ = replacestr(.@item_name$, "全自动模组(", "");
+		.@item_name$ = replacestr(.@item_name$, ")", "");
 		if (countitem(.@module_etc[.@i]) < 1)
-			.@menu$ += "^808080（模块数量 0）^000000" + ":";
-		else {
-			.@item_name$ = getitemname(.@module_etc[.@i]);
-			.@item_name$ = replacestr(.@item_name$, "Automatic Modification Module(", "");
-			.@item_name$ = replacestr(.@item_name$, ")", "");
+			.@menu$ += "^808080" + .@item_name$ + "(未持有)^000000:";
+		else
 			.@menu$ += .@item_name$ + ":";
-		}
 	}
 	.@s = select(.@menu$) - 2;
 	if (.@s == -1) {
