@@ -452,6 +452,7 @@ bool cashshop_buylist( map_session_data* sd, uint32 kafrapoints, int32 n, const 
 	}
 
 	new_ = 0;
+	bool unlimited_arsenal_bought = false;
 
 	for( i = 0; i < n; ++i ){
 		t_itemid nameid = item_list[i].itemId;
@@ -462,6 +463,15 @@ bool cashshop_buylist( map_session_data* sd, uint32 kafrapoints, int32 n, const 
 			clif_cashshop_result( sd, nameid, CASHSHOP_RESULT_ERROR_UNKNOWN );
 			return false;
 		}
+		// [无限军火库] - one per character
+		if( nameid == ITEMID_UNLIMITED_ARSENAL ){
+			if( unlimited_arsenal_bought || quantity != 1 || pc_search_inventory( sd, nameid ) >= 0 ){
+				clif_cashshop_result( sd, nameid, CASHSHOP_RESULT_ERROR_OVER_PRODUCT_TOTAL_CNT );
+				return false;
+			}
+			unlimited_arsenal_bought = true;
+		}
+
 
 		std::shared_ptr<s_cash_item> cash_item = cash_shop_db.findItemInTab( static_cast<e_cash_shop_tab>( tab ), nameid );
 

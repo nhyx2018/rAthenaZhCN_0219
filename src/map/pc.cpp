@@ -11413,6 +11413,10 @@ void pc_setmadogear(map_session_data *sd, bool flag, e_mado_type type)
 /*==========================================
  * Check if player can drop an item
  *------------------------------------------*/
+bool pc_has_unlimited_arsenal( const map_session_data* sd ){
+	return sd != nullptr && pc_search_inventory( sd, ITEMID_UNLIMITED_ARSENAL ) >= 0;
+}
+
 bool pc_candrop(map_session_data *sd, struct item *item)
 {
 	if (sd->sc.cant.drop)

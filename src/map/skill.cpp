@@ -9739,6 +9739,9 @@ void skill_consume_requirement(map_session_data *sd, uint16 skill_id, uint16 ski
 					break;
 			}
 
+			if( pc_has_unlimited_arsenal( sd ) && itemdb_is_unlimited_arsenal_item( require.itemid[i] ) )
+				continue;
+
 			if( (n = pc_search_inventory(sd,require.itemid[i])) >= 0 )
 				pc_delitem(sd,n,require.amount[i],0,1,LOG_TYPE_CONSUME);
 		}

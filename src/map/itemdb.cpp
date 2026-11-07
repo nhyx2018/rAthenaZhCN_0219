@@ -3280,6 +3280,40 @@ bool itemdb_isdropable_sub( const item_data *item, int32 gmlv, int32 unused ) {
 	return (item && (!(item->flag.trade_restriction.drop) || gmlv >= item->gm_lv_trade_override));
 }
 
+bool itemdb_is_unlimited_arsenal_item( t_itemid nameid ){
+	const std::shared_ptr<item_data> item = item_db.find( nameid );
+
+	if( item == nullptr )
+		return false;
+
+	// All ammunition types: arrows, bullets, shells, grenades, cannonballs, kunai, shuriken, throwables, ...
+	if( item->type == IT_AMMO )
+		return true;
+
+	// Magic gemstones (yellow/red/blue)
+	if( itemdb_group.item_exists( IG_GEMSTONE, nameid ) )
+		return true;
+
+	switch( nameid ){
+		// Ninja / Kagerou / Oboro consumables
+		case 6493:	// Makibishi
+		case 6512:	// Charm Fire
+		case 6513:	// Charm Ice
+		case 6514:	// Charm Wind
+		case 6515:	// Charm Earth
+		case 7521:	// Flame Stone
+		case 7522:	// Ice Stone
+		case 7523:	// Wind Stone
+		case 7524:	// Shadow Orb
+		case 13294:	// Explosive Kunai
+		// Soul Reaper (Taekwon 4th) talisman
+		case 1000563:	// Soa Charm
+			return true;
+	}
+
+	return false;
+}
+
 bool itemdb_cantrade_sub( const item_data* item, int32 gmlv, int32 gmlv2 ) {
 	return (item && (!(item->flag.trade_restriction.trade) || gmlv >= item->gm_lv_trade_override || gmlv2 >= item->gm_lv_trade_override));
 }
