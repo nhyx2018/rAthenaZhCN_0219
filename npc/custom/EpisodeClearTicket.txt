@@ -25,7 +25,23 @@ prt_cas,373,77,5	script	巴希里	4_F_VALKYRIE2,{
 			completequest 7681;
 		if (ep16_royal < 17)
 			ep16_royal = 17;
+		if (PRT_1QUE < 25)
+			PRT_1QUE = 25;
 	}
+	// 修复旧版跳过券留下的半完成状态
+	if (PRT_1QUE == 24 && ep16_royal < 17) {
+		PRT_1QUE = 25;
+		ep16_royal = 17;
+		if (isbegin_quest(7681) == 1)
+			completequest 7681;
+	}
+	if (PRT_2QUE == 26 && terra_gloria_main < 25) {
+		PRT_2QUE = 27;
+		terra_gloria_main = 25;
+		if (terra_gloria_lady_part == 0)
+			terra_gloria_lady_part = 13;
+	}
+
 
 	switch(select("EP14","EP16","EP17","取消")) {
 	case 1:
@@ -65,15 +81,14 @@ prt_cas,373,77,5	script	巴希里	4_F_VALKYRIE2,{
 				close;
 			}
 			// 修复旧版跳过券只设置 PRT_1QUE、没有设置 ep16_royal 的存档
-			if (PRT_1QUE == 24 && ep16_royal < 16) {
-				ep16_royal = 16;
-			completequest 7681;
+			if (PRT_1QUE == 24 && ep16_royal < 17) {
+				PRT_1QUE = 25;
+				ep16_royal = 17;
+				completequest 7681;
 				mes "[巴希里]";
 				mes "检测到你之前使用过 EP16 跳过券。";
-				mes "已补发 EP16.1 主线进度，请去找克罗内克领取奖励。";
-				close2;
-				warp "prt_cas_q",19,85;
-				end;
+				mes "已补发 EP16.1 主线完成状态。";
+				close;
 			}
 			if (countitem(1000282) < 1) {
 				mes "[巴希里]";
@@ -81,15 +96,13 @@ prt_cas,373,77,5	script	巴希里	4_F_VALKYRIE2,{
 				close;
 			}
 			delitem 1000282,1;
-			PRT_1QUE = 24;
-			ep16_royal = 16;
+			PRT_1QUE = 25;
+			ep16_royal = 17;
 			completequest 7681;
 			mes "[巴希里]";
 			mes "已为你完成 EP16.1 主线。";
-			mes "请去找克罗内克领取奖励。";
-			close2;
-			warp "prt_cas_q",19,85;
-			end;
+			mes "可以直接继续后续章节。";
+			close;
 		case 2:
 			if (ep16_royal < 17) {
 				mes "[巴希里]";
@@ -102,15 +115,14 @@ prt_cas,373,77,5	script	巴希里	4_F_VALKYRIE2,{
 				close;
 			}
 			// 修复旧版跳过券只设置 PRT_2QUE 的存档
-			if (PRT_2QUE == 26 && terra_gloria_main < 24) {
-				terra_gloria_main = 24;
-			terra_gloria_lady_part = 13;
+			if (PRT_2QUE == 26 && terra_gloria_main < 25) {
+				PRT_2QUE = 27;
+				terra_gloria_main = 25;
+				terra_gloria_lady_part = 13;
 				mes "[巴希里]";
 				mes "检测到你之前使用过 EP16 跳过券。";
-				mes "已补发 EP16.2 主线进度，请去找菲洛彭特斯领取奖励。";
-				close2;
-				warp "que_swat",145,57;
-				end;
+				mes "已补发 EP16.2 主线完成状态。";
+				close;
 			}
 			if (countitem(1000282) < 1) {
 				mes "[巴希里]";
@@ -118,15 +130,13 @@ prt_cas,373,77,5	script	巴希里	4_F_VALKYRIE2,{
 				close;
 			}
 			delitem 1000282,1;
-			PRT_2QUE = 26;
-			terra_gloria_main = 24;
+			PRT_2QUE = 27;
+			terra_gloria_main = 25;
 			terra_gloria_lady_part = 13;
 			mes "[巴希里]";
 			mes "已为你完成 EP16.2 主线。";
-			mes "请去找菲洛彭特斯领取奖励。";
-			close2;
-			warp "que_swat",145,57;
-			end;
+			mes "可以直接继续 EP17 章节。";
+			close;
 		default:
 			close;
 		}
@@ -136,7 +146,7 @@ prt_cas,373,77,5	script	巴希里	4_F_VALKYRIE2,{
 		next;
 		switch(select("EP17.1","EP17.2","返回")) {
 		case 1:
-			if (PRT_2QUE != 27) {
+			if (PRT_2QUE < 27 && terra_gloria_main < 25) {
 				mes "[巴希里]";
 				mes "请先完成 EP16.2 主线。";
 				close;
