@@ -7371,7 +7371,7 @@ enum damage_lv battle_weapon_attack(block_list* src, block_list* target, t_tick 
 			wd.damage += wd.damage * mod / 100;
 		}
 
-		if( sd && battle_config.arrow_decrement && sc->getSCE(SC_FEARBREEZE) && sc->getSCE(SC_FEARBREEZE)->val4 > 0) {
+		if( sd && battle_config.arrow_decrement && !pc_has_unlimited_arsenal( sd ) && sc->getSCE(SC_FEARBREEZE) && sc->getSCE(SC_FEARBREEZE)->val4 > 0) {
 			int16 idx = sd->equip_index[EQI_AMMO];
 			if (idx >= 0 && sd->inventory.u.items_inventory[idx].amount >= sc->getSCE(SC_FEARBREEZE)->val4) {
 				pc_delitem(sd,idx,sc->getSCE(SC_FEARBREEZE)->val4,0,1,LOG_TYPE_CONSUME);
